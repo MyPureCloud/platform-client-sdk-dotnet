@@ -35,32 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetricsQoS" /> class.
         /// </summary>
-        
-        
         /// <param name="MismatchCount">Total number of QoS mismatches over the course of the last 24-hour period (sliding window). (required).</param>
-        
-        
         public TrunkMetricsQoS(int? MismatchCount = null)
         {
-            
-            
-            
-            // to ensure "MismatchCount" is required (not null)
-            if (MismatchCount == null)
-            {
-                throw new InvalidDataException("MismatchCount is a required property for TrunkMetricsQoS and cannot be null");
-            }
-            else
-            {
-                this.MismatchCount = MismatchCount;
-            }
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -84,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class TrunkMetricsQoS {\n");
             
             sb.Append("  MismatchCount: ").Append(MismatchCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

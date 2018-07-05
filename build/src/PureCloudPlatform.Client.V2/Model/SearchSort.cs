@@ -75,44 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchSort" /> class.
         /// </summary>
-        
-        
         /// <param name="SortOrder">The sort order for results.</param>
-        
-        
-        
         /// <param name="SortBy">The field in the resource that you want to sort the results by.</param>
-        
-        
         public SearchSort(SortOrderEnum? SortOrder = null, string SortBy = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SortOrder = SortOrder;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SortBy = SortBy;
-            
-            
-            
+            this.SortOrder = SortOrder;
+            this.SortBy = SortBy;
             
         }
         
@@ -138,9 +106,7 @@ this.SortBy = SortBy;
             sb.Append("class SearchSort {\n");
             
             sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
-            
             sb.Append("  SortBy: ").Append(SortBy).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

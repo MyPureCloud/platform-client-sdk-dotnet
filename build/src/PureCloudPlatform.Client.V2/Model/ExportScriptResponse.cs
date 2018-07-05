@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExportScriptResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="Url">Url.</param>
-        
-        
         public ExportScriptResponse(string Url = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Url = Url;
-            
-            
-            
+            this.Url = Url;
             
         }
         
@@ -72,7 +55,6 @@ this.Url = Url;
             sb.Append("class ExportScriptResponse {\n");
             
             sb.Append("  Url: ").Append(Url).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

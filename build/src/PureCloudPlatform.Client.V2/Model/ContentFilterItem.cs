@@ -170,78 +170,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentFilterItem" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="_Operator">_Operator.</param>
-        
-        
-        
         /// <param name="Values">Values.</param>
-        
-        
         public ContentFilterItem(string Name = null, TypeEnum? Type = null, OperatorEnum? _Operator = null, List<string> Values = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Operator = _Operator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Values = Values;
-            
-            
-            
+            this.Name = Name;
+            this.Type = Type;
+            this._Operator = _Operator;
+            this.Values = Values;
             
         }
         
@@ -276,13 +214,9 @@ this.Values = Values;
             sb.Append("class ContentFilterItem {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-            
             sb.Append("  Values: ").Append(Values).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

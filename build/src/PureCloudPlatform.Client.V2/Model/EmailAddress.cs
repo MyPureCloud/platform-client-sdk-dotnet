@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailAddress" /> class.
         /// </summary>
-        
-        
         /// <param name="Email">Email.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
         public EmailAddress(string Email = null, string Name = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Email = Email;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
+            this.Email = Email;
+            this.Name = Name;
             
         }
         
@@ -102,9 +70,7 @@ this.Name = Name;
             sb.Append("class EmailAddress {\n");
             
             sb.Append("  Email: ").Append(Email).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

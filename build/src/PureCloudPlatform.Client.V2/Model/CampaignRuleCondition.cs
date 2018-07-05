@@ -80,71 +80,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleCondition" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Parameters">The parameters for the CampaignRuleCondition. (required).</param>
-        
-        
-        
         /// <param name="ConditionType">The type of condition to evaluate. (required).</param>
-        
-        
         public CampaignRuleCondition(string Id = null, CampaignRuleParameters Parameters = null, ConditionTypeEnum? ConditionType = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Parameters" is required (not null)
-            if (Parameters == null)
-            {
-                throw new InvalidDataException("Parameters is a required property for CampaignRuleCondition and cannot be null");
-            }
-            else
-            {
-                this.Parameters = Parameters;
-            }
-            
-            
-            
-            
-            
-            // to ensure "ConditionType" is required (not null)
-            if (ConditionType == null)
-            {
-                throw new InvalidDataException("ConditionType is a required property for CampaignRuleCondition and cannot be null");
-            }
-            else
-            {
-                this.ConditionType = ConditionType;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Id = Id;
             
         }
         
@@ -178,11 +119,8 @@ this.Id = Id;
             sb.Append("class CampaignRuleCondition {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
-            
             sb.Append("  ConditionType: ").Append(ConditionType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -215,185 +215,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Conversation" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="StartTime">The time when the conversation started. This will be the time when the first participant joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
-        
         /// <param name="EndTime">The time when the conversation ended. This will be the time when the last participant left the conversation, or null when the conversation is still active. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Address">The address of the conversation as seen from an external participant. For phone calls this will be the DNIS for inbound calls and the ANI for outbound calls. For other media types this will be the address of the destination participant for inbound and the address of the initiating participant for outbound..</param>
-        
-        
-        
         /// <param name="Participants">The list of all participants in the conversation. (required).</param>
-        
-        
-        
         /// <param name="ConversationIds">A list of conversations to merge into this conversation to create a conference. This field is null except when being used to create a conference..</param>
-        
-        
-        
         /// <param name="MaxParticipants">If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference..</param>
-        
-        
-        
         /// <param name="RecordingState">On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings; otherwise indicates state of conversation recording..</param>
-        
-        
-        
         /// <param name="State">The conversation&#39;s state.</param>
-        
-        
-        
-        
         public Conversation(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null, StateEnum? State = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "StartTime" is required (not null)
-            if (StartTime == null)
-            {
-                throw new InvalidDataException("StartTime is a required property for Conversation and cannot be null");
-            }
-            else
-            {
-                this.StartTime = StartTime;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Participants" is required (not null)
-            if (Participants == null)
-            {
-                throw new InvalidDataException("Participants is a required property for Conversation and cannot be null");
-            }
-            else
-            {
-                this.Participants = Participants;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndTime = EndTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConversationIds = ConversationIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxParticipants = MaxParticipants;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingState = RecordingState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.EndTime = EndTime;
+            this.Address = Address;
+            this.ConversationIds = ConversationIds;
+            this.MaxParticipants = MaxParticipants;
+            this.RecordingState = RecordingState;
+            this.State = State;
             
         }
         
@@ -492,27 +331,16 @@ this.State = State;
             sb.Append("class Conversation {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
-            
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
-            
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
-            
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
-            
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

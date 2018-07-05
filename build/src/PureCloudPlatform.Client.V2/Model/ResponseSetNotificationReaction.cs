@@ -89,78 +89,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseSetNotificationReaction" /> class.
         /// </summary>
-        
-        
         /// <param name="Data">Data.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ReactionType">ReactionType.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ResponseSetNotificationReaction(string Data = null, string Name = null, ReactionTypeEnum? ReactionType = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Data = Data;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReactionType = ReactionType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Data = Data;
+            this.Name = Name;
+            this.ReactionType = ReactionType;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -201,13 +139,9 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ResponseSetNotificationReaction {\n");
             
             sb.Append("  Data: ").Append(Data).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ReactionType: ").Append(ReactionType).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterNotificationRange" /> class.
         /// </summary>
-        
-        
         /// <param name="Min">Min.</param>
-        
-        
-        
         /// <param name="Max">Max.</param>
-        
-        
-        
         /// <param name="MinInclusive">MinInclusive.</param>
-        
-        
-        
         /// <param name="MaxInclusive">MaxInclusive.</param>
-        
-        
-        
         /// <param name="InSet">InSet.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ContactListFilterNotificationRange(string Min = null, string Max = null, bool? MinInclusive = null, bool? MaxInclusive = null, List<string> InSet = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Min = Min;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Max = Max;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MinInclusive = MinInclusive;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxInclusive = MaxInclusive;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InSet = InSet;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Min = Min;
+            this.Max = Max;
+            this.MinInclusive = MinInclusive;
+            this.MaxInclusive = MaxInclusive;
+            this.InSet = InSet;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -222,17 +130,11 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ContactListFilterNotificationRange {\n");
             
             sb.Append("  Min: ").Append(Min).Append("\n");
-            
             sb.Append("  Max: ").Append(Max).Append("\n");
-            
             sb.Append("  MinInclusive: ").Append(MinInclusive).Append("\n");
-            
             sb.Append("  MaxInclusive: ").Append(MaxInclusive).Append("\n");
-            
             sb.Append("  InSet: ").Append(InSet).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

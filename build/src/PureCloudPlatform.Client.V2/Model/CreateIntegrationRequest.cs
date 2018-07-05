@@ -50,66 +50,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateIntegrationRequest" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the integration, used to distinguish this integration from others of the same type. (required).</param>
-        
-        
-        
         /// <param name="IntegrationType">Type of the integration to create. (required).</param>
-        
-        
-        
-        
         public CreateIntegrationRequest(string Name = null, IntegrationType IntegrationType = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for CreateIntegrationRequest and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "IntegrationType" is required (not null)
-            if (IntegrationType == null)
-            {
-                throw new InvalidDataException("IntegrationType is a required property for CreateIntegrationRequest and cannot be null");
-            }
-            else
-            {
-                this.IntegrationType = IntegrationType;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -160,13 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class CreateIntegrationRequest {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  IntegrationType: ").Append(IntegrationType).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

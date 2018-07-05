@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatBadgeNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Entity">Entity.</param>
-        
-        
-        
         /// <param name="UnreadCount">UnreadCount.</param>
-        
-        
-        
         /// <param name="LastUnreadNotificationDate">LastUnreadNotificationDate.</param>
-        
-        
         public ChatBadgeNotification(ChatBadgeNotificationEntity Entity = null, int? UnreadCount = null, DateTime? LastUnreadNotificationDate = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Entity = Entity;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UnreadCount = UnreadCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LastUnreadNotificationDate = LastUnreadNotificationDate;
-            
-            
-            
+            this.Entity = Entity;
+            this.UnreadCount = UnreadCount;
+            this.LastUnreadNotificationDate = LastUnreadNotificationDate;
             
         }
         
@@ -132,11 +85,8 @@ this.LastUnreadNotificationDate = LastUnreadNotificationDate;
             sb.Append("class ChatBadgeNotification {\n");
             
             sb.Append("  Entity: ").Append(Entity).Append("\n");
-            
             sb.Append("  UnreadCount: ").Append(UnreadCount).Append("\n");
-            
             sb.Append("  LastUnreadNotificationDate: ").Append(LastUnreadNotificationDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShrinkageOverrides" /> class.
         /// </summary>
-        
-        
         /// <param name="Clear">Set true to clear the shrinkage interval overrides.</param>
-        
-        
-        
         /// <param name="Values">List of interval shrinkage overrides.</param>
-        
-        
         public ShrinkageOverrides(bool? Clear = null, List<ShrinkageOverride> Values = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Clear = Clear;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Values = Values;
-            
-            
-            
+            this.Clear = Clear;
+            this.Values = Values;
             
         }
         
@@ -104,9 +72,7 @@ this.Values = Values;
             sb.Append("class ShrinkageOverrides {\n");
             
             sb.Append("  Clear: ").Append(Clear).Append("\n");
-            
             sb.Append("  Values: ").Append(Values).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

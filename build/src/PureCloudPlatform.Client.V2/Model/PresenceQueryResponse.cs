@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PresenceQueryResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="SystemToOrganizationMappings">A mapping from system presence to a list of organization presence ids.</param>
-        
-        
-        
         /// <param name="Results">Results.</param>
-        
-        
         public PresenceQueryResponse(Dictionary<string, List<string>> SystemToOrganizationMappings = null, List<AggregateDataContainer> Results = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SystemToOrganizationMappings = SystemToOrganizationMappings;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Results = Results;
-            
-            
-            
+            this.SystemToOrganizationMappings = SystemToOrganizationMappings;
+            this.Results = Results;
             
         }
         
@@ -103,9 +71,7 @@ this.Results = Results;
             sb.Append("class PresenceQueryResponse {\n");
             
             sb.Append("  SystemToOrganizationMappings: ").Append(SystemToOrganizationMappings).Append("\n");
-            
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

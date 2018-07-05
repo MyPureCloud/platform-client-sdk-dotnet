@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleEntities" /> class.
         /// </summary>
-        
-        
         /// <param name="Campaigns">The list of campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a campaign..</param>
-        
-        
-        
         /// <param name="Sequences">The list of sequences for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a sequence..</param>
-        
-        
         public CampaignRuleEntities(List<UriReference> Campaigns = null, List<UriReference> Sequences = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Campaigns = Campaigns;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Sequences = Sequences;
-            
-            
-            
+            this.Campaigns = Campaigns;
+            this.Sequences = Sequences;
             
         }
         
@@ -104,9 +72,7 @@ this.Sequences = Sequences;
             sb.Append("class CampaignRuleEntities {\n");
             
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
-            
             sb.Append("  Sequences: ").Append(Sequences).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

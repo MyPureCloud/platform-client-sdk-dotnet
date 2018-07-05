@@ -139,95 +139,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResourceConditionNode" /> class.
         /// </summary>
-        
-        
         /// <param name="VariableName">VariableName.</param>
-        
-        
-        
         /// <param name="Conjunction">Conjunction.</param>
-        
-        
-        
         /// <param name="_Operator">_Operator.</param>
-        
-        
-        
         /// <param name="Operands">Operands.</param>
-        
-        
-        
         /// <param name="Terms">Terms.</param>
-        
-        
         public ResourceConditionNode(string VariableName = null, ConjunctionEnum? Conjunction = null, OperatorEnum? _Operator = null, List<ResourceConditionValue> Operands = null, List<ResourceConditionNode> Terms = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.VariableName = VariableName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Conjunction = Conjunction;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Operator = _Operator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Operands = Operands;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Terms = Terms;
-            
-            
-            
+            this.VariableName = VariableName;
+            this.Conjunction = Conjunction;
+            this._Operator = _Operator;
+            this.Operands = Operands;
+            this.Terms = Terms;
             
         }
         
@@ -270,15 +193,10 @@ this.Terms = Terms;
             sb.Append("class ResourceConditionNode {\n");
             
             sb.Append("  VariableName: ").Append(VariableName).Append("\n");
-            
             sb.Append("  Conjunction: ").Append(Conjunction).Append("\n");
-            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-            
             sb.Append("  Operands: ").Append(Operands).Append("\n");
-            
             sb.Append("  Terms: ").Append(Terms).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

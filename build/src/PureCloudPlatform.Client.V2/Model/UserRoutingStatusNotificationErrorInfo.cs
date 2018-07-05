@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRoutingStatusNotificationErrorInfo" /> class.
         /// </summary>
-        
-        
         /// <param name="ErrorCode">ErrorCode.</param>
-        
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="CorrelationId">CorrelationId.</param>
-        
-        
-        
         /// <param name="UserMessage">UserMessage.</param>
-        
-        
-        
         /// <param name="UserParamsMessage">UserParamsMessage.</param>
-        
-        
-        
         /// <param name="UserParams">UserParams.</param>
-        
-        
         public UserRoutingStatusNotificationErrorInfo(string ErrorCode = null, int? Status = null, string CorrelationId = null, string UserMessage = null, string UserParamsMessage = null, List<UserRoutingStatusNotificationErrorInfoUserParams> UserParams = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorCode = ErrorCode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CorrelationId = CorrelationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserMessage = UserMessage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserParamsMessage = UserParamsMessage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserParams = UserParams;
-            
-            
-            
+            this.ErrorCode = ErrorCode;
+            this.Status = Status;
+            this.CorrelationId = CorrelationId;
+            this.UserMessage = UserMessage;
+            this.UserParamsMessage = UserParamsMessage;
+            this.UserParams = UserParams;
             
         }
         
@@ -222,17 +130,11 @@ this.UserParams = UserParams;
             sb.Append("class UserRoutingStatusNotificationErrorInfo {\n");
             
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  CorrelationId: ").Append(CorrelationId).Append("\n");
-            
             sb.Append("  UserMessage: ").Append(UserMessage).Append("\n");
-            
             sb.Append("  UserParamsMessage: ").Append(UserParamsMessage).Append("\n");
-            
             sb.Append("  UserParams: ").Append(UserParams).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

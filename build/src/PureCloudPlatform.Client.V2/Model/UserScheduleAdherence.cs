@@ -489,133 +489,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleAdherence" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="User">The user for whom this status applies.</param>
-        
-        
-        
         /// <param name="ManagementUnit">The management unit to which this user belongs.</param>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         public UserScheduleAdherence(string Name = null, User User = null, ManagementUnit ManagementUnit = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ManagementUnit = ManagementUnit;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.User = User;
+            this.ManagementUnit = ManagementUnit;
             
         }
         
@@ -722,35 +603,20 @@ this.ManagementUnit = ManagementUnit;
             sb.Append("class UserScheduleAdherence {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
-            
             sb.Append("  ScheduledActivityCategory: ").Append(ScheduledActivityCategory).Append("\n");
-            
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
-            
             sb.Append("  OrganizationSecondaryPresenceId: ").Append(OrganizationSecondaryPresenceId).Append("\n");
-            
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
-            
             sb.Append("  ActualActivityCategory: ").Append(ActualActivityCategory).Append("\n");
-            
             sb.Append("  IsOutOfOffice: ").Append(IsOutOfOffice).Append("\n");
-            
             sb.Append("  AdherenceState: ").Append(AdherenceState).Append("\n");
-            
             sb.Append("  Impact: ").Append(Impact).Append("\n");
-            
             sb.Append("  TimeOfAdherenceChange: ").Append(TimeOfAdherenceChange).Append("\n");
-            
             sb.Append("  PresenceUpdateTime: ").Append(PresenceUpdateTime).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

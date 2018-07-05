@@ -34,33 +34,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChannelTopic" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
-        
         public ChannelTopic(string Id = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
+            this.Id = Id;
             
         }
         
@@ -92,9 +69,7 @@ this.Id = Id;
             sb.Append("class ChannelTopic {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

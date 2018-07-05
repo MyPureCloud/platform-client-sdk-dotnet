@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageSticker" /> class.
         /// </summary>
-        
-        
         /// <param name="Url">The location of the sticker, useful for retrieving it.</param>
-        
-        
-        
         /// <param name="Id">The unique id of the the sticker object..</param>
-        
-        
         public MessageSticker(string Url = null, string Id = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Url = Url;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
+            this.Url = Url;
+            this.Id = Id;
             
         }
         
@@ -104,9 +72,7 @@ this.Id = Id;
             sb.Append("class MessageSticker {\n");
             
             sb.Append("  Url: ").Append(Url).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

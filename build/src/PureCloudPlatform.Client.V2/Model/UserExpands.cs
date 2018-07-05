@@ -59,129 +59,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserExpands" /> class.
         /// </summary>
-        
-        
         /// <param name="RoutingStatus">ACD routing status.</param>
-        
-        
-        
         /// <param name="Presence">Active presence.</param>
-        
-        
-        
         /// <param name="ConversationSummary">Summary of conversion statistics for conversation types..</param>
-        
-        
-        
         /// <param name="OutOfOffice">Determine if out of office is enabled.</param>
-        
-        
-        
         /// <param name="Geolocation">Current geolocation position.</param>
-        
-        
-        
         /// <param name="Station">Effective, default, and last station information.</param>
-        
-        
-        
         /// <param name="Authorization">Roles and permissions assigned to the user.</param>
-        
-        
         public UserExpands(RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoutingStatus = RoutingStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Presence = Presence;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConversationSummary = ConversationSummary;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OutOfOffice = OutOfOffice;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Geolocation = Geolocation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Station = Station;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Authorization = Authorization;
-            
-            
-            
+            this.RoutingStatus = RoutingStatus;
+            this.Presence = Presence;
+            this.ConversationSummary = ConversationSummary;
+            this.OutOfOffice = OutOfOffice;
+            this.Geolocation = Geolocation;
+            this.Station = Station;
+            this.Authorization = Authorization;
             
         }
         
@@ -259,19 +152,12 @@ this.Authorization = Authorization;
             sb.Append("class UserExpands {\n");
             
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
-            
             sb.Append("  Presence: ").Append(Presence).Append("\n");
-            
             sb.Append("  ConversationSummary: ").Append(ConversationSummary).Append("\n");
-            
             sb.Append("  OutOfOffice: ").Append(OutOfOffice).Append("\n");
-            
             sb.Append("  Geolocation: ").Append(Geolocation).Append("\n");
-            
             sb.Append("  Station: ").Append(Station).Append("\n");
-            
             sb.Append("  Authorization: ").Append(Authorization).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

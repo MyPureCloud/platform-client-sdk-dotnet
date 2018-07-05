@@ -79,93 +79,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsView" /> class.
         /// </summary>
-        
-        
         /// <param name="Target">CallTarget metric name (required).</param>
-        
-        
-        
         /// <param name="Name">A unique name for this view. Must be distinct from other views and built-in metric names. (required).</param>
-        
-        
-        
         /// <param name="Function">Type of view you wish to create (required).</param>
-        
-        
-        
         /// <param name="Range">Range of numbers for slicing up data.</param>
-        
-        
         public AnalyticsView(string Target = null, string Name = null, FunctionEnum? Function = null, AggregationRange Range = null)
         {
-            
-            
-            
-            // to ensure "Target" is required (not null)
-            if (Target == null)
-            {
-                throw new InvalidDataException("Target is a required property for AnalyticsView and cannot be null");
-            }
-            else
-            {
-                this.Target = Target;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for AnalyticsView and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Function" is required (not null)
-            if (Function == null)
-            {
-                throw new InvalidDataException("Function is a required property for AnalyticsView and cannot be null");
-            }
-            else
-            {
-                this.Function = Function;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Range = Range;
-            
-            
-            
+            this.Range = Range;
             
         }
         
@@ -209,13 +129,9 @@ this.Range = Range;
             sb.Append("class AnalyticsView {\n");
             
             sb.Append("  Target: ").Append(Target).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Function: ").Append(Function).Append("\n");
-            
             sb.Append("  Range: ").Append(Range).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ParticipantAttributes" /> class.
         /// </summary>
-        
-        
         /// <param name="Attributes">The map of attribute keys to values..</param>
-        
-        
         public ParticipantAttributes(Dictionary<string, string> Attributes = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attributes = Attributes;
-            
-            
-            
+            this.Attributes = Attributes;
             
         }
         
@@ -73,7 +56,6 @@ this.Attributes = Attributes;
             sb.Append("class ParticipantAttributes {\n");
             
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

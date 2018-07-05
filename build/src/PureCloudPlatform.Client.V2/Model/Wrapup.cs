@@ -59,129 +59,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Wrapup" /> class.
         /// </summary>
-        
-        
         /// <param name="Code">The user configured wrap up code id..</param>
-        
-        
-        
         /// <param name="Name">The user configured wrap up code name..</param>
-        
-        
-        
         /// <param name="Notes">Text entered by the agent to describe the call or disposition..</param>
-        
-        
-        
         /// <param name="Tags">List of tags selected by the agent to describe the call or disposition..</param>
-        
-        
-        
         /// <param name="DurationSeconds">The length of time in seconds that the agent spent doing after call work..</param>
-        
-        
-        
         /// <param name="EndTime">The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Provisional">Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later..</param>
-        
-        
         public Wrapup(string Code = null, string Name = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null, bool? Provisional = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Code = Code;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Notes = Notes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Tags = Tags;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationSeconds = DurationSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndTime = EndTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provisional = Provisional;
-            
-            
-            
+            this.Code = Code;
+            this.Name = Name;
+            this.Notes = Notes;
+            this.Tags = Tags;
+            this.DurationSeconds = DurationSeconds;
+            this.EndTime = EndTime;
+            this.Provisional = Provisional;
             
         }
         
@@ -259,19 +152,12 @@ this.Provisional = Provisional;
             sb.Append("class Wrapup {\n");
             
             sb.Append("  Code: ").Append(Code).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Notes: ").Append(Notes).Append("\n");
-            
             sb.Append("  Tags: ").Append(Tags).Append("\n");
-            
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
-            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
-            
             sb.Append("  Provisional: ").Append(Provisional).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -157,84 +157,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Contact" /> class.
         /// </summary>
-        
-        
         /// <param name="Address">Email address or phone number for this contact type.</param>
-        
-        
-        
-        
-        
         /// <param name="MediaType">MediaType.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="Extension">Use internal extension instead of address. Mutually exclusive with the address field..</param>
-        
-        
         public Contact(string Address = null, MediaTypeEnum? MediaType = null, TypeEnum? Type = null, string Extension = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaType = MediaType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Extension = Extension;
-            
-            
-            
+            this.Address = Address;
+            this.MediaType = MediaType;
+            this.Type = Type;
+            this.Extension = Extension;
             
         }
         
@@ -280,15 +212,10 @@ this.Extension = Extension;
             sb.Append("class Contact {\n");
             
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  Display: ").Append(Display).Append("\n");
-            
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Extension: ").Append(Extension).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

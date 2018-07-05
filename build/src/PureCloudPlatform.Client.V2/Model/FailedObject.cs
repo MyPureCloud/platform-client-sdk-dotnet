@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FailedObject" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Version">Version.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ErrorCode">ErrorCode.</param>
-        
-        
         public FailedObject(string Id = null, string Version = null, string Name = null, string ErrorCode = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorCode = ErrorCode;
-            
-            
-            
+            this.Id = Id;
+            this.Version = Version;
+            this.Name = Name;
+            this.ErrorCode = ErrorCode;
             
         }
         
@@ -162,13 +100,9 @@ this.ErrorCode = ErrorCode;
             sb.Append("class FailedObject {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

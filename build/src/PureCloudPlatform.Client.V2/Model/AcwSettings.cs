@@ -81,44 +81,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AcwSettings" /> class.
         /// </summary>
-        
-        
         /// <param name="WrapupPrompt">This field controls how the UI prompts the agent for a wrapup..</param>
-        
-        
-        
         /// <param name="TimeoutMs">The amount of time the agent can stay in ACW (Min: 1 sec, Max: 1 day).  Can only be used when ACW is MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT..</param>
-        
-        
         public AcwSettings(WrapupPromptEnum? WrapupPrompt = null, int? TimeoutMs = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupPrompt = WrapupPrompt;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeoutMs = TimeoutMs;
-            
-            
-            
+            this.WrapupPrompt = WrapupPrompt;
+            this.TimeoutMs = TimeoutMs;
             
         }
         
@@ -144,9 +112,7 @@ this.TimeoutMs = TimeoutMs;
             sb.Append("class AcwSettings {\n");
             
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
-            
             sb.Append("  TimeoutMs: ").Append(TimeoutMs).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

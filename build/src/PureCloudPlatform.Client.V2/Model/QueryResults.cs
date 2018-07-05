@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryResults" /> class.
         /// </summary>
-        
-        
         /// <param name="Results">Results.</param>
-        
-        
-        
         /// <param name="FacetInfo">FacetInfo.</param>
-        
-        
         public QueryResults(DomainEntityListingQueryResult Results = null, QueryFacetInfo FacetInfo = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Results = Results;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FacetInfo = FacetInfo;
-            
-            
-            
+            this.Results = Results;
+            this.FacetInfo = FacetInfo;
             
         }
         
@@ -102,9 +70,7 @@ this.FacetInfo = FacetInfo;
             sb.Append("class QueryResults {\n");
             
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("  FacetInfo: ").Append(FacetInfo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

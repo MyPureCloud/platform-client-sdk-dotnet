@@ -208,288 +208,37 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogsJobFile" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the entity. (required).</param>
-        
-        
-        
         /// <param name="Description">The resource&#39;s description..</param>
-        
-        
-        
         /// <param name="Version">The current version of the resource..</param>
-        
-        
-        
         /// <param name="DateCreated">The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateModified">The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ModifiedBy">The ID of the user that last modified the resource..</param>
-        
-        
-        
         /// <param name="CreatedBy">The ID of the user that created the resource..</param>
-        
-        
-        
-        
-        
         /// <param name="ModifiedByApp">The application that last modified the resource..</param>
-        
-        
-        
         /// <param name="CreatedByApp">The application that created the resource..</param>
-        
-        
-        
         /// <param name="TimeCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="TimeModified">The time this log file was last modified on the Edge. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="SizeBytes">The size of this file in bytes..</param>
-        
-        
-        
         /// <param name="UploadStatus">The status of the upload of this file from the Edge to the cloud.  Use /upload to start an upload..</param>
-        
-        
-        
         /// <param name="EdgePath">The path of this file on the Edge..</param>
-        
-        
-        
         /// <param name="DownloadId">The download ID to use with the downloads API..</param>
-        
-        
-        
-        
         public EdgeLogsJobFile(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DateTime? TimeCreated = null, DateTime? TimeModified = null, double? SizeBytes = null, UploadStatusEnum? UploadStatus = null, string EdgePath = null, string DownloadId = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for EdgeLogsJobFile and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedByApp = ModifiedByApp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedByApp = CreatedByApp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeCreated = TimeCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeModified = TimeModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SizeBytes = SizeBytes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadStatus = UploadStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgePath = EdgePath;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DownloadId = DownloadId;
-            
-            
-            
-            
-            
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.TimeCreated = TimeCreated;
+            this.TimeModified = TimeModified;
+            this.SizeBytes = SizeBytes;
+            this.UploadStatus = UploadStatus;
+            this.EdgePath = EdgePath;
+            this.DownloadId = DownloadId;
             
         }
         
@@ -652,41 +401,23 @@ this.DownloadId = DownloadId;
             sb.Append("class EdgeLogsJobFile {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
-            
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
-            
             sb.Append("  TimeCreated: ").Append(TimeCreated).Append("\n");
-            
             sb.Append("  TimeModified: ").Append(TimeModified).Append("\n");
-            
             sb.Append("  SizeBytes: ").Append(SizeBytes).Append("\n");
-            
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
-            
             sb.Append("  EdgePath: ").Append(EdgePath).Append("\n");
-            
             sb.Append("  DownloadId: ").Append(DownloadId).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

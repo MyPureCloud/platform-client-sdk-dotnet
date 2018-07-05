@@ -40,54 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditFacet" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">The name of the field on which to facet. (required).</param>
-        
-        
-        
         /// <param name="Type">The type of the facet, DATE or STRING. (required).</param>
-        
-        
         public AuditFacet(string Name = null, string Type = null)
         {
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for AuditFacet and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for AuditFacet and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -120,9 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AuditFacet {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

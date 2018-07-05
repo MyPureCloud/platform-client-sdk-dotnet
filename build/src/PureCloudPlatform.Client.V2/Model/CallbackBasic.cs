@@ -355,350 +355,48 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallbackBasic" /> class.
         /// </summary>
-        
-        
         /// <param name="State">The connection state of this communication..</param>
-        
-        
-        
         /// <param name="Id">A globally unique identifier for this communication..</param>
-        
-        
-        
         /// <param name="Segments">The time line of the participant&#39;s callback, divided into activity segments..</param>
-        
-        
-        
         /// <param name="Direction">The direction of the call.</param>
-        
-        
-        
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
-        
-        
-        
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
-        
-        
-        
         /// <param name="StartHoldTime">The timestamp the callback was placed on hold in the cloud clock if the callback is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DialerPreview">The preview data to be used when this callback is a Preview..</param>
-        
-        
-        
         /// <param name="Voicemail">The voicemail data to be used when this callback is an ACD voicemail..</param>
-        
-        
-        
         /// <param name="CallbackNumbers">The phone number(s) to use to place the callback..</param>
-        
-        
-        
         /// <param name="CallbackUserName">The name of the user requesting a callback..</param>
-        
-        
-        
         /// <param name="ScriptId">The UUID of the script to use..</param>
-        
-        
-        
         /// <param name="SkipEnabled">True if the ability to skip a callback should be enabled..</param>
-        
-        
-        
         /// <param name="TimeoutSeconds">The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled..</param>
-        
-        
-        
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="CallbackScheduledTime">The timestamp when this communication is scheduled in the provider clock. If this value is missing it indicates the callback will be placed immediately. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="AutomatedCallbackConfigId">The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal..</param>
-        
-        
-        
         /// <param name="Provider">The source provider for the callback..</param>
-        
-        
-        
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
-        
-        
         public CallbackBasic(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, string Provider = null, string PeerId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Segments = Segments;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Held = Held;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartHoldTime = StartHoldTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DialerPreview = DialerPreview;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Voicemail = Voicemail;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallbackNumbers = CallbackNumbers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallbackUserName = CallbackUserName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScriptId = ScriptId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SkipEnabled = SkipEnabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeoutSeconds = TimeoutSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectedTime = DisconnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallbackScheduledTime = CallbackScheduledTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerId = PeerId;
-            
-            
-            
+            this.State = State;
+            this.Id = Id;
+            this.Segments = Segments;
+            this.Direction = Direction;
+            this.Held = Held;
+            this.DisconnectType = DisconnectType;
+            this.StartHoldTime = StartHoldTime;
+            this.DialerPreview = DialerPreview;
+            this.Voicemail = Voicemail;
+            this.CallbackNumbers = CallbackNumbers;
+            this.CallbackUserName = CallbackUserName;
+            this.ScriptId = ScriptId;
+            this.SkipEnabled = SkipEnabled;
+            this.TimeoutSeconds = TimeoutSeconds;
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
+            this.CallbackScheduledTime = CallbackScheduledTime;
+            this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
+            this.Provider = Provider;
+            this.PeerId = PeerId;
             
         }
         
@@ -872,45 +570,25 @@ this.PeerId = PeerId;
             sb.Append("class CallbackBasic {\n");
             
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Segments: ").Append(Segments).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  Held: ").Append(Held).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
-            
             sb.Append("  DialerPreview: ").Append(DialerPreview).Append("\n");
-            
             sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
-            
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
-            
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
-            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
-            
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
-            
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
-            
             sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

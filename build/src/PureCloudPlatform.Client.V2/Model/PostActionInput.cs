@@ -60,137 +60,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PostActionInput" /> class.
         /// </summary>
-        
-        
         /// <param name="Category">Category of action (required).</param>
-        
-        
-        
         /// <param name="Name">Name of action (required).</param>
-        
-        
-        
         /// <param name="IntegrationId">The ID of the integration this action is associated to (required).</param>
-        
-        
-        
         /// <param name="Config">Configuration to support request and response processing (required).</param>
-        
-        
-        
         /// <param name="Contract">Action contract (required).</param>
-        
-        
-        
         /// <param name="Secure">Indication of whether or not the action is designed to accept sensitive data.</param>
-        
-        
         public PostActionInput(string Category = null, string Name = null, string IntegrationId = null, ActionConfig Config = null, ActionContractInput Contract = null, bool? Secure = null)
         {
-            
-            
-            
-            // to ensure "Category" is required (not null)
-            if (Category == null)
-            {
-                throw new InvalidDataException("Category is a required property for PostActionInput and cannot be null");
-            }
-            else
-            {
-                this.Category = Category;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for PostActionInput and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "IntegrationId" is required (not null)
-            if (IntegrationId == null)
-            {
-                throw new InvalidDataException("IntegrationId is a required property for PostActionInput and cannot be null");
-            }
-            else
-            {
-                this.IntegrationId = IntegrationId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Config" is required (not null)
-            if (Config == null)
-            {
-                throw new InvalidDataException("Config is a required property for PostActionInput and cannot be null");
-            }
-            else
-            {
-                this.Config = Config;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Contract" is required (not null)
-            if (Contract == null)
-            {
-                throw new InvalidDataException("Contract is a required property for PostActionInput and cannot be null");
-            }
-            else
-            {
-                this.Contract = Contract;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Secure = Secure;
-            
-            
-            
+            this.Secure = Secure;
             
         }
         
@@ -259,17 +137,11 @@ this.Secure = Secure;
             sb.Append("class PostActionInput {\n");
             
             sb.Append("  Category: ").Append(Category).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
-            
             sb.Append("  Config: ").Append(Config).Append("\n");
-            
             sb.Append("  Contract: ").Append(Contract).Append("\n");
-            
             sb.Append("  Secure: ").Append(Secure).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

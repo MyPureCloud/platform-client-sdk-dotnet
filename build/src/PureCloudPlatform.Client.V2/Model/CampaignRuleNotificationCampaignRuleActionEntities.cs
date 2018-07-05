@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleNotificationCampaignRuleActionEntities" /> class.
         /// </summary>
-        
-        
         /// <param name="Campaigns">Campaigns.</param>
-        
-        
-        
         /// <param name="Sequences">Sequences.</param>
-        
-        
-        
         /// <param name="UseTriggeringEntity">UseTriggeringEntity.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public CampaignRuleNotificationCampaignRuleActionEntities(List<CampaignRuleNotificationUriReference> Campaigns = null, List<CampaignRuleNotificationUriReference> Sequences = null, bool? UseTriggeringEntity = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Campaigns = Campaigns;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Sequences = Sequences;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UseTriggeringEntity = UseTriggeringEntity;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Campaigns = Campaigns;
+            this.Sequences = Sequences;
+            this.UseTriggeringEntity = UseTriggeringEntity;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -162,13 +100,9 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class CampaignRuleNotificationCampaignRuleActionEntities {\n");
             
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
-            
             sb.Append("  Sequences: ").Append(Sequences).Append("\n");
-            
             sb.Append("  UseTriggeringEntity: ").Append(UseTriggeringEntity).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

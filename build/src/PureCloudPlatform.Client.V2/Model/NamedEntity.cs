@@ -34,22 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NamedEntity" /> class.
         /// </summary>
-        
-        
-        
-        
-        
         public NamedEntity()
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -82,9 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class NamedEntity {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

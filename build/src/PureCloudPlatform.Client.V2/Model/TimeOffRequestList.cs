@@ -44,56 +44,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestList" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="TimeOffRequests">TimeOffRequests.</param>
-        
-        
-        
-        
         public TimeOffRequestList(string Name = null, List<TimeOffRequestResponse> TimeOffRequests = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeOffRequests = TimeOffRequests;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.TimeOffRequests = TimeOffRequests;
             
         }
         
@@ -142,13 +98,9 @@ this.TimeOffRequests = TimeOffRequests;
             sb.Append("class TimeOffRequestList {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  TimeOffRequests: ").Append(TimeOffRequests).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationSelf" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="NameRaw">NameRaw.</param>
-        
-        
-        
         /// <param name="AddressNormalized">AddressNormalized.</param>
-        
-        
-        
         /// <param name="AddressRaw">AddressRaw.</param>
-        
-        
-        
         /// <param name="AddressDisplayable">AddressDisplayable.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ConversationNotificationSelf(string Name = null, string NameRaw = null, string AddressNormalized = null, string AddressRaw = null, string AddressDisplayable = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NameRaw = NameRaw;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressNormalized = AddressNormalized;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressRaw = AddressRaw;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressDisplayable = AddressDisplayable;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Name = Name;
+            this.NameRaw = NameRaw;
+            this.AddressNormalized = AddressNormalized;
+            this.AddressRaw = AddressRaw;
+            this.AddressDisplayable = AddressDisplayable;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -222,17 +130,11 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ConversationNotificationSelf {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  NameRaw: ").Append(NameRaw).Append("\n");
-            
             sb.Append("  AddressNormalized: ").Append(AddressNormalized).Append("\n");
-            
             sb.Append("  AddressRaw: ").Append(AddressRaw).Append("\n");
-            
             sb.Append("  AddressDisplayable: ").Append(AddressDisplayable).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

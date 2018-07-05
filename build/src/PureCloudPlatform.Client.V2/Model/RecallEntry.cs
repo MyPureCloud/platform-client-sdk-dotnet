@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RecallEntry" /> class.
         /// </summary>
-        
-        
         /// <param name="NbrAttempts">NbrAttempts.</param>
-        
-        
-        
         /// <param name="MinutesBetweenAttempts">MinutesBetweenAttempts.</param>
-        
-        
         public RecallEntry(int? NbrAttempts = null, int? MinutesBetweenAttempts = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.NbrAttempts = NbrAttempts;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MinutesBetweenAttempts = MinutesBetweenAttempts;
-            
-            
-            
+            this.NbrAttempts = NbrAttempts;
+            this.MinutesBetweenAttempts = MinutesBetweenAttempts;
             
         }
         
@@ -102,9 +70,7 @@ this.MinutesBetweenAttempts = MinutesBetweenAttempts;
             sb.Append("class RecallEntry {\n");
             
             sb.Append("  NbrAttempts: ").Append(NbrAttempts).Append("\n");
-            
             sb.Append("  MinutesBetweenAttempts: ").Append(MinutesBetweenAttempts).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

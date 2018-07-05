@@ -131,163 +131,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HeartBeatRuleNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="SenderId">SenderId.</param>
-        
-        
-        
         /// <param name="HeartBeatTimeoutInMinutes">HeartBeatTimeoutInMinutes.</param>
-        
-        
-        
         /// <param name="Enabled">Enabled.</param>
-        
-        
-        
         /// <param name="InAlarm">InAlarm.</param>
-        
-        
-        
         /// <param name="NotificationUsers">NotificationUsers.</param>
-        
-        
-        
         /// <param name="AlertTypes">AlertTypes.</param>
-        
-        
-        
         /// <param name="RuleType">RuleType.</param>
-        
-        
         public HeartBeatRuleNotification(string Id = null, string Name = null, string SenderId = null, double? HeartBeatTimeoutInMinutes = null, bool? Enabled = null, bool? InAlarm = null, List<HeartBeatAlertNotificationNotificationUsers> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null, RuleTypeEnum? RuleType = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SenderId = SenderId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HeartBeatTimeoutInMinutes = HeartBeatTimeoutInMinutes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Enabled = Enabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InAlarm = InAlarm;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NotificationUsers = NotificationUsers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AlertTypes = AlertTypes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RuleType = RuleType;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.SenderId = SenderId;
+            this.HeartBeatTimeoutInMinutes = HeartBeatTimeoutInMinutes;
+            this.Enabled = Enabled;
+            this.InAlarm = InAlarm;
+            this.NotificationUsers = NotificationUsers;
+            this.AlertTypes = AlertTypes;
+            this.RuleType = RuleType;
             
         }
         
@@ -368,23 +231,14 @@ this.RuleType = RuleType;
             sb.Append("class HeartBeatRuleNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  SenderId: ").Append(SenderId).Append("\n");
-            
             sb.Append("  HeartBeatTimeoutInMinutes: ").Append(HeartBeatTimeoutInMinutes).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  InAlarm: ").Append(InAlarm).Append("\n");
-            
             sb.Append("  NotificationUsers: ").Append(NotificationUsers).Append("\n");
-            
             sb.Append("  AlertTypes: ").Append(AlertTypes).Append("\n");
-            
             sb.Append("  RuleType: ").Append(RuleType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

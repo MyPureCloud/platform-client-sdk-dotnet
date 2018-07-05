@@ -45,76 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LicenseAssignmentRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="LicenseId">The id of the license to assign/unassign. (required).</param>
-        
-        
-        
         /// <param name="UserIdsAdd">The ids of users to assign this license to. (required).</param>
-        
-        
-        
         /// <param name="UserIdsRemove">The ids of users to unassign this license from. (required).</param>
-        
-        
         public LicenseAssignmentRequest(string LicenseId = null, List<string> UserIdsAdd = null, List<string> UserIdsRemove = null)
         {
-            
-            
-            
-            // to ensure "LicenseId" is required (not null)
-            if (LicenseId == null)
-            {
-                throw new InvalidDataException("LicenseId is a required property for LicenseAssignmentRequest and cannot be null");
-            }
-            else
-            {
-                this.LicenseId = LicenseId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "UserIdsAdd" is required (not null)
-            if (UserIdsAdd == null)
-            {
-                throw new InvalidDataException("UserIdsAdd is a required property for LicenseAssignmentRequest and cannot be null");
-            }
-            else
-            {
-                this.UserIdsAdd = UserIdsAdd;
-            }
-            
-            
-            
-            
-            
-            // to ensure "UserIdsRemove" is required (not null)
-            if (UserIdsRemove == null)
-            {
-                throw new InvalidDataException("UserIdsRemove is a required property for LicenseAssignmentRequest and cannot be null");
-            }
-            else
-            {
-                this.UserIdsRemove = UserIdsRemove;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -156,11 +91,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class LicenseAssignmentRequest {\n");
             
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
-            
             sb.Append("  UserIdsAdd: ").Append(UserIdsAdd).Append("\n");
-            
             sb.Append("  UserIdsRemove: ").Append(UserIdsRemove).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

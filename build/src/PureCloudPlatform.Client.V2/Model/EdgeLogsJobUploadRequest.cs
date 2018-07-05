@@ -35,32 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogsJobUploadRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="FileIds">A list of file ids to upload. (required).</param>
-        
-        
         public EdgeLogsJobUploadRequest(List<string> FileIds = null)
         {
-            
-            
-            
-            // to ensure "FileIds" is required (not null)
-            if (FileIds == null)
-            {
-                throw new InvalidDataException("FileIds is a required property for EdgeLogsJobUploadRequest and cannot be null");
-            }
-            else
-            {
-                this.FileIds = FileIds;
-            }
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -84,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class EdgeLogsJobUploadRequest {\n");
             
             sb.Append("  FileIds: ").Append(FileIds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

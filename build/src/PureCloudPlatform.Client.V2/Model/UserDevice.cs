@@ -115,188 +115,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserDevice" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="DeviceToken">device token sent by mobile clients. (required).</param>
-        
-        
-        
         /// <param name="NotificationId">notification id of the device. (required).</param>
-        
-        
-        
         /// <param name="Make">make of the device. (required).</param>
-        
-        
-        
         /// <param name="Model">Device model (required).</param>
-        
-        
-        
         /// <param name="AcceptNotifications">if the device accepts notifications (required).</param>
-        
-        
-        
         /// <param name="Type">type of the device; ios or android (required).</param>
-        
-        
-        
         /// <param name="SessionHash">SessionHash.</param>
-        
-        
-        
-        
         public UserDevice(string Name = null, string DeviceToken = null, string NotificationId = null, string Make = null, string Model = null, bool? AcceptNotifications = null, TypeEnum? Type = null, string SessionHash = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "DeviceToken" is required (not null)
-            if (DeviceToken == null)
-            {
-                throw new InvalidDataException("DeviceToken is a required property for UserDevice and cannot be null");
-            }
-            else
-            {
-                this.DeviceToken = DeviceToken;
-            }
-            
-            
-            
-            
-            
-            // to ensure "NotificationId" is required (not null)
-            if (NotificationId == null)
-            {
-                throw new InvalidDataException("NotificationId is a required property for UserDevice and cannot be null");
-            }
-            else
-            {
-                this.NotificationId = NotificationId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Make" is required (not null)
-            if (Make == null)
-            {
-                throw new InvalidDataException("Make is a required property for UserDevice and cannot be null");
-            }
-            else
-            {
-                this.Make = Make;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Model" is required (not null)
-            if (Model == null)
-            {
-                throw new InvalidDataException("Model is a required property for UserDevice and cannot be null");
-            }
-            else
-            {
-                this.Model = Model;
-            }
-            
-            
-            
-            
-            
-            // to ensure "AcceptNotifications" is required (not null)
-            if (AcceptNotifications == null)
-            {
-                throw new InvalidDataException("AcceptNotifications is a required property for UserDevice and cannot be null");
-            }
-            else
-            {
-                this.AcceptNotifications = AcceptNotifications;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for UserDevice and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SessionHash = SessionHash;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.SessionHash = SessionHash;
             
         }
         
@@ -392,25 +222,15 @@ this.SessionHash = SessionHash;
             sb.Append("class UserDevice {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DeviceToken: ").Append(DeviceToken).Append("\n");
-            
             sb.Append("  NotificationId: ").Append(NotificationId).Append("\n");
-            
             sb.Append("  Make: ").Append(Make).Append("\n");
-            
             sb.Append("  Model: ").Append(Model).Append("\n");
-            
             sb.Append("  AcceptNotifications: ").Append(AcceptNotifications).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  SessionHash: ").Append(SessionHash).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

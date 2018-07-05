@@ -77,78 +77,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignNotificationContactSort" /> class.
         /// </summary>
-        
-        
         /// <param name="FieldName">FieldName.</param>
-        
-        
-        
         /// <param name="Direction">Direction.</param>
-        
-        
-        
         /// <param name="Numeric">Numeric.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public CampaignNotificationContactSort(string FieldName = null, DirectionEnum? Direction = null, bool? Numeric = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.FieldName = FieldName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Numeric = Numeric;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.FieldName = FieldName;
+            this.Direction = Direction;
+            this.Numeric = Numeric;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -189,13 +127,9 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class CampaignNotificationContactSort {\n");
             
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  Numeric: ").Append(Numeric).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

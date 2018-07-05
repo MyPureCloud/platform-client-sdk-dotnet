@@ -84,61 +84,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplacementTerm" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="ExistingValue">ExistingValue.</param>
-        
-        
-        
         /// <param name="UpdatedValue">UpdatedValue.</param>
-        
-        
         public ReplacementTerm(TypeEnum? Type = null, string ExistingValue = null, string UpdatedValue = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExistingValue = ExistingValue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UpdatedValue = UpdatedValue;
-            
-            
-            
+            this.Type = Type;
+            this.ExistingValue = ExistingValue;
+            this.UpdatedValue = UpdatedValue;
             
         }
         
@@ -171,11 +124,8 @@ this.UpdatedValue = UpdatedValue;
             sb.Append("class ReplacementTerm {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  ExistingValue: ").Append(ExistingValue).Append("\n");
-            
             sb.Append("  UpdatedValue: ").Append(UpdatedValue).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

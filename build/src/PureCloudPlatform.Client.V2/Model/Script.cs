@@ -94,226 +94,32 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Script" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="VersionId">VersionId.</param>
-        
-        
-        
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="PublishedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="VersionDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="StartPageId">StartPageId.</param>
-        
-        
-        
         /// <param name="StartPageName">StartPageName.</param>
-        
-        
-        
         /// <param name="Features">Features.</param>
-        
-        
-        
         /// <param name="Variables">Variables.</param>
-        
-        
-        
         /// <param name="CustomActions">CustomActions.</param>
-        
-        
-        
         /// <param name="Pages">Pages.</param>
-        
-        
-        
-        
         public Script(string Name = null, string VersionId = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, DateTime? PublishedDate = null, DateTime? VersionDate = null, string StartPageId = null, string StartPageName = null, Object Features = null, Object Variables = null, Object CustomActions = null, List<Page> Pages = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VersionId = VersionId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedDate = CreatedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PublishedDate = PublishedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VersionDate = VersionDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartPageId = StartPageId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartPageName = StartPageName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Features = Features;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Variables = Variables;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CustomActions = CustomActions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Pages = Pages;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.VersionId = VersionId;
+            this.CreatedDate = CreatedDate;
+            this.ModifiedDate = ModifiedDate;
+            this.PublishedDate = PublishedDate;
+            this.VersionDate = VersionDate;
+            this.StartPageId = StartPageId;
+            this.StartPageName = StartPageName;
+            this.Features = Features;
+            this.Variables = Variables;
+            this.CustomActions = CustomActions;
+            this.Pages = Pages;
             
         }
         
@@ -446,33 +252,19 @@ this.Pages = Pages;
             sb.Append("class Script {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  VersionId: ").Append(VersionId).Append("\n");
-            
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  PublishedDate: ").Append(PublishedDate).Append("\n");
-            
             sb.Append("  VersionDate: ").Append(VersionDate).Append("\n");
-            
             sb.Append("  StartPageId: ").Append(StartPageId).Append("\n");
-            
             sb.Append("  StartPageName: ").Append(StartPageName).Append("\n");
-            
             sb.Append("  Features: ").Append(Features).Append("\n");
-            
             sb.Append("  Variables: ").Append(Variables).Append("\n");
-            
             sb.Append("  CustomActions: ").Append(CustomActions).Append("\n");
-            
             sb.Append("  Pages: ").Append(Pages).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

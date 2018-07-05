@@ -73,44 +73,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmIntradayQueueListing" /> class.
         /// </summary>
-        
-        
         /// <param name="Entities">Entities.</param>
-        
-        
-        
         /// <param name="NoDataReason">NoDataReason.</param>
-        
-        
         public WfmIntradayQueueListing(List<IntradayQueue> Entities = null, NoDataReasonEnum? NoDataReason = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Entities = Entities;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NoDataReason = NoDataReason;
-            
-            
-            
+            this.Entities = Entities;
+            this.NoDataReason = NoDataReason;
             
         }
         
@@ -135,9 +103,7 @@ this.NoDataReason = NoDataReason;
             sb.Append("class WfmIntradayQueueListing {\n");
             
             sb.Append("  Entities: ").Append(Entities).Append("\n");
-            
             sb.Append("  NoDataReason: ").Append(NoDataReason).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

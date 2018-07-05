@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientAppConfigurationInfo" /> class.
         /// </summary>
-        
-        
         /// <param name="Current">The current, active configuration for the integration..</param>
-        
-        
-        
         /// <param name="Effective">The effective configuration for the app, containing the integration specific configuration along with overrides specified in the integration type..</param>
-        
-        
         public ClientAppConfigurationInfo(IntegrationConfiguration Current = null, EffectiveConfiguration Effective = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Current = Current;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Effective = Effective;
-            
-            
-            
+            this.Current = Current;
+            this.Effective = Effective;
             
         }
         
@@ -104,9 +72,7 @@ this.Effective = Effective;
             sb.Append("class ClientAppConfigurationInfo {\n");
             
             sb.Append("  Current: ").Append(Current).Append("\n");
-            
             sb.Append("  Effective: ").Append(Effective).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

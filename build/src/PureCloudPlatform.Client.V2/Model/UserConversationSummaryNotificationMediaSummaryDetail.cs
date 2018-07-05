@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserConversationSummaryNotificationMediaSummaryDetail" /> class.
         /// </summary>
-        
-        
         /// <param name="Active">Active.</param>
-        
-        
-        
         /// <param name="Acw">Acw.</param>
-        
-        
         public UserConversationSummaryNotificationMediaSummaryDetail(int? Active = null, int? Acw = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Active = Active;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Acw = Acw;
-            
-            
-            
+            this.Active = Active;
+            this.Acw = Acw;
             
         }
         
@@ -102,9 +70,7 @@ this.Acw = Acw;
             sb.Append("class UserConversationSummaryNotificationMediaSummaryDetail {\n");
             
             sb.Append("  Active: ").Append(Active).Append("\n");
-            
             sb.Append("  Acw: ").Append(Acw).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

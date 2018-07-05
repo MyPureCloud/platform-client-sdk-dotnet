@@ -34,22 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallRecord" /> class.
         /// </summary>
-        
-        
-        
-        
-        
         public CallRecord()
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -82,9 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class CallRecord {\n");
             
             sb.Append("  LastAttempt: ").Append(LastAttempt).Append("\n");
-            
             sb.Append("  LastResult: ").Append(LastResult).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -345,316 +345,44 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationMessage" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="State">State.</param>
-        
-        
-        
         /// <param name="Held">Held.</param>
-        
-        
-        
         /// <param name="Provider">Provider.</param>
-        
-        
-        
         /// <param name="ScriptId">ScriptId.</param>
-        
-        
-        
         /// <param name="PeerId">PeerId.</param>
-        
-        
-        
         /// <param name="DisconnectType">DisconnectType.</param>
-        
-        
-        
         /// <param name="StartHoldTime">StartHoldTime.</param>
-        
-        
-        
         /// <param name="ConnectedTime">ConnectedTime.</param>
-        
-        
-        
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
-        
-        
-        
         /// <param name="ToAddress">ToAddress.</param>
-        
-        
-        
         /// <param name="FromAddress">FromAddress.</param>
-        
-        
-        
         /// <param name="Messages">Messages.</param>
-        
-        
-        
         /// <param name="MessagesTranscriptUri">MessagesTranscriptUri.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="RecipientCountry">RecipientCountry.</param>
-        
-        
-        
         /// <param name="RecipientType">RecipientType.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ConversationNotificationMessage(string Id = null, StateEnum? State = null, bool? Held = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationNotificationAddress ToAddress = null, ConversationNotificationAddress FromAddress = null, List<ConversationNotificationMessages> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Held = Held;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScriptId = ScriptId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerId = PeerId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartHoldTime = StartHoldTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectedTime = DisconnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ToAddress = ToAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FromAddress = FromAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Messages = Messages;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessagesTranscriptUri = MessagesTranscriptUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecipientCountry = RecipientCountry;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecipientType = RecipientType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Id = Id;
+            this.State = State;
+            this.Held = Held;
+            this.Provider = Provider;
+            this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
+            this.DisconnectType = DisconnectType;
+            this.StartHoldTime = StartHoldTime;
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
+            this.ToAddress = ToAddress;
+            this.FromAddress = FromAddress;
+            this.Messages = Messages;
+            this.MessagesTranscriptUri = MessagesTranscriptUri;
+            this.Type = Type;
+            this.RecipientCountry = RecipientCountry;
+            this.RecipientType = RecipientType;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -795,41 +523,23 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ConversationNotificationMessage {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Held: ").Append(Held).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
-            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
-            
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
-            
             sb.Append("  Messages: ").Append(Messages).Append("\n");
-            
             sb.Append("  MessagesTranscriptUri: ").Append(MessagesTranscriptUri).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  RecipientCountry: ").Append(RecipientCountry).Append("\n");
-            
             sb.Append("  RecipientType: ").Append(RecipientType).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

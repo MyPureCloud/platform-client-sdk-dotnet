@@ -74,180 +74,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyActions" /> class.
         /// </summary>
-        
-        
         /// <param name="RetainRecording">true to retain the recording associated with the conversation. Default = true.</param>
-        
-        
-        
         /// <param name="DeleteRecording">true to delete the recording associated with the conversation. If retainRecording = true, this will be ignored. Default = false.</param>
-        
-        
-        
         /// <param name="AlwaysDelete">true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default = false.</param>
-        
-        
-        
         /// <param name="AssignEvaluations">AssignEvaluations.</param>
-        
-        
-        
         /// <param name="AssignMeteredEvaluations">AssignMeteredEvaluations.</param>
-        
-        
-        
         /// <param name="AssignCalibrations">AssignCalibrations.</param>
-        
-        
-        
         /// <param name="AssignSurveys">AssignSurveys.</param>
-        
-        
-        
         /// <param name="RetentionDuration">RetentionDuration.</param>
-        
-        
-        
         /// <param name="InitiateScreenRecording">InitiateScreenRecording.</param>
-        
-        
-        
         /// <param name="MediaTranscriptions">MediaTranscriptions.</param>
-        
-        
         public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, List<SurveyAssignment> AssignSurveys = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null, List<MediaTranscription> MediaTranscriptions = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RetainRecording = RetainRecording;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DeleteRecording = DeleteRecording;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AlwaysDelete = AlwaysDelete;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AssignEvaluations = AssignEvaluations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AssignMeteredEvaluations = AssignMeteredEvaluations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AssignCalibrations = AssignCalibrations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AssignSurveys = AssignSurveys;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RetentionDuration = RetentionDuration;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InitiateScreenRecording = InitiateScreenRecording;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaTranscriptions = MediaTranscriptions;
-            
-            
-            
+            this.RetainRecording = RetainRecording;
+            this.DeleteRecording = DeleteRecording;
+            this.AlwaysDelete = AlwaysDelete;
+            this.AssignEvaluations = AssignEvaluations;
+            this.AssignMeteredEvaluations = AssignMeteredEvaluations;
+            this.AssignCalibrations = AssignCalibrations;
+            this.AssignSurveys = AssignSurveys;
+            this.RetentionDuration = RetentionDuration;
+            this.InitiateScreenRecording = InitiateScreenRecording;
+            this.MediaTranscriptions = MediaTranscriptions;
             
         }
         
@@ -345,25 +193,15 @@ this.MediaTranscriptions = MediaTranscriptions;
             sb.Append("class PolicyActions {\n");
             
             sb.Append("  RetainRecording: ").Append(RetainRecording).Append("\n");
-            
             sb.Append("  DeleteRecording: ").Append(DeleteRecording).Append("\n");
-            
             sb.Append("  AlwaysDelete: ").Append(AlwaysDelete).Append("\n");
-            
             sb.Append("  AssignEvaluations: ").Append(AssignEvaluations).Append("\n");
-            
             sb.Append("  AssignMeteredEvaluations: ").Append(AssignMeteredEvaluations).Append("\n");
-            
             sb.Append("  AssignCalibrations: ").Append(AssignCalibrations).Append("\n");
-            
             sb.Append("  AssignSurveys: ").Append(AssignSurveys).Append("\n");
-            
             sb.Append("  RetentionDuration: ").Append(RetentionDuration).Append("\n");
-            
             sb.Append("  InitiateScreenRecording: ").Append(InitiateScreenRecording).Append("\n");
-            
             sb.Append("  MediaTranscriptions: ").Append(MediaTranscriptions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

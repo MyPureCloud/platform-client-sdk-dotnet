@@ -74,180 +74,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VideoConversationNotificationErrorInfo" /> class.
         /// </summary>
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="Code">Code.</param>
-        
-        
-        
         /// <param name="EntityId">EntityId.</param>
-        
-        
-        
         /// <param name="EntityName">EntityName.</param>
-        
-        
-        
         /// <param name="Message">Message.</param>
-        
-        
-        
         /// <param name="MessageWithParams">MessageWithParams.</param>
-        
-        
-        
         /// <param name="MessageParams">MessageParams.</param>
-        
-        
-        
         /// <param name="ContextId">ContextId.</param>
-        
-        
-        
         /// <param name="Details">Details.</param>
-        
-        
-        
         /// <param name="Errors">Errors.</param>
-        
-        
         public VideoConversationNotificationErrorInfo(int? Status = null, string Code = null, string EntityId = null, string EntityName = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, List<CallbackConversationNotificationErrorInfoDetails> Details = null, List<VideoConversationNotificationErrorBody> Errors = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Code = Code;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EntityId = EntityId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EntityName = EntityName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Message = Message;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageWithParams = MessageWithParams;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageParams = MessageParams;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContextId = ContextId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Details = Details;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Errors = Errors;
-            
-            
-            
+            this.Status = Status;
+            this.Code = Code;
+            this.EntityId = EntityId;
+            this.EntityName = EntityName;
+            this.Message = Message;
+            this.MessageWithParams = MessageWithParams;
+            this.MessageParams = MessageParams;
+            this.ContextId = ContextId;
+            this.Details = Details;
+            this.Errors = Errors;
             
         }
         
@@ -342,25 +190,15 @@ this.Errors = Errors;
             sb.Append("class VideoConversationNotificationErrorInfo {\n");
             
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  Code: ").Append(Code).Append("\n");
-            
             sb.Append("  EntityId: ").Append(EntityId).Append("\n");
-            
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
-            
             sb.Append("  Message: ").Append(Message).Append("\n");
-            
             sb.Append("  MessageWithParams: ").Append(MessageWithParams).Append("\n");
-            
             sb.Append("  MessageParams: ").Append(MessageParams).Append("\n");
-            
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
-            
             sb.Append("  Details: ").Append(Details).Append("\n");
-            
             sb.Append("  Errors: ").Append(Errors).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -199,163 +199,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Operation" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Complete">Complete.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="ErrorMessage">ErrorMessage.</param>
-        
-        
-        
         /// <param name="ErrorCode">ErrorCode.</param>
-        
-        
-        
         /// <param name="ErrorDetails">ErrorDetails.</param>
-        
-        
-        
         /// <param name="ErrorMessageParams">ErrorMessageParams.</param>
-        
-        
-        
         /// <param name="ActionName">Action name.</param>
-        
-        
-        
         /// <param name="ActionStatus">Action status.</param>
-        
-        
         public Operation(string Id = null, bool? Complete = null, User User = null, string ErrorMessage = null, string ErrorCode = null, List<Detail> ErrorDetails = null, Dictionary<string, string> ErrorMessageParams = null, ActionNameEnum? ActionName = null, ActionStatusEnum? ActionStatus = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Complete = Complete;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorMessage = ErrorMessage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorCode = ErrorCode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorDetails = ErrorDetails;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorMessageParams = ErrorMessageParams;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActionName = ActionName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActionStatus = ActionStatus;
-            
-            
-            
+            this.Id = Id;
+            this.Complete = Complete;
+            this.User = User;
+            this.ErrorMessage = ErrorMessage;
+            this.ErrorCode = ErrorCode;
+            this.ErrorDetails = ErrorDetails;
+            this.ErrorMessageParams = ErrorMessageParams;
+            this.ActionName = ActionName;
+            this.ActionStatus = ActionStatus;
             
         }
         
@@ -430,23 +293,14 @@ this.ActionStatus = ActionStatus;
             sb.Append("class Operation {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Complete: ").Append(Complete).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            
             sb.Append("  ErrorDetails: ").Append(ErrorDetails).Append("\n");
-            
             sb.Append("  ErrorMessageParams: ").Append(ErrorMessageParams).Append("\n");
-            
             sb.Append("  ActionName: ").Append(ActionName).Append("\n");
-            
             sb.Append("  ActionStatus: ").Append(ActionStatus).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

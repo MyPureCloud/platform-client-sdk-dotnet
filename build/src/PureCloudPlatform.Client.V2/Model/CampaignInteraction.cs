@@ -200,367 +200,50 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignInteraction" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Campaign">Campaign.</param>
-        
-        
-        
         /// <param name="Agent">Agent.</param>
-        
-        
-        
         /// <param name="Contact">Contact.</param>
-        
-        
-        
         /// <param name="DestinationAddress">DestinationAddress.</param>
-        
-        
-        
         /// <param name="ActivePreviewCall">Boolean value if there is an active preview call on the interaction.</param>
-        
-        
-        
         /// <param name="LastActivePreviewWrapupTime">The time when the last preview of the interaction was wrapped up. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="CreationTime">The time when dialer created the interaction. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="CallPlacedTime">The time when the agent or system places the call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="CallRoutedTime">The time when the agent was connected to the call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="PreviewConnectedTime">The time when the customer and routing participant are connected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Queue">Queue.</param>
-        
-        
-        
         /// <param name="Script">Script.</param>
-        
-        
-        
         /// <param name="Disposition">Describes what happened with call analysis for instance: disposition.classification.callable.person, disposition.classification.callable.noanswer.</param>
-        
-        
-        
         /// <param name="CallerName">CallerName.</param>
-        
-        
-        
         /// <param name="CallerAddress">CallerAddress.</param>
-        
-        
-        
         /// <param name="PreviewPopDeliveredTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Conversation">Conversation.</param>
-        
-        
-        
         /// <param name="DialerSystemParticipantId">conversation participant id that is the dialer system participant to monitor the call from dialer perspective.</param>
-        
-        
-        
         /// <param name="DialingMode">DialingMode.</param>
-        
-        
-        
         /// <param name="Skills">Any skills that are attached to the call for routing.</param>
-        
-        
         public CampaignInteraction(string Id = null, UriReference Campaign = null, UriReference Agent = null, UriReference Contact = null, string DestinationAddress = null, bool? ActivePreviewCall = null, DateTime? LastActivePreviewWrapupTime = null, DateTime? CreationTime = null, DateTime? CallPlacedTime = null, DateTime? CallRoutedTime = null, DateTime? PreviewConnectedTime = null, UriReference Queue = null, UriReference Script = null, DispositionEnum? Disposition = null, string CallerName = null, string CallerAddress = null, DateTime? PreviewPopDeliveredTime = null, ConversationBasic Conversation = null, string DialerSystemParticipantId = null, string DialingMode = null, List<UriReference> Skills = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Campaign = Campaign;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Agent = Agent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Contact = Contact;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DestinationAddress = DestinationAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActivePreviewCall = ActivePreviewCall;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LastActivePreviewWrapupTime = LastActivePreviewWrapupTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreationTime = CreationTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallPlacedTime = CallPlacedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallRoutedTime = CallRoutedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PreviewConnectedTime = PreviewConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Queue = Queue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Script = Script;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Disposition = Disposition;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallerName = CallerName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallerAddress = CallerAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PreviewPopDeliveredTime = PreviewPopDeliveredTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Conversation = Conversation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DialerSystemParticipantId = DialerSystemParticipantId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DialingMode = DialingMode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Skills = Skills;
-            
-            
-            
+            this.Id = Id;
+            this.Campaign = Campaign;
+            this.Agent = Agent;
+            this.Contact = Contact;
+            this.DestinationAddress = DestinationAddress;
+            this.ActivePreviewCall = ActivePreviewCall;
+            this.LastActivePreviewWrapupTime = LastActivePreviewWrapupTime;
+            this.CreationTime = CreationTime;
+            this.CallPlacedTime = CallPlacedTime;
+            this.CallRoutedTime = CallRoutedTime;
+            this.PreviewConnectedTime = PreviewConnectedTime;
+            this.Queue = Queue;
+            this.Script = Script;
+            this.Disposition = Disposition;
+            this.CallerName = CallerName;
+            this.CallerAddress = CallerAddress;
+            this.PreviewPopDeliveredTime = PreviewPopDeliveredTime;
+            this.Conversation = Conversation;
+            this.DialerSystemParticipantId = DialerSystemParticipantId;
+            this.DialingMode = DialingMode;
+            this.Skills = Skills;
             
         }
         
@@ -746,47 +429,26 @@ this.Skills = Skills;
             sb.Append("class CampaignInteraction {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Campaign: ").Append(Campaign).Append("\n");
-            
             sb.Append("  Agent: ").Append(Agent).Append("\n");
-            
             sb.Append("  Contact: ").Append(Contact).Append("\n");
-            
             sb.Append("  DestinationAddress: ").Append(DestinationAddress).Append("\n");
-            
             sb.Append("  ActivePreviewCall: ").Append(ActivePreviewCall).Append("\n");
-            
             sb.Append("  LastActivePreviewWrapupTime: ").Append(LastActivePreviewWrapupTime).Append("\n");
-            
             sb.Append("  CreationTime: ").Append(CreationTime).Append("\n");
-            
             sb.Append("  CallPlacedTime: ").Append(CallPlacedTime).Append("\n");
-            
             sb.Append("  CallRoutedTime: ").Append(CallRoutedTime).Append("\n");
-            
             sb.Append("  PreviewConnectedTime: ").Append(PreviewConnectedTime).Append("\n");
-            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
-            
             sb.Append("  Script: ").Append(Script).Append("\n");
-            
             sb.Append("  Disposition: ").Append(Disposition).Append("\n");
-            
             sb.Append("  CallerName: ").Append(CallerName).Append("\n");
-            
             sb.Append("  CallerAddress: ").Append(CallerAddress).Append("\n");
-            
             sb.Append("  PreviewPopDeliveredTime: ").Append(PreviewPopDeliveredTime).Append("\n");
-            
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
-            
             sb.Append("  DialerSystemParticipantId: ").Append(DialerSystemParticipantId).Append("\n");
-            
             sb.Append("  DialingMode: ").Append(DialingMode).Append("\n");
-            
             sb.Append("  Skills: ").Append(Skills).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -70,161 +70,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StreetAddress" /> class.
         /// </summary>
-        
-        
         /// <param name="Country">2 Letter Country code, like US or GB (required).</param>
-        
-        
-        
         /// <param name="A1">State or Province (required).</param>
-        
-        
-        
         /// <param name="A3">City or township (required).</param>
-        
-        
-        
         /// <param name="RD">RD.</param>
-        
-        
-        
         /// <param name="HNO">HNO.</param>
-        
-        
-        
         /// <param name="LOC">LOC.</param>
-        
-        
-        
         /// <param name="NAM">NAM.</param>
-        
-        
-        
         /// <param name="PC">PC.</param>
-        
-        
         public StreetAddress(string Country = null, string A1 = null, string A3 = null, string RD = null, string HNO = null, string LOC = null, string NAM = null, string PC = null)
         {
-            
-            
-            
-            // to ensure "Country" is required (not null)
-            if (Country == null)
-            {
-                throw new InvalidDataException("Country is a required property for StreetAddress and cannot be null");
-            }
-            else
-            {
-                this.Country = Country;
-            }
-            
-            
-            
-            
-            
-            // to ensure "A1" is required (not null)
-            if (A1 == null)
-            {
-                throw new InvalidDataException("A1 is a required property for StreetAddress and cannot be null");
-            }
-            else
-            {
-                this.A1 = A1;
-            }
-            
-            
-            
-            
-            
-            // to ensure "A3" is required (not null)
-            if (A3 == null)
-            {
-                throw new InvalidDataException("A3 is a required property for StreetAddress and cannot be null");
-            }
-            else
-            {
-                this.A3 = A3;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RD = RD;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HNO = HNO;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LOC = LOC;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NAM = NAM;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PC = PC;
-            
-            
-            
+            this.RD = RD;
+            this.HNO = HNO;
+            this.LOC = LOC;
+            this.NAM = NAM;
+            this.PC = PC;
             
         }
         
@@ -306,21 +166,13 @@ this.PC = PC;
             sb.Append("class StreetAddress {\n");
             
             sb.Append("  Country: ").Append(Country).Append("\n");
-            
             sb.Append("  A1: ").Append(A1).Append("\n");
-            
             sb.Append("  A3: ").Append(A3).Append("\n");
-            
             sb.Append("  RD: ").Append(RD).Append("\n");
-            
             sb.Append("  HNO: ").Append(HNO).Append("\n");
-            
             sb.Append("  LOC: ").Append(LOC).Append("\n");
-            
             sb.Append("  NAM: ").Append(NAM).Append("\n");
-            
             sb.Append("  PC: ").Append(PC).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

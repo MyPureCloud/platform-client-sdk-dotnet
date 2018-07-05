@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleActionEntities" /> class.
         /// </summary>
-        
-        
         /// <param name="Campaigns">The list of campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a campaign..</param>
-        
-        
-        
         /// <param name="Sequences">The list of sequences for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a sequence..</param>
-        
-        
-        
         /// <param name="UseTriggeringEntity">If true, the CampaignRuleAction will apply to the same entity that triggered the CampaignRuleCondition..</param>
-        
-        
         public CampaignRuleActionEntities(List<UriReference> Campaigns = null, List<UriReference> Sequences = null, bool? UseTriggeringEntity = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Campaigns = Campaigns;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Sequences = Sequences;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UseTriggeringEntity = UseTriggeringEntity;
-            
-            
-            
+            this.Campaigns = Campaigns;
+            this.Sequences = Sequences;
+            this.UseTriggeringEntity = UseTriggeringEntity;
             
         }
         
@@ -135,11 +88,8 @@ this.UseTriggeringEntity = UseTriggeringEntity;
             sb.Append("class CampaignRuleActionEntities {\n");
             
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
-            
             sb.Append("  Sequences: ").Append(Sequences).Append("\n");
-            
             sb.Append("  UseTriggeringEntity: ").Append(UseTriggeringEntity).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -100,27 +100,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IgnoredActivityCategories" /> class.
         /// </summary>
-        
-        
         /// <param name="Values">Activity categories list.</param>
-        
-        
         public IgnoredActivityCategories(List<ValuesEnum> Values = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Values = Values;
-            
-            
-            
+            this.Values = Values;
             
         }
         
@@ -144,7 +127,6 @@ this.Values = Values;
             sb.Append("class IgnoredActivityCategories {\n");
             
             sb.Append("  Values: ").Append(Values).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

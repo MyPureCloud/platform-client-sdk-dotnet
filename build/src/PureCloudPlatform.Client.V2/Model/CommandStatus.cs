@@ -196,124 +196,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandStatus" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Expiration">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="UserId">UserId.</param>
-        
-        
-        
         /// <param name="StatusCode">StatusCode.</param>
-        
-        
-        
         /// <param name="CommandType">CommandType.</param>
-        
-        
-        
         /// <param name="Document">Document.</param>
-        
-        
-        
-        
         public CommandStatus(string Name = null, DateTime? Expiration = null, string UserId = null, StatusCodeEnum? StatusCode = null, CommandTypeEnum? CommandType = null, Document Document = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Expiration = Expiration;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StatusCode = StatusCode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CommandType = CommandType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Document = Document;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Expiration = Expiration;
+            this.UserId = UserId;
+            this.StatusCode = StatusCode;
+            this.CommandType = CommandType;
+            this.Document = Document;
             
         }
         
@@ -383,21 +279,13 @@ this.Document = Document;
             sb.Append("class CommandStatus {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Expiration: ").Append(Expiration).Append("\n");
-            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  StatusCode: ").Append(StatusCode).Append("\n");
-            
             sb.Append("  CommandType: ").Append(CommandType).Append("\n");
-            
             sb.Append("  Document: ").Append(Document).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

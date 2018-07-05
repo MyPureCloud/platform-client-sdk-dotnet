@@ -190,282 +190,37 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Flow" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The flow name (required).</param>
-        
-        
-        
         /// <param name="Division">The division to which this entity belongs..</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="LockedUser">LockedUser.</param>
-        
-        
-        
         /// <param name="Active">Active.</param>
-        
-        
-        
         /// <param name="System">System.</param>
-        
-        
-        
         /// <param name="Deleted">Deleted.</param>
-        
-        
-        
         /// <param name="PublishedVersion">PublishedVersion.</param>
-        
-        
-        
         /// <param name="SavedVersion">SavedVersion.</param>
-        
-        
-        
         /// <param name="InputSchema">json schema describing the inputs for the flow.</param>
-        
-        
-        
         /// <param name="OutputSchema">json schema describing the outputs for the flow.</param>
-        
-        
-        
         /// <param name="CheckedInVersion">CheckedInVersion.</param>
-        
-        
-        
         /// <param name="PublishedBy">PublishedBy.</param>
-        
-        
-        
         /// <param name="CurrentOperation">CurrentOperation.</param>
-        
-        
-        
-        
         public Flow(string Name = null, Division Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for Flow and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Division = Division;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LockedUser = LockedUser;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Active = Active;
-            
-            
-            
-            
-            
-            
-            
-            
-this.System = System;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Deleted = Deleted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PublishedVersion = PublishedVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SavedVersion = SavedVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InputSchema = InputSchema;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OutputSchema = OutputSchema;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CheckedInVersion = CheckedInVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PublishedBy = PublishedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CurrentOperation = CurrentOperation;
-            
-            
-            
-            
-            
+            this.Division = Division;
+            this.Description = Description;
+            this.Type = Type;
+            this.LockedUser = LockedUser;
+            this.Active = Active;
+            this.System = System;
+            this.Deleted = Deleted;
+            this.PublishedVersion = PublishedVersion;
+            this.SavedVersion = SavedVersion;
+            this.InputSchema = InputSchema;
+            this.OutputSchema = OutputSchema;
+            this.CheckedInVersion = CheckedInVersion;
+            this.PublishedBy = PublishedBy;
+            this.CurrentOperation = CurrentOperation;
             
         }
         
@@ -616,39 +371,22 @@ this.CurrentOperation = CurrentOperation;
             sb.Append("class Flow {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Division: ").Append(Division).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  LockedUser: ").Append(LockedUser).Append("\n");
-            
             sb.Append("  Active: ").Append(Active).Append("\n");
-            
             sb.Append("  System: ").Append(System).Append("\n");
-            
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
-            
             sb.Append("  PublishedVersion: ").Append(PublishedVersion).Append("\n");
-            
             sb.Append("  SavedVersion: ").Append(SavedVersion).Append("\n");
-            
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
-            
             sb.Append("  OutputSchema: ").Append(OutputSchema).Append("\n");
-            
             sb.Append("  CheckedInVersion: ").Append(CheckedInVersion).Append("\n");
-            
             sb.Append("  PublishedBy: ").Append(PublishedBy).Append("\n");
-            
             sb.Append("  CurrentOperation: ").Append(CurrentOperation).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

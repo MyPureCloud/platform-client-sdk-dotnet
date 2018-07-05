@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregationResultEntry" /> class.
         /// </summary>
-        
-        
         /// <param name="Count">Count.</param>
-        
-        
-        
         /// <param name="Value">For termFrequency aggregations.</param>
-        
-        
-        
         /// <param name="Gte">For numericRange aggregations.</param>
-        
-        
-        
         /// <param name="Lt">For numericRange aggregations.</param>
-        
-        
         public AggregationResultEntry(long? Count = null, string Value = null, double? Gte = null, double? Lt = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Count = Count;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Gte = Gte;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Lt = Lt;
-            
-            
-            
+            this.Count = Count;
+            this.Value = Value;
+            this.Gte = Gte;
+            this.Lt = Lt;
             
         }
         
@@ -165,13 +103,9 @@ this.Lt = Lt;
             sb.Append("class AggregationResultEntry {\n");
             
             sb.Append("  Count: ").Append(Count).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  Gte: ").Append(Gte).Append("\n");
-            
             sb.Append("  Lt: ").Append(Lt).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

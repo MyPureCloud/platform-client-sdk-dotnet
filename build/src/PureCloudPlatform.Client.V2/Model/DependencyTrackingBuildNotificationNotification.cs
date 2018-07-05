@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DependencyTrackingBuildNotificationNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="StartTime">StartTime.</param>
-        
-        
         public DependencyTrackingBuildNotificationNotification(string Status = null, DependencyTrackingBuildNotificationNotificationUser User = null, DateTime? StartTime = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartTime = StartTime;
-            
-            
-            
+            this.Status = Status;
+            this.User = User;
+            this.StartTime = StartTime;
             
         }
         
@@ -132,11 +85,8 @@ this.StartTime = StartTime;
             sb.Append("class DependencyTrackingBuildNotificationNotification {\n");
             
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

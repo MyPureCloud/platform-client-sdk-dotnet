@@ -101,84 +101,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupProfile" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="State">The state of the user resource.</param>
-        
-        
-        
-        
-        
         /// <param name="Version">The version of the group resource (required).</param>
-        
-        
-        
-        
         public GroupProfile(string Name = null, StateEnum? State = null, long? Version = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Version" is required (not null)
-            if (Version == null)
-            {
-                throw new InvalidDataException("Version is a required property for GroupProfile and cannot be null");
-            }
-            else
-            {
-                this.Version = Version;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.State = State;
             
         }
         
@@ -239,17 +168,11 @@ this.State = State;
             sb.Append("class GroupProfile {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

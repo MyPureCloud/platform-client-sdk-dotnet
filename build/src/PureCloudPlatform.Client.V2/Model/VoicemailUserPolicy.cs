@@ -44,56 +44,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailUserPolicy" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="AlertTimeoutSeconds">The number of seconds to ring the user&#39;s phone before a call is transfered to voicemail.</param>
-        
-        
-        
         /// <param name="Pin">The user&#39;s PIN to access their voicemail. This property is only used for updates and never provided otherwise to ensure security.</param>
-        
-        
-        
-        
         public VoicemailUserPolicy(int? AlertTimeoutSeconds = null, string Pin = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AlertTimeoutSeconds = AlertTimeoutSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Pin = Pin;
-            
-            
-            
-            
-            
+            this.AlertTimeoutSeconds = AlertTimeoutSeconds;
+            this.Pin = Pin;
             
         }
         
@@ -144,13 +100,9 @@ this.Pin = Pin;
             sb.Append("class VoicemailUserPolicy {\n");
             
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  AlertTimeoutSeconds: ").Append(AlertTimeoutSeconds).Append("\n");
-            
             sb.Append("  Pin: ").Append(Pin).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

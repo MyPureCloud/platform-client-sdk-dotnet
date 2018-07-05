@@ -185,129 +185,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterNotificationFilterPredicate" /> class.
         /// </summary>
-        
-        
         /// <param name="Column">Column.</param>
-        
-        
-        
         /// <param name="ColumnType">ColumnType.</param>
-        
-        
-        
         /// <param name="_Operator">_Operator.</param>
-        
-        
-        
         /// <param name="Value">Value.</param>
-        
-        
-        
         /// <param name="Range">Range.</param>
-        
-        
-        
         /// <param name="Inverted">Inverted.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ContactListFilterNotificationFilterPredicate(string Column = null, ColumnTypeEnum? ColumnType = null, OperatorEnum? _Operator = null, string Value = null, ContactListFilterNotificationRange Range = null, bool? Inverted = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Column = Column;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ColumnType = ColumnType;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Operator = _Operator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Range = Range;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Inverted = Inverted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Column = Column;
+            this.ColumnType = ColumnType;
+            this._Operator = _Operator;
+            this.Value = Value;
+            this.Range = Range;
+            this.Inverted = Inverted;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -366,19 +259,12 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ContactListFilterNotificationFilterPredicate {\n");
             
             sb.Append("  Column: ").Append(Column).Append("\n");
-            
             sb.Append("  ColumnType: ").Append(ColumnType).Append("\n");
-            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  Range: ").Append(Range).Append("\n");
-            
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

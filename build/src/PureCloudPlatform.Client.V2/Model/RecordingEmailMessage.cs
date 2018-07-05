@@ -74,180 +74,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingEmailMessage" /> class.
         /// </summary>
-        
-        
         /// <param name="HtmlBody">HtmlBody.</param>
-        
-        
-        
         /// <param name="TextBody">TextBody.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="To">To.</param>
-        
-        
-        
         /// <param name="Cc">Cc.</param>
-        
-        
-        
         /// <param name="Bcc">Bcc.</param>
-        
-        
-        
         /// <param name="From">From.</param>
-        
-        
-        
         /// <param name="Subject">Subject.</param>
-        
-        
-        
         /// <param name="Attachments">Attachments.</param>
-        
-        
-        
         /// <param name="Time">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
         public RecordingEmailMessage(string HtmlBody = null, string TextBody = null, string Id = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, string Subject = null, List<EmailAttachment> Attachments = null, DateTime? Time = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.HtmlBody = HtmlBody;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TextBody = TextBody;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.To = To;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Cc = Cc;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Bcc = Bcc;
-            
-            
-            
-            
-            
-            
-            
-            
-this.From = From;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Subject = Subject;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attachments = Attachments;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Time = Time;
-            
-            
-            
+            this.HtmlBody = HtmlBody;
+            this.TextBody = TextBody;
+            this.Id = Id;
+            this.To = To;
+            this.Cc = Cc;
+            this.Bcc = Bcc;
+            this.From = From;
+            this.Subject = Subject;
+            this.Attachments = Attachments;
+            this.Time = Time;
             
         }
         
@@ -343,25 +191,15 @@ this.Time = Time;
             sb.Append("class RecordingEmailMessage {\n");
             
             sb.Append("  HtmlBody: ").Append(HtmlBody).Append("\n");
-            
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  To: ").Append(To).Append("\n");
-            
             sb.Append("  Cc: ").Append(Cc).Append("\n");
-            
             sb.Append("  Bcc: ").Append(Bcc).Append("\n");
-            
             sb.Append("  From: ").Append(From).Append("\n");
-            
             sb.Append("  Subject: ").Append(Subject).Append("\n");
-            
             sb.Append("  Attachments: ").Append(Attachments).Append("\n");
-            
             sb.Append("  Time: ").Append(Time).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

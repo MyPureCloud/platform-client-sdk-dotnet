@@ -106,134 +106,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AdminTimeOffRequestPatch" /> class.
         /// </summary>
-        
-        
         /// <param name="Status">The status of this time off request.</param>
-        
-        
-        
         /// <param name="ActivityCodeId">The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category.</param>
-        
-        
-        
         /// <param name="Notes">Notes about the time off request.</param>
-        
-        
-        
         /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone..</param>
-        
-        
-        
         /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests..</param>
-        
-        
-        
         /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes.</param>
-        
-        
-        
         /// <param name="Metadata">Version metadata for the time off request (required).</param>
-        
-        
         public AdminTimeOffRequestPatch(StatusEnum? Status = null, string ActivityCodeId = null, string Notes = null, List<string> FullDayManagementUnitDates = null, List<DateTime?> PartialDayStartDateTimes = null, int? DailyDurationMinutes = null, WfmVersionedEntityMetadata Metadata = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Metadata" is required (not null)
-            if (Metadata == null)
-            {
-                throw new InvalidDataException("Metadata is a required property for AdminTimeOffRequestPatch and cannot be null");
-            }
-            else
-            {
-                this.Metadata = Metadata;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActivityCodeId = ActivityCodeId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Notes = Notes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FullDayManagementUnitDates = FullDayManagementUnitDates;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PartialDayStartDateTimes = PartialDayStartDateTimes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DailyDurationMinutes = DailyDurationMinutes;
-            
-            
-            
-            
-            
-            
-            
+            this.Status = Status;
+            this.ActivityCodeId = ActivityCodeId;
+            this.Notes = Notes;
+            this.FullDayManagementUnitDates = FullDayManagementUnitDates;
+            this.PartialDayStartDateTimes = PartialDayStartDateTimes;
+            this.DailyDurationMinutes = DailyDurationMinutes;
             
         }
         
@@ -304,19 +191,12 @@ this.DailyDurationMinutes = DailyDurationMinutes;
             sb.Append("class AdminTimeOffRequestPatch {\n");
             
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
-            
             sb.Append("  Notes: ").Append(Notes).Append("\n");
-            
             sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
-            
             sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
-            
             sb.Append("  DailyDurationMinutes: ").Append(DailyDurationMinutes).Append("\n");
-            
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

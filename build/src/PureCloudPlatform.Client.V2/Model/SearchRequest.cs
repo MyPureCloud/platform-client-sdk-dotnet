@@ -121,185 +121,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="SortOrder">The sort order for results.</param>
-        
-        
-        
         /// <param name="SortBy">The field in the resource that you want to sort the results by.</param>
-        
-        
-        
         /// <param name="PageSize">The number of results per page.</param>
-        
-        
-        
         /// <param name="PageNumber">The page of resources you want to retrieve.</param>
-        
-        
-        
         /// <param name="Sort">Multi-value sort order, list of multiple sort values.</param>
-        
-        
-        
         /// <param name="ReturnFields">A List of strings.  Possible values are any field in the resource you are searching on.  The other option is to use ALL_FIELDS, when this is provided all fields in the resource will be returned in the search results..</param>
-        
-        
-        
         /// <param name="Expand">Provides more details about a specified resource.</param>
-        
-        
-        
         /// <param name="Types">Resource domain type to search (required).</param>
-        
-        
-        
         /// <param name="Query">The search criteria.</param>
-        
-        
-        
         /// <param name="Aggregations">Aggregation criteria.</param>
-        
-        
         public SearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<SearchSort> Sort = null, List<string> ReturnFields = null, List<string> Expand = null, List<string> Types = null, List<SearchCriteria> Query = null, List<SearchAggregation> Aggregations = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Types" is required (not null)
-            if (Types == null)
-            {
-                throw new InvalidDataException("Types is a required property for SearchRequest and cannot be null");
-            }
-            else
-            {
-                this.Types = Types;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SortOrder = SortOrder;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SortBy = SortBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageSize = PageSize;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageNumber = PageNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Sort = Sort;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReturnFields = ReturnFields;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Expand = Expand;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Query = Query;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Aggregations = Aggregations;
-            
-            
-            
+            this.SortOrder = SortOrder;
+            this.SortBy = SortBy;
+            this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
+            this.Sort = Sort;
+            this.ReturnFields = ReturnFields;
+            this.Expand = Expand;
+            this.Query = Query;
+            this.Aggregations = Aggregations;
             
         }
         
@@ -397,25 +239,15 @@ this.Aggregations = Aggregations;
             sb.Append("class SearchRequest {\n");
             
             sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
-            
             sb.Append("  SortBy: ").Append(SortBy).Append("\n");
-            
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            
             sb.Append("  Sort: ").Append(Sort).Append("\n");
-            
             sb.Append("  ReturnFields: ").Append(ReturnFields).Append("\n");
-            
             sb.Append("  Expand: ").Append(Expand).Append("\n");
-            
             sb.Append("  Types: ").Append(Types).Append("\n");
-            
             sb.Append("  Query: ").Append(Query).Append("\n");
-            
             sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

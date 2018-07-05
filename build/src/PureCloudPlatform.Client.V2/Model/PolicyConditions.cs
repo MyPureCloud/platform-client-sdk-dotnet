@@ -122,146 +122,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyConditions" /> class.
         /// </summary>
-        
-        
         /// <param name="ForUsers">ForUsers.</param>
-        
-        
-        
         /// <param name="Directions">Directions.</param>
-        
-        
-        
         /// <param name="DateRanges">DateRanges.</param>
-        
-        
-        
         /// <param name="MediaTypes">MediaTypes.</param>
-        
-        
-        
         /// <param name="ForQueues">ForQueues.</param>
-        
-        
-        
         /// <param name="Duration">Duration.</param>
-        
-        
-        
         /// <param name="WrapupCodes">WrapupCodes.</param>
-        
-        
-        
         /// <param name="TimeAllowed">TimeAllowed.</param>
-        
-        
         public PolicyConditions(List<User> ForUsers = null, List<DirectionsEnum> Directions = null, List<string> DateRanges = null, List<MediaTypesEnum> MediaTypes = null, List<Queue> ForQueues = null, DurationCondition Duration = null, List<WrapupCode> WrapupCodes = null, TimeAllowed TimeAllowed = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ForUsers = ForUsers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Directions = Directions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateRanges = DateRanges;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaTypes = MediaTypes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ForQueues = ForQueues;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Duration = Duration;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupCodes = WrapupCodes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeAllowed = TimeAllowed;
-            
-            
-            
+            this.ForUsers = ForUsers;
+            this.Directions = Directions;
+            this.DateRanges = DateRanges;
+            this.MediaTypes = MediaTypes;
+            this.ForQueues = ForQueues;
+            this.Duration = Duration;
+            this.WrapupCodes = WrapupCodes;
+            this.TimeAllowed = TimeAllowed;
             
         }
         
@@ -340,21 +218,13 @@ this.TimeAllowed = TimeAllowed;
             sb.Append("class PolicyConditions {\n");
             
             sb.Append("  ForUsers: ").Append(ForUsers).Append("\n");
-            
             sb.Append("  Directions: ").Append(Directions).Append("\n");
-            
             sb.Append("  DateRanges: ").Append(DateRanges).Append("\n");
-            
             sb.Append("  MediaTypes: ").Append(MediaTypes).Append("\n");
-            
             sb.Append("  ForQueues: ").Append(ForQueues).Append("\n");
-            
             sb.Append("  Duration: ").Append(Duration).Append("\n");
-            
             sb.Append("  WrapupCodes: ").Append(WrapupCodes).Append("\n");
-            
             sb.Append("  TimeAllowed: ").Append(TimeAllowed).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

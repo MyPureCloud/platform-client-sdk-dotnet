@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Change" /> class.
         /// </summary>
-        
-        
         /// <param name="Entity">Entity.</param>
-        
-        
-        
         /// <param name="Property">The property that was changed.</param>
-        
-        
-        
         /// <param name="OldValues">The old values which were modified and/or removed by this action..</param>
-        
-        
-        
         /// <param name="NewValues">The new values which were modified and/or added by this action..</param>
-        
-        
         public Change(AuditEntity Entity = null, string Property = null, List<string> OldValues = null, List<string> NewValues = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Entity = Entity;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Property = Property;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OldValues = OldValues;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NewValues = NewValues;
-            
-            
-            
+            this.Entity = Entity;
+            this.Property = Property;
+            this.OldValues = OldValues;
+            this.NewValues = NewValues;
             
         }
         
@@ -165,13 +103,9 @@ this.NewValues = NewValues;
             sb.Append("class Change {\n");
             
             sb.Append("  Entity: ").Append(Entity).Append("\n");
-            
             sb.Append("  Property: ").Append(Property).Append("\n");
-            
             sb.Append("  OldValues: ").Append(OldValues).Append("\n");
-            
             sb.Append("  NewValues: ").Append(NewValues).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

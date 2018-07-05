@@ -75,193 +75,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailsSearchResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="Total">The total number of results found (required).</param>
-        
-        
-        
         /// <param name="PageCount">The total number of pages (required).</param>
-        
-        
-        
         /// <param name="PageSize">The current page size (required).</param>
-        
-        
-        
         /// <param name="PageNumber">The current page number (required).</param>
-        
-        
-        
         /// <param name="PreviousPage">Q64 value for the previous page of results.</param>
-        
-        
-        
         /// <param name="CurrentPage">Q64 value for the current page of results.</param>
-        
-        
-        
         /// <param name="NextPage">Q64 value for the next page of results.</param>
-        
-        
-        
         /// <param name="Types">Resource types the search was performed against (required).</param>
-        
-        
-        
         /// <param name="Results">Search results (required).</param>
-        
-        
         public VoicemailsSearchResponse(long? Total = null, int? PageCount = null, int? PageSize = null, int? PageNumber = null, string PreviousPage = null, string CurrentPage = null, string NextPage = null, List<string> Types = null, List<VoicemailMessage> Results = null)
         {
-            
-            
-            
-            // to ensure "Total" is required (not null)
-            if (Total == null)
-            {
-                throw new InvalidDataException("Total is a required property for VoicemailsSearchResponse and cannot be null");
-            }
-            else
-            {
-                this.Total = Total;
-            }
-            
-            
-            
-            
-            
-            // to ensure "PageCount" is required (not null)
-            if (PageCount == null)
-            {
-                throw new InvalidDataException("PageCount is a required property for VoicemailsSearchResponse and cannot be null");
-            }
-            else
-            {
-                this.PageCount = PageCount;
-            }
-            
-            
-            
-            
-            
-            // to ensure "PageSize" is required (not null)
-            if (PageSize == null)
-            {
-                throw new InvalidDataException("PageSize is a required property for VoicemailsSearchResponse and cannot be null");
-            }
-            else
-            {
-                this.PageSize = PageSize;
-            }
-            
-            
-            
-            
-            
-            // to ensure "PageNumber" is required (not null)
-            if (PageNumber == null)
-            {
-                throw new InvalidDataException("PageNumber is a required property for VoicemailsSearchResponse and cannot be null");
-            }
-            else
-            {
-                this.PageNumber = PageNumber;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Types" is required (not null)
-            if (Types == null)
-            {
-                throw new InvalidDataException("Types is a required property for VoicemailsSearchResponse and cannot be null");
-            }
-            else
-            {
-                this.Types = Types;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Results" is required (not null)
-            if (Results == null)
-            {
-                throw new InvalidDataException("Results is a required property for VoicemailsSearchResponse and cannot be null");
-            }
-            else
-            {
-                this.Results = Results;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.PreviousPage = PreviousPage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CurrentPage = CurrentPage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NextPage = NextPage;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.PreviousPage = PreviousPage;
+            this.CurrentPage = CurrentPage;
+            this.NextPage = NextPage;
             
         }
         
@@ -357,23 +184,14 @@ this.NextPage = NextPage;
             sb.Append("class VoicemailsSearchResponse {\n");
             
             sb.Append("  Total: ").Append(Total).Append("\n");
-            
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
-            
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            
             sb.Append("  PreviousPage: ").Append(PreviousPage).Append("\n");
-            
             sb.Append("  CurrentPage: ").Append(CurrentPage).Append("\n");
-            
             sb.Append("  NextPage: ").Append(NextPage).Append("\n");
-            
             sb.Append("  Types: ").Append(Types).Append("\n");
-            
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

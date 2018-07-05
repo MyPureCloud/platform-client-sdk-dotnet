@@ -92,61 +92,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingStatus" /> class.
         /// </summary>
-        
-        
         /// <param name="UserId">The userId of the agent.</param>
-        
-        
-        
         /// <param name="Status">Indicates the Routing State of the agent.  A value of OFF_QUEUE will be returned if the specified user does not exist..</param>
-        
-        
-        
         /// <param name="StartTime">The timestamp when the agent went into this state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
         public RoutingStatus(string UserId = null, StatusEnum? Status = null, DateTime? StartTime = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartTime = StartTime;
-            
-            
-            
+            this.UserId = UserId;
+            this.Status = Status;
+            this.StartTime = StartTime;
             
         }
         
@@ -181,11 +134,8 @@ this.StartTime = StartTime;
             sb.Append("class RoutingStatus {\n");
             
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -89,209 +89,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentActivity" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Agent">Agent.</param>
-        
-        
-        
         /// <param name="NumEvaluations">NumEvaluations.</param>
-        
-        
-        
         /// <param name="AverageEvaluationScore">AverageEvaluationScore.</param>
-        
-        
-        
         /// <param name="NumCriticalEvaluations">NumCriticalEvaluations.</param>
-        
-        
-        
         /// <param name="AverageCriticalScore">AverageCriticalScore.</param>
-        
-        
-        
         /// <param name="HighestEvaluationScore">HighestEvaluationScore.</param>
-        
-        
-        
         /// <param name="LowestEvaluationScore">LowestEvaluationScore.</param>
-        
-        
-        
         /// <param name="HighestCriticalScore">HighestCriticalScore.</param>
-        
-        
-        
         /// <param name="LowestCriticalScore">LowestCriticalScore.</param>
-        
-        
-        
         /// <param name="AgentEvaluatorActivityList">AgentEvaluatorActivityList.</param>
-        
-        
-        
-        
         public AgentActivity(string Name = null, User Agent = null, int? NumEvaluations = null, int? AverageEvaluationScore = null, int? NumCriticalEvaluations = null, float? AverageCriticalScore = null, float? HighestEvaluationScore = null, float? LowestEvaluationScore = null, float? HighestCriticalScore = null, float? LowestCriticalScore = null, List<AgentEvaluatorActivity> AgentEvaluatorActivityList = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Agent = Agent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumEvaluations = NumEvaluations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageEvaluationScore = AverageEvaluationScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumCriticalEvaluations = NumCriticalEvaluations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageCriticalScore = AverageCriticalScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HighestEvaluationScore = HighestEvaluationScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LowestEvaluationScore = LowestEvaluationScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HighestCriticalScore = HighestCriticalScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LowestCriticalScore = LowestCriticalScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AgentEvaluatorActivityList = AgentEvaluatorActivityList;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Agent = Agent;
+            this.NumEvaluations = NumEvaluations;
+            this.AverageEvaluationScore = AverageEvaluationScore;
+            this.NumCriticalEvaluations = NumCriticalEvaluations;
+            this.AverageCriticalScore = AverageCriticalScore;
+            this.HighestEvaluationScore = HighestEvaluationScore;
+            this.LowestEvaluationScore = LowestEvaluationScore;
+            this.HighestCriticalScore = HighestCriticalScore;
+            this.LowestCriticalScore = LowestCriticalScore;
+            this.AgentEvaluatorActivityList = AgentEvaluatorActivityList;
             
         }
         
@@ -412,31 +233,18 @@ this.AgentEvaluatorActivityList = AgentEvaluatorActivityList;
             sb.Append("class AgentActivity {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Agent: ").Append(Agent).Append("\n");
-            
             sb.Append("  NumEvaluations: ").Append(NumEvaluations).Append("\n");
-            
             sb.Append("  AverageEvaluationScore: ").Append(AverageEvaluationScore).Append("\n");
-            
             sb.Append("  NumCriticalEvaluations: ").Append(NumCriticalEvaluations).Append("\n");
-            
             sb.Append("  AverageCriticalScore: ").Append(AverageCriticalScore).Append("\n");
-            
             sb.Append("  HighestEvaluationScore: ").Append(HighestEvaluationScore).Append("\n");
-            
             sb.Append("  LowestEvaluationScore: ").Append(LowestEvaluationScore).Append("\n");
-            
             sb.Append("  HighestCriticalScore: ").Append(HighestCriticalScore).Append("\n");
-            
             sb.Append("  LowestCriticalScore: ").Append(LowestCriticalScore).Append("\n");
-            
             sb.Append("  AgentEvaluatorActivityList: ").Append(AgentEvaluatorActivityList).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

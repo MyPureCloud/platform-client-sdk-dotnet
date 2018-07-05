@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationDialerPreview" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="ContactId">ContactId.</param>
-        
-        
-        
         /// <param name="ContactListId">ContactListId.</param>
-        
-        
-        
         /// <param name="CampaignId">CampaignId.</param>
-        
-        
-        
         /// <param name="PhoneNumberColumns">PhoneNumberColumns.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ConversationNotificationDialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<CampaignNotificationPhoneColumns> PhoneNumberColumns = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactId = ContactId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactListId = ContactListId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CampaignId = CampaignId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneNumberColumns = PhoneNumberColumns;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Id = Id;
+            this.ContactId = ContactId;
+            this.ContactListId = ContactListId;
+            this.CampaignId = CampaignId;
+            this.PhoneNumberColumns = PhoneNumberColumns;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -222,17 +130,11 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ConversationNotificationDialerPreview {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  ContactId: ").Append(ContactId).Append("\n");
-            
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
-            
             sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
-            
             sb.Append("  PhoneNumberColumns: ").Append(PhoneNumberColumns).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

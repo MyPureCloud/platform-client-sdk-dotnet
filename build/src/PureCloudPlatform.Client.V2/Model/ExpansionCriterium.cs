@@ -61,44 +61,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExpansionCriterium" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="Threshold">Threshold.</param>
-        
-        
         public ExpansionCriterium(TypeEnum? Type = null, double? Threshold = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Threshold = Threshold;
-            
-            
-            
+            this.Type = Type;
+            this.Threshold = Threshold;
             
         }
         
@@ -123,9 +91,7 @@ this.Threshold = Threshold;
             sb.Append("class ExpansionCriterium {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Threshold: ").Append(Threshold).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumber" /> class.
         /// </summary>
-        
-        
         /// <param name="Display">Display.</param>
-        
-        
-        
         /// <param name="Extension">Extension.</param>
-        
-        
-        
         /// <param name="AcceptsSMS">AcceptsSMS.</param>
-        
-        
-        
         /// <param name="UserInput">UserInput.</param>
-        
-        
-        
         /// <param name="E164">E164.</param>
-        
-        
-        
         /// <param name="CountryCode">CountryCode.</param>
-        
-        
         public PhoneNumber(string Display = null, long? Extension = null, bool? AcceptsSMS = null, string UserInput = null, string E164 = null, string CountryCode = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Display = Display;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Extension = Extension;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AcceptsSMS = AcceptsSMS;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserInput = UserInput;
-            
-            
-            
-            
-            
-            
-            
-            
-this.E164 = E164;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CountryCode = CountryCode;
-            
-            
-            
+            this.Display = Display;
+            this.Extension = Extension;
+            this.AcceptsSMS = AcceptsSMS;
+            this.UserInput = UserInput;
+            this.E164 = E164;
+            this.CountryCode = CountryCode;
             
         }
         
@@ -222,17 +130,11 @@ this.CountryCode = CountryCode;
             sb.Append("class PhoneNumber {\n");
             
             sb.Append("  Display: ").Append(Display).Append("\n");
-            
             sb.Append("  Extension: ").Append(Extension).Append("\n");
-            
             sb.Append("  AcceptsSMS: ").Append(AcceptsSMS).Append("\n");
-            
             sb.Append("  UserInput: ").Append(UserInput).Append("\n");
-            
             sb.Append("  E164: ").Append(E164).Append("\n");
-            
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

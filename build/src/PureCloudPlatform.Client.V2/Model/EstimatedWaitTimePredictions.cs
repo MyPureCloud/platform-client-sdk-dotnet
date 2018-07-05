@@ -35,32 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EstimatedWaitTimePredictions" /> class.
         /// </summary>
-        
-        
         /// <param name="Results">Returned upon a successful estimated wait time request. (required).</param>
-        
-        
         public EstimatedWaitTimePredictions(List<PredictionResults> Results = null)
         {
-            
-            
-            
-            // to ensure "Results" is required (not null)
-            if (Results == null)
-            {
-                throw new InvalidDataException("Results is a required property for EstimatedWaitTimePredictions and cannot be null");
-            }
-            else
-            {
-                this.Results = Results;
-            }
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -84,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class EstimatedWaitTimePredictions {\n");
             
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

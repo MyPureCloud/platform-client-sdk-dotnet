@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaPolicies" /> class.
         /// </summary>
-        
-        
         /// <param name="CallPolicy">Conditions and actions for calls.</param>
-        
-        
-        
         /// <param name="ChatPolicy">Conditions and actions for chats.</param>
-        
-        
-        
         /// <param name="EmailPolicy">Conditions and actions for emails.</param>
-        
-        
-        
         /// <param name="MessagePolicy">Conditions and actions for messages.</param>
-        
-        
         public MediaPolicies(CallMediaPolicy CallPolicy = null, ChatMediaPolicy ChatPolicy = null, EmailMediaPolicy EmailPolicy = null, MessageMediaPolicy MessagePolicy = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallPolicy = CallPolicy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ChatPolicy = ChatPolicy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EmailPolicy = EmailPolicy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessagePolicy = MessagePolicy;
-            
-            
-            
+            this.CallPolicy = CallPolicy;
+            this.ChatPolicy = ChatPolicy;
+            this.EmailPolicy = EmailPolicy;
+            this.MessagePolicy = MessagePolicy;
             
         }
         
@@ -166,13 +104,9 @@ this.MessagePolicy = MessagePolicy;
             sb.Append("class MediaPolicies {\n");
             
             sb.Append("  CallPolicy: ").Append(CallPolicy).Append("\n");
-            
             sb.Append("  ChatPolicy: ").Append(ChatPolicy).Append("\n");
-            
             sb.Append("  EmailPolicy: ").Append(EmailPolicy).Append("\n");
-            
             sb.Append("  MessagePolicy: ").Append(MessagePolicy).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

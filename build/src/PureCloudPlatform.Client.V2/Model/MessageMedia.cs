@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageMedia" /> class.
         /// </summary>
-        
-        
         /// <param name="Url">The location of the media, useful for retrieving it.</param>
-        
-        
-        
         /// <param name="MediaType">The optional internet media type of the the media object.  If null then the media type should be dictated by the url.</param>
-        
-        
-        
         /// <param name="ContentLengthBytes">The optional content length of the the media object, in bytes..</param>
-        
-        
-        
         /// <param name="Name">The optional name of the the media object..</param>
-        
-        
-        
         /// <param name="Id">The optional id of the the media object..</param>
-        
-        
         public MessageMedia(string Url = null, string MediaType = null, int? ContentLengthBytes = null, string Name = null, string Id = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Url = Url;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaType = MediaType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentLengthBytes = ContentLengthBytes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
+            this.Url = Url;
+            this.MediaType = MediaType;
+            this.ContentLengthBytes = ContentLengthBytes;
+            this.Name = Name;
+            this.Id = Id;
             
         }
         
@@ -197,15 +120,10 @@ this.Id = Id;
             sb.Append("class MessageMedia {\n");
             
             sb.Append("  Url: ").Append(Url).Append("\n");
-            
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("  ContentLengthBytes: ").Append(ContentLengthBytes).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

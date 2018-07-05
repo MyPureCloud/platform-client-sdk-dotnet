@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExportScriptRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="FileName">The final file name (no extension) of the script download: &lt;fileName&gt;.script.</param>
-        
-        
-        
         /// <param name="VersionId">The UUID version of the script to be exported.  Defaults to the current editable version..</param>
-        
-        
         public ExportScriptRequest(string FileName = null, string VersionId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.FileName = FileName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VersionId = VersionId;
-            
-            
-            
+            this.FileName = FileName;
+            this.VersionId = VersionId;
             
         }
         
@@ -104,9 +72,7 @@ this.VersionId = VersionId;
             sb.Append("class ExportScriptRequest {\n");
             
             sb.Append("  FileName: ").Append(FileName).Append("\n");
-            
             sb.Append("  VersionId: ").Append(VersionId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

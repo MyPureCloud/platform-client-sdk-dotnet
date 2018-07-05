@@ -35,32 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsultTransferResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="DestinationParticipantId">Participant ID to whom the call is being transferred. (required).</param>
-        
-        
         public ConsultTransferResponse(string DestinationParticipantId = null)
         {
-            
-            
-            
-            // to ensure "DestinationParticipantId" is required (not null)
-            if (DestinationParticipantId == null)
-            {
-                throw new InvalidDataException("DestinationParticipantId is a required property for ConsultTransferResponse and cannot be null");
-            }
-            else
-            {
-                this.DestinationParticipantId = DestinationParticipantId;
-            }
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -84,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConsultTransferResponse {\n");
             
             sb.Append("  DestinationParticipantId: ").Append(DestinationParticipantId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

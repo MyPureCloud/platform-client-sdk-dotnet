@@ -40,49 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriberResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="MessageReturned">Suggested valid addresses.</param>
-        
-        
-        
         /// <param name="Status">http status (required).</param>
-        
-        
         public SubscriberResponse(List<string> MessageReturned = null, string Status = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Status" is required (not null)
-            if (Status == null)
-            {
-                throw new InvalidDataException("Status is a required property for SubscriberResponse and cannot be null");
-            }
-            else
-            {
-                this.Status = Status;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageReturned = MessageReturned;
-            
-            
-            
-            
-            
-            
-            
+            this.MessageReturned = MessageReturned;
             
         }
         
@@ -115,9 +77,7 @@ this.MessageReturned = MessageReturned;
             sb.Append("class SubscriberResponse {\n");
             
             sb.Append("  MessageReturned: ").Append(MessageReturned).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

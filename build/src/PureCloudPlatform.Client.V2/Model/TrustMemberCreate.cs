@@ -40,54 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustMemberCreate" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Trustee User or Group Id (required).</param>
-        
-        
-        
         /// <param name="RoleIds">The list of trustor organization roles granting this user or group access. (required).</param>
-        
-        
         public TrustMemberCreate(string Id = null, List<string> RoleIds = null)
         {
-            
-            
-            
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for TrustMemberCreate and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            
-            
-            
-            
-            
-            // to ensure "RoleIds" is required (not null)
-            if (RoleIds == null)
-            {
-                throw new InvalidDataException("RoleIds is a required property for TrustMemberCreate and cannot be null");
-            }
-            else
-            {
-                this.RoleIds = RoleIds;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -120,9 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class TrustMemberCreate {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  RoleIds: ").Append(RoleIds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

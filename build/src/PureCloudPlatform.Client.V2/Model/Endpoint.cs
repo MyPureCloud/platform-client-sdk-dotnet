@@ -161,293 +161,36 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Endpoint" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name (required).</param>
-        
-        
-        
         /// <param name="Description">The resource&#39;s description..</param>
-        
-        
-        
         /// <param name="Version">The current version of the resource..</param>
-        
-        
-        
         /// <param name="DateCreated">The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateModified">The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ModifiedBy">The ID of the user that last modified the resource..</param>
-        
-        
-        
         /// <param name="CreatedBy">The ID of the user that created the resource..</param>
-        
-        
-        
-        
-        
         /// <param name="ModifiedByApp">The application that last modified the resource..</param>
-        
-        
-        
         /// <param name="CreatedByApp">The application that created the resource..</param>
-        
-        
-        
         /// <param name="Count">Count.</param>
-        
-        
-        
         /// <param name="Properties">Properties.</param>
-        
-        
-        
         /// <param name="Schema">Schema (required).</param>
-        
-        
-        
         /// <param name="Enabled">Enabled.</param>
-        
-        
-        
         /// <param name="Site">Site.</param>
-        
-        
-        
         /// <param name="Dids">Dids.</param>
-        
-        
-        
-        
         public Endpoint(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, int? Count = null, Dictionary<string, Object> Properties = null, UriReference Schema = null, bool? Enabled = null, UriReference Site = null, List<string> Dids = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for Endpoint and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Schema" is required (not null)
-            if (Schema == null)
-            {
-                throw new InvalidDataException("Schema is a required property for Endpoint and cannot be null");
-            }
-            else
-            {
-                this.Schema = Schema;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedByApp = ModifiedByApp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedByApp = CreatedByApp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Count = Count;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Properties = Properties;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Enabled = Enabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Site = Site;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Dids = Dids;
-            
-            
-            
-            
-            
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.Count = Count;
+            this.Properties = Properties;
+            this.Enabled = Enabled;
+            this.Site = Site;
+            this.Dids = Dids;
             
         }
         
@@ -612,41 +355,23 @@ this.Dids = Dids;
             sb.Append("class Endpoint {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
-            
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
-            
             sb.Append("  Count: ").Append(Count).Append("\n");
-            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            
             sb.Append("  Schema: ").Append(Schema).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  Site: ").Append(Site).Append("\n");
-            
             sb.Append("  Dids: ").Append(Dids).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

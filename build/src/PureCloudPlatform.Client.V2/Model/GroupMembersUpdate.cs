@@ -40,54 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupMembersUpdate" /> class.
         /// </summary>
-        
-        
         /// <param name="MemberIds">A list of the ids of the members to add. (required).</param>
-        
-        
-        
         /// <param name="Version">The current group version. (required).</param>
-        
-        
         public GroupMembersUpdate(List<string> MemberIds = null, int? Version = null)
         {
-            
-            
-            
-            // to ensure "MemberIds" is required (not null)
-            if (MemberIds == null)
-            {
-                throw new InvalidDataException("MemberIds is a required property for GroupMembersUpdate and cannot be null");
-            }
-            else
-            {
-                this.MemberIds = MemberIds;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Version" is required (not null)
-            if (Version == null)
-            {
-                throw new InvalidDataException("Version is a required property for GroupMembersUpdate and cannot be null");
-            }
-            else
-            {
-                this.Version = Version;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -120,9 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class GroupMembersUpdate {\n");
             
             sb.Append("  MemberIds: ").Append(MemberIds).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

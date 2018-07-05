@@ -85,173 +85,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRule" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the CampaignRule. (required).</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        
-        
-        
         /// <param name="CampaignRuleEntities">The list of entities that this CampaignRule monitors. (required).</param>
-        
-        
-        
         /// <param name="CampaignRuleConditions">The list of conditions that are evaluated on the entities. (required).</param>
-        
-        
-        
         /// <param name="CampaignRuleActions">The list of actions that are executed if the conditions are satisfied. (required).</param>
-        
-        
-        
         /// <param name="MatchAnyConditions">MatchAnyConditions.</param>
-        
-        
-        
         /// <param name="Enabled">Whether or not this CampaignRule is currently enabled. Required on updates..</param>
-        
-        
-        
-        
         public CampaignRule(string Name = null, int? Version = null, CampaignRuleEntities CampaignRuleEntities = null, List<CampaignRuleCondition> CampaignRuleConditions = null, List<CampaignRuleAction> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for CampaignRule and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "CampaignRuleEntities" is required (not null)
-            if (CampaignRuleEntities == null)
-            {
-                throw new InvalidDataException("CampaignRuleEntities is a required property for CampaignRule and cannot be null");
-            }
-            else
-            {
-                this.CampaignRuleEntities = CampaignRuleEntities;
-            }
-            
-            
-            
-            
-            
-            // to ensure "CampaignRuleConditions" is required (not null)
-            if (CampaignRuleConditions == null)
-            {
-                throw new InvalidDataException("CampaignRuleConditions is a required property for CampaignRule and cannot be null");
-            }
-            else
-            {
-                this.CampaignRuleConditions = CampaignRuleConditions;
-            }
-            
-            
-            
-            
-            
-            // to ensure "CampaignRuleActions" is required (not null)
-            if (CampaignRuleActions == null)
-            {
-                throw new InvalidDataException("CampaignRuleActions is a required property for CampaignRule and cannot be null");
-            }
-            else
-            {
-                this.CampaignRuleActions = CampaignRuleActions;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MatchAnyConditions = MatchAnyConditions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Enabled = Enabled;
-            
-            
-            
-            
-            
+            this.Version = Version;
+            this.MatchAnyConditions = MatchAnyConditions;
+            this.Enabled = Enabled;
             
         }
         
@@ -364,27 +209,16 @@ this.Enabled = Enabled;
             sb.Append("class CampaignRule {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  CampaignRuleEntities: ").Append(CampaignRuleEntities).Append("\n");
-            
             sb.Append("  CampaignRuleConditions: ").Append(CampaignRuleConditions).Append("\n");
-            
             sb.Append("  CampaignRuleActions: ").Append(CampaignRuleActions).Append("\n");
-            
             sb.Append("  MatchAnyConditions: ").Append(MatchAnyConditions).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

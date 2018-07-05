@@ -123,105 +123,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateShareRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="SharedEntityType">The share entity type (required).</param>
-        
-        
-        
         /// <param name="SharedEntity">The entity that will be shared (required).</param>
-        
-        
-        
         /// <param name="MemberType">MemberType.</param>
-        
-        
-        
         /// <param name="Member">The member that will have access to this share. Only required if a list of members is not provided..</param>
-        
-        
-        
         /// <param name="Members">Members.</param>
-        
-        
         public CreateShareRequest(SharedEntityTypeEnum? SharedEntityType = null, SharedEntity SharedEntity = null, MemberTypeEnum? MemberType = null, SharedEntity Member = null, List<CreateShareRequestMember> Members = null)
         {
-            
-            
-            
-            // to ensure "SharedEntityType" is required (not null)
-            if (SharedEntityType == null)
-            {
-                throw new InvalidDataException("SharedEntityType is a required property for CreateShareRequest and cannot be null");
-            }
-            else
-            {
-                this.SharedEntityType = SharedEntityType;
-            }
-            
-            
-            
-            
-            
-            // to ensure "SharedEntity" is required (not null)
-            if (SharedEntity == null)
-            {
-                throw new InvalidDataException("SharedEntity is a required property for CreateShareRequest and cannot be null");
-            }
-            else
-            {
-                this.SharedEntity = SharedEntity;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MemberType = MemberType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Member = Member;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Members = Members;
-            
-            
-            
+            this.MemberType = MemberType;
+            this.Member = Member;
+            this.Members = Members;
             
         }
         
@@ -266,15 +177,10 @@ this.Members = Members;
             sb.Append("class CreateShareRequest {\n");
             
             sb.Append("  SharedEntityType: ").Append(SharedEntityType).Append("\n");
-            
             sb.Append("  SharedEntity: ").Append(SharedEntity).Append("\n");
-            
             sb.Append("  MemberType: ").Append(MemberType).Append("\n");
-            
             sb.Append("  Member: ").Append(Member).Append("\n");
-            
             sb.Append("  Members: ").Append(Members).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

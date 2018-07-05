@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceContext" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Unused field for the purpose of ensuring a Swagger definition is created for a class with only @JsonIgnore members..</param>
-        
-        
         public ServiceContext(string Name = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
+            this.Name = Name;
             
         }
         
@@ -73,7 +56,6 @@ this.Name = Name;
             sb.Append("class ServiceContext {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

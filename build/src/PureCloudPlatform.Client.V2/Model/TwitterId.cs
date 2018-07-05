@@ -49,73 +49,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TwitterId" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">twitter user.id_str.</param>
-        
-        
-        
         /// <param name="Name">twitter user.name.</param>
-        
-        
-        
         /// <param name="ScreenName">twitter user.screen_name.</param>
-        
-        
-        
-        
-        
-        
         public TwitterId(string Id = null, string Name = null, string ScreenName = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScreenName = ScreenName;
-            
-            
-            
-            
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.ScreenName = ScreenName;
             
         }
         
@@ -175,15 +116,10 @@ this.ScreenName = ScreenName;
             sb.Append("class TwitterId {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ScreenName: ").Append(ScreenName).Append("\n");
-            
             sb.Append("  Verified: ").Append(Verified).Append("\n");
-            
             sb.Append("  ProfileUrl: ").Append(ProfileUrl).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

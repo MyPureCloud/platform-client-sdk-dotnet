@@ -99,95 +99,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Language" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The language name. (required).</param>
-        
-        
-        
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="State">State.</param>
-        
-        
-        
         /// <param name="Version">Version.</param>
-        
-        
-        
-        
         public Language(string Name = null, DateTime? DateModified = null, StateEnum? State = null, string Version = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for Language and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
+            this.DateModified = DateModified;
+            this.State = State;
+            this.Version = Version;
             
         }
         
@@ -248,17 +168,11 @@ this.Version = Version;
             sb.Append("class Language {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

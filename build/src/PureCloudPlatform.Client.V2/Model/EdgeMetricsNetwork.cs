@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsNetwork" /> class.
         /// </summary>
-        
-        
         /// <param name="Ifname">Identifier for the network adapter..</param>
-        
-        
-        
         /// <param name="SentBytesPerSec">Number of byes sent per second..</param>
-        
-        
-        
         /// <param name="ReceivedBytesPerSec">Number of byes received per second..</param>
-        
-        
-        
         /// <param name="BandwidthBitsPerSec">Total bandwidth of the adapter in bits per second..</param>
-        
-        
-        
         /// <param name="UtilizationPct">Percent utilization of the network adapter..</param>
-        
-        
         public EdgeMetricsNetwork(string Ifname = null, int? SentBytesPerSec = null, int? ReceivedBytesPerSec = null, double? BandwidthBitsPerSec = null, double? UtilizationPct = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Ifname = Ifname;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SentBytesPerSec = SentBytesPerSec;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReceivedBytesPerSec = ReceivedBytesPerSec;
-            
-            
-            
-            
-            
-            
-            
-            
-this.BandwidthBitsPerSec = BandwidthBitsPerSec;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UtilizationPct = UtilizationPct;
-            
-            
-            
+            this.Ifname = Ifname;
+            this.SentBytesPerSec = SentBytesPerSec;
+            this.ReceivedBytesPerSec = ReceivedBytesPerSec;
+            this.BandwidthBitsPerSec = BandwidthBitsPerSec;
+            this.UtilizationPct = UtilizationPct;
             
         }
         
@@ -197,15 +120,10 @@ this.UtilizationPct = UtilizationPct;
             sb.Append("class EdgeMetricsNetwork {\n");
             
             sb.Append("  Ifname: ").Append(Ifname).Append("\n");
-            
             sb.Append("  SentBytesPerSec: ").Append(SentBytesPerSec).Append("\n");
-            
             sb.Append("  ReceivedBytesPerSec: ").Append(ReceivedBytesPerSec).Append("\n");
-            
             sb.Append("  BandwidthBitsPerSec: ").Append(BandwidthBitsPerSec).Append("\n");
-            
             sb.Append("  UtilizationPct: ").Append(UtilizationPct).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

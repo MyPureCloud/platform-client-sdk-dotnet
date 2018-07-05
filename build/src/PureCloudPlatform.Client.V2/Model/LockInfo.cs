@@ -107,78 +107,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LockInfo" /> class.
         /// </summary>
-        
-        
         /// <param name="LockedBy">LockedBy.</param>
-        
-        
-        
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateExpires">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Action">Action.</param>
-        
-        
         public LockInfo(UriReference LockedBy = null, DateTime? DateCreated = null, DateTime? DateExpires = null, ActionEnum? Action = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.LockedBy = LockedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateExpires = DateExpires;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Action = Action;
-            
-            
-            
+            this.LockedBy = LockedBy;
+            this.DateCreated = DateCreated;
+            this.DateExpires = DateExpires;
+            this.Action = Action;
             
         }
         
@@ -221,13 +159,9 @@ this.Action = Action;
             sb.Append("class LockInfo {\n");
             
             sb.Append("  LockedBy: ").Append(LockedBy).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateExpires: ").Append(DateExpires).Append("\n");
-            
             sb.Append("  Action: ").Append(Action).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

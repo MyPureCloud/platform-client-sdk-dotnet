@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterRange" /> class.
         /// </summary>
-        
-        
         /// <param name="Min">The minimum value of the range. Required for the operator BETWEEN..</param>
-        
-        
-        
         /// <param name="Max">The maximum value of the range. Required for the operator BETWEEN..</param>
-        
-        
-        
         /// <param name="MinInclusive">Whether or not to include the minimum in the range..</param>
-        
-        
-        
         /// <param name="MaxInclusive">Whether or not to include the maximum in the range..</param>
-        
-        
-        
         /// <param name="InSet">A set of values that the contact data should be in. Required for the IN operator..</param>
-        
-        
         public ContactListFilterRange(string Min = null, string Max = null, bool? MinInclusive = null, bool? MaxInclusive = null, List<string> InSet = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Min = Min;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Max = Max;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MinInclusive = MinInclusive;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxInclusive = MaxInclusive;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InSet = InSet;
-            
-            
-            
+            this.Min = Min;
+            this.Max = Max;
+            this.MinInclusive = MinInclusive;
+            this.MaxInclusive = MaxInclusive;
+            this.InSet = InSet;
             
         }
         
@@ -197,15 +120,10 @@ this.InSet = InSet;
             sb.Append("class ContactListFilterRange {\n");
             
             sb.Append("  Min: ").Append(Min).Append("\n");
-            
             sb.Append("  Max: ").Append(Max).Append("\n");
-            
             sb.Append("  MinInclusive: ").Append(MinInclusive).Append("\n");
-            
             sb.Append("  MaxInclusive: ").Append(MaxInclusive).Append("\n");
-            
             sb.Append("  InSet: ").Append(InSet).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

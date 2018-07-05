@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleContainer" /> class.
         /// </summary>
-        
-        
         /// <param name="ManagementUnitTimeZone">The reference time zone used for the management unit.</param>
-        
-        
-        
         /// <param name="UserSchedules">Map of user id to user schedule.</param>
-        
-        
         public UserScheduleContainer(string ManagementUnitTimeZone = null, Dictionary<string, UserSchedule> UserSchedules = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ManagementUnitTimeZone = ManagementUnitTimeZone;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserSchedules = UserSchedules;
-            
-            
-            
+            this.ManagementUnitTimeZone = ManagementUnitTimeZone;
+            this.UserSchedules = UserSchedules;
             
         }
         
@@ -104,9 +72,7 @@ this.UserSchedules = UserSchedules;
             sb.Append("class UserScheduleContainer {\n");
             
             sb.Append("  ManagementUnitTimeZone: ").Append(ManagementUnitTimeZone).Append("\n");
-            
             sb.Append("  UserSchedules: ").Append(UserSchedules).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

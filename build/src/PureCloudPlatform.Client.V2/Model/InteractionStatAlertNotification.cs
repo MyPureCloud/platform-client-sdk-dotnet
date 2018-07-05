@@ -406,282 +406,40 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InteractionStatAlertNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="RuleId">RuleId.</param>
-        
-        
-        
         /// <param name="Dimension">Dimension.</param>
-        
-        
-        
         /// <param name="DimensionValue">DimensionValue.</param>
-        
-        
-        
         /// <param name="DimensionValueName">DimensionValueName.</param>
-        
-        
-        
         /// <param name="Metric">Metric.</param>
-        
-        
-        
         /// <param name="MediaType">MediaType.</param>
-        
-        
-        
         /// <param name="NumericRange">NumericRange.</param>
-        
-        
-        
         /// <param name="Statistic">Statistic.</param>
-        
-        
-        
         /// <param name="Value">Value.</param>
-        
-        
-        
         /// <param name="Unread">Unread.</param>
-        
-        
-        
         /// <param name="StartDate">StartDate.</param>
-        
-        
-        
         /// <param name="EndDate">EndDate.</param>
-        
-        
-        
         /// <param name="NotificationUsers">NotificationUsers.</param>
-        
-        
-        
         /// <param name="AlertTypes">AlertTypes.</param>
-        
-        
         public InteractionStatAlertNotification(string Id = null, string Name = null, string RuleId = null, DimensionEnum? Dimension = null, string DimensionValue = null, string DimensionValueName = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Unread = null, DateTime? StartDate = null, DateTime? EndDate = null, List<HeartBeatAlertNotificationNotificationUsers> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RuleId = RuleId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Dimension = Dimension;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DimensionValue = DimensionValue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DimensionValueName = DimensionValueName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metric = Metric;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaType = MediaType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumericRange = NumericRange;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Statistic = Statistic;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Unread = Unread;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartDate = StartDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndDate = EndDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NotificationUsers = NotificationUsers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AlertTypes = AlertTypes;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.RuleId = RuleId;
+            this.Dimension = Dimension;
+            this.DimensionValue = DimensionValue;
+            this.DimensionValueName = DimensionValueName;
+            this.Metric = Metric;
+            this.MediaType = MediaType;
+            this.NumericRange = NumericRange;
+            this.Statistic = Statistic;
+            this.Value = Value;
+            this.Unread = Unread;
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
+            this.NotificationUsers = NotificationUsers;
+            this.AlertTypes = AlertTypes;
             
         }
         
@@ -794,37 +552,21 @@ this.AlertTypes = AlertTypes;
             sb.Append("class InteractionStatAlertNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  RuleId: ").Append(RuleId).Append("\n");
-            
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
-            
             sb.Append("  DimensionValue: ").Append(DimensionValue).Append("\n");
-            
             sb.Append("  DimensionValueName: ").Append(DimensionValueName).Append("\n");
-            
             sb.Append("  Metric: ").Append(Metric).Append("\n");
-            
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("  NumericRange: ").Append(NumericRange).Append("\n");
-            
             sb.Append("  Statistic: ").Append(Statistic).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  Unread: ").Append(Unread).Append("\n");
-            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
-            
             sb.Append("  NotificationUsers: ").Append(NotificationUsers).Append("\n");
-            
             sb.Append("  AlertTypes: ").Append(AlertTypes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -95,116 +95,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRule" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the rule. (required).</param>
-        
-        
-        
         /// <param name="Order">The ranked order of the rule. Rules are processed from lowest number to highest..</param>
-        
-        
-        
         /// <param name="Category">The category of the rule. (required).</param>
-        
-        
-        
         /// <param name="Conditions">A list of Conditions. All of the Conditions must evaluate to true to trigger the actions. (required).</param>
-        
-        
-        
         /// <param name="Actions">The list of actions to be taken if the conditions are true..</param>
-        
-        
         public DialerRule(string Name = null, int? Order = null, CategoryEnum? Category = null, List<Condition> Conditions = null, List<DialerAction> Actions = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for DialerRule and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Category" is required (not null)
-            if (Category == null)
-            {
-                throw new InvalidDataException("Category is a required property for DialerRule and cannot be null");
-            }
-            else
-            {
-                this.Category = Category;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Conditions" is required (not null)
-            if (Conditions == null)
-            {
-                throw new InvalidDataException("Conditions is a required property for DialerRule and cannot be null");
-            }
-            else
-            {
-                this.Conditions = Conditions;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Order = Order;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Actions = Actions;
-            
-            
-            
+            this.Order = Order;
+            this.Actions = Actions;
             
         }
         
@@ -266,17 +165,11 @@ this.Actions = Actions;
             sb.Append("class DialerRule {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Order: ").Append(Order).Append("\n");
-            
             sb.Append("  Category: ").Append(Category).Append("\n");
-            
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
-            
             sb.Append("  Actions: ").Append(Actions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

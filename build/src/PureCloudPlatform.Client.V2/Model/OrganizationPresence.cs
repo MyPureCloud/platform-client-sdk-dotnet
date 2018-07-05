@@ -85,180 +85,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationPresence" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="LanguageLabels">The label used for the system presence in each specified language (required).</param>
-        
-        
-        
         /// <param name="SystemPresence">SystemPresence.</param>
-        
-        
-        
         /// <param name="Deactivated">Deactivated.</param>
-        
-        
-        
         /// <param name="Primary">Primary.</param>
-        
-        
-        
         /// <param name="CreatedBy">CreatedBy.</param>
-        
-        
-        
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        
-        
-        
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
-        
         public OrganizationPresence(string Name = null, Dictionary<string, string> LanguageLabels = null, string SystemPresence = null, bool? Deactivated = null, bool? Primary = null, User CreatedBy = null, DateTime? CreatedDate = null, User ModifiedBy = null, DateTime? ModifiedDate = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "LanguageLabels" is required (not null)
-            if (LanguageLabels == null)
-            {
-                throw new InvalidDataException("LanguageLabels is a required property for OrganizationPresence and cannot be null");
-            }
-            else
-            {
-                this.LanguageLabels = LanguageLabels;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SystemPresence = SystemPresence;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Deactivated = Deactivated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Primary = Primary;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedDate = CreatedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.SystemPresence = SystemPresence;
+            this.Deactivated = Deactivated;
+            this.Primary = Primary;
+            this.CreatedBy = CreatedBy;
+            this.CreatedDate = CreatedDate;
+            this.ModifiedBy = ModifiedBy;
+            this.ModifiedDate = ModifiedDate;
             
         }
         
@@ -366,27 +211,16 @@ this.ModifiedDate = ModifiedDate;
             sb.Append("class OrganizationPresence {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  LanguageLabels: ").Append(LanguageLabels).Append("\n");
-            
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
-            
             sb.Append("  Deactivated: ").Append(Deactivated).Append("\n");
-            
             sb.Append("  Primary: ").Append(Primary).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

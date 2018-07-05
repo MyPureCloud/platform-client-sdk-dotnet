@@ -110,307 +110,35 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditMessage" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">AuditMessage ID. (required).</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="CorrelationId">Correlation ID..</param>
-        
-        
-        
         /// <param name="TransactionId">Transaction ID..</param>
-        
-        
-        
         /// <param name="TransactionInitiator">Whether or not this audit can be considered the initiator of the transaction it is a part of..</param>
-        
-        
-        
         /// <param name="Application">The application through which the action of this AuditMessage was initiated..</param>
-        
-        
-        
         /// <param name="ServiceName">The name of the service which sent this AuditMessage. (required).</param>
-        
-        
-        
         /// <param name="Level">The level of this audit. USER or SYSTEM. (required).</param>
-        
-        
-        
         /// <param name="Timestamp">The time at which the action of this AuditMessage was initiated..</param>
-        
-        
-        
         /// <param name="ReceivedTimestamp">The time at which this AuditMessage was received. (required).</param>
-        
-        
-        
         /// <param name="Status">The status of the action of this AuditMessage (required).</param>
-        
-        
-        
         /// <param name="ActionContext">The context of a system-level action.</param>
-        
-        
-        
         /// <param name="Action">A string representing the action that took place.</param>
-        
-        
-        
         /// <param name="Changes">Details about any changes that occurred in this audit.</param>
-        
-        
-        
         /// <param name="Entity">Entity.</param>
-        
-        
-        
         /// <param name="ServiceContext">The service-specific context associated with this AuditMessage..</param>
-        
-        
         public AuditMessage(string Id = null, AuditUser User = null, string CorrelationId = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, string Level = null, string Timestamp = null, string ReceivedTimestamp = null, string Status = null, string ActionContext = null, string Action = null, List<Change> Changes = null, AuditEntity Entity = null, ServiceContext ServiceContext = null)
         {
-            
-            
-            
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for AuditMessage and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "ServiceName" is required (not null)
-            if (ServiceName == null)
-            {
-                throw new InvalidDataException("ServiceName is a required property for AuditMessage and cannot be null");
-            }
-            else
-            {
-                this.ServiceName = ServiceName;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Level" is required (not null)
-            if (Level == null)
-            {
-                throw new InvalidDataException("Level is a required property for AuditMessage and cannot be null");
-            }
-            else
-            {
-                this.Level = Level;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "ReceivedTimestamp" is required (not null)
-            if (ReceivedTimestamp == null)
-            {
-                throw new InvalidDataException("ReceivedTimestamp is a required property for AuditMessage and cannot be null");
-            }
-            else
-            {
-                this.ReceivedTimestamp = ReceivedTimestamp;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Status" is required (not null)
-            if (Status == null)
-            {
-                throw new InvalidDataException("Status is a required property for AuditMessage and cannot be null");
-            }
-            else
-            {
-                this.Status = Status;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CorrelationId = CorrelationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TransactionId = TransactionId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TransactionInitiator = TransactionInitiator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Application = Application;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Timestamp = Timestamp;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActionContext = ActionContext;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Action = Action;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Changes = Changes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Entity = Entity;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ServiceContext = ServiceContext;
-            
-            
-            
+            this.User = User;
+            this.CorrelationId = CorrelationId;
+            this.TransactionId = TransactionId;
+            this.TransactionInitiator = TransactionInitiator;
+            this.Application = Application;
+            this.Timestamp = Timestamp;
+            this.ActionContext = ActionContext;
+            this.Action = Action;
+            this.Changes = Changes;
+            this.Entity = Entity;
+            this.ServiceContext = ServiceContext;
             
         }
         
@@ -567,37 +295,21 @@ this.ServiceContext = ServiceContext;
             sb.Append("class AuditMessage {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  CorrelationId: ").Append(CorrelationId).Append("\n");
-            
             sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
-            
             sb.Append("  TransactionInitiator: ").Append(TransactionInitiator).Append("\n");
-            
             sb.Append("  Application: ").Append(Application).Append("\n");
-            
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
-            
             sb.Append("  Level: ").Append(Level).Append("\n");
-            
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
-            
             sb.Append("  ReceivedTimestamp: ").Append(ReceivedTimestamp).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  ActionContext: ").Append(ActionContext).Append("\n");
-            
             sb.Append("  Action: ").Append(Action).Append("\n");
-            
             sb.Append("  Changes: ").Append(Changes).Append("\n");
-            
             sb.Append("  Entity: ").Append(Entity).Append("\n");
-            
             sb.Append("  ServiceContext: ").Append(ServiceContext).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

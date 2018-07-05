@@ -109,124 +109,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldConfig" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="EntityType">EntityType.</param>
-        
-        
-        
         /// <param name="State">State.</param>
-        
-        
-        
         /// <param name="Sections">Sections.</param>
-        
-        
-        
         /// <param name="Version">Version.</param>
-        
-        
-        
         /// <param name="SchemaVersion">SchemaVersion.</param>
-        
-        
-        
-        
         public FieldConfig(string Name = null, EntityTypeEnum? EntityType = null, string State = null, List<Section> Sections = null, string Version = null, string SchemaVersion = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EntityType = EntityType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Sections = Sections;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SchemaVersion = SchemaVersion;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.EntityType = EntityType;
+            this.State = State;
+            this.Sections = Sections;
+            this.Version = Version;
+            this.SchemaVersion = SchemaVersion;
             
         }
         
@@ -301,21 +197,13 @@ this.SchemaVersion = SchemaVersion;
             sb.Append("class FieldConfig {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Sections: ").Append(Sections).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  SchemaVersion: ").Append(SchemaVersion).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

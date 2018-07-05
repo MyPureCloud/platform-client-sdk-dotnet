@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallForwardingNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="Enabled">Enabled.</param>
-        
-        
-        
         /// <param name="Calls">Calls.</param>
-        
-        
-        
         /// <param name="Voicemail">Voicemail.</param>
-        
-        
-        
         /// <param name="ModifiedDate">ModifiedDate.</param>
-        
-        
         public CallForwardingNotification(DocumentDataV2NotificationWorkspace User = null, bool? Enabled = null, List<CallForwardingNotificationCalls> Calls = null, string Voicemail = null, DateTime? ModifiedDate = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Enabled = Enabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Calls = Calls;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Voicemail = Voicemail;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
+            this.User = User;
+            this.Enabled = Enabled;
+            this.Calls = Calls;
+            this.Voicemail = Voicemail;
+            this.ModifiedDate = ModifiedDate;
             
         }
         
@@ -192,15 +115,10 @@ this.ModifiedDate = ModifiedDate;
             sb.Append("class CallForwardingNotification {\n");
             
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  Calls: ").Append(Calls).Append("\n");
-            
             sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

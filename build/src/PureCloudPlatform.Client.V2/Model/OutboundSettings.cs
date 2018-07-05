@@ -114,142 +114,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundSettings" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        
-        
-        
         /// <param name="MaxCallsPerAgent">The maximum number of calls that can be placed per agent on any campaign.</param>
-        
-        
-        
-        
-        
         /// <param name="MaxLineUtilization">The maximum percentage of lines that should be used for Outbound, expressed as a decimal in the range [0.0, 1.0].</param>
-        
-        
-        
         /// <param name="AbandonSeconds">The number of seconds used to determine if a call is abandoned.</param>
-        
-        
-        
         /// <param name="ComplianceAbandonRateDenominator">The denominator to be used in determining the compliance abandon rate.</param>
-        
-        
-        
-        
         public OutboundSettings(string Name = null, int? Version = null, int? MaxCallsPerAgent = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxCallsPerAgent = MaxCallsPerAgent;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxLineUtilization = MaxLineUtilization;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AbandonSeconds = AbandonSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Version = Version;
+            this.MaxCallsPerAgent = MaxCallsPerAgent;
+            this.MaxLineUtilization = MaxLineUtilization;
+            this.AbandonSeconds = AbandonSeconds;
+            this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
             
         }
         
@@ -355,27 +233,16 @@ this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
             sb.Append("class OutboundSettings {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  MaxCallsPerAgent: ").Append(MaxCallsPerAgent).Append("\n");
-            
             sb.Append("  MaxConfigurableCallsPerAgent: ").Append(MaxConfigurableCallsPerAgent).Append("\n");
-            
             sb.Append("  MaxLineUtilization: ").Append(MaxLineUtilization).Append("\n");
-            
             sb.Append("  AbandonSeconds: ").Append(AbandonSeconds).Append("\n");
-            
             sb.Append("  ComplianceAbandonRateDenominator: ").Append(ComplianceAbandonRateDenominator).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

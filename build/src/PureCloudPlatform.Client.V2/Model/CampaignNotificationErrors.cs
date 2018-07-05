@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignNotificationErrors" /> class.
         /// </summary>
-        
-        
         /// <param name="Error">Error.</param>
-        
-        
-        
         /// <param name="Details">Details.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public CampaignNotificationErrors(string Error = null, string Details = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Error = Error;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Details = Details;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Error = Error;
+            this.Details = Details;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -132,11 +85,8 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class CampaignNotificationErrors {\n");
             
             sb.Append("  Error: ").Append(Error).Append("\n");
-            
             sb.Append("  Details: ").Append(Details).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -466,10 +466,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteFaxDocument: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -561,10 +562,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteFaxDocument: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -658,8 +660,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FaxDocument>(localVarStatusCode,
                 localVarHeaders,
-                (FaxDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocument)));
-            
+                (FaxDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocument)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -754,8 +757,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FaxDocument>(localVarStatusCode,
                 localVarHeaders,
-                (FaxDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocument)));
-            
+                (FaxDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocument)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -849,8 +853,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DownloadResponse>(localVarStatusCode,
                 localVarHeaders,
-                (DownloadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DownloadResponse)));
-            
+                (DownloadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DownloadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -945,8 +950,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DownloadResponse>(localVarStatusCode,
                 localVarHeaders,
-                (DownloadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DownloadResponse)));
-            
+                (DownloadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DownloadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1040,8 +1046,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FaxDocumentEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (FaxDocumentEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocumentEntityListing)));
-            
+                (FaxDocumentEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocumentEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1135,8 +1142,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FaxDocumentEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (FaxDocumentEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocumentEntityListing)));
-            
+                (FaxDocumentEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocumentEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1224,8 +1232,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FaxSummary>(localVarStatusCode,
                 localVarHeaders,
-                (FaxSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxSummary)));
-            
+                (FaxSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxSummary)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1313,8 +1322,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FaxSummary>(localVarStatusCode,
                 localVarHeaders,
-                (FaxSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxSummary)));
-            
+                (FaxSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxSummary)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1418,8 +1428,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FaxDocument>(localVarStatusCode,
                 localVarHeaders,
-                (FaxDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocument)));
-            
+                (FaxDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocument)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1525,8 +1536,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FaxDocument>(localVarStatusCode,
                 localVarHeaders,
-                (FaxDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocument)));
-            
+                (FaxDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocument)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

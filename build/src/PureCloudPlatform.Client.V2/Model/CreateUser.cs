@@ -60,127 +60,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateUser" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">User&#39;s full name (required).</param>
-        
-        
-        
         /// <param name="Department">Department.</param>
-        
-        
-        
         /// <param name="Email">User&#39;s email and username (required).</param>
-        
-        
-        
         /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
-        
-        
-        
         /// <param name="Title">Title.</param>
-        
-        
-        
         /// <param name="Password">User&#39;s password (required).</param>
-        
-        
         public CreateUser(string Name = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Password = null)
         {
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for CreateUser and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Email" is required (not null)
-            if (Email == null)
-            {
-                throw new InvalidDataException("Email is a required property for CreateUser and cannot be null");
-            }
-            else
-            {
-                this.Email = Email;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Password" is required (not null)
-            if (Password == null)
-            {
-                throw new InvalidDataException("Password is a required property for CreateUser and cannot be null");
-            }
-            else
-            {
-                this.Password = Password;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Department = Department;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Addresses = Addresses;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Title = Title;
-            
-            
-            
-            
-            
-            
-            
+            this.Department = Department;
+            this.Addresses = Addresses;
+            this.Title = Title;
             
         }
         
@@ -247,17 +137,11 @@ this.Title = Title;
             sb.Append("class CreateUser {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Department: ").Append(Department).Append("\n");
-            
             sb.Append("  Email: ").Append(Email).Append("\n");
-            
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
-            
             sb.Append("  Title: ").Append(Title).Append("\n");
-            
             sb.Append("  Password: ").Append(Password).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -79,175 +79,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Geolocation" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Type">A string used to describe the type of client the geolocation is being updated from e.g. ios, android, web, etc..</param>
-        
-        
-        
         /// <param name="Primary">A boolean used to tell whether or not to set this geolocation client as the primary on a PATCH.</param>
-        
-        
-        
         /// <param name="Latitude">Latitude.</param>
-        
-        
-        
         /// <param name="Longitude">Longitude.</param>
-        
-        
-        
         /// <param name="Country">Country.</param>
-        
-        
-        
         /// <param name="Region">Region.</param>
-        
-        
-        
         /// <param name="City">City.</param>
-        
-        
-        
         /// <param name="Locations">Locations.</param>
-        
-        
-        
-        
         public Geolocation(string Name = null, string Type = null, bool? Primary = null, double? Latitude = null, double? Longitude = null, string Country = null, string Region = null, string City = null, List<LocationDefinition> Locations = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Primary = Primary;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Latitude = Latitude;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Longitude = Longitude;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Country = Country;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Region = Region;
-            
-            
-            
-            
-            
-            
-            
-            
-this.City = City;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Locations = Locations;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Type = Type;
+            this.Primary = Primary;
+            this.Latitude = Latitude;
+            this.Longitude = Longitude;
+            this.Country = Country;
+            this.Region = Region;
+            this.City = City;
+            this.Locations = Locations;
             
         }
         
@@ -354,27 +205,16 @@ this.Locations = Locations;
             sb.Append("class Geolocation {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Primary: ").Append(Primary).Append("\n");
-            
             sb.Append("  Latitude: ").Append(Latitude).Append("\n");
-            
             sb.Append("  Longitude: ").Append(Longitude).Append("\n");
-            
             sb.Append("  Country: ").Append(Country).Append("\n");
-            
             sb.Append("  Region: ").Append(Region).Append("\n");
-            
             sb.Append("  City: ").Append(City).Append("\n");
-            
             sb.Append("  Locations: ").Append(Locations).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

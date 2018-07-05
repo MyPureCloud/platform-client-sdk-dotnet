@@ -126,141 +126,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignSequence" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        
-        
-        
         /// <param name="Campaigns">The ordered list of Campaigns that this CampaignSequence will run. (required).</param>
-        
-        
-        
-        
-        
         /// <param name="Status">The current status of the CampaignSequence. A CampaignSequence can be turned &#39;on&#39; or &#39;off&#39;. (required).</param>
-        
-        
-        
-        
-        
         /// <param name="Repeat">Indicates if a sequence should repeat from the beginning after the last campaign completes. Default is false..</param>
-        
-        
-        
-        
         public CampaignSequence(string Name = null, int? Version = null, List<UriReference> Campaigns = null, StatusEnum? Status = null, bool? Repeat = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Campaigns" is required (not null)
-            if (Campaigns == null)
-            {
-                throw new InvalidDataException("Campaigns is a required property for CampaignSequence and cannot be null");
-            }
-            else
-            {
-                this.Campaigns = Campaigns;
-            }
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Status" is required (not null)
-            if (Status == null)
-            {
-                throw new InvalidDataException("Status is a required property for CampaignSequence and cannot be null");
-            }
-            else
-            {
-                this.Status = Status;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Repeat = Repeat;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Version = Version;
+            this.Repeat = Repeat;
             
         }
         
@@ -366,27 +241,16 @@ this.Repeat = Repeat;
             sb.Append("class CampaignSequence {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
-            
             sb.Append("  CurrentCampaign: ").Append(CurrentCampaign).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  StopMessage: ").Append(StopMessage).Append("\n");
-            
             sb.Append("  Repeat: ").Append(Repeat).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

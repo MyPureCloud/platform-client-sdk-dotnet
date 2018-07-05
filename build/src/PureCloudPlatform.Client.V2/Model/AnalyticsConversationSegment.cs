@@ -382,418 +382,56 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversationSegment" /> class.
         /// </summary>
-        
-        
         /// <param name="SegmentStart">The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="SegmentEnd">The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="QueueId">Queue identifier.</param>
-        
-        
-        
         /// <param name="WrapUpCode">Wrapup Code id.</param>
-        
-        
-        
         /// <param name="WrapUpNote">Note entered by an agent during after-call work.</param>
-        
-        
-        
         /// <param name="WrapUpTags">WrapUpTags.</param>
-        
-        
-        
         /// <param name="ErrorCode">ErrorCode.</param>
-        
-        
-        
         /// <param name="DisconnectType">A description of the event that disconnected the segment.</param>
-        
-        
-        
         /// <param name="SegmentType">The activity taking place for the participant in the segment.</param>
-        
-        
-        
         /// <param name="RequestedRoutingUserIds">RequestedRoutingUserIds.</param>
-        
-        
-        
         /// <param name="RequestedRoutingSkillIds">RequestedRoutingSkillIds.</param>
-        
-        
-        
         /// <param name="RequestedLanguageId">A unique identifier for the language requested for an interaction..</param>
-        
-        
-        
         /// <param name="Properties">Properties.</param>
-        
-        
-        
         /// <param name="SourceConversationId">SourceConversationId.</param>
-        
-        
-        
         /// <param name="DestinationConversationId">DestinationConversationId.</param>
-        
-        
-        
         /// <param name="SourceSessionId">SourceSessionId.</param>
-        
-        
-        
         /// <param name="DestinationSessionId">DestinationSessionId.</param>
-        
-        
-        
         /// <param name="SipResponseCodes">SipResponseCodes.</param>
-        
-        
-        
         /// <param name="Q850ResponseCodes">Q850ResponseCodes.</param>
-        
-        
-        
         /// <param name="Conference">Indicates whether the segment was a conference.</param>
-        
-        
-        
         /// <param name="GroupId">GroupId.</param>
-        
-        
-        
         /// <param name="Subject">Subject.</param>
-        
-        
-        
         /// <param name="AudioMuted">AudioMuted.</param>
-        
-        
-        
         /// <param name="VideoMuted">VideoMuted.</param>
-        
-        
         public AnalyticsConversationSegment(DateTime? SegmentStart = null, DateTime? SegmentEnd = null, string QueueId = null, string WrapUpCode = null, string WrapUpNote = null, List<string> WrapUpTags = null, string ErrorCode = null, DisconnectTypeEnum? DisconnectType = null, SegmentTypeEnum? SegmentType = null, List<string> RequestedRoutingUserIds = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, List<AnalyticsProperty> Properties = null, string SourceConversationId = null, string DestinationConversationId = null, string SourceSessionId = null, string DestinationSessionId = null, List<long?> SipResponseCodes = null, List<long?> Q850ResponseCodes = null, bool? Conference = null, string GroupId = null, string Subject = null, bool? AudioMuted = null, bool? VideoMuted = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SegmentStart = SegmentStart;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SegmentEnd = SegmentEnd;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueId = QueueId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapUpCode = WrapUpCode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapUpNote = WrapUpNote;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapUpTags = WrapUpTags;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorCode = ErrorCode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SegmentType = SegmentType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RequestedRoutingUserIds = RequestedRoutingUserIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RequestedRoutingSkillIds = RequestedRoutingSkillIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RequestedLanguageId = RequestedLanguageId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Properties = Properties;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SourceConversationId = SourceConversationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DestinationConversationId = DestinationConversationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SourceSessionId = SourceSessionId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DestinationSessionId = DestinationSessionId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SipResponseCodes = SipResponseCodes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Q850ResponseCodes = Q850ResponseCodes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Conference = Conference;
-            
-            
-            
-            
-            
-            
-            
-            
-this.GroupId = GroupId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Subject = Subject;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AudioMuted = AudioMuted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VideoMuted = VideoMuted;
-            
-            
-            
+            this.SegmentStart = SegmentStart;
+            this.SegmentEnd = SegmentEnd;
+            this.QueueId = QueueId;
+            this.WrapUpCode = WrapUpCode;
+            this.WrapUpNote = WrapUpNote;
+            this.WrapUpTags = WrapUpTags;
+            this.ErrorCode = ErrorCode;
+            this.DisconnectType = DisconnectType;
+            this.SegmentType = SegmentType;
+            this.RequestedRoutingUserIds = RequestedRoutingUserIds;
+            this.RequestedRoutingSkillIds = RequestedRoutingSkillIds;
+            this.RequestedLanguageId = RequestedLanguageId;
+            this.Properties = Properties;
+            this.SourceConversationId = SourceConversationId;
+            this.DestinationConversationId = DestinationConversationId;
+            this.SourceSessionId = SourceSessionId;
+            this.DestinationSessionId = DestinationSessionId;
+            this.SipResponseCodes = SipResponseCodes;
+            this.Q850ResponseCodes = Q850ResponseCodes;
+            this.Conference = Conference;
+            this.GroupId = GroupId;
+            this.Subject = Subject;
+            this.AudioMuted = AudioMuted;
+            this.VideoMuted = VideoMuted;
             
         }
         
@@ -995,53 +633,29 @@ this.VideoMuted = VideoMuted;
             sb.Append("class AnalyticsConversationSegment {\n");
             
             sb.Append("  SegmentStart: ").Append(SegmentStart).Append("\n");
-            
             sb.Append("  SegmentEnd: ").Append(SegmentEnd).Append("\n");
-            
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
-            
             sb.Append("  WrapUpCode: ").Append(WrapUpCode).Append("\n");
-            
             sb.Append("  WrapUpNote: ").Append(WrapUpNote).Append("\n");
-            
             sb.Append("  WrapUpTags: ").Append(WrapUpTags).Append("\n");
-            
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  SegmentType: ").Append(SegmentType).Append("\n");
-            
             sb.Append("  RequestedRoutingUserIds: ").Append(RequestedRoutingUserIds).Append("\n");
-            
             sb.Append("  RequestedRoutingSkillIds: ").Append(RequestedRoutingSkillIds).Append("\n");
-            
             sb.Append("  RequestedLanguageId: ").Append(RequestedLanguageId).Append("\n");
-            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            
             sb.Append("  SourceConversationId: ").Append(SourceConversationId).Append("\n");
-            
             sb.Append("  DestinationConversationId: ").Append(DestinationConversationId).Append("\n");
-            
             sb.Append("  SourceSessionId: ").Append(SourceSessionId).Append("\n");
-            
             sb.Append("  DestinationSessionId: ").Append(DestinationSessionId).Append("\n");
-            
             sb.Append("  SipResponseCodes: ").Append(SipResponseCodes).Append("\n");
-            
             sb.Append("  Q850ResponseCodes: ").Append(Q850ResponseCodes).Append("\n");
-            
             sb.Append("  Conference: ").Append(Conference).Append("\n");
-            
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
-            
             sb.Append("  Subject: ").Append(Subject).Append("\n");
-            
             sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
-            
             sb.Append("  VideoMuted: ").Append(VideoMuted).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -55,78 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TagValue" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The workspace tag name. (required).</param>
-        
-        
-        
         /// <param name="InUse">InUse.</param>
-        
-        
-        
         /// <param name="Acl">Acl.</param>
-        
-        
-        
-        
         public TagValue(string Name = null, bool? InUse = null, List<string> Acl = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for TagValue and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.InUse = InUse;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Acl = Acl;
-            
-            
-            
-            
-            
+            this.InUse = InUse;
+            this.Acl = Acl;
             
         }
         
@@ -184,15 +119,10 @@ this.Acl = Acl;
             sb.Append("class TagValue {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  InUse: ").Append(InUse).Append("\n");
-            
             sb.Append("  Acl: ").Append(Acl).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

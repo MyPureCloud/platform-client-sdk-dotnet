@@ -45,66 +45,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AdditionalMessage" /> class.
         /// </summary>
-        
-        
         /// <param name="TextBody">The body of the text message. (required).</param>
-        
-        
-        
         /// <param name="MediaIds">The media ids associated with the text message..</param>
-        
-        
-        
         /// <param name="StickerIds">The sticker ids associated with the text message..</param>
-        
-        
         public AdditionalMessage(string TextBody = null, List<string> MediaIds = null, List<string> StickerIds = null)
         {
-            
-            
-            
-            // to ensure "TextBody" is required (not null)
-            if (TextBody == null)
-            {
-                throw new InvalidDataException("TextBody is a required property for AdditionalMessage and cannot be null");
-            }
-            else
-            {
-                this.TextBody = TextBody;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaIds = MediaIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StickerIds = StickerIds;
-            
-            
-            
+            this.MediaIds = MediaIds;
+            this.StickerIds = StickerIds;
             
         }
         
@@ -146,11 +93,8 @@ this.StickerIds = StickerIds;
             sb.Append("class AdditionalMessage {\n");
             
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
-            
             sb.Append("  MediaIds: ").Append(MediaIds).Append("\n");
-            
             sb.Append("  StickerIds: ").Append(StickerIds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

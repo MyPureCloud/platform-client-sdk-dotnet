@@ -45,76 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserListScheduleRequestBody" /> class.
         /// </summary>
-        
-        
         /// <param name="UserIds">The user ids for which to fetch schedules (required).</param>
-        
-        
-        
         /// <param name="StartDate">Beginning of the range of schedules to fetch, in ISO-8601 format (required).</param>
-        
-        
-        
         /// <param name="EndDate">End of the range of schedules to fetch, in ISO-8601 format (required).</param>
-        
-        
         public UserListScheduleRequestBody(List<string> UserIds = null, DateTime? StartDate = null, DateTime? EndDate = null)
         {
-            
-            
-            
-            // to ensure "UserIds" is required (not null)
-            if (UserIds == null)
-            {
-                throw new InvalidDataException("UserIds is a required property for UserListScheduleRequestBody and cannot be null");
-            }
-            else
-            {
-                this.UserIds = UserIds;
-            }
-            
-            
-            
-            
-            
-            // to ensure "StartDate" is required (not null)
-            if (StartDate == null)
-            {
-                throw new InvalidDataException("StartDate is a required property for UserListScheduleRequestBody and cannot be null");
-            }
-            else
-            {
-                this.StartDate = StartDate;
-            }
-            
-            
-            
-            
-            
-            // to ensure "EndDate" is required (not null)
-            if (EndDate == null)
-            {
-                throw new InvalidDataException("EndDate is a required property for UserListScheduleRequestBody and cannot be null");
-            }
-            else
-            {
-                this.EndDate = EndDate;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -156,11 +91,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class UserListScheduleRequestBody {\n");
             
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
-            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

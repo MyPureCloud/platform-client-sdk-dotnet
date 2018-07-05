@@ -236,537 +236,70 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationParticipants" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="ConnectedTime">ConnectedTime.</param>
-        
-        
-        
         /// <param name="EndTime">EndTime.</param>
-        
-        
-        
         /// <param name="UserId">UserId.</param>
-        
-        
-        
         /// <param name="ExternalContactId">ExternalContactId.</param>
-        
-        
-        
         /// <param name="ExternalOrganizationId">ExternalOrganizationId.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="QueueId">QueueId.</param>
-        
-        
-        
         /// <param name="GroupId">GroupId.</param>
-        
-        
-        
         /// <param name="Purpose">Purpose.</param>
-        
-        
-        
         /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
-        
-        
-        
         /// <param name="Address">Address.</param>
-        
-        
-        
         /// <param name="WrapupRequired">WrapupRequired.</param>
-        
-        
-        
         /// <param name="WrapupExpected">WrapupExpected.</param>
-        
-        
-        
         /// <param name="WrapupPrompt">WrapupPrompt.</param>
-        
-        
-        
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
-        
-        
-        
         /// <param name="Wrapup">Wrapup.</param>
-        
-        
-        
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
-        
-        
-        
         /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
-        
-        
-        
         /// <param name="FlaggedReason">FlaggedReason.</param>
-        
-        
-        
         /// <param name="Attributes">Attributes.</param>
-        
-        
-        
         /// <param name="Calls">Calls.</param>
-        
-        
-        
         /// <param name="Callbacks">Callbacks.</param>
-        
-        
-        
         /// <param name="Chats">Chats.</param>
-        
-        
-        
         /// <param name="Cobrowsesessions">Cobrowsesessions.</param>
-        
-        
-        
         /// <param name="Emails">Emails.</param>
-        
-        
-        
         /// <param name="Messages">Messages.</param>
-        
-        
-        
         /// <param name="Screenshares">Screenshares.</param>
-        
-        
-        
         /// <param name="SocialExpressions">SocialExpressions.</param>
-        
-        
-        
         /// <param name="Videos">Videos.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ConversationNotificationParticipants(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationNotificationWrapup Wrapup = null, string MonitoredParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<ConversationNotificationCalls> Calls = null, List<ConversationNotificationCallbacks> Callbacks = null, List<ConversationNotificationChats> Chats = null, List<ConversationNotificationCobrowsesessions> Cobrowsesessions = null, List<ConversationNotificationEmails> Emails = null, List<ConversationNotificationMessages1> Messages = null, List<ConversationNotificationScreenshares> Screenshares = null, List<ConversationNotificationSocialExpressions> SocialExpressions = null, List<ConversationNotificationVideos> Videos = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndTime = EndTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalContactId = ExternalContactId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalOrganizationId = ExternalOrganizationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueId = QueueId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.GroupId = GroupId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Purpose = Purpose;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConsultParticipantId = ConsultParticipantId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupRequired = WrapupRequired;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupExpected = WrapupExpected;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupPrompt = WrapupPrompt;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupTimeoutMs = WrapupTimeoutMs;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Wrapup = Wrapup;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MonitoredParticipantId = MonitoredParticipantId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScreenRecordingState = ScreenRecordingState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FlaggedReason = FlaggedReason;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attributes = Attributes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Calls = Calls;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Callbacks = Callbacks;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Chats = Chats;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Cobrowsesessions = Cobrowsesessions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Emails = Emails;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Messages = Messages;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Screenshares = Screenshares;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SocialExpressions = SocialExpressions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Videos = Videos;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Id = Id;
+            this.ConnectedTime = ConnectedTime;
+            this.EndTime = EndTime;
+            this.UserId = UserId;
+            this.ExternalContactId = ExternalContactId;
+            this.ExternalOrganizationId = ExternalOrganizationId;
+            this.Name = Name;
+            this.QueueId = QueueId;
+            this.GroupId = GroupId;
+            this.Purpose = Purpose;
+            this.ConsultParticipantId = ConsultParticipantId;
+            this.Address = Address;
+            this.WrapupRequired = WrapupRequired;
+            this.WrapupExpected = WrapupExpected;
+            this.WrapupPrompt = WrapupPrompt;
+            this.WrapupTimeoutMs = WrapupTimeoutMs;
+            this.Wrapup = Wrapup;
+            this.MonitoredParticipantId = MonitoredParticipantId;
+            this.ScreenRecordingState = ScreenRecordingState;
+            this.FlaggedReason = FlaggedReason;
+            this.Attributes = Attributes;
+            this.Calls = Calls;
+            this.Callbacks = Callbacks;
+            this.Chats = Chats;
+            this.Cobrowsesessions = Cobrowsesessions;
+            this.Emails = Emails;
+            this.Messages = Messages;
+            this.Screenshares = Screenshares;
+            this.SocialExpressions = SocialExpressions;
+            this.Videos = Videos;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -1023,67 +556,36 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ConversationNotificationParticipants {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
-            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
-            
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
-            
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
-            
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
-            
             sb.Append("  ConsultParticipantId: ").Append(ConsultParticipantId).Append("\n");
-            
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  WrapupRequired: ").Append(WrapupRequired).Append("\n");
-            
             sb.Append("  WrapupExpected: ").Append(WrapupExpected).Append("\n");
-            
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
-            
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
-            
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
-            
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
-            
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
-            
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
-            
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            
             sb.Append("  Calls: ").Append(Calls).Append("\n");
-            
             sb.Append("  Callbacks: ").Append(Callbacks).Append("\n");
-            
             sb.Append("  Chats: ").Append(Chats).Append("\n");
-            
             sb.Append("  Cobrowsesessions: ").Append(Cobrowsesessions).Append("\n");
-            
             sb.Append("  Emails: ").Append(Emails).Append("\n");
-            
             sb.Append("  Messages: ").Append(Messages).Append("\n");
-            
             sb.Append("  Screenshares: ").Append(Screenshares).Append("\n");
-            
             sb.Append("  SocialExpressions: ").Append(SocialExpressions).Append("\n");
-            
             sb.Append("  Videos: ").Append(Videos).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

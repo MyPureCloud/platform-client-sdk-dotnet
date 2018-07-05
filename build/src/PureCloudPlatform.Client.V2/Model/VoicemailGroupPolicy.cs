@@ -105,146 +105,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailGroupPolicy" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Group">The group associated with the policy.</param>
-        
-        
-        
         /// <param name="Enabled">Whether voicemail is enabled for the group.</param>
-        
-        
-        
         /// <param name="SendEmailNotifications">Whether email notifications are sent to group members when a new voicemail is received.</param>
-        
-        
-        
         /// <param name="RotateCallsSecs">How many seconds to ring before rotating to the next member in the group.</param>
-        
-        
-        
         /// <param name="StopRingingAfterRotations">How many rotations to go through.</param>
-        
-        
-        
         /// <param name="OverflowGroupId"> A fallback group to contact when all of the members in this group did not answer the call..</param>
-        
-        
-        
         /// <param name="GroupAlertType">Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin..</param>
-        
-        
         public VoicemailGroupPolicy(string Name = null, Group Group = null, bool? Enabled = null, bool? SendEmailNotifications = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Group = Group;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Enabled = Enabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SendEmailNotifications = SendEmailNotifications;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RotateCallsSecs = RotateCallsSecs;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StopRingingAfterRotations = StopRingingAfterRotations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OverflowGroupId = OverflowGroupId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.GroupAlertType = GroupAlertType;
-            
-            
-            
+            this.Name = Name;
+            this.Group = Group;
+            this.Enabled = Enabled;
+            this.SendEmailNotifications = SendEmailNotifications;
+            this.RotateCallsSecs = RotateCallsSecs;
+            this.StopRingingAfterRotations = StopRingingAfterRotations;
+            this.OverflowGroupId = OverflowGroupId;
+            this.GroupAlertType = GroupAlertType;
             
         }
         
@@ -323,21 +201,13 @@ this.GroupAlertType = GroupAlertType;
             sb.Append("class VoicemailGroupPolicy {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Group: ").Append(Group).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  SendEmailNotifications: ").Append(SendEmailNotifications).Append("\n");
-            
             sb.Append("  RotateCallsSecs: ").Append(RotateCallsSecs).Append("\n");
-            
             sb.Append("  StopRingingAfterRotations: ").Append(StopRingingAfterRotations).Append("\n");
-            
             sb.Append("  OverflowGroupId: ").Append(OverflowGroupId).Append("\n");
-            
             sb.Append("  GroupAlertType: ").Append(GroupAlertType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

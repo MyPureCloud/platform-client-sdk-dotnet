@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAgentInfo" /> class.
         /// </summary>
-        
-        
         /// <param name="FirmwareVersion">The firmware version of the phone..</param>
-        
-        
-        
         /// <param name="Manufacturer">The manufacturer of the phone..</param>
-        
-        
-        
         /// <param name="Model">The model of the phone..</param>
-        
-        
         public UserAgentInfo(string FirmwareVersion = null, string Manufacturer = null, string Model = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.FirmwareVersion = FirmwareVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Manufacturer = Manufacturer;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Model = Model;
-            
-            
-            
+            this.FirmwareVersion = FirmwareVersion;
+            this.Manufacturer = Manufacturer;
+            this.Model = Model;
             
         }
         
@@ -135,11 +88,8 @@ this.Model = Model;
             sb.Append("class UserAgentInfo {\n");
             
             sb.Append("  FirmwareVersion: ").Append(FirmwareVersion).Append("\n");
-            
             sb.Append("  Manufacturer: ").Append(Manufacturer).Append("\n");
-            
             sb.Append("  Model: ").Append(Model).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

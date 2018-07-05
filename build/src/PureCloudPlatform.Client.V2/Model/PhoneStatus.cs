@@ -197,158 +197,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneStatus" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="OperationalStatus">The Operational Status of this phone.</param>
-        
-        
-        
         /// <param name="EdgesStatus">The status of the primary or secondary Edges assigned to the phone lines..</param>
-        
-        
-        
         /// <param name="EventCreationTime">Event Creation Time represents an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London.</param>
-        
-        
-        
         /// <param name="Provision">Provision information for this phone.</param>
-        
-        
-        
         /// <param name="LineStatuses">A list of LineStatus information for each of the lines of this phone.</param>
-        
-        
-        
         /// <param name="PhoneAssignmentToEdgeType">The phone status&#39;s edge assignment type..</param>
-        
-        
-        
         /// <param name="Edge">The URI of the edge that provided this status information..</param>
-        
-        
-        
-        
         public PhoneStatus(string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, string EventCreationTime = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, UriReference Edge = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OperationalStatus = OperationalStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgesStatus = EdgesStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EventCreationTime = EventCreationTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provision = Provision;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LineStatuses = LineStatuses;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneAssignmentToEdgeType = PhoneAssignmentToEdgeType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Edge = Edge;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.OperationalStatus = OperationalStatus;
+            this.EdgesStatus = EdgesStatus;
+            this.EventCreationTime = EventCreationTime;
+            this.Provision = Provision;
+            this.LineStatuses = LineStatuses;
+            this.PhoneAssignmentToEdgeType = PhoneAssignmentToEdgeType;
+            this.Edge = Edge;
             
         }
         
@@ -431,25 +297,15 @@ this.Edge = Edge;
             sb.Append("class PhoneStatus {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  OperationalStatus: ").Append(OperationalStatus).Append("\n");
-            
             sb.Append("  EdgesStatus: ").Append(EdgesStatus).Append("\n");
-            
             sb.Append("  EventCreationTime: ").Append(EventCreationTime).Append("\n");
-            
             sb.Append("  Provision: ").Append(Provision).Append("\n");
-            
             sb.Append("  LineStatuses: ").Append(LineStatuses).Append("\n");
-            
             sb.Append("  PhoneAssignmentToEdgeType: ").Append(PhoneAssignmentToEdgeType).Append("\n");
-            
             sb.Append("  Edge: ").Append(Edge).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

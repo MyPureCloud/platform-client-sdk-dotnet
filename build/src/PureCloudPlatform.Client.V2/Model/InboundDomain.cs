@@ -96,89 +96,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundDomain" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Unique Id of the domain such as: example.com.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="MxRecordStatus">Mx Record Status (required).</param>
-        
-        
-        
         /// <param name="SubDomain">Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email..</param>
-        
-        
-        
-        
         public InboundDomain(string Id = null, string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "MxRecordStatus" is required (not null)
-            if (MxRecordStatus == null)
-            {
-                throw new InvalidDataException("MxRecordStatus is a required property for InboundDomain and cannot be null");
-            }
-            else
-            {
-                this.MxRecordStatus = MxRecordStatus;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SubDomain = SubDomain;
-            
-            
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.SubDomain = SubDomain;
             
         }
         
@@ -230,15 +156,10 @@ this.SubDomain = SubDomain;
             sb.Append("class InboundDomain {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  MxRecordStatus: ").Append(MxRecordStatus).Append("\n");
-            
             sb.Append("  SubDomain: ").Append(SubDomain).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

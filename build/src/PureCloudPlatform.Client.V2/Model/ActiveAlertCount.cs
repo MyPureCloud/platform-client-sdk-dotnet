@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActiveAlertCount" /> class.
         /// </summary>
-        
-        
         /// <param name="Count">The count of active alerts for a user..</param>
-        
-        
         public ActiveAlertCount(int? Count = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Count = Count;
-            
-            
-            
+            this.Count = Count;
             
         }
         
@@ -73,7 +56,6 @@ this.Count = Count;
             sb.Append("class ActiveAlertCount {\n");
             
             sb.Append("  Count: ").Append(Count).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

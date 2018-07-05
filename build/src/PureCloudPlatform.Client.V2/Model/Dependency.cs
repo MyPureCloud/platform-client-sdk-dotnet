@@ -283,124 +283,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Dependency" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Version">Version.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="Deleted">Deleted.</param>
-        
-        
-        
         /// <param name="Updated">Updated.</param>
-        
-        
-        
         /// <param name="StateUnknown">StateUnknown.</param>
-        
-        
-        
-        
         public Dependency(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null, bool? Updated = null, bool? StateUnknown = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Deleted = Deleted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Updated = Updated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StateUnknown = StateUnknown;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Version = Version;
+            this.Type = Type;
+            this.Deleted = Deleted;
+            this.Updated = Updated;
+            this.StateUnknown = StateUnknown;
             
         }
         
@@ -475,21 +371,13 @@ this.StateUnknown = StateUnknown;
             sb.Append("class Dependency {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
-            
             sb.Append("  Updated: ").Append(Updated).Append("\n");
-            
             sb.Append("  StateUnknown: ").Append(StateUnknown).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

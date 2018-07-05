@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PINConfiguration" /> class.
         /// </summary>
-        
-        
         /// <param name="MinimumLength">MinimumLength.</param>
-        
-        
-        
         /// <param name="MaximumLength">MaximumLength.</param>
-        
-        
         public PINConfiguration(int? MinimumLength = null, int? MaximumLength = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MinimumLength = MinimumLength;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaximumLength = MaximumLength;
-            
-            
-            
+            this.MinimumLength = MinimumLength;
+            this.MaximumLength = MaximumLength;
             
         }
         
@@ -102,9 +70,7 @@ this.MaximumLength = MaximumLength;
             sb.Append("class PINConfiguration {\n");
             
             sb.Append("  MinimumLength: ").Append(MinimumLength).Append("\n");
-            
             sb.Append("  MaximumLength: ").Append(MaximumLength).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

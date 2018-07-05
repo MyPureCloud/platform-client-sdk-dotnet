@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryFacetInfo" /> class.
         /// </summary>
-        
-        
         /// <param name="Attributes">Attributes.</param>
-        
-        
-        
         /// <param name="Facets">Facets.</param>
-        
-        
         public QueryFacetInfo(List<FacetKeyAttribute> Attributes = null, List<FacetEntry> Facets = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attributes = Attributes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Facets = Facets;
-            
-            
-            
+            this.Attributes = Attributes;
+            this.Facets = Facets;
             
         }
         
@@ -102,9 +70,7 @@ this.Facets = Facets;
             sb.Append("class QueryFacetInfo {\n");
             
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            
             sb.Append("  Facets: ").Append(Facets).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

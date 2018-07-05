@@ -90,207 +90,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundRoute" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Pattern">The search pattern that the mailbox name should match. (required).</param>
-        
-        
-        
         /// <param name="Queue">The queue to route the emails to..</param>
-        
-        
-        
         /// <param name="Priority">The priority to use for routing..</param>
-        
-        
-        
         /// <param name="Skills">The skills to use for routing..</param>
-        
-        
-        
         /// <param name="Language">The language to use for routing..</param>
-        
-        
-        
         /// <param name="FromName">The sender name to use for outgoing replies. (required).</param>
-        
-        
-        
         /// <param name="FromEmail">The sender email to use for outgoing replies. (required).</param>
-        
-        
-        
         /// <param name="Flow">The flow to use for processing the email..</param>
-        
-        
-        
         /// <param name="ReplyEmailAddress">The route to use for email replies..</param>
-        
-        
-        
-        
         public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null, UriReference Flow = null, QueueEmailAddress ReplyEmailAddress = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Pattern" is required (not null)
-            if (Pattern == null)
-            {
-                throw new InvalidDataException("Pattern is a required property for InboundRoute and cannot be null");
-            }
-            else
-            {
-                this.Pattern = Pattern;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "FromName" is required (not null)
-            if (FromName == null)
-            {
-                throw new InvalidDataException("FromName is a required property for InboundRoute and cannot be null");
-            }
-            else
-            {
-                this.FromName = FromName;
-            }
-            
-            
-            
-            
-            
-            // to ensure "FromEmail" is required (not null)
-            if (FromEmail == null)
-            {
-                throw new InvalidDataException("FromEmail is a required property for InboundRoute and cannot be null");
-            }
-            else
-            {
-                this.FromEmail = FromEmail;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Queue = Queue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Priority = Priority;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Skills = Skills;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Language = Language;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Flow = Flow;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReplyEmailAddress = ReplyEmailAddress;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Queue = Queue;
+            this.Priority = Priority;
+            this.Skills = Skills;
+            this.Language = Language;
+            this.Flow = Flow;
+            this.ReplyEmailAddress = ReplyEmailAddress;
             
         }
         
@@ -412,29 +230,17 @@ this.ReplyEmailAddress = ReplyEmailAddress;
             sb.Append("class InboundRoute {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Pattern: ").Append(Pattern).Append("\n");
-            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
-            
             sb.Append("  Priority: ").Append(Priority).Append("\n");
-            
             sb.Append("  Skills: ").Append(Skills).Append("\n");
-            
             sb.Append("  Language: ").Append(Language).Append("\n");
-            
             sb.Append("  FromName: ").Append(FromName).Append("\n");
-            
             sb.Append("  FromEmail: ").Append(FromEmail).Append("\n");
-            
             sb.Append("  Flow: ").Append(Flow).Append("\n");
-            
             sb.Append("  ReplyEmailAddress: ").Append(ReplyEmailAddress).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

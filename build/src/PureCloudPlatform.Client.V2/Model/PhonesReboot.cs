@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhonesReboot" /> class.
         /// </summary>
-        
-        
         /// <param name="PhoneIds">The list of phone Ids to reboot..</param>
-        
-        
-        
         /// <param name="SiteId">ID of the site for which to reboot all phones at that site. no.active.edge and phone.cannot.resolve errors are ignored..</param>
-        
-        
         public PhonesReboot(List<string> PhoneIds = null, string SiteId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneIds = PhoneIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SiteId = SiteId;
-            
-            
-            
+            this.PhoneIds = PhoneIds;
+            this.SiteId = SiteId;
             
         }
         
@@ -104,9 +72,7 @@ this.SiteId = SiteId;
             sb.Append("class PhonesReboot {\n");
             
             sb.Append("  PhoneIds: ").Append(PhoneIds).Append("\n");
-            
             sb.Append("  SiteId: ").Append(SiteId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

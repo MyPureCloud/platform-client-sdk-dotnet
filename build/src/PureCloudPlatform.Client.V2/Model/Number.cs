@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Number" /> class.
         /// </summary>
-        
-        
         /// <param name="Start">Start.</param>
-        
-        
-        
         /// <param name="End">End.</param>
-        
-        
         public Number(string Start = null, string End = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Start = Start;
-            
-            
-            
-            
-            
-            
-            
-            
-this.End = End;
-            
-            
-            
+            this.Start = Start;
+            this.End = End;
             
         }
         
@@ -102,9 +70,7 @@ this.End = End;
             sb.Append("class Number {\n");
             
             sb.Append("  Start: ").Append(Start).Append("\n");
-            
             sb.Append("  End: ").Append(End).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

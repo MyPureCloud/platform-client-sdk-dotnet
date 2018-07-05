@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Adjacents" /> class.
         /// </summary>
-        
-        
         /// <param name="Superiors">Superiors.</param>
-        
-        
-        
         /// <param name="Siblings">Siblings.</param>
-        
-        
-        
         /// <param name="DirectReports">DirectReports.</param>
-        
-        
         public Adjacents(List<User> Superiors = null, List<User> Siblings = null, List<User> DirectReports = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Superiors = Superiors;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Siblings = Siblings;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DirectReports = DirectReports;
-            
-            
-            
+            this.Superiors = Superiors;
+            this.Siblings = Siblings;
+            this.DirectReports = DirectReports;
             
         }
         
@@ -132,11 +85,8 @@ this.DirectReports = DirectReports;
             sb.Append("class Adjacents {\n");
             
             sb.Append("  Superiors: ").Append(Superiors).Append("\n");
-            
             sb.Append("  Siblings: ").Append(Siblings).Append("\n");
-            
             sb.Append("  DirectReports: ").Append(DirectReports).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

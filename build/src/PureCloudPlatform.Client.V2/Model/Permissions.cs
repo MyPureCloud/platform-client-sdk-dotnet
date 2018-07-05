@@ -45,55 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Permissions" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Ids">List of permission ids. (required).</param>
-        
-        
         public Permissions(string Name = null, List<string> Ids = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Ids" is required (not null)
-            if (Ids == null)
-            {
-                throw new InvalidDataException("Ids is a required property for Permissions and cannot be null");
-            }
-            else
-            {
-                this.Ids = Ids;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
             
         }
         
@@ -134,11 +90,8 @@ this.Name = Name;
             sb.Append("class Permissions {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Ids: ").Append(Ids).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

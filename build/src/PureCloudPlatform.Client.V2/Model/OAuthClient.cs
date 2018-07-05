@@ -148,219 +148,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthClient" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the OAuth client. (required).</param>
-        
-        
-        
         /// <param name="AccessTokenValiditySeconds">The number of seconds, between 5mins and 48hrs, until tokens created with this client expire. If this field is omitted, a default of 24 hours will be applied..</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="RegisteredRedirectUri">List of allowed callbacks for this client. For example: https://myap.example.com/auth/callback.</param>
-        
-        
-        
         /// <param name="Secret">System created secret assigned to this client. Secrets are required for code authorization and client credential grants..</param>
-        
-        
-        
         /// <param name="RoleIds">Roles assigned to this client. Roles only apply to clients using the client_credential grant.</param>
-        
-        
-        
         /// <param name="DateCreated">Date this client was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateModified">Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="CreatedBy">User that created this client.</param>
-        
-        
-        
         /// <param name="ModifiedBy">User that last modified this client.</param>
-        
-        
-        
         /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client.  (required).</param>
-        
-        
-        
-        
         public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for OAuthClient and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "AuthorizedGrantType" is required (not null)
-            if (AuthorizedGrantType == null)
-            {
-                throw new InvalidDataException("AuthorizedGrantType is a required property for OAuthClient and cannot be null");
-            }
-            else
-            {
-                this.AuthorizedGrantType = AuthorizedGrantType;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AccessTokenValiditySeconds = AccessTokenValiditySeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RegisteredRedirectUri = RegisteredRedirectUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Secret = Secret;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoleIds = RoleIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.AccessTokenValiditySeconds = AccessTokenValiditySeconds;
+            this.Description = Description;
+            this.RegisteredRedirectUri = RegisteredRedirectUri;
+            this.Secret = Secret;
+            this.RoleIds = RoleIds;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.CreatedBy = CreatedBy;
+            this.ModifiedBy = ModifiedBy;
             
         }
         
@@ -484,31 +293,18 @@ this.ModifiedBy = ModifiedBy;
             sb.Append("class OAuthClient {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  AccessTokenValiditySeconds: ").Append(AccessTokenValiditySeconds).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  RegisteredRedirectUri: ").Append(RegisteredRedirectUri).Append("\n");
-            
             sb.Append("  Secret: ").Append(Secret).Append("\n");
-            
             sb.Append("  RoleIds: ").Append(RoleIds).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  AuthorizedGrantType: ").Append(AuthorizedGrantType).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

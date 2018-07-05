@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NTPSettings" /> class.
         /// </summary>
-        
-        
         /// <param name="Servers">List of NTP servers, in priority order.</param>
-        
-        
         public NTPSettings(List<string> Servers = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Servers = Servers;
-            
-            
-            
+            this.Servers = Servers;
             
         }
         
@@ -73,7 +56,6 @@ this.Servers = Servers;
             sb.Append("class NTPSettings {\n");
             
             sb.Append("  Servers: ").Append(Servers).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

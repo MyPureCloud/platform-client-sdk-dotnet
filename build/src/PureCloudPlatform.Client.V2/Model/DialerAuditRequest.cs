@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerAuditRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="QueryPhrase">The word or words to search for..</param>
-        
-        
-        
         /// <param name="QueryFields">The fields in which to search for the queryPhrase..</param>
-        
-        
-        
         /// <param name="Facets">The fields to facet on..</param>
-        
-        
-        
         /// <param name="Filters">The fields to filter on..</param>
-        
-        
         public DialerAuditRequest(string QueryPhrase = null, List<string> QueryFields = null, List<AuditFacet> Facets = null, List<AuditFilter> Filters = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueryPhrase = QueryPhrase;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueryFields = QueryFields;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Facets = Facets;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Filters = Filters;
-            
-            
-            
+            this.QueryPhrase = QueryPhrase;
+            this.QueryFields = QueryFields;
+            this.Facets = Facets;
+            this.Filters = Filters;
             
         }
         
@@ -166,13 +104,9 @@ this.Filters = Filters;
             sb.Append("class DialerAuditRequest {\n");
             
             sb.Append("  QueryPhrase: ").Append(QueryPhrase).Append("\n");
-            
             sb.Append("  QueryFields: ").Append(QueryFields).Append("\n");
-            
             sb.Append("  Facets: ").Append(Facets).Append("\n");
-            
             sb.Append("  Filters: ").Append(Filters).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

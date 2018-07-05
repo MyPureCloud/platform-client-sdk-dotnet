@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingMessagingMessage" /> class.
         /// </summary>
-        
-        
         /// <param name="From">From.</param>
-        
-        
-        
         /// <param name="FromUser">FromUser.</param>
-        
-        
-        
         /// <param name="FromExternalContact">FromExternalContact.</param>
-        
-        
-        
         /// <param name="To">To.</param>
-        
-        
-        
         /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="MessageText">MessageText.</param>
-        
-        
         public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string MessageText = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.From = From;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FromUser = FromUser;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FromExternalContact = FromExternalContact;
-            
-            
-            
-            
-            
-            
-            
-            
-this.To = To;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Timestamp = Timestamp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageText = MessageText;
-            
-            
-            
+            this.From = From;
+            this.FromUser = FromUser;
+            this.FromExternalContact = FromExternalContact;
+            this.To = To;
+            this.Timestamp = Timestamp;
+            this.MessageText = MessageText;
             
         }
         
@@ -223,17 +131,11 @@ this.MessageText = MessageText;
             sb.Append("class RecordingMessagingMessage {\n");
             
             sb.Append("  From: ").Append(From).Append("\n");
-            
             sb.Append("  FromUser: ").Append(FromUser).Append("\n");
-            
             sb.Append("  FromExternalContact: ").Append(FromExternalContact).Append("\n");
-            
             sb.Append("  To: ").Append(To).Append("\n");
-            
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
-            
             sb.Append("  MessageText: ").Append(MessageText).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

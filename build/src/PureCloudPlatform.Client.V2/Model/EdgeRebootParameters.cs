@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeRebootParameters" /> class.
         /// </summary>
-        
-        
         /// <param name="CallDrainingWaitTimeSeconds">The number of seconds to wait for call draining to complete before initiating the reboot. A value of 0 will prevent call draining and all calls will disconnect immediately..</param>
-        
-        
         public EdgeRebootParameters(int? CallDrainingWaitTimeSeconds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallDrainingWaitTimeSeconds = CallDrainingWaitTimeSeconds;
-            
-            
-            
+            this.CallDrainingWaitTimeSeconds = CallDrainingWaitTimeSeconds;
             
         }
         
@@ -73,7 +56,6 @@ this.CallDrainingWaitTimeSeconds = CallDrainingWaitTimeSeconds;
             sb.Append("class EdgeRebootParameters {\n");
             
             sb.Append("  CallDrainingWaitTimeSeconds: ").Append(CallDrainingWaitTimeSeconds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

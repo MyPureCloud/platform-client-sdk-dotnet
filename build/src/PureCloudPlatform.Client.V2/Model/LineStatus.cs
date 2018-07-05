@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LineStatus" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The id of this line.</param>
-        
-        
-        
         /// <param name="Reachable">Indicates whether the edge can reach the line..</param>
-        
-        
-        
         /// <param name="AddressOfRecord">The line&#39;s address of record..</param>
-        
-        
-        
         /// <param name="ContactAddresses">The addresses used to contact the line..</param>
-        
-        
-        
         /// <param name="ReachableStateTime">The time the line entered its current reachable state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
         public LineStatus(string Id = null, bool? Reachable = null, string AddressOfRecord = null, List<string> ContactAddresses = null, DateTime? ReachableStateTime = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Reachable = Reachable;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressOfRecord = AddressOfRecord;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactAddresses = ContactAddresses;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReachableStateTime = ReachableStateTime;
-            
-            
-            
+            this.Id = Id;
+            this.Reachable = Reachable;
+            this.AddressOfRecord = AddressOfRecord;
+            this.ContactAddresses = ContactAddresses;
+            this.ReachableStateTime = ReachableStateTime;
             
         }
         
@@ -197,15 +120,10 @@ this.ReachableStateTime = ReachableStateTime;
             sb.Append("class LineStatus {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Reachable: ").Append(Reachable).Append("\n");
-            
             sb.Append("  AddressOfRecord: ").Append(AddressOfRecord).Append("\n");
-            
             sb.Append("  ContactAddresses: ").Append(ContactAddresses).Append("\n");
-            
             sb.Append("  ReachableStateTime: ").Append(ReachableStateTime).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

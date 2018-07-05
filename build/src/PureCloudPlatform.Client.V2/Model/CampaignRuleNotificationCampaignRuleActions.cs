@@ -106,95 +106,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleNotificationCampaignRuleActions" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Parameters">Parameters.</param>
-        
-        
-        
         /// <param name="ActionType">ActionType.</param>
-        
-        
-        
         /// <param name="CampaignRuleActionEntities">CampaignRuleActionEntities.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public CampaignRuleNotificationCampaignRuleActions(string Id = null, Dictionary<string, string> Parameters = null, ActionTypeEnum? ActionType = null, CampaignRuleNotificationCampaignRuleActionEntities CampaignRuleActionEntities = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Parameters = Parameters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActionType = ActionType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CampaignRuleActionEntities = CampaignRuleActionEntities;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Id = Id;
+            this.Parameters = Parameters;
+            this.ActionType = ActionType;
+            this.CampaignRuleActionEntities = CampaignRuleActionEntities;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -243,15 +166,10 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class CampaignRuleNotificationCampaignRuleActions {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
-            
             sb.Append("  ActionType: ").Append(ActionType).Append("\n");
-            
             sb.Append("  CampaignRuleActionEntities: ").Append(CampaignRuleActionEntities).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -84,95 +84,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsQueryAggregation" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">Optional type, can usually be inferred.</param>
-        
-        
-        
         /// <param name="Dimension">For use with termFrequency aggregations.</param>
-        
-        
-        
         /// <param name="Metric">For use with numericRange aggregations.</param>
-        
-        
-        
         /// <param name="Size">For use with termFrequency aggregations.</param>
-        
-        
-        
         /// <param name="Ranges">For use with numericRange aggregations.</param>
-        
-        
         public AnalyticsQueryAggregation(TypeEnum? Type = null, string Dimension = null, string Metric = null, int? Size = null, List<AggregationRange> Ranges = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Dimension = Dimension;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metric = Metric;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Size = Size;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Ranges = Ranges;
-            
-            
-            
+            this.Type = Type;
+            this.Dimension = Dimension;
+            this.Metric = Metric;
+            this.Size = Size;
+            this.Ranges = Ranges;
             
         }
         
@@ -225,15 +148,10 @@ this.Ranges = Ranges;
             sb.Append("class AnalyticsQueryAggregation {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
-            
             sb.Append("  Metric: ").Append(Metric).Append("\n");
-            
             sb.Append("  Size: ").Append(Size).Append("\n");
-            
             sb.Append("  Ranges: ").Append(Ranges).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

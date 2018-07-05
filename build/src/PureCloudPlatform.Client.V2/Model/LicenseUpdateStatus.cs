@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LicenseUpdateStatus" /> class.
         /// </summary>
-        
-        
         /// <param name="UserId">UserId.</param>
-        
-        
-        
         /// <param name="LicenseId">LicenseId.</param>
-        
-        
-        
         /// <param name="Result">Result.</param>
-        
-        
         public LicenseUpdateStatus(string UserId = null, string LicenseId = null, string Result = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LicenseId = LicenseId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Result = Result;
-            
-            
-            
+            this.UserId = UserId;
+            this.LicenseId = LicenseId;
+            this.Result = Result;
             
         }
         
@@ -132,11 +85,8 @@ this.Result = Result;
             sb.Append("class LicenseUpdateStatus {\n");
             
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
-            
             sb.Append("  Result: ").Append(Result).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

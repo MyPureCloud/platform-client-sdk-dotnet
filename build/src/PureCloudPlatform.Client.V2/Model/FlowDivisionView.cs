@@ -130,78 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowDivisionView" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The flow name (required).</param>
-        
-        
-        
         /// <param name="Division">The division to which this entity belongs..</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
-        
         public FlowDivisionView(string Name = null, Division Division = null, TypeEnum? Type = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for FlowDivisionView and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Division = Division;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
+            this.Division = Division;
+            this.Type = Type;
             
         }
         
@@ -254,15 +189,10 @@ this.Type = Type;
             sb.Append("class FlowDivisionView {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Division: ").Append(Division).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

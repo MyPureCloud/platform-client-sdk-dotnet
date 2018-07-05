@@ -45,71 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactPhoneNumberColumn" /> class.
         /// </summary>
-        
-        
         /// <param name="ColumnName">The name of the phone column. (required).</param>
-        
-        
-        
         /// <param name="Type">Indicates the type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;. (required).</param>
-        
-        
-        
         /// <param name="CallableTimeColumn">A column that indicates the timezone to use for a given contact when checking callable times. Not allowed if &#39;automaticTimeZoneMapping&#39; is set to true..</param>
-        
-        
         public ContactPhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumn = null)
         {
-            
-            
-            
-            // to ensure "ColumnName" is required (not null)
-            if (ColumnName == null)
-            {
-                throw new InvalidDataException("ColumnName is a required property for ContactPhoneNumberColumn and cannot be null");
-            }
-            else
-            {
-                this.ColumnName = ColumnName;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for ContactPhoneNumberColumn and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallableTimeColumn = CallableTimeColumn;
-            
-            
-            
+            this.CallableTimeColumn = CallableTimeColumn;
             
         }
         
@@ -151,11 +92,8 @@ this.CallableTimeColumn = CallableTimeColumn;
             sb.Append("class ContactPhoneNumberColumn {\n");
             
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  CallableTimeColumn: ").Append(CallableTimeColumn).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

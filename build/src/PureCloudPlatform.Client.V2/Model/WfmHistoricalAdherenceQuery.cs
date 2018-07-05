@@ -55,100 +55,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmHistoricalAdherenceQuery" /> class.
         /// </summary>
-        
-        
         /// <param name="StartDate">Beginning of the date range to query in ISO-8601 format (required).</param>
-        
-        
-        
         /// <param name="EndDate">End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time.</param>
-        
-        
-        
         /// <param name="TimeZone">The time zone to use for returned results in olson format. If it is not set, the management unit time zone will be used to compute adherence.</param>
-        
-        
-        
         /// <param name="UserIds">The userIds to report on. If it is not set, adherence will be computed for all the users in management unit.</param>
-        
-        
-        
         /// <param name="IncludeExceptions">Whether user exceptions should be returned as part of the results.</param>
-        
-        
         public WfmHistoricalAdherenceQuery(DateTime? StartDate = null, DateTime? EndDate = null, string TimeZone = null, List<string> UserIds = null, bool? IncludeExceptions = null)
         {
-            
-            
-            
-            // to ensure "StartDate" is required (not null)
-            if (StartDate == null)
-            {
-                throw new InvalidDataException("StartDate is a required property for WfmHistoricalAdherenceQuery and cannot be null");
-            }
-            else
-            {
-                this.StartDate = StartDate;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndDate = EndDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeZone = TimeZone;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserIds = UserIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IncludeExceptions = IncludeExceptions;
-            
-            
-            
+            this.EndDate = EndDate;
+            this.TimeZone = TimeZone;
+            this.UserIds = UserIds;
+            this.IncludeExceptions = IncludeExceptions;
             
         }
         
@@ -208,15 +125,10 @@ this.IncludeExceptions = IncludeExceptions;
             sb.Append("class WfmHistoricalAdherenceQuery {\n");
             
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
-            
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-            
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
-            
             sb.Append("  IncludeExceptions: ").Append(IncludeExceptions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

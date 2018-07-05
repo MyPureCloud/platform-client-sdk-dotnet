@@ -59,129 +59,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetStatistics" /> class.
         /// </summary>
-        
-        
         /// <param name="Count">Count.</param>
-        
-        
-        
         /// <param name="Min">Min.</param>
-        
-        
-        
         /// <param name="Max">Max.</param>
-        
-        
-        
         /// <param name="Mean">Mean.</param>
-        
-        
-        
         /// <param name="StdDeviation">StdDeviation.</param>
-        
-        
-        
         /// <param name="DateMin">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateMax">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
         public FacetStatistics(long? Count = null, double? Min = null, double? Max = null, double? Mean = null, double? StdDeviation = null, DateTime? DateMin = null, DateTime? DateMax = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Count = Count;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Min = Min;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Max = Max;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Mean = Mean;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StdDeviation = StdDeviation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateMin = DateMin;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateMax = DateMax;
-            
-            
-            
+            this.Count = Count;
+            this.Min = Min;
+            this.Max = Max;
+            this.Mean = Mean;
+            this.StdDeviation = StdDeviation;
+            this.DateMin = DateMin;
+            this.DateMax = DateMax;
             
         }
         
@@ -254,19 +147,12 @@ this.DateMax = DateMax;
             sb.Append("class FacetStatistics {\n");
             
             sb.Append("  Count: ").Append(Count).Append("\n");
-            
             sb.Append("  Min: ").Append(Min).Append("\n");
-            
             sb.Append("  Max: ").Append(Max).Append("\n");
-            
             sb.Append("  Mean: ").Append(Mean).Append("\n");
-            
             sb.Append("  StdDeviation: ").Append(StdDeviation).Append("\n");
-            
             sb.Append("  DateMin: ").Append(DateMin).Append("\n");
-            
             sb.Append("  DateMax: ").Append(DateMax).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

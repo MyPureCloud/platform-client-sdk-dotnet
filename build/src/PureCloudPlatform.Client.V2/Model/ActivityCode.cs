@@ -162,180 +162,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityCode" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the activity code. Default activity codes will be created with an empty name.</param>
-        
-        
-        
         /// <param name="IsActive">Whether this activity code is active or has been deleted.</param>
-        
-        
-        
         /// <param name="IsDefault">Whether this is a default activity code.</param>
-        
-        
-        
         /// <param name="Category">The activity code&#39;s category..</param>
-        
-        
-        
         /// <param name="LengthInMinutes">The default length of the activity in minutes.</param>
-        
-        
-        
         /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity.</param>
-        
-        
-        
         /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints.</param>
-        
-        
-        
         /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off..</param>
-        
-        
-        
         /// <param name="Metadata">Version metadata for the associated management unit&#39;s list of activity codes (required).</param>
-        
-        
-        
-        
         public ActivityCode(string Name = null, bool? IsActive = null, bool? IsDefault = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, WfmVersionedEntityMetadata Metadata = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Metadata" is required (not null)
-            if (Metadata == null)
-            {
-                throw new InvalidDataException("Metadata is a required property for ActivityCode and cannot be null");
-            }
-            else
-            {
-                this.Metadata = Metadata;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IsActive = IsActive;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IsDefault = IsDefault;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Category = Category;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LengthInMinutes = LengthInMinutes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CountsAsPaidTime = CountsAsPaidTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CountsAsWorkTime = CountsAsWorkTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AgentTimeOffSelectable = AgentTimeOffSelectable;
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.IsActive = IsActive;
+            this.IsDefault = IsDefault;
+            this.Category = Category;
+            this.LengthInMinutes = LengthInMinutes;
+            this.CountsAsPaidTime = CountsAsPaidTime;
+            this.CountsAsWorkTime = CountsAsWorkTime;
+            this.AgentTimeOffSelectable = AgentTimeOffSelectable;
             
         }
         
@@ -442,27 +287,16 @@ this.AgentTimeOffSelectable = AgentTimeOffSelectable;
             sb.Append("class ActivityCode {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
-            
             sb.Append("  IsDefault: ").Append(IsDefault).Append("\n");
-            
             sb.Append("  Category: ").Append(Category).Append("\n");
-            
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
-            
             sb.Append("  CountsAsPaidTime: ").Append(CountsAsPaidTime).Append("\n");
-            
             sb.Append("  CountsAsWorkTime: ").Append(CountsAsWorkTime).Append("\n");
-            
             sb.Append("  AgentTimeOffSelectable: ").Append(AgentTimeOffSelectable).Append("\n");
-            
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

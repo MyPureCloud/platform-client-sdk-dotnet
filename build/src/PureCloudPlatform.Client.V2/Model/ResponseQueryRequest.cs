@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseQueryRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="QueryPhrase">Query phrase to search response text and name. If not set will match all..</param>
-        
-        
-        
         /// <param name="PageSize">The maximum number of hits to return. Default: 25, Maximum: 500..</param>
-        
-        
-        
         /// <param name="Filters">Filter the query results..</param>
-        
-        
         public ResponseQueryRequest(string QueryPhrase = null, int? PageSize = null, List<ResponseFilter> Filters = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueryPhrase = QueryPhrase;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageSize = PageSize;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Filters = Filters;
-            
-            
-            
+            this.QueryPhrase = QueryPhrase;
+            this.PageSize = PageSize;
+            this.Filters = Filters;
             
         }
         
@@ -135,11 +88,8 @@ this.Filters = Filters;
             sb.Append("class ResponseQueryRequest {\n");
             
             sb.Append("  QueryPhrase: ").Append(QueryPhrase).Append("\n");
-            
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            
             sb.Append("  Filters: ").Append(Filters).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

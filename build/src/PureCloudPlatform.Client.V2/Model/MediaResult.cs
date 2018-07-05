@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaResult" /> class.
         /// </summary>
-        
-        
         /// <param name="MediaUri">MediaUri.</param>
-        
-        
-        
         /// <param name="WaveformData">WaveformData.</param>
-        
-        
         public MediaResult(string MediaUri = null, List<float?> WaveformData = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaUri = MediaUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WaveformData = WaveformData;
-            
-            
-            
+            this.MediaUri = MediaUri;
+            this.WaveformData = WaveformData;
             
         }
         
@@ -102,9 +70,7 @@ this.WaveformData = WaveformData;
             sb.Append("class MediaResult {\n");
             
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
-            
             sb.Append("  WaveformData: ").Append(WaveformData).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

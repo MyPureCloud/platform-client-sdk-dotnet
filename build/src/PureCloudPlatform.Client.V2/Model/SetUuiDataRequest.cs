@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SetUuiDataRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="UuiData">The value of the uuiData to set..</param>
-        
-        
         public SetUuiDataRequest(string UuiData = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.UuiData = UuiData;
-            
-            
-            
+            this.UuiData = UuiData;
             
         }
         
@@ -73,7 +56,6 @@ this.UuiData = UuiData;
             sb.Append("class SetUuiDataRequest {\n");
             
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

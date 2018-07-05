@@ -69,163 +69,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignScheduleNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="DateCreated">DateCreated.</param>
-        
-        
-        
         /// <param name="DateModified">DateModified.</param>
-        
-        
-        
         /// <param name="Version">Version.</param>
-        
-        
-        
         /// <param name="Intervals">Intervals.</param>
-        
-        
-        
         /// <param name="TimeZone">TimeZone.</param>
-        
-        
-        
         /// <param name="Campaign">Campaign.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public CampaignScheduleNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CampaignScheduleNotificationIntervals> Intervals = null, string TimeZone = null, DocumentDataV2NotificationCreatedBy Campaign = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Intervals = Intervals;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeZone = TimeZone;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Campaign = Campaign;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Version = Version;
+            this.Intervals = Intervals;
+            this.TimeZone = TimeZone;
+            this.Campaign = Campaign;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -312,23 +175,14 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class CampaignScheduleNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  Intervals: ").Append(Intervals).Append("\n");
-            
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-            
             sb.Append("  Campaign: ").Append(Campaign).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

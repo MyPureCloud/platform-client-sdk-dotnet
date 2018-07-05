@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustRequestCreate" /> class.
         /// </summary>
-        
-        
         /// <param name="UserIds">The list of trustee users that are requesting access. If no users are specified, at least one group is required..</param>
-        
-        
-        
         /// <param name="GroupIds">The list of trustee groups that are requesting access. If no groups are specified, at least one user is required..</param>
-        
-        
         public TrustRequestCreate(List<string> UserIds = null, List<string> GroupIds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserIds = UserIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.GroupIds = GroupIds;
-            
-            
-            
+            this.UserIds = UserIds;
+            this.GroupIds = GroupIds;
             
         }
         
@@ -104,9 +72,7 @@ this.GroupIds = GroupIds;
             sb.Append("class TrustRequestCreate {\n");
             
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
-            
             sb.Append("  GroupIds: ").Append(GroupIds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

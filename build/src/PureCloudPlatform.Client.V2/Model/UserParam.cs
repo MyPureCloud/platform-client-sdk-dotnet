@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserParam" /> class.
         /// </summary>
-        
-        
         /// <param name="Key">Key.</param>
-        
-        
-        
         /// <param name="Value">Value.</param>
-        
-        
         public UserParam(string Key = null, string Value = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Key = Key;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
+            this.Key = Key;
+            this.Value = Value;
             
         }
         
@@ -102,9 +70,7 @@ this.Value = Value;
             sb.Append("class UserParam {\n");
             
             sb.Append("  Key: ").Append(Key).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

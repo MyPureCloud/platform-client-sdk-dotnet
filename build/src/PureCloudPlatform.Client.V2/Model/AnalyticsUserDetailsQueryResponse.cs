@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsUserDetailsQueryResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="UserDetails">UserDetails.</param>
-        
-        
-        
         /// <param name="Aggregations">Aggregations.</param>
-        
-        
         public AnalyticsUserDetailsQueryResponse(List<AnalyticsUserDetail> UserDetails = null, List<AggregationResult> Aggregations = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserDetails = UserDetails;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Aggregations = Aggregations;
-            
-            
-            
+            this.UserDetails = UserDetails;
+            this.Aggregations = Aggregations;
             
         }
         
@@ -102,9 +70,7 @@ this.Aggregations = Aggregations;
             sb.Append("class AnalyticsUserDetailsQueryResponse {\n");
             
             sb.Append("  UserDetails: ").Append(UserDetails).Append("\n");
-            
             sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

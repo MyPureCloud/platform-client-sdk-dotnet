@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxSummary" /> class.
         /// </summary>
-        
-        
         /// <param name="ReadCount">ReadCount.</param>
-        
-        
-        
         /// <param name="UnreadCount">UnreadCount.</param>
-        
-        
-        
         /// <param name="TotalCount">TotalCount.</param>
-        
-        
         public FaxSummary(int? ReadCount = null, int? UnreadCount = null, int? TotalCount = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReadCount = ReadCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UnreadCount = UnreadCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalCount = TotalCount;
-            
-            
-            
+            this.ReadCount = ReadCount;
+            this.UnreadCount = UnreadCount;
+            this.TotalCount = TotalCount;
             
         }
         
@@ -132,11 +85,8 @@ this.TotalCount = TotalCount;
             sb.Append("class FaxSummary {\n");
             
             sb.Append("  ReadCount: ").Append(ReadCount).Append("\n");
-            
             sb.Append("  UnreadCount: ").Append(UnreadCount).Append("\n");
-            
             sb.Append("  TotalCount: ").Append(TotalCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

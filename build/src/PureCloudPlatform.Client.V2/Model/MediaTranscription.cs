@@ -66,61 +66,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaTranscription" /> class.
         /// </summary>
-        
-        
         /// <param name="DisplayName">DisplayName.</param>
-        
-        
-        
         /// <param name="TranscriptionProvider">TranscriptionProvider.</param>
-        
-        
-        
         /// <param name="IntegrationId">IntegrationId.</param>
-        
-        
         public MediaTranscription(string DisplayName = null, TranscriptionProviderEnum? TranscriptionProvider = null, string IntegrationId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisplayName = DisplayName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TranscriptionProvider = TranscriptionProvider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IntegrationId = IntegrationId;
-            
-            
-            
+            this.DisplayName = DisplayName;
+            this.TranscriptionProvider = TranscriptionProvider;
+            this.IntegrationId = IntegrationId;
             
         }
         
@@ -153,11 +106,8 @@ this.IntegrationId = IntegrationId;
             sb.Append("class MediaTranscription {\n");
             
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            
             sb.Append("  TranscriptionProvider: ").Append(TranscriptionProvider).Append("\n");
-            
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

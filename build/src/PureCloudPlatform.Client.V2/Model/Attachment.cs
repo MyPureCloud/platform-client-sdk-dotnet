@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Attachment" /> class.
         /// </summary>
-        
-        
         /// <param name="AttachmentId">The unique identifier for the attachment..</param>
-        
-        
-        
         /// <param name="Name">The name of the attachment..</param>
-        
-        
-        
         /// <param name="ContentUri">The content uri of the attachment. If set, this is commonly a public api download location..</param>
-        
-        
-        
         /// <param name="ContentType">The type of file the attachment is..</param>
-        
-        
-        
         /// <param name="ContentLength">The length of the attachment file..</param>
-        
-        
         public Attachment(string AttachmentId = null, string Name = null, string ContentUri = null, string ContentType = null, int? ContentLength = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AttachmentId = AttachmentId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentUri = ContentUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentType = ContentType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentLength = ContentLength;
-            
-            
-            
+            this.AttachmentId = AttachmentId;
+            this.Name = Name;
+            this.ContentUri = ContentUri;
+            this.ContentType = ContentType;
+            this.ContentLength = ContentLength;
             
         }
         
@@ -197,15 +120,10 @@ this.ContentLength = ContentLength;
             sb.Append("class Attachment {\n");
             
             sb.Append("  AttachmentId: ").Append(AttachmentId).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ContentUri: ").Append(ContentUri).Append("\n");
-            
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
-            
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

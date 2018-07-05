@@ -44,56 +44,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DependencyType" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Versioned">Versioned.</param>
-        
-        
-        
-        
         public DependencyType(string Name = null, bool? Versioned = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Versioned = Versioned;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Versioned = Versioned;
             
         }
         
@@ -142,13 +98,9 @@ this.Versioned = Versioned;
             sb.Append("class DependencyType {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Versioned: ").Append(Versioned).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

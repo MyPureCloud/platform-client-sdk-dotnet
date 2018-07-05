@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeVersionReport" /> class.
         /// </summary>
-        
-        
         /// <param name="OldestVersion">OldestVersion.</param>
-        
-        
-        
         /// <param name="NewestVersion">NewestVersion.</param>
-        
-        
         public EdgeVersionReport(EdgeVersionInformation OldestVersion = null, EdgeVersionInformation NewestVersion = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.OldestVersion = OldestVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NewestVersion = NewestVersion;
-            
-            
-            
+            this.OldestVersion = OldestVersion;
+            this.NewestVersion = NewestVersion;
             
         }
         
@@ -102,9 +70,7 @@ this.NewestVersion = NewestVersion;
             sb.Append("class EdgeVersionReport {\n");
             
             sb.Append("  OldestVersion: ").Append(OldestVersion).Append("\n");
-            
             sb.Append("  NewestVersion: ").Append(NewestVersion).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

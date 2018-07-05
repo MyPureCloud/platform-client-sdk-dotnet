@@ -155,185 +155,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainEdgeSoftwareUpdateDto" /> class.
         /// </summary>
-        
-        
         /// <param name="Version">Version (required).</param>
-        
-        
-        
         /// <param name="MaxDownloadRate">MaxDownloadRate.</param>
-        
-        
-        
         /// <param name="DownloadStartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ExecuteStartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ExecuteStopTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ExecuteOnIdle">ExecuteOnIdle.</param>
-        
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="EdgeUri">EdgeUri.</param>
-        
-        
-        
         /// <param name="CallDrainingWaitTimeSeconds">CallDrainingWaitTimeSeconds.</param>
-        
-        
-        
         /// <param name="Current">Current.</param>
-        
-        
         public DomainEdgeSoftwareUpdateDto(DomainEdgeSoftwareVersionDto Version = null, int? MaxDownloadRate = null, DateTime? DownloadStartTime = null, DateTime? ExecuteStartTime = null, DateTime? ExecuteStopTime = null, bool? ExecuteOnIdle = null, StatusEnum? Status = null, string EdgeUri = null, long? CallDrainingWaitTimeSeconds = null, bool? Current = null)
         {
-            
-            
-            
-            // to ensure "Version" is required (not null)
-            if (Version == null)
-            {
-                throw new InvalidDataException("Version is a required property for DomainEdgeSoftwareUpdateDto and cannot be null");
-            }
-            else
-            {
-                this.Version = Version;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxDownloadRate = MaxDownloadRate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DownloadStartTime = DownloadStartTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExecuteStartTime = ExecuteStartTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExecuteStopTime = ExecuteStopTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExecuteOnIdle = ExecuteOnIdle;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgeUri = EdgeUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallDrainingWaitTimeSeconds = CallDrainingWaitTimeSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Current = Current;
-            
-            
-            
+            this.MaxDownloadRate = MaxDownloadRate;
+            this.DownloadStartTime = DownloadStartTime;
+            this.ExecuteStartTime = ExecuteStartTime;
+            this.ExecuteStopTime = ExecuteStopTime;
+            this.ExecuteOnIdle = ExecuteOnIdle;
+            this.Status = Status;
+            this.EdgeUri = EdgeUri;
+            this.CallDrainingWaitTimeSeconds = CallDrainingWaitTimeSeconds;
+            this.Current = Current;
             
         }
         
@@ -426,25 +268,15 @@ this.Current = Current;
             sb.Append("class DomainEdgeSoftwareUpdateDto {\n");
             
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  MaxDownloadRate: ").Append(MaxDownloadRate).Append("\n");
-            
             sb.Append("  DownloadStartTime: ").Append(DownloadStartTime).Append("\n");
-            
             sb.Append("  ExecuteStartTime: ").Append(ExecuteStartTime).Append("\n");
-            
             sb.Append("  ExecuteStopTime: ").Append(ExecuteStopTime).Append("\n");
-            
             sb.Append("  ExecuteOnIdle: ").Append(ExecuteOnIdle).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  EdgeUri: ").Append(EdgeUri).Append("\n");
-            
             sb.Append("  CallDrainingWaitTimeSeconds: ").Append(CallDrainingWaitTimeSeconds).Append("\n");
-            
             sb.Append("  Current: ").Append(Current).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

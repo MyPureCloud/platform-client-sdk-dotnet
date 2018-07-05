@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetrics" /> class.
         /// </summary>
-        
-        
         /// <param name="EventTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="LogicalInterface">LogicalInterface.</param>
-        
-        
-        
         /// <param name="Trunk">Trunk.</param>
-        
-        
-        
         /// <param name="Calls">Calls.</param>
-        
-        
-        
         /// <param name="Qos">Qos.</param>
-        
-        
         public TrunkMetrics(DateTime? EventTime = null, UriReference LogicalInterface = null, UriReference Trunk = null, TrunkMetricsCalls Calls = null, TrunkMetricsQoS Qos = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.EventTime = EventTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LogicalInterface = LogicalInterface;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Trunk = Trunk;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Calls = Calls;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Qos = Qos;
-            
-            
-            
+            this.EventTime = EventTime;
+            this.LogicalInterface = LogicalInterface;
+            this.Trunk = Trunk;
+            this.Calls = Calls;
+            this.Qos = Qos;
             
         }
         
@@ -193,15 +116,10 @@ this.Qos = Qos;
             sb.Append("class TrunkMetrics {\n");
             
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
-            
             sb.Append("  LogicalInterface: ").Append(LogicalInterface).Append("\n");
-            
             sb.Append("  Trunk: ").Append(Trunk).Append("\n");
-            
             sb.Append("  Calls: ").Append(Calls).Append("\n");
-            
             sb.Append("  Qos: ").Append(Qos).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

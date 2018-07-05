@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkErrorInfoDetails" /> class.
         /// </summary>
-        
-        
         /// <param name="Code">Code.</param>
-        
-        
-        
         /// <param name="Message">Message.</param>
-        
-        
-        
         /// <param name="Hostname">Hostname.</param>
-        
-        
         public TrunkErrorInfoDetails(string Code = null, string Message = null, string Hostname = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Code = Code;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Message = Message;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Hostname = Hostname;
-            
-            
-            
+            this.Code = Code;
+            this.Message = Message;
+            this.Hostname = Hostname;
             
         }
         
@@ -132,11 +85,8 @@ this.Hostname = Hostname;
             sb.Append("class TrunkErrorInfoDetails {\n");
             
             sb.Append("  Code: ").Append(Code).Append("\n");
-            
             sb.Append("  Message: ").Append(Message).Append("\n");
-            
             sb.Append("  Hostname: ").Append(Hostname).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

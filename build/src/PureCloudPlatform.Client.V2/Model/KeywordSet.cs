@@ -104,156 +104,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KeywordSet" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="Queues">Queues.</param>
-        
-        
-        
         /// <param name="Language">Language code, such as &#39;en-US&#39; (required).</param>
-        
-        
-        
         /// <param name="Agents">Agents.</param>
-        
-        
-        
         /// <param name="Keywords">The list of keywords to be used for keyword spotting. (required).</param>
-        
-        
-        
         /// <param name="ParticipantPurposes">The types of participants to use keyword spotting on. (required).</param>
-        
-        
-        
-        
         public KeywordSet(string Name = null, string Description = null, List<Queue> Queues = null, string Language = null, List<User> Agents = null, List<Keyword> Keywords = null, List<ParticipantPurposesEnum> ParticipantPurposes = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Language" is required (not null)
-            if (Language == null)
-            {
-                throw new InvalidDataException("Language is a required property for KeywordSet and cannot be null");
-            }
-            else
-            {
-                this.Language = Language;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Keywords" is required (not null)
-            if (Keywords == null)
-            {
-                throw new InvalidDataException("Keywords is a required property for KeywordSet and cannot be null");
-            }
-            else
-            {
-                this.Keywords = Keywords;
-            }
-            
-            
-            
-            
-            
-            // to ensure "ParticipantPurposes" is required (not null)
-            if (ParticipantPurposes == null)
-            {
-                throw new InvalidDataException("ParticipantPurposes is a required property for KeywordSet and cannot be null");
-            }
-            else
-            {
-                this.ParticipantPurposes = ParticipantPurposes;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Queues = Queues;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Agents = Agents;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Description = Description;
+            this.Queues = Queues;
+            this.Agents = Agents;
             
         }
         
@@ -345,23 +208,14 @@ this.Agents = Agents;
             sb.Append("class KeywordSet {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Queues: ").Append(Queues).Append("\n");
-            
             sb.Append("  Language: ").Append(Language).Append("\n");
-            
             sb.Append("  Agents: ").Append(Agents).Append("\n");
-            
             sb.Append("  Keywords: ").Append(Keywords).Append("\n");
-            
             sb.Append("  ParticipantPurposes: ").Append(ParticipantPurposes).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

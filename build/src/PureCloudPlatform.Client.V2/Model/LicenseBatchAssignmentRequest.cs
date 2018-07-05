@@ -35,32 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LicenseBatchAssignmentRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="Assignments">The list of license assignment updates to make. (required).</param>
-        
-        
         public LicenseBatchAssignmentRequest(List<LicenseAssignmentRequest> Assignments = null)
         {
-            
-            
-            
-            // to ensure "Assignments" is required (not null)
-            if (Assignments == null)
-            {
-                throw new InvalidDataException("Assignments is a required property for LicenseBatchAssignmentRequest and cannot be null");
-            }
-            else
-            {
-                this.Assignments = Assignments;
-            }
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -84,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class LicenseBatchAssignmentRequest {\n");
             
             sb.Append("  Assignments: ").Append(Assignments).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

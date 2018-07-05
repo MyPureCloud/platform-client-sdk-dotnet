@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchDownloadRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="ConversationId">Conversation id requested.</param>
-        
-        
-        
         /// <param name="RecordingId">Recording id requested, optional.  Leave null for all recordings on the conversation.</param>
-        
-        
         public BatchDownloadRequest(string ConversationId = null, string RecordingId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConversationId = ConversationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingId = RecordingId;
-            
-            
-            
+            this.ConversationId = ConversationId;
+            this.RecordingId = RecordingId;
             
         }
         
@@ -104,9 +72,7 @@ this.RecordingId = RecordingId;
             sb.Append("class BatchDownloadRequest {\n");
             
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
-            
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

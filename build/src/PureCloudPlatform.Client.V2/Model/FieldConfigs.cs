@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldConfigs" /> class.
         /// </summary>
-        
-        
         /// <param name="Org">Org.</param>
-        
-        
-        
         /// <param name="Person">Person.</param>
-        
-        
-        
         /// <param name="Group">Group.</param>
-        
-        
-        
         /// <param name="ExternalContact">ExternalContact.</param>
-        
-        
         public FieldConfigs(FieldConfig Org = null, FieldConfig Person = null, FieldConfig Group = null, FieldConfig ExternalContact = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Org = Org;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Person = Person;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Group = Group;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalContact = ExternalContact;
-            
-            
-            
+            this.Org = Org;
+            this.Person = Person;
+            this.Group = Group;
+            this.ExternalContact = ExternalContact;
             
         }
         
@@ -162,13 +100,9 @@ this.ExternalContact = ExternalContact;
             sb.Append("class FieldConfigs {\n");
             
             sb.Append("  Org: ").Append(Org).Append("\n");
-            
             sb.Append("  Person: ").Append(Person).Append("\n");
-            
             sb.Append("  Group: ").Append(Group).Append("\n");
-            
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

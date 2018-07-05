@@ -123,197 +123,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Workspace" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The current name of the workspace. (required).</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="IsCurrentUserWorkspace">IsCurrentUserWorkspace.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="Bucket">Bucket.</param>
-        
-        
-        
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Summary">Summary.</param>
-        
-        
-        
         /// <param name="Acl">Acl.</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
-        
         public Workspace(string Name = null, TypeEnum? Type = null, bool? IsCurrentUserWorkspace = null, UriReference User = null, string Bucket = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkspaceSummary Summary = null, List<string> Acl = null, string Description = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for Workspace and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IsCurrentUserWorkspace = IsCurrentUserWorkspace;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Bucket = Bucket;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Summary = Summary;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Acl = Acl;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
+            this.Type = Type;
+            this.IsCurrentUserWorkspace = IsCurrentUserWorkspace;
+            this.User = User;
+            this.Bucket = Bucket;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Summary = Summary;
+            this.Acl = Acl;
+            this.Description = Description;
             
         }
         
@@ -423,29 +253,17 @@ this.Description = Description;
             sb.Append("class Workspace {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  IsCurrentUserWorkspace: ").Append(IsCurrentUserWorkspace).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Bucket: ").Append(Bucket).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Summary: ").Append(Summary).Append("\n");
-            
             sb.Append("  Acl: ").Append(Acl).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -69,163 +69,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldList" /> class.
         /// </summary>
-        
-        
         /// <param name="CustomLabels">CustomLabels.</param>
-        
-        
-        
         /// <param name="InstructionText">InstructionText.</param>
-        
-        
-        
         /// <param name="Key">Key.</param>
-        
-        
-        
         /// <param name="LabelKeys">LabelKeys.</param>
-        
-        
-        
         /// <param name="_Params">_Params.</param>
-        
-        
-        
         /// <param name="Repeatable">Repeatable.</param>
-        
-        
-        
         /// <param name="State">State.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="Required">Required.</param>
-        
-        
         public FieldList(bool? CustomLabels = null, string InstructionText = null, string Key = null, List<string> LabelKeys = null, Dictionary<string, Object> _Params = null, bool? Repeatable = null, string State = null, string Type = null, bool? Required = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CustomLabels = CustomLabels;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InstructionText = InstructionText;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Key = Key;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LabelKeys = LabelKeys;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Params = _Params;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Repeatable = Repeatable;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Required = Required;
-            
-            
-            
+            this.CustomLabels = CustomLabels;
+            this.InstructionText = InstructionText;
+            this.Key = Key;
+            this.LabelKeys = LabelKeys;
+            this._Params = _Params;
+            this.Repeatable = Repeatable;
+            this.State = State;
+            this.Type = Type;
+            this.Required = Required;
             
         }
         
@@ -312,23 +175,14 @@ this.Required = Required;
             sb.Append("class FieldList {\n");
             
             sb.Append("  CustomLabels: ").Append(CustomLabels).Append("\n");
-            
             sb.Append("  InstructionText: ").Append(InstructionText).Append("\n");
-            
             sb.Append("  Key: ").Append(Key).Append("\n");
-            
             sb.Append("  LabelKeys: ").Append(LabelKeys).Append("\n");
-            
             sb.Append("  _Params: ").Append(_Params).Append("\n");
-            
             sb.Append("  Repeatable: ").Append(Repeatable).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Required: ").Append(Required).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

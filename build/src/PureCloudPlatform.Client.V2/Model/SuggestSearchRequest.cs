@@ -45,71 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SuggestSearchRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="Expand">Provides more details about a specified resource.</param>
-        
-        
-        
         /// <param name="Types">Resource domain type to search (required).</param>
-        
-        
-        
         /// <param name="Query">Suggest query (required).</param>
-        
-        
         public SuggestSearchRequest(List<string> Expand = null, List<string> Types = null, List<SuggestSearchCriteria> Query = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Types" is required (not null)
-            if (Types == null)
-            {
-                throw new InvalidDataException("Types is a required property for SuggestSearchRequest and cannot be null");
-            }
-            else
-            {
-                this.Types = Types;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Query" is required (not null)
-            if (Query == null)
-            {
-                throw new InvalidDataException("Query is a required property for SuggestSearchRequest and cannot be null");
-            }
-            else
-            {
-                this.Query = Query;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-this.Expand = Expand;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Expand = Expand;
             
         }
         
@@ -151,11 +92,8 @@ this.Expand = Expand;
             sb.Append("class SuggestSearchRequest {\n");
             
             sb.Append("  Expand: ").Append(Expand).Append("\n");
-            
             sb.Append("  Types: ").Append(Types).Append("\n");
-            
             sb.Append("  Query: ").Append(Query).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

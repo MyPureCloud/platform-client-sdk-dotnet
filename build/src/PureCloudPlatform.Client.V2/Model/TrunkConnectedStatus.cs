@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkConnectedStatus" /> class.
         /// </summary>
-        
-        
         /// <param name="Connected">Connected.</param>
-        
-        
-        
         /// <param name="ConnectedStateTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
         public TrunkConnectedStatus(bool? Connected = null, DateTime? ConnectedStateTime = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Connected = Connected;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedStateTime = ConnectedStateTime;
-            
-            
-            
+            this.Connected = Connected;
+            this.ConnectedStateTime = ConnectedStateTime;
             
         }
         
@@ -103,9 +71,7 @@ this.ConnectedStateTime = ConnectedStateTime;
             sb.Append("class TrunkConnectedStatus {\n");
             
             sb.Append("  Connected: ").Append(Connected).Append("\n");
-            
             sb.Append("  ConnectedStateTime: ").Append(ConnectedStateTime).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

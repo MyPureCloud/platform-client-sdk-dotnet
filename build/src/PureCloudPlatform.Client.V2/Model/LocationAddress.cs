@@ -59,129 +59,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationAddress" /> class.
         /// </summary>
-        
-        
         /// <param name="City">City.</param>
-        
-        
-        
         /// <param name="Country">Country.</param>
-        
-        
-        
         /// <param name="CountryName">CountryName.</param>
-        
-        
-        
         /// <param name="State">State.</param>
-        
-        
-        
         /// <param name="Street1">Street1.</param>
-        
-        
-        
         /// <param name="Street2">Street2.</param>
-        
-        
-        
         /// <param name="Zipcode">Zipcode.</param>
-        
-        
         public LocationAddress(string City = null, string Country = null, string CountryName = null, string State = null, string Street1 = null, string Street2 = null, string Zipcode = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.City = City;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Country = Country;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CountryName = CountryName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Street1 = Street1;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Street2 = Street2;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Zipcode = Zipcode;
-            
-            
-            
+            this.City = City;
+            this.Country = Country;
+            this.CountryName = CountryName;
+            this.State = State;
+            this.Street1 = Street1;
+            this.Street2 = Street2;
+            this.Zipcode = Zipcode;
             
         }
         
@@ -252,19 +145,12 @@ this.Zipcode = Zipcode;
             sb.Append("class LocationAddress {\n");
             
             sb.Append("  City: ").Append(City).Append("\n");
-            
             sb.Append("  Country: ").Append(Country).Append("\n");
-            
             sb.Append("  CountryName: ").Append(CountryName).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Street1: ").Append(Street1).Append("\n");
-            
             sb.Append("  Street2: ").Append(Street2).Append("\n");
-            
             sb.Append("  Zipcode: ").Append(Zipcode).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

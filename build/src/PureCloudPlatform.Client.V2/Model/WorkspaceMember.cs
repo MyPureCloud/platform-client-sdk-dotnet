@@ -110,146 +110,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceMember" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Workspace">Workspace.</param>
-        
-        
-        
         /// <param name="MemberType">The workspace member type. (required).</param>
-        
-        
-        
         /// <param name="Member">Member.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="Group">Group.</param>
-        
-        
-        
         /// <param name="SecurityProfile">SecurityProfile.</param>
-        
-        
-        
-        
         public WorkspaceMember(string Name = null, UriReference Workspace = null, MemberTypeEnum? MemberType = null, UriReference Member = null, User User = null, Group Group = null, SecurityProfile SecurityProfile = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "MemberType" is required (not null)
-            if (MemberType == null)
-            {
-                throw new InvalidDataException("MemberType is a required property for WorkspaceMember and cannot be null");
-            }
-            else
-            {
-                this.MemberType = MemberType;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Workspace = Workspace;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Member = Member;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Group = Group;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SecurityProfile = SecurityProfile;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Workspace = Workspace;
+            this.Member = Member;
+            this.User = User;
+            this.Group = Group;
+            this.SecurityProfile = SecurityProfile;
             
         }
         
@@ -332,23 +207,14 @@ this.SecurityProfile = SecurityProfile;
             sb.Append("class WorkspaceMember {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
-            
             sb.Append("  MemberType: ").Append(MemberType).Append("\n");
-            
             sb.Append("  Member: ").Append(Member).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Group: ").Append(Group).Append("\n");
-            
             sb.Append("  SecurityProfile: ").Append(SecurityProfile).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

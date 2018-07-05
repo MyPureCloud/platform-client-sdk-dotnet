@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TestExecutionOperationResult" /> class.
         /// </summary>
-        
-        
         /// <param name="Step">The step number to indicate the order in which the operation was performed.</param>
-        
-        
-        
         /// <param name="Name">Name of the operation performed.</param>
-        
-        
-        
         /// <param name="Success">Indicated whether or not the operation was successful.</param>
-        
-        
-        
         /// <param name="Result">The result of the operation.</param>
-        
-        
-        
         /// <param name="Error">Error that occurred during the operation.</param>
-        
-        
         public TestExecutionOperationResult(int? Step = null, string Name = null, bool? Success = null, Object Result = null, ErrorBody Error = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Step = Step;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Success = Success;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Result = Result;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Error = Error;
-            
-            
-            
+            this.Step = Step;
+            this.Name = Name;
+            this.Success = Success;
+            this.Result = Result;
+            this.Error = Error;
             
         }
         
@@ -197,15 +120,10 @@ this.Error = Error;
             sb.Append("class TestExecutionOperationResult {\n");
             
             sb.Append("  Step: ").Append(Step).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Success: ").Append(Success).Append("\n");
-            
             sb.Append("  Result: ").Append(Result).Append("\n");
-            
             sb.Append("  Error: ").Append(Error).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

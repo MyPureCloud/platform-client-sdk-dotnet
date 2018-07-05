@@ -75,134 +75,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SequenceSchedule" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        
-        
-        
         /// <param name="Intervals">A list of intervals during which to run the associated CampaignSequence. (required).</param>
-        
-        
-        
         /// <param name="TimeZone">The time zone for this SequenceSchedule. For example, Africa/Abidjan. (required).</param>
-        
-        
-        
         /// <param name="Sequence">The CampaignSequence that this SequenceSchedule is for. (required).</param>
-        
-        
-        
-        
         public SequenceSchedule(string Name = null, int? Version = null, List<ScheduleInterval> Intervals = null, string TimeZone = null, UriReference Sequence = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Intervals" is required (not null)
-            if (Intervals == null)
-            {
-                throw new InvalidDataException("Intervals is a required property for SequenceSchedule and cannot be null");
-            }
-            else
-            {
-                this.Intervals = Intervals;
-            }
-            
-            
-            
-            
-            
-            // to ensure "TimeZone" is required (not null)
-            if (TimeZone == null)
-            {
-                throw new InvalidDataException("TimeZone is a required property for SequenceSchedule and cannot be null");
-            }
-            else
-            {
-                this.TimeZone = TimeZone;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Sequence" is required (not null)
-            if (Sequence == null)
-            {
-                throw new InvalidDataException("Sequence is a required property for SequenceSchedule and cannot be null");
-            }
-            else
-            {
-                this.Sequence = Sequence;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Version = Version;
             
         }
         
@@ -297,23 +178,14 @@ this.Version = Version;
             sb.Append("class SequenceSchedule {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  Intervals: ").Append(Intervals).Append("\n");
-            
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-            
             sb.Append("  Sequence: ").Append(Sequence).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

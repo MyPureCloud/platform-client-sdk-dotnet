@@ -59,129 +59,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GreetingNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="OwnerType">OwnerType.</param>
-        
-        
-        
         /// <param name="Owner">Owner.</param>
-        
-        
-        
         /// <param name="GreetingAudioFile">GreetingAudioFile.</param>
-        
-        
-        
         /// <param name="AudioTTS">AudioTTS.</param>
-        
-        
         public GreetingNotification(string Id = null, string Name = null, string Type = null, string OwnerType = null, DocumentDataV2NotificationWorkspace Owner = null, GreetingNotificationGreetingAudioFile GreetingAudioFile = null, string AudioTTS = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OwnerType = OwnerType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Owner = Owner;
-            
-            
-            
-            
-            
-            
-            
-            
-this.GreetingAudioFile = GreetingAudioFile;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AudioTTS = AudioTTS;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.Type = Type;
+            this.OwnerType = OwnerType;
+            this.Owner = Owner;
+            this.GreetingAudioFile = GreetingAudioFile;
+            this.AudioTTS = AudioTTS;
             
         }
         
@@ -252,19 +145,12 @@ this.AudioTTS = AudioTTS;
             sb.Append("class GreetingNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  OwnerType: ").Append(OwnerType).Append("\n");
-            
             sb.Append("  Owner: ").Append(Owner).Append("\n");
-            
             sb.Append("  GreetingAudioFile: ").Append(GreetingAudioFile).Append("\n");
-            
             sb.Append("  AudioTTS: ").Append(AudioTTS).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

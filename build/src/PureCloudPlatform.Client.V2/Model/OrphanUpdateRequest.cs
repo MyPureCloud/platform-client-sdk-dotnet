@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrphanUpdateRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="ArchiveDate">The orphan recording&#39;s archive date. Must be greater than 1 day from now if set. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DeleteDate">The orphan recording&#39;s delete date. Must be greater than archiveDate if set, otherwise one day from now. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ConversationId">A conversation Id that this orphan&#39;s recording is to be attached to. If not present, the conversationId will be deduced from the recording media..</param>
-        
-        
         public OrphanUpdateRequest(DateTime? ArchiveDate = null, DateTime? DeleteDate = null, string ConversationId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ArchiveDate = ArchiveDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DeleteDate = DeleteDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConversationId = ConversationId;
-            
-            
-            
+            this.ArchiveDate = ArchiveDate;
+            this.DeleteDate = DeleteDate;
+            this.ConversationId = ConversationId;
             
         }
         
@@ -135,11 +88,8 @@ this.ConversationId = ConversationId;
             sb.Append("class OrphanUpdateRequest {\n");
             
             sb.Append("  ArchiveDate: ").Append(ArchiveDate).Append("\n");
-            
             sb.Append("  DeleteDate: ").Append(DeleteDate).Append("\n");
-            
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GreetingAudioFile" /> class.
         /// </summary>
-        
-        
         /// <param name="DurationMilliseconds">DurationMilliseconds.</param>
-        
-        
-        
         /// <param name="SizeBytes">SizeBytes.</param>
-        
-        
-        
         /// <param name="SelfUri">SelfUri.</param>
-        
-        
         public GreetingAudioFile(long? DurationMilliseconds = null, long? SizeBytes = null, string SelfUri = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationMilliseconds = DurationMilliseconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SizeBytes = SizeBytes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SelfUri = SelfUri;
-            
-            
-            
+            this.DurationMilliseconds = DurationMilliseconds;
+            this.SizeBytes = SizeBytes;
+            this.SelfUri = SelfUri;
             
         }
         
@@ -132,11 +85,8 @@ this.SelfUri = SelfUri;
             sb.Append("class GreetingAudioFile {\n");
             
             sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
-            
             sb.Append("  SizeBytes: ").Append(SizeBytes).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

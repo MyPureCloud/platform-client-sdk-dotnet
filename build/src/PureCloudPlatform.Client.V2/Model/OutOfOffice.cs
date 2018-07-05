@@ -64,124 +64,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OutOfOffice" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="StartDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="EndDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Active">Active.</param>
-        
-        
-        
         /// <param name="Indefinite">Indefinite.</param>
-        
-        
-        
-        
         public OutOfOffice(string Name = null, User User = null, DateTime? StartDate = null, DateTime? EndDate = null, bool? Active = null, bool? Indefinite = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartDate = StartDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndDate = EndDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Active = Active;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Indefinite = Indefinite;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.User = User;
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
+            this.Active = Active;
+            this.Indefinite = Indefinite;
             
         }
         
@@ -264,21 +160,13 @@ this.Indefinite = Indefinite;
             sb.Append("class OutOfOffice {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
-            
             sb.Append("  Active: ").Append(Active).Append("\n");
-            
             sb.Append("  Indefinite: ").Append(Indefinite).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

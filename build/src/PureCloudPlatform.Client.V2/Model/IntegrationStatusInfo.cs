@@ -97,45 +97,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationStatusInfo" /> class.
         /// </summary>
-        
-        
-        
-        
-        
-        
         /// <param name="Detail">Localizable status details for the integration..</param>
-        
-        
-        
-        
         public IntegrationStatusInfo(MessageInfo Detail = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Detail = Detail;
-            
-            
-            
-            
-            
+            this.Detail = Detail;
             
         }
         
@@ -179,13 +144,9 @@ this.Detail = Detail;
             sb.Append("class IntegrationStatusInfo {\n");
             
             sb.Append("  Code: ").Append(Code).Append("\n");
-            
             sb.Append("  Effective: ").Append(Effective).Append("\n");
-            
             sb.Append("  Detail: ").Append(Detail).Append("\n");
-            
             sb.Append("  LastUpdated: ").Append(LastUpdated).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStations" /> class.
         /// </summary>
-        
-        
         /// <param name="AssociatedStation">Current associated station for this user..</param>
-        
-        
-        
         /// <param name="EffectiveStation">The station where the user can be reached based on their default and associated station..</param>
-        
-        
-        
         /// <param name="DefaultStation">Default station to be used if not associated with a station..</param>
-        
-        
-        
         /// <param name="LastAssociatedStation">Last associated station for this user..</param>
-        
-        
         public UserStations(UserStation AssociatedStation = null, UserStation EffectiveStation = null, UserStation DefaultStation = null, UserStation LastAssociatedStation = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AssociatedStation = AssociatedStation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EffectiveStation = EffectiveStation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DefaultStation = DefaultStation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LastAssociatedStation = LastAssociatedStation;
-            
-            
-            
+            this.AssociatedStation = AssociatedStation;
+            this.EffectiveStation = EffectiveStation;
+            this.DefaultStation = DefaultStation;
+            this.LastAssociatedStation = LastAssociatedStation;
             
         }
         
@@ -166,13 +104,9 @@ this.LastAssociatedStation = LastAssociatedStation;
             sb.Append("class UserStations {\n");
             
             sb.Append("  AssociatedStation: ").Append(AssociatedStation).Append("\n");
-            
             sb.Append("  EffectiveStation: ").Append(EffectiveStation).Append("\n");
-            
             sb.Append("  DefaultStation: ").Append(DefaultStation).Append("\n");
-            
             sb.Append("  LastAssociatedStation: ").Append(LastAssociatedStation).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

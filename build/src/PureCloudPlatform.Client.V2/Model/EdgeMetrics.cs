@@ -64,146 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetrics" /> class.
         /// </summary>
-        
-        
         /// <param name="Edge">Edge.</param>
-        
-        
-        
         /// <param name="EventTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="UpTimeMsec">UpTimeMsec.</param>
-        
-        
-        
         /// <param name="Processors">Processors.</param>
-        
-        
-        
         /// <param name="Memory">Memory.</param>
-        
-        
-        
         /// <param name="Disks">Disks.</param>
-        
-        
-        
         /// <param name="Subsystems">Subsystems.</param>
-        
-        
-        
         /// <param name="Networks">Networks.</param>
-        
-        
         public EdgeMetrics(UriReference Edge = null, DateTime? EventTime = null, long? UpTimeMsec = null, List<EdgeMetricsProcessor> Processors = null, List<EdgeMetricsMemory> Memory = null, List<EdgeMetricsDisk> Disks = null, List<EdgeMetricsSubsystem> Subsystems = null, List<EdgeMetricsNetwork> Networks = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Edge = Edge;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EventTime = EventTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UpTimeMsec = UpTimeMsec;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Processors = Processors;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Memory = Memory;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Disks = Disks;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Subsystems = Subsystems;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Networks = Networks;
-            
-            
-            
+            this.Edge = Edge;
+            this.EventTime = EventTime;
+            this.UpTimeMsec = UpTimeMsec;
+            this.Processors = Processors;
+            this.Memory = Memory;
+            this.Disks = Disks;
+            this.Subsystems = Subsystems;
+            this.Networks = Networks;
             
         }
         
@@ -283,21 +161,13 @@ this.Networks = Networks;
             sb.Append("class EdgeMetrics {\n");
             
             sb.Append("  Edge: ").Append(Edge).Append("\n");
-            
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
-            
             sb.Append("  UpTimeMsec: ").Append(UpTimeMsec).Append("\n");
-            
             sb.Append("  Processors: ").Append(Processors).Append("\n");
-            
             sb.Append("  Memory: ").Append(Memory).Append("\n");
-            
             sb.Append("  Disks: ").Append(Disks).Append("\n");
-            
             sb.Append("  Subsystems: ").Append(Subsystems).Append("\n");
-            
             sb.Append("  Networks: ").Append(Networks).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

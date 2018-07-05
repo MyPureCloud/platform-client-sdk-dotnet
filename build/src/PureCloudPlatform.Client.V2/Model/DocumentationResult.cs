@@ -130,355 +130,47 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentationResult" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The globally unique identifier for the object. (required).</param>
-        
-        
-        
         /// <param name="Categories">The category of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="Description">The description of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="Content">The text or html content for the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="Excerpt">The excerpt of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="Link">URL link for the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="Modified">The modified date for the documentation entity. Will be returned in responses for certain entities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Name">The name of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="Service">The service of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="Slug">The slug of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="Title">The title of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="GetType">The search type. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="FacetFeature">The facet feature of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="FacetRole">The facet role of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="FacetService">The facet service of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="FaqCategories">The faq categories of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="ReleasenoteCategory">The releasenote category of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="ReleasenoteTag">The releasenote tag of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="ServiceArea">The service area of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
-        
         /// <param name="VideoCategories">The video categories of the documentation entity. Will be returned in responses for certain entities..</param>
-        
-        
         public DocumentationResult(int? Id = null, List<int?> Categories = null, string Description = null, string Content = null, string Excerpt = null, string Link = null, DateTime? Modified = null, string Name = null, List<int?> Service = null, string Slug = null, string Title = null, string GetType = null, List<int?> FacetFeature = null, List<int?> FacetRole = null, List<int?> FacetService = null, List<int?> FaqCategories = null, List<int?> ReleasenoteCategory = null, List<int?> ReleasenoteTag = null, List<int?> ServiceArea = null, List<int?> VideoCategories = null)
         {
-            
-            
-            
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for DocumentationResult and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Categories = Categories;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Content = Content;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Excerpt = Excerpt;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Link = Link;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Modified = Modified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Service = Service;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Slug = Slug;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Title = Title;
-            
-            
-            
-            
-            
-            
-            
-            
-this.GetType = GetType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FacetFeature = FacetFeature;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FacetRole = FacetRole;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FacetService = FacetService;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FaqCategories = FaqCategories;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReleasenoteCategory = ReleasenoteCategory;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReleasenoteTag = ReleasenoteTag;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ServiceArea = ServiceArea;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VideoCategories = VideoCategories;
-            
-            
-            
+            this.Categories = Categories;
+            this.Description = Description;
+            this.Content = Content;
+            this.Excerpt = Excerpt;
+            this.Link = Link;
+            this.Modified = Modified;
+            this.Name = Name;
+            this.Service = Service;
+            this.Slug = Slug;
+            this.Title = Title;
+            this.GetType = GetType;
+            this.FacetFeature = FacetFeature;
+            this.FacetRole = FacetRole;
+            this.FacetService = FacetService;
+            this.FaqCategories = FaqCategories;
+            this.ReleasenoteCategory = ReleasenoteCategory;
+            this.ReleasenoteTag = ReleasenoteTag;
+            this.ServiceArea = ServiceArea;
+            this.VideoCategories = VideoCategories;
             
         }
         
@@ -673,45 +365,25 @@ this.VideoCategories = VideoCategories;
             sb.Append("class DocumentationResult {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Categories: ").Append(Categories).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Content: ").Append(Content).Append("\n");
-            
             sb.Append("  Excerpt: ").Append(Excerpt).Append("\n");
-            
             sb.Append("  Link: ").Append(Link).Append("\n");
-            
             sb.Append("  Modified: ").Append(Modified).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Service: ").Append(Service).Append("\n");
-            
             sb.Append("  Slug: ").Append(Slug).Append("\n");
-            
             sb.Append("  Title: ").Append(Title).Append("\n");
-            
             sb.Append("  GetType: ").Append(GetType).Append("\n");
-            
             sb.Append("  FacetFeature: ").Append(FacetFeature).Append("\n");
-            
             sb.Append("  FacetRole: ").Append(FacetRole).Append("\n");
-            
             sb.Append("  FacetService: ").Append(FacetService).Append("\n");
-            
             sb.Append("  FaqCategories: ").Append(FaqCategories).Append("\n");
-            
             sb.Append("  ReleasenoteCategory: ").Append(ReleasenoteCategory).Append("\n");
-            
             sb.Append("  ReleasenoteTag: ").Append(ReleasenoteTag).Append("\n");
-            
             sb.Append("  ServiceArea: ").Append(ServiceArea).Append("\n");
-            
             sb.Append("  VideoCategories: ").Append(VideoCategories).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

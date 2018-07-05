@@ -75,54 +75,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsQueryClause" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">Boolean operation to apply to the provided predicates (required).</param>
-        
-        
-        
         /// <param name="Predicates">Like a three-word sentence: (attribute-name) (operator) (target-value). These can be one of three types: dimension, property, metric. (required).</param>
-        
-        
         public AnalyticsQueryClause(TypeEnum? Type = null, List<AnalyticsQueryPredicate> Predicates = null)
         {
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for AnalyticsQueryClause and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Predicates" is required (not null)
-            if (Predicates == null)
-            {
-                throw new InvalidDataException("Predicates is a required property for AnalyticsQueryClause and cannot be null");
-            }
-            else
-            {
-                this.Predicates = Predicates;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -148,9 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AnalyticsQueryClause {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

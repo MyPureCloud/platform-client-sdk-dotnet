@@ -45,66 +45,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CopyVoicemailMessage" /> class.
         /// </summary>
-        
-        
         /// <param name="VoicemailMessageId">The id of the VoicemailMessage to copy (required).</param>
-        
-        
-        
         /// <param name="UserId">The id of the User to copy the VoicemailMessage to.</param>
-        
-        
-        
         /// <param name="GroupId">The id of the Group to copy the VoicemailMessage to.</param>
-        
-        
         public CopyVoicemailMessage(string VoicemailMessageId = null, string UserId = null, string GroupId = null)
         {
-            
-            
-            
-            // to ensure "VoicemailMessageId" is required (not null)
-            if (VoicemailMessageId == null)
-            {
-                throw new InvalidDataException("VoicemailMessageId is a required property for CopyVoicemailMessage and cannot be null");
-            }
-            else
-            {
-                this.VoicemailMessageId = VoicemailMessageId;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.GroupId = GroupId;
-            
-            
-            
+            this.UserId = UserId;
+            this.GroupId = GroupId;
             
         }
         
@@ -146,11 +93,8 @@ this.GroupId = GroupId;
             sb.Append("class CopyVoicemailMessage {\n");
             
             sb.Append("  VoicemailMessageId: ").Append(VoicemailMessageId).Append("\n");
-            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

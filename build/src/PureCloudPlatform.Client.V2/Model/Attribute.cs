@@ -75,146 +75,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Attribute" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The attribute name. (required).</param>
-        
-        
-        
         /// <param name="Version">Version.</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="CreatedBy">CreatedBy.</param>
-        
-        
-        
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        
-        
-        
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
-        
         public Attribute(string Name = null, int? Version = null, string Description = null, UriReference CreatedBy = null, DateTime? DateCreated = null, UriReference ModifiedBy = null, DateTime? DateModified = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for Attribute and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
+            this.Version = Version;
+            this.Description = Description;
+            this.CreatedBy = CreatedBy;
+            this.DateCreated = DateCreated;
+            this.ModifiedBy = ModifiedBy;
+            this.DateModified = DateModified;
             
         }
         
@@ -306,23 +181,14 @@ this.DateModified = DateModified;
             sb.Append("class Attribute {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

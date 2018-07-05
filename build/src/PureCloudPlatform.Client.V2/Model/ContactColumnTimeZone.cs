@@ -69,33 +69,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactColumnTimeZone" /> class.
         /// </summary>
-        
-        
         /// <param name="TimeZone">Time zone that the column matched to. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London.</param>
-        
-        
-        
-        
         public ContactColumnTimeZone(string TimeZone = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeZone = TimeZone;
-            
-            
-            
-            
-            
+            this.TimeZone = TimeZone;
             
         }
         
@@ -121,9 +98,7 @@ this.TimeZone = TimeZone;
             sb.Append("class ContactColumnTimeZone {\n");
             
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-            
             sb.Append("  ColumnType: ").Append(ColumnType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

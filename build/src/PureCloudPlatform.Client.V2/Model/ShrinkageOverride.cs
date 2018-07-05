@@ -40,49 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShrinkageOverride" /> class.
         /// </summary>
-        
-        
         /// <param name="IntervalIndex">Index of shrinkage override interval. Starting index is 0 and indexes are based on 15 minute intervals for a 7 day week (required).</param>
-        
-        
-        
         /// <param name="ShrinkagePercent">Shrinkage override percent. Setting a null value will reset the interval to the default.</param>
-        
-        
         public ShrinkageOverride(int? IntervalIndex = null, double? ShrinkagePercent = null)
         {
-            
-            
-            
-            // to ensure "IntervalIndex" is required (not null)
-            if (IntervalIndex == null)
-            {
-                throw new InvalidDataException("IntervalIndex is a required property for ShrinkageOverride and cannot be null");
-            }
-            else
-            {
-                this.IntervalIndex = IntervalIndex;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ShrinkagePercent = ShrinkagePercent;
-            
-            
-            
+            this.ShrinkagePercent = ShrinkagePercent;
             
         }
         
@@ -115,9 +77,7 @@ this.ShrinkagePercent = ShrinkagePercent;
             sb.Append("class ShrinkageOverride {\n");
             
             sb.Append("  IntervalIndex: ").Append(IntervalIndex).Append("\n");
-            
             sb.Append("  ShrinkagePercent: ").Append(ShrinkagePercent).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

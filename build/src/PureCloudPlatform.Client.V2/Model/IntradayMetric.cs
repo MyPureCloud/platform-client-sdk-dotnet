@@ -93,44 +93,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayMetric" /> class.
         /// </summary>
-        
-        
         /// <param name="Category">The metric category.</param>
-        
-        
-        
         /// <param name="Version">The current version id for this metric category.</param>
-        
-        
         public IntradayMetric(CategoryEnum? Category = null, string Version = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Category = Category;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
+            this.Category = Category;
+            this.Version = Version;
             
         }
         
@@ -156,9 +124,7 @@ this.Version = Version;
             sb.Append("class IntradayMetric {\n");
             
             sb.Append("  Category: ").Append(Category).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

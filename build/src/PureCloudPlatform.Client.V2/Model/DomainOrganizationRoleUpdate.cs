@@ -85,180 +85,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainOrganizationRoleUpdate" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the role (required).</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="DefaultRoleId">DefaultRoleId.</param>
-        
-        
-        
         /// <param name="Permissions">Permissions.</param>
-        
-        
-        
         /// <param name="PermissionPolicies">PermissionPolicies.</param>
-        
-        
-        
         /// <param name="UserCount">UserCount.</param>
-        
-        
-        
         /// <param name="RoleNeedsUpdate">Optional unless patch operation..</param>
-        
-        
-        
         /// <param name="_Default">_Default.</param>
-        
-        
-        
         /// <param name="_Base">_Base.</param>
-        
-        
-        
-        
         public DomainOrganizationRoleUpdate(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null, bool? _Base = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for DomainOrganizationRoleUpdate and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DefaultRoleId = DefaultRoleId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Permissions = Permissions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PermissionPolicies = PermissionPolicies;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserCount = UserCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoleNeedsUpdate = RoleNeedsUpdate;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Default = _Default;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Base = _Base;
-            
-            
-            
-            
-            
+            this.Description = Description;
+            this.DefaultRoleId = DefaultRoleId;
+            this.Permissions = Permissions;
+            this.PermissionPolicies = PermissionPolicies;
+            this.UserCount = UserCount;
+            this.RoleNeedsUpdate = RoleNeedsUpdate;
+            this._Default = _Default;
+            this._Base = _Base;
             
         }
         
@@ -365,27 +210,16 @@ this._Base = _Base;
             sb.Append("class DomainOrganizationRoleUpdate {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  DefaultRoleId: ").Append(DefaultRoleId).Append("\n");
-            
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
-            
             sb.Append("  PermissionPolicies: ").Append(PermissionPolicies).Append("\n");
-            
             sb.Append("  UserCount: ").Append(UserCount).Append("\n");
-            
             sb.Append("  RoleNeedsUpdate: ").Append(RoleNeedsUpdate).Append("\n");
-            
             sb.Append("  _Default: ").Append(_Default).Append("\n");
-            
             sb.Append("  _Base: ").Append(_Base).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetricsNetworkTypeIp" /> class.
         /// </summary>
-        
-        
         /// <param name="Address">Assigned IP Address for the interface.</param>
-        
-        
-        
         /// <param name="ErrorInfo">Information about the error..</param>
-        
-        
         public TrunkMetricsNetworkTypeIp(string Address = null, TrunkErrorInfo ErrorInfo = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorInfo = ErrorInfo;
-            
-            
-            
+            this.Address = Address;
+            this.ErrorInfo = ErrorInfo;
             
         }
         
@@ -104,9 +72,7 @@ this.ErrorInfo = ErrorInfo;
             sb.Append("class TrunkMetricsNetworkTypeIp {\n");
             
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

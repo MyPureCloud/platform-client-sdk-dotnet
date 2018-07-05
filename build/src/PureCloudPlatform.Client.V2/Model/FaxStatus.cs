@@ -64,146 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxStatus" /> class.
         /// </summary>
-        
-        
         /// <param name="Direction">The fax direction, either \&quot;send\&quot; or \&quot;receive\&quot;..</param>
-        
-        
-        
         /// <param name="ExpectedPages">Total number of expected pages, if known..</param>
-        
-        
-        
         /// <param name="ActivePage">Active page of the transmission..</param>
-        
-        
-        
         /// <param name="LinesTransmitted">Number of lines that have completed transmission..</param>
-        
-        
-        
         /// <param name="BytesTransmitted">Number of bytes that have competed transmission..</param>
-        
-        
-        
         /// <param name="BaudRate">Current signaling rate of transmission, baud rate..</param>
-        
-        
-        
         /// <param name="PageErrors">Number of page errors..</param>
-        
-        
-        
         /// <param name="LineErrors">Number of line errors..</param>
-        
-        
         public FaxStatus(string Direction = null, long? ExpectedPages = null, long? ActivePage = null, long? LinesTransmitted = null, long? BytesTransmitted = null, long? BaudRate = null, long? PageErrors = null, long? LineErrors = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExpectedPages = ExpectedPages;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActivePage = ActivePage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LinesTransmitted = LinesTransmitted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.BytesTransmitted = BytesTransmitted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.BaudRate = BaudRate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageErrors = PageErrors;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LineErrors = LineErrors;
-            
-            
-            
+            this.Direction = Direction;
+            this.ExpectedPages = ExpectedPages;
+            this.ActivePage = ActivePage;
+            this.LinesTransmitted = LinesTransmitted;
+            this.BytesTransmitted = BytesTransmitted;
+            this.BaudRate = BaudRate;
+            this.PageErrors = PageErrors;
+            this.LineErrors = LineErrors;
             
         }
         
@@ -290,21 +168,13 @@ this.LineErrors = LineErrors;
             sb.Append("class FaxStatus {\n");
             
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  ExpectedPages: ").Append(ExpectedPages).Append("\n");
-            
             sb.Append("  ActivePage: ").Append(ActivePage).Append("\n");
-            
             sb.Append("  LinesTransmitted: ").Append(LinesTransmitted).Append("\n");
-            
             sb.Append("  BytesTransmitted: ").Append(BytesTransmitted).Append("\n");
-            
             sb.Append("  BaudRate: ").Append(BaudRate).Append("\n");
-            
             sb.Append("  PageErrors: ").Append(PageErrors).Append("\n");
-            
             sb.Append("  LineErrors: ").Append(LineErrors).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

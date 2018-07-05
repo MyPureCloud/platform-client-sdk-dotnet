@@ -542,10 +542,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWebchatDeployment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -637,10 +638,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWebchatDeployment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -725,10 +727,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWebchatSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -813,10 +816,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWebchatSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -910,8 +914,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<WebChatDeployment>(localVarStatusCode,
                 localVarHeaders,
-                (WebChatDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeployment)));
-            
+                (WebChatDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeployment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1006,8 +1011,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<WebChatDeployment>(localVarStatusCode,
                 localVarHeaders,
-                (WebChatDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeployment)));
-            
+                (WebChatDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeployment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1095,8 +1101,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<WebChatDeploymentEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (WebChatDeploymentEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeploymentEntityListing)));
-            
+                (WebChatDeploymentEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeploymentEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1184,8 +1191,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<WebChatDeploymentEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (WebChatDeploymentEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeploymentEntityListing)));
-            
+                (WebChatDeploymentEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeploymentEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1273,8 +1281,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<WebChatSettings>(localVarStatusCode,
                 localVarHeaders,
-                (WebChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatSettings)));
-            
+                (WebChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1362,8 +1371,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<WebChatSettings>(localVarStatusCode,
                 localVarHeaders,
-                (WebChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatSettings)));
-            
+                (WebChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1461,8 +1471,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<WebChatDeployment>(localVarStatusCode,
                 localVarHeaders,
-                (WebChatDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeployment)));
-            
+                (WebChatDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeployment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1561,8 +1572,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<WebChatDeployment>(localVarStatusCode,
                 localVarHeaders,
-                (WebChatDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeployment)));
-            
+                (WebChatDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeployment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1666,8 +1678,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<WebChatDeployment>(localVarStatusCode,
                 localVarHeaders,
-                (WebChatDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeployment)));
-            
+                (WebChatDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeployment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1773,8 +1786,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<WebChatDeployment>(localVarStatusCode,
                 localVarHeaders,
-                (WebChatDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeployment)));
-            
+                (WebChatDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatDeployment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1872,8 +1886,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<WebChatSettings>(localVarStatusCode,
                 localVarHeaders,
-                (WebChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatSettings)));
-            
+                (WebChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1972,8 +1987,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<WebChatSettings>(localVarStatusCode,
                 localVarHeaders,
-                (WebChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatSettings)));
-            
+                (WebChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

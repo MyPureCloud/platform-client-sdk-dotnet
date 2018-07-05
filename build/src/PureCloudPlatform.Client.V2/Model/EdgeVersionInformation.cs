@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeVersionInformation" /> class.
         /// </summary>
-        
-        
         /// <param name="SoftwareVersion">SoftwareVersion.</param>
-        
-        
         public EdgeVersionInformation(string SoftwareVersion = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SoftwareVersion = SoftwareVersion;
-            
-            
-            
+            this.SoftwareVersion = SoftwareVersion;
             
         }
         
@@ -72,7 +55,6 @@ this.SoftwareVersion = SoftwareVersion;
             sb.Append("class EdgeVersionInformation {\n");
             
             sb.Append("  SoftwareVersion: ").Append(SoftwareVersion).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

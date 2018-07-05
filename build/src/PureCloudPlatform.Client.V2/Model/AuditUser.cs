@@ -45,66 +45,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditUser" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The ID (UUID) of the user who initiated the action of this AuditMessage. (required).</param>
-        
-        
-        
         /// <param name="Name">The full username of the user who initiated the action of this AuditMessage..</param>
-        
-        
-        
         /// <param name="Display">The display name of the user who initiated the action of this AuditMessage..</param>
-        
-        
         public AuditUser(string Id = null, string Name = null, string Display = null)
         {
-            
-            
-            
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for AuditUser and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Display = Display;
-            
-            
-            
+            this.Name = Name;
+            this.Display = Display;
             
         }
         
@@ -146,11 +93,8 @@ this.Display = Display;
             sb.Append("class AuditUser {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Display: ").Append(Display).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

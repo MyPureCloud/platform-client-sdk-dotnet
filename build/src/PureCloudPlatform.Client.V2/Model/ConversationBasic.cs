@@ -60,95 +60,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationBasic" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="StartTime">The time when the conversation started. This will be the time when the first participant joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
-        
         /// <param name="EndTime">The time when the conversation ended. This will be the time when the last participant left the conversation, or null when the conversation is still active. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
-        
-        
         /// <param name="Participants">Participants.</param>
-        
-        
         public ConversationBasic(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ParticipantBasic> Participants = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "StartTime" is required (not null)
-            if (StartTime == null)
-            {
-                throw new InvalidDataException("StartTime is a required property for ConversationBasic and cannot be null");
-            }
-            else
-            {
-                this.StartTime = StartTime;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndTime = EndTime;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Participants = Participants;
-            
-            
-            
+            this.Name = Name;
+            this.EndTime = EndTime;
+            this.Participants = Participants;
             
         }
         
@@ -215,17 +135,11 @@ this.Participants = Participants;
             sb.Append("class ConversationBasic {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

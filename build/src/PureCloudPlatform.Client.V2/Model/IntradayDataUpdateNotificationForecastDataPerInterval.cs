@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotificationForecastDataPerInterval" /> class.
         /// </summary>
-        
-        
         /// <param name="Offered">Offered.</param>
-        
-        
-        
         /// <param name="AverageTalkTimeSeconds">AverageTalkTimeSeconds.</param>
-        
-        
-        
         /// <param name="AverageAfterCallWorkSeconds">AverageAfterCallWorkSeconds.</param>
-        
-        
         public IntradayDataUpdateNotificationForecastDataPerInterval(double? Offered = null, double? AverageTalkTimeSeconds = null, double? AverageAfterCallWorkSeconds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Offered = Offered;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
-            
-            
-            
+            this.Offered = Offered;
+            this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
+            this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
             
         }
         
@@ -132,11 +85,8 @@ this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
             sb.Append("class IntradayDataUpdateNotificationForecastDataPerInterval {\n");
             
             sb.Append("  Offered: ").Append(Offered).Append("\n");
-            
             sb.Append("  AverageTalkTimeSeconds: ").Append(AverageTalkTimeSeconds).Append("\n");
-            
             sb.Append("  AverageAfterCallWorkSeconds: ").Append(AverageAfterCallWorkSeconds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaSummary" /> class.
         /// </summary>
-        
-        
         /// <param name="ContactCenter">ContactCenter.</param>
-        
-        
-        
         /// <param name="Enterprise">Enterprise.</param>
-        
-        
         public MediaSummary(MediaSummaryDetail ContactCenter = null, MediaSummaryDetail Enterprise = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactCenter = ContactCenter;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Enterprise = Enterprise;
-            
-            
-            
+            this.ContactCenter = ContactCenter;
+            this.Enterprise = Enterprise;
             
         }
         
@@ -102,9 +70,7 @@ this.Enterprise = Enterprise;
             sb.Append("class MediaSummary {\n");
             
             sb.Append("  ContactCenter: ").Append(ContactCenter).Append("\n");
-            
             sb.Append("  Enterprise: ").Append(Enterprise).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

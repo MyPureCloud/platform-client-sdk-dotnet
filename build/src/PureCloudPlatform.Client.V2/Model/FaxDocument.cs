@@ -114,294 +114,40 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxDocument" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ContentUri">ContentUri.</param>
-        
-        
-        
         /// <param name="Workspace">Workspace.</param>
-        
-        
-        
         /// <param name="CreatedBy">CreatedBy.</param>
-        
-        
-        
         /// <param name="ContentType">ContentType.</param>
-        
-        
-        
         /// <param name="ContentLength">ContentLength.</param>
-        
-        
-        
         /// <param name="Filename">Filename.</param>
-        
-        
-        
         /// <param name="Read">Read.</param>
-        
-        
-        
         /// <param name="PageCount">PageCount.</param>
-        
-        
-        
         /// <param name="CallerAddress">CallerAddress.</param>
-        
-        
-        
         /// <param name="ReceiverAddress">ReceiverAddress.</param>
-        
-        
-        
         /// <param name="Thumbnails">Thumbnails.</param>
-        
-        
-        
         /// <param name="SharingUri">SharingUri.</param>
-        
-        
-        
         /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
-        
-        
-        
-        
         public FaxDocument(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, string ContentType = null, long? ContentLength = null, string Filename = null, bool? Read = null, long? PageCount = null, string CallerAddress = null, string ReceiverAddress = null, List<DocumentThumbnail> Thumbnails = null, string SharingUri = null, string DownloadSharingUri = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentUri = ContentUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Workspace = Workspace;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentType = ContentType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentLength = ContentLength;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Filename = Filename;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Read = Read;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageCount = PageCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallerAddress = CallerAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReceiverAddress = ReceiverAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Thumbnails = Thumbnails;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SharingUri = SharingUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DownloadSharingUri = DownloadSharingUri;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ContentUri = ContentUri;
+            this.Workspace = Workspace;
+            this.CreatedBy = CreatedBy;
+            this.ContentType = ContentType;
+            this.ContentLength = ContentLength;
+            this.Filename = Filename;
+            this.Read = Read;
+            this.PageCount = PageCount;
+            this.CallerAddress = CallerAddress;
+            this.ReceiverAddress = ReceiverAddress;
+            this.Thumbnails = Thumbnails;
+            this.SharingUri = SharingUri;
+            this.DownloadSharingUri = DownloadSharingUri;
             
         }
         
@@ -564,41 +310,23 @@ this.DownloadSharingUri = DownloadSharingUri;
             sb.Append("class FaxDocument {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  ContentUri: ").Append(ContentUri).Append("\n");
-            
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
-            
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
-            
             sb.Append("  Filename: ").Append(Filename).Append("\n");
-            
             sb.Append("  Read: ").Append(Read).Append("\n");
-            
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
-            
             sb.Append("  CallerAddress: ").Append(CallerAddress).Append("\n");
-            
             sb.Append("  ReceiverAddress: ").Append(ReceiverAddress).Append("\n");
-            
             sb.Append("  Thumbnails: ").Append(Thumbnails).Append("\n");
-            
             sb.Append("  SharingUri: ").Append(SharingUri).Append("\n");
-            
             sb.Append("  DownloadSharingUri: ").Append(DownloadSharingUri).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

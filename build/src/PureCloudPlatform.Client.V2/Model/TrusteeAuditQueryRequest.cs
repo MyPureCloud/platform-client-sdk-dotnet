@@ -65,139 +65,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrusteeAuditQueryRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="TrusteeOrganizationIds">Limit returned audits to these trustee organizationIds. (required).</param>
-        
-        
-        
         /// <param name="TrusteeUserIds">Limit returned audits to these trustee userIds. (required).</param>
-        
-        
-        
         /// <param name="StartDate">Starting date/time for the audit search. ISO-8601 formatted date-time, UTC..</param>
-        
-        
-        
         /// <param name="EndDate">Ending date/time for the audit search. ISO-8601 formatted date-time, UTC..</param>
-        
-        
-        
         /// <param name="QueryPhrase">Word or phrase to look for in audit bodies..</param>
-        
-        
-        
         /// <param name="Facets">Facet information to be returned with the query results..</param>
-        
-        
-        
         /// <param name="Filters">Additional custom filters to be applied to the query..</param>
-        
-        
         public TrusteeAuditQueryRequest(List<string> TrusteeOrganizationIds = null, List<string> TrusteeUserIds = null, DateTime? StartDate = null, DateTime? EndDate = null, string QueryPhrase = null, List<Facet> Facets = null, List<Filter> Filters = null)
         {
-            
-            
-            
-            // to ensure "TrusteeOrganizationIds" is required (not null)
-            if (TrusteeOrganizationIds == null)
-            {
-                throw new InvalidDataException("TrusteeOrganizationIds is a required property for TrusteeAuditQueryRequest and cannot be null");
-            }
-            else
-            {
-                this.TrusteeOrganizationIds = TrusteeOrganizationIds;
-            }
-            
-            
-            
-            
-            
-            // to ensure "TrusteeUserIds" is required (not null)
-            if (TrusteeUserIds == null)
-            {
-                throw new InvalidDataException("TrusteeUserIds is a required property for TrusteeAuditQueryRequest and cannot be null");
-            }
-            else
-            {
-                this.TrusteeUserIds = TrusteeUserIds;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartDate = StartDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndDate = EndDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueryPhrase = QueryPhrase;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Facets = Facets;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Filters = Filters;
-            
-            
-            
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
+            this.QueryPhrase = QueryPhrase;
+            this.Facets = Facets;
+            this.Filters = Filters;
             
         }
         
@@ -275,19 +156,12 @@ this.Filters = Filters;
             sb.Append("class TrusteeAuditQueryRequest {\n");
             
             sb.Append("  TrusteeOrganizationIds: ").Append(TrusteeOrganizationIds).Append("\n");
-            
             sb.Append("  TrusteeUserIds: ").Append(TrusteeUserIds).Append("\n");
-            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
-            
             sb.Append("  QueryPhrase: ").Append(QueryPhrase).Append("\n");
-            
             sb.Append("  Facets: ").Append(Facets).Append("\n");
-            
             sb.Append("  Filters: ").Append(Filters).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

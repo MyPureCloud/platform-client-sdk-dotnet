@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnswerOption" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Text">Text.</param>
-        
-        
-        
         /// <param name="Value">Value.</param>
-        
-        
         public AnswerOption(string Id = null, string Text = null, int? Value = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Text = Text;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
+            this.Id = Id;
+            this.Text = Text;
+            this.Value = Value;
             
         }
         
@@ -132,11 +85,8 @@ this.Value = Value;
             sb.Append("class AnswerOption {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Text: ").Append(Text).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

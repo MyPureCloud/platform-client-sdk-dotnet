@@ -59,129 +59,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="StartDate">StartDate.</param>
-        
-        
-        
         /// <param name="EndDate">EndDate.</param>
-        
-        
-        
         /// <param name="IntervalLengthMinutes">IntervalLengthMinutes.</param>
-        
-        
-        
         /// <param name="NumberOfIntervals">NumberOfIntervals.</param>
-        
-        
-        
         /// <param name="Metrics">Metrics.</param>
-        
-        
-        
         /// <param name="QueueIds">QueueIds.</param>
-        
-        
-        
         /// <param name="IntradayDataGroupings">IntradayDataGroupings.</param>
-        
-        
         public IntradayDataUpdateNotification(IntradayDataUpdateNotificationStartDate StartDate = null, IntradayDataUpdateNotificationDateTime EndDate = null, int? IntervalLengthMinutes = null, int? NumberOfIntervals = null, List<IntradayDataUpdateNotificationMetrics> Metrics = null, List<string> QueueIds = null, List<IntradayDataUpdateNotificationIntradayDataGroupings> IntradayDataGroupings = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartDate = StartDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndDate = EndDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IntervalLengthMinutes = IntervalLengthMinutes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumberOfIntervals = NumberOfIntervals;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metrics = Metrics;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueIds = QueueIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IntradayDataGroupings = IntradayDataGroupings;
-            
-            
-            
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
+            this.IntervalLengthMinutes = IntervalLengthMinutes;
+            this.NumberOfIntervals = NumberOfIntervals;
+            this.Metrics = Metrics;
+            this.QueueIds = QueueIds;
+            this.IntradayDataGroupings = IntradayDataGroupings;
             
         }
         
@@ -252,19 +145,12 @@ this.IntradayDataGroupings = IntradayDataGroupings;
             sb.Append("class IntradayDataUpdateNotification {\n");
             
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
-            
             sb.Append("  IntervalLengthMinutes: ").Append(IntervalLengthMinutes).Append("\n");
-            
             sb.Append("  NumberOfIntervals: ").Append(NumberOfIntervals).Append("\n");
-            
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
-            
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
-            
             sb.Append("  IntradayDataGroupings: ").Append(IntradayDataGroupings).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

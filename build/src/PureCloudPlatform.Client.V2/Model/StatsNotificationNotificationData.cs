@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StatsNotificationNotificationData" /> class.
         /// </summary>
-        
-        
         /// <param name="Interval">Interval.</param>
-        
-        
-        
         /// <param name="Metrics">Metrics.</param>
-        
-        
         public StatsNotificationNotificationData(string Interval = null, List<StatsNotificationNotificationMetrics> Metrics = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Interval = Interval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metrics = Metrics;
-            
-            
-            
+            this.Interval = Interval;
+            this.Metrics = Metrics;
             
         }
         
@@ -102,9 +70,7 @@ this.Metrics = Metrics;
             sb.Append("class StatsNotificationNotificationData {\n");
             
             sb.Append("  Interval: ").Append(Interval).Append("\n");
-            
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

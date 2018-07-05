@@ -205,193 +205,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">The user supplied name of the export request (required).</param>
-        
-        
-        
         /// <param name="TimeZone">The requested timezone of the exported data (required).</param>
-        
-        
-        
         /// <param name="ExportFormat">The requested format of the exported data (required).</param>
-        
-        
-        
         /// <param name="Interval">The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
-        
-        
-        
         /// <param name="Period">The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
-        
-        
-        
         /// <param name="ViewType">The type of view export job to be created (required).</param>
-        
-        
-        
         /// <param name="Filter">Filters to apply to create the view (required).</param>
-        
-        
-        
         /// <param name="Read">Indicates if the request has been marked as read.</param>
-        
-        
-        
         /// <param name="Locale">The locale use for localization of the exported data, i.e. en-us, es-mx   (required).</param>
-        
-        
         public ReportingExportJobRequest(string Name = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null)
         {
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for ReportingExportJobRequest and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "TimeZone" is required (not null)
-            if (TimeZone == null)
-            {
-                throw new InvalidDataException("TimeZone is a required property for ReportingExportJobRequest and cannot be null");
-            }
-            else
-            {
-                this.TimeZone = TimeZone;
-            }
-            
-            
-            
-            
-            
-            // to ensure "ExportFormat" is required (not null)
-            if (ExportFormat == null)
-            {
-                throw new InvalidDataException("ExportFormat is a required property for ReportingExportJobRequest and cannot be null");
-            }
-            else
-            {
-                this.ExportFormat = ExportFormat;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "ViewType" is required (not null)
-            if (ViewType == null)
-            {
-                throw new InvalidDataException("ViewType is a required property for ReportingExportJobRequest and cannot be null");
-            }
-            else
-            {
-                this.ViewType = ViewType;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Filter" is required (not null)
-            if (Filter == null)
-            {
-                throw new InvalidDataException("Filter is a required property for ReportingExportJobRequest and cannot be null");
-            }
-            else
-            {
-                this.Filter = Filter;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Locale" is required (not null)
-            if (Locale == null)
-            {
-                throw new InvalidDataException("Locale is a required property for ReportingExportJobRequest and cannot be null");
-            }
-            else
-            {
-                this.Locale = Locale;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Interval = Interval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Period = Period;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Read = Read;
-            
-            
-            
-            
-            
-            
-            
+            this.Interval = Interval;
+            this.Period = Period;
+            this.Read = Read;
             
         }
         
@@ -473,23 +300,14 @@ this.Read = Read;
             sb.Append("class ReportingExportJobRequest {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-            
             sb.Append("  ExportFormat: ").Append(ExportFormat).Append("\n");
-            
             sb.Append("  Interval: ").Append(Interval).Append("\n");
-            
             sb.Append("  Period: ").Append(Period).Append("\n");
-            
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
-            
             sb.Append("  Filter: ").Append(Filter).Append("\n");
-            
             sb.Append("  Read: ").Append(Read).Append("\n");
-            
             sb.Append("  Locale: ").Append(Locale).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

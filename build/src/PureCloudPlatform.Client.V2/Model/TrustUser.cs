@@ -196,418 +196,53 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustUser" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Chat">Chat.</param>
-        
-        
-        
         /// <param name="Department">Department.</param>
-        
-        
-        
         /// <param name="Email">Email.</param>
-        
-        
-        
         /// <param name="PrimaryContactInfo">Auto populated from addresses..</param>
-        
-        
-        
         /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
-        
-        
-        
-        
-        
         /// <param name="Title">Title.</param>
-        
-        
-        
         /// <param name="Username">Username.</param>
-        
-        
-        
         /// <param name="Manager">Manager.</param>
-        
-        
-        
         /// <param name="Images">Images.</param>
-        
-        
-        
         /// <param name="Version">Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH. (required).</param>
-        
-        
-        
         /// <param name="RoutingStatus">ACD routing status.</param>
-        
-        
-        
         /// <param name="Presence">Active presence.</param>
-        
-        
-        
         /// <param name="ConversationSummary">Summary of conversion statistics for conversation types..</param>
-        
-        
-        
         /// <param name="OutOfOffice">Determine if out of office is enabled.</param>
-        
-        
-        
         /// <param name="Geolocation">Current geolocation position.</param>
-        
-        
-        
         /// <param name="Station">Effective, default, and last station information.</param>
-        
-        
-        
         /// <param name="Authorization">Roles and permissions assigned to the user.</param>
-        
-        
-        
         /// <param name="ProfileSkills">Skills possessed by the user.</param>
-        
-        
-        
         /// <param name="Locations">The user placement at each site location..</param>
-        
-        
-        
         /// <param name="Groups">The groups the user is a member of.</param>
-        
-        
-        
         /// <param name="AcdAutoAnswer">acd auto answer.</param>
-        
-        
-        
         /// <param name="TrustUserDetails">TrustUserDetails.</param>
-        
-        
         public TrustUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, bool? AcdAutoAnswer = null, TrustUserDetails TrustUserDetails = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Version" is required (not null)
-            if (Version == null)
-            {
-                throw new InvalidDataException("Version is a required property for TrustUser and cannot be null");
-            }
-            else
-            {
-                this.Version = Version;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Chat = Chat;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Department = Department;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Email = Email;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PrimaryContactInfo = PrimaryContactInfo;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Addresses = Addresses;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Title = Title;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Username = Username;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Manager = Manager;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Images = Images;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoutingStatus = RoutingStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Presence = Presence;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConversationSummary = ConversationSummary;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OutOfOffice = OutOfOffice;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Geolocation = Geolocation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Station = Station;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Authorization = Authorization;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ProfileSkills = ProfileSkills;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Locations = Locations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Groups = Groups;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AcdAutoAnswer = AcdAutoAnswer;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TrustUserDetails = TrustUserDetails;
-            
-            
-            
+            this.Name = Name;
+            this.Chat = Chat;
+            this.Department = Department;
+            this.Email = Email;
+            this.PrimaryContactInfo = PrimaryContactInfo;
+            this.Addresses = Addresses;
+            this.Title = Title;
+            this.Username = Username;
+            this.Manager = Manager;
+            this.Images = Images;
+            this.RoutingStatus = RoutingStatus;
+            this.Presence = Presence;
+            this.ConversationSummary = ConversationSummary;
+            this.OutOfOffice = OutOfOffice;
+            this.Geolocation = Geolocation;
+            this.Station = Station;
+            this.Authorization = Authorization;
+            this.ProfileSkills = ProfileSkills;
+            this.Locations = Locations;
+            this.Groups = Groups;
+            this.AcdAutoAnswer = AcdAutoAnswer;
+            this.TrustUserDetails = TrustUserDetails;
             
         }
         
@@ -831,55 +466,30 @@ this.TrustUserDetails = TrustUserDetails;
             sb.Append("class TrustUser {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Chat: ").Append(Chat).Append("\n");
-            
             sb.Append("  Department: ").Append(Department).Append("\n");
-            
             sb.Append("  Email: ").Append(Email).Append("\n");
-            
             sb.Append("  PrimaryContactInfo: ").Append(PrimaryContactInfo).Append("\n");
-            
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Title: ").Append(Title).Append("\n");
-            
             sb.Append("  Username: ").Append(Username).Append("\n");
-            
             sb.Append("  Manager: ").Append(Manager).Append("\n");
-            
             sb.Append("  Images: ").Append(Images).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
-            
             sb.Append("  Presence: ").Append(Presence).Append("\n");
-            
             sb.Append("  ConversationSummary: ").Append(ConversationSummary).Append("\n");
-            
             sb.Append("  OutOfOffice: ").Append(OutOfOffice).Append("\n");
-            
             sb.Append("  Geolocation: ").Append(Geolocation).Append("\n");
-            
             sb.Append("  Station: ").Append(Station).Append("\n");
-            
             sb.Append("  Authorization: ").Append(Authorization).Append("\n");
-            
             sb.Append("  ProfileSkills: ").Append(ProfileSkills).Append("\n");
-            
             sb.Append("  Locations: ").Append(Locations).Append("\n");
-            
             sb.Append("  Groups: ").Append(Groups).Append("\n");
-            
             sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
-            
             sb.Append("  TrustUserDetails: ").Append(TrustUserDetails).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

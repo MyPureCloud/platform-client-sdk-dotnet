@@ -79,197 +79,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResourcePermissionPolicy" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Domain">Domain.</param>
-        
-        
-        
         /// <param name="EntityName">EntityName.</param>
-        
-        
-        
         /// <param name="PolicyName">PolicyName.</param>
-        
-        
-        
         /// <param name="PolicyDescription">PolicyDescription.</param>
-        
-        
-        
         /// <param name="ActionSetKey">ActionSetKey.</param>
-        
-        
-        
         /// <param name="AllowConditions">AllowConditions.</param>
-        
-        
-        
         /// <param name="ResourceConditionNode">ResourceConditionNode.</param>
-        
-        
-        
         /// <param name="NamedResources">NamedResources.</param>
-        
-        
-        
         /// <param name="ResourceCondition">ResourceCondition.</param>
-        
-        
-        
         /// <param name="ActionSet">ActionSet.</param>
-        
-        
         public ResourcePermissionPolicy(string Id = null, string Domain = null, string EntityName = null, string PolicyName = null, string PolicyDescription = null, string ActionSetKey = null, bool? AllowConditions = null, ResourceConditionNode ResourceConditionNode = null, List<string> NamedResources = null, string ResourceCondition = null, List<string> ActionSet = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Domain = Domain;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EntityName = EntityName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PolicyName = PolicyName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PolicyDescription = PolicyDescription;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActionSetKey = ActionSetKey;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AllowConditions = AllowConditions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ResourceConditionNode = ResourceConditionNode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NamedResources = NamedResources;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ResourceCondition = ResourceCondition;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActionSet = ActionSet;
-            
-            
-            
+            this.Id = Id;
+            this.Domain = Domain;
+            this.EntityName = EntityName;
+            this.PolicyName = PolicyName;
+            this.PolicyDescription = PolicyDescription;
+            this.ActionSetKey = ActionSetKey;
+            this.AllowConditions = AllowConditions;
+            this.ResourceConditionNode = ResourceConditionNode;
+            this.NamedResources = NamedResources;
+            this.ResourceCondition = ResourceCondition;
+            this.ActionSet = ActionSet;
             
         }
         
@@ -372,27 +205,16 @@ this.ActionSet = ActionSet;
             sb.Append("class ResourcePermissionPolicy {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Domain: ").Append(Domain).Append("\n");
-            
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
-            
             sb.Append("  PolicyName: ").Append(PolicyName).Append("\n");
-            
             sb.Append("  PolicyDescription: ").Append(PolicyDescription).Append("\n");
-            
             sb.Append("  ActionSetKey: ").Append(ActionSetKey).Append("\n");
-            
             sb.Append("  AllowConditions: ").Append(AllowConditions).Append("\n");
-            
             sb.Append("  ResourceConditionNode: ").Append(ResourceConditionNode).Append("\n");
-            
             sb.Append("  NamedResources: ").Append(NamedResources).Append("\n");
-            
             sb.Append("  ResourceCondition: ").Append(ResourceCondition).Append("\n");
-            
             sb.Append("  ActionSet: ").Append(ActionSet).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

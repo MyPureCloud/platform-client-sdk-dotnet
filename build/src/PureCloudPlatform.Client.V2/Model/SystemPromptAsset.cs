@@ -134,214 +134,29 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemPromptAsset" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="PromptId">PromptId.</param>
-        
-        
-        
         /// <param name="Language">The asset resource language (required).</param>
-        
-        
-        
         /// <param name="DurationSeconds">DurationSeconds.</param>
-        
-        
-        
         /// <param name="MediaUri">MediaUri.</param>
-        
-        
-        
         /// <param name="TtsString">TtsString.</param>
-        
-        
-        
         /// <param name="UploadUri">UploadUri.</param>
-        
-        
-        
         /// <param name="UploadStatus">UploadStatus.</param>
-        
-        
-        
         /// <param name="HasDefault">HasDefault.</param>
-        
-        
-        
         /// <param name="LanguageDefault">LanguageDefault.</param>
-        
-        
-        
         /// <param name="Tags">Tags.</param>
-        
-        
-        
-        
         public SystemPromptAsset(string Name = null, string PromptId = null, string Language = null, double? DurationSeconds = null, string MediaUri = null, string TtsString = null, string UploadUri = null, UploadStatusEnum? UploadStatus = null, bool? HasDefault = null, bool? LanguageDefault = null, Dictionary<string, List<string>> Tags = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Language" is required (not null)
-            if (Language == null)
-            {
-                throw new InvalidDataException("Language is a required property for SystemPromptAsset and cannot be null");
-            }
-            else
-            {
-                this.Language = Language;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PromptId = PromptId;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationSeconds = DurationSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaUri = MediaUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TtsString = TtsString;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadUri = UploadUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadStatus = UploadStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HasDefault = HasDefault;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LanguageDefault = LanguageDefault;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Tags = Tags;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.PromptId = PromptId;
+            this.DurationSeconds = DurationSeconds;
+            this.MediaUri = MediaUri;
+            this.TtsString = TtsString;
+            this.UploadUri = UploadUri;
+            this.UploadStatus = UploadStatus;
+            this.HasDefault = HasDefault;
+            this.LanguageDefault = LanguageDefault;
+            this.Tags = Tags;
             
         }
         
@@ -457,31 +272,18 @@ this.Tags = Tags;
             sb.Append("class SystemPromptAsset {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  PromptId: ").Append(PromptId).Append("\n");
-            
             sb.Append("  Language: ").Append(Language).Append("\n");
-            
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
-            
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
-            
             sb.Append("  TtsString: ").Append(TtsString).Append("\n");
-            
             sb.Append("  UploadUri: ").Append(UploadUri).Append("\n");
-            
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
-            
             sb.Append("  HasDefault: ").Append(HasDefault).Append("\n");
-            
             sb.Append("  LanguageDefault: ").Append(LanguageDefault).Append("\n");
-            
             sb.Append("  Tags: ").Append(Tags).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

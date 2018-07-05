@@ -79,197 +79,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="PhoneNumber">The phone number to dial..</param>
-        
-        
-        
         /// <param name="CallerId">The caller id phone number for this outbound call..</param>
-        
-        
-        
         /// <param name="CallerIdName">The caller id name for this outbound call..</param>
-        
-        
-        
         /// <param name="CallFromQueueId">The queue ID to call on behalf of..</param>
-        
-        
-        
         /// <param name="CallQueueId">The queue ID to call..</param>
-        
-        
-        
         /// <param name="CallUserId">The user ID to call..</param>
-        
-        
-        
         /// <param name="Priority">The priority to assign to this call (if calling a queue)..</param>
-        
-        
-        
         /// <param name="LanguageId">The language skill ID to use for routing this call (if calling a queue)..</param>
-        
-        
-        
         /// <param name="RoutingSkillsIds">The skill ID&#39;s to use for routing this call (if calling a queue)..</param>
-        
-        
-        
         /// <param name="ConversationIds">The list of existing call conversations to merge into a new ad-hoc conference..</param>
-        
-        
-        
         /// <param name="Participants">The list of participants to call to create a new ad-hoc conference..</param>
-        
-        
         public CreateCallRequest(string PhoneNumber = null, string CallerId = null, string CallerIdName = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, string LanguageId = null, List<string> RoutingSkillsIds = null, List<string> ConversationIds = null, List<Destination> Participants = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneNumber = PhoneNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallerId = CallerId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallerIdName = CallerIdName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallFromQueueId = CallFromQueueId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallQueueId = CallQueueId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallUserId = CallUserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Priority = Priority;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LanguageId = LanguageId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoutingSkillsIds = RoutingSkillsIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConversationIds = ConversationIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Participants = Participants;
-            
-            
-            
+            this.PhoneNumber = PhoneNumber;
+            this.CallerId = CallerId;
+            this.CallerIdName = CallerIdName;
+            this.CallFromQueueId = CallFromQueueId;
+            this.CallQueueId = CallQueueId;
+            this.CallUserId = CallUserId;
+            this.Priority = Priority;
+            this.LanguageId = LanguageId;
+            this.RoutingSkillsIds = RoutingSkillsIds;
+            this.ConversationIds = ConversationIds;
+            this.Participants = Participants;
             
         }
         
@@ -383,27 +216,16 @@ this.Participants = Participants;
             sb.Append("class CreateCallRequest {\n");
             
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
-            
             sb.Append("  CallerId: ").Append(CallerId).Append("\n");
-            
             sb.Append("  CallerIdName: ").Append(CallerIdName).Append("\n");
-            
             sb.Append("  CallFromQueueId: ").Append(CallFromQueueId).Append("\n");
-            
             sb.Append("  CallQueueId: ").Append(CallQueueId).Append("\n");
-            
             sb.Append("  CallUserId: ").Append(CallUserId).Append("\n");
-            
             sb.Append("  Priority: ").Append(Priority).Append("\n");
-            
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
-            
             sb.Append("  RoutingSkillsIds: ").Append(RoutingSkillsIds).Append("\n");
-            
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
-            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

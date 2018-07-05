@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailConversationNotificationAttachment" /> class.
         /// </summary>
-        
-        
         /// <param name="AttachmentId">AttachmentId.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ContentUri">ContentUri.</param>
-        
-        
-        
         /// <param name="ContentType">ContentType.</param>
-        
-        
-        
         /// <param name="ContentLength">ContentLength.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public EmailConversationNotificationAttachment(string AttachmentId = null, string Name = null, string ContentUri = null, string ContentType = null, int? ContentLength = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AttachmentId = AttachmentId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentUri = ContentUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentType = ContentType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentLength = ContentLength;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.AttachmentId = AttachmentId;
+            this.Name = Name;
+            this.ContentUri = ContentUri;
+            this.ContentType = ContentType;
+            this.ContentLength = ContentLength;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -222,17 +130,11 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class EmailConversationNotificationAttachment {\n");
             
             sb.Append("  AttachmentId: ").Append(AttachmentId).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ContentUri: ").Append(ContentUri).Append("\n");
-            
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
-            
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

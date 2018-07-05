@@ -60,105 +60,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingUsageReport" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="StartDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
-        
         /// <param name="EndDate">The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
-        
         /// <param name="Usages">The usages for the given period. (required).</param>
-        
-        
-        
-        
         public BillingUsageReport(string Name = null, DateTime? StartDate = null, DateTime? EndDate = null, List<BillingUsage> Usages = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "StartDate" is required (not null)
-            if (StartDate == null)
-            {
-                throw new InvalidDataException("StartDate is a required property for BillingUsageReport and cannot be null");
-            }
-            else
-            {
-                this.StartDate = StartDate;
-            }
-            
-            
-            
-            
-            
-            // to ensure "EndDate" is required (not null)
-            if (EndDate == null)
-            {
-                throw new InvalidDataException("EndDate is a required property for BillingUsageReport and cannot be null");
-            }
-            else
-            {
-                this.EndDate = EndDate;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Usages" is required (not null)
-            if (Usages == null)
-            {
-                throw new InvalidDataException("Usages is a required property for BillingUsageReport and cannot be null");
-            }
-            else
-            {
-                this.Usages = Usages;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
             
         }
         
@@ -226,17 +134,11 @@ this.Name = Name;
             sb.Append("class BillingUsageReport {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
-            
             sb.Append("  Usages: ").Append(Usages).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

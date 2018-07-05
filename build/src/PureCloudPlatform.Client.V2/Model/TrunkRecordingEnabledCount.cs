@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkRecordingEnabledCount" /> class.
         /// </summary>
-        
-        
         /// <param name="EnabledCount">The amount of trunks that have recording enabled.</param>
-        
-        
-        
         /// <param name="DisabledCount">The amount of trunks that do not have recording enabled.</param>
-        
-        
         public TrunkRecordingEnabledCount(int? EnabledCount = null, int? DisabledCount = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.EnabledCount = EnabledCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisabledCount = DisabledCount;
-            
-            
-            
+            this.EnabledCount = EnabledCount;
+            this.DisabledCount = DisabledCount;
             
         }
         
@@ -104,9 +72,7 @@ this.DisabledCount = DisabledCount;
             sb.Append("class TrunkRecordingEnabledCount {\n");
             
             sb.Append("  EnabledCount: ").Append(EnabledCount).Append("\n");
-            
             sb.Append("  DisabledCount: ").Append(DisabledCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

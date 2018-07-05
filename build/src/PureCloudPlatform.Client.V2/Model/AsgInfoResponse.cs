@@ -54,90 +54,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AsgInfoResponse" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Site">The site that the asg belongs to..</param>
-        
-        
-        
         /// <param name="Ami">The ami ami of the asg..</param>
-        
-        
-        
         /// <param name="EdgeVersion">The software ami of the edges in the asg..</param>
-        
-        
-        
         /// <param name="InstanceInfo">List of instances and their information that live in the ASG..</param>
-        
-        
-        
-        
         public AsgInfoResponse(Site Site = null, string Ami = null, string EdgeVersion = null, List<InstanceInfo> InstanceInfo = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Site = Site;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Ami = Ami;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgeVersion = EdgeVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InstanceInfo = InstanceInfo;
-            
-            
-            
-            
-            
+            this.Site = Site;
+            this.Ami = Ami;
+            this.EdgeVersion = EdgeVersion;
+            this.InstanceInfo = InstanceInfo;
             
         }
         
@@ -206,17 +132,11 @@ this.InstanceInfo = InstanceInfo;
             sb.Append("class AsgInfoResponse {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Site: ").Append(Site).Append("\n");
-            
             sb.Append("  Ami: ").Append(Ami).Append("\n");
-            
             sb.Append("  EdgeVersion: ").Append(EdgeVersion).Append("\n");
-            
             sb.Append("  InstanceInfo: ").Append(InstanceInfo).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

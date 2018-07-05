@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsSubsystem" /> class.
         /// </summary>
-        
-        
         /// <param name="DelayMs">Delay in milliseconds..</param>
-        
-        
-        
         /// <param name="ProcessName">Name of the Edge process..</param>
-        
-        
-        
         /// <param name="MediaSubsystem">Subsystem for an Edge device..</param>
-        
-        
         public EdgeMetricsSubsystem(int? DelayMs = null, string ProcessName = null, EdgeMetricsSubsystem MediaSubsystem = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.DelayMs = DelayMs;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ProcessName = ProcessName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaSubsystem = MediaSubsystem;
-            
-            
-            
+            this.DelayMs = DelayMs;
+            this.ProcessName = ProcessName;
+            this.MediaSubsystem = MediaSubsystem;
             
         }
         
@@ -135,11 +88,8 @@ this.MediaSubsystem = MediaSubsystem;
             sb.Append("class EdgeMetricsSubsystem {\n");
             
             sb.Append("  DelayMs: ").Append(DelayMs).Append("\n");
-            
             sb.Append("  ProcessName: ").Append(ProcessName).Append("\n");
-            
             sb.Append("  MediaSubsystem: ").Append(MediaSubsystem).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

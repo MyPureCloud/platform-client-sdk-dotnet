@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueMemberNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="QueueId">QueueId.</param>
-        
-        
-        
         /// <param name="Joined">Joined.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public QueueMemberNotification(string Id = null, string QueueId = null, bool? Joined = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueId = QueueId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Joined = Joined;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Id = Id;
+            this.QueueId = QueueId;
+            this.Joined = Joined;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -162,13 +100,9 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class QueueMemberNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
-            
             sb.Append("  Joined: ").Append(Joined).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

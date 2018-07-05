@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeZone" /> class.
         /// </summary>
-        
-        
         /// <param name="DisplayName">DisplayName.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Dstsavings">Dstsavings.</param>
-        
-        
-        
         /// <param name="RawOffset">RawOffset.</param>
-        
-        
         public TimeZone(string DisplayName = null, string Id = null, int? Dstsavings = null, int? RawOffset = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisplayName = DisplayName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Dstsavings = Dstsavings;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RawOffset = RawOffset;
-            
-            
-            
+            this.DisplayName = DisplayName;
+            this.Id = Id;
+            this.Dstsavings = Dstsavings;
+            this.RawOffset = RawOffset;
             
         }
         
@@ -162,13 +100,9 @@ this.RawOffset = RawOffset;
             sb.Append("class TimeZone {\n");
             
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Dstsavings: ").Append(Dstsavings).Append("\n");
-            
             sb.Append("  RawOffset: ").Append(RawOffset).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

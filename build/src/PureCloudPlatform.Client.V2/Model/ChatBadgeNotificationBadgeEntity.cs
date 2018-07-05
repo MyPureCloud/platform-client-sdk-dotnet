@@ -78,61 +78,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatBadgeNotificationBadgeEntity" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="Jid">Jid.</param>
-        
-        
         public ChatBadgeNotificationBadgeEntity(string Id = null, TypeEnum? Type = null, string Jid = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Jid = Jid;
-            
-            
-            
+            this.Id = Id;
+            this.Type = Type;
+            this.Jid = Jid;
             
         }
         
@@ -165,11 +118,8 @@ this.Jid = Jid;
             sb.Append("class ChatBadgeNotificationBadgeEntity {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Jid: ").Append(Jid).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -40,54 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Ticker" /> class.
         /// </summary>
-        
-        
         /// <param name="Symbol">The ticker symbol for this organization. Example: ININ, AAPL, MSFT, etc. (required).</param>
-        
-        
-        
         /// <param name="Exchange">The exchange for this ticker symbol. Examples: NYSE, FTSE, NASDAQ, etc. (required).</param>
-        
-        
         public Ticker(string Symbol = null, string Exchange = null)
         {
-            
-            
-            
-            // to ensure "Symbol" is required (not null)
-            if (Symbol == null)
-            {
-                throw new InvalidDataException("Symbol is a required property for Ticker and cannot be null");
-            }
-            else
-            {
-                this.Symbol = Symbol;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Exchange" is required (not null)
-            if (Exchange == null)
-            {
-                throw new InvalidDataException("Exchange is a required property for Ticker and cannot be null");
-            }
-            else
-            {
-                this.Exchange = Exchange;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -120,9 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class Ticker {\n");
             
             sb.Append("  Symbol: ").Append(Symbol).Append("\n");
-            
             sb.Append("  Exchange: ").Append(Exchange).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

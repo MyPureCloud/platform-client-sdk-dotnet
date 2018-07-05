@@ -494,657 +494,79 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Edge" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the entity. (required).</param>
-        
-        
-        
         /// <param name="Description">The resource&#39;s description..</param>
-        
-        
-        
         /// <param name="Version">The current version of the resource..</param>
-        
-        
-        
         /// <param name="DateCreated">The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateModified">The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ModifiedBy">The ID of the user that last modified the resource..</param>
-        
-        
-        
         /// <param name="CreatedBy">The ID of the user that created the resource..</param>
-        
-        
-        
-        
-        
         /// <param name="ModifiedByApp">The application that last modified the resource..</param>
-        
-        
-        
         /// <param name="CreatedByApp">The application that created the resource..</param>
-        
-        
-        
         /// <param name="Interfaces">The list of interfaces for the edge. (Deprecated) Replaced by configuring trunks/ip info on the logical interface instead.</param>
-        
-        
-        
         /// <param name="Make">Make.</param>
-        
-        
-        
         /// <param name="Model">Model.</param>
-        
-        
-        
         /// <param name="ApiVersion">ApiVersion.</param>
-        
-        
-        
         /// <param name="SoftwareVersion">SoftwareVersion.</param>
-        
-        
-        
         /// <param name="SoftwareVersionTimestamp">SoftwareVersionTimestamp.</param>
-        
-        
-        
         /// <param name="SoftwareVersionPlatform">SoftwareVersionPlatform.</param>
-        
-        
-        
         /// <param name="SoftwareVersionConfiguration">SoftwareVersionConfiguration.</param>
-        
-        
-        
         /// <param name="FullSoftwareVersion">FullSoftwareVersion.</param>
-        
-        
-        
         /// <param name="PairingId">The pairing Id for a hardware Edge in the format: 00000-00000-00000-00000-00000. This field is only required when creating an Edge with a deployment type of HARDWARE..</param>
-        
-        
-        
         /// <param name="Fingerprint">Fingerprint.</param>
-        
-        
-        
         /// <param name="FingerprintHint">FingerprintHint.</param>
-        
-        
-        
         /// <param name="CurrentVersion">CurrentVersion.</param>
-        
-        
-        
         /// <param name="StagedVersion">StagedVersion.</param>
-        
-        
-        
         /// <param name="Patch">Patch.</param>
-        
-        
-        
         /// <param name="StatusCode">The current status of the Edge..</param>
-        
-        
-        
         /// <param name="EdgeGroup">EdgeGroup.</param>
-        
-        
-        
         /// <param name="Site">The Site to which the Edge is assigned..</param>
-        
-        
-        
         /// <param name="SoftwareStatus">SoftwareStatus.</param>
-        
-        
-        
         /// <param name="OnlineStatus">OnlineStatus.</param>
-        
-        
-        
         /// <param name="SerialNumber">SerialNumber.</param>
-        
-        
-        
         /// <param name="PhysicalEdge">PhysicalEdge.</param>
-        
-        
-        
         /// <param name="Managed">Managed.</param>
-        
-        
-        
         /// <param name="EdgeDeploymentType">EdgeDeploymentType.</param>
-        
-        
-        
         /// <param name="CallDrainingState">CallDrainingState.</param>
-        
-        
-        
         /// <param name="ConversationCount">ConversationCount.</param>
-        
-        
-        
         /// <param name="Proxy">Edge HTTP proxy configuration for the WAN port. The field can be a hostname, FQDN, IPv4 or IPv6 address. If port is not included, port 80 is assumed..</param>
-        
-        
-        
-        
-        
-        
-        
-        
         public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, Site Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null, CallDrainingStateEnum? CallDrainingState = null, int? ConversationCount = null, string Proxy = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for Edge and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedByApp = ModifiedByApp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedByApp = CreatedByApp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Interfaces = Interfaces;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Make = Make;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Model = Model;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ApiVersion = ApiVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SoftwareVersion = SoftwareVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SoftwareVersionTimestamp = SoftwareVersionTimestamp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SoftwareVersionPlatform = SoftwareVersionPlatform;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SoftwareVersionConfiguration = SoftwareVersionConfiguration;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FullSoftwareVersion = FullSoftwareVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PairingId = PairingId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Fingerprint = Fingerprint;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FingerprintHint = FingerprintHint;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CurrentVersion = CurrentVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StagedVersion = StagedVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Patch = Patch;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StatusCode = StatusCode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgeGroup = EdgeGroup;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Site = Site;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SoftwareStatus = SoftwareStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OnlineStatus = OnlineStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SerialNumber = SerialNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhysicalEdge = PhysicalEdge;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Managed = Managed;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgeDeploymentType = EdgeDeploymentType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallDrainingState = CallDrainingState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConversationCount = ConversationCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Proxy = Proxy;
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.Interfaces = Interfaces;
+            this.Make = Make;
+            this.Model = Model;
+            this.ApiVersion = ApiVersion;
+            this.SoftwareVersion = SoftwareVersion;
+            this.SoftwareVersionTimestamp = SoftwareVersionTimestamp;
+            this.SoftwareVersionPlatform = SoftwareVersionPlatform;
+            this.SoftwareVersionConfiguration = SoftwareVersionConfiguration;
+            this.FullSoftwareVersion = FullSoftwareVersion;
+            this.PairingId = PairingId;
+            this.Fingerprint = Fingerprint;
+            this.FingerprintHint = FingerprintHint;
+            this.CurrentVersion = CurrentVersion;
+            this.StagedVersion = StagedVersion;
+            this.Patch = Patch;
+            this.StatusCode = StatusCode;
+            this.EdgeGroup = EdgeGroup;
+            this.Site = Site;
+            this.SoftwareStatus = SoftwareStatus;
+            this.OnlineStatus = OnlineStatus;
+            this.SerialNumber = SerialNumber;
+            this.PhysicalEdge = PhysicalEdge;
+            this.Managed = Managed;
+            this.EdgeDeploymentType = EdgeDeploymentType;
+            this.CallDrainingState = CallDrainingState;
+            this.ConversationCount = ConversationCount;
+            this.Proxy = Proxy;
             
         }
         
@@ -1474,87 +896,46 @@ this.Proxy = Proxy;
             sb.Append("class Edge {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
-            
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
-            
             sb.Append("  Interfaces: ").Append(Interfaces).Append("\n");
-            
             sb.Append("  Make: ").Append(Make).Append("\n");
-            
             sb.Append("  Model: ").Append(Model).Append("\n");
-            
             sb.Append("  ApiVersion: ").Append(ApiVersion).Append("\n");
-            
             sb.Append("  SoftwareVersion: ").Append(SoftwareVersion).Append("\n");
-            
             sb.Append("  SoftwareVersionTimestamp: ").Append(SoftwareVersionTimestamp).Append("\n");
-            
             sb.Append("  SoftwareVersionPlatform: ").Append(SoftwareVersionPlatform).Append("\n");
-            
             sb.Append("  SoftwareVersionConfiguration: ").Append(SoftwareVersionConfiguration).Append("\n");
-            
             sb.Append("  FullSoftwareVersion: ").Append(FullSoftwareVersion).Append("\n");
-            
             sb.Append("  PairingId: ").Append(PairingId).Append("\n");
-            
             sb.Append("  Fingerprint: ").Append(Fingerprint).Append("\n");
-            
             sb.Append("  FingerprintHint: ").Append(FingerprintHint).Append("\n");
-            
             sb.Append("  CurrentVersion: ").Append(CurrentVersion).Append("\n");
-            
             sb.Append("  StagedVersion: ").Append(StagedVersion).Append("\n");
-            
             sb.Append("  Patch: ").Append(Patch).Append("\n");
-            
             sb.Append("  StatusCode: ").Append(StatusCode).Append("\n");
-            
             sb.Append("  EdgeGroup: ").Append(EdgeGroup).Append("\n");
-            
             sb.Append("  Site: ").Append(Site).Append("\n");
-            
             sb.Append("  SoftwareStatus: ").Append(SoftwareStatus).Append("\n");
-            
             sb.Append("  OnlineStatus: ").Append(OnlineStatus).Append("\n");
-            
             sb.Append("  SerialNumber: ").Append(SerialNumber).Append("\n");
-            
             sb.Append("  PhysicalEdge: ").Append(PhysicalEdge).Append("\n");
-            
             sb.Append("  Managed: ").Append(Managed).Append("\n");
-            
             sb.Append("  EdgeDeploymentType: ").Append(EdgeDeploymentType).Append("\n");
-            
             sb.Append("  CallDrainingState: ").Append(CallDrainingState).Append("\n");
-            
             sb.Append("  ConversationCount: ").Append(ConversationCount).Append("\n");
-            
             sb.Append("  Proxy: ").Append(Proxy).Append("\n");
-            
             sb.Append("  OfflineConfigCalled: ").Append(OfflineConfigCalled).Append("\n");
-            
             sb.Append("  OsName: ").Append(OsName).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -44,56 +44,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SecurityProfile" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Permissions">Permissions.</param>
-        
-        
-        
-        
         public SecurityProfile(string Name = null, List<string> Permissions = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Permissions = Permissions;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Permissions = Permissions;
             
         }
         
@@ -142,13 +98,9 @@ this.Permissions = Permissions;
             sb.Append("class SecurityProfile {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

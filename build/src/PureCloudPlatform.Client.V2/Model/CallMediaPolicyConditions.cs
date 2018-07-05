@@ -88,129 +88,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallMediaPolicyConditions" /> class.
         /// </summary>
-        
-        
         /// <param name="ForUsers">ForUsers.</param>
-        
-        
-        
         /// <param name="DateRanges">DateRanges.</param>
-        
-        
-        
         /// <param name="ForQueues">ForQueues.</param>
-        
-        
-        
         /// <param name="WrapupCodes">WrapupCodes.</param>
-        
-        
-        
         /// <param name="TimeAllowed">TimeAllowed.</param>
-        
-        
-        
         /// <param name="Directions">Directions.</param>
-        
-        
-        
         /// <param name="Duration">Duration.</param>
-        
-        
         public CallMediaPolicyConditions(List<User> ForUsers = null, List<string> DateRanges = null, List<Queue> ForQueues = null, List<WrapupCode> WrapupCodes = null, TimeAllowed TimeAllowed = null, List<DirectionsEnum> Directions = null, DurationCondition Duration = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ForUsers = ForUsers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateRanges = DateRanges;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ForQueues = ForQueues;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupCodes = WrapupCodes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeAllowed = TimeAllowed;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Directions = Directions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Duration = Duration;
-            
-            
-            
+            this.ForUsers = ForUsers;
+            this.DateRanges = DateRanges;
+            this.ForQueues = ForQueues;
+            this.WrapupCodes = WrapupCodes;
+            this.TimeAllowed = TimeAllowed;
+            this.Directions = Directions;
+            this.Duration = Duration;
             
         }
         
@@ -281,19 +174,12 @@ this.Duration = Duration;
             sb.Append("class CallMediaPolicyConditions {\n");
             
             sb.Append("  ForUsers: ").Append(ForUsers).Append("\n");
-            
             sb.Append("  DateRanges: ").Append(DateRanges).Append("\n");
-            
             sb.Append("  ForQueues: ").Append(ForQueues).Append("\n");
-            
             sb.Append("  WrapupCodes: ").Append(WrapupCodes).Append("\n");
-            
             sb.Append("  TimeAllowed: ").Append(TimeAllowed).Append("\n");
-            
             sb.Append("  Directions: ").Append(Directions).Append("\n");
-            
             sb.Append("  Duration: ").Append(Duration).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

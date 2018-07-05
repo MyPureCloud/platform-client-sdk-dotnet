@@ -290,515 +290,66 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Document" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ChangeNumber">ChangeNumber.</param>
-        
-        
-        
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateUploaded">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ContentUri">ContentUri.</param>
-        
-        
-        
         /// <param name="Workspace">Workspace.</param>
-        
-        
-        
         /// <param name="CreatedBy">CreatedBy.</param>
-        
-        
-        
         /// <param name="UploadedBy">UploadedBy.</param>
-        
-        
-        
         /// <param name="ContentType">ContentType.</param>
-        
-        
-        
         /// <param name="ContentLength">ContentLength.</param>
-        
-        
-        
         /// <param name="SystemType">SystemType.</param>
-        
-        
-        
         /// <param name="Filename">Filename.</param>
-        
-        
-        
         /// <param name="PageCount">PageCount.</param>
-        
-        
-        
         /// <param name="Read">Read.</param>
-        
-        
-        
         /// <param name="CallerAddress">CallerAddress.</param>
-        
-        
-        
         /// <param name="ReceiverAddress">ReceiverAddress.</param>
-        
-        
-        
         /// <param name="Tags">Tags.</param>
-        
-        
-        
         /// <param name="TagValues">TagValues.</param>
-        
-        
-        
         /// <param name="Attributes">Attributes.</param>
-        
-        
-        
         /// <param name="Thumbnails">Thumbnails.</param>
-        
-        
-        
         /// <param name="UploadStatus">UploadStatus.</param>
-        
-        
-        
         /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
-        
-        
-        
         /// <param name="UploadMethod">UploadMethod.</param>
-        
-        
-        
         /// <param name="LockInfo">LockInfo.</param>
-        
-        
-        
         /// <param name="Acl">A list of permitted action rights for the user making the request.</param>
-        
-        
-        
         /// <param name="SharingStatus">SharingStatus.</param>
-        
-        
-        
         /// <param name="SharingUri">SharingUri.</param>
-        
-        
-        
         /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
-        
-        
-        
-        
         public Document(string Name = null, int? ChangeNumber = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateUploaded = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, UriReference UploadedBy = null, string ContentType = null, long? ContentLength = null, SystemTypeEnum? SystemType = null, string Filename = null, long? PageCount = null, bool? Read = null, string CallerAddress = null, string ReceiverAddress = null, List<string> Tags = null, List<TagValue> TagValues = null, List<DocumentAttribute> Attributes = null, List<DocumentThumbnail> Thumbnails = null, UriReference UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null, LockInfo LockInfo = null, List<string> Acl = null, SharingStatusEnum? SharingStatus = null, string SharingUri = null, string DownloadSharingUri = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ChangeNumber = ChangeNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateUploaded = DateUploaded;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentUri = ContentUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Workspace = Workspace;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadedBy = UploadedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentType = ContentType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentLength = ContentLength;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SystemType = SystemType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Filename = Filename;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageCount = PageCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Read = Read;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallerAddress = CallerAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReceiverAddress = ReceiverAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Tags = Tags;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TagValues = TagValues;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attributes = Attributes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Thumbnails = Thumbnails;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadStatus = UploadStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadDestinationUri = UploadDestinationUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadMethod = UploadMethod;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LockInfo = LockInfo;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Acl = Acl;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SharingStatus = SharingStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SharingUri = SharingUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DownloadSharingUri = DownloadSharingUri;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.ChangeNumber = ChangeNumber;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.DateUploaded = DateUploaded;
+            this.ContentUri = ContentUri;
+            this.Workspace = Workspace;
+            this.CreatedBy = CreatedBy;
+            this.UploadedBy = UploadedBy;
+            this.ContentType = ContentType;
+            this.ContentLength = ContentLength;
+            this.SystemType = SystemType;
+            this.Filename = Filename;
+            this.PageCount = PageCount;
+            this.Read = Read;
+            this.CallerAddress = CallerAddress;
+            this.ReceiverAddress = ReceiverAddress;
+            this.Tags = Tags;
+            this.TagValues = TagValues;
+            this.Attributes = Attributes;
+            this.Thumbnails = Thumbnails;
+            this.UploadStatus = UploadStatus;
+            this.UploadDestinationUri = UploadDestinationUri;
+            this.UploadMethod = UploadMethod;
+            this.LockInfo = LockInfo;
+            this.Acl = Acl;
+            this.SharingStatus = SharingStatus;
+            this.SharingUri = SharingUri;
+            this.DownloadSharingUri = DownloadSharingUri;
             
         }
         
@@ -1049,67 +600,36 @@ this.DownloadSharingUri = DownloadSharingUri;
             sb.Append("class Document {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ChangeNumber: ").Append(ChangeNumber).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  DateUploaded: ").Append(DateUploaded).Append("\n");
-            
             sb.Append("  ContentUri: ").Append(ContentUri).Append("\n");
-            
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  UploadedBy: ").Append(UploadedBy).Append("\n");
-            
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
-            
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
-            
             sb.Append("  SystemType: ").Append(SystemType).Append("\n");
-            
             sb.Append("  Filename: ").Append(Filename).Append("\n");
-            
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
-            
             sb.Append("  Read: ").Append(Read).Append("\n");
-            
             sb.Append("  CallerAddress: ").Append(CallerAddress).Append("\n");
-            
             sb.Append("  ReceiverAddress: ").Append(ReceiverAddress).Append("\n");
-            
             sb.Append("  Tags: ").Append(Tags).Append("\n");
-            
             sb.Append("  TagValues: ").Append(TagValues).Append("\n");
-            
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            
             sb.Append("  Thumbnails: ").Append(Thumbnails).Append("\n");
-            
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
-            
             sb.Append("  UploadDestinationUri: ").Append(UploadDestinationUri).Append("\n");
-            
             sb.Append("  UploadMethod: ").Append(UploadMethod).Append("\n");
-            
             sb.Append("  LockInfo: ").Append(LockInfo).Append("\n");
-            
             sb.Append("  Acl: ").Append(Acl).Append("\n");
-            
             sb.Append("  SharingStatus: ").Append(SharingStatus).Append("\n");
-            
             sb.Append("  SharingUri: ").Append(SharingUri).Append("\n");
-            
             sb.Append("  DownloadSharingUri: ").Append(DownloadSharingUri).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

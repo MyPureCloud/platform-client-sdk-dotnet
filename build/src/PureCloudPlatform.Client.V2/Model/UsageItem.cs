@@ -84,61 +84,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsageItem" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="TotalDocumentByteCount">TotalDocumentByteCount.</param>
-        
-        
-        
         /// <param name="TotalDocumentCount">TotalDocumentCount.</param>
-        
-        
         public UsageItem(TypeEnum? Type = null, long? TotalDocumentByteCount = null, long? TotalDocumentCount = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalDocumentByteCount = TotalDocumentByteCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalDocumentCount = TotalDocumentCount;
-            
-            
-            
+            this.Type = Type;
+            this.TotalDocumentByteCount = TotalDocumentByteCount;
+            this.TotalDocumentCount = TotalDocumentCount;
             
         }
         
@@ -171,11 +124,8 @@ this.TotalDocumentCount = TotalDocumentCount;
             sb.Append("class UsageItem {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  TotalDocumentByteCount: ").Append(TotalDocumentByteCount).Append("\n");
-            
             sb.Append("  TotalDocumentCount: ").Append(TotalDocumentCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

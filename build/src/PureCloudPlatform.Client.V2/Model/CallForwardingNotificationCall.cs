@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallForwardingNotificationCall" /> class.
         /// </summary>
-        
-        
         /// <param name="Targets">Targets.</param>
-        
-        
         public CallForwardingNotificationCall(List<CallForwardingNotificationTargets> Targets = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Targets = Targets;
-            
-            
-            
+            this.Targets = Targets;
             
         }
         
@@ -72,7 +55,6 @@ this.Targets = Targets;
             sb.Append("class CallForwardingNotificationCall {\n");
             
             sb.Append("  Targets: ").Append(Targets).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

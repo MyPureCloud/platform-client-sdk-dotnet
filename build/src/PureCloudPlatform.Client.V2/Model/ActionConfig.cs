@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionConfig" /> class.
         /// </summary>
-        
-        
         /// <param name="Request">Configuration of outbound request..</param>
-        
-        
-        
         /// <param name="Response">Configuration of response processing..</param>
-        
-        
         public ActionConfig(RequestConfig Request = null, ResponseConfig Response = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Request = Request;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Response = Response;
-            
-            
-            
+            this.Request = Request;
+            this.Response = Response;
             
         }
         
@@ -104,9 +72,7 @@ this.Response = Response;
             sb.Append("class ActionConfig {\n");
             
             sb.Append("  Request: ").Append(Request).Append("\n");
-            
             sb.Append("  Response: ").Append(Response).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

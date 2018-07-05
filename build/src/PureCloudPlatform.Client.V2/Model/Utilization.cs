@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Utilization" /> class.
         /// </summary>
-        
-        
         /// <param name="_Utilization">Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression.</param>
-        
-        
         public Utilization(Dictionary<string, OrgMediaUtilization> _Utilization = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this._Utilization = _Utilization;
-            
-            
-            
+            this._Utilization = _Utilization;
             
         }
         
@@ -73,7 +56,6 @@ this._Utilization = _Utilization;
             sb.Append("class Utilization {\n");
             
             sb.Append("  _Utilization: ").Append(_Utilization).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

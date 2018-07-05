@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaSetting" /> class.
         /// </summary>
-        
-        
         /// <param name="AlertingTimeoutSeconds">AlertingTimeoutSeconds.</param>
-        
-        
-        
         /// <param name="ServiceLevel">ServiceLevel.</param>
-        
-        
         public MediaSetting(int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ServiceLevel = ServiceLevel;
-            
-            
-            
+            this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
+            this.ServiceLevel = ServiceLevel;
             
         }
         
@@ -102,9 +70,7 @@ this.ServiceLevel = ServiceLevel;
             sb.Append("class MediaSetting {\n");
             
             sb.Append("  AlertingTimeoutSeconds: ").Append(AlertingTimeoutSeconds).Append("\n");
-            
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

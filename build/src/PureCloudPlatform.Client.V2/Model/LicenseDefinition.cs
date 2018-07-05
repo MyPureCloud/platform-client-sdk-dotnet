@@ -54,90 +54,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LicenseDefinition" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="Permissions">Permissions.</param>
-        
-        
-        
         /// <param name="Prerequisites">Prerequisites.</param>
-        
-        
-        
         /// <param name="Comprises">Comprises.</param>
-        
-        
-        
-        
         public LicenseDefinition(string Description = null, Permissions Permissions = null, List<AddressableLicenseDefinition> Prerequisites = null, List<LicenseDefinition> Comprises = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Permissions = Permissions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Prerequisites = Prerequisites;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Comprises = Comprises;
-            
-            
-            
-            
-            
+            this.Description = Description;
+            this.Permissions = Permissions;
+            this.Prerequisites = Prerequisites;
+            this.Comprises = Comprises;
             
         }
         
@@ -202,17 +128,11 @@ this.Comprises = Comprises;
             sb.Append("class LicenseDefinition {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
-            
             sb.Append("  Prerequisites: ").Append(Prerequisites).Append("\n");
-            
             sb.Append("  Comprises: ").Append(Comprises).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

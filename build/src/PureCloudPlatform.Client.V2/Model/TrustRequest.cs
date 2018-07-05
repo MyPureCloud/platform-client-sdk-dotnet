@@ -65,101 +65,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustRequest" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="CreatedBy">User who created this request..</param>
-        
-        
-        
-        
-        
         /// <param name="Trustee">Trustee organization who generated this request. (required).</param>
-        
-        
-        
         /// <param name="Users">The list of trustee users that are requesting access..</param>
-        
-        
-        
         /// <param name="Groups">The list of trustee groups that are requesting access..</param>
-        
-        
-        
-        
         public TrustRequest(OrgUser CreatedBy = null, Organization Trustee = null, List<OrgUser> Users = null, List<TrustGroup> Groups = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Trustee" is required (not null)
-            if (Trustee == null)
-            {
-                throw new InvalidDataException("Trustee is a required property for TrustRequest and cannot be null");
-            }
-            else
-            {
-                this.Trustee = Trustee;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Users = Users;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Groups = Groups;
-            
-            
-            
-            
-            
+            this.CreatedBy = CreatedBy;
+            this.Users = Users;
+            this.Groups = Groups;
             
         }
         
@@ -237,19 +151,12 @@ this.Groups = Groups;
             sb.Append("class TrustRequest {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  Trustee: ").Append(Trustee).Append("\n");
-            
             sb.Append("  Users: ").Append(Users).Append("\n");
-            
             sb.Append("  Groups: ").Append(Groups).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

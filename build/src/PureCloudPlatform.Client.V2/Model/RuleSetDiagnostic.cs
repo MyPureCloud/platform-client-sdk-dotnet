@@ -75,44 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleSetDiagnostic" /> class.
         /// </summary>
-        
-        
         /// <param name="RuleSet">A campaign rule set.</param>
-        
-        
-        
         /// <param name="Warnings">Diagnostic warnings for the rule set.</param>
-        
-        
         public RuleSetDiagnostic(UriReference RuleSet = null, List<WarningsEnum> Warnings = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RuleSet = RuleSet;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Warnings = Warnings;
-            
-            
-            
+            this.RuleSet = RuleSet;
+            this.Warnings = Warnings;
             
         }
         
@@ -145,9 +113,7 @@ this.Warnings = Warnings;
             sb.Append("class RuleSetDiagnostic {\n");
             
             sb.Append("  RuleSet: ").Append(RuleSet).Append("\n");
-            
             sb.Append("  Warnings: ").Append(Warnings).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

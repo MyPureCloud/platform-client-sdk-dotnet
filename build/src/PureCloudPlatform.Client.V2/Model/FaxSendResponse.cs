@@ -82,73 +82,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxSendResponse" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
-        
-        
-        
         /// <param name="UploadMethodType">UploadMethodType.</param>
-        
-        
-        
-        
         public FaxSendResponse(string Name = null, string UploadDestinationUri = null, UploadMethodTypeEnum? UploadMethodType = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadDestinationUri = UploadDestinationUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadMethodType = UploadMethodType;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.UploadDestinationUri = UploadDestinationUri;
+            this.UploadMethodType = UploadMethodType;
             
         }
         
@@ -199,15 +140,10 @@ this.UploadMethodType = UploadMethodType;
             sb.Append("class FaxSendResponse {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  UploadDestinationUri: ").Append(UploadDestinationUri).Append("\n");
-            
             sb.Append("  UploadMethodType: ").Append(UploadMethodType).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

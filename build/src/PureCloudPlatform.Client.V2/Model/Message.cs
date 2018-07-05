@@ -384,350 +384,48 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Message" /> class.
         /// </summary>
-        
-        
         /// <param name="State">The connection state of this communication..</param>
-        
-        
-        
         /// <param name="Id">A globally unique identifier for this communication..</param>
-        
-        
-        
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
-        
-        
-        
         /// <param name="Segments">The time line of the participant&#39;s message, divided into activity segments..</param>
-        
-        
-        
         /// <param name="Direction">The direction of the message..</param>
-        
-        
-        
         /// <param name="RecordingId">A globally unique identifier for the recording associated with this message..</param>
-        
-        
-        
         /// <param name="ErrorInfo">ErrorInfo.</param>
-        
-        
-        
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
-        
-        
-        
         /// <param name="StartHoldTime">The timestamp the message was placed on hold in the cloud clock if the message is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Provider">The source provider for the message..</param>
-        
-        
-        
         /// <param name="Type">Indicates the type of message platform from which the message originated..</param>
-        
-        
-        
         /// <param name="RecipientCountry">Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format..</param>
-        
-        
-        
         /// <param name="RecipientType">The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type..</param>
-        
-        
-        
         /// <param name="ScriptId">The UUID of the script to use..</param>
-        
-        
-        
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
-        
-        
-        
         /// <param name="ToAddress">Address and name data for a call endpoint..</param>
-        
-        
-        
         /// <param name="FromAddress">Address and name data for a call endpoint..</param>
-        
-        
-        
         /// <param name="Messages">The messages sent on this communication channel..</param>
-        
-        
         public Message(StateEnum? State = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Held = Held;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Segments = Segments;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingId = RecordingId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorInfo = ErrorInfo;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartHoldTime = StartHoldTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectedTime = DisconnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecipientCountry = RecipientCountry;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecipientType = RecipientType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScriptId = ScriptId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerId = PeerId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ToAddress = ToAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FromAddress = FromAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Messages = Messages;
-            
-            
-            
+            this.State = State;
+            this.Id = Id;
+            this.Held = Held;
+            this.Segments = Segments;
+            this.Direction = Direction;
+            this.RecordingId = RecordingId;
+            this.ErrorInfo = ErrorInfo;
+            this.DisconnectType = DisconnectType;
+            this.StartHoldTime = StartHoldTime;
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
+            this.Provider = Provider;
+            this.Type = Type;
+            this.RecipientCountry = RecipientCountry;
+            this.RecipientType = RecipientType;
+            this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
+            this.ToAddress = ToAddress;
+            this.FromAddress = FromAddress;
+            this.Messages = Messages;
             
         }
         
@@ -893,45 +591,25 @@ this.Messages = Messages;
             sb.Append("class Message {\n");
             
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Held: ").Append(Held).Append("\n");
-            
             sb.Append("  Segments: ").Append(Segments).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
-            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  RecipientCountry: ").Append(RecipientCountry).Append("\n");
-            
             sb.Append("  RecipientType: ").Append(RecipientType).Append("\n");
-            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
-            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
-            
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
-            
             sb.Append("  Messages: ").Append(Messages).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

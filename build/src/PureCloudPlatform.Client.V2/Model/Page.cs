@@ -64,124 +64,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Page" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="VersionId">VersionId.</param>
-        
-        
-        
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="RootContainer">RootContainer.</param>
-        
-        
-        
         /// <param name="Properties">Properties.</param>
-        
-        
-        
-        
         public Page(string Name = null, string VersionId = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, Dictionary<string, Object> RootContainer = null, Dictionary<string, Object> Properties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VersionId = VersionId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedDate = CreatedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RootContainer = RootContainer;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Properties = Properties;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.VersionId = VersionId;
+            this.CreatedDate = CreatedDate;
+            this.ModifiedDate = ModifiedDate;
+            this.RootContainer = RootContainer;
+            this.Properties = Properties;
             
         }
         
@@ -264,21 +160,13 @@ this.Properties = Properties;
             sb.Append("class Page {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  VersionId: ").Append(VersionId).Append("\n");
-            
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  RootContainer: ").Append(RootContainer).Append("\n");
-            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

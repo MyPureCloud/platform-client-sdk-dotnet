@@ -126,131 +126,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationEvent" /> class.
         /// </summary>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Message">Message indicating what happened.</param>
-        
-        
-        
         /// <param name="Entities">Collection of entities affected by or pertaining to the event (e.g. a list of Integrations or Bridge connectors).</param>
-        
-        
-        
         /// <param name="ContextAttributes">Map of context attributes specific to this event..</param>
-        
-        
-        
         /// <param name="DetailMessage">Message with additional details about the event. (e.g. an exception cause.).</param>
-        
-        
-        
         /// <param name="User">User that took an action that resulted in the event..</param>
-        
-        
         public IntegrationEvent(MessageInfo Message = null, List<EventEntity> Entities = null, Dictionary<string, string> ContextAttributes = null, MessageInfo DetailMessage = null, User User = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Message = Message;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Entities = Entities;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContextAttributes = ContextAttributes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DetailMessage = DetailMessage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
+            this.Message = Message;
+            this.Entities = Entities;
+            this.ContextAttributes = ContextAttributes;
+            this.DetailMessage = DetailMessage;
+            this.User = User;
             
         }
         
@@ -357,27 +244,16 @@ this.User = User;
             sb.Append("class IntegrationEvent {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("  CorrelationId: ").Append(CorrelationId).Append("\n");
-            
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
-            
             sb.Append("  Level: ").Append(Level).Append("\n");
-            
             sb.Append("  EventCode: ").Append(EventCode).Append("\n");
-            
             sb.Append("  Message: ").Append(Message).Append("\n");
-            
             sb.Append("  Entities: ").Append(Entities).Append("\n");
-            
             sb.Append("  ContextAttributes: ").Append(ContextAttributes).Append("\n");
-            
             sb.Append("  DetailMessage: ").Append(DetailMessage).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -245,180 +245,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleSetNotificationCondition" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="Inverted">Inverted.</param>
-        
-        
-        
         /// <param name="AttributeName">AttributeName.</param>
-        
-        
-        
         /// <param name="Value">Value.</param>
-        
-        
-        
         /// <param name="ValueType">ValueType.</param>
-        
-        
-        
         /// <param name="_Operator">_Operator.</param>
-        
-        
-        
         /// <param name="Codes">Codes.</param>
-        
-        
-        
         /// <param name="PropertyType">PropertyType.</param>
-        
-        
-        
         /// <param name="Property">Property.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public RuleSetNotificationCondition(string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null, PropertyTypeEnum? PropertyType = null, string Property = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Inverted = Inverted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AttributeName = AttributeName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ValueType = ValueType;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Operator = _Operator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Codes = Codes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PropertyType = PropertyType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Property = Property;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Type = Type;
+            this.Inverted = Inverted;
+            this.AttributeName = AttributeName;
+            this.Value = Value;
+            this.ValueType = ValueType;
+            this._Operator = _Operator;
+            this.Codes = Codes;
+            this.PropertyType = PropertyType;
+            this.Property = Property;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -495,25 +343,15 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class RuleSetNotificationCondition {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
-            
             sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  ValueType: ").Append(ValueType).Append("\n");
-            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-            
             sb.Append("  Codes: ").Append(Codes).Append("\n");
-            
             sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
-            
             sb.Append("  Property: ").Append(Property).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

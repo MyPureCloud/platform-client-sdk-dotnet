@@ -40,54 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScheduleInterval" /> class.
         /// </summary>
-        
-        
         /// <param name="Start">The scheduled start time as an ISO-8601 string, i.e yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
-        
         /// <param name="End">The scheduled end time as an ISO-8601 string, i.e. yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
         public ScheduleInterval(string Start = null, string End = null)
         {
-            
-            
-            
-            // to ensure "Start" is required (not null)
-            if (Start == null)
-            {
-                throw new InvalidDataException("Start is a required property for ScheduleInterval and cannot be null");
-            }
-            else
-            {
-                this.Start = Start;
-            }
-            
-            
-            
-            
-            
-            // to ensure "End" is required (not null)
-            if (End == null)
-            {
-                throw new InvalidDataException("End is a required property for ScheduleInterval and cannot be null");
-            }
-            else
-            {
-                this.End = End;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -120,9 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ScheduleInterval {\n");
             
             sb.Append("  Start: ").Append(Start).Append("\n");
-            
             sb.Append("  End: ").Append(End).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

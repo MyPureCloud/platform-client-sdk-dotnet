@@ -389,8 +389,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LocationDefinition>(localVarStatusCode,
                 localVarHeaders,
-                (LocationDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationDefinition)));
-            
+                (LocationDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -485,8 +486,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LocationDefinition>(localVarStatusCode,
                 localVarHeaders,
-                (LocationDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationDefinition)));
-            
+                (LocationDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -583,8 +585,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LocationEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (LocationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationEntityListing)));
-            
+                (LocationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -681,8 +684,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LocationEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (LocationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationEntityListing)));
-            
+                (LocationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -779,8 +783,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LocationsSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (LocationsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationsSearchResponse)));
-            
+                (LocationsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationsSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -878,8 +883,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LocationsSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (LocationsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationsSearchResponse)));
-            
+                (LocationsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationsSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -977,8 +983,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LocationsSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (LocationsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationsSearchResponse)));
-            
+                (LocationsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationsSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1077,8 +1084,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LocationsSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (LocationsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationsSearchResponse)));
-            
+                (LocationsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationsSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

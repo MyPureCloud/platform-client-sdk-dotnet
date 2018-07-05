@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SocialConversationNotificationDetail" /> class.
         /// </summary>
-        
-        
         /// <param name="ErrorCode">ErrorCode.</param>
-        
-        
-        
         /// <param name="FieldName">FieldName.</param>
-        
-        
-        
         /// <param name="EntityId">EntityId.</param>
-        
-        
-        
         /// <param name="EntityName">EntityName.</param>
-        
-        
         public SocialConversationNotificationDetail(string ErrorCode = null, string FieldName = null, string EntityId = null, string EntityName = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorCode = ErrorCode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FieldName = FieldName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EntityId = EntityId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EntityName = EntityName;
-            
-            
-            
+            this.ErrorCode = ErrorCode;
+            this.FieldName = FieldName;
+            this.EntityId = EntityId;
+            this.EntityName = EntityName;
             
         }
         
@@ -162,13 +100,9 @@ this.EntityName = EntityName;
             sb.Append("class SocialConversationNotificationDetail {\n");
             
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
-            
             sb.Append("  EntityId: ").Append(EntityId).Append("\n");
-            
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

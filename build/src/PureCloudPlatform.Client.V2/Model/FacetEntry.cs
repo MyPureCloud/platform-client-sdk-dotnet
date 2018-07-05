@@ -121,146 +121,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetEntry" /> class.
         /// </summary>
-        
-        
         /// <param name="Attribute">Attribute.</param>
-        
-        
-        
         /// <param name="Statistics">Statistics.</param>
-        
-        
-        
         /// <param name="Other">Other.</param>
-        
-        
-        
         /// <param name="Total">Total.</param>
-        
-        
-        
         /// <param name="Missing">Missing.</param>
-        
-        
-        
         /// <param name="TermCount">TermCount.</param>
-        
-        
-        
         /// <param name="TermType">TermType.</param>
-        
-        
-        
         /// <param name="Terms">Terms.</param>
-        
-        
         public FacetEntry(TermAttribute Attribute = null, FacetStatistics Statistics = null, long? Other = null, long? Total = null, long? Missing = null, int? TermCount = null, TermTypeEnum? TermType = null, List<FacetTerm> Terms = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attribute = Attribute;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Statistics = Statistics;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Other = Other;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Total = Total;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Missing = Missing;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TermCount = TermCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TermType = TermType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Terms = Terms;
-            
-            
-            
+            this.Attribute = Attribute;
+            this.Statistics = Statistics;
+            this.Other = Other;
+            this.Total = Total;
+            this.Missing = Missing;
+            this.TermCount = TermCount;
+            this.TermType = TermType;
+            this.Terms = Terms;
             
         }
         
@@ -333,21 +211,13 @@ this.Terms = Terms;
             sb.Append("class FacetEntry {\n");
             
             sb.Append("  Attribute: ").Append(Attribute).Append("\n");
-            
             sb.Append("  Statistics: ").Append(Statistics).Append("\n");
-            
             sb.Append("  Other: ").Append(Other).Append("\n");
-            
             sb.Append("  Total: ").Append(Total).Append("\n");
-            
             sb.Append("  Missing: ").Append(Missing).Append("\n");
-            
             sb.Append("  TermCount: ").Append(TermCount).Append("\n");
-            
             sb.Append("  TermType: ").Append(TermType).Append("\n");
-            
             sb.Append("  Terms: ").Append(Terms).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

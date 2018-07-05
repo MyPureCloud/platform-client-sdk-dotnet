@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentSortItem" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Ascending">Ascending.</param>
-        
-        
         public ContentSortItem(string Name = null, bool? Ascending = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Ascending = Ascending;
-            
-            
-            
+            this.Name = Name;
+            this.Ascending = Ascending;
             
         }
         
@@ -102,9 +70,7 @@ this.Ascending = Ascending;
             sb.Append("class ContentSortItem {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Ascending: ").Append(Ascending).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

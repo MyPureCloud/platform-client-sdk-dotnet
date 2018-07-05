@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Address" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">This will be nameRaw if present, or a locality lookup of the address field otherwise..</param>
-        
-        
-        
         /// <param name="NameRaw">The name as close to the bits on the wire as possible..</param>
-        
-        
-        
         /// <param name="AddressNormalized">The normalized address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table..</param>
-        
-        
-        
         /// <param name="AddressRaw">The address as close to the bits on the wire as possible..</param>
-        
-        
-        
         /// <param name="AddressDisplayable">The displayable address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table..</param>
-        
-        
         public Address(string Name = null, string NameRaw = null, string AddressNormalized = null, string AddressRaw = null, string AddressDisplayable = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NameRaw = NameRaw;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressNormalized = AddressNormalized;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressRaw = AddressRaw;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressDisplayable = AddressDisplayable;
-            
-            
-            
+            this.Name = Name;
+            this.NameRaw = NameRaw;
+            this.AddressNormalized = AddressNormalized;
+            this.AddressRaw = AddressRaw;
+            this.AddressDisplayable = AddressDisplayable;
             
         }
         
@@ -197,15 +120,10 @@ this.AddressDisplayable = AddressDisplayable;
             sb.Append("class Address {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  NameRaw: ").Append(NameRaw).Append("\n");
-            
             sb.Append("  AddressNormalized: ").Append(AddressNormalized).Append("\n");
-            
             sb.Append("  AddressRaw: ").Append(AddressRaw).Append("\n");
-            
             sb.Append("  AddressDisplayable: ").Append(AddressDisplayable).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

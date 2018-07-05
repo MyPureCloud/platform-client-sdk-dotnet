@@ -64,146 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JsonSchemaDocument" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Schema">Schema.</param>
-        
-        
-        
         /// <param name="Title">Title.</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="Required">Required.</param>
-        
-        
-        
         /// <param name="Properties">Properties.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public JsonSchemaDocument(string Id = null, string Schema = null, string Title = null, string Description = null, string Type = null, List<string> Required = null, Dictionary<string, Object> Properties = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Schema = Schema;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Title = Title;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Required = Required;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Properties = Properties;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Id = Id;
+            this.Schema = Schema;
+            this.Title = Title;
+            this.Description = Description;
+            this.Type = Type;
+            this.Required = Required;
+            this.Properties = Properties;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -282,21 +160,13 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class JsonSchemaDocument {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Schema: ").Append(Schema).Append("\n");
-            
             sb.Append("  Title: ").Append(Title).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Required: ").Append(Required).Append("\n");
-            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

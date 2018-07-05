@@ -103,61 +103,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KeyRotationSchedule" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Period">Value to set schedule to (required).</param>
-        
-        
-        
-        
         public KeyRotationSchedule(string Name = null, PeriodEnum? Period = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Period" is required (not null)
-            if (Period == null)
-            {
-                throw new InvalidDataException("Period is a required property for KeyRotationSchedule and cannot be null");
-            }
-            else
-            {
-                this.Period = Period;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
             
         }
         
@@ -200,13 +150,9 @@ this.Name = Name;
             sb.Append("class KeyRotationSchedule {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Period: ").Append(Period).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

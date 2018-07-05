@@ -84,214 +84,32 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMessageNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Read">Read.</param>
-        
-        
-        
         /// <param name="AudioRecordingDurationSeconds">AudioRecordingDurationSeconds.</param>
-        
-        
-        
         /// <param name="AudioRecordingSizeBytes">AudioRecordingSizeBytes.</param>
-        
-        
-        
         /// <param name="CreatedDate">CreatedDate.</param>
-        
-        
-        
         /// <param name="ModifiedDate">ModifiedDate.</param>
-        
-        
-        
         /// <param name="CallerAddress">CallerAddress.</param>
-        
-        
-        
         /// <param name="CallerName">CallerName.</param>
-        
-        
-        
         /// <param name="Action">Action.</param>
-        
-        
-        
         /// <param name="Note">Note.</param>
-        
-        
-        
         /// <param name="Deleted">Deleted.</param>
-        
-        
-        
         /// <param name="ModifiedByUserId">ModifiedByUserId.</param>
-        
-        
         public VoicemailMessageNotification(string Id = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, int? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CallerAddress = null, string CallerName = null, string Action = null, string Note = null, bool? Deleted = null, string ModifiedByUserId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Read = Read;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AudioRecordingDurationSeconds = AudioRecordingDurationSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AudioRecordingSizeBytes = AudioRecordingSizeBytes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedDate = CreatedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallerAddress = CallerAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallerName = CallerName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Action = Action;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Note = Note;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Deleted = Deleted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedByUserId = ModifiedByUserId;
-            
-            
-            
+            this.Id = Id;
+            this.Read = Read;
+            this.AudioRecordingDurationSeconds = AudioRecordingDurationSeconds;
+            this.AudioRecordingSizeBytes = AudioRecordingSizeBytes;
+            this.CreatedDate = CreatedDate;
+            this.ModifiedDate = ModifiedDate;
+            this.CallerAddress = CallerAddress;
+            this.CallerName = CallerName;
+            this.Action = Action;
+            this.Note = Note;
+            this.Deleted = Deleted;
+            this.ModifiedByUserId = ModifiedByUserId;
             
         }
         
@@ -402,29 +220,17 @@ this.ModifiedByUserId = ModifiedByUserId;
             sb.Append("class VoicemailMessageNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Read: ").Append(Read).Append("\n");
-            
             sb.Append("  AudioRecordingDurationSeconds: ").Append(AudioRecordingDurationSeconds).Append("\n");
-            
             sb.Append("  AudioRecordingSizeBytes: ").Append(AudioRecordingSizeBytes).Append("\n");
-            
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  CallerAddress: ").Append(CallerAddress).Append("\n");
-            
             sb.Append("  CallerName: ").Append(CallerName).Append("\n");
-            
             sb.Append("  Action: ").Append(Action).Append("\n");
-            
             sb.Append("  Note: ").Append(Note).Append("\n");
-            
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
-            
             sb.Append("  ModifiedByUserId: ").Append(ModifiedByUserId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

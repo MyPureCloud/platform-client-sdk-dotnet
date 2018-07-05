@@ -345,49 +345,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ObservationQuery" /> class.
         /// </summary>
-        
-        
         /// <param name="Filter">Filter to return a subset of observations. Expresses boolean logical predicates as well as dimensional filters (required).</param>
-        
-        
-        
         /// <param name="Metrics">Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *)..</param>
-        
-        
         public ObservationQuery(AnalyticsQueryFilter Filter = null, List<MetricsEnum> Metrics = null)
         {
-            
-            
-            
-            // to ensure "Filter" is required (not null)
-            if (Filter == null)
-            {
-                throw new InvalidDataException("Filter is a required property for ObservationQuery and cannot be null");
-            }
-            else
-            {
-                this.Filter = Filter;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metrics = Metrics;
-            
-            
-            
+            this.Metrics = Metrics;
             
         }
         
@@ -420,9 +382,7 @@ this.Metrics = Metrics;
             sb.Append("class ObservationQuery {\n");
             
             sb.Append("  Filter: ").Append(Filter).Append("\n");
-            
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

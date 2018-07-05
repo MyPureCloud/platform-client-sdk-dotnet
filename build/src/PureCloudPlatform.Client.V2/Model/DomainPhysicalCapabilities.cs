@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPhysicalCapabilities" /> class.
         /// </summary>
-        
-        
         /// <param name="Vlan">Vlan.</param>
-        
-        
-        
         /// <param name="Team">Team.</param>
-        
-        
         public DomainPhysicalCapabilities(bool? Vlan = null, bool? Team = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Vlan = Vlan;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Team = Team;
-            
-            
-            
+            this.Vlan = Vlan;
+            this.Team = Team;
             
         }
         
@@ -102,9 +70,7 @@ this.Team = Team;
             sb.Append("class DomainPhysicalCapabilities {\n");
             
             sb.Append("  Vlan: ").Append(Vlan).Append("\n");
-            
             sb.Append("  Team: ").Append(Team).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

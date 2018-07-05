@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportScriptStatusResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="Url">Url.</param>
-        
-        
-        
         /// <param name="Succeeded">Succeeded.</param>
-        
-        
-        
         /// <param name="Message">Message.</param>
-        
-        
         public ImportScriptStatusResponse(string Url = null, bool? Succeeded = null, string Message = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Url = Url;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Succeeded = Succeeded;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Message = Message;
-            
-            
-            
+            this.Url = Url;
+            this.Succeeded = Succeeded;
+            this.Message = Message;
             
         }
         
@@ -132,11 +85,8 @@ this.Message = Message;
             sb.Append("class ImportScriptStatusResponse {\n");
             
             sb.Append("  Url: ").Append(Url).Append("\n");
-            
             sb.Append("  Succeeded: ").Append(Succeeded).Append("\n");
-            
             sb.Append("  Message: ").Append(Message).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

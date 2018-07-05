@@ -128,146 +128,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxSendRequest" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Addresses">A list of outbound fax dialing addresses. E.g. +13175555555 or 3175555555 (required).</param>
-        
-        
-        
         /// <param name="DocumentId">DocumentId of Content Management artifact. If Content Management document is not used for faxing, documentId should be null.</param>
-        
-        
-        
         /// <param name="ContentType">The content type that is going to be uploaded. If Content Management document is used for faxing, contentType will be ignored.</param>
-        
-        
-        
         /// <param name="Workspace">Workspace in which the document should be stored. If Content Management document is used for faxing, workspace will be ignored.</param>
-        
-        
-        
         /// <param name="CoverSheet">Data for coversheet generation..</param>
-        
-        
-        
         /// <param name="TimeZoneOffsetMinutes">Time zone offset minutes from GMT.</param>
-        
-        
-        
-        
         public FaxSendRequest(string Name = null, List<string> Addresses = null, string DocumentId = null, ContentTypeEnum? ContentType = null, Workspace Workspace = null, CoverSheet CoverSheet = null, int? TimeZoneOffsetMinutes = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Addresses" is required (not null)
-            if (Addresses == null)
-            {
-                throw new InvalidDataException("Addresses is a required property for FaxSendRequest and cannot be null");
-            }
-            else
-            {
-                this.Addresses = Addresses;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.DocumentId = DocumentId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentType = ContentType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Workspace = Workspace;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CoverSheet = CoverSheet;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeZoneOffsetMinutes = TimeZoneOffsetMinutes;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.DocumentId = DocumentId;
+            this.ContentType = ContentType;
+            this.Workspace = Workspace;
+            this.CoverSheet = CoverSheet;
+            this.TimeZoneOffsetMinutes = TimeZoneOffsetMinutes;
             
         }
         
@@ -355,23 +230,14 @@ this.TimeZoneOffsetMinutes = TimeZoneOffsetMinutes;
             sb.Append("class FaxSendRequest {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
-            
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
-            
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
-            
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
-            
             sb.Append("  CoverSheet: ").Append(CoverSheet).Append("\n");
-            
             sb.Append("  TimeZoneOffsetMinutes: ").Append(TimeZoneOffsetMinutes).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

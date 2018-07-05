@@ -355,350 +355,48 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationCallbacks" /> class.
         /// </summary>
-        
-        
         /// <param name="State">State.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Direction">Direction.</param>
-        
-        
-        
         /// <param name="Held">Held.</param>
-        
-        
-        
         /// <param name="DisconnectType">DisconnectType.</param>
-        
-        
-        
         /// <param name="StartHoldTime">StartHoldTime.</param>
-        
-        
-        
         /// <param name="DialerPreview">DialerPreview.</param>
-        
-        
-        
         /// <param name="Voicemail">Voicemail.</param>
-        
-        
-        
         /// <param name="CallbackNumbers">CallbackNumbers.</param>
-        
-        
-        
         /// <param name="CallbackUserName">CallbackUserName.</param>
-        
-        
-        
         /// <param name="ScriptId">ScriptId.</param>
-        
-        
-        
         /// <param name="PeerId">PeerId.</param>
-        
-        
-        
         /// <param name="SkipEnabled">SkipEnabled.</param>
-        
-        
-        
         /// <param name="Provider">Provider.</param>
-        
-        
-        
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
-        
-        
-        
         /// <param name="ConnectedTime">ConnectedTime.</param>
-        
-        
-        
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
-        
-        
-        
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
-        
-        
-        
         /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ConversationNotificationCallbacks(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, ConversationNotificationDialerPreview DialerPreview = null, ConversationNotificationVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Held = Held;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartHoldTime = StartHoldTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DialerPreview = DialerPreview;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Voicemail = Voicemail;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallbackNumbers = CallbackNumbers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallbackUserName = CallbackUserName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScriptId = ScriptId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerId = PeerId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SkipEnabled = SkipEnabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeoutSeconds = TimeoutSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectedTime = DisconnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallbackScheduledTime = CallbackScheduledTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.State = State;
+            this.Id = Id;
+            this.Direction = Direction;
+            this.Held = Held;
+            this.DisconnectType = DisconnectType;
+            this.StartHoldTime = StartHoldTime;
+            this.DialerPreview = DialerPreview;
+            this.Voicemail = Voicemail;
+            this.CallbackNumbers = CallbackNumbers;
+            this.CallbackUserName = CallbackUserName;
+            this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
+            this.SkipEnabled = SkipEnabled;
+            this.Provider = Provider;
+            this.TimeoutSeconds = TimeoutSeconds;
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
+            this.CallbackScheduledTime = CallbackScheduledTime;
+            this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -855,45 +553,25 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ConversationNotificationCallbacks {\n");
             
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  Held: ").Append(Held).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
-            
             sb.Append("  DialerPreview: ").Append(DialerPreview).Append("\n");
-            
             sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
-            
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
-            
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
-            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
-            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
-            
             sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

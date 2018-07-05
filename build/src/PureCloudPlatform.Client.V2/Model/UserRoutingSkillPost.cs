@@ -50,66 +50,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRoutingSkillPost" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The id of the existing routing skill to add to the user (required).</param>
-        
-        
-        
         /// <param name="Proficiency">Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular skill. It is used when a queue is set to \&quot;Best available skills\&quot; mode to allow acd interactions to target agents with higher proficiency ratings. (required).</param>
-        
-        
-        
-        
-        
-        
         public UserRoutingSkillPost(string Id = null, double? Proficiency = null)
         {
-            
-            
-            
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for UserRoutingSkillPost and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Proficiency" is required (not null)
-            if (Proficiency == null)
-            {
-                throw new InvalidDataException("Proficiency is a required property for UserRoutingSkillPost and cannot be null");
-            }
-            else
-            {
-                this.Proficiency = Proficiency;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -160,13 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class UserRoutingSkillPost {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Proficiency: ").Append(Proficiency).Append("\n");
-            
             sb.Append("  SkillUri: ").Append(SkillUri).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

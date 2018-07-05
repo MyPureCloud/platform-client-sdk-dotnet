@@ -59,107 +59,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScreenRecordingSession" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="CommunicationId">The id of the communication that is being recorded on the conversation.</param>
-        
-        
-        
         /// <param name="Conversation">Conversation.</param>
-        
-        
-        
         /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
-        
         public ScreenRecordingSession(string Name = null, User User = null, string CommunicationId = null, Conversation Conversation = null, DateTime? StartTime = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CommunicationId = CommunicationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Conversation = Conversation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartTime = StartTime;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.User = User;
+            this.CommunicationId = CommunicationId;
+            this.Conversation = Conversation;
+            this.StartTime = StartTime;
             
         }
         
@@ -234,19 +145,12 @@ this.StartTime = StartTime;
             sb.Append("class ScreenRecordingSession {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  CommunicationId: ").Append(CommunicationId).Append("\n");
-            
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
-            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

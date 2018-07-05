@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingSettings" /> class.
         /// </summary>
-        
-        
         /// <param name="MaxSimultaneousStreams">MaxSimultaneousStreams.</param>
-        
-        
         public RecordingSettings(int? MaxSimultaneousStreams = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxSimultaneousStreams = MaxSimultaneousStreams;
-            
-            
-            
+            this.MaxSimultaneousStreams = MaxSimultaneousStreams;
             
         }
         
@@ -72,7 +55,6 @@ this.MaxSimultaneousStreams = MaxSimultaneousStreams;
             sb.Append("class RecordingSettings {\n");
             
             sb.Append("  MaxSimultaneousStreams: ").Append(MaxSimultaneousStreams).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageConversationNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Participants">Participants.</param>
-        
-        
-        
         /// <param name="OtherMediaUris">OtherMediaUris.</param>
-        
-        
         public MessageConversationNotification(string Id = null, string Name = null, List<MessageConversationNotificationParticipants> Participants = null, List<string> OtherMediaUris = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Participants = Participants;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OtherMediaUris = OtherMediaUris;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.Participants = Participants;
+            this.OtherMediaUris = OtherMediaUris;
             
         }
         
@@ -162,13 +100,9 @@ this.OtherMediaUris = OtherMediaUris;
             sb.Append("class MessageConversationNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
-            
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

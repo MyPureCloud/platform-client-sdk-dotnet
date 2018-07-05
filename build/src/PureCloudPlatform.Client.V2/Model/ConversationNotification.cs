@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="MaxParticipants">MaxParticipants.</param>
-        
-        
-        
         /// <param name="Participants">Participants.</param>
-        
-        
-        
         /// <param name="RecordingState">RecordingState.</param>
-        
-        
-        
         /// <param name="Address">Address.</param>
-        
-        
         public ConversationNotification(string Id = null, int? MaxParticipants = null, List<ConversationNotificationParticipants> Participants = null, string RecordingState = null, string Address = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxParticipants = MaxParticipants;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Participants = Participants;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingState = RecordingState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
+            this.Id = Id;
+            this.MaxParticipants = MaxParticipants;
+            this.Participants = Participants;
+            this.RecordingState = RecordingState;
+            this.Address = Address;
             
         }
         
@@ -192,15 +115,10 @@ this.Address = Address;
             sb.Append("class ConversationNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
-            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
-            
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
-            
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

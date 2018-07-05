@@ -99,265 +99,38 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="DateCreated">DateCreated.</param>
-        
-        
-        
         /// <param name="DateModified">DateModified.</param>
-        
-        
-        
         /// <param name="Version">Version.</param>
-        
-        
-        
         /// <param name="ColumnNames">ColumnNames.</param>
-        
-        
-        
         /// <param name="PhoneColumns">PhoneColumns.</param>
-        
-        
-        
         /// <param name="ImportStatus">ImportStatus.</param>
-        
-        
-        
         /// <param name="PreviewModeColumnName">PreviewModeColumnName.</param>
-        
-        
-        
         /// <param name="PreviewModeAcceptedValues">PreviewModeAcceptedValues.</param>
-        
-        
-        
         /// <param name="Size">Size.</param>
-        
-        
-        
         /// <param name="AttemptLimits">AttemptLimits.</param>
-        
-        
-        
         /// <param name="AutomaticTimeZoneMapping">AutomaticTimeZoneMapping.</param>
-        
-        
-        
         /// <param name="ZipCodeColumnName">ZipCodeColumnName.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ContactListNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<ContactListNotificationPhoneColumns> PhoneColumns = null, ContactListNotificationImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, int? Size = null, DocumentDataV2NotificationCreatedBy AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ColumnNames = ColumnNames;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneColumns = PhoneColumns;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ImportStatus = ImportStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PreviewModeColumnName = PreviewModeColumnName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PreviewModeAcceptedValues = PreviewModeAcceptedValues;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Size = Size;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AttemptLimits = AttemptLimits;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AutomaticTimeZoneMapping = AutomaticTimeZoneMapping;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ZipCodeColumnName = ZipCodeColumnName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Version = Version;
+            this.ColumnNames = ColumnNames;
+            this.PhoneColumns = PhoneColumns;
+            this.ImportStatus = ImportStatus;
+            this.PreviewModeColumnName = PreviewModeColumnName;
+            this.PreviewModeAcceptedValues = PreviewModeAcceptedValues;
+            this.Size = Size;
+            this.AttemptLimits = AttemptLimits;
+            this.AutomaticTimeZoneMapping = AutomaticTimeZoneMapping;
+            this.ZipCodeColumnName = ZipCodeColumnName;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -492,35 +265,20 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ContactListNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  ColumnNames: ").Append(ColumnNames).Append("\n");
-            
             sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
-            
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
-            
             sb.Append("  PreviewModeColumnName: ").Append(PreviewModeColumnName).Append("\n");
-            
             sb.Append("  PreviewModeAcceptedValues: ").Append(PreviewModeAcceptedValues).Append("\n");
-            
             sb.Append("  Size: ").Append(Size).Append("\n");
-            
             sb.Append("  AttemptLimits: ").Append(AttemptLimits).Append("\n");
-            
             sb.Append("  AutomaticTimeZoneMapping: ").Append(AutomaticTimeZoneMapping).Append("\n");
-            
             sb.Append("  ZipCodeColumnName: ").Append(ZipCodeColumnName).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

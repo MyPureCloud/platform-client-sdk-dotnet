@@ -49,73 +49,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GeolocationSettings" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Enabled">Enabled.</param>
-        
-        
-        
         /// <param name="MapboxKey">MapboxKey.</param>
-        
-        
-        
-        
         public GeolocationSettings(string Name = null, bool? Enabled = null, string MapboxKey = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Enabled = Enabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MapboxKey = MapboxKey;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Enabled = Enabled;
+            this.MapboxKey = MapboxKey;
             
         }
         
@@ -172,15 +113,10 @@ this.MapboxKey = MapboxKey;
             sb.Append("class GeolocationSettings {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  MapboxKey: ").Append(MapboxKey).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

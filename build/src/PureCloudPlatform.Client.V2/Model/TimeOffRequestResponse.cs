@@ -161,294 +161,40 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestResponse" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="User">The user associated with this time off request.</param>
-        
-        
-        
         /// <param name="IsFullDayRequest">Whether this is a full day request (false means partial day).</param>
-        
-        
-        
         /// <param name="MarkedAsRead">Whether this request has been marked as read by the agent.</param>
-        
-        
-        
         /// <param name="ActivityCodeId">The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category.</param>
-        
-        
-        
         /// <param name="Status">The status of this time off request.</param>
-        
-        
-        
         /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false.</param>
-        
-        
-        
         /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest == true.</param>
-        
-        
-        
         /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes.</param>
-        
-        
-        
         /// <param name="Notes">Notes about the time off request.</param>
-        
-        
-        
         /// <param name="SubmittedBy">The user who submitted this time off request.</param>
-        
-        
-        
         /// <param name="SubmittedDate">The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ReviewedBy">The user who reviewed this time off request.</param>
-        
-        
-        
         /// <param name="ReviewedDate">The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ModifiedBy">The user who last modified this TimeOffRequestResponse.</param>
-        
-        
-        
         /// <param name="ModifiedDate">The timestamp when this request was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Metadata">The version metadata of the time off request.</param>
-        
-        
-        
-        
         public TimeOffRequestResponse(User User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, StatusEnum? Status = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, string Notes = null, User SubmittedBy = null, DateTime? SubmittedDate = null, User ReviewedBy = null, DateTime? ReviewedDate = null, UserReference ModifiedBy = null, DateTime? ModifiedDate = null, WfmVersionedEntityMetadata Metadata = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IsFullDayRequest = IsFullDayRequest;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MarkedAsRead = MarkedAsRead;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActivityCodeId = ActivityCodeId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PartialDayStartDateTimes = PartialDayStartDateTimes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FullDayManagementUnitDates = FullDayManagementUnitDates;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DailyDurationMinutes = DailyDurationMinutes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Notes = Notes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SubmittedBy = SubmittedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SubmittedDate = SubmittedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReviewedBy = ReviewedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReviewedDate = ReviewedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metadata = Metadata;
-            
-            
-            
-            
-            
+            this.User = User;
+            this.IsFullDayRequest = IsFullDayRequest;
+            this.MarkedAsRead = MarkedAsRead;
+            this.ActivityCodeId = ActivityCodeId;
+            this.Status = Status;
+            this.PartialDayStartDateTimes = PartialDayStartDateTimes;
+            this.FullDayManagementUnitDates = FullDayManagementUnitDates;
+            this.DailyDurationMinutes = DailyDurationMinutes;
+            this.Notes = Notes;
+            this.SubmittedBy = SubmittedBy;
+            this.SubmittedDate = SubmittedDate;
+            this.ReviewedBy = ReviewedBy;
+            this.ReviewedDate = ReviewedDate;
+            this.ModifiedBy = ModifiedBy;
+            this.ModifiedDate = ModifiedDate;
+            this.Metadata = Metadata;
             
         }
         
@@ -618,41 +364,23 @@ this.Metadata = Metadata;
             sb.Append("class TimeOffRequestResponse {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  IsFullDayRequest: ").Append(IsFullDayRequest).Append("\n");
-            
             sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
-            
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
-            
             sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
-            
             sb.Append("  DailyDurationMinutes: ").Append(DailyDurationMinutes).Append("\n");
-            
             sb.Append("  Notes: ").Append(Notes).Append("\n");
-            
             sb.Append("  SubmittedBy: ").Append(SubmittedBy).Append("\n");
-            
             sb.Append("  SubmittedDate: ").Append(SubmittedDate).Append("\n");
-            
             sb.Append("  ReviewedBy: ").Append(ReviewedBy).Append("\n");
-            
             sb.Append("  ReviewedDate: ").Append(ReviewedDate).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

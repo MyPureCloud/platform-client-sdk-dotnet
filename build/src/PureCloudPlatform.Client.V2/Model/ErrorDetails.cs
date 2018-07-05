@@ -64,146 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ErrorDetails" /> class.
         /// </summary>
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="Message">Message.</param>
-        
-        
-        
         /// <param name="MessageWithParams">MessageWithParams.</param>
-        
-        
-        
         /// <param name="MessageParams">MessageParams.</param>
-        
-        
-        
         /// <param name="Code">Code.</param>
-        
-        
-        
         /// <param name="ContextId">ContextId.</param>
-        
-        
-        
         /// <param name="Nested">Nested.</param>
-        
-        
-        
         /// <param name="Details">Details.</param>
-        
-        
         public ErrorDetails(int? Status = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string Code = null, string ContextId = null, ErrorDetails Nested = null, string Details = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Message = Message;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageWithParams = MessageWithParams;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageParams = MessageParams;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Code = Code;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContextId = ContextId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Nested = Nested;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Details = Details;
-            
-            
-            
+            this.Status = Status;
+            this.Message = Message;
+            this.MessageWithParams = MessageWithParams;
+            this.MessageParams = MessageParams;
+            this.Code = Code;
+            this.ContextId = ContextId;
+            this.Nested = Nested;
+            this.Details = Details;
             
         }
         
@@ -282,21 +160,13 @@ this.Details = Details;
             sb.Append("class ErrorDetails {\n");
             
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  Message: ").Append(Message).Append("\n");
-            
             sb.Append("  MessageWithParams: ").Append(MessageWithParams).Append("\n");
-            
             sb.Append("  MessageParams: ").Append(MessageParams).Append("\n");
-            
             sb.Append("  Code: ").Append(Code).Append("\n");
-            
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
-            
             sb.Append("  Nested: ").Append(Nested).Append("\n");
-            
             sb.Append("  Details: ").Append(Details).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

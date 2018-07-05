@@ -79,197 +79,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QuestionGroupScore" /> class.
         /// </summary>
-        
-        
         /// <param name="QuestionGroupId">QuestionGroupId.</param>
-        
-        
-        
         /// <param name="TotalScore">TotalScore.</param>
-        
-        
-        
         /// <param name="MaxTotalScore">MaxTotalScore.</param>
-        
-        
-        
         /// <param name="TotalCriticalScore">TotalCriticalScore.</param>
-        
-        
-        
         /// <param name="MaxTotalCriticalScore">MaxTotalCriticalScore.</param>
-        
-        
-        
         /// <param name="TotalScoreUnweighted">TotalScoreUnweighted.</param>
-        
-        
-        
         /// <param name="MaxTotalScoreUnweighted">MaxTotalScoreUnweighted.</param>
-        
-        
-        
         /// <param name="TotalCriticalScoreUnweighted">TotalCriticalScoreUnweighted.</param>
-        
-        
-        
         /// <param name="MaxTotalCriticalScoreUnweighted">MaxTotalCriticalScoreUnweighted.</param>
-        
-        
-        
         /// <param name="MarkedNA">MarkedNA.</param>
-        
-        
-        
         /// <param name="QuestionScores">QuestionScores.</param>
-        
-        
         public QuestionGroupScore(string QuestionGroupId = null, float? TotalScore = null, float? MaxTotalScore = null, float? TotalCriticalScore = null, float? MaxTotalCriticalScore = null, float? TotalScoreUnweighted = null, float? MaxTotalScoreUnweighted = null, float? TotalCriticalScoreUnweighted = null, float? MaxTotalCriticalScoreUnweighted = null, bool? MarkedNA = null, List<QuestionScore> QuestionScores = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.QuestionGroupId = QuestionGroupId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalScore = TotalScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxTotalScore = MaxTotalScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalCriticalScore = TotalCriticalScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxTotalCriticalScore = MaxTotalCriticalScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalScoreUnweighted = TotalScoreUnweighted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxTotalScoreUnweighted = MaxTotalScoreUnweighted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalCriticalScoreUnweighted = TotalCriticalScoreUnweighted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxTotalCriticalScoreUnweighted = MaxTotalCriticalScoreUnweighted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MarkedNA = MarkedNA;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QuestionScores = QuestionScores;
-            
-            
-            
+            this.QuestionGroupId = QuestionGroupId;
+            this.TotalScore = TotalScore;
+            this.MaxTotalScore = MaxTotalScore;
+            this.TotalCriticalScore = TotalCriticalScore;
+            this.MaxTotalCriticalScore = MaxTotalCriticalScore;
+            this.TotalScoreUnweighted = TotalScoreUnweighted;
+            this.MaxTotalScoreUnweighted = MaxTotalScoreUnweighted;
+            this.TotalCriticalScoreUnweighted = TotalCriticalScoreUnweighted;
+            this.MaxTotalCriticalScoreUnweighted = MaxTotalCriticalScoreUnweighted;
+            this.MarkedNA = MarkedNA;
+            this.QuestionScores = QuestionScores;
             
         }
         
@@ -372,27 +205,16 @@ this.QuestionScores = QuestionScores;
             sb.Append("class QuestionGroupScore {\n");
             
             sb.Append("  QuestionGroupId: ").Append(QuestionGroupId).Append("\n");
-            
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
-            
             sb.Append("  MaxTotalScore: ").Append(MaxTotalScore).Append("\n");
-            
             sb.Append("  TotalCriticalScore: ").Append(TotalCriticalScore).Append("\n");
-            
             sb.Append("  MaxTotalCriticalScore: ").Append(MaxTotalCriticalScore).Append("\n");
-            
             sb.Append("  TotalScoreUnweighted: ").Append(TotalScoreUnweighted).Append("\n");
-            
             sb.Append("  MaxTotalScoreUnweighted: ").Append(MaxTotalScoreUnweighted).Append("\n");
-            
             sb.Append("  TotalCriticalScoreUnweighted: ").Append(TotalCriticalScoreUnweighted).Append("\n");
-            
             sb.Append("  MaxTotalCriticalScoreUnweighted: ").Append(MaxTotalCriticalScoreUnweighted).Append("\n");
-            
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
-            
             sb.Append("  QuestionScores: ").Append(QuestionScores).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

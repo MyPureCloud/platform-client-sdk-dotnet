@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WritableEntity" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The globally unique identifier for the object..</param>
-        
-        
         public WritableEntity(string Id = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
+            this.Id = Id;
             
         }
         
@@ -73,7 +56,6 @@ this.Id = Id;
             sb.Append("class WritableEntity {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

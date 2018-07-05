@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainOrgRoleDifference" /> class.
         /// </summary>
-        
-        
         /// <param name="RemovedPermissionPolicies">RemovedPermissionPolicies.</param>
-        
-        
-        
         /// <param name="AddedPermissionPolicies">AddedPermissionPolicies.</param>
-        
-        
-        
         /// <param name="SamePermissionPolicies">SamePermissionPolicies.</param>
-        
-        
-        
         /// <param name="UserOrgRole">UserOrgRole.</param>
-        
-        
-        
         /// <param name="RoleFromDefault">RoleFromDefault.</param>
-        
-        
         public DomainOrgRoleDifference(List<DomainPermissionPolicy> RemovedPermissionPolicies = null, List<DomainPermissionPolicy> AddedPermissionPolicies = null, List<DomainPermissionPolicy> SamePermissionPolicies = null, DomainOrganizationRole UserOrgRole = null, DomainOrganizationRole RoleFromDefault = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RemovedPermissionPolicies = RemovedPermissionPolicies;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddedPermissionPolicies = AddedPermissionPolicies;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SamePermissionPolicies = SamePermissionPolicies;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserOrgRole = UserOrgRole;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoleFromDefault = RoleFromDefault;
-            
-            
-            
+            this.RemovedPermissionPolicies = RemovedPermissionPolicies;
+            this.AddedPermissionPolicies = AddedPermissionPolicies;
+            this.SamePermissionPolicies = SamePermissionPolicies;
+            this.UserOrgRole = UserOrgRole;
+            this.RoleFromDefault = RoleFromDefault;
             
         }
         
@@ -192,15 +115,10 @@ this.RoleFromDefault = RoleFromDefault;
             sb.Append("class DomainOrgRoleDifference {\n");
             
             sb.Append("  RemovedPermissionPolicies: ").Append(RemovedPermissionPolicies).Append("\n");
-            
             sb.Append("  AddedPermissionPolicies: ").Append(AddedPermissionPolicies).Append("\n");
-            
             sb.Append("  SamePermissionPolicies: ").Append(SamePermissionPolicies).Append("\n");
-            
             sb.Append("  UserOrgRole: ").Append(UserOrgRole).Append("\n");
-            
             sb.Append("  RoleFromDefault: ").Append(RoleFromDefault).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

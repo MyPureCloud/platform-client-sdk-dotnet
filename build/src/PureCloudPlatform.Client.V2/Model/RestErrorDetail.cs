@@ -34,22 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestErrorDetail" /> class.
         /// </summary>
-        
-        
-        
-        
-        
         public RestErrorDetail()
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -82,9 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class RestErrorDetail {\n");
             
             sb.Append("  Error: ").Append(Error).Append("\n");
-            
             sb.Append("  Details: ").Append(Details).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

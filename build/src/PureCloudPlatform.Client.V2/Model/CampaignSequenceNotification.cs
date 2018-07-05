@@ -118,197 +118,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignSequenceNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="DateCreated">DateCreated.</param>
-        
-        
-        
         /// <param name="DateModified">DateModified.</param>
-        
-        
-        
         /// <param name="Version">Version.</param>
-        
-        
-        
         /// <param name="Campaigns">Campaigns.</param>
-        
-        
-        
         /// <param name="CurrentCampaign">CurrentCampaign.</param>
-        
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="StopMessage">StopMessage.</param>
-        
-        
-        
         /// <param name="Repeat">Repeat.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public CampaignSequenceNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<DocumentDataV2NotificationCreatedBy> Campaigns = null, int? CurrentCampaign = null, StatusEnum? Status = null, string StopMessage = null, bool? Repeat = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Campaigns = Campaigns;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CurrentCampaign = CurrentCampaign;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StopMessage = StopMessage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Repeat = Repeat;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Version = Version;
+            this.Campaigns = Campaigns;
+            this.CurrentCampaign = CurrentCampaign;
+            this.Status = Status;
+            this.StopMessage = StopMessage;
+            this.Repeat = Repeat;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -405,27 +238,16 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class CampaignSequenceNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
-            
             sb.Append("  CurrentCampaign: ").Append(CurrentCampaign).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  StopMessage: ").Append(StopMessage).Append("\n");
-            
             sb.Append("  Repeat: ").Append(Repeat).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

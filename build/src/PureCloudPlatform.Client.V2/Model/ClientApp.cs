@@ -116,124 +116,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientApp" /> class.
         /// </summary>
-        
-        
-        
-        
-        
-        
         /// <param name="IntegrationType">Type of the integration.</param>
-        
-        
-        
-        
-        
         /// <param name="IntendedState">Configured state of the integration. (required).</param>
-        
-        
-        
         /// <param name="Config">Configuration information for the integration..</param>
-        
-        
-        
         /// <param name="ReportedState">Last reported status of the integration..</param>
-        
-        
-        
         /// <param name="Attributes">Read-only attributes for the integration..</param>
-        
-        
-        
-        
         public ClientApp(IntegrationType IntegrationType = null, IntendedStateEnum? IntendedState = null, ClientAppConfigurationInfo Config = null, IntegrationStatusInfo ReportedState = null, Dictionary<string, string> Attributes = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "IntendedState" is required (not null)
-            if (IntendedState == null)
-            {
-                throw new InvalidDataException("IntendedState is a required property for ClientApp and cannot be null");
-            }
-            else
-            {
-                this.IntendedState = IntendedState;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.IntegrationType = IntegrationType;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Config = Config;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReportedState = ReportedState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attributes = Attributes;
-            
-            
-            
-            
-            
+            this.IntegrationType = IntegrationType;
+            this.Config = Config;
+            this.ReportedState = ReportedState;
+            this.Attributes = Attributes;
             
         }
         
@@ -322,23 +215,14 @@ this.Attributes = Attributes;
             sb.Append("class ClientApp {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  IntegrationType: ").Append(IntegrationType).Append("\n");
-            
             sb.Append("  Notes: ").Append(Notes).Append("\n");
-            
             sb.Append("  IntendedState: ").Append(IntendedState).Append("\n");
-            
             sb.Append("  Config: ").Append(Config).Append("\n");
-            
             sb.Append("  ReportedState: ").Append(ReportedState).Append("\n");
-            
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

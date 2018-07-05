@@ -59,107 +59,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EncryptionKey" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="CreateDate">create date of the key pair. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="KeydataSummary">key data summary (base 64 encoded public key).</param>
-        
-        
-        
         /// <param name="User">user that requested generation of public key.</param>
-        
-        
-        
         /// <param name="LocalEncryptionConfiguration">Local configuration.</param>
-        
-        
-        
-        
         public EncryptionKey(string Name = null, DateTime? CreateDate = null, string KeydataSummary = null, User User = null, LocalEncryptionConfiguration LocalEncryptionConfiguration = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreateDate = CreateDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.KeydataSummary = KeydataSummary;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LocalEncryptionConfiguration = LocalEncryptionConfiguration;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.CreateDate = CreateDate;
+            this.KeydataSummary = KeydataSummary;
+            this.User = User;
+            this.LocalEncryptionConfiguration = LocalEncryptionConfiguration;
             
         }
         
@@ -236,19 +147,12 @@ this.LocalEncryptionConfiguration = LocalEncryptionConfiguration;
             sb.Append("class EncryptionKey {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
-            
             sb.Append("  KeydataSummary: ").Append(KeydataSummary).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  LocalEncryptionConfiguration: ").Append(LocalEncryptionConfiguration).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

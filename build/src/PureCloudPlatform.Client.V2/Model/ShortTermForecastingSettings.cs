@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShortTermForecastingSettings" /> class.
         /// </summary>
-        
-        
         /// <param name="DefaultHistoryWeeks">The number of weeks to consider by default when generating a volume forecast.</param>
-        
-        
         public ShortTermForecastingSettings(int? DefaultHistoryWeeks = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.DefaultHistoryWeeks = DefaultHistoryWeeks;
-            
-            
-            
+            this.DefaultHistoryWeeks = DefaultHistoryWeeks;
             
         }
         
@@ -73,7 +56,6 @@ this.DefaultHistoryWeeks = DefaultHistoryWeeks;
             sb.Append("class ShortTermForecastingSettings {\n");
             
             sb.Append("  DefaultHistoryWeeks: ").Append(DefaultHistoryWeeks).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

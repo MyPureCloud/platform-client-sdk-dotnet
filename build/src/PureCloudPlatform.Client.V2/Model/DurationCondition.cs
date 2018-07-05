@@ -72,61 +72,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DurationCondition" /> class.
         /// </summary>
-        
-        
         /// <param name="DurationTarget">DurationTarget.</param>
-        
-        
-        
         /// <param name="DurationOperator">DurationOperator.</param>
-        
-        
-        
         /// <param name="DurationRange">DurationRange.</param>
-        
-        
         public DurationCondition(DurationTargetEnum? DurationTarget = null, string DurationOperator = null, string DurationRange = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationTarget = DurationTarget;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationOperator = DurationOperator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationRange = DurationRange;
-            
-            
-            
+            this.DurationTarget = DurationTarget;
+            this.DurationOperator = DurationOperator;
+            this.DurationRange = DurationRange;
             
         }
         
@@ -159,11 +112,8 @@ this.DurationRange = DurationRange;
             sb.Append("class DurationCondition {\n");
             
             sb.Append("  DurationTarget: ").Append(DurationTarget).Append("\n");
-            
             sb.Append("  DurationOperator: ").Append(DurationOperator).Append("\n");
-            
             sb.Append("  DurationRange: ").Append(DurationRange).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

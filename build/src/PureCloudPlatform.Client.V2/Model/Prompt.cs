@@ -60,95 +60,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Prompt" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The prompt name. (required).</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="Resources">Resources.</param>
-        
-        
-        
         /// <param name="CurrentOperation">CurrentOperation.</param>
-        
-        
-        
-        
         public Prompt(string Name = null, string Description = null, List<PromptAsset> Resources = null, Operation CurrentOperation = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for Prompt and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Resources = Resources;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CurrentOperation = CurrentOperation;
-            
-            
-            
-            
-            
+            this.Description = Description;
+            this.Resources = Resources;
+            this.CurrentOperation = CurrentOperation;
             
         }
         
@@ -214,17 +134,11 @@ this.CurrentOperation = CurrentOperation;
             sb.Append("class Prompt {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Resources: ").Append(Resources).Append("\n");
-            
             sb.Append("  CurrentOperation: ").Append(CurrentOperation).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -112,129 +112,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataGroup" /> class.
         /// </summary>
-        
-        
         /// <param name="MediaType">The media type associated with this intraday group.</param>
-        
-        
-        
         /// <param name="ForecastDataPerInterval">Forecast data for this date range.</param>
-        
-        
-        
         /// <param name="ScheduleDataPerInterval">Schedule data for this date range.</param>
-        
-        
-        
         /// <param name="HistoricalAgentDataPerInterval">Historical agent data for this date range.</param>
-        
-        
-        
         /// <param name="HistoricalQueueDataPerInterval">Historical queue data for this date range.</param>
-        
-        
-        
         /// <param name="PerformancePredictionAgentDataPerInterval">Performance prediction data for this date range.</param>
-        
-        
-        
         /// <param name="PerformancePredictionQueueDataPerInterval">Performance prediction data for this date range.</param>
-        
-        
         public IntradayDataGroup(MediaTypeEnum? MediaType = null, List<IntradayForecastData> ForecastDataPerInterval = null, List<IntradayScheduleData> ScheduleDataPerInterval = null, List<IntradayHistoricalAgentData> HistoricalAgentDataPerInterval = null, List<IntradayHistoricalQueueData> HistoricalQueueDataPerInterval = null, List<IntradayPerformancePredictionAgentData> PerformancePredictionAgentDataPerInterval = null, List<IntradayPerformancePredictionQueueData> PerformancePredictionQueueDataPerInterval = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaType = MediaType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ForecastDataPerInterval = ForecastDataPerInterval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScheduleDataPerInterval = ScheduleDataPerInterval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HistoricalAgentDataPerInterval = HistoricalAgentDataPerInterval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HistoricalQueueDataPerInterval = HistoricalQueueDataPerInterval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PerformancePredictionAgentDataPerInterval = PerformancePredictionAgentDataPerInterval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PerformancePredictionQueueDataPerInterval = PerformancePredictionQueueDataPerInterval;
-            
-            
-            
+            this.MediaType = MediaType;
+            this.ForecastDataPerInterval = ForecastDataPerInterval;
+            this.ScheduleDataPerInterval = ScheduleDataPerInterval;
+            this.HistoricalAgentDataPerInterval = HistoricalAgentDataPerInterval;
+            this.HistoricalQueueDataPerInterval = HistoricalQueueDataPerInterval;
+            this.PerformancePredictionAgentDataPerInterval = PerformancePredictionAgentDataPerInterval;
+            this.PerformancePredictionQueueDataPerInterval = PerformancePredictionQueueDataPerInterval;
             
         }
         
@@ -305,19 +198,12 @@ this.PerformancePredictionQueueDataPerInterval = PerformancePredictionQueueDataP
             sb.Append("class IntradayDataGroup {\n");
             
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("  ForecastDataPerInterval: ").Append(ForecastDataPerInterval).Append("\n");
-            
             sb.Append("  ScheduleDataPerInterval: ").Append(ScheduleDataPerInterval).Append("\n");
-            
             sb.Append("  HistoricalAgentDataPerInterval: ").Append(HistoricalAgentDataPerInterval).Append("\n");
-            
             sb.Append("  HistoricalQueueDataPerInterval: ").Append(HistoricalQueueDataPerInterval).Append("\n");
-            
             sb.Append("  PerformancePredictionAgentDataPerInterval: ").Append(PerformancePredictionAgentDataPerInterval).Append("\n");
-            
             sb.Append("  PerformancePredictionQueueDataPerInterval: ").Append(PerformancePredictionQueueDataPerInterval).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

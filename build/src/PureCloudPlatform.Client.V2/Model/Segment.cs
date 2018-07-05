@@ -55,105 +55,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Segment" /> class.
         /// </summary>
-        
-        
         /// <param name="StartTime">The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
-        
         /// <param name="EndTime">The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
-        
         /// <param name="Type">The activity taking place for the participant in the segment..</param>
-        
-        
-        
         /// <param name="HowEnded">A description of the event that ended the segment..</param>
-        
-        
-        
         /// <param name="DisconnectType">A description of the event that disconnected the segment.</param>
-        
-        
         public Segment(DateTime? StartTime = null, DateTime? EndTime = null, string Type = null, string HowEnded = null, string DisconnectType = null)
         {
-            
-            
-            
-            // to ensure "StartTime" is required (not null)
-            if (StartTime == null)
-            {
-                throw new InvalidDataException("StartTime is a required property for Segment and cannot be null");
-            }
-            else
-            {
-                this.StartTime = StartTime;
-            }
-            
-            
-            
-            
-            
-            // to ensure "EndTime" is required (not null)
-            if (EndTime == null)
-            {
-                throw new InvalidDataException("EndTime is a required property for Segment and cannot be null");
-            }
-            else
-            {
-                this.EndTime = EndTime;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HowEnded = HowEnded;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
+            this.Type = Type;
+            this.HowEnded = HowEnded;
+            this.DisconnectType = DisconnectType;
             
         }
         
@@ -213,15 +124,10 @@ this.DisconnectType = DisconnectType;
             sb.Append("class Segment {\n");
             
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  HowEnded: ").Append(HowEnded).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

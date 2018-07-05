@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversation" /> class.
         /// </summary>
-        
-        
         /// <param name="ConversationId">Unique identifier for the conversation.</param>
-        
-        
-        
         /// <param name="ConversationStart">Date/time the conversation started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ConversationEnd">Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Participants">Participants in the conversation.</param>
-        
-        
-        
         /// <param name="Evaluations">Evaluations tied to this conversation.</param>
-        
-        
-        
         /// <param name="DivisionIds">Identifiers of divisions associated with this conversation.</param>
-        
-        
         public AnalyticsConversation(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, List<AnalyticsParticipant> Participants = null, List<AnalyticsEvaluation> Evaluations = null, List<string> DivisionIds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConversationId = ConversationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConversationStart = ConversationStart;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConversationEnd = ConversationEnd;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Participants = Participants;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Evaluations = Evaluations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DivisionIds = DivisionIds;
-            
-            
-            
+            this.ConversationId = ConversationId;
+            this.ConversationStart = ConversationStart;
+            this.ConversationEnd = ConversationEnd;
+            this.Participants = Participants;
+            this.Evaluations = Evaluations;
+            this.DivisionIds = DivisionIds;
             
         }
         
@@ -228,17 +136,11 @@ this.DivisionIds = DivisionIds;
             sb.Append("class AnalyticsConversation {\n");
             
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
-            
             sb.Append("  ConversationStart: ").Append(ConversationStart).Append("\n");
-            
             sb.Append("  ConversationEnd: ").Append(ConversationEnd).Append("\n");
-            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
-            
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
-            
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

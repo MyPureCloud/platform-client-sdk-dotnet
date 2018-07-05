@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EventEntity" /> class.
         /// </summary>
-        
-        
         /// <param name="EntityType">Type of entity the event pertains to. e.g. integration.</param>
-        
-        
-        
         /// <param name="Id">ID of the entity the event pertains to..</param>
-        
-        
         public EventEntity(string EntityType = null, string Id = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.EntityType = EntityType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
+            this.EntityType = EntityType;
+            this.Id = Id;
             
         }
         
@@ -104,9 +72,7 @@ this.Id = Id;
             sb.Append("class EventEntity {\n");
             
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

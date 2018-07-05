@@ -127,93 +127,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationAssociation" /> class.
         /// </summary>
-        
-        
         /// <param name="ExternalContactId">External Contact ID.</param>
-        
-        
-        
         /// <param name="ConversationId">Conversation ID (required).</param>
-        
-        
-        
         /// <param name="CommunicationId">Communication ID (required).</param>
-        
-        
-        
         /// <param name="MediaType">Media type (required).</param>
-        
-        
         public ConversationAssociation(string ExternalContactId = null, string ConversationId = null, string CommunicationId = null, MediaTypeEnum? MediaType = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "ConversationId" is required (not null)
-            if (ConversationId == null)
-            {
-                throw new InvalidDataException("ConversationId is a required property for ConversationAssociation and cannot be null");
-            }
-            else
-            {
-                this.ConversationId = ConversationId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "CommunicationId" is required (not null)
-            if (CommunicationId == null)
-            {
-                throw new InvalidDataException("CommunicationId is a required property for ConversationAssociation and cannot be null");
-            }
-            else
-            {
-                this.CommunicationId = CommunicationId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "MediaType" is required (not null)
-            if (MediaType == null)
-            {
-                throw new InvalidDataException("MediaType is a required property for ConversationAssociation and cannot be null");
-            }
-            else
-            {
-                this.MediaType = MediaType;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalContactId = ExternalContactId;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.ExternalContactId = ExternalContactId;
             
         }
         
@@ -257,13 +177,9 @@ this.ExternalContactId = ExternalContactId;
             sb.Append("class ConversationAssociation {\n");
             
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
-            
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
-            
             sb.Append("  CommunicationId: ").Append(CommunicationId).Append("\n");
-            
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

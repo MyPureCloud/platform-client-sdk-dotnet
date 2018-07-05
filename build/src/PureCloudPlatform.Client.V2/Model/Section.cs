@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Section" /> class.
         /// </summary>
-        
-        
         /// <param name="FieldList">FieldList.</param>
-        
-        
-        
         /// <param name="InstructionText">InstructionText.</param>
-        
-        
-        
         /// <param name="Key">Key.</param>
-        
-        
-        
         /// <param name="State">State.</param>
-        
-        
         public Section(List<FieldList> FieldList = null, string InstructionText = null, string Key = null, string State = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.FieldList = FieldList;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InstructionText = InstructionText;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Key = Key;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
+            this.FieldList = FieldList;
+            this.InstructionText = InstructionText;
+            this.Key = Key;
+            this.State = State;
             
         }
         
@@ -162,13 +100,9 @@ this.State = State;
             sb.Append("class Section {\n");
             
             sb.Append("  FieldList: ").Append(FieldList).Append("\n");
-            
             sb.Append("  InstructionText: ").Append(InstructionText).Append("\n");
-            
             sb.Append("  Key: ").Append(Key).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

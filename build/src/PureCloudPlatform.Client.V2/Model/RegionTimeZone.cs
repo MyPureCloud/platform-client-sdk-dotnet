@@ -44,56 +44,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RegionTimeZone" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Offset">Offset.</param>
-        
-        
-        
-        
         public RegionTimeZone(string Name = null, long? Offset = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Offset = Offset;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Offset = Offset;
             
         }
         
@@ -142,13 +98,9 @@ this.Offset = Offset;
             sb.Append("class RegionTimeZone {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Offset: ").Append(Offset).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

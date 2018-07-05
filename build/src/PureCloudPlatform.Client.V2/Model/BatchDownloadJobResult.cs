@@ -64,124 +64,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchDownloadJobResult" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ConversationId">Conversation id of the result.</param>
-        
-        
-        
         /// <param name="RecordingId">Recording id of the result.</param>
-        
-        
-        
         /// <param name="ResultUrl">URL of results... HTTP GET from this location to download results for this item.</param>
-        
-        
-        
         /// <param name="ContentType">Content type of this result.</param>
-        
-        
-        
         /// <param name="ErrorMsg">An error message, in case of failed processing will indicate the cause of the failure.</param>
-        
-        
-        
-        
         public BatchDownloadJobResult(string Name = null, string ConversationId = null, string RecordingId = null, string ResultUrl = null, string ContentType = null, string ErrorMsg = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConversationId = ConversationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingId = RecordingId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ResultUrl = ResultUrl;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentType = ContentType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorMsg = ErrorMsg;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.ConversationId = ConversationId;
+            this.RecordingId = RecordingId;
+            this.ResultUrl = ResultUrl;
+            this.ContentType = ContentType;
+            this.ErrorMsg = ErrorMsg;
             
         }
         
@@ -267,21 +163,13 @@ this.ErrorMsg = ErrorMsg;
             sb.Append("class BatchDownloadJobResult {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
-            
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
-            
             sb.Append("  ResultUrl: ").Append(ResultUrl).Append("\n");
-            
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
-            
             sb.Append("  ErrorMsg: ").Append(ErrorMsg).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -145,175 +145,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateShareResponse" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="SharedEntityType">SharedEntityType.</param>
-        
-        
-        
         /// <param name="SharedEntity">SharedEntity.</param>
-        
-        
-        
         /// <param name="MemberType">MemberType.</param>
-        
-        
-        
         /// <param name="Member">Member.</param>
-        
-        
-        
         /// <param name="SharedBy">SharedBy.</param>
-        
-        
-        
         /// <param name="Workspace">Workspace.</param>
-        
-        
-        
         /// <param name="Succeeded">Succeeded.</param>
-        
-        
-        
         /// <param name="Failed">Failed.</param>
-        
-        
-        
-        
         public CreateShareResponse(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, UriReference SharedEntity = null, MemberTypeEnum? MemberType = null, UriReference Member = null, UriReference SharedBy = null, UriReference Workspace = null, List<Share> Succeeded = null, List<Share> Failed = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SharedEntityType = SharedEntityType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SharedEntity = SharedEntity;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MemberType = MemberType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Member = Member;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SharedBy = SharedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Workspace = Workspace;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Succeeded = Succeeded;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Failed = Failed;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.SharedEntityType = SharedEntityType;
+            this.SharedEntity = SharedEntity;
+            this.MemberType = MemberType;
+            this.Member = Member;
+            this.SharedBy = SharedBy;
+            this.Workspace = Workspace;
+            this.Succeeded = Succeeded;
+            this.Failed = Failed;
             
         }
         
@@ -406,27 +257,16 @@ this.Failed = Failed;
             sb.Append("class CreateShareResponse {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  SharedEntityType: ").Append(SharedEntityType).Append("\n");
-            
             sb.Append("  SharedEntity: ").Append(SharedEntity).Append("\n");
-            
             sb.Append("  MemberType: ").Append(MemberType).Append("\n");
-            
             sb.Append("  Member: ").Append(Member).Append("\n");
-            
             sb.Append("  SharedBy: ").Append(SharedBy).Append("\n");
-            
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
-            
             sb.Append("  Succeeded: ").Append(Succeeded).Append("\n");
-            
             sb.Append("  Failed: ").Append(Failed).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

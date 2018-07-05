@@ -45,76 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSessionMetric" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Unique name of this metric (required).</param>
-        
-        
-        
         /// <param name="Value">The metric value (required).</param>
-        
-        
-        
         /// <param name="EmitDate">Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
         public AnalyticsSessionMetric(string Name = null, long? Value = null, DateTime? EmitDate = null)
         {
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for AnalyticsSessionMetric and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Value" is required (not null)
-            if (Value == null)
-            {
-                throw new InvalidDataException("Value is a required property for AnalyticsSessionMetric and cannot be null");
-            }
-            else
-            {
-                this.Value = Value;
-            }
-            
-            
-            
-            
-            
-            // to ensure "EmitDate" is required (not null)
-            if (EmitDate == null)
-            {
-                throw new InvalidDataException("EmitDate is a required property for AnalyticsSessionMetric and cannot be null");
-            }
-            else
-            {
-                this.EmitDate = EmitDate;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -156,11 +91,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AnalyticsSessionMetric {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  EmitDate: ").Append(EmitDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

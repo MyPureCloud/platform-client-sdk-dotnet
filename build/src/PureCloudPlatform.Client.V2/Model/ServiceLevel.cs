@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceLevel" /> class.
         /// </summary>
-        
-        
         /// <param name="Percentage">Percentage.</param>
-        
-        
-        
         /// <param name="DurationMs">DurationMs.</param>
-        
-        
         public ServiceLevel(double? Percentage = null, long? DurationMs = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Percentage = Percentage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationMs = DurationMs;
-            
-            
-            
+            this.Percentage = Percentage;
+            this.DurationMs = DurationMs;
             
         }
         
@@ -102,9 +70,7 @@ this.DurationMs = DurationMs;
             sb.Append("class ServiceLevel {\n");
             
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
-            
             sb.Append("  DurationMs: ").Append(DurationMs).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

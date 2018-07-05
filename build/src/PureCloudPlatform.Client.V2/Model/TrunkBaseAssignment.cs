@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkBaseAssignment" /> class.
         /// </summary>
-        
-        
         /// <param name="Family">The address family to use with the trunk base settings. 2=IPv4, 23=IPv6.</param>
-        
-        
-        
         /// <param name="TrunkBase">A trunk base settings reference..</param>
-        
-        
         public TrunkBaseAssignment(int? Family = null, TrunkBase TrunkBase = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Family = Family;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TrunkBase = TrunkBase;
-            
-            
-            
+            this.Family = Family;
+            this.TrunkBase = TrunkBase;
             
         }
         
@@ -104,9 +72,7 @@ this.TrunkBase = TrunkBase;
             sb.Append("class TrunkBaseAssignment {\n");
             
             sb.Append("  Family: ").Append(Family).Append("\n");
-            
             sb.Append("  TrunkBase: ").Append(TrunkBase).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

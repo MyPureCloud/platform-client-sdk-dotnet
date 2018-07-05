@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QuestionScore" /> class.
         /// </summary>
-        
-        
         /// <param name="QuestionId">QuestionId.</param>
-        
-        
-        
         /// <param name="AnswerId">AnswerId.</param>
-        
-        
-        
         /// <param name="Score">Score.</param>
-        
-        
-        
         /// <param name="MarkedNA">MarkedNA.</param>
-        
-        
-        
         /// <param name="FailedKillQuestion">FailedKillQuestion.</param>
-        
-        
-        
         /// <param name="Comments">Comments.</param>
-        
-        
         public QuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, bool? FailedKillQuestion = null, string Comments = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.QuestionId = QuestionId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AnswerId = AnswerId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Score = Score;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MarkedNA = MarkedNA;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FailedKillQuestion = FailedKillQuestion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Comments = Comments;
-            
-            
-            
+            this.QuestionId = QuestionId;
+            this.AnswerId = AnswerId;
+            this.Score = Score;
+            this.MarkedNA = MarkedNA;
+            this.FailedKillQuestion = FailedKillQuestion;
+            this.Comments = Comments;
             
         }
         
@@ -222,17 +130,11 @@ this.Comments = Comments;
             sb.Append("class QuestionScore {\n");
             
             sb.Append("  QuestionId: ").Append(QuestionId).Append("\n");
-            
             sb.Append("  AnswerId: ").Append(AnswerId).Append("\n");
-            
             sb.Append("  Score: ").Append(Score).Append("\n");
-            
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
-            
             sb.Append("  FailedKillQuestion: ").Append(FailedKillQuestion).Append("\n");
-            
             sb.Append("  Comments: ").Append(Comments).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

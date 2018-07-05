@@ -141,220 +141,29 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Organization" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="DefaultLanguage">The default language for this organization. Example: &#39;en&#39;.</param>
-        
-        
-        
         /// <param name="DefaultCountryCode">The default country code for this organization. Example: &#39;US&#39;.</param>
-        
-        
-        
-        
-        
         /// <param name="ThirdPartyURI">ThirdPartyURI.</param>
-        
-        
-        
         /// <param name="Domain">Domain.</param>
-        
-        
-        
         /// <param name="Version">The current version of the organization. (required).</param>
-        
-        
-        
         /// <param name="State">The current state. Examples are active, inactive, deleted..</param>
-        
-        
-        
         /// <param name="DefaultSiteId">DefaultSiteId.</param>
-        
-        
-        
         /// <param name="SupportURI">Email address where support tickets are sent to..</param>
-        
-        
-        
         /// <param name="VoicemailEnabled">VoicemailEnabled.</param>
-        
-        
-        
-        
-        
         /// <param name="Features">The state of features available for the organization..</param>
-        
-        
         public Organization(string Name = null, string DefaultLanguage = null, string DefaultCountryCode = null, string ThirdPartyURI = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, string SupportURI = null, bool? VoicemailEnabled = null, Dictionary<string, bool?> Features = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Version" is required (not null)
-            if (Version == null)
-            {
-                throw new InvalidDataException("Version is a required property for Organization and cannot be null");
-            }
-            else
-            {
-                this.Version = Version;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DefaultLanguage = DefaultLanguage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DefaultCountryCode = DefaultCountryCode;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ThirdPartyURI = ThirdPartyURI;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Domain = Domain;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DefaultSiteId = DefaultSiteId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SupportURI = SupportURI;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VoicemailEnabled = VoicemailEnabled;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Features = Features;
-            
-            
-            
+            this.Name = Name;
+            this.DefaultLanguage = DefaultLanguage;
+            this.DefaultCountryCode = DefaultCountryCode;
+            this.ThirdPartyURI = ThirdPartyURI;
+            this.Domain = Domain;
+            this.State = State;
+            this.DefaultSiteId = DefaultSiteId;
+            this.SupportURI = SupportURI;
+            this.VoicemailEnabled = VoicemailEnabled;
+            this.Features = Features;
             
         }
         
@@ -483,33 +292,19 @@ this.Features = Features;
             sb.Append("class Organization {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DefaultLanguage: ").Append(DefaultLanguage).Append("\n");
-            
             sb.Append("  DefaultCountryCode: ").Append(DefaultCountryCode).Append("\n");
-            
             sb.Append("  ThirdPartyOrgName: ").Append(ThirdPartyOrgName).Append("\n");
-            
             sb.Append("  ThirdPartyURI: ").Append(ThirdPartyURI).Append("\n");
-            
             sb.Append("  Domain: ").Append(Domain).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  DefaultSiteId: ").Append(DefaultSiteId).Append("\n");
-            
             sb.Append("  SupportURI: ").Append(SupportURI).Append("\n");
-            
             sb.Append("  VoicemailEnabled: ").Append(VoicemailEnabled).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("  Features: ").Append(Features).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentActivityNotificationOrganizationPresence" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="SystemPresence">SystemPresence.</param>
-        
-        
         public AgentActivityNotificationOrganizationPresence(string Id = null, string SystemPresence = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SystemPresence = SystemPresence;
-            
-            
-            
+            this.Id = Id;
+            this.SystemPresence = SystemPresence;
             
         }
         
@@ -102,9 +70,7 @@ this.SystemPresence = SystemPresence;
             sb.Append("class AgentActivityNotificationOrganizationPresence {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

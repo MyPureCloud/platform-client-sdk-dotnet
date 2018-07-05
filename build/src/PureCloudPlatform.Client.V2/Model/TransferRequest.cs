@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TransferRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="UserId">The user ID of the transfer target..</param>
-        
-        
-        
         /// <param name="Address">The phone number or address of the transfer target..</param>
-        
-        
-        
         /// <param name="UserName">The user name of the transfer target..</param>
-        
-        
-        
         /// <param name="QueueId">The queue ID of the transfer target..</param>
-        
-        
-        
         /// <param name="Voicemail">If true, transfer to the voicemail inbox of the participant that is being replaced..</param>
-        
-        
         public TransferRequest(string UserId = null, string Address = null, string UserName = null, string QueueId = null, bool? Voicemail = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserName = UserName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueId = QueueId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Voicemail = Voicemail;
-            
-            
-            
+            this.UserId = UserId;
+            this.Address = Address;
+            this.UserName = UserName;
+            this.QueueId = QueueId;
+            this.Voicemail = Voicemail;
             
         }
         
@@ -197,15 +120,10 @@ this.Voicemail = Voicemail;
             sb.Append("class TransferRequest {\n");
             
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  UserName: ").Append(UserName).Append("\n");
-            
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
-            
             sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

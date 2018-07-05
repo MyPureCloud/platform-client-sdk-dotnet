@@ -348,61 +348,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregateMetricData" /> class.
         /// </summary>
-        
-        
         /// <param name="Metric">Metric.</param>
-        
-        
-        
         /// <param name="Qualifier">Qualifier.</param>
-        
-        
-        
         /// <param name="Stats">Stats.</param>
-        
-        
         public AggregateMetricData(MetricEnum? Metric = null, string Qualifier = null, StatisticalSummary Stats = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metric = Metric;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Qualifier = Qualifier;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Stats = Stats;
-            
-            
-            
+            this.Metric = Metric;
+            this.Qualifier = Qualifier;
+            this.Stats = Stats;
             
         }
         
@@ -435,11 +388,8 @@ this.Stats = Stats;
             sb.Append("class AggregateMetricData {\n");
             
             sb.Append("  Metric: ").Append(Metric).Append("\n");
-            
             sb.Append("  Qualifier: ").Append(Qualifier).Append("\n");
-            
             sb.Append("  Stats: ").Append(Stats).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

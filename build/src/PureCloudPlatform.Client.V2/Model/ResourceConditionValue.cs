@@ -79,44 +79,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResourceConditionValue" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="Value">Value.</param>
-        
-        
         public ResourceConditionValue(TypeEnum? Type = null, string Value = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
+            this.Type = Type;
+            this.Value = Value;
             
         }
         
@@ -141,9 +109,7 @@ this.Value = Value;
             sb.Append("class ResourceConditionValue {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

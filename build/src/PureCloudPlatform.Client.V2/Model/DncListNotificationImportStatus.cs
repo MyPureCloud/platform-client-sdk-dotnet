@@ -87,112 +87,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DncListNotificationImportStatus" /> class.
         /// </summary>
-        
-        
         /// <param name="ImportState">ImportState.</param>
-        
-        
-        
         /// <param name="TotalRecords">TotalRecords.</param>
-        
-        
-        
         /// <param name="CompletedRecords">CompletedRecords.</param>
-        
-        
-        
         /// <param name="PercentageComplete">PercentageComplete.</param>
-        
-        
-        
         /// <param name="FailureReason">FailureReason.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public DncListNotificationImportStatus(ImportStateEnum? ImportState = null, int? TotalRecords = null, int? CompletedRecords = null, int? PercentageComplete = null, string FailureReason = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ImportState = ImportState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalRecords = TotalRecords;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CompletedRecords = CompletedRecords;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PercentageComplete = PercentageComplete;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FailureReason = FailureReason;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.ImportState = ImportState;
+            this.TotalRecords = TotalRecords;
+            this.CompletedRecords = CompletedRecords;
+            this.PercentageComplete = PercentageComplete;
+            this.FailureReason = FailureReason;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -249,17 +157,11 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class DncListNotificationImportStatus {\n");
             
             sb.Append("  ImportState: ").Append(ImportState).Append("\n");
-            
             sb.Append("  TotalRecords: ").Append(TotalRecords).Append("\n");
-            
             sb.Append("  CompletedRecords: ").Append(CompletedRecords).Append("\n");
-            
             sb.Append("  PercentageComplete: ").Append(PercentageComplete).Append("\n");
-            
             sb.Append("  FailureReason: ").Append(FailureReason).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

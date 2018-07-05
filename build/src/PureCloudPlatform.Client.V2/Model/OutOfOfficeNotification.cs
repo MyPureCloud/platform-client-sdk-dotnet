@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OutOfOfficeNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="Active">Active.</param>
-        
-        
-        
         /// <param name="Indefinite">Indefinite.</param>
-        
-        
-        
         /// <param name="StartDate">StartDate.</param>
-        
-        
-        
         /// <param name="EndDate">EndDate.</param>
-        
-        
         public OutOfOfficeNotification(DocumentDataV2NotificationWorkspace User = null, bool? Active = null, bool? Indefinite = null, DateTime? StartDate = null, DateTime? EndDate = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Active = Active;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Indefinite = Indefinite;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartDate = StartDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndDate = EndDate;
-            
-            
-            
+            this.User = User;
+            this.Active = Active;
+            this.Indefinite = Indefinite;
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
             
         }
         
@@ -192,15 +115,10 @@ this.EndDate = EndDate;
             sb.Append("class OutOfOfficeNotification {\n");
             
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Active: ").Append(Active).Append("\n");
-            
             sb.Append("  Indefinite: ").Append(Indefinite).Append("\n");
-            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

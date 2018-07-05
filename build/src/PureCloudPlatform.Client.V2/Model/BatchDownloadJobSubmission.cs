@@ -35,32 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchDownloadJobSubmission" /> class.
         /// </summary>
-        
-        
         /// <param name="BatchDownloadRequestList">List of up to 100 items requested (required).</param>
-        
-        
         public BatchDownloadJobSubmission(List<BatchDownloadRequest> BatchDownloadRequestList = null)
         {
-            
-            
-            
-            // to ensure "BatchDownloadRequestList" is required (not null)
-            if (BatchDownloadRequestList == null)
-            {
-                throw new InvalidDataException("BatchDownloadRequestList is a required property for BatchDownloadJobSubmission and cannot be null");
-            }
-            else
-            {
-                this.BatchDownloadRequestList = BatchDownloadRequestList;
-            }
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -84,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class BatchDownloadJobSubmission {\n");
             
             sb.Append("  BatchDownloadRequestList: ").Append(BatchDownloadRequestList).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -49,73 +49,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallbackConversation" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Participants">The list of participants involved in the conversation..</param>
-        
-        
-        
         /// <param name="OtherMediaUris">The list of other media channels involved in the conversation..</param>
-        
-        
-        
-        
         public CallbackConversation(string Name = null, List<CallbackMediaParticipant> Participants = null, List<string> OtherMediaUris = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Participants = Participants;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OtherMediaUris = OtherMediaUris;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Participants = Participants;
+            this.OtherMediaUris = OtherMediaUris;
             
         }
         
@@ -174,15 +115,10 @@ this.OtherMediaUris = OtherMediaUris;
             sb.Append("class CallbackConversation {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
-            
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

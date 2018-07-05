@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleSetNotificationActions" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="ActionTypeName">ActionTypeName.</param>
-        
-        
-        
         /// <param name="UpdateOption">UpdateOption.</param>
-        
-        
-        
         /// <param name="Properties">Properties.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public RuleSetNotificationActions(string Type = null, string ActionTypeName = null, string UpdateOption = null, Dictionary<string, string> Properties = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActionTypeName = ActionTypeName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UpdateOption = UpdateOption;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Properties = Properties;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Type = Type;
+            this.ActionTypeName = ActionTypeName;
+            this.UpdateOption = UpdateOption;
+            this.Properties = Properties;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -192,15 +115,10 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class RuleSetNotificationActions {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  ActionTypeName: ").Append(ActionTypeName).Append("\n");
-            
             sb.Append("  UpdateOption: ").Append(UpdateOption).Append("\n");
-            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -123,192 +123,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowVersion" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="CommitVersion">CommitVersion.</param>
-        
-        
-        
         /// <param name="ConfigurationVersion">ConfigurationVersion.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="Secure">Secure.</param>
-        
-        
-        
         /// <param name="CreatedBy">CreatedBy.</param>
-        
-        
-        
         /// <param name="ConfigurationUri">ConfigurationUri.</param>
-        
-        
-        
         /// <param name="DateCreated">DateCreated.</param>
-        
-        
-        
         /// <param name="GenerationId">GenerationId.</param>
-        
-        
-        
         /// <param name="PublishResultUri">PublishResultUri.</param>
-        
-        
-        
-        
         public FlowVersion(string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, User CreatedBy = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CommitVersion = CommitVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConfigurationVersion = ConfigurationVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Secure = Secure;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConfigurationUri = ConfigurationUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.GenerationId = GenerationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PublishResultUri = PublishResultUri;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.CommitVersion = CommitVersion;
+            this.ConfigurationVersion = ConfigurationVersion;
+            this.Type = Type;
+            this.Secure = Secure;
+            this.CreatedBy = CreatedBy;
+            this.ConfigurationUri = ConfigurationUri;
+            this.DateCreated = DateCreated;
+            this.GenerationId = GenerationId;
+            this.PublishResultUri = PublishResultUri;
             
         }
         
@@ -415,29 +251,17 @@ this.PublishResultUri = PublishResultUri;
             sb.Append("class FlowVersion {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  CommitVersion: ").Append(CommitVersion).Append("\n");
-            
             sb.Append("  ConfigurationVersion: ").Append(ConfigurationVersion).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Secure: ").Append(Secure).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  ConfigurationUri: ").Append(ConfigurationUri).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  GenerationId: ").Append(GenerationId).Append("\n");
-            
             sb.Append("  PublishResultUri: ").Append(PublishResultUri).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -344,639 +344,82 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSession" /> class.
         /// </summary>
-        
-        
         /// <param name="MediaType">The session media type.</param>
-        
-        
-        
         /// <param name="SessionId">The unique identifier of this session.</param>
-        
-        
-        
         /// <param name="AddressOther">AddressOther.</param>
-        
-        
-        
         /// <param name="AddressSelf">AddressSelf.</param>
-        
-        
-        
         /// <param name="AddressFrom">AddressFrom.</param>
-        
-        
-        
         /// <param name="AddressTo">AddressTo.</param>
-        
-        
-        
         /// <param name="MessageType">Message type for messaging services such as sms.</param>
-        
-        
-        
         /// <param name="Ani">Automatic Number Identification (caller&#39;s number).</param>
-        
-        
-        
         /// <param name="Direction">Direction.</param>
-        
-        
-        
         /// <param name="Dnis">Automatic Number Identification (caller&#39;s number).</param>
-        
-        
-        
         /// <param name="OutboundCampaignId">(Dialer) Unique identifier of the outbound campaign.</param>
-        
-        
-        
         /// <param name="OutboundContactId">(Dialer) Unique identifier of the contact.</param>
-        
-        
-        
         /// <param name="OutboundContactListId">(Dialer) Unique identifier of the contact list that this contact belongs to.</param>
-        
-        
-        
         /// <param name="DispositionAnalyzer">(Dialer) Unique identifier of the contact list that this contact belongs to.</param>
-        
-        
-        
         /// <param name="DispositionName">(Dialer) Result of the analysis.</param>
-        
-        
-        
         /// <param name="EdgeId">Unique identifier of the edge device.</param>
-        
-        
-        
         /// <param name="RemoteNameDisplayable">RemoteNameDisplayable.</param>
-        
-        
-        
         /// <param name="RoomId">Unique identifier for the room.</param>
-        
-        
-        
         /// <param name="MonitoredSessionId">The sessionID being monitored.</param>
-        
-        
-        
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
-        
-        
-        
         /// <param name="CallbackUserName">The name of the user requesting a call back.</param>
-        
-        
-        
         /// <param name="CallbackNumbers">List of numbers to callback.</param>
-        
-        
-        
         /// <param name="CallbackScheduledTime">Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ScriptId">Scheduled callback date/time, Date time is represented as an ISO-8601 string. .</param>
-        
-        
-        
         /// <param name="PeerId">A unique identifier for a peer.</param>
-        
-        
-        
         /// <param name="SkipEnabled">(Dialer) Whether the agent can skip the dialer contact.</param>
-        
-        
-        
         /// <param name="TimeoutSeconds">The number of seconds before PureCloud begins the call for a call back. 0 disables automatic calling.</param>
-        
-        
-        
         /// <param name="CobrowseRole">Describe side of the cobrowse (sharer or viewer).</param>
-        
-        
-        
         /// <param name="CobrowseRoomId">A unique identifier for a PureCloud Cobrowse room..</param>
-        
-        
-        
         /// <param name="MediaBridgeId">MediaBridgeId.</param>
-        
-        
-        
         /// <param name="ScreenShareAddressSelf">Direct ScreenShare address.</param>
-        
-        
-        
         /// <param name="SharingScreen">Flag determining if screenShare is started or not (true/false).</param>
-        
-        
-        
         /// <param name="ScreenShareRoomId">A unique identifier for a PureCloud ScreenShare room..</param>
-        
-        
-        
         /// <param name="VideoRoomId">A unique identifier for a PureCloud video room..</param>
-        
-        
-        
         /// <param name="VideoAddressSelf">Direct Video address.</param>
-        
-        
-        
         /// <param name="Segments">List of segments for this session.</param>
-        
-        
-        
         /// <param name="Metrics">List of metrics for this session.</param>
-        
-        
         public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaType = MediaType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SessionId = SessionId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressOther = AddressOther;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressSelf = AddressSelf;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressFrom = AddressFrom;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressTo = AddressTo;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageType = MessageType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Ani = Ani;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Dnis = Dnis;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OutboundCampaignId = OutboundCampaignId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OutboundContactId = OutboundContactId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OutboundContactListId = OutboundContactListId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DispositionAnalyzer = DispositionAnalyzer;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DispositionName = DispositionName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgeId = EdgeId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RemoteNameDisplayable = RemoteNameDisplayable;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoomId = RoomId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MonitoredSessionId = MonitoredSessionId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MonitoredParticipantId = MonitoredParticipantId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallbackUserName = CallbackUserName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallbackNumbers = CallbackNumbers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallbackScheduledTime = CallbackScheduledTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScriptId = ScriptId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerId = PeerId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SkipEnabled = SkipEnabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeoutSeconds = TimeoutSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CobrowseRole = CobrowseRole;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CobrowseRoomId = CobrowseRoomId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaBridgeId = MediaBridgeId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScreenShareAddressSelf = ScreenShareAddressSelf;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SharingScreen = SharingScreen;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScreenShareRoomId = ScreenShareRoomId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VideoRoomId = VideoRoomId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VideoAddressSelf = VideoAddressSelf;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Segments = Segments;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metrics = Metrics;
-            
-            
-            
+            this.MediaType = MediaType;
+            this.SessionId = SessionId;
+            this.AddressOther = AddressOther;
+            this.AddressSelf = AddressSelf;
+            this.AddressFrom = AddressFrom;
+            this.AddressTo = AddressTo;
+            this.MessageType = MessageType;
+            this.Ani = Ani;
+            this.Direction = Direction;
+            this.Dnis = Dnis;
+            this.OutboundCampaignId = OutboundCampaignId;
+            this.OutboundContactId = OutboundContactId;
+            this.OutboundContactListId = OutboundContactListId;
+            this.DispositionAnalyzer = DispositionAnalyzer;
+            this.DispositionName = DispositionName;
+            this.EdgeId = EdgeId;
+            this.RemoteNameDisplayable = RemoteNameDisplayable;
+            this.RoomId = RoomId;
+            this.MonitoredSessionId = MonitoredSessionId;
+            this.MonitoredParticipantId = MonitoredParticipantId;
+            this.CallbackUserName = CallbackUserName;
+            this.CallbackNumbers = CallbackNumbers;
+            this.CallbackScheduledTime = CallbackScheduledTime;
+            this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
+            this.SkipEnabled = SkipEnabled;
+            this.TimeoutSeconds = TimeoutSeconds;
+            this.CobrowseRole = CobrowseRole;
+            this.CobrowseRoomId = CobrowseRoomId;
+            this.MediaBridgeId = MediaBridgeId;
+            this.ScreenShareAddressSelf = ScreenShareAddressSelf;
+            this.SharingScreen = SharingScreen;
+            this.ScreenShareRoomId = ScreenShareRoomId;
+            this.VideoRoomId = VideoRoomId;
+            this.VideoAddressSelf = VideoAddressSelf;
+            this.Segments = Segments;
+            this.Metrics = Metrics;
             
         }
         
@@ -1296,79 +739,42 @@ this.Metrics = Metrics;
             sb.Append("class AnalyticsSession {\n");
             
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
-            
             sb.Append("  AddressOther: ").Append(AddressOther).Append("\n");
-            
             sb.Append("  AddressSelf: ").Append(AddressSelf).Append("\n");
-            
             sb.Append("  AddressFrom: ").Append(AddressFrom).Append("\n");
-            
             sb.Append("  AddressTo: ").Append(AddressTo).Append("\n");
-            
             sb.Append("  MessageType: ").Append(MessageType).Append("\n");
-            
             sb.Append("  Ani: ").Append(Ani).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
-            
             sb.Append("  OutboundCampaignId: ").Append(OutboundCampaignId).Append("\n");
-            
             sb.Append("  OutboundContactId: ").Append(OutboundContactId).Append("\n");
-            
             sb.Append("  OutboundContactListId: ").Append(OutboundContactListId).Append("\n");
-            
             sb.Append("  DispositionAnalyzer: ").Append(DispositionAnalyzer).Append("\n");
-            
             sb.Append("  DispositionName: ").Append(DispositionName).Append("\n");
-            
             sb.Append("  EdgeId: ").Append(EdgeId).Append("\n");
-            
             sb.Append("  RemoteNameDisplayable: ").Append(RemoteNameDisplayable).Append("\n");
-            
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
-            
             sb.Append("  MonitoredSessionId: ").Append(MonitoredSessionId).Append("\n");
-            
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
-            
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
-            
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
-            
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
-            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
-            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
-            
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
-            
             sb.Append("  CobrowseRole: ").Append(CobrowseRole).Append("\n");
-            
             sb.Append("  CobrowseRoomId: ").Append(CobrowseRoomId).Append("\n");
-            
             sb.Append("  MediaBridgeId: ").Append(MediaBridgeId).Append("\n");
-            
             sb.Append("  ScreenShareAddressSelf: ").Append(ScreenShareAddressSelf).Append("\n");
-            
             sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
-            
             sb.Append("  ScreenShareRoomId: ").Append(ScreenShareRoomId).Append("\n");
-            
             sb.Append("  VideoRoomId: ").Append(VideoRoomId).Append("\n");
-            
             sb.Append("  VideoAddressSelf: ").Append(VideoAddressSelf).Append("\n");
-            
             sb.Append("  Segments: ").Append(Segments).Append("\n");
-            
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

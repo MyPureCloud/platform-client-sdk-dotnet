@@ -45,76 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VendorConnectionRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="Publisher">Publisher of the integration or connector who registered the new connection. Typically, inin. (required).</param>
-        
-        
-        
         /// <param name="Type">Integration or connector type that registered the new connection. Example, wfm-rta-integration (required).</param>
-        
-        
-        
         /// <param name="Name">Name of the integration or connector instance that registered the new connection. Example, my-wfm (required).</param>
-        
-        
         public VendorConnectionRequest(string Publisher = null, string Type = null, string Name = null)
         {
-            
-            
-            
-            // to ensure "Publisher" is required (not null)
-            if (Publisher == null)
-            {
-                throw new InvalidDataException("Publisher is a required property for VendorConnectionRequest and cannot be null");
-            }
-            else
-            {
-                this.Publisher = Publisher;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for VendorConnectionRequest and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for VendorConnectionRequest and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -156,11 +91,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class VendorConnectionRequest {\n");
             
             sb.Append("  Publisher: ").Append(Publisher).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

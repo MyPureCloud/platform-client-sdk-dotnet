@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VmPairingInfo" /> class.
         /// </summary>
-        
-        
         /// <param name="MetaData">This is to be used to complete the setup process of a locally deployed virtual edge device..</param>
-        
-        
-        
         /// <param name="EdgeId">EdgeId.</param>
-        
-        
-        
         /// <param name="AuthToken">AuthToken.</param>
-        
-        
-        
         /// <param name="OrgId">OrgId.</param>
-        
-        
         public VmPairingInfo(MetaData MetaData = null, string EdgeId = null, string AuthToken = null, string OrgId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MetaData = MetaData;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgeId = EdgeId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AuthToken = AuthToken;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OrgId = OrgId;
-            
-            
-            
+            this.MetaData = MetaData;
+            this.EdgeId = EdgeId;
+            this.AuthToken = AuthToken;
+            this.OrgId = OrgId;
             
         }
         
@@ -163,13 +101,9 @@ this.OrgId = OrgId;
             sb.Append("class VmPairingInfo {\n");
             
             sb.Append("  MetaData: ").Append(MetaData).Append("\n");
-            
             sb.Append("  EdgeId: ").Append(EdgeId).Append("\n");
-            
             sb.Append("  AuthToken: ").Append(AuthToken).Append("\n");
-            
             sb.Append("  OrgId: ").Append(OrgId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

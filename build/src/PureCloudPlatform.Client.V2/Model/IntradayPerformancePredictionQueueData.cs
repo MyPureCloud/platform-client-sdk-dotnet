@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayPerformancePredictionQueueData" /> class.
         /// </summary>
-        
-        
         /// <param name="ServiceLevelPercent">Predicted percent of interactions answered in X seconds, where X is the service level objective configured in the service goal group matching this intraday group.</param>
-        
-        
-        
         /// <param name="AverageSpeedOfAnswerSeconds">Predicted average time in seconds it takes to answer an interaction once the interaction becomes available to be routed.</param>
-        
-        
-        
         /// <param name="NumberOfInteractions">Predicted number of interactions.</param>
-        
-        
         public IntradayPerformancePredictionQueueData(double? ServiceLevelPercent = null, double? AverageSpeedOfAnswerSeconds = null, double? NumberOfInteractions = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ServiceLevelPercent = ServiceLevelPercent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumberOfInteractions = NumberOfInteractions;
-            
-            
-            
+            this.ServiceLevelPercent = ServiceLevelPercent;
+            this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
+            this.NumberOfInteractions = NumberOfInteractions;
             
         }
         
@@ -135,11 +88,8 @@ this.NumberOfInteractions = NumberOfInteractions;
             sb.Append("class IntradayPerformancePredictionQueueData {\n");
             
             sb.Append("  ServiceLevelPercent: ").Append(ServiceLevelPercent).Append("\n");
-            
             sb.Append("  AverageSpeedOfAnswerSeconds: ").Append(AverageSpeedOfAnswerSeconds).Append("\n");
-            
             sb.Append("  NumberOfInteractions: ").Append(NumberOfInteractions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

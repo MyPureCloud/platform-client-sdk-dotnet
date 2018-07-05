@@ -379,8 +379,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GeolocationSettings>(localVarStatusCode,
                 localVarHeaders,
-                (GeolocationSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GeolocationSettings)));
-            
+                (GeolocationSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GeolocationSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -468,8 +469,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GeolocationSettings>(localVarStatusCode,
                 localVarHeaders,
-                (GeolocationSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GeolocationSettings)));
-            
+                (GeolocationSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GeolocationSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -569,8 +571,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Geolocation>(localVarStatusCode,
                 localVarHeaders,
-                (Geolocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Geolocation)));
-            
+                (Geolocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Geolocation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -672,8 +675,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Geolocation>(localVarStatusCode,
                 localVarHeaders,
-                (Geolocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Geolocation)));
-            
+                (Geolocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Geolocation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -771,8 +775,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GeolocationSettings>(localVarStatusCode,
                 localVarHeaders,
-                (GeolocationSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GeolocationSettings)));
-            
+                (GeolocationSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GeolocationSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -871,8 +876,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GeolocationSettings>(localVarStatusCode,
                 localVarHeaders,
-                (GeolocationSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GeolocationSettings)));
-            
+                (GeolocationSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GeolocationSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -982,8 +988,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Geolocation>(localVarStatusCode,
                 localVarHeaders,
-                (Geolocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Geolocation)));
-            
+                (Geolocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Geolocation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1096,8 +1103,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Geolocation>(localVarStatusCode,
                 localVarHeaders,
-                (Geolocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Geolocation)));
-            
+                (Geolocation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Geolocation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

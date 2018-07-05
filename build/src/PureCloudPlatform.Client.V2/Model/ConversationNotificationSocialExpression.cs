@@ -290,282 +290,40 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationSocialExpression" /> class.
         /// </summary>
-        
-        
         /// <param name="State">State.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="SocialMediaId">SocialMediaId.</param>
-        
-        
-        
         /// <param name="SocialMediaHub">SocialMediaHub.</param>
-        
-        
-        
         /// <param name="SocialUserName">SocialUserName.</param>
-        
-        
-        
         /// <param name="PreviewText">PreviewText.</param>
-        
-        
-        
         /// <param name="RecordingId">RecordingId.</param>
-        
-        
-        
         /// <param name="Held">Held.</param>
-        
-        
-        
         /// <param name="Provider">Provider.</param>
-        
-        
-        
         /// <param name="ScriptId">ScriptId.</param>
-        
-        
-        
         /// <param name="PeerId">PeerId.</param>
-        
-        
-        
         /// <param name="DisconnectType">DisconnectType.</param>
-        
-        
-        
         /// <param name="StartHoldTime">StartHoldTime.</param>
-        
-        
-        
         /// <param name="ConnectedTime">ConnectedTime.</param>
-        
-        
-        
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ConversationNotificationSocialExpression(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null, string RecordingId = null, bool? Held = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SocialMediaId = SocialMediaId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SocialMediaHub = SocialMediaHub;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SocialUserName = SocialUserName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PreviewText = PreviewText;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingId = RecordingId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Held = Held;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScriptId = ScriptId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerId = PeerId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartHoldTime = StartHoldTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectedTime = DisconnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.State = State;
+            this.Id = Id;
+            this.SocialMediaId = SocialMediaId;
+            this.SocialMediaHub = SocialMediaHub;
+            this.SocialUserName = SocialUserName;
+            this.PreviewText = PreviewText;
+            this.RecordingId = RecordingId;
+            this.Held = Held;
+            this.Provider = Provider;
+            this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
+            this.DisconnectType = DisconnectType;
+            this.StartHoldTime = StartHoldTime;
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -696,37 +454,21 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ConversationNotificationSocialExpression {\n");
             
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  SocialMediaId: ").Append(SocialMediaId).Append("\n");
-            
             sb.Append("  SocialMediaHub: ").Append(SocialMediaHub).Append("\n");
-            
             sb.Append("  SocialUserName: ").Append(SocialUserName).Append("\n");
-            
             sb.Append("  PreviewText: ").Append(PreviewText).Append("\n");
-            
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
-            
             sb.Append("  Held: ").Append(Held).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
-            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

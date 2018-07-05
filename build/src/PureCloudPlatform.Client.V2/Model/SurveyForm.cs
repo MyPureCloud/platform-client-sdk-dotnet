@@ -95,175 +95,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyForm" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The survey form name (required).</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Disabled">Is this form disabled.</param>
-        
-        
-        
-        
-        
         /// <param name="HeaderImageId">Id of the header image appearing at the top of the form..</param>
-        
-        
-        
-        
-        
         /// <param name="Header">Markdown text for the top of the form..</param>
-        
-        
-        
         /// <param name="Footer">Markdown text for the bottom of the form..</param>
-        
-        
-        
         /// <param name="QuestionGroups">A list of question groups (required).</param>
-        
-        
-        
         /// <param name="PublishedVersions">List of published version of this form.</param>
-        
-        
-        
-        
         public SurveyForm(string Name = null, bool? Disabled = null, string HeaderImageId = null, string Header = null, string Footer = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingSurveyForm PublishedVersions = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for SurveyForm and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "QuestionGroups" is required (not null)
-            if (QuestionGroups == null)
-            {
-                throw new InvalidDataException("QuestionGroups is a required property for SurveyForm and cannot be null");
-            }
-            else
-            {
-                this.QuestionGroups = QuestionGroups;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Disabled = Disabled;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.HeaderImageId = HeaderImageId;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Header = Header;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Footer = Footer;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.PublishedVersions = PublishedVersions;
-            
-            
-            
-            
-            
+            this.Disabled = Disabled;
+            this.HeaderImageId = HeaderImageId;
+            this.Header = Header;
+            this.Footer = Footer;
+            this.PublishedVersions = PublishedVersions;
             
         }
         
@@ -395,31 +240,18 @@ this.PublishedVersions = PublishedVersions;
             sb.Append("class SurveyForm {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  Published: ").Append(Published).Append("\n");
-            
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
-            
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
-            
             sb.Append("  HeaderImageId: ").Append(HeaderImageId).Append("\n");
-            
             sb.Append("  HeaderImageUrl: ").Append(HeaderImageUrl).Append("\n");
-            
             sb.Append("  Header: ").Append(Header).Append("\n");
-            
             sb.Append("  Footer: ").Append(Footer).Append("\n");
-            
             sb.Append("  QuestionGroups: ").Append(QuestionGroups).Append("\n");
-            
             sb.Append("  PublishedVersions: ").Append(PublishedVersions).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

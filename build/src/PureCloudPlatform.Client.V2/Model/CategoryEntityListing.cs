@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CategoryEntityListing" /> class.
         /// </summary>
-        
-        
         /// <param name="Entities">Entities.</param>
-        
-        
-        
         /// <param name="PageSize">PageSize.</param>
-        
-        
-        
         /// <param name="PageNumber">PageNumber.</param>
-        
-        
-        
         /// <param name="Total">Total.</param>
-        
-        
-        
         /// <param name="PageCount">PageCount.</param>
-        
-        
         public CategoryEntityListing(List<Category> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, int? PageCount = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Entities = Entities;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageSize = PageSize;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageNumber = PageNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Total = Total;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageCount = PageCount;
-            
-            
-            
+            this.Entities = Entities;
+            this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
+            this.Total = Total;
+            this.PageCount = PageCount;
             
         }
         
@@ -192,15 +115,10 @@ this.PageCount = PageCount;
             sb.Append("class CategoryEntityListing {\n");
             
             sb.Append("  Entities: ").Append(Entities).Append("\n");
-            
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            
             sb.Append("  Total: ").Append(Total).Append("\n");
-            
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

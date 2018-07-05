@@ -328,547 +328,62 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainLogicalInterface" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the entity. (required).</param>
-        
-        
-        
         /// <param name="Description">The resource&#39;s description..</param>
-        
-        
-        
         /// <param name="Version">The current version of the resource..</param>
-        
-        
-        
         /// <param name="DateCreated">The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateModified">The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ModifiedBy">The ID of the user that last modified the resource..</param>
-        
-        
-        
         /// <param name="CreatedBy">The ID of the user that created the resource..</param>
-        
-        
-        
-        
-        
         /// <param name="ModifiedByApp">The application that last modified the resource..</param>
-        
-        
-        
         /// <param name="CreatedByApp">The application that created the resource..</param>
-        
-        
-        
         /// <param name="EdgeUri">EdgeUri.</param>
-        
-        
-        
         /// <param name="EdgeAssignedId">EdgeAssignedId.</param>
-        
-        
-        
         /// <param name="FriendlyName">Friendly Name (required).</param>
-        
-        
-        
         /// <param name="VlanTagId">VlanTagId.</param>
-        
-        
-        
         /// <param name="HardwareAddress">Hardware Address (required).</param>
-        
-        
-        
         /// <param name="PhysicalAdapterId">Physical Adapter Id (required).</param>
-        
-        
-        
         /// <param name="IfStatus">IfStatus.</param>
-        
-        
-        
-        
-        
         /// <param name="Routes">The list of routes assigned to this interface..</param>
-        
-        
-        
         /// <param name="Addresses">The list of IP addresses on this interface.  Priority of dns addresses are based on order in the list..</param>
-        
-        
-        
         /// <param name="Ipv4Capabilities">IPv4 interface settings..</param>
-        
-        
-        
         /// <param name="Ipv6Capabilities">IPv6 interface settings..</param>
-        
-        
-        
         /// <param name="CurrentState">CurrentState.</param>
-        
-        
-        
         /// <param name="LastModifiedUserId">LastModifiedUserId.</param>
-        
-        
-        
         /// <param name="LastModifiedCorrelationId">LastModifiedCorrelationId.</param>
-        
-        
-        
         /// <param name="CommandResponses">CommandResponses.</param>
-        
-        
-        
         /// <param name="InheritPhoneTrunkBasesIPv4">The IPv4 phone trunk base assignment will be inherited from the Edge Group..</param>
-        
-        
-        
         /// <param name="InheritPhoneTrunkBasesIPv6">The IPv6 phone trunk base assignment will be inherited from the Edge Group..</param>
-        
-        
-        
         /// <param name="UseForInternalEdgeCommunication">This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group..</param>
-        
-        
-        
         /// <param name="ExternalTrunkBaseAssignments">External trunk base settings to use for external communication from this interface..</param>
-        
-        
-        
         /// <param name="PhoneTrunkBaseAssignments">Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true..</param>
-        
-        
-        
-        
         public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for DomainLogicalInterface and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "FriendlyName" is required (not null)
-            if (FriendlyName == null)
-            {
-                throw new InvalidDataException("FriendlyName is a required property for DomainLogicalInterface and cannot be null");
-            }
-            else
-            {
-                this.FriendlyName = FriendlyName;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "HardwareAddress" is required (not null)
-            if (HardwareAddress == null)
-            {
-                throw new InvalidDataException("HardwareAddress is a required property for DomainLogicalInterface and cannot be null");
-            }
-            else
-            {
-                this.HardwareAddress = HardwareAddress;
-            }
-            
-            
-            
-            
-            
-            // to ensure "PhysicalAdapterId" is required (not null)
-            if (PhysicalAdapterId == null)
-            {
-                throw new InvalidDataException("PhysicalAdapterId is a required property for DomainLogicalInterface and cannot be null");
-            }
-            else
-            {
-                this.PhysicalAdapterId = PhysicalAdapterId;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedByApp = ModifiedByApp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedByApp = CreatedByApp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgeUri = EdgeUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgeAssignedId = EdgeAssignedId;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.VlanTagId = VlanTagId;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.IfStatus = IfStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Routes = Routes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Addresses = Addresses;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Ipv4Capabilities = Ipv4Capabilities;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Ipv6Capabilities = Ipv6Capabilities;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CurrentState = CurrentState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LastModifiedUserId = LastModifiedUserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LastModifiedCorrelationId = LastModifiedCorrelationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CommandResponses = CommandResponses;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InheritPhoneTrunkBasesIPv4 = InheritPhoneTrunkBasesIPv4;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InheritPhoneTrunkBasesIPv6 = InheritPhoneTrunkBasesIPv6;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UseForInternalEdgeCommunication = UseForInternalEdgeCommunication;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalTrunkBaseAssignments = ExternalTrunkBaseAssignments;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
-            
-            
-            
-            
-            
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.EdgeUri = EdgeUri;
+            this.EdgeAssignedId = EdgeAssignedId;
+            this.VlanTagId = VlanTagId;
+            this.IfStatus = IfStatus;
+            this.Routes = Routes;
+            this.Addresses = Addresses;
+            this.Ipv4Capabilities = Ipv4Capabilities;
+            this.Ipv6Capabilities = Ipv6Capabilities;
+            this.CurrentState = CurrentState;
+            this.LastModifiedUserId = LastModifiedUserId;
+            this.LastModifiedCorrelationId = LastModifiedCorrelationId;
+            this.CommandResponses = CommandResponses;
+            this.InheritPhoneTrunkBasesIPv4 = InheritPhoneTrunkBasesIPv4;
+            this.InheritPhoneTrunkBasesIPv6 = InheritPhoneTrunkBasesIPv6;
+            this.UseForInternalEdgeCommunication = UseForInternalEdgeCommunication;
+            this.ExternalTrunkBaseAssignments = ExternalTrunkBaseAssignments;
+            this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
             
         }
         
@@ -1152,71 +667,38 @@ this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
             sb.Append("class DomainLogicalInterface {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
-            
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
-            
             sb.Append("  EdgeUri: ").Append(EdgeUri).Append("\n");
-            
             sb.Append("  EdgeAssignedId: ").Append(EdgeAssignedId).Append("\n");
-            
             sb.Append("  FriendlyName: ").Append(FriendlyName).Append("\n");
-            
             sb.Append("  VlanTagId: ").Append(VlanTagId).Append("\n");
-            
             sb.Append("  HardwareAddress: ").Append(HardwareAddress).Append("\n");
-            
             sb.Append("  PhysicalAdapterId: ").Append(PhysicalAdapterId).Append("\n");
-            
             sb.Append("  IfStatus: ").Append(IfStatus).Append("\n");
-            
             sb.Append("  InterfaceType: ").Append(InterfaceType).Append("\n");
-            
             sb.Append("  Routes: ").Append(Routes).Append("\n");
-            
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
-            
             sb.Append("  Ipv4Capabilities: ").Append(Ipv4Capabilities).Append("\n");
-            
             sb.Append("  Ipv6Capabilities: ").Append(Ipv6Capabilities).Append("\n");
-            
             sb.Append("  CurrentState: ").Append(CurrentState).Append("\n");
-            
             sb.Append("  LastModifiedUserId: ").Append(LastModifiedUserId).Append("\n");
-            
             sb.Append("  LastModifiedCorrelationId: ").Append(LastModifiedCorrelationId).Append("\n");
-            
             sb.Append("  CommandResponses: ").Append(CommandResponses).Append("\n");
-            
             sb.Append("  InheritPhoneTrunkBasesIPv4: ").Append(InheritPhoneTrunkBasesIPv4).Append("\n");
-            
             sb.Append("  InheritPhoneTrunkBasesIPv6: ").Append(InheritPhoneTrunkBasesIPv6).Append("\n");
-            
             sb.Append("  UseForInternalEdgeCommunication: ").Append(UseForInternalEdgeCommunication).Append("\n");
-            
             sb.Append("  ExternalTrunkBaseAssignments: ").Append(ExternalTrunkBaseAssignments).Append("\n");
-            
             sb.Append("  PhoneTrunkBaseAssignments: ").Append(PhoneTrunkBaseAssignments).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallRoute" /> class.
         /// </summary>
-        
-        
         /// <param name="Targets">A list of CallTargets to be called when the CallRoute is executed.</param>
-        
-        
         public CallRoute(List<CallTarget> Targets = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Targets = Targets;
-            
-            
-            
+            this.Targets = Targets;
             
         }
         
@@ -73,7 +56,6 @@ this.Targets = Targets;
             sb.Append("class CallRoute {\n");
             
             sb.Append("  Targets: ").Append(Targets).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

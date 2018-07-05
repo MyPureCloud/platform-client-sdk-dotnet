@@ -55,100 +55,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ManagementUnitSettings" /> class.
         /// </summary>
-        
-        
         /// <param name="Adherence">Adherence settings for this management unit.</param>
-        
-        
-        
         /// <param name="ShortTermForecasting">Short term forecasting settings for this management unit.</param>
-        
-        
-        
         /// <param name="TimeOff">Time off request settings for this management unit.</param>
-        
-        
-        
         /// <param name="Scheduling">Scheduling settings for this management unit.</param>
-        
-        
-        
         /// <param name="Metadata">Version info metadata for the associated management unit (required).</param>
-        
-        
         public ManagementUnitSettings(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffRequestSettings TimeOff = null, SchedulingSettings Scheduling = null, WfmVersionedEntityMetadata Metadata = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Metadata" is required (not null)
-            if (Metadata == null)
-            {
-                throw new InvalidDataException("Metadata is a required property for ManagementUnitSettings and cannot be null");
-            }
-            else
-            {
-                this.Metadata = Metadata;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-this.Adherence = Adherence;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ShortTermForecasting = ShortTermForecasting;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeOff = TimeOff;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Scheduling = Scheduling;
-            
-            
-            
-            
-            
-            
-            
+            this.Adherence = Adherence;
+            this.ShortTermForecasting = ShortTermForecasting;
+            this.TimeOff = TimeOff;
+            this.Scheduling = Scheduling;
             
         }
         
@@ -208,15 +125,10 @@ this.Scheduling = Scheduling;
             sb.Append("class ManagementUnitSettings {\n");
             
             sb.Append("  Adherence: ").Append(Adherence).Append("\n");
-            
             sb.Append("  ShortTermForecasting: ").Append(ShortTermForecasting).Append("\n");
-            
             sb.Append("  TimeOff: ").Append(TimeOff).Append("\n");
-            
             sb.Append("  Scheduling: ").Append(Scheduling).Append("\n");
-            
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

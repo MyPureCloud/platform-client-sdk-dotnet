@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RetentionDuration" /> class.
         /// </summary>
-        
-        
         /// <param name="ArchiveRetention">ArchiveRetention.</param>
-        
-        
-        
         /// <param name="DeleteRetention">DeleteRetention.</param>
-        
-        
         public RetentionDuration(ArchiveRetention ArchiveRetention = null, DeleteRetention DeleteRetention = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ArchiveRetention = ArchiveRetention;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DeleteRetention = DeleteRetention;
-            
-            
-            
+            this.ArchiveRetention = ArchiveRetention;
+            this.DeleteRetention = DeleteRetention;
             
         }
         
@@ -102,9 +70,7 @@ this.DeleteRetention = DeleteRetention;
             sb.Append("class RetentionDuration {\n");
             
             sb.Append("  ArchiveRetention: ").Append(ArchiveRetention).Append("\n");
-            
             sb.Append("  DeleteRetention: ").Append(DeleteRetention).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

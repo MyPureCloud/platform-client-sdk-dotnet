@@ -99,146 +99,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserDetailsQuery" /> class.
         /// </summary>
-        
-        
         /// <param name="Interval">Specifies the date and time range of data being queried. Conversations MUST have started within this time range to potentially be included within the result set. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
-        
-        
-        
         /// <param name="UserFilters">Filters that target the users to retrieve data for.</param>
-        
-        
-        
         /// <param name="PresenceFilters">Filters that target system and organization presence-level data.</param>
-        
-        
-        
         /// <param name="RoutingStatusFilters">Filters that target agent routing status-level data.</param>
-        
-        
-        
         /// <param name="PresenceAggregations">Include faceted search and aggregate roll-ups of presence data in your search results. This does not function as a filter, but rather, summary data about the presence results matching your filters.</param>
-        
-        
-        
         /// <param name="RoutingStatusAggregations">Include faceted search and aggregate roll-ups of agent routing status data in your search results. This does not function as a filter, but rather, summary data about the agent routing status results matching your filters.</param>
-        
-        
-        
         /// <param name="Paging">Page size and number to control iterating through large result sets. Default page size is 25.</param>
-        
-        
-        
         /// <param name="Order">Sort the result set in ascending/descending order. Default is ascending.</param>
-        
-        
         public UserDetailsQuery(string Interval = null, List<AnalyticsQueryFilter> UserFilters = null, List<AnalyticsQueryFilter> PresenceFilters = null, List<AnalyticsQueryFilter> RoutingStatusFilters = null, List<AnalyticsQueryAggregation> PresenceAggregations = null, List<AnalyticsQueryAggregation> RoutingStatusAggregations = null, PagingSpec Paging = null, OrderEnum? Order = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Interval = Interval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserFilters = UserFilters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PresenceFilters = PresenceFilters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoutingStatusFilters = RoutingStatusFilters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PresenceAggregations = PresenceAggregations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoutingStatusAggregations = RoutingStatusAggregations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Paging = Paging;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Order = Order;
-            
-            
-            
+            this.Interval = Interval;
+            this.UserFilters = UserFilters;
+            this.PresenceFilters = PresenceFilters;
+            this.RoutingStatusFilters = RoutingStatusFilters;
+            this.PresenceAggregations = PresenceAggregations;
+            this.RoutingStatusAggregations = RoutingStatusAggregations;
+            this.Paging = Paging;
+            this.Order = Order;
             
         }
         
@@ -318,21 +196,13 @@ this.Order = Order;
             sb.Append("class UserDetailsQuery {\n");
             
             sb.Append("  Interval: ").Append(Interval).Append("\n");
-            
             sb.Append("  UserFilters: ").Append(UserFilters).Append("\n");
-            
             sb.Append("  PresenceFilters: ").Append(PresenceFilters).Append("\n");
-            
             sb.Append("  RoutingStatusFilters: ").Append(RoutingStatusFilters).Append("\n");
-            
             sb.Append("  PresenceAggregations: ").Append(PresenceAggregations).Append("\n");
-            
             sb.Append("  RoutingStatusAggregations: ").Append(RoutingStatusAggregations).Append("\n");
-            
             sb.Append("  Paging: ").Append(Paging).Append("\n");
-            
             sb.Append("  Order: ").Append(Order).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetInfo" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">The name of the field that was faceted on..</param>
-        
-        
-        
         /// <param name="Entries">The entries resulting from this facet..</param>
-        
-        
         public FacetInfo(string Name = null, List<Entry> Entries = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Entries = Entries;
-            
-            
-            
+            this.Name = Name;
+            this.Entries = Entries;
             
         }
         
@@ -104,9 +72,7 @@ this.Entries = Entries;
             sb.Append("class FacetInfo {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Entries: ").Append(Entries).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

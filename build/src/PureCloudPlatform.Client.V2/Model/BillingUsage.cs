@@ -45,76 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingUsage" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Identifies the billable usage. (required).</param>
-        
-        
-        
         /// <param name="TotalUsage">The total amount of usage, expressed as a decimal number in string format. (required).</param>
-        
-        
-        
         /// <param name="Resources">The resources for which usage was observed (e.g. license users, devices). (required).</param>
-        
-        
         public BillingUsage(string Name = null, string TotalUsage = null, List<BillingUsageResource> Resources = null)
         {
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for BillingUsage and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "TotalUsage" is required (not null)
-            if (TotalUsage == null)
-            {
-                throw new InvalidDataException("TotalUsage is a required property for BillingUsage and cannot be null");
-            }
-            else
-            {
-                this.TotalUsage = TotalUsage;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Resources" is required (not null)
-            if (Resources == null)
-            {
-                throw new InvalidDataException("Resources is a required property for BillingUsage and cannot be null");
-            }
-            else
-            {
-                this.Resources = Resources;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -156,11 +91,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class BillingUsage {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  TotalUsage: ").Append(TotalUsage).Append("\n");
-            
             sb.Append("  Resources: ").Append(Resources).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

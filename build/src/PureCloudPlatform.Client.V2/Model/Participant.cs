@@ -354,673 +354,86 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Participant" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">A globally unique identifier for this conversation..</param>
-        
-        
-        
         /// <param name="StartTime">The timestamp when this participant joined the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="EndTime">The timestamp when this participant disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ConnectedTime">The timestamp when this participant was connected to the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Name">A human readable name identifying the participant..</param>
-        
-        
-        
         /// <param name="UserUri">If this participant represents a user, then this will be an URI that can be used to fetch the user..</param>
-        
-        
-        
         /// <param name="UserId">If this participant represents a user, then this will be the globally unique identifier for the user..</param>
-        
-        
-        
         /// <param name="ExternalContactId">If this participant represents an external contact, then this will be the globally unique identifier for the external contact..</param>
-        
-        
-        
         /// <param name="ExternalOrganizationId">If this participant represents an external org, then this will be the globally unique identifier for the external org..</param>
-        
-        
-        
         /// <param name="QueueId">If present, the queue id that the communication channel came in on..</param>
-        
-        
-        
         /// <param name="GroupId">If present, group of users the participant represents..</param>
-        
-        
-        
         /// <param name="QueueName">If present, the queue name that the communication channel came in on..</param>
-        
-        
-        
         /// <param name="Purpose">A well known string that specifies the purpose of this participant..</param>
-        
-        
-        
         /// <param name="ParticipantType">A well known string that specifies the type of this participant..</param>
-        
-        
-        
         /// <param name="ConsultParticipantId">If this participant is part of a consult transfer, then this will be the participant id of the participant being transferred..</param>
-        
-        
-        
         /// <param name="Address">The address for the this participant. For a phone call this will be the ANI..</param>
-        
-        
-        
         /// <param name="Ani">The address for the this participant. For a phone call this will be the ANI..</param>
-        
-        
-        
         /// <param name="AniName">The ani-based name for this participant..</param>
-        
-        
-        
         /// <param name="Dnis">The address for the this participant. For a phone call this will be the ANI..</param>
-        
-        
-        
         /// <param name="Locale">An ISO 639 language code specifying the locale for this participant.</param>
-        
-        
-        
         /// <param name="WrapupRequired">True iff this participant is required to enter wrapup for this conversation..</param>
-        
-        
-        
         /// <param name="WrapupPrompt">This field controls how the UI prompts the agent for a wrapup..</param>
-        
-        
-        
         /// <param name="WrapupTimeoutMs">Specifies how long a timed ACW session will last..</param>
-        
-        
-        
         /// <param name="WrapupSkipped">The UI sets this field when the agent chooses to skip entering a wrapup for this participant..</param>
-        
-        
-        
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
-        
-        
-        
         /// <param name="MonitoredParticipantId">If this participant is a monitor, then this will be the id of the participant that is being monitored..</param>
-        
-        
-        
         /// <param name="Attributes">Additional participant attributes.</param>
-        
-        
-        
         /// <param name="Calls">Calls.</param>
-        
-        
-        
         /// <param name="Callbacks">Callbacks.</param>
-        
-        
-        
         /// <param name="Chats">Chats.</param>
-        
-        
-        
         /// <param name="Cobrowsesessions">Cobrowsesessions.</param>
-        
-        
-        
         /// <param name="Emails">Emails.</param>
-        
-        
-        
         /// <param name="Messages">Messages.</param>
-        
-        
-        
         /// <param name="Screenshares">Screenshares.</param>
-        
-        
-        
         /// <param name="SocialExpressions">SocialExpressions.</param>
-        
-        
-        
         /// <param name="Videos">Videos.</param>
-        
-        
-        
         /// <param name="Evaluations">Evaluations.</param>
-        
-        
-        
         /// <param name="ScreenRecordingState">The current screen recording state for this participant..</param>
-        
-        
-        
         /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
-        
-        
         public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartTime = StartTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndTime = EndTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserUri = UserUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalContactId = ExternalContactId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalOrganizationId = ExternalOrganizationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueId = QueueId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.GroupId = GroupId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueName = QueueName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Purpose = Purpose;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ParticipantType = ParticipantType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConsultParticipantId = ConsultParticipantId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Ani = Ani;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AniName = AniName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Dnis = Dnis;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Locale = Locale;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupRequired = WrapupRequired;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupPrompt = WrapupPrompt;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupTimeoutMs = WrapupTimeoutMs;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupSkipped = WrapupSkipped;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Wrapup = Wrapup;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MonitoredParticipantId = MonitoredParticipantId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attributes = Attributes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Calls = Calls;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Callbacks = Callbacks;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Chats = Chats;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Cobrowsesessions = Cobrowsesessions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Emails = Emails;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Messages = Messages;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Screenshares = Screenshares;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SocialExpressions = SocialExpressions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Videos = Videos;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Evaluations = Evaluations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScreenRecordingState = ScreenRecordingState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FlaggedReason = FlaggedReason;
-            
-            
-            
+            this.Id = Id;
+            this.StartTime = StartTime;
+            this.EndTime = EndTime;
+            this.ConnectedTime = ConnectedTime;
+            this.Name = Name;
+            this.UserUri = UserUri;
+            this.UserId = UserId;
+            this.ExternalContactId = ExternalContactId;
+            this.ExternalOrganizationId = ExternalOrganizationId;
+            this.QueueId = QueueId;
+            this.GroupId = GroupId;
+            this.QueueName = QueueName;
+            this.Purpose = Purpose;
+            this.ParticipantType = ParticipantType;
+            this.ConsultParticipantId = ConsultParticipantId;
+            this.Address = Address;
+            this.Ani = Ani;
+            this.AniName = AniName;
+            this.Dnis = Dnis;
+            this.Locale = Locale;
+            this.WrapupRequired = WrapupRequired;
+            this.WrapupPrompt = WrapupPrompt;
+            this.WrapupTimeoutMs = WrapupTimeoutMs;
+            this.WrapupSkipped = WrapupSkipped;
+            this.Wrapup = Wrapup;
+            this.MonitoredParticipantId = MonitoredParticipantId;
+            this.Attributes = Attributes;
+            this.Calls = Calls;
+            this.Callbacks = Callbacks;
+            this.Chats = Chats;
+            this.Cobrowsesessions = Cobrowsesessions;
+            this.Emails = Emails;
+            this.Messages = Messages;
+            this.Screenshares = Screenshares;
+            this.SocialExpressions = SocialExpressions;
+            this.Videos = Videos;
+            this.Evaluations = Evaluations;
+            this.ScreenRecordingState = ScreenRecordingState;
+            this.FlaggedReason = FlaggedReason;
             
         }
         
@@ -1355,83 +768,44 @@ this.FlaggedReason = FlaggedReason;
             sb.Append("class Participant {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  UserUri: ").Append(UserUri).Append("\n");
-            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
-            
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
-            
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
-            
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
-            
             sb.Append("  QueueName: ").Append(QueueName).Append("\n");
-            
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
-            
             sb.Append("  ParticipantType: ").Append(ParticipantType).Append("\n");
-            
             sb.Append("  ConsultParticipantId: ").Append(ConsultParticipantId).Append("\n");
-            
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  Ani: ").Append(Ani).Append("\n");
-            
             sb.Append("  AniName: ").Append(AniName).Append("\n");
-            
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
-            
             sb.Append("  Locale: ").Append(Locale).Append("\n");
-            
             sb.Append("  WrapupRequired: ").Append(WrapupRequired).Append("\n");
-            
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
-            
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
-            
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
-            
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
-            
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
-            
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            
             sb.Append("  Calls: ").Append(Calls).Append("\n");
-            
             sb.Append("  Callbacks: ").Append(Callbacks).Append("\n");
-            
             sb.Append("  Chats: ").Append(Chats).Append("\n");
-            
             sb.Append("  Cobrowsesessions: ").Append(Cobrowsesessions).Append("\n");
-            
             sb.Append("  Emails: ").Append(Emails).Append("\n");
-            
             sb.Append("  Messages: ").Append(Messages).Append("\n");
-            
             sb.Append("  Screenshares: ").Append(Screenshares).Append("\n");
-            
             sb.Append("  SocialExpressions: ").Append(SocialExpressions).Append("\n");
-            
             sb.Append("  Videos: ").Append(Videos).Append("\n");
-            
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
-            
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
-            
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

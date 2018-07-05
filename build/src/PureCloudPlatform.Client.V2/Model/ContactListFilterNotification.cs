@@ -107,180 +107,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="DateCreated">DateCreated.</param>
-        
-        
-        
         /// <param name="DateModified">DateModified.</param>
-        
-        
-        
         /// <param name="Version">Version.</param>
-        
-        
-        
         /// <param name="ContactList">ContactList.</param>
-        
-        
-        
         /// <param name="ContactListColumns">ContactListColumns.</param>
-        
-        
-        
         /// <param name="Clauses">Clauses.</param>
-        
-        
-        
         /// <param name="FilterType">FilterType.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ContactListFilterNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DocumentDataV2NotificationCreatedBy ContactList = null, List<string> ContactListColumns = null, List<ContactListFilterNotificationClauses> Clauses = null, FilterTypeEnum? FilterType = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactList = ContactList;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactListColumns = ContactListColumns;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Clauses = Clauses;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FilterType = FilterType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Version = Version;
+            this.ContactList = ContactList;
+            this.ContactListColumns = ContactListColumns;
+            this.Clauses = Clauses;
+            this.FilterType = FilterType;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -369,25 +217,15 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ContactListFilterNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
-            
             sb.Append("  ContactListColumns: ").Append(ContactListColumns).Append("\n");
-            
             sb.Append("  Clauses: ").Append(Clauses).Append("\n");
-            
             sb.Append("  FilterType: ").Append(FilterType).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

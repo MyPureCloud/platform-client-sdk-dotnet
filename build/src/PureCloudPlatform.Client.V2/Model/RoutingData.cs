@@ -55,100 +55,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingData" /> class.
         /// </summary>
-        
-        
         /// <param name="QueueId">The identifier of the routing queue (required).</param>
-        
-        
-        
         /// <param name="LanguageId">The identifier of a language to be considered in routing.</param>
-        
-        
-        
         /// <param name="Priority">The priority for routing.</param>
-        
-        
-        
         /// <param name="SkillIds">A list of skill identifiers to be considered in routing.</param>
-        
-        
-        
         /// <param name="PreferredAgentIds">A list of agents to be preferred in routing.</param>
-        
-        
         public RoutingData(string QueueId = null, string LanguageId = null, int? Priority = null, List<string> SkillIds = null, List<string> PreferredAgentIds = null)
         {
-            
-            
-            
-            // to ensure "QueueId" is required (not null)
-            if (QueueId == null)
-            {
-                throw new InvalidDataException("QueueId is a required property for RoutingData and cannot be null");
-            }
-            else
-            {
-                this.QueueId = QueueId;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.LanguageId = LanguageId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Priority = Priority;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SkillIds = SkillIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PreferredAgentIds = PreferredAgentIds;
-            
-            
-            
+            this.LanguageId = LanguageId;
+            this.Priority = Priority;
+            this.SkillIds = SkillIds;
+            this.PreferredAgentIds = PreferredAgentIds;
             
         }
         
@@ -208,15 +125,10 @@ this.PreferredAgentIds = PreferredAgentIds;
             sb.Append("class RoutingData {\n");
             
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
-            
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
-            
             sb.Append("  Priority: ").Append(Priority).Append("\n");
-            
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
-            
             sb.Append("  PreferredAgentIds: ").Append(PreferredAgentIds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -60,105 +60,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LocalEncryptionConfiguration" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Url">The url for decryption. This must specify the path to where Purecloud can requests decryption (required).</param>
-        
-        
-        
         /// <param name="ApiId">The api id for Hawk Authentication. (required).</param>
-        
-        
-        
         /// <param name="ApiKey">The api shared symmetric key used for hawk authentication (required).</param>
-        
-        
-        
-        
         public LocalEncryptionConfiguration(string Name = null, string Url = null, string ApiId = null, string ApiKey = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Url" is required (not null)
-            if (Url == null)
-            {
-                throw new InvalidDataException("Url is a required property for LocalEncryptionConfiguration and cannot be null");
-            }
-            else
-            {
-                this.Url = Url;
-            }
-            
-            
-            
-            
-            
-            // to ensure "ApiId" is required (not null)
-            if (ApiId == null)
-            {
-                throw new InvalidDataException("ApiId is a required property for LocalEncryptionConfiguration and cannot be null");
-            }
-            else
-            {
-                this.ApiId = ApiId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "ApiKey" is required (not null)
-            if (ApiKey == null)
-            {
-                throw new InvalidDataException("ApiKey is a required property for LocalEncryptionConfiguration and cannot be null");
-            }
-            else
-            {
-                this.ApiKey = ApiKey;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
             
         }
         
@@ -226,17 +134,11 @@ this.Name = Name;
             sb.Append("class LocalEncryptionConfiguration {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Url: ").Append(Url).Append("\n");
-            
             sb.Append("  ApiId: ").Append(ApiId).Append("\n");
-            
             sb.Append("  ApiKey: ").Append(ApiKey).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -65,95 +65,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableTimeSet" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the CallableTimeSet. (required).</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        
-        
-        
         /// <param name="CallableTimes">The list of CallableTimes for which it is acceptable to place outbound calls. (required).</param>
-        
-        
-        
-        
         public CallableTimeSet(string Name = null, int? Version = null, List<CallableTime> CallableTimes = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for CallableTimeSet and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "CallableTimes" is required (not null)
-            if (CallableTimes == null)
-            {
-                throw new InvalidDataException("CallableTimes is a required property for CallableTimeSet and cannot be null");
-            }
-            else
-            {
-                this.CallableTimes = CallableTimes;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Version = Version;
             
         }
         
@@ -231,19 +148,12 @@ this.Version = Version;
             sb.Append("class CallableTimeSet {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  CallableTimes: ").Append(CallableTimes).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

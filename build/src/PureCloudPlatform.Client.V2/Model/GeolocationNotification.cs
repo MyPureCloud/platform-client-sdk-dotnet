@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GeolocationNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="UserId">UserId.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="Country">Country.</param>
-        
-        
-        
         /// <param name="Region">Region.</param>
-        
-        
-        
         /// <param name="City">City.</param>
-        
-        
         public GeolocationNotification(string UserId = null, string Type = null, string Country = null, string Region = null, string City = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Country = Country;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Region = Region;
-            
-            
-            
-            
-            
-            
-            
-            
-this.City = City;
-            
-            
-            
+            this.UserId = UserId;
+            this.Type = Type;
+            this.Country = Country;
+            this.Region = Region;
+            this.City = City;
             
         }
         
@@ -192,15 +115,10 @@ this.City = City;
             sb.Append("class GeolocationNotification {\n");
             
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Country: ").Append(Country).Append("\n");
-            
             sb.Append("  Region: ").Append(Region).Append("\n");
-            
             sb.Append("  City: ").Append(City).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

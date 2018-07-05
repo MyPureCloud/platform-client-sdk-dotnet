@@ -40,54 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallbackResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="Conversation">The conversation associated with the callback (required).</param>
-        
-        
-        
         /// <param name="CallbackIdentifiers">The list of communication identifiers for the callback participants (required).</param>
-        
-        
         public CreateCallbackResponse(UriReference Conversation = null, List<CallbackIdentifier> CallbackIdentifiers = null)
         {
-            
-            
-            
-            // to ensure "Conversation" is required (not null)
-            if (Conversation == null)
-            {
-                throw new InvalidDataException("Conversation is a required property for CreateCallbackResponse and cannot be null");
-            }
-            else
-            {
-                this.Conversation = Conversation;
-            }
-            
-            
-            
-            
-            
-            // to ensure "CallbackIdentifiers" is required (not null)
-            if (CallbackIdentifiers == null)
-            {
-                throw new InvalidDataException("CallbackIdentifiers is a required property for CreateCallbackResponse and cannot be null");
-            }
-            else
-            {
-                this.CallbackIdentifiers = CallbackIdentifiers;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -120,9 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class CreateCallbackResponse {\n");
             
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
-            
             sb.Append("  CallbackIdentifiers: ").Append(CallbackIdentifiers).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

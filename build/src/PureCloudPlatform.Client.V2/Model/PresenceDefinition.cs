@@ -39,50 +39,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PresenceDefinition" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">description.</param>
-        
-        
-        
         /// <param name="SystemPresence">SystemPresence.</param>
-        
-        
-        
-        
         public PresenceDefinition(string Id = null, string SystemPresence = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SystemPresence = SystemPresence;
-            
-            
-            
-            
-            
+            this.Id = Id;
+            this.SystemPresence = SystemPresence;
             
         }
         
@@ -123,11 +85,8 @@ this.SystemPresence = SystemPresence;
             sb.Append("class PresenceDefinition {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

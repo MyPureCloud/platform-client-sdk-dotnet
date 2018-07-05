@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleNotificationCampaignRuleEntities" /> class.
         /// </summary>
-        
-        
         /// <param name="Campaigns">Campaigns.</param>
-        
-        
-        
         /// <param name="Sequences">Sequences.</param>
-        
-        
         public CampaignRuleNotificationCampaignRuleEntities(List<DocumentDataV2NotificationCreatedBy> Campaigns = null, List<CampaignRuleNotificationUriReference> Sequences = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Campaigns = Campaigns;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Sequences = Sequences;
-            
-            
-            
+            this.Campaigns = Campaigns;
+            this.Sequences = Sequences;
             
         }
         
@@ -102,9 +70,7 @@ this.Sequences = Sequences;
             sb.Append("class CampaignRuleNotificationCampaignRuleEntities {\n");
             
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
-            
             sb.Append("  Sequences: ").Append(Sequences).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

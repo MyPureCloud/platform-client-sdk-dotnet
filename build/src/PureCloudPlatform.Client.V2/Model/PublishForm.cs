@@ -40,54 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PublishForm" /> class.
         /// </summary>
-        
-        
         /// <param name="Published">Is this form published (required).</param>
-        
-        
-        
         /// <param name="Id">Unique Id for this version of this form (required).</param>
-        
-        
         public PublishForm(bool? Published = null, string Id = null)
         {
-            
-            
-            
-            // to ensure "Published" is required (not null)
-            if (Published == null)
-            {
-                throw new InvalidDataException("Published is a required property for PublishForm and cannot be null");
-            }
-            else
-            {
-                this.Published = Published;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for PublishForm and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -120,9 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class PublishForm {\n");
             
             sb.Append("  Published: ").Append(Published).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

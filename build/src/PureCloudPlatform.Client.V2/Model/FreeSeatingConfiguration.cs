@@ -75,44 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FreeSeatingConfiguration" /> class.
         /// </summary>
-        
-        
         /// <param name="FreeSeatingState">The FreeSeatingState for FreeSeatingConfiguration. Can be ON, OFF, or PARTIAL. ON meaning disassociate the user after the ttl expires, OFF meaning never disassociate the user, and PARTIAL meaning only disassociate when a user explicitly clicks log out..</param>
-        
-        
-        
         /// <param name="TtlMinutes">The amount of time in minutes until an offline user is disassociated from their station.</param>
-        
-        
         public FreeSeatingConfiguration(FreeSeatingStateEnum? FreeSeatingState = null, int? TtlMinutes = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.FreeSeatingState = FreeSeatingState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TtlMinutes = TtlMinutes;
-            
-            
-            
+            this.FreeSeatingState = FreeSeatingState;
+            this.TtlMinutes = TtlMinutes;
             
         }
         
@@ -138,9 +106,7 @@ this.TtlMinutes = TtlMinutes;
             sb.Append("class FreeSeatingConfiguration {\n");
             
             sb.Append("  FreeSeatingState: ").Append(FreeSeatingState).Append("\n");
-            
             sb.Append("  TtlMinutes: ").Append(TtlMinutes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

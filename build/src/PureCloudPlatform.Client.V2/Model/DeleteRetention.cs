@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DeleteRetention" /> class.
         /// </summary>
-        
-        
         /// <param name="Days">Days.</param>
-        
-        
         public DeleteRetention(int? Days = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Days = Days;
-            
-            
-            
+            this.Days = Days;
             
         }
         
@@ -72,7 +55,6 @@ this.Days = Days;
             sb.Append("class DeleteRetention {\n");
             
             sb.Append("  Days: ").Append(Days).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

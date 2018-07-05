@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailMediaPolicy" /> class.
         /// </summary>
-        
-        
         /// <param name="Actions">Actions applied when specified conditions are met.</param>
-        
-        
-        
         /// <param name="Conditions">Conditions for when actions should be applied.</param>
-        
-        
         public EmailMediaPolicy(PolicyActions Actions = null, EmailMediaPolicyConditions Conditions = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Actions = Actions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Conditions = Conditions;
-            
-            
-            
+            this.Actions = Actions;
+            this.Conditions = Conditions;
             
         }
         
@@ -104,9 +72,7 @@ this.Conditions = Conditions;
             sb.Append("class EmailMediaPolicy {\n");
             
             sb.Append("  Actions: ").Append(Actions).Append("\n");
-            
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

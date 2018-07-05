@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRoutingStatusNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="RoutingStatus">RoutingStatus.</param>
-        
-        
-        
         /// <param name="ErrorInfo">ErrorInfo.</param>
-        
-        
         public UserRoutingStatusNotification(AgentActivityNotificationRoutingStatus RoutingStatus = null, UserRoutingStatusNotificationErrorInfo ErrorInfo = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoutingStatus = RoutingStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorInfo = ErrorInfo;
-            
-            
-            
+            this.RoutingStatus = RoutingStatus;
+            this.ErrorInfo = ErrorInfo;
             
         }
         
@@ -102,9 +70,7 @@ this.ErrorInfo = ErrorInfo;
             sb.Append("class UserRoutingStatusNotification {\n");
             
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
-            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

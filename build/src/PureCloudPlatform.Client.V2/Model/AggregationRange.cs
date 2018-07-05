@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregationRange" /> class.
         /// </summary>
-        
-        
         /// <param name="Gte">Greater than or equal to.</param>
-        
-        
-        
         /// <param name="Lt">Less than.</param>
-        
-        
         public AggregationRange(double? Gte = null, double? Lt = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Gte = Gte;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Lt = Lt;
-            
-            
-            
+            this.Gte = Gte;
+            this.Lt = Lt;
             
         }
         
@@ -104,9 +72,7 @@ this.Lt = Lt;
             sb.Append("class AggregationRange {\n");
             
             sb.Append("  Gte: ").Append(Gte).Append("\n");
-            
             sb.Append("  Lt: ").Append(Lt).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

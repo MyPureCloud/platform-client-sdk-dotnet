@@ -70,129 +70,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Note" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="NoteText">NoteText.</param>
-        
-        
-        
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="CreatedBy">The author of this note (required).</param>
-        
-        
-        
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        
-        
-        
-        
         public Note(string Name = null, string NoteText = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, User CreatedBy = null, List<ExternalDataSource> ExternalDataSources = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "CreatedBy" is required (not null)
-            if (CreatedBy == null)
-            {
-                throw new InvalidDataException("CreatedBy is a required property for Note and cannot be null");
-            }
-            else
-            {
-                this.CreatedBy = CreatedBy;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NoteText = NoteText;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifyDate = ModifyDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreateDate = CreateDate;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalDataSources = ExternalDataSources;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.NoteText = NoteText;
+            this.ModifyDate = ModifyDate;
+            this.CreateDate = CreateDate;
+            this.ExternalDataSources = ExternalDataSources;
             
         }
         
@@ -277,21 +167,13 @@ this.ExternalDataSources = ExternalDataSources;
             sb.Append("class Note {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  NoteText: ").Append(NoteText).Append("\n");
-            
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
-            
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

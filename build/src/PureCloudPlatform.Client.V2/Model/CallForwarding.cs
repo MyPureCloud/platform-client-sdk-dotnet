@@ -110,141 +110,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallForwarding" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="Enabled">Whether or not CallForwarding is enabled.</param>
-        
-        
-        
         /// <param name="PhoneNumber">This property is deprecated. Please use the calls property.</param>
-        
-        
-        
         /// <param name="Calls">An ordered list of CallRoutes to be executed when CallForwarding is enabled.</param>
-        
-        
-        
         /// <param name="Voicemail">The type of voicemail to use with the callForwarding configuration.</param>
-        
-        
-        
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
-        
         public CallForwarding(string Name = null, User User = null, bool? Enabled = null, string PhoneNumber = null, List<CallRoute> Calls = null, VoicemailEnum? Voicemail = null, DateTime? ModifiedDate = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Enabled = Enabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneNumber = PhoneNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Calls = Calls;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Voicemail = Voicemail;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.User = User;
+            this.Enabled = Enabled;
+            this.PhoneNumber = PhoneNumber;
+            this.Calls = Calls;
+            this.Voicemail = Voicemail;
+            this.ModifiedDate = ModifiedDate;
             
         }
         
@@ -331,23 +212,14 @@ this.ModifiedDate = ModifiedDate;
             sb.Append("class CallForwarding {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
-            
             sb.Append("  Calls: ").Append(Calls).Append("\n");
-            
             sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

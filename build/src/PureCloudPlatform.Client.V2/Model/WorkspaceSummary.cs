@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceSummary" /> class.
         /// </summary>
-        
-        
         /// <param name="TotalDocumentCount">TotalDocumentCount.</param>
-        
-        
-        
         /// <param name="TotalDocumentByteCount">TotalDocumentByteCount.</param>
-        
-        
         public WorkspaceSummary(long? TotalDocumentCount = null, long? TotalDocumentByteCount = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalDocumentCount = TotalDocumentCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalDocumentByteCount = TotalDocumentByteCount;
-            
-            
-            
+            this.TotalDocumentCount = TotalDocumentCount;
+            this.TotalDocumentByteCount = TotalDocumentByteCount;
             
         }
         
@@ -102,9 +70,7 @@ this.TotalDocumentByteCount = TotalDocumentByteCount;
             sb.Append("class WorkspaceSummary {\n");
             
             sb.Append("  TotalDocumentCount: ").Append(TotalDocumentCount).Append("\n");
-            
             sb.Append("  TotalDocumentByteCount: ").Append(TotalDocumentByteCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

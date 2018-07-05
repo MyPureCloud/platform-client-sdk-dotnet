@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignScheduleNotificationIntervals" /> class.
         /// </summary>
-        
-        
         /// <param name="Start">Start.</param>
-        
-        
-        
         /// <param name="End">End.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public CampaignScheduleNotificationIntervals(string Start = null, string End = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Start = Start;
-            
-            
-            
-            
-            
-            
-            
-            
-this.End = End;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Start = Start;
+            this.End = End;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -132,11 +85,8 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class CampaignScheduleNotificationIntervals {\n");
             
             sb.Append("  Start: ").Append(Start).Append("\n");
-            
             sb.Append("  End: ").Append(End).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

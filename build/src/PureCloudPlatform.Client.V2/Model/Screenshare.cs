@@ -269,197 +269,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Screenshare" /> class.
         /// </summary>
-        
-        
         /// <param name="State">The connection state of this communication..</param>
-        
-        
-        
         /// <param name="Id">A globally unique identifier for this communication..</param>
-        
-        
-        
         /// <param name="Context">The room id context (xmpp jid) for the conference session..</param>
-        
-        
-        
         /// <param name="Sharing">Indicates whether this participant is sharing their screen..</param>
-        
-        
-        
         /// <param name="PeerCount">The number of peer participants from the perspective of the participant in the conference..</param>
-        
-        
-        
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
-        
-        
-        
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Provider">The source provider for the screen share..</param>
-        
-        
-        
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
-        
-        
-        
         /// <param name="Segments">The time line of the participant&#39;s call, divided into activity segments..</param>
-        
-        
         public Screenshare(StateEnum? State = null, string Id = null, string Context = null, bool? Sharing = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<Segment> Segments = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Context = Context;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Sharing = Sharing;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerCount = PeerCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectedTime = DisconnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerId = PeerId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Segments = Segments;
-            
-            
-            
+            this.State = State;
+            this.Id = Id;
+            this.Context = Context;
+            this.Sharing = Sharing;
+            this.PeerCount = PeerCount;
+            this.DisconnectType = DisconnectType;
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
+            this.Provider = Provider;
+            this.PeerId = PeerId;
+            this.Segments = Segments;
             
         }
         
@@ -559,27 +392,16 @@ this.Segments = Segments;
             sb.Append("class Screenshare {\n");
             
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Context: ").Append(Context).Append("\n");
-            
             sb.Append("  Sharing: ").Append(Sharing).Append("\n");
-            
             sb.Append("  PeerCount: ").Append(PeerCount).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            
             sb.Append("  Segments: ").Append(Segments).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

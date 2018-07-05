@@ -39,50 +39,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GreetingMediaInfo" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="MediaFileUri">MediaFileUri.</param>
-        
-        
-        
         /// <param name="MediaImageUri">MediaImageUri.</param>
-        
-        
         public GreetingMediaInfo(string MediaFileUri = null, string MediaImageUri = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaFileUri = MediaFileUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaImageUri = MediaImageUri;
-            
-            
-            
+            this.MediaFileUri = MediaFileUri;
+            this.MediaImageUri = MediaImageUri;
             
         }
         
@@ -122,11 +84,8 @@ this.MediaImageUri = MediaImageUri;
             sb.Append("class GreetingMediaInfo {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  MediaFileUri: ").Append(MediaFileUri).Append("\n");
-            
             sb.Append("  MediaImageUri: ").Append(MediaImageUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

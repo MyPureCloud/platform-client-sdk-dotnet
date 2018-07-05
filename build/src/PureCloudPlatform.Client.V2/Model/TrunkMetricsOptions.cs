@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetricsOptions" /> class.
         /// </summary>
-        
-        
         /// <param name="ProxyAddress">Server proxy address that this options array element represents..</param>
-        
-        
-        
         /// <param name="OptionState">OptionState.</param>
-        
-        
-        
         /// <param name="OptionStateTime">ISO 8601 format UTC absolute date &amp; time of the last change of the option state..</param>
-        
-        
-        
         /// <param name="ErrorInfo">ErrorInfo.</param>
-        
-        
         public TrunkMetricsOptions(string ProxyAddress = null, bool? OptionState = null, DateTime? OptionStateTime = null, TrunkErrorInfo ErrorInfo = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ProxyAddress = ProxyAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OptionState = OptionState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OptionStateTime = OptionStateTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorInfo = ErrorInfo;
-            
-            
-            
+            this.ProxyAddress = ProxyAddress;
+            this.OptionState = OptionState;
+            this.OptionStateTime = OptionStateTime;
+            this.ErrorInfo = ErrorInfo;
             
         }
         
@@ -164,13 +102,9 @@ this.ErrorInfo = ErrorInfo;
             sb.Append("class TrunkMetricsOptions {\n");
             
             sb.Append("  ProxyAddress: ").Append(ProxyAddress).Append("\n");
-            
             sb.Append("  OptionState: ").Append(OptionState).Append("\n");
-            
             sb.Append("  OptionStateTime: ").Append(OptionStateTime).Append("\n");
-            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeAutoUpdateConfig" /> class.
         /// </summary>
-        
-        
         /// <param name="TimeZone">TimeZone.</param>
-        
-        
-        
         /// <param name="Rrule">Rrule.</param>
-        
-        
-        
         /// <param name="Start">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS.</param>
-        
-        
-        
         /// <param name="End">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS.</param>
-        
-        
         public EdgeAutoUpdateConfig(string TimeZone = null, string Rrule = null, DateTime? Start = null, DateTime? End = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeZone = TimeZone;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Rrule = Rrule;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Start = Start;
-            
-            
-            
-            
-            
-            
-            
-            
-this.End = End;
-            
-            
-            
+            this.TimeZone = TimeZone;
+            this.Rrule = Rrule;
+            this.Start = Start;
+            this.End = End;
             
         }
         
@@ -164,13 +102,9 @@ this.End = End;
             sb.Append("class EdgeAutoUpdateConfig {\n");
             
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-            
             sb.Append("  Rrule: ").Append(Rrule).Append("\n");
-            
             sb.Append("  Start: ").Append(Start).Append("\n");
-            
             sb.Append("  End: ").Append(End).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

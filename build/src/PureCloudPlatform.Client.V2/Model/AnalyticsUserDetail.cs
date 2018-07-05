@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsUserDetail" /> class.
         /// </summary>
-        
-        
         /// <param name="UserId">The identifier for the user.</param>
-        
-        
-        
         /// <param name="PrimaryPresence">The presence records for the user.</param>
-        
-        
-        
         /// <param name="RoutingStatus">The ACD routing status records for the user.</param>
-        
-        
         public AnalyticsUserDetail(string UserId = null, List<AnalyticsUserPresenceRecord> PrimaryPresence = null, List<AnalyticsRoutingStatusRecord> RoutingStatus = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PrimaryPresence = PrimaryPresence;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoutingStatus = RoutingStatus;
-            
-            
-            
+            this.UserId = UserId;
+            this.PrimaryPresence = PrimaryPresence;
+            this.RoutingStatus = RoutingStatus;
             
         }
         
@@ -135,11 +88,8 @@ this.RoutingStatus = RoutingStatus;
             sb.Append("class AnalyticsUserDetail {\n");
             
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  PrimaryPresence: ").Append(PrimaryPresence).Append("\n");
-            
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

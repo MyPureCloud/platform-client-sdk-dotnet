@@ -285,316 +285,44 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallHistoryParticipant" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The unique participant ID..</param>
-        
-        
-        
         /// <param name="Name">The display friendly name of the participant..</param>
-        
-        
-        
         /// <param name="Address">The participant address..</param>
-        
-        
-        
         /// <param name="StartTime">The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="EndTime">The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Purpose">The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr.</param>
-        
-        
-        
         /// <param name="Direction">The participant&#39;s direction.  Values can be: &#39;inbound&#39; or &#39;outbound&#39;.</param>
-        
-        
-        
         /// <param name="Ani">The call ANI..</param>
-        
-        
-        
         /// <param name="Dnis">The call DNIS..</param>
-        
-        
-        
         /// <param name="User">The PureCloud user for this participant..</param>
-        
-        
-        
         /// <param name="Queue">The PureCloud queue for this participant..</param>
-        
-        
-        
         /// <param name="Group">The group involved in the group ring call..</param>
-        
-        
-        
         /// <param name="DisconnectType">The reason the participant was disconnected from the conversation..</param>
-        
-        
-        
         /// <param name="ExternalContact">The PureCloud external contact.</param>
-        
-        
-        
         /// <param name="ExternalOrganization">The PureCloud external organization.</param>
-        
-        
-        
         /// <param name="DidInteract">Indicates whether the contact ever connected.</param>
-        
-        
-        
         /// <param name="SipResponseCodes">Indicates SIP Response codes associated with the participant.</param>
-        
-        
-        
         /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
-        
-        
         public CallHistoryParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? EndTime = null, string Purpose = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, User User = null, Queue Queue = null, Group Group = null, DisconnectTypeEnum? DisconnectType = null, ExternalContact ExternalContact = null, ExternalOrganization ExternalOrganization = null, bool? DidInteract = null, List<long?> SipResponseCodes = null, FlaggedReasonEnum? FlaggedReason = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartTime = StartTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndTime = EndTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Purpose = Purpose;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Ani = Ani;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Dnis = Dnis;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Queue = Queue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Group = Group;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalContact = ExternalContact;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalOrganization = ExternalOrganization;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DidInteract = DidInteract;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SipResponseCodes = SipResponseCodes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FlaggedReason = FlaggedReason;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.Address = Address;
+            this.StartTime = StartTime;
+            this.EndTime = EndTime;
+            this.Purpose = Purpose;
+            this.Direction = Direction;
+            this.Ani = Ani;
+            this.Dnis = Dnis;
+            this.User = User;
+            this.Queue = Queue;
+            this.Group = Group;
+            this.DisconnectType = DisconnectType;
+            this.ExternalContact = ExternalContact;
+            this.ExternalOrganization = ExternalOrganization;
+            this.DidInteract = DidInteract;
+            this.SipResponseCodes = SipResponseCodes;
+            this.FlaggedReason = FlaggedReason;
             
         }
         
@@ -750,41 +478,23 @@ this.FlaggedReason = FlaggedReason;
             sb.Append("class CallHistoryParticipant {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
-            
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  Ani: ").Append(Ani).Append("\n");
-            
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
-            
             sb.Append("  Group: ").Append(Group).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
-            
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
-            
             sb.Append("  DidInteract: ").Append(DidInteract).Append("\n");
-            
             sb.Append("  SipResponseCodes: ").Append(SipResponseCodes).Append("\n");
-            
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

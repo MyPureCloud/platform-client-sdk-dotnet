@@ -84,40 +84,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportStatus" /> class.
         /// </summary>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         public ImportStatus()
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -170,15 +138,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ImportStatus {\n");
             
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  TotalRecords: ").Append(TotalRecords).Append("\n");
-            
             sb.Append("  CompletedRecords: ").Append(CompletedRecords).Append("\n");
-            
             sb.Append("  PercentComplete: ").Append(PercentComplete).Append("\n");
-            
             sb.Append("  FailureReason: ").Append(FailureReason).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

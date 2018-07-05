@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatMessageUser" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="DisplayName">DisplayName.</param>
-        
-        
-        
         /// <param name="Username">Username.</param>
-        
-        
-        
         /// <param name="Images">Images.</param>
-        
-        
         public ChatMessageUser(string Id = null, string Name = null, string DisplayName = null, string Username = null, List<UserImage> Images = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisplayName = DisplayName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Username = Username;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Images = Images;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.DisplayName = DisplayName;
+            this.Username = Username;
+            this.Images = Images;
             
         }
         
@@ -192,15 +115,10 @@ this.Images = Images;
             sb.Append("class ChatMessageUser {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            
             sb.Append("  Username: ").Append(Username).Append("\n");
-            
             sb.Append("  Images: ").Append(Images).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

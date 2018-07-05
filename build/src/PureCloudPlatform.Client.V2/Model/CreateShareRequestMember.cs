@@ -73,44 +73,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateShareRequestMember" /> class.
         /// </summary>
-        
-        
         /// <param name="MemberType">MemberType.</param>
-        
-        
-        
         /// <param name="Member">Member.</param>
-        
-        
         public CreateShareRequestMember(MemberTypeEnum? MemberType = null, MemberEntity Member = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MemberType = MemberType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Member = Member;
-            
-            
-            
+            this.MemberType = MemberType;
+            this.Member = Member;
             
         }
         
@@ -135,9 +103,7 @@ this.Member = Member;
             sb.Append("class CreateShareRequestMember {\n");
             
             sb.Append("  MemberType: ").Append(MemberType).Append("\n");
-            
             sb.Append("  Member: ").Append(Member).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

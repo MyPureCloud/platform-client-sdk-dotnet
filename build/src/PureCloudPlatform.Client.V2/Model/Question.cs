@@ -129,214 +129,32 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Question" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Text">Text.</param>
-        
-        
-        
         /// <param name="HelpText">HelpText.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="NaEnabled">NaEnabled.</param>
-        
-        
-        
         /// <param name="CommentsRequired">CommentsRequired.</param>
-        
-        
-        
         /// <param name="VisibilityCondition">VisibilityCondition.</param>
-        
-        
-        
         /// <param name="AnswerOptions">Options from which to choose an answer for this question. Only used by Multiple Choice type questions..</param>
-        
-        
-        
         /// <param name="MaxResponseCharacters">How many characters are allowed in the text response to this question. Used by NPS and Free Text question types..</param>
-        
-        
-        
         /// <param name="ExplanationPrompt">Prompt for details explaining the chosen NPS score. Used by NPS questions..</param>
-        
-        
-        
         /// <param name="IsKill">IsKill.</param>
-        
-        
-        
         /// <param name="IsCritical">IsCritical.</param>
-        
-        
         public Question(string Id = null, string Text = null, string HelpText = null, TypeEnum? Type = null, bool? NaEnabled = null, bool? CommentsRequired = null, VisibilityCondition VisibilityCondition = null, List<AnswerOption> AnswerOptions = null, int? MaxResponseCharacters = null, string ExplanationPrompt = null, bool? IsKill = null, bool? IsCritical = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Text = Text;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HelpText = HelpText;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NaEnabled = NaEnabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CommentsRequired = CommentsRequired;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VisibilityCondition = VisibilityCondition;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AnswerOptions = AnswerOptions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxResponseCharacters = MaxResponseCharacters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExplanationPrompt = ExplanationPrompt;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IsKill = IsKill;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IsCritical = IsCritical;
-            
-            
-            
+            this.Id = Id;
+            this.Text = Text;
+            this.HelpText = HelpText;
+            this.Type = Type;
+            this.NaEnabled = NaEnabled;
+            this.CommentsRequired = CommentsRequired;
+            this.VisibilityCondition = VisibilityCondition;
+            this.AnswerOptions = AnswerOptions;
+            this.MaxResponseCharacters = MaxResponseCharacters;
+            this.ExplanationPrompt = ExplanationPrompt;
+            this.IsKill = IsKill;
+            this.IsCritical = IsCritical;
             
         }
         
@@ -444,29 +262,17 @@ this.IsCritical = IsCritical;
             sb.Append("class Question {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Text: ").Append(Text).Append("\n");
-            
             sb.Append("  HelpText: ").Append(HelpText).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  NaEnabled: ").Append(NaEnabled).Append("\n");
-            
             sb.Append("  CommentsRequired: ").Append(CommentsRequired).Append("\n");
-            
             sb.Append("  VisibilityCondition: ").Append(VisibilityCondition).Append("\n");
-            
             sb.Append("  AnswerOptions: ").Append(AnswerOptions).Append("\n");
-            
             sb.Append("  MaxResponseCharacters: ").Append(MaxResponseCharacters).Append("\n");
-            
             sb.Append("  ExplanationPrompt: ").Append(ExplanationPrompt).Append("\n");
-            
             sb.Append("  IsKill: ").Append(IsKill).Append("\n");
-            
             sb.Append("  IsCritical: ").Append(IsCritical).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

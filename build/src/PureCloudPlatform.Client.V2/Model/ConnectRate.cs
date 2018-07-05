@@ -39,28 +39,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConnectRate" /> class.
         /// </summary>
-        
-        
-        
-        
-        
-        
-        
         public ConnectRate()
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -102,11 +82,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConnectRate {\n");
             
             sb.Append("  Attempts: ").Append(Attempts).Append("\n");
-            
             sb.Append("  Connects: ").Append(Connects).Append("\n");
-            
             sb.Append("  ConnectRatio: ").Append(ConnectRatio).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

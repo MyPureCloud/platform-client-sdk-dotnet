@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserImage" /> class.
         /// </summary>
-        
-        
         /// <param name="Resolution">Height and/or width of image. ex: 640x480 or x128.</param>
-        
-        
-        
         /// <param name="ImageUri">ImageUri.</param>
-        
-        
         public UserImage(string Resolution = null, string ImageUri = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Resolution = Resolution;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ImageUri = ImageUri;
-            
-            
-            
+            this.Resolution = Resolution;
+            this.ImageUri = ImageUri;
             
         }
         
@@ -103,9 +71,7 @@ this.ImageUri = ImageUri;
             sb.Append("class UserImage {\n");
             
             sb.Append("  Resolution: ").Append(Resolution).Append("\n");
-            
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

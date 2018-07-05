@@ -90,207 +90,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailMessage" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="To">The recipients of the email message. (required).</param>
-        
-        
-        
         /// <param name="Cc">The recipients that were copied on the email message..</param>
-        
-        
-        
         /// <param name="Bcc">The recipients that were blind copied on the email message..</param>
-        
-        
-        
         /// <param name="From">The sender of the email message. (required).</param>
-        
-        
-        
         /// <param name="Subject">The subject of the email message..</param>
-        
-        
-        
         /// <param name="Attachments">The attachments of the email message..</param>
-        
-        
-        
         /// <param name="TextBody">The text body of the email message. (required).</param>
-        
-        
-        
         /// <param name="HtmlBody">The html body of the email message..</param>
-        
-        
-        
         /// <param name="Time">The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
-        
         public EmailMessage(string Name = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, string Subject = null, List<Attachment> Attachments = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "To" is required (not null)
-            if (To == null)
-            {
-                throw new InvalidDataException("To is a required property for EmailMessage and cannot be null");
-            }
-            else
-            {
-                this.To = To;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "From" is required (not null)
-            if (From == null)
-            {
-                throw new InvalidDataException("From is a required property for EmailMessage and cannot be null");
-            }
-            else
-            {
-                this.From = From;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "TextBody" is required (not null)
-            if (TextBody == null)
-            {
-                throw new InvalidDataException("TextBody is a required property for EmailMessage and cannot be null");
-            }
-            else
-            {
-                this.TextBody = TextBody;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Cc = Cc;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Bcc = Bcc;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Subject = Subject;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attachments = Attachments;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.HtmlBody = HtmlBody;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Time = Time;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Cc = Cc;
+            this.Bcc = Bcc;
+            this.Subject = Subject;
+            this.Attachments = Attachments;
+            this.HtmlBody = HtmlBody;
+            this.Time = Time;
             
         }
         
@@ -412,29 +230,17 @@ this.Time = Time;
             sb.Append("class EmailMessage {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  To: ").Append(To).Append("\n");
-            
             sb.Append("  Cc: ").Append(Cc).Append("\n");
-            
             sb.Append("  Bcc: ").Append(Bcc).Append("\n");
-            
             sb.Append("  From: ").Append(From).Append("\n");
-            
             sb.Append("  Subject: ").Append(Subject).Append("\n");
-            
             sb.Append("  Attachments: ").Append(Attachments).Append("\n");
-            
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
-            
             sb.Append("  HtmlBody: ").Append(HtmlBody).Append("\n");
-            
             sb.Append("  Time: ").Append(Time).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ObservationDataContainer" /> class.
         /// </summary>
-        
-        
         /// <param name="Group">A mapping from dimension to value.</param>
-        
-        
-        
         /// <param name="Data">Data.</param>
-        
-        
         public ObservationDataContainer(Dictionary<string, string> Group = null, List<AggregateMetricData> Data = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Group = Group;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Data = Data;
-            
-            
-            
+            this.Group = Group;
+            this.Data = Data;
             
         }
         
@@ -103,9 +71,7 @@ this.Data = Data;
             sb.Append("class ObservationDataContainer {\n");
             
             sb.Append("  Group: ").Append(Group).Append("\n");
-            
             sb.Append("  Data: ").Append(Data).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

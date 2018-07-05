@@ -50,88 +50,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustCreate" /> class.
         /// </summary>
-        
-        
         /// <param name="PairingId">The pairing Id created by the trustee. This is required to prove that the trustee agrees to the relationship. (required).</param>
-        
-        
-        
         /// <param name="Enabled">If disabled no trustee user will have access, even if they were previously added. (required).</param>
-        
-        
-        
         /// <param name="Users">The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor. If no users are specified, at least one group is required..</param>
-        
-        
-        
         /// <param name="Groups">The list of groups and their roles to which access will be granted. The groups are from the trustee and the roles are from the trustor. If no groups are specified, at least one user is required..</param>
-        
-        
         public TrustCreate(string PairingId = null, bool? Enabled = null, List<TrustMemberCreate> Users = null, List<TrustMemberCreate> Groups = null)
         {
-            
-            
-            
-            // to ensure "PairingId" is required (not null)
-            if (PairingId == null)
-            {
-                throw new InvalidDataException("PairingId is a required property for TrustCreate and cannot be null");
-            }
-            else
-            {
-                this.PairingId = PairingId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Enabled" is required (not null)
-            if (Enabled == null)
-            {
-                throw new InvalidDataException("Enabled is a required property for TrustCreate and cannot be null");
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Users = Users;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Groups = Groups;
-            
-            
-            
+            this.Users = Users;
+            this.Groups = Groups;
             
         }
         
@@ -182,13 +108,9 @@ this.Groups = Groups;
             sb.Append("class TrustCreate {\n");
             
             sb.Append("  PairingId: ").Append(PairingId).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  Users: ").Append(Users).Append("\n");
-            
             sb.Append("  Groups: ").Append(Groups).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AdherenceSettings" /> class.
         /// </summary>
-        
-        
         /// <param name="SevereAlertThresholdMinutes">The threshold in minutes where an alert will be triggered when an agent is considered severely out of adherence.</param>
-        
-        
-        
         /// <param name="AdherenceTargetPercent">Target adherence percentage.</param>
-        
-        
-        
         /// <param name="AdherenceExceptionThresholdSeconds">The threshold in seconds for which agents should not be penalized for being momentarily out of adherence.</param>
-        
-        
-        
         /// <param name="NonOnQueueActivitiesEquivalent">Whether to treat all non-on-queue activities as equivalent for adherence purposes.</param>
-        
-        
-        
         /// <param name="TrackOnQueueActivity">Whether to track on-queue activities.</param>
-        
-        
-        
         /// <param name="IgnoredActivityCategories">Activity categories that should be ignored for adherence purposes.</param>
-        
-        
         public AdherenceSettings(int? SevereAlertThresholdMinutes = null, int? AdherenceTargetPercent = null, int? AdherenceExceptionThresholdSeconds = null, bool? NonOnQueueActivitiesEquivalent = null, bool? TrackOnQueueActivity = null, IgnoredActivityCategories IgnoredActivityCategories = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SevereAlertThresholdMinutes = SevereAlertThresholdMinutes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdherenceTargetPercent = AdherenceTargetPercent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdherenceExceptionThresholdSeconds = AdherenceExceptionThresholdSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NonOnQueueActivitiesEquivalent = NonOnQueueActivitiesEquivalent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TrackOnQueueActivity = TrackOnQueueActivity;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IgnoredActivityCategories = IgnoredActivityCategories;
-            
-            
-            
+            this.SevereAlertThresholdMinutes = SevereAlertThresholdMinutes;
+            this.AdherenceTargetPercent = AdherenceTargetPercent;
+            this.AdherenceExceptionThresholdSeconds = AdherenceExceptionThresholdSeconds;
+            this.NonOnQueueActivitiesEquivalent = NonOnQueueActivitiesEquivalent;
+            this.TrackOnQueueActivity = TrackOnQueueActivity;
+            this.IgnoredActivityCategories = IgnoredActivityCategories;
             
         }
         
@@ -228,17 +136,11 @@ this.IgnoredActivityCategories = IgnoredActivityCategories;
             sb.Append("class AdherenceSettings {\n");
             
             sb.Append("  SevereAlertThresholdMinutes: ").Append(SevereAlertThresholdMinutes).Append("\n");
-            
             sb.Append("  AdherenceTargetPercent: ").Append(AdherenceTargetPercent).Append("\n");
-            
             sb.Append("  AdherenceExceptionThresholdSeconds: ").Append(AdherenceExceptionThresholdSeconds).Append("\n");
-            
             sb.Append("  NonOnQueueActivitiesEquivalent: ").Append(NonOnQueueActivitiesEquivalent).Append("\n");
-            
             sb.Append("  TrackOnQueueActivity: ").Append(TrackOnQueueActivity).Append("\n");
-            
             sb.Append("  IgnoredActivityCategories: ").Append(IgnoredActivityCategories).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

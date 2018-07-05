@@ -64,146 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationErrorInfo" /> class.
         /// </summary>
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="Code">Code.</param>
-        
-        
-        
         /// <param name="Message">Message.</param>
-        
-        
-        
         /// <param name="MessageWithParams">MessageWithParams.</param>
-        
-        
-        
         /// <param name="MessageParams">MessageParams.</param>
-        
-        
-        
         /// <param name="ContextId">ContextId.</param>
-        
-        
-        
         /// <param name="Uri">Uri.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ConversationNotificationErrorInfo(int? Status = null, string Code = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, string Uri = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Code = Code;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Message = Message;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageWithParams = MessageWithParams;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageParams = MessageParams;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContextId = ContextId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Uri = Uri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Status = Status;
+            this.Code = Code;
+            this.Message = Message;
+            this.MessageWithParams = MessageWithParams;
+            this.MessageParams = MessageParams;
+            this.ContextId = ContextId;
+            this.Uri = Uri;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -282,21 +160,13 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ConversationNotificationErrorInfo {\n");
             
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  Code: ").Append(Code).Append("\n");
-            
             sb.Append("  Message: ").Append(Message).Append("\n");
-            
             sb.Append("  MessageWithParams: ").Append(MessageWithParams).Append("\n");
-            
             sb.Append("  MessageParams: ").Append(MessageParams).Append("\n");
-            
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
-            
             sb.Append("  Uri: ").Append(Uri).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

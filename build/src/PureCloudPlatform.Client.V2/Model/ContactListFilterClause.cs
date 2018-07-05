@@ -69,44 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterClause" /> class.
         /// </summary>
-        
-        
         /// <param name="FilterType">How to join predicates together..</param>
-        
-        
-        
         /// <param name="Predicates">Conditions to filter the contacts by..</param>
-        
-        
         public ContactListFilterClause(FilterTypeEnum? FilterType = null, List<ContactListFilterPredicate> Predicates = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.FilterType = FilterType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Predicates = Predicates;
-            
-            
-            
+            this.FilterType = FilterType;
+            this.Predicates = Predicates;
             
         }
         
@@ -132,9 +100,7 @@ this.Predicates = Predicates;
             sb.Append("class ContactListFilterClause {\n");
             
             sb.Append("  FilterType: ").Append(FilterType).Append("\n");
-            
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

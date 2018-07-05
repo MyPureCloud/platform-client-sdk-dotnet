@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TagQueryRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="Query">Query.</param>
-        
-        
-        
         /// <param name="PageNumber">PageNumber.</param>
-        
-        
-        
         /// <param name="PageSize">PageSize.</param>
-        
-        
         public TagQueryRequest(string Query = null, int? PageNumber = null, int? PageSize = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Query = Query;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageNumber = PageNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageSize = PageSize;
-            
-            
-            
+            this.Query = Query;
+            this.PageNumber = PageNumber;
+            this.PageSize = PageSize;
             
         }
         
@@ -132,11 +85,8 @@ this.PageSize = PageSize;
             sb.Append("class TagQueryRequest {\n");
             
             sb.Append("  Query: ").Append(Query).Append("\n");
-            
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NumericRange" /> class.
         /// </summary>
-        
-        
         /// <param name="Gt">Greater than.</param>
-        
-        
-        
         /// <param name="Gte">Greater than or equal to.</param>
-        
-        
-        
         /// <param name="Lt">Less than.</param>
-        
-        
-        
         /// <param name="Lte">Less than or equal to.</param>
-        
-        
         public NumericRange(double? Gt = null, double? Gte = null, double? Lt = null, double? Lte = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Gt = Gt;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Gte = Gte;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Lt = Lt;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Lte = Lte;
-            
-            
-            
+            this.Gt = Gt;
+            this.Gte = Gte;
+            this.Lt = Lt;
+            this.Lte = Lte;
             
         }
         
@@ -166,13 +104,9 @@ this.Lte = Lte;
             sb.Append("class NumericRange {\n");
             
             sb.Append("  Gt: ").Append(Gt).Append("\n");
-            
             sb.Append("  Gte: ").Append(Gte).Append("\n");
-            
             sb.Append("  Lt: ").Append(Lt).Append("\n");
-            
             sb.Append("  Lte: ").Append(Lte).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -100,154 +100,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationType" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The ID of the integration type. (required).</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Images">Collection of logos..</param>
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Credentials">Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration..</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="UserPermissions">List of permissions required to permit user access to the integration type..</param>
-        
-        
-        
-        
         public IntegrationType(string Id = null, string Name = null, List<UserImage> Images = null, Dictionary<string, CredentialSpecification> Credentials = null, List<string> UserPermissions = null)
         {
-            
-            
-            
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for IntegrationType and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Images = Images;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Credentials = Credentials;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserPermissions = UserPermissions;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Images = Images;
+            this.Credentials = Credentials;
+            this.UserPermissions = UserPermissions;
             
         }
         
@@ -387,33 +250,19 @@ this.UserPermissions = UserPermissions;
             sb.Append("class IntegrationType {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  Category: ").Append(Category).Append("\n");
-            
             sb.Append("  Images: ").Append(Images).Append("\n");
-            
             sb.Append("  ConfigPropertiesSchemaUri: ").Append(ConfigPropertiesSchemaUri).Append("\n");
-            
             sb.Append("  ConfigAdvancedSchemaUri: ").Append(ConfigAdvancedSchemaUri).Append("\n");
-            
             sb.Append("  HelpUri: ").Append(HelpUri).Append("\n");
-            
             sb.Append("  Credentials: ").Append(Credentials).Append("\n");
-            
             sb.Append("  NonInstallable: ").Append(NonInstallable).Append("\n");
-            
             sb.Append("  MaxInstances: ").Append(MaxInstances).Append("\n");
-            
             sb.Append("  UserPermissions: ").Append(UserPermissions).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

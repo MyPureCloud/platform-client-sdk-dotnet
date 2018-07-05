@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableTimeSetNotificationCallableTimes" /> class.
         /// </summary>
-        
-        
         /// <param name="TimeSlots">TimeSlots.</param>
-        
-        
-        
         /// <param name="TimeZoneId">TimeZoneId.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public CallableTimeSetNotificationCallableTimes(List<CallableTimeSetNotificationTimeSlots> TimeSlots = null, string TimeZoneId = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeSlots = TimeSlots;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeZoneId = TimeZoneId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.TimeSlots = TimeSlots;
+            this.TimeZoneId = TimeZoneId;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -132,11 +85,8 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class CallableTimeSetNotificationCallableTimes {\n");
             
             sb.Append("  TimeSlots: ").Append(TimeSlots).Append("\n");
-            
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

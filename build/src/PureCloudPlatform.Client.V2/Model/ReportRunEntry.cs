@@ -136,175 +136,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportRunEntry" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ReportId">ReportId.</param>
-        
-        
-        
         /// <param name="RunTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="RunStatus">RunStatus.</param>
-        
-        
-        
         /// <param name="ErrorMessage">ErrorMessage.</param>
-        
-        
-        
         /// <param name="RunDurationMsec">RunDurationMsec.</param>
-        
-        
-        
         /// <param name="ReportUrl">ReportUrl.</param>
-        
-        
-        
         /// <param name="ReportFormat">ReportFormat.</param>
-        
-        
-        
         /// <param name="ScheduleUri">ScheduleUri.</param>
-        
-        
-        
-        
         public ReportRunEntry(string Name = null, string ReportId = null, DateTime? RunTime = null, RunStatusEnum? RunStatus = null, string ErrorMessage = null, long? RunDurationMsec = null, string ReportUrl = null, string ReportFormat = null, string ScheduleUri = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReportId = ReportId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RunTime = RunTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RunStatus = RunStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorMessage = ErrorMessage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RunDurationMsec = RunDurationMsec;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReportUrl = ReportUrl;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReportFormat = ReportFormat;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScheduleUri = ScheduleUri;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.ReportId = ReportId;
+            this.RunTime = RunTime;
+            this.RunStatus = RunStatus;
+            this.ErrorMessage = ErrorMessage;
+            this.RunDurationMsec = RunDurationMsec;
+            this.ReportUrl = ReportUrl;
+            this.ReportFormat = ReportFormat;
+            this.ScheduleUri = ScheduleUri;
             
         }
         
@@ -404,27 +255,16 @@ this.ScheduleUri = ScheduleUri;
             sb.Append("class ReportRunEntry {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ReportId: ").Append(ReportId).Append("\n");
-            
             sb.Append("  RunTime: ").Append(RunTime).Append("\n");
-            
             sb.Append("  RunStatus: ").Append(RunStatus).Append("\n");
-            
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            
             sb.Append("  RunDurationMsec: ").Append(RunDurationMsec).Append("\n");
-            
             sb.Append("  ReportUrl: ").Append(ReportUrl).Append("\n");
-            
             sb.Append("  ReportFormat: ").Append(ReportFormat).Append("\n");
-            
             sb.Append("  ScheduleUri: ").Append(ScheduleUri).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

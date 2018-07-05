@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SharedResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="DownloadUri">DownloadUri.</param>
-        
-        
-        
         /// <param name="ViewUri">ViewUri.</param>
-        
-        
-        
         /// <param name="Document">Document.</param>
-        
-        
-        
         /// <param name="Share">Share.</param>
-        
-        
         public SharedResponse(string Id = null, string DownloadUri = null, string ViewUri = null, Document Document = null, Share Share = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DownloadUri = DownloadUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ViewUri = ViewUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Document = Document;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Share = Share;
-            
-            
-            
+            this.Id = Id;
+            this.DownloadUri = DownloadUri;
+            this.ViewUri = ViewUri;
+            this.Document = Document;
+            this.Share = Share;
             
         }
         
@@ -192,15 +115,10 @@ this.Share = Share;
             sb.Append("class SharedResponse {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  DownloadUri: ").Append(DownloadUri).Append("\n");
-            
             sb.Append("  ViewUri: ").Append(ViewUri).Append("\n");
-            
             sb.Append("  Document: ").Append(Document).Append("\n");
-            
             sb.Append("  Share: ").Append(Share).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

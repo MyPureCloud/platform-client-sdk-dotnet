@@ -315,112 +315,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EventMessage" /> class.
         /// </summary>
-        
-        
         /// <param name="Code">Code.</param>
-        
-        
-        
         /// <param name="Message">Message.</param>
-        
-        
-        
         /// <param name="MessageWithParams">MessageWithParams.</param>
-        
-        
-        
         /// <param name="MessageParams">MessageParams.</param>
-        
-        
-        
         /// <param name="DocumentationUri">DocumentationUri.</param>
-        
-        
-        
         /// <param name="ResourceURIs">ResourceURIs.</param>
-        
-        
         public EventMessage(CodeEnum? Code = null, string Message = null, string MessageWithParams = null, Dictionary<string, Object> MessageParams = null, string DocumentationUri = null, List<string> ResourceURIs = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Code = Code;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Message = Message;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageWithParams = MessageWithParams;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageParams = MessageParams;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DocumentationUri = DocumentationUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ResourceURIs = ResourceURIs;
-            
-            
-            
+            this.Code = Code;
+            this.Message = Message;
+            this.MessageWithParams = MessageWithParams;
+            this.MessageParams = MessageParams;
+            this.DocumentationUri = DocumentationUri;
+            this.ResourceURIs = ResourceURIs;
             
         }
         
@@ -477,17 +385,11 @@ this.ResourceURIs = ResourceURIs;
             sb.Append("class EventMessage {\n");
             
             sb.Append("  Code: ").Append(Code).Append("\n");
-            
             sb.Append("  Message: ").Append(Message).Append("\n");
-            
             sb.Append("  MessageWithParams: ").Append(MessageWithParams).Append("\n");
-            
             sb.Append("  MessageParams: ").Append(MessageParams).Append("\n");
-            
             sb.Append("  DocumentationUri: ").Append(DocumentationUri).Append("\n");
-            
             sb.Append("  ResourceURIs: ").Append(ResourceURIs).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

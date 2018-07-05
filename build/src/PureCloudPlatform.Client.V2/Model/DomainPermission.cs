@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPermission" /> class.
         /// </summary>
-        
-        
         /// <param name="Domain">Domain.</param>
-        
-        
-        
         /// <param name="EntityType">EntityType.</param>
-        
-        
-        
         /// <param name="Action">Action.</param>
-        
-        
-        
         /// <param name="Label">Label.</param>
-        
-        
-        
         /// <param name="AllowsConditions">AllowsConditions.</param>
-        
-        
-        
         /// <param name="DivisionAware">DivisionAware.</param>
-        
-        
         public DomainPermission(string Domain = null, string EntityType = null, string Action = null, string Label = null, bool? AllowsConditions = null, bool? DivisionAware = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Domain = Domain;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EntityType = EntityType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Action = Action;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Label = Label;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AllowsConditions = AllowsConditions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DivisionAware = DivisionAware;
-            
-            
-            
+            this.Domain = Domain;
+            this.EntityType = EntityType;
+            this.Action = Action;
+            this.Label = Label;
+            this.AllowsConditions = AllowsConditions;
+            this.DivisionAware = DivisionAware;
             
         }
         
@@ -222,17 +130,11 @@ this.DivisionAware = DivisionAware;
             sb.Append("class DomainPermission {\n");
             
             sb.Append("  Domain: ").Append(Domain).Append("\n");
-            
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
-            
             sb.Append("  Action: ").Append(Action).Append("\n");
-            
             sb.Append("  Label: ").Append(Label).Append("\n");
-            
             sb.Append("  AllowsConditions: ").Append(AllowsConditions).Append("\n");
-            
             sb.Append("  DivisionAware: ").Append(DivisionAware).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

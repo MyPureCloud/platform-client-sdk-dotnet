@@ -102,163 +102,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundSettingsNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="DateCreated">DateCreated.</param>
-        
-        
-        
         /// <param name="DateModified">DateModified.</param>
-        
-        
-        
         /// <param name="Version">Version.</param>
-        
-        
-        
         /// <param name="MaxCallsPerAgent">MaxCallsPerAgent.</param>
-        
-        
-        
         /// <param name="MaxLineUtilization">MaxLineUtilization.</param>
-        
-        
-        
         /// <param name="AbandonSeconds">AbandonSeconds.</param>
-        
-        
-        
         /// <param name="ComplianceAbandonRateDenominator">ComplianceAbandonRateDenominator.</param>
-        
-        
         public OutboundSettingsNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, int? MaxCallsPerAgent = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxCallsPerAgent = MaxCallsPerAgent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxLineUtilization = MaxLineUtilization;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AbandonSeconds = AbandonSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Version = Version;
+            this.MaxCallsPerAgent = MaxCallsPerAgent;
+            this.MaxLineUtilization = MaxLineUtilization;
+            this.AbandonSeconds = AbandonSeconds;
+            this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
             
         }
         
@@ -339,23 +202,14 @@ this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
             sb.Append("class OutboundSettingsNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  MaxCallsPerAgent: ").Append(MaxCallsPerAgent).Append("\n");
-            
             sb.Append("  MaxLineUtilization: ").Append(MaxLineUtilization).Append("\n");
-            
             sb.Append("  AbandonSeconds: ").Append(AbandonSeconds).Append("\n");
-            
             sb.Append("  ComplianceAbandonRateDenominator: ").Append(ComplianceAbandonRateDenominator).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

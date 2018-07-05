@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotificationPerformancePredictionQueueDataPerInterval" /> class.
         /// </summary>
-        
-        
         /// <param name="ServiceLevelPercent">ServiceLevelPercent.</param>
-        
-        
-        
         /// <param name="AverageSpeedOfAnswerSeconds">AverageSpeedOfAnswerSeconds.</param>
-        
-        
-        
         /// <param name="NumberOfInteractions">NumberOfInteractions.</param>
-        
-        
         public IntradayDataUpdateNotificationPerformancePredictionQueueDataPerInterval(double? ServiceLevelPercent = null, double? AverageSpeedOfAnswerSeconds = null, double? NumberOfInteractions = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ServiceLevelPercent = ServiceLevelPercent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumberOfInteractions = NumberOfInteractions;
-            
-            
-            
+            this.ServiceLevelPercent = ServiceLevelPercent;
+            this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
+            this.NumberOfInteractions = NumberOfInteractions;
             
         }
         
@@ -132,11 +85,8 @@ this.NumberOfInteractions = NumberOfInteractions;
             sb.Append("class IntradayDataUpdateNotificationPerformancePredictionQueueDataPerInterval {\n");
             
             sb.Append("  ServiceLevelPercent: ").Append(ServiceLevelPercent).Append("\n");
-            
             sb.Append("  AverageSpeedOfAnswerSeconds: ").Append(AverageSpeedOfAnswerSeconds).Append("\n");
-            
             sb.Append("  NumberOfInteractions: ").Append(NumberOfInteractions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

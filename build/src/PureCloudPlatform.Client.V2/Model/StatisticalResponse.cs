@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StatisticalResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="Interval">Interval.</param>
-        
-        
-        
         /// <param name="Metrics">Metrics.</param>
-        
-        
-        
         /// <param name="Views">Views.</param>
-        
-        
         public StatisticalResponse(string Interval = null, List<AggregateMetricData> Metrics = null, List<AggregateViewData> Views = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Interval = Interval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metrics = Metrics;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Views = Views;
-            
-            
-            
+            this.Interval = Interval;
+            this.Metrics = Metrics;
+            this.Views = Views;
             
         }
         
@@ -132,11 +85,8 @@ this.Views = Views;
             sb.Append("class StatisticalResponse {\n");
             
             sb.Append("  Interval: ").Append(Interval).Append("\n");
-            
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
-            
             sb.Append("  Views: ").Append(Views).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

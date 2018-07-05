@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentAttribute" /> class.
         /// </summary>
-        
-        
         /// <param name="Attribute">Attribute.</param>
-        
-        
-        
         /// <param name="Values">Values.</param>
-        
-        
         public DocumentAttribute(PureCloudPlatform.Client.V2.Model.Attribute Attribute = null, List<string> Values = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attribute = Attribute;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Values = Values;
-            
-            
-            
+            this.Attribute = Attribute;
+            this.Values = Values;
             
         }
         
@@ -102,9 +70,7 @@ this.Values = Values;
             sb.Append("class DocumentAttribute {\n");
             
             sb.Append("  Attribute: ").Append(Attribute).Append("\n");
-            
             sb.Append("  Values: ").Append(Values).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -238,396 +238,52 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Recording" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ConversationId">ConversationId.</param>
-        
-        
-        
         /// <param name="Path">Path.</param>
-        
-        
-        
         /// <param name="StartTime">StartTime.</param>
-        
-        
-        
         /// <param name="EndTime">EndTime.</param>
-        
-        
-        
         /// <param name="Media">The type of media that the recording is. At the moment that could be audio, chat, or email..</param>
-        
-        
-        
         /// <param name="Annotations">Annotations that belong to the recording..</param>
-        
-        
-        
         /// <param name="Transcript">Represents a chat transcript.</param>
-        
-        
-        
         /// <param name="EmailTranscript">Represents an email transcript.</param>
-        
-        
-        
         /// <param name="MessagingTranscript">Represents a messaging transcript.</param>
-        
-        
-        
         /// <param name="FileState">Represents the current file state for a recording. Examples: Uploading, Archived, etc.</param>
-        
-        
-        
         /// <param name="RestoreExpirationTime">The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="MediaUris">The different mediaUris for the recording..</param>
-        
-        
-        
         /// <param name="EstimatedTranscodeTimeMs">EstimatedTranscodeTimeMs.</param>
-        
-        
-        
         /// <param name="ActualTranscodeTimeMs">ActualTranscodeTimeMs.</param>
-        
-        
-        
         /// <param name="ArchiveDate">The date the recording will be archived. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ArchiveMedium">The type of archive medium used. Example: CloudArchive.</param>
-        
-        
-        
         /// <param name="DeleteDate">The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="MaxAllowedRestorationsForOrg">How many archive restorations the organization is allowed to have..</param>
-        
-        
-        
         /// <param name="RemainingRestorationsAllowedForOrg">The remaining archive restorations the organization has..</param>
-        
-        
-        
         /// <param name="SessionId">The session id represents an external resource id, such as email, call, chat, etc.</param>
-        
-        
-        
         /// <param name="Users">The users participating in the conversation.</param>
-        
-        
-        
-        
         public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, List<RecordingMessagingMessage> MessagingTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConversationId = ConversationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Path = Path;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartTime = StartTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndTime = EndTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Media = Media;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Annotations = Annotations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Transcript = Transcript;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EmailTranscript = EmailTranscript;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessagingTranscript = MessagingTranscript;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FileState = FileState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RestoreExpirationTime = RestoreExpirationTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaUris = MediaUris;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EstimatedTranscodeTimeMs = EstimatedTranscodeTimeMs;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActualTranscodeTimeMs = ActualTranscodeTimeMs;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ArchiveDate = ArchiveDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ArchiveMedium = ArchiveMedium;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DeleteDate = DeleteDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxAllowedRestorationsForOrg = MaxAllowedRestorationsForOrg;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RemainingRestorationsAllowedForOrg = RemainingRestorationsAllowedForOrg;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SessionId = SessionId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Users = Users;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.ConversationId = ConversationId;
+            this.Path = Path;
+            this.StartTime = StartTime;
+            this.EndTime = EndTime;
+            this.Media = Media;
+            this.Annotations = Annotations;
+            this.Transcript = Transcript;
+            this.EmailTranscript = EmailTranscript;
+            this.MessagingTranscript = MessagingTranscript;
+            this.FileState = FileState;
+            this.RestoreExpirationTime = RestoreExpirationTime;
+            this.MediaUris = MediaUris;
+            this.EstimatedTranscodeTimeMs = EstimatedTranscodeTimeMs;
+            this.ActualTranscodeTimeMs = ActualTranscodeTimeMs;
+            this.ArchiveDate = ArchiveDate;
+            this.ArchiveMedium = ArchiveMedium;
+            this.DeleteDate = DeleteDate;
+            this.MaxAllowedRestorationsForOrg = MaxAllowedRestorationsForOrg;
+            this.RemainingRestorationsAllowedForOrg = RemainingRestorationsAllowedForOrg;
+            this.SessionId = SessionId;
+            this.Users = Users;
             
         }
         
@@ -837,53 +493,29 @@ this.Users = Users;
             sb.Append("class Recording {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
-            
             sb.Append("  Path: ").Append(Path).Append("\n");
-            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
-            
             sb.Append("  Media: ").Append(Media).Append("\n");
-            
             sb.Append("  Annotations: ").Append(Annotations).Append("\n");
-            
             sb.Append("  Transcript: ").Append(Transcript).Append("\n");
-            
             sb.Append("  EmailTranscript: ").Append(EmailTranscript).Append("\n");
-            
             sb.Append("  MessagingTranscript: ").Append(MessagingTranscript).Append("\n");
-            
             sb.Append("  FileState: ").Append(FileState).Append("\n");
-            
             sb.Append("  RestoreExpirationTime: ").Append(RestoreExpirationTime).Append("\n");
-            
             sb.Append("  MediaUris: ").Append(MediaUris).Append("\n");
-            
             sb.Append("  EstimatedTranscodeTimeMs: ").Append(EstimatedTranscodeTimeMs).Append("\n");
-            
             sb.Append("  ActualTranscodeTimeMs: ").Append(ActualTranscodeTimeMs).Append("\n");
-            
             sb.Append("  ArchiveDate: ").Append(ArchiveDate).Append("\n");
-            
             sb.Append("  ArchiveMedium: ").Append(ArchiveMedium).Append("\n");
-            
             sb.Append("  DeleteDate: ").Append(DeleteDate).Append("\n");
-            
             sb.Append("  MaxAllowedRestorationsForOrg: ").Append(MaxAllowedRestorationsForOrg).Append("\n");
-            
             sb.Append("  RemainingRestorationsAllowedForOrg: ").Append(RemainingRestorationsAllowedForOrg).Append("\n");
-            
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
-            
             sb.Append("  Users: ").Append(Users).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

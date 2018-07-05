@@ -93,90 +93,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallConversation" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Participants">The list of participants involved in the conversation..</param>
-        
-        
-        
         /// <param name="OtherMediaUris">The list of other media channels involved in the conversation..</param>
-        
-        
-        
         /// <param name="RecordingState">RecordingState.</param>
-        
-        
-        
-        
         public CallConversation(string Name = null, List<CallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Participants = Participants;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OtherMediaUris = OtherMediaUris;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingState = RecordingState;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Participants = Participants;
+            this.OtherMediaUris = OtherMediaUris;
+            this.RecordingState = RecordingState;
             
         }
         
@@ -237,17 +163,11 @@ this.RecordingState = RecordingState;
             sb.Append("class CallConversation {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
-            
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
-            
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -50,88 +50,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentUpload" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">The name of the document (required).</param>
-        
-        
-        
         /// <param name="Workspace">The workspace the document will be uploaded to (required).</param>
-        
-        
-        
         /// <param name="Tags">Tags.</param>
-        
-        
-        
         /// <param name="TagIds">TagIds.</param>
-        
-        
         public DocumentUpload(string Name = null, UriReference Workspace = null, List<string> Tags = null, List<string> TagIds = null)
         {
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for DocumentUpload and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Workspace" is required (not null)
-            if (Workspace == null)
-            {
-                throw new InvalidDataException("Workspace is a required property for DocumentUpload and cannot be null");
-            }
-            else
-            {
-                this.Workspace = Workspace;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Tags = Tags;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TagIds = TagIds;
-            
-            
-            
+            this.Tags = Tags;
+            this.TagIds = TagIds;
             
         }
         
@@ -180,13 +106,9 @@ this.TagIds = TagIds;
             sb.Append("class DocumentUpload {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
-            
             sb.Append("  Tags: ").Append(Tags).Append("\n");
-            
             sb.Append("  TagIds: ").Append(TagIds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

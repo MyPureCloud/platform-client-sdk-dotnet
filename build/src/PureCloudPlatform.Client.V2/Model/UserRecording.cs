@@ -89,209 +89,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRecording" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ContentUri">ContentUri.</param>
-        
-        
-        
         /// <param name="Workspace">Workspace.</param>
-        
-        
-        
         /// <param name="CreatedBy">CreatedBy.</param>
-        
-        
-        
         /// <param name="Conversation">Conversation.</param>
-        
-        
-        
         /// <param name="ContentLength">ContentLength.</param>
-        
-        
-        
         /// <param name="DurationMilliseconds">DurationMilliseconds.</param>
-        
-        
-        
         /// <param name="Thumbnails">Thumbnails.</param>
-        
-        
-        
         /// <param name="Read">Read.</param>
-        
-        
-        
-        
         public UserRecording(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, Conversation Conversation = null, long? ContentLength = null, long? DurationMilliseconds = null, List<DocumentThumbnail> Thumbnails = null, bool? Read = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentUri = ContentUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Workspace = Workspace;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Conversation = Conversation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentLength = ContentLength;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationMilliseconds = DurationMilliseconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Thumbnails = Thumbnails;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Read = Read;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ContentUri = ContentUri;
+            this.Workspace = Workspace;
+            this.CreatedBy = CreatedBy;
+            this.Conversation = Conversation;
+            this.ContentLength = ContentLength;
+            this.DurationMilliseconds = DurationMilliseconds;
+            this.Thumbnails = Thumbnails;
+            this.Read = Read;
             
         }
         
@@ -414,31 +235,18 @@ this.Read = Read;
             sb.Append("class UserRecording {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  ContentUri: ").Append(ContentUri).Append("\n");
-            
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
-            
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
-            
             sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
-            
             sb.Append("  Thumbnails: ").Append(Thumbnails).Append("\n");
-            
             sb.Append("  Read: ").Append(Read).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

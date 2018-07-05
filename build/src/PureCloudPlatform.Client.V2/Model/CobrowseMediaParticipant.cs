@@ -444,554 +444,72 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CobrowseMediaParticipant" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The unique participant ID..</param>
-        
-        
-        
         /// <param name="Name">The display friendly name of the participant..</param>
-        
-        
-        
         /// <param name="Address">The participant address..</param>
-        
-        
-        
         /// <param name="StartTime">The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ConnectedTime">The time when this participant went connected for this media (eg: video connected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="EndTime">The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="StartHoldTime">The time when this participant&#39;s hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Purpose">The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr.</param>
-        
-        
-        
         /// <param name="State">The participant&#39;s state.  Values can be: &#39;alerting&#39;, &#39;connected&#39;, &#39;disconnected&#39;, &#39;dialing&#39;, &#39;contacting.</param>
-        
-        
-        
         /// <param name="Direction">The participant&#39;s direction.  Values can be: &#39;inbound&#39; or &#39;outbound&#39;.</param>
-        
-        
-        
         /// <param name="DisconnectType">The reason the participant was disconnected from the conversation..</param>
-        
-        
-        
         /// <param name="Held">Value is true when the participant is on hold..</param>
-        
-        
-        
         /// <param name="WrapupRequired">Value is true when the participant requires wrap-up..</param>
-        
-        
-        
         /// <param name="WrapupPrompt">The wrap-up prompt indicating the type of wrap-up to be performed..</param>
-        
-        
-        
         /// <param name="User">The PureCloud user for this participant..</param>
-        
-        
-        
         /// <param name="Queue">The PureCloud queue for this participant..</param>
-        
-        
-        
         /// <param name="Attributes">A list of ad-hoc attributes for the participant..</param>
-        
-        
-        
         /// <param name="ErrorInfo">If the conversation ends in error, contains additional error details..</param>
-        
-        
-        
         /// <param name="Script">The Engage script that should be used by this participant..</param>
-        
-        
-        
         /// <param name="WrapupTimeoutMs">The amount of time the participant has to complete wrap-up..</param>
-        
-        
-        
         /// <param name="WrapupSkipped">Value is true when the participant has skipped wrap-up..</param>
-        
-        
-        
         /// <param name="Provider">The source provider for the communication..</param>
-        
-        
-        
         /// <param name="ExternalContact">If this participant represents an external contact, then this will be the reference for the external contact..</param>
-        
-        
-        
         /// <param name="ExternalOrganization">If this participant represents an external org, then this will be the reference for the external org..</param>
-        
-        
-        
         /// <param name="Wrapup">Wrapup for this participant, if it has been applied..</param>
-        
-        
-        
         /// <param name="Peer">The peer communication corresponding to a matching leg for this communication..</param>
-        
-        
-        
         /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
-        
-        
-        
         /// <param name="CobrowseSessionId">The co-browse session ID..</param>
-        
-        
-        
         /// <param name="CobrowseRole">This value identifies the role of the co-browse client within the co-browse session (a client is a sharer or a viewer)..</param>
-        
-        
-        
         /// <param name="Controlling">ID of co-browse participants for which this client has been granted control (list is empty if this client cannot control any shared pages)..</param>
-        
-        
-        
         /// <param name="ViewerUrl">The URL that can be used to open co-browse session in web browser..</param>
-        
-        
-        
         /// <param name="ProviderEventTime">The time when the provider event which triggered this conversation update happened in the corrected provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
         public CobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartTime = StartTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndTime = EndTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartHoldTime = StartHoldTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Purpose = Purpose;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Held = Held;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupRequired = WrapupRequired;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupPrompt = WrapupPrompt;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Queue = Queue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attributes = Attributes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorInfo = ErrorInfo;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Script = Script;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupTimeoutMs = WrapupTimeoutMs;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupSkipped = WrapupSkipped;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalContact = ExternalContact;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalOrganization = ExternalOrganization;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Wrapup = Wrapup;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Peer = Peer;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FlaggedReason = FlaggedReason;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CobrowseSessionId = CobrowseSessionId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CobrowseRole = CobrowseRole;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Controlling = Controlling;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ViewerUrl = ViewerUrl;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ProviderEventTime = ProviderEventTime;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.Address = Address;
+            this.StartTime = StartTime;
+            this.ConnectedTime = ConnectedTime;
+            this.EndTime = EndTime;
+            this.StartHoldTime = StartHoldTime;
+            this.Purpose = Purpose;
+            this.State = State;
+            this.Direction = Direction;
+            this.DisconnectType = DisconnectType;
+            this.Held = Held;
+            this.WrapupRequired = WrapupRequired;
+            this.WrapupPrompt = WrapupPrompt;
+            this.User = User;
+            this.Queue = Queue;
+            this.Attributes = Attributes;
+            this.ErrorInfo = ErrorInfo;
+            this.Script = Script;
+            this.WrapupTimeoutMs = WrapupTimeoutMs;
+            this.WrapupSkipped = WrapupSkipped;
+            this.Provider = Provider;
+            this.ExternalContact = ExternalContact;
+            this.ExternalOrganization = ExternalOrganization;
+            this.Wrapup = Wrapup;
+            this.Peer = Peer;
+            this.FlaggedReason = FlaggedReason;
+            this.CobrowseSessionId = CobrowseSessionId;
+            this.CobrowseRole = CobrowseRole;
+            this.Controlling = Controlling;
+            this.ViewerUrl = ViewerUrl;
+            this.ProviderEventTime = ProviderEventTime;
             
         }
         
@@ -1266,69 +784,37 @@ this.ProviderEventTime = ProviderEventTime;
             sb.Append("class CobrowseMediaParticipant {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
-            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
-            
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  Held: ").Append(Held).Append("\n");
-            
             sb.Append("  WrapupRequired: ").Append(WrapupRequired).Append("\n");
-            
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
-            
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("  Script: ").Append(Script).Append("\n");
-            
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
-            
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
-            
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
-            
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
-            
             sb.Append("  Peer: ").Append(Peer).Append("\n");
-            
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
-            
             sb.Append("  CobrowseSessionId: ").Append(CobrowseSessionId).Append("\n");
-            
             sb.Append("  CobrowseRole: ").Append(CobrowseRole).Append("\n");
-            
             sb.Append("  Controlling: ").Append(Controlling).Append("\n");
-            
             sb.Append("  ViewerUrl: ").Append(ViewerUrl).Append("\n");
-            
             sb.Append("  ProviderEventTime: ").Append(ProviderEventTime).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -64,124 +64,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainEdgeSoftwareVersionDto" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="EdgeVersion">EdgeVersion.</param>
-        
-        
-        
         /// <param name="PublishDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="EdgeUri">EdgeUri.</param>
-        
-        
-        
         /// <param name="LatestRelease">LatestRelease.</param>
-        
-        
-        
         /// <param name="Current">Current.</param>
-        
-        
-        
-        
         public DomainEdgeSoftwareVersionDto(string Name = null, string EdgeVersion = null, DateTime? PublishDate = null, string EdgeUri = null, bool? LatestRelease = null, bool? Current = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgeVersion = EdgeVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PublishDate = PublishDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgeUri = EdgeUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LatestRelease = LatestRelease;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Current = Current;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.EdgeVersion = EdgeVersion;
+            this.PublishDate = PublishDate;
+            this.EdgeUri = EdgeUri;
+            this.LatestRelease = LatestRelease;
+            this.Current = Current;
             
         }
         
@@ -263,21 +159,13 @@ this.Current = Current;
             sb.Append("class DomainEdgeSoftwareVersionDto {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  EdgeVersion: ").Append(EdgeVersion).Append("\n");
-            
             sb.Append("  PublishDate: ").Append(PublishDate).Append("\n");
-            
             sb.Append("  EdgeUri: ").Append(EdgeUri).Append("\n");
-            
             sb.Append("  LatestRelease: ").Append(LatestRelease).Append("\n");
-            
             sb.Append("  Current: ").Append(Current).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

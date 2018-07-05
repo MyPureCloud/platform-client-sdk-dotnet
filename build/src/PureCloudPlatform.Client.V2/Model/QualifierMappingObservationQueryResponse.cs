@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QualifierMappingObservationQueryResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="SystemToOrganizationMappings">A mapping from system presence to a list of organization presence ids.</param>
-        
-        
-        
         /// <param name="Results">Results.</param>
-        
-        
         public QualifierMappingObservationQueryResponse(Dictionary<string, List<string>> SystemToOrganizationMappings = null, List<ObservationDataContainer> Results = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SystemToOrganizationMappings = SystemToOrganizationMappings;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Results = Results;
-            
-            
-            
+            this.SystemToOrganizationMappings = SystemToOrganizationMappings;
+            this.Results = Results;
             
         }
         
@@ -103,9 +71,7 @@ this.Results = Results;
             sb.Append("class QualifierMappingObservationQueryResponse {\n");
             
             sb.Append("  SystemToOrganizationMappings: ").Append(SystemToOrganizationMappings).Append("\n");
-            
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

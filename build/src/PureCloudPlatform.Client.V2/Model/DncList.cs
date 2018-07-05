@@ -131,169 +131,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DncList" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the DncList. (required).</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        
-        
-        
         /// <param name="ImportStatus">The status of the import process.</param>
-        
-        
-        
-        
-        
         /// <param name="DncSourceType">The type of the DncList. (required).</param>
-        
-        
-        
         /// <param name="LoginId">A dnc.com loginId. Required if the dncSourceType is dnc.com..</param>
-        
-        
-        
         /// <param name="DncCodes">The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com..</param>
-        
-        
-        
         /// <param name="LicenseId">A gryphon license number. Required if the dncSourceType is gryphon..</param>
-        
-        
-        
-        
         public DncList(string Name = null, int? Version = null, ImportStatus ImportStatus = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for DncList and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "DncSourceType" is required (not null)
-            if (DncSourceType == null)
-            {
-                throw new InvalidDataException("DncSourceType is a required property for DncList and cannot be null");
-            }
-            else
-            {
-                this.DncSourceType = DncSourceType;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ImportStatus = ImportStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.LoginId = LoginId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DncCodes = DncCodes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LicenseId = LicenseId;
-            
-            
-            
-            
-            
+            this.Version = Version;
+            this.ImportStatus = ImportStatus;
+            this.LoginId = LoginId;
+            this.DncCodes = DncCodes;
+            this.LicenseId = LicenseId;
             
         }
         
@@ -409,29 +260,17 @@ this.LicenseId = LicenseId;
             sb.Append("class DncList {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
-            
             sb.Append("  Size: ").Append(Size).Append("\n");
-            
             sb.Append("  DncSourceType: ").Append(DncSourceType).Append("\n");
-            
             sb.Append("  LoginId: ").Append(LoginId).Append("\n");
-            
             sb.Append("  DncCodes: ").Append(DncCodes).Append("\n");
-            
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

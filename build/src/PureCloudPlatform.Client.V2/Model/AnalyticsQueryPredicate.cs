@@ -911,146 +911,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsQueryPredicate" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">Optional type, can usually be inferred.</param>
-        
-        
-        
         /// <param name="Dimension">Left hand side for dimension predicates.</param>
-        
-        
-        
         /// <param name="PropertyType">Left hand side for property predicates.</param>
-        
-        
-        
         /// <param name="Property">Left hand side for property predicates.</param>
-        
-        
-        
         /// <param name="Metric">Left hand side for metric predicates.</param>
-        
-        
-        
         /// <param name="_Operator">Optional operator, default is matches.</param>
-        
-        
-        
         /// <param name="Value">Right hand side for dimension, property, or metric predicates.</param>
-        
-        
-        
         /// <param name="Range">Right hand side for property or metric predicates.</param>
-        
-        
         public AnalyticsQueryPredicate(TypeEnum? Type = null, DimensionEnum? Dimension = null, PropertyTypeEnum? PropertyType = null, string Property = null, MetricEnum? Metric = null, OperatorEnum? _Operator = null, string Value = null, NumericRange Range = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Dimension = Dimension;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PropertyType = PropertyType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Property = Property;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metric = Metric;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Operator = _Operator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Range = Range;
-            
-            
-            
+            this.Type = Type;
+            this.Dimension = Dimension;
+            this.PropertyType = PropertyType;
+            this.Property = Property;
+            this.Metric = Metric;
+            this._Operator = _Operator;
+            this.Value = Value;
+            this.Range = Range;
             
         }
         
@@ -1102,21 +980,13 @@ this.Range = Range;
             sb.Append("class AnalyticsQueryPredicate {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
-            
             sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
-            
             sb.Append("  Property: ").Append(Property).Append("\n");
-            
             sb.Append("  Metric: ").Append(Metric).Append("\n");
-            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  Range: ").Append(Range).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

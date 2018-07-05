@@ -99,102 +99,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WrapUpCodeMapping" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        
-        
-        
         /// <param name="DefaultSet">The default set of wrap-up flags. These will be used if there is no entry for a given wrap-up code in the mapping..</param>
-        
-        
-        
         /// <param name="Mapping">A map from wrap-up code identifiers to a set of wrap-up flags..</param>
-        
-        
-        
-        
         public WrapUpCodeMapping(string Name = null, int? Version = null, List<DefaultSetEnum> DefaultSet = null, Dictionary<string, List<string>> Mapping = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DefaultSet = DefaultSet;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Mapping = Mapping;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Version = Version;
+            this.DefaultSet = DefaultSet;
+            this.Mapping = Mapping;
             
         }
         
@@ -280,21 +194,13 @@ this.Mapping = Mapping;
             sb.Append("class WrapUpCodeMapping {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  DefaultSet: ").Append(DefaultSet).Append("\n");
-            
             sb.Append("  Mapping: ").Append(Mapping).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

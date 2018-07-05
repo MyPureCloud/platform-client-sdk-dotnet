@@ -40,54 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionContractInput" /> class.
         /// </summary>
-        
-        
         /// <param name="Input">Execution input contract (required).</param>
-        
-        
-        
         /// <param name="Output">Execution output contract (required).</param>
-        
-        
         public ActionContractInput(PostInputContract Input = null, PostOutputContract Output = null)
         {
-            
-            
-            
-            // to ensure "Input" is required (not null)
-            if (Input == null)
-            {
-                throw new InvalidDataException("Input is a required property for ActionContractInput and cannot be null");
-            }
-            else
-            {
-                this.Input = Input;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Output" is required (not null)
-            if (Output == null)
-            {
-                throw new InvalidDataException("Output is a required property for ActionContractInput and cannot be null");
-            }
-            else
-            {
-                this.Output = Output;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -120,9 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ActionContractInput {\n");
             
             sb.Append("  Input: ").Append(Input).Append("\n");
-            
             sb.Append("  Output: ").Append(Output).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

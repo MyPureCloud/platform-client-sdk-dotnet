@@ -86,76 +86,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseFilter" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Field to filter on. Allowed values are &#39;name&#39; and &#39;libraryId. (required).</param>
-        
-        
-        
         /// <param name="_Operator">Filter operation: IN, EQUALS, NOTEQUALS. (required).</param>
-        
-        
-        
         /// <param name="Values">Values to filter on. (required).</param>
-        
-        
         public ResponseFilter(string Name = null, OperatorEnum? _Operator = null, List<string> Values = null)
         {
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for ResponseFilter and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "_Operator" is required (not null)
-            if (_Operator == null)
-            {
-                throw new InvalidDataException("_Operator is a required property for ResponseFilter and cannot be null");
-            }
-            else
-            {
-                this._Operator = _Operator;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Values" is required (not null)
-            if (Values == null)
-            {
-                throw new InvalidDataException("Values is a required property for ResponseFilter and cannot be null");
-            }
-            else
-            {
-                this.Values = Values;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -190,11 +125,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ResponseFilter {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-            
             sb.Append("  Values: ").Append(Values).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -59,118 +59,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStation" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="AssociatedUser">AssociatedUser.</param>
-        
-        
-        
         /// <param name="AssociatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DefaultUser">DefaultUser.</param>
-        
-        
-        
         /// <param name="ProviderInfo">Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; }.</param>
-        
-        
         public UserStation(string Name = null, string Type = null, User AssociatedUser = null, DateTime? AssociatedDate = null, User DefaultUser = null, Dictionary<string, string> ProviderInfo = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AssociatedUser = AssociatedUser;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AssociatedDate = AssociatedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DefaultUser = DefaultUser;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ProviderInfo = ProviderInfo;
-            
-            
-            
+            this.Name = Name;
+            this.Type = Type;
+            this.AssociatedUser = AssociatedUser;
+            this.AssociatedDate = AssociatedDate;
+            this.DefaultUser = DefaultUser;
+            this.ProviderInfo = ProviderInfo;
             
         }
         
@@ -244,19 +146,12 @@ this.ProviderInfo = ProviderInfo;
             sb.Append("class UserStation {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  AssociatedUser: ").Append(AssociatedUser).Append("\n");
-            
             sb.Append("  AssociatedDate: ").Append(AssociatedDate).Append("\n");
-            
             sb.Append("  DefaultUser: ").Append(DefaultUser).Append("\n");
-            
             sb.Append("  ProviderInfo: ").Append(ProviderInfo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

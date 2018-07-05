@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmergencyCallFlow" /> class.
         /// </summary>
-        
-        
         /// <param name="EmergencyFlow">The call flow to execute in an emergency..</param>
-        
-        
-        
         /// <param name="Ivrs">The IVR(s) to route to the call flow during an emergency..</param>
-        
-        
         public EmergencyCallFlow(UriReference EmergencyFlow = null, List<UriReference> Ivrs = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.EmergencyFlow = EmergencyFlow;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Ivrs = Ivrs;
-            
-            
-            
+            this.EmergencyFlow = EmergencyFlow;
+            this.Ivrs = Ivrs;
             
         }
         
@@ -104,9 +72,7 @@ this.Ivrs = Ivrs;
             sb.Append("class EmergencyCallFlow {\n");
             
             sb.Append("  EmergencyFlow: ").Append(EmergencyFlow).Append("\n");
-            
             sb.Append("  Ivrs: ").Append(Ivrs).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -64,146 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayHistoricalQueueData" /> class.
         /// </summary>
-        
-        
         /// <param name="Offered">The number of interactions routed into the queue for the given media type(s) for an agent to answer.</param>
-        
-        
-        
         /// <param name="Completed">The number of interactions completed.</param>
-        
-        
-        
         /// <param name="Answered">The number of interactions answered by an agent in a given period.</param>
-        
-        
-        
         /// <param name="Abandoned">The number of customers who disconnect before connecting with an agent.</param>
-        
-        
-        
         /// <param name="AverageTalkTimeSeconds">The average time in seconds an agent spends interacting with a customer per talk segment for a defined period of time.</param>
-        
-        
-        
         /// <param name="AverageAfterCallWorkSeconds">The average time in seconds spent in after-call work. After-call work is the work that an agent performs immediately following an interaction.</param>
-        
-        
-        
         /// <param name="ServiceLevelPercent">Percent of interactions answered in X seconds, where X is the service level objective configured in the service goal group matching this intraday group.</param>
-        
-        
-        
         /// <param name="AverageSpeedOfAnswerSeconds">The average time in seconds it takes to answer an interaction once the interaction becomes available to be routed.</param>
-        
-        
         public IntradayHistoricalQueueData(int? Offered = null, int? Completed = null, int? Answered = null, int? Abandoned = null, double? AverageTalkTimeSeconds = null, double? AverageAfterCallWorkSeconds = null, double? ServiceLevelPercent = null, double? AverageSpeedOfAnswerSeconds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Offered = Offered;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Completed = Completed;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Answered = Answered;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Abandoned = Abandoned;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ServiceLevelPercent = ServiceLevelPercent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
-            
-            
-            
+            this.Offered = Offered;
+            this.Completed = Completed;
+            this.Answered = Answered;
+            this.Abandoned = Abandoned;
+            this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
+            this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
+            this.ServiceLevelPercent = ServiceLevelPercent;
+            this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
             
         }
         
@@ -290,21 +168,13 @@ this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
             sb.Append("class IntradayHistoricalQueueData {\n");
             
             sb.Append("  Offered: ").Append(Offered).Append("\n");
-            
             sb.Append("  Completed: ").Append(Completed).Append("\n");
-            
             sb.Append("  Answered: ").Append(Answered).Append("\n");
-            
             sb.Append("  Abandoned: ").Append(Abandoned).Append("\n");
-            
             sb.Append("  AverageTalkTimeSeconds: ").Append(AverageTalkTimeSeconds).Append("\n");
-            
             sb.Append("  AverageAfterCallWorkSeconds: ").Append(AverageAfterCallWorkSeconds).Append("\n");
-            
             sb.Append("  ServiceLevelPercent: ").Append(ServiceLevelPercent).Append("\n");
-            
             sb.Append("  AverageSpeedOfAnswerSeconds: ").Append(AverageSpeedOfAnswerSeconds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

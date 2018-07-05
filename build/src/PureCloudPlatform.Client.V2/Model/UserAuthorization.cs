@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAuthorization" /> class.
         /// </summary>
-        
-        
         /// <param name="Roles">Roles.</param>
-        
-        
-        
         /// <param name="Permissions">A collection of the permissions granted by all assigned roles.</param>
-        
-        
-        
         /// <param name="PermissionPolicies">The policies configured for assigned permissions..</param>
-        
-        
         public UserAuthorization(List<DomainRole> Roles = null, List<string> Permissions = null, List<ResourcePermissionPolicy> PermissionPolicies = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Roles = Roles;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Permissions = Permissions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PermissionPolicies = PermissionPolicies;
-            
-            
-            
+            this.Roles = Roles;
+            this.Permissions = Permissions;
+            this.PermissionPolicies = PermissionPolicies;
             
         }
         
@@ -134,11 +87,8 @@ this.PermissionPolicies = PermissionPolicies;
             sb.Append("class UserAuthorization {\n");
             
             sb.Append("  Roles: ").Append(Roles).Append("\n");
-            
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
-            
             sb.Append("  PermissionPolicies: ").Append(PermissionPolicies).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

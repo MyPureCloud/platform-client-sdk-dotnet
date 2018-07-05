@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestSettings" /> class.
         /// </summary>
-        
-        
         /// <param name="SubmissionRangeEnforced">Whether to enforce a submission range for agent time off requests.</param>
-        
-        
-        
         /// <param name="SubmissionEarliestDaysFromNow">The earliest number of days from now for which an agent can submit a time off request.  Use negative numbers to indicate days in the past.</param>
-        
-        
-        
         /// <param name="SubmissionLatestDaysFromNow">The latest number of days from now for which an agent can submit a time off request.</param>
-        
-        
         public TimeOffRequestSettings(bool? SubmissionRangeEnforced = null, int? SubmissionEarliestDaysFromNow = null, int? SubmissionLatestDaysFromNow = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SubmissionRangeEnforced = SubmissionRangeEnforced;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SubmissionEarliestDaysFromNow = SubmissionEarliestDaysFromNow;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SubmissionLatestDaysFromNow = SubmissionLatestDaysFromNow;
-            
-            
-            
+            this.SubmissionRangeEnforced = SubmissionRangeEnforced;
+            this.SubmissionEarliestDaysFromNow = SubmissionEarliestDaysFromNow;
+            this.SubmissionLatestDaysFromNow = SubmissionLatestDaysFromNow;
             
         }
         
@@ -135,11 +88,8 @@ this.SubmissionLatestDaysFromNow = SubmissionLatestDaysFromNow;
             sb.Append("class TimeOffRequestSettings {\n");
             
             sb.Append("  SubmissionRangeEnforced: ").Append(SubmissionRangeEnforced).Append("\n");
-            
             sb.Append("  SubmissionEarliestDaysFromNow: ").Append(SubmissionEarliestDaysFromNow).Append("\n");
-            
             sb.Append("  SubmissionLatestDaysFromNow: ").Append(SubmissionLatestDaysFromNow).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

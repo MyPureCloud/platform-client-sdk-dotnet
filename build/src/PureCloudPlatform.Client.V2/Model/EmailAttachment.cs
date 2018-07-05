@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailAttachment" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ContentPath">ContentPath.</param>
-        
-        
-        
         /// <param name="ContentType">ContentType.</param>
-        
-        
-        
         /// <param name="AttachmentId">AttachmentId.</param>
-        
-        
-        
         /// <param name="ContentLength">ContentLength.</param>
-        
-        
         public EmailAttachment(string Name = null, string ContentPath = null, string ContentType = null, string AttachmentId = null, int? ContentLength = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentPath = ContentPath;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentType = ContentType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AttachmentId = AttachmentId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentLength = ContentLength;
-            
-            
-            
+            this.Name = Name;
+            this.ContentPath = ContentPath;
+            this.ContentType = ContentType;
+            this.AttachmentId = AttachmentId;
+            this.ContentLength = ContentLength;
             
         }
         
@@ -192,15 +115,10 @@ this.ContentLength = ContentLength;
             sb.Append("class EmailAttachment {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ContentPath: ").Append(ContentPath).Append("\n");
-            
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
-            
             sb.Append("  AttachmentId: ").Append(AttachmentId).Append("\n");
-            
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

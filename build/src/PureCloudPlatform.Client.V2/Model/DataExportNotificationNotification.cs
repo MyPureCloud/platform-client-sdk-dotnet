@@ -260,180 +260,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DataExportNotificationNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="ExportFormat">ExportFormat.</param>
-        
-        
-        
         /// <param name="DownloadUrl">DownloadUrl.</param>
-        
-        
-        
         /// <param name="ViewType">ViewType.</param>
-        
-        
-        
         /// <param name="ExportErrorMessagesType">ExportErrorMessagesType.</param>
-        
-        
-        
         /// <param name="Read">Read.</param>
-        
-        
-        
         /// <param name="CreatedDateTime">CreatedDateTime.</param>
-        
-        
-        
         /// <param name="ModifiedDateTime">ModifiedDateTime.</param>
-        
-        
         public DataExportNotificationNotification(string Id = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExportFormat = ExportFormat;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DownloadUrl = DownloadUrl;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ViewType = ViewType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExportErrorMessagesType = ExportErrorMessagesType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Read = Read;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedDateTime = CreatedDateTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDateTime = ModifiedDateTime;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.Status = Status;
+            this.ExportFormat = ExportFormat;
+            this.DownloadUrl = DownloadUrl;
+            this.ViewType = ViewType;
+            this.ExportErrorMessagesType = ExportErrorMessagesType;
+            this.Read = Read;
+            this.CreatedDateTime = CreatedDateTime;
+            this.ModifiedDateTime = ModifiedDateTime;
             
         }
         
@@ -504,25 +352,15 @@ this.ModifiedDateTime = ModifiedDateTime;
             sb.Append("class DataExportNotificationNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  ExportFormat: ").Append(ExportFormat).Append("\n");
-            
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
-            
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
-            
             sb.Append("  ExportErrorMessagesType: ").Append(ExportErrorMessagesType).Append("\n");
-            
             sb.Append("  Read: ").Append(Read).Append("\n");
-            
             sb.Append("  CreatedDateTime: ").Append(CreatedDateTime).Append("\n");
-            
             sb.Append("  ModifiedDateTime: ").Append(ModifiedDateTime).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

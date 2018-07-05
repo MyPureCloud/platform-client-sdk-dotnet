@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationPhoneNumberColumn" /> class.
         /// </summary>
-        
-        
         /// <param name="ColumnName">ColumnName.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ConversationNotificationPhoneNumberColumn(string ColumnName = null, string Type = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ColumnName = ColumnName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.ColumnName = ColumnName;
+            this.Type = Type;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -132,11 +85,8 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ConversationNotificationPhoneNumberColumn {\n");
             
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

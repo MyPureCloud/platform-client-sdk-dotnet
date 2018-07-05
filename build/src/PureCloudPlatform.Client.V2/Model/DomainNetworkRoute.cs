@@ -84,95 +84,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainNetworkRoute" /> class.
         /// </summary>
-        
-        
         /// <param name="Prefix">The IPv4 or IPv6 route prefix in CIDR notation..</param>
-        
-        
-        
         /// <param name="Nexthop">The IPv4 or IPv6 nexthop IP address..</param>
-        
-        
-        
         /// <param name="Persistent">True if this route will persist on Edge restart.  Routes assigned by DHCP will be returned as false..</param>
-        
-        
-        
         /// <param name="Metric">The metric being used for route. Lower values will have a higher priority..</param>
-        
-        
-        
         /// <param name="Family">The address family for this route..</param>
-        
-        
         public DomainNetworkRoute(string Prefix = null, string Nexthop = null, bool? Persistent = null, int? Metric = null, FamilyEnum? Family = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Prefix = Prefix;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Nexthop = Nexthop;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Persistent = Persistent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metric = Metric;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Family = Family;
-            
-            
-            
+            this.Prefix = Prefix;
+            this.Nexthop = Nexthop;
+            this.Persistent = Persistent;
+            this.Metric = Metric;
+            this.Family = Family;
             
         }
         
@@ -225,15 +148,10 @@ this.Family = Family;
             sb.Append("class DomainNetworkRoute {\n");
             
             sb.Append("  Prefix: ").Append(Prefix).Append("\n");
-            
             sb.Append("  Nexthop: ").Append(Nexthop).Append("\n");
-            
             sb.Append("  Persistent: ").Append(Persistent).Append("\n");
-            
             sb.Append("  Metric: ").Append(Metric).Append("\n");
-            
             sb.Append("  Family: ").Append(Family).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

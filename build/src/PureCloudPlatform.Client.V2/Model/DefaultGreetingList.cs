@@ -113,158 +113,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DefaultGreetingList" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Owner">Owner.</param>
-        
-        
-        
         /// <param name="OwnerType">OwnerType.</param>
-        
-        
-        
         /// <param name="Greetings">Greetings.</param>
-        
-        
-        
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="CreatedBy">CreatedBy.</param>
-        
-        
-        
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        
-        
-        
-        
         public DefaultGreetingList(string Name = null, GreetingOwner Owner = null, OwnerTypeEnum? OwnerType = null, Dictionary<string, Greeting> Greetings = null, DateTime? CreatedDate = null, string CreatedBy = null, DateTime? ModifiedDate = null, string ModifiedBy = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Owner = Owner;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OwnerType = OwnerType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Greetings = Greetings;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedDate = CreatedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Owner = Owner;
+            this.OwnerType = OwnerType;
+            this.Greetings = Greetings;
+            this.CreatedDate = CreatedDate;
+            this.CreatedBy = CreatedBy;
+            this.ModifiedDate = ModifiedDate;
+            this.ModifiedBy = ModifiedBy;
             
         }
         
@@ -357,25 +223,15 @@ this.ModifiedBy = ModifiedBy;
             sb.Append("class DefaultGreetingList {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Owner: ").Append(Owner).Append("\n");
-            
             sb.Append("  OwnerType: ").Append(OwnerType).Append("\n");
-            
             sb.Append("  Greetings: ").Append(Greetings).Append("\n");
-            
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

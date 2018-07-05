@@ -91,44 +91,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotificationMetrics" /> class.
         /// </summary>
-        
-        
         /// <param name="Category">Category.</param>
-        
-        
-        
         /// <param name="Version">Version.</param>
-        
-        
         public IntradayDataUpdateNotificationMetrics(CategoryEnum? Category = null, string Version = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Category = Category;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
+            this.Category = Category;
+            this.Version = Version;
             
         }
         
@@ -153,9 +121,7 @@ this.Version = Version;
             sb.Append("class IntradayDataUpdateNotificationMetrics {\n");
             
             sb.Append("  Category: ").Append(Category).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

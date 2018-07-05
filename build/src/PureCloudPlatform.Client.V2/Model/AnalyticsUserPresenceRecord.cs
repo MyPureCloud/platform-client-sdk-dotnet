@@ -132,95 +132,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsUserPresenceRecord" /> class.
         /// </summary>
-        
-        
         /// <param name="StartTime">The start time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="EndTime">The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="SystemPresence">The user&#39;s system presence.</param>
-        
-        
-        
         /// <param name="OrganizationPresenceId">The identifier for the user&#39;s organization presence.</param>
-        
-        
-        
         /// <param name="DurationMilliseconds">The duration of the status (in milliseconds).</param>
-        
-        
         public AnalyticsUserPresenceRecord(DateTime? StartTime = null, DateTime? EndTime = null, SystemPresenceEnum? SystemPresence = null, string OrganizationPresenceId = null, long? DurationMilliseconds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartTime = StartTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndTime = EndTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SystemPresence = SystemPresence;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OrganizationPresenceId = OrganizationPresenceId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationMilliseconds = DurationMilliseconds;
-            
-            
-            
+            this.StartTime = StartTime;
+            this.EndTime = EndTime;
+            this.SystemPresence = SystemPresence;
+            this.OrganizationPresenceId = OrganizationPresenceId;
+            this.DurationMilliseconds = DurationMilliseconds;
             
         }
         
@@ -273,15 +196,10 @@ this.DurationMilliseconds = DurationMilliseconds;
             sb.Append("class AnalyticsUserPresenceRecord {\n");
             
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
-            
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
-            
             sb.Append("  OrganizationPresenceId: ").Append(OrganizationPresenceId).Append("\n");
-            
             sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

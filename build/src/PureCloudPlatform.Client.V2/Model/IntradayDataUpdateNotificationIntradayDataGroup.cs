@@ -110,129 +110,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotificationIntradayDataGroup" /> class.
         /// </summary>
-        
-        
         /// <param name="MediaType">MediaType.</param>
-        
-        
-        
         /// <param name="ForecastDataPerInterval">ForecastDataPerInterval.</param>
-        
-        
-        
         /// <param name="ScheduleDataPerInterval">ScheduleDataPerInterval.</param>
-        
-        
-        
         /// <param name="HistoricalAgentDataPerInterval">HistoricalAgentDataPerInterval.</param>
-        
-        
-        
         /// <param name="HistoricalQueueDataPerInterval">HistoricalQueueDataPerInterval.</param>
-        
-        
-        
         /// <param name="PerformancePredictionAgentDataPerInterval">PerformancePredictionAgentDataPerInterval.</param>
-        
-        
-        
         /// <param name="PerformancePredictionQueueDataPerInterval">PerformancePredictionQueueDataPerInterval.</param>
-        
-        
         public IntradayDataUpdateNotificationIntradayDataGroup(MediaTypeEnum? MediaType = null, List<IntradayDataUpdateNotificationForecastDataPerInterval> ForecastDataPerInterval = null, List<IntradayDataUpdateNotificationScheduleDataPerInterval> ScheduleDataPerInterval = null, List<IntradayDataUpdateNotificationHistoricalAgentDataPerInterval> HistoricalAgentDataPerInterval = null, List<IntradayDataUpdateNotificationHistoricalQueueDataPerInterval> HistoricalQueueDataPerInterval = null, List<IntradayDataUpdateNotificationPerformancePredictionAgentDataPerInterval> PerformancePredictionAgentDataPerInterval = null, List<IntradayDataUpdateNotificationPerformancePredictionQueueDataPerInterval> PerformancePredictionQueueDataPerInterval = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaType = MediaType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ForecastDataPerInterval = ForecastDataPerInterval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScheduleDataPerInterval = ScheduleDataPerInterval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HistoricalAgentDataPerInterval = HistoricalAgentDataPerInterval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HistoricalQueueDataPerInterval = HistoricalQueueDataPerInterval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PerformancePredictionAgentDataPerInterval = PerformancePredictionAgentDataPerInterval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PerformancePredictionQueueDataPerInterval = PerformancePredictionQueueDataPerInterval;
-            
-            
-            
+            this.MediaType = MediaType;
+            this.ForecastDataPerInterval = ForecastDataPerInterval;
+            this.ScheduleDataPerInterval = ScheduleDataPerInterval;
+            this.HistoricalAgentDataPerInterval = HistoricalAgentDataPerInterval;
+            this.HistoricalQueueDataPerInterval = HistoricalQueueDataPerInterval;
+            this.PerformancePredictionAgentDataPerInterval = PerformancePredictionAgentDataPerInterval;
+            this.PerformancePredictionQueueDataPerInterval = PerformancePredictionQueueDataPerInterval;
             
         }
         
@@ -297,19 +190,12 @@ this.PerformancePredictionQueueDataPerInterval = PerformancePredictionQueueDataP
             sb.Append("class IntradayDataUpdateNotificationIntradayDataGroup {\n");
             
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("  ForecastDataPerInterval: ").Append(ForecastDataPerInterval).Append("\n");
-            
             sb.Append("  ScheduleDataPerInterval: ").Append(ScheduleDataPerInterval).Append("\n");
-            
             sb.Append("  HistoricalAgentDataPerInterval: ").Append(HistoricalAgentDataPerInterval).Append("\n");
-            
             sb.Append("  HistoricalQueueDataPerInterval: ").Append(HistoricalQueueDataPerInterval).Append("\n");
-            
             sb.Append("  PerformancePredictionAgentDataPerInterval: ").Append(PerformancePredictionAgentDataPerInterval).Append("\n");
-            
             sb.Append("  PerformancePredictionQueueDataPerInterval: ").Append(PerformancePredictionQueueDataPerInterval).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

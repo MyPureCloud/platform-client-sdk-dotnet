@@ -204,367 +204,50 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JsonNode" /> class.
         /// </summary>
-        
-        
         /// <param name="Array">Array.</param>
-        
-        
-        
         /// <param name="_Null">_Null.</param>
-        
-        
-        
         /// <param name="NodeType">NodeType.</param>
-        
-        
-        
         /// <param name="_Object">_Object.</param>
-        
-        
-        
         /// <param name="Boolean">Boolean.</param>
-        
-        
-        
         /// <param name="Number">Number.</param>
-        
-        
-        
         /// <param name="_Float">_Float.</param>
-        
-        
-        
         /// <param name="FloatingPointNumber">FloatingPointNumber.</param>
-        
-        
-        
         /// <param name="ValueNode">ValueNode.</param>
-        
-        
-        
         /// <param name="ContainerNode">ContainerNode.</param>
-        
-        
-        
         /// <param name="MissingNode">MissingNode.</param>
-        
-        
-        
         /// <param name="Pojo">Pojo.</param>
-        
-        
-        
         /// <param name="IntegralNumber">IntegralNumber.</param>
-        
-        
-        
         /// <param name="_Short">_Short.</param>
-        
-        
-        
         /// <param name="_Int">_Int.</param>
-        
-        
-        
         /// <param name="_Long">_Long.</param>
-        
-        
-        
         /// <param name="_Double">_Double.</param>
-        
-        
-        
         /// <param name="BigDecimal">BigDecimal.</param>
-        
-        
-        
         /// <param name="BigInteger">BigInteger.</param>
-        
-        
-        
         /// <param name="Textual">Textual.</param>
-        
-        
-        
         /// <param name="Binary">Binary.</param>
-        
-        
         public JsonNode(bool? Array = null, bool? _Null = null, NodeTypeEnum? NodeType = null, bool? _Object = null, bool? Boolean = null, bool? Number = null, bool? _Float = null, bool? FloatingPointNumber = null, bool? ValueNode = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Array = Array;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Null = _Null;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NodeType = NodeType;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Object = _Object;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Boolean = Boolean;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Number = Number;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Float = _Float;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FloatingPointNumber = FloatingPointNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ValueNode = ValueNode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContainerNode = ContainerNode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MissingNode = MissingNode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Pojo = Pojo;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IntegralNumber = IntegralNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Short = _Short;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Int = _Int;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Long = _Long;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Double = _Double;
-            
-            
-            
-            
-            
-            
-            
-            
-this.BigDecimal = BigDecimal;
-            
-            
-            
-            
-            
-            
-            
-            
-this.BigInteger = BigInteger;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Textual = Textual;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Binary = Binary;
-            
-            
-            
+            this.Array = Array;
+            this._Null = _Null;
+            this.NodeType = NodeType;
+            this._Object = _Object;
+            this.Boolean = Boolean;
+            this.Number = Number;
+            this._Float = _Float;
+            this.FloatingPointNumber = FloatingPointNumber;
+            this.ValueNode = ValueNode;
+            this.ContainerNode = ContainerNode;
+            this.MissingNode = MissingNode;
+            this.Pojo = Pojo;
+            this.IntegralNumber = IntegralNumber;
+            this._Short = _Short;
+            this._Int = _Int;
+            this._Long = _Long;
+            this._Double = _Double;
+            this.BigDecimal = BigDecimal;
+            this.BigInteger = BigInteger;
+            this.Textual = Textual;
+            this.Binary = Binary;
             
         }
         
@@ -741,47 +424,26 @@ this.Binary = Binary;
             sb.Append("class JsonNode {\n");
             
             sb.Append("  Array: ").Append(Array).Append("\n");
-            
             sb.Append("  _Null: ").Append(_Null).Append("\n");
-            
             sb.Append("  NodeType: ").Append(NodeType).Append("\n");
-            
             sb.Append("  _Object: ").Append(_Object).Append("\n");
-            
             sb.Append("  Boolean: ").Append(Boolean).Append("\n");
-            
             sb.Append("  Number: ").Append(Number).Append("\n");
-            
             sb.Append("  _Float: ").Append(_Float).Append("\n");
-            
             sb.Append("  FloatingPointNumber: ").Append(FloatingPointNumber).Append("\n");
-            
             sb.Append("  ValueNode: ").Append(ValueNode).Append("\n");
-            
             sb.Append("  ContainerNode: ").Append(ContainerNode).Append("\n");
-            
             sb.Append("  MissingNode: ").Append(MissingNode).Append("\n");
-            
             sb.Append("  Pojo: ").Append(Pojo).Append("\n");
-            
             sb.Append("  IntegralNumber: ").Append(IntegralNumber).Append("\n");
-            
             sb.Append("  _Short: ").Append(_Short).Append("\n");
-            
             sb.Append("  _Int: ").Append(_Int).Append("\n");
-            
             sb.Append("  _Long: ").Append(_Long).Append("\n");
-            
             sb.Append("  _Double: ").Append(_Double).Append("\n");
-            
             sb.Append("  BigDecimal: ").Append(BigDecimal).Append("\n");
-            
             sb.Append("  BigInteger: ").Append(BigInteger).Append("\n");
-            
             sb.Append("  Textual: ").Append(Textual).Append("\n");
-            
             sb.Append("  Binary: ").Append(Binary).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

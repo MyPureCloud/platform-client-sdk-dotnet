@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotificationIntradayHistoricalAgentData" /> class.
         /// </summary>
-        
-        
         /// <param name="OnQueueTimeSeconds">OnQueueTimeSeconds.</param>
-        
-        
-        
         /// <param name="InteractingTimeSeconds">InteractingTimeSeconds.</param>
-        
-        
         public IntradayDataUpdateNotificationIntradayHistoricalAgentData(double? OnQueueTimeSeconds = null, double? InteractingTimeSeconds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.OnQueueTimeSeconds = OnQueueTimeSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InteractingTimeSeconds = InteractingTimeSeconds;
-            
-            
-            
+            this.OnQueueTimeSeconds = OnQueueTimeSeconds;
+            this.InteractingTimeSeconds = InteractingTimeSeconds;
             
         }
         
@@ -102,9 +70,7 @@ this.InteractingTimeSeconds = InteractingTimeSeconds;
             sb.Append("class IntradayDataUpdateNotificationIntradayHistoricalAgentData {\n");
             
             sb.Append("  OnQueueTimeSeconds: ").Append(OnQueueTimeSeconds).Append("\n");
-            
             sb.Append("  InteractingTimeSeconds: ").Append(InteractingTimeSeconds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

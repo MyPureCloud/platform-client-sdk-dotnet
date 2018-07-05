@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AttributeQueryRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="Query">Query phrase to search attribute by name. If not set will match all..</param>
-        
-        
-        
         /// <param name="PageSize">The maximum number of hits to return. Default: 25, Maximum: 500..</param>
-        
-        
-        
         /// <param name="PageNumber">The page number to start at. The first page is number 1..</param>
-        
-        
         public AttributeQueryRequest(string Query = null, int? PageSize = null, int? PageNumber = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Query = Query;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageSize = PageSize;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageNumber = PageNumber;
-            
-            
-            
+            this.Query = Query;
+            this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
             
         }
         
@@ -135,11 +88,8 @@ this.PageNumber = PageNumber;
             sb.Append("class AttributeQueryRequest {\n");
             
             sb.Append("  Query: ").Append(Query).Append("\n");
-            
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

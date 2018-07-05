@@ -123,145 +123,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrgOAuthClient" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the OAuth client. (required).</param>
-        
-        
-        
         /// <param name="DateCreated">Date this client was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateModified">Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="CreatedBy">User that created this client.</param>
-        
-        
-        
         /// <param name="ModifiedBy">User that last modified this client.</param>
-        
-        
-        
         /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client.  (required).</param>
-        
-        
-        
         /// <param name="Organization">The  oauth client&#39;s organization..</param>
-        
-        
         public OrgOAuthClient(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, NamedEntity Organization = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for OrgOAuthClient and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "AuthorizedGrantType" is required (not null)
-            if (AuthorizedGrantType == null)
-            {
-                throw new InvalidDataException("AuthorizedGrantType is a required property for OrgOAuthClient and cannot be null");
-            }
-            else
-            {
-                this.AuthorizedGrantType = AuthorizedGrantType;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Organization = Organization;
-            
-            
-            
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.CreatedBy = CreatedBy;
+            this.ModifiedBy = ModifiedBy;
+            this.Organization = Organization;
             
         }
         
@@ -341,21 +216,13 @@ this.Organization = Organization;
             sb.Append("class OrgOAuthClient {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  AuthorizedGrantType: ").Append(AuthorizedGrantType).Append("\n");
-            
             sb.Append("  Organization: ").Append(Organization).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

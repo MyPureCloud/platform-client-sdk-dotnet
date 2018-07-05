@@ -364,305 +364,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobResponse" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Status">The current status of the export request (required).</param>
-        
-        
-        
         /// <param name="TimeZone">The requested timezone of the exported data (required).</param>
-        
-        
-        
         /// <param name="ExportFormat">The requested format of the exported data (required).</param>
-        
-        
-        
         /// <param name="Interval">The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
-        
-        
-        
         /// <param name="DownloadUrl">The url to download the request if it&#39;s status is completed.</param>
-        
-        
-        
         /// <param name="ViewType">The type of view export job to be created (required).</param>
-        
-        
-        
         /// <param name="ExportErrorMessagesType">The error message in case the export request failed.</param>
-        
-        
-        
         /// <param name="Period">The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
-        
-        
-        
         /// <param name="Filter">Filters to apply to create the view (required).</param>
-        
-        
-        
         /// <param name="Read">Indicates if the request has been marked as read (required).</param>
-        
-        
-        
         /// <param name="CreatedDateTime">The created date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
-        
         /// <param name="ModifiedDateTime">The last modified date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
-        
         /// <param name="Locale">The locale use for localization of the exported data, i.e. en-us, es-mx   (required).</param>
-        
-        
-        
-        
         public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Status" is required (not null)
-            if (Status == null)
-            {
-                throw new InvalidDataException("Status is a required property for ReportingExportJobResponse and cannot be null");
-            }
-            else
-            {
-                this.Status = Status;
-            }
-            
-            
-            
-            
-            
-            // to ensure "TimeZone" is required (not null)
-            if (TimeZone == null)
-            {
-                throw new InvalidDataException("TimeZone is a required property for ReportingExportJobResponse and cannot be null");
-            }
-            else
-            {
-                this.TimeZone = TimeZone;
-            }
-            
-            
-            
-            
-            
-            // to ensure "ExportFormat" is required (not null)
-            if (ExportFormat == null)
-            {
-                throw new InvalidDataException("ExportFormat is a required property for ReportingExportJobResponse and cannot be null");
-            }
-            else
-            {
-                this.ExportFormat = ExportFormat;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "ViewType" is required (not null)
-            if (ViewType == null)
-            {
-                throw new InvalidDataException("ViewType is a required property for ReportingExportJobResponse and cannot be null");
-            }
-            else
-            {
-                this.ViewType = ViewType;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Filter" is required (not null)
-            if (Filter == null)
-            {
-                throw new InvalidDataException("Filter is a required property for ReportingExportJobResponse and cannot be null");
-            }
-            else
-            {
-                this.Filter = Filter;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Read" is required (not null)
-            if (Read == null)
-            {
-                throw new InvalidDataException("Read is a required property for ReportingExportJobResponse and cannot be null");
-            }
-            else
-            {
-                this.Read = Read;
-            }
-            
-            
-            
-            
-            
-            // to ensure "CreatedDateTime" is required (not null)
-            if (CreatedDateTime == null)
-            {
-                throw new InvalidDataException("CreatedDateTime is a required property for ReportingExportJobResponse and cannot be null");
-            }
-            else
-            {
-                this.CreatedDateTime = CreatedDateTime;
-            }
-            
-            
-            
-            
-            
-            // to ensure "ModifiedDateTime" is required (not null)
-            if (ModifiedDateTime == null)
-            {
-                throw new InvalidDataException("ModifiedDateTime is a required property for ReportingExportJobResponse and cannot be null");
-            }
-            else
-            {
-                this.ModifiedDateTime = ModifiedDateTime;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Locale" is required (not null)
-            if (Locale == null)
-            {
-                throw new InvalidDataException("Locale is a required property for ReportingExportJobResponse and cannot be null");
-            }
-            else
-            {
-                this.Locale = Locale;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Interval = Interval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DownloadUrl = DownloadUrl;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExportErrorMessagesType = ExportErrorMessagesType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Period = Period;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Interval = Interval;
+            this.DownloadUrl = DownloadUrl;
+            this.ExportErrorMessagesType = ExportErrorMessagesType;
+            this.Period = Period;
             
         }
         
@@ -792,37 +514,21 @@ this.Period = Period;
             sb.Append("class ReportingExportJobResponse {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-            
             sb.Append("  ExportFormat: ").Append(ExportFormat).Append("\n");
-            
             sb.Append("  Interval: ").Append(Interval).Append("\n");
-            
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
-            
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
-            
             sb.Append("  ExportErrorMessagesType: ").Append(ExportErrorMessagesType).Append("\n");
-            
             sb.Append("  Period: ").Append(Period).Append("\n");
-            
             sb.Append("  Filter: ").Append(Filter).Append("\n");
-            
             sb.Append("  Read: ").Append(Read).Append("\n");
-            
             sb.Append("  CreatedDateTime: ").Append(CreatedDateTime).Append("\n");
-            
             sb.Append("  ModifiedDateTime: ").Append(ModifiedDateTime).Append("\n");
-            
             sb.Append("  Locale: ").Append(Locale).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

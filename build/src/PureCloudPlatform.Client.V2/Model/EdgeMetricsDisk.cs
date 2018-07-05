@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsDisk" /> class.
         /// </summary>
-        
-        
         /// <param name="AvailableBytes">Available memory in bytes..</param>
-        
-        
-        
         /// <param name="PartitionName">Disk partition name..</param>
-        
-        
-        
         /// <param name="TotalBytes">Total memory in bytes..</param>
-        
-        
         public EdgeMetricsDisk(double? AvailableBytes = null, string PartitionName = null, double? TotalBytes = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AvailableBytes = AvailableBytes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PartitionName = PartitionName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalBytes = TotalBytes;
-            
-            
-            
+            this.AvailableBytes = AvailableBytes;
+            this.PartitionName = PartitionName;
+            this.TotalBytes = TotalBytes;
             
         }
         
@@ -135,11 +88,8 @@ this.TotalBytes = TotalBytes;
             sb.Append("class EdgeMetricsDisk {\n");
             
             sb.Append("  AvailableBytes: ").Append(AvailableBytes).Append("\n");
-            
             sb.Append("  PartitionName: ").Append(PartitionName).Append("\n");
-            
             sb.Append("  TotalBytes: ").Append(TotalBytes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

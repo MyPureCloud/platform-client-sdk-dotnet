@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationScoringSet" /> class.
         /// </summary>
-        
-        
         /// <param name="TotalScore">TotalScore.</param>
-        
-        
-        
         /// <param name="TotalCriticalScore">TotalCriticalScore.</param>
-        
-        
-        
         /// <param name="QuestionGroupScores">QuestionGroupScores.</param>
-        
-        
-        
         /// <param name="AnyFailedKillQuestions">AnyFailedKillQuestions.</param>
-        
-        
-        
         /// <param name="Comments">Comments.</param>
-        
-        
-        
         /// <param name="AgentComments">AgentComments.</param>
-        
-        
         public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, List<QuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string AgentComments = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalScore = TotalScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalCriticalScore = TotalCriticalScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QuestionGroupScores = QuestionGroupScores;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AnyFailedKillQuestions = AnyFailedKillQuestions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Comments = Comments;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AgentComments = AgentComments;
-            
-            
-            
+            this.TotalScore = TotalScore;
+            this.TotalCriticalScore = TotalCriticalScore;
+            this.QuestionGroupScores = QuestionGroupScores;
+            this.AnyFailedKillQuestions = AnyFailedKillQuestions;
+            this.Comments = Comments;
+            this.AgentComments = AgentComments;
             
         }
         
@@ -222,17 +130,11 @@ this.AgentComments = AgentComments;
             sb.Append("class EvaluationScoringSet {\n");
             
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
-            
             sb.Append("  TotalCriticalScore: ").Append(TotalCriticalScore).Append("\n");
-            
             sb.Append("  QuestionGroupScores: ").Append(QuestionGroupScores).Append("\n");
-            
             sb.Append("  AnyFailedKillQuestions: ").Append(AnyFailedKillQuestions).Append("\n");
-            
             sb.Append("  Comments: ").Append(Comments).Append("\n");
-            
             sb.Append("  AgentComments: ").Append(AgentComments).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

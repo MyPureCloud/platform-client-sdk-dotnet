@@ -74,61 +74,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactSort" /> class.
         /// </summary>
-        
-        
         /// <param name="FieldName">FieldName.</param>
-        
-        
-        
         /// <param name="Direction">The direction in which to sort contacts..</param>
-        
-        
-        
         /// <param name="Numeric">Whether or not the column contains numeric data..</param>
-        
-        
         public ContactSort(string FieldName = null, DirectionEnum? Direction = null, bool? Numeric = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.FieldName = FieldName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Numeric = Numeric;
-            
-            
-            
+            this.FieldName = FieldName;
+            this.Direction = Direction;
+            this.Numeric = Numeric;
             
         }
         
@@ -162,11 +115,8 @@ this.Numeric = Numeric;
             sb.Append("class ContactSort {\n");
             
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  Numeric: ").Append(Numeric).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

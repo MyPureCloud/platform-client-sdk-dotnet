@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DependencyTrackingBuildNotificationNotificationHomeOrganization" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ThirdPartyOrgName">ThirdPartyOrgName.</param>
-        
-        
         public DependencyTrackingBuildNotificationNotificationHomeOrganization(string Id = null, string Name = null, string ThirdPartyOrgName = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ThirdPartyOrgName = ThirdPartyOrgName;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.ThirdPartyOrgName = ThirdPartyOrgName;
             
         }
         
@@ -132,11 +85,8 @@ this.ThirdPartyOrgName = ThirdPartyOrgName;
             sb.Append("class DependencyTrackingBuildNotificationNotificationHomeOrganization {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ThirdPartyOrgName: ").Append(ThirdPartyOrgName).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

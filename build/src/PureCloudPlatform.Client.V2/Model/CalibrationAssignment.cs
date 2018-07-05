@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CalibrationAssignment" /> class.
         /// </summary>
-        
-        
         /// <param name="Calibrator">Calibrator.</param>
-        
-        
-        
         /// <param name="Evaluators">Evaluators.</param>
-        
-        
-        
         /// <param name="EvaluationForm">EvaluationForm.</param>
-        
-        
-        
         /// <param name="ExpertEvaluator">ExpertEvaluator.</param>
-        
-        
         public CalibrationAssignment(User Calibrator = null, List<User> Evaluators = null, EvaluationForm EvaluationForm = null, User ExpertEvaluator = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Calibrator = Calibrator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Evaluators = Evaluators;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EvaluationForm = EvaluationForm;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExpertEvaluator = ExpertEvaluator;
-            
-            
-            
+            this.Calibrator = Calibrator;
+            this.Evaluators = Evaluators;
+            this.EvaluationForm = EvaluationForm;
+            this.ExpertEvaluator = ExpertEvaluator;
             
         }
         
@@ -162,13 +100,9 @@ this.ExpertEvaluator = ExpertEvaluator;
             sb.Append("class CalibrationAssignment {\n");
             
             sb.Append("  Calibrator: ").Append(Calibrator).Append("\n");
-            
             sb.Append("  Evaluators: ").Append(Evaluators).Append("\n");
-            
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
-            
             sb.Append("  ExpertEvaluator: ").Append(ExpertEvaluator).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

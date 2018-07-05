@@ -146,113 +146,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageMediaData" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Url">The location of the media, useful for retrieving it.</param>
-        
-        
-        
         /// <param name="MediaType">The optional internet media type of the the media object.  If null then the media type should be dictated by the url..</param>
-        
-        
-        
         /// <param name="ContentLengthBytes">The optional content length of the the media object, in bytes..</param>
-        
-        
-        
         /// <param name="UploadUrl">The URL returned to upload an attachment.</param>
-        
-        
-        
-        
-        
-        
         public MessageMediaData(string Name = null, string Url = null, MediaTypeEnum? MediaType = null, int? ContentLengthBytes = null, string UploadUrl = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Url = Url;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaType = MediaType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentLengthBytes = ContentLengthBytes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadUrl = UploadUrl;
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Url = Url;
+            this.MediaType = MediaType;
+            this.ContentLengthBytes = ContentLengthBytes;
+            this.UploadUrl = UploadUrl;
             
         }
         
@@ -324,21 +229,13 @@ this.UploadUrl = UploadUrl;
             sb.Append("class MessageMediaData {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Url: ").Append(Url).Append("\n");
-            
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("  ContentLengthBytes: ").Append(ContentLengthBytes).Append("\n");
-            
             sb.Append("  UploadUrl: ").Append(UploadUrl).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

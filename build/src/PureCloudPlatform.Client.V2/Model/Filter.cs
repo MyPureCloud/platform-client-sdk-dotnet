@@ -50,98 +50,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Filter" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">The name of the field by which to filter. (required).</param>
-        
-        
-        
         /// <param name="Type">The type of the filter, DATE or STRING. (required).</param>
-        
-        
-        
         /// <param name="_Operator">The operation that the filter performs. (required).</param>
-        
-        
-        
         /// <param name="Values">The values to make the filter comparison against. (required).</param>
-        
-        
         public Filter(string Name = null, string Type = null, string _Operator = null, List<string> Values = null)
         {
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for Filter and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for Filter and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            // to ensure "_Operator" is required (not null)
-            if (_Operator == null)
-            {
-                throw new InvalidDataException("_Operator is a required property for Filter and cannot be null");
-            }
-            else
-            {
-                this._Operator = _Operator;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Values" is required (not null)
-            if (Values == null)
-            {
-                throw new InvalidDataException("Values is a required property for Filter and cannot be null");
-            }
-            else
-            {
-                this.Values = Values;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -192,13 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class Filter {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-            
             sb.Append("  Values: ").Append(Values).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MeteredEvaluationAssignment" /> class.
         /// </summary>
-        
-        
         /// <param name="EvaluationContextId">EvaluationContextId.</param>
-        
-        
-        
         /// <param name="Evaluators">Evaluators.</param>
-        
-        
-        
         /// <param name="MaxNumberEvaluations">MaxNumberEvaluations.</param>
-        
-        
-        
         /// <param name="EvaluationForm">EvaluationForm.</param>
-        
-        
-        
         /// <param name="AssignToActiveUser">AssignToActiveUser.</param>
-        
-        
-        
         /// <param name="TimeInterval">TimeInterval.</param>
-        
-        
         public MeteredEvaluationAssignment(string EvaluationContextId = null, List<User> Evaluators = null, int? MaxNumberEvaluations = null, EvaluationForm EvaluationForm = null, bool? AssignToActiveUser = null, TimeInterval TimeInterval = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.EvaluationContextId = EvaluationContextId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Evaluators = Evaluators;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxNumberEvaluations = MaxNumberEvaluations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EvaluationForm = EvaluationForm;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AssignToActiveUser = AssignToActiveUser;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeInterval = TimeInterval;
-            
-            
-            
+            this.EvaluationContextId = EvaluationContextId;
+            this.Evaluators = Evaluators;
+            this.MaxNumberEvaluations = MaxNumberEvaluations;
+            this.EvaluationForm = EvaluationForm;
+            this.AssignToActiveUser = AssignToActiveUser;
+            this.TimeInterval = TimeInterval;
             
         }
         
@@ -222,17 +130,11 @@ this.TimeInterval = TimeInterval;
             sb.Append("class MeteredEvaluationAssignment {\n");
             
             sb.Append("  EvaluationContextId: ").Append(EvaluationContextId).Append("\n");
-            
             sb.Append("  Evaluators: ").Append(Evaluators).Append("\n");
-            
             sb.Append("  MaxNumberEvaluations: ").Append(MaxNumberEvaluations).Append("\n");
-            
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
-            
             sb.Append("  AssignToActiveUser: ").Append(AssignToActiveUser).Append("\n");
-            
             sb.Append("  TimeInterval: ").Append(TimeInterval).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

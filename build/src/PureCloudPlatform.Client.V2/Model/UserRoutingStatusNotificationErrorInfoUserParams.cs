@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRoutingStatusNotificationErrorInfoUserParams" /> class.
         /// </summary>
-        
-        
         /// <param name="Key">Key.</param>
-        
-        
-        
         /// <param name="Value">Value.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public UserRoutingStatusNotificationErrorInfoUserParams(string Key = null, string Value = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Key = Key;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Key = Key;
+            this.Value = Value;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -132,11 +85,8 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class UserRoutingStatusNotificationErrorInfoUserParams {\n");
             
             sb.Append("  Key: ").Append(Key).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

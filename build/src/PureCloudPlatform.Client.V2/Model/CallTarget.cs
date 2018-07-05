@@ -69,44 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallTarget" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">The type of call.</param>
-        
-        
-        
         /// <param name="Value">The id of the station or an E.164 formatted phone number.</param>
-        
-        
         public CallTarget(TypeEnum? Type = null, string Value = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
+            this.Type = Type;
+            this.Value = Value;
             
         }
         
@@ -132,9 +100,7 @@ this.Value = Value;
             sb.Append("class CallTarget {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

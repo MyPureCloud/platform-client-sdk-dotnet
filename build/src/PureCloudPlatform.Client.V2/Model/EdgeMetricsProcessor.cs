@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeMetricsProcessor" /> class.
         /// </summary>
-        
-        
         /// <param name="ActiveTimePct">Percent time processor was active..</param>
-        
-        
-        
         /// <param name="CpuId">Machine CPU identifier. &#39;total&#39; will always be included in the array and is the total of all CPU resources..</param>
-        
-        
-        
         /// <param name="IdleTimePct">Percent time processor was idle..</param>
-        
-        
-        
         /// <param name="PrivilegedTimePct">Percent time processor spent in privileged mode..</param>
-        
-        
-        
         /// <param name="UserTimePct">Percent time processor spent in user mode..</param>
-        
-        
         public EdgeMetricsProcessor(double? ActiveTimePct = null, string CpuId = null, double? IdleTimePct = null, double? PrivilegedTimePct = null, double? UserTimePct = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActiveTimePct = ActiveTimePct;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CpuId = CpuId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IdleTimePct = IdleTimePct;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PrivilegedTimePct = PrivilegedTimePct;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserTimePct = UserTimePct;
-            
-            
-            
+            this.ActiveTimePct = ActiveTimePct;
+            this.CpuId = CpuId;
+            this.IdleTimePct = IdleTimePct;
+            this.PrivilegedTimePct = PrivilegedTimePct;
+            this.UserTimePct = UserTimePct;
             
         }
         
@@ -197,15 +120,10 @@ this.UserTimePct = UserTimePct;
             sb.Append("class EdgeMetricsProcessor {\n");
             
             sb.Append("  ActiveTimePct: ").Append(ActiveTimePct).Append("\n");
-            
             sb.Append("  CpuId: ").Append(CpuId).Append("\n");
-            
             sb.Append("  IdleTimePct: ").Append(IdleTimePct).Append("\n");
-            
             sb.Append("  PrivilegedTimePct: ").Append(PrivilegedTimePct).Append("\n");
-            
             sb.Append("  UserTimePct: ").Append(UserTimePct).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

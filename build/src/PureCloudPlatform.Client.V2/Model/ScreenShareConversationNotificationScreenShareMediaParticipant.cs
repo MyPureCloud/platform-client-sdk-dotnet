@@ -449,537 +449,70 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScreenShareConversationNotificationScreenShareMediaParticipant" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Address">Address.</param>
-        
-        
-        
         /// <param name="StartTime">StartTime.</param>
-        
-        
-        
         /// <param name="ConnectedTime">ConnectedTime.</param>
-        
-        
-        
         /// <param name="EndTime">EndTime.</param>
-        
-        
-        
         /// <param name="StartHoldTime">StartHoldTime.</param>
-        
-        
-        
         /// <param name="Purpose">Purpose.</param>
-        
-        
-        
         /// <param name="State">State.</param>
-        
-        
-        
         /// <param name="Direction">Direction.</param>
-        
-        
-        
         /// <param name="DisconnectType">DisconnectType.</param>
-        
-        
-        
         /// <param name="Held">Held.</param>
-        
-        
-        
         /// <param name="WrapupRequired">WrapupRequired.</param>
-        
-        
-        
         /// <param name="WrapupPrompt">WrapupPrompt.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="Queue">Queue.</param>
-        
-        
-        
         /// <param name="Attributes">Attributes.</param>
-        
-        
-        
         /// <param name="ErrorInfo">ErrorInfo.</param>
-        
-        
-        
         /// <param name="Script">Script.</param>
-        
-        
-        
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
-        
-        
-        
         /// <param name="WrapupSkipped">WrapupSkipped.</param>
-        
-        
-        
         /// <param name="Provider">Provider.</param>
-        
-        
-        
         /// <param name="ExternalContact">ExternalContact.</param>
-        
-        
-        
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
-        
-        
-        
         /// <param name="Wrapup">Wrapup.</param>
-        
-        
-        
         /// <param name="Peer">Peer.</param>
-        
-        
-        
         /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
-        
-        
-        
         /// <param name="FlaggedReason">FlaggedReason.</param>
-        
-        
-        
         /// <param name="Context">Context.</param>
-        
-        
-        
         /// <param name="PeerCount">PeerCount.</param>
-        
-        
-        
         /// <param name="Sharing">Sharing.</param>
-        
-        
         public ScreenShareConversationNotificationScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, ScreenShareConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, ScreenShareConversationNotificationErrorInfo ErrorInfo = null, ScreenShareConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, ScreenShareConversationNotificationUriReference ExternalContact = null, ScreenShareConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartTime = StartTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndTime = EndTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartHoldTime = StartHoldTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Purpose = Purpose;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Held = Held;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupRequired = WrapupRequired;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupPrompt = WrapupPrompt;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Queue = Queue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attributes = Attributes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorInfo = ErrorInfo;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Script = Script;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupTimeoutMs = WrapupTimeoutMs;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupSkipped = WrapupSkipped;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalContact = ExternalContact;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalOrganization = ExternalOrganization;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Wrapup = Wrapup;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Peer = Peer;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScreenRecordingState = ScreenRecordingState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FlaggedReason = FlaggedReason;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Context = Context;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerCount = PeerCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Sharing = Sharing;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.Address = Address;
+            this.StartTime = StartTime;
+            this.ConnectedTime = ConnectedTime;
+            this.EndTime = EndTime;
+            this.StartHoldTime = StartHoldTime;
+            this.Purpose = Purpose;
+            this.State = State;
+            this.Direction = Direction;
+            this.DisconnectType = DisconnectType;
+            this.Held = Held;
+            this.WrapupRequired = WrapupRequired;
+            this.WrapupPrompt = WrapupPrompt;
+            this.User = User;
+            this.Queue = Queue;
+            this.Attributes = Attributes;
+            this.ErrorInfo = ErrorInfo;
+            this.Script = Script;
+            this.WrapupTimeoutMs = WrapupTimeoutMs;
+            this.WrapupSkipped = WrapupSkipped;
+            this.Provider = Provider;
+            this.ExternalContact = ExternalContact;
+            this.ExternalOrganization = ExternalOrganization;
+            this.Wrapup = Wrapup;
+            this.Peer = Peer;
+            this.ScreenRecordingState = ScreenRecordingState;
+            this.FlaggedReason = FlaggedReason;
+            this.Context = Context;
+            this.PeerCount = PeerCount;
+            this.Sharing = Sharing;
             
         }
         
@@ -1218,67 +751,36 @@ this.Sharing = Sharing;
             sb.Append("class ScreenShareConversationNotificationScreenShareMediaParticipant {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
-            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
-            
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  Held: ").Append(Held).Append("\n");
-            
             sb.Append("  WrapupRequired: ").Append(WrapupRequired).Append("\n");
-            
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
-            
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("  Script: ").Append(Script).Append("\n");
-            
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
-            
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
-            
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
-            
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
-            
             sb.Append("  Peer: ").Append(Peer).Append("\n");
-            
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
-            
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
-            
             sb.Append("  Context: ").Append(Context).Append("\n");
-            
             sb.Append("  PeerCount: ").Append(PeerCount).Append("\n");
-            
             sb.Append("  Sharing: ").Append(Sharing).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

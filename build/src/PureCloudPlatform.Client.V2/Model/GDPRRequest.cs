@@ -186,140 +186,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GDPRRequest" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="CreatedBy">The user that created this request (required).</param>
-        
-        
-        
         /// <param name="ReplacementTerms">The replacement terms for the provided search terms, in the case of a GDPR_UPDATE request.</param>
-        
-        
-        
         /// <param name="RequestType">The type of GDPR request (required).</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Subject">The subject of the GDPR request (required).</param>
-        
-        
-        
-        
-        
-        
         public GDPRRequest(string Name = null, UriReference CreatedBy = null, List<ReplacementTerm> ReplacementTerms = null, RequestTypeEnum? RequestType = null, GDPRSubject Subject = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "CreatedBy" is required (not null)
-            if (CreatedBy == null)
-            {
-                throw new InvalidDataException("CreatedBy is a required property for GDPRRequest and cannot be null");
-            }
-            else
-            {
-                this.CreatedBy = CreatedBy;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "RequestType" is required (not null)
-            if (RequestType == null)
-            {
-                throw new InvalidDataException("RequestType is a required property for GDPRRequest and cannot be null");
-            }
-            else
-            {
-                this.RequestType = RequestType;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Subject" is required (not null)
-            if (Subject == null)
-            {
-                throw new InvalidDataException("Subject is a required property for GDPRRequest and cannot be null");
-            }
-            else
-            {
-                this.Subject = Subject;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReplacementTerms = ReplacementTerms;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.ReplacementTerms = ReplacementTerms;
             
         }
         
@@ -409,25 +284,15 @@ this.ReplacementTerms = ReplacementTerms;
             sb.Append("class GDPRRequest {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  ReplacementTerms: ").Append(ReplacementTerms).Append("\n");
-            
             sb.Append("  RequestType: ").Append(RequestType).Append("\n");
-            
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  Subject: ").Append(Subject).Append("\n");
-            
             sb.Append("  ResultsUrl: ").Append(ResultsUrl).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -35,32 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PostOutputContract" /> class.
         /// </summary>
-        
-        
         /// <param name="SuccessSchema">JSON schema that defines the transformed, successful result that will be sent back to the caller. (required).</param>
-        
-        
         public PostOutputContract(JsonSchemaDocument SuccessSchema = null)
         {
-            
-            
-            
-            // to ensure "SuccessSchema" is required (not null)
-            if (SuccessSchema == null)
-            {
-                throw new InvalidDataException("SuccessSchema is a required property for PostOutputContract and cannot be null");
-            }
-            else
-            {
-                this.SuccessSchema = SuccessSchema;
-            }
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -84,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class PostOutputContract {\n");
             
             sb.Append("  SuccessSchema: ").Append(SuccessSchema).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -110,129 +110,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilter" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the list. (required).</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        
-        
-        
         /// <param name="ContactList">The contact list the filter is based on. (required).</param>
-        
-        
-        
         /// <param name="Clauses">Groups of conditions to filter the contacts by..</param>
-        
-        
-        
         /// <param name="FilterType">How to join clauses together..</param>
-        
-        
-        
-        
         public ContactListFilter(string Name = null, int? Version = null, UriReference ContactList = null, List<ContactListFilterClause> Clauses = null, FilterTypeEnum? FilterType = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for ContactListFilter and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "ContactList" is required (not null)
-            if (ContactList == null)
-            {
-                throw new InvalidDataException("ContactList is a required property for ContactListFilter and cannot be null");
-            }
-            else
-            {
-                this.ContactList = ContactList;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Clauses = Clauses;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FilterType = FilterType;
-            
-            
-            
-            
-            
+            this.Version = Version;
+            this.Clauses = Clauses;
+            this.FilterType = FilterType;
             
         }
         
@@ -321,23 +208,14 @@ this.FilterType = FilterType;
             sb.Append("class ContactListFilter {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
-            
             sb.Append("  Clauses: ").Append(Clauses).Append("\n");
-            
             sb.Append("  FilterType: ").Append(FilterType).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

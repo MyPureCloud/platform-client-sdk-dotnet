@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InitiateScreenRecording" /> class.
         /// </summary>
-        
-        
         /// <param name="RecordACW">RecordACW.</param>
-        
-        
-        
         /// <param name="ArchiveRetention">ArchiveRetention.</param>
-        
-        
-        
         /// <param name="DeleteRetention">DeleteRetention.</param>
-        
-        
         public InitiateScreenRecording(bool? RecordACW = null, ArchiveRetention ArchiveRetention = null, DeleteRetention DeleteRetention = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordACW = RecordACW;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ArchiveRetention = ArchiveRetention;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DeleteRetention = DeleteRetention;
-            
-            
-            
+            this.RecordACW = RecordACW;
+            this.ArchiveRetention = ArchiveRetention;
+            this.DeleteRetention = DeleteRetention;
             
         }
         
@@ -132,11 +85,8 @@ this.DeleteRetention = DeleteRetention;
             sb.Append("class InitiateScreenRecording {\n");
             
             sb.Append("  RecordACW: ").Append(RecordACW).Append("\n");
-            
             sb.Append("  ArchiveRetention: ").Append(ArchiveRetention).Append("\n");
-            
             sb.Append("  DeleteRetention: ").Append(DeleteRetention).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

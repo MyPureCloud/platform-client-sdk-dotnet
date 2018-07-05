@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProvisionInfo" /> class.
         /// </summary>
-        
-        
         /// <param name="Time">The time at which this phone was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Source">The source of the provisioning.</param>
-        
-        
-        
         /// <param name="ErrorInfo">The error information from the provision process, if any.</param>
-        
-        
         public ProvisionInfo(DateTime? Time = null, string Source = null, string ErrorInfo = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Time = Time;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Source = Source;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorInfo = ErrorInfo;
-            
-            
-            
+            this.Time = Time;
+            this.Source = Source;
+            this.ErrorInfo = ErrorInfo;
             
         }
         
@@ -135,11 +88,8 @@ this.ErrorInfo = ErrorInfo;
             sb.Append("class ProvisionInfo {\n");
             
             sb.Append("  Time: ").Append(Time).Append("\n");
-            
             sb.Append("  Source: ").Append(Source).Append("\n");
-            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

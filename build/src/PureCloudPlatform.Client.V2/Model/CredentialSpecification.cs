@@ -39,39 +39,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CredentialSpecification" /> class.
         /// </summary>
-        
-        
-        
-        
-        
-        
         /// <param name="CredentialTypes">List of acceptable credential types that can be provided for this credential..</param>
-        
-        
         public CredentialSpecification(List<string> CredentialTypes = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CredentialTypes = CredentialTypes;
-            
-            
-            
+            this.CredentialTypes = CredentialTypes;
             
         }
         
@@ -113,11 +84,8 @@ this.CredentialTypes = CredentialTypes;
             sb.Append("class CredentialSpecification {\n");
             
             sb.Append("  Required: ").Append(Required).Append("\n");
-            
             sb.Append("  Title: ").Append(Title).Append("\n");
-            
             sb.Append("  CredentialTypes: ").Append(CredentialTypes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

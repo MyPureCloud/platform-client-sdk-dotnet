@@ -427,171 +427,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InteractionStatsAlert" /> class.
         /// </summary>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Unread">Indicates if the alert has been read. (required).</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="NotificationUsers">The ids of users who were notified of alarm state change. (required).</param>
-        
-        
-        
         /// <param name="AlertTypes">A collection of notification methods. (required).</param>
-        
-        
-        
         /// <param name="RuleUri">RuleUri.</param>
-        
-        
-        
-        
         public InteractionStatsAlert(bool? Unread = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null, string RuleUri = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Unread" is required (not null)
-            if (Unread == null)
-            {
-                throw new InvalidDataException("Unread is a required property for InteractionStatsAlert and cannot be null");
-            }
-            else
-            {
-                this.Unread = Unread;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "NotificationUsers" is required (not null)
-            if (NotificationUsers == null)
-            {
-                throw new InvalidDataException("NotificationUsers is a required property for InteractionStatsAlert and cannot be null");
-            }
-            else
-            {
-                this.NotificationUsers = NotificationUsers;
-            }
-            
-            
-            
-            
-            
-            // to ensure "AlertTypes" is required (not null)
-            if (AlertTypes == null)
-            {
-                throw new InvalidDataException("AlertTypes is a required property for InteractionStatsAlert and cannot be null");
-            }
-            else
-            {
-                this.AlertTypes = AlertTypes;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RuleUri = RuleUri;
-            
-            
-            
-            
-            
+            this.RuleUri = RuleUri;
             
         }
         
@@ -723,39 +565,22 @@ this.RuleUri = RuleUri;
             sb.Append("class InteractionStatsAlert {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
-            
             sb.Append("  DimensionValue: ").Append(DimensionValue).Append("\n");
-            
             sb.Append("  Metric: ").Append(Metric).Append("\n");
-            
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("  NumericRange: ").Append(NumericRange).Append("\n");
-            
             sb.Append("  Statistic: ").Append(Statistic).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  RuleId: ").Append(RuleId).Append("\n");
-            
             sb.Append("  Unread: ").Append(Unread).Append("\n");
-            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
-            
             sb.Append("  NotificationUsers: ").Append(NotificationUsers).Append("\n");
-            
             sb.Append("  AlertTypes: ").Append(AlertTypes).Append("\n");
-            
             sb.Append("  RuleUri: ").Append(RuleUri).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

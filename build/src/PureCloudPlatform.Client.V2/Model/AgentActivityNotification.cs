@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentActivityNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="RoutingStatus">RoutingStatus.</param>
-        
-        
-        
         /// <param name="Presence">Presence.</param>
-        
-        
-        
         /// <param name="OutOfOffice">OutOfOffice.</param>
-        
-        
-        
         /// <param name="ActiveQueueIds">ActiveQueueIds.</param>
-        
-        
-        
         /// <param name="DateActiveQueuesChanged">DateActiveQueuesChanged.</param>
-        
-        
         public AgentActivityNotification(string Id = null, AgentActivityNotificationRoutingStatus RoutingStatus = null, AgentActivityNotificationPresence Presence = null, AgentActivityNotificationOutOfOffice OutOfOffice = null, List<string> ActiveQueueIds = null, DateTime? DateActiveQueuesChanged = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoutingStatus = RoutingStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Presence = Presence;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OutOfOffice = OutOfOffice;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActiveQueueIds = ActiveQueueIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateActiveQueuesChanged = DateActiveQueuesChanged;
-            
-            
-            
+            this.Id = Id;
+            this.RoutingStatus = RoutingStatus;
+            this.Presence = Presence;
+            this.OutOfOffice = OutOfOffice;
+            this.ActiveQueueIds = ActiveQueueIds;
+            this.DateActiveQueuesChanged = DateActiveQueuesChanged;
             
         }
         
@@ -222,17 +130,11 @@ this.DateActiveQueuesChanged = DateActiveQueuesChanged;
             sb.Append("class AgentActivityNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
-            
             sb.Append("  Presence: ").Append(Presence).Append("\n");
-            
             sb.Append("  OutOfOffice: ").Append(OutOfOffice).Append("\n");
-            
             sb.Append("  ActiveQueueIds: ").Append(ActiveQueueIds).Append("\n");
-            
             sb.Append("  DateActiveQueuesChanged: ").Append(DateActiveQueuesChanged).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

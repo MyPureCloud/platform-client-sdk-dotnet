@@ -128,78 +128,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmScheduleNotificationNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="OperationId">OperationId.</param>
-        
-        
-        
         /// <param name="DownloadUrl">DownloadUrl.</param>
-        
-        
-        
         /// <param name="EventType">EventType.</param>
-        
-        
         public WfmScheduleNotificationNotification(StatusEnum? Status = null, string OperationId = null, string DownloadUrl = null, EventTypeEnum? EventType = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OperationId = OperationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DownloadUrl = DownloadUrl;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EventType = EventType;
-            
-            
-            
+            this.Status = Status;
+            this.OperationId = OperationId;
+            this.DownloadUrl = DownloadUrl;
+            this.EventType = EventType;
             
         }
         
@@ -234,13 +172,9 @@ this.EventType = EventType;
             sb.Append("class WfmScheduleNotificationNotification {\n");
             
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  OperationId: ").Append(OperationId).Append("\n");
-            
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
-            
             sb.Append("  EventType: ").Append(EventType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

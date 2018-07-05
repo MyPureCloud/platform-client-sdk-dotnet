@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateAddressRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="Address">Address schema.</param>
-        
-        
         public ValidateAddressRequest(StreetAddress Address = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
+            this.Address = Address;
             
         }
         
@@ -73,7 +56,6 @@ this.Address = Address;
             sb.Append("class ValidateAddressRequest {\n");
             
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

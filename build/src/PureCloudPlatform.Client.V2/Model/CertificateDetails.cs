@@ -59,129 +59,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CertificateDetails" /> class.
         /// </summary>
-        
-        
         /// <param name="Issuer">Information about the issuer of the certificate.  The value of this property is a comma separated key=value format.  Each key is one of the attribute names supported by X.500..</param>
-        
-        
-        
         /// <param name="Subject">Information about the subject of the certificate.  The value of this property is a comma separated key=value format.  Each key is one of the attribute names supported by X.500..</param>
-        
-        
-        
         /// <param name="ExpirationDate">The expiration date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="IssueDate">The issue date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Expired">True if the certificate is expired, false otherwise..</param>
-        
-        
-        
         /// <param name="SignatureValid">SignatureValid.</param>
-        
-        
-        
         /// <param name="Valid">Valid.</param>
-        
-        
         public CertificateDetails(string Issuer = null, string Subject = null, DateTime? ExpirationDate = null, DateTime? IssueDate = null, bool? Expired = null, bool? SignatureValid = null, bool? Valid = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Issuer = Issuer;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Subject = Subject;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExpirationDate = ExpirationDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IssueDate = IssueDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Expired = Expired;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SignatureValid = SignatureValid;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Valid = Valid;
-            
-            
-            
+            this.Issuer = Issuer;
+            this.Subject = Subject;
+            this.ExpirationDate = ExpirationDate;
+            this.IssueDate = IssueDate;
+            this.Expired = Expired;
+            this.SignatureValid = SignatureValid;
+            this.Valid = Valid;
             
         }
         
@@ -257,19 +150,12 @@ this.Valid = Valid;
             sb.Append("class CertificateDetails {\n");
             
             sb.Append("  Issuer: ").Append(Issuer).Append("\n");
-            
             sb.Append("  Subject: ").Append(Subject).Append("\n");
-            
             sb.Append("  ExpirationDate: ").Append(ExpirationDate).Append("\n");
-            
             sb.Append("  IssueDate: ").Append(IssueDate).Append("\n");
-            
             sb.Append("  Expired: ").Append(Expired).Append("\n");
-            
             sb.Append("  SignatureValid: ").Append(SignatureValid).Append("\n");
-            
             sb.Append("  Valid: ").Append(Valid).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

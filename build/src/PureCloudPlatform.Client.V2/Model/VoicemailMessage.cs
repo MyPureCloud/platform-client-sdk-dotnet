@@ -124,251 +124,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMessage" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Conversation">The conversation that the voicemail message is associated with.</param>
-        
-        
-        
         /// <param name="Read">Whether the voicemail message is marked as read.</param>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <param name="CallerUser">Optionally the user that left the voicemail message if the caller was a known user.</param>
-        
-        
-        
         /// <param name="Deleted">Whether the voicemail message has been marked as deleted.</param>
-        
-        
-        
         /// <param name="Note">An optional note.</param>
-        
-        
-        
         /// <param name="User">The user that the voicemail message belongs to or null which means the voicemail message belongs to a group or queue.</param>
-        
-        
-        
         /// <param name="Group">The group that the voicemail message belongs to or null which means the voicemail message belongs to a user or queue.</param>
-        
-        
-        
         /// <param name="Queue">The queue that the voicemail message belongs to or null which means the voicemail message belongs to a user or group.</param>
-        
-        
-        
         /// <param name="CopiedFrom">Represents where this voicemail message was copied from.</param>
-        
-        
-        
         /// <param name="CopiedTo">Represents where this voicemail has been copied to.</param>
-        
-        
-        
         /// <param name="DeleteRetentionPolicy">The retention policy for this voicemail when deleted is set to true.</param>
-        
-        
-        
-        
         public VoicemailMessage(Conversation Conversation = null, bool? Read = null, User CallerUser = null, bool? Deleted = null, string Note = null, User User = null, Group Group = null, Queue Queue = null, VoicemailCopyRecord CopiedFrom = null, List<VoicemailCopyRecord> CopiedTo = null, VoicemailRetentionPolicy DeleteRetentionPolicy = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Conversation = Conversation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Read = Read;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallerUser = CallerUser;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Deleted = Deleted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Note = Note;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Group = Group;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Queue = Queue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CopiedFrom = CopiedFrom;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CopiedTo = CopiedTo;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DeleteRetentionPolicy = DeleteRetentionPolicy;
-            
-            
-            
-            
-            
+            this.Conversation = Conversation;
+            this.Read = Read;
+            this.CallerUser = CallerUser;
+            this.Deleted = Deleted;
+            this.Note = Note;
+            this.User = User;
+            this.Group = Group;
+            this.Queue = Queue;
+            this.CopiedFrom = CopiedFrom;
+            this.CopiedTo = CopiedTo;
+            this.DeleteRetentionPolicy = DeleteRetentionPolicy;
             
         }
         
@@ -563,45 +342,25 @@ this.DeleteRetentionPolicy = DeleteRetentionPolicy;
             sb.Append("class VoicemailMessage {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
-            
             sb.Append("  Read: ").Append(Read).Append("\n");
-            
             sb.Append("  AudioRecordingDurationSeconds: ").Append(AudioRecordingDurationSeconds).Append("\n");
-            
             sb.Append("  AudioRecordingSizeBytes: ").Append(AudioRecordingSizeBytes).Append("\n");
-            
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  DeletedDate: ").Append(DeletedDate).Append("\n");
-            
             sb.Append("  CallerAddress: ").Append(CallerAddress).Append("\n");
-            
             sb.Append("  CallerName: ").Append(CallerName).Append("\n");
-            
             sb.Append("  CallerUser: ").Append(CallerUser).Append("\n");
-            
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
-            
             sb.Append("  Note: ").Append(Note).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Group: ").Append(Group).Append("\n");
-            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
-            
             sb.Append("  CopiedFrom: ").Append(CopiedFrom).Append("\n");
-            
             sb.Append("  CopiedTo: ").Append(CopiedTo).Append("\n");
-            
             sb.Append("  DeleteRetentionPolicy: ").Append(DeleteRetentionPolicy).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

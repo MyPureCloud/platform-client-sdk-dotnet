@@ -39,50 +39,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailCopyRecord" /> class.
         /// </summary>
-        
-        
         /// <param name="User">The user that the voicemail message was copied to/from.</param>
-        
-        
-        
         /// <param name="Group">The group that the voicemail message was copied to/from.</param>
-        
-        
-        
-        
         public VoicemailCopyRecord(User User = null, Group Group = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Group = Group;
-            
-            
-            
-            
-            
+            this.User = User;
+            this.Group = Group;
             
         }
         
@@ -124,11 +86,8 @@ this.Group = Group;
             sb.Append("class VoicemailCopyRecord {\n");
             
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Group: ").Append(Group).Append("\n");
-            
             sb.Append("  Date: ").Append(Date).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

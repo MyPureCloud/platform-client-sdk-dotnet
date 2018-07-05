@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StationSettings" /> class.
         /// </summary>
-        
-        
         /// <param name="FreeSeatingConfiguration">Configuration options for free-seating.</param>
-        
-        
         public StationSettings(FreeSeatingConfiguration FreeSeatingConfiguration = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.FreeSeatingConfiguration = FreeSeatingConfiguration;
-            
-            
-            
+            this.FreeSeatingConfiguration = FreeSeatingConfiguration;
             
         }
         
@@ -73,7 +56,6 @@ this.FreeSeatingConfiguration = FreeSeatingConfiguration;
             sb.Append("class StationSettings {\n");
             
             sb.Append("  FreeSeatingConfiguration: ").Append(FreeSeatingConfiguration).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

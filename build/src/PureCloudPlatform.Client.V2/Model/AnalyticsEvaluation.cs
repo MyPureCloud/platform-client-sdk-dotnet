@@ -74,180 +74,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsEvaluation" /> class.
         /// </summary>
-        
-        
         /// <param name="EvaluationId">Unique identifier for the evaluation.</param>
-        
-        
-        
         /// <param name="EvaluatorId">A unique identifier of the PureCloud user who evaluated the interaction.</param>
-        
-        
-        
         /// <param name="UserId">Unique identifier for the user being evaluated.</param>
-        
-        
-        
         /// <param name="EventTime">Specifies when an evaluation occurred.</param>
-        
-        
-        
         /// <param name="QueueId">Unique identifier for the queue the conversation was on.</param>
-        
-        
-        
         /// <param name="FormId">Unique identifier for the form used to evaluate the conversation/agent.</param>
-        
-        
-        
         /// <param name="ContextId">A unique identifier for an evaluation form, regardless of version.</param>
-        
-        
-        
         /// <param name="FormName">Name of the evaluation form.</param>
-        
-        
-        
         /// <param name="GetoTotalScore">The total evaluation for interactions.</param>
-        
-        
-        
         /// <param name="GetoTotalCriticalScore">The score for critical evaluation questions.</param>
-        
-        
         public AnalyticsEvaluation(string EvaluationId = null, string EvaluatorId = null, string UserId = null, string EventTime = null, string QueueId = null, string FormId = null, string ContextId = null, string FormName = null, long? GetoTotalScore = null, long? GetoTotalCriticalScore = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.EvaluationId = EvaluationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EvaluatorId = EvaluatorId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EventTime = EventTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueId = QueueId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FormId = FormId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContextId = ContextId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FormName = FormName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.GetoTotalScore = GetoTotalScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.GetoTotalCriticalScore = GetoTotalCriticalScore;
-            
-            
-            
+            this.EvaluationId = EvaluationId;
+            this.EvaluatorId = EvaluatorId;
+            this.UserId = UserId;
+            this.EventTime = EventTime;
+            this.QueueId = QueueId;
+            this.FormId = FormId;
+            this.ContextId = ContextId;
+            this.FormName = FormName;
+            this.GetoTotalScore = GetoTotalScore;
+            this.GetoTotalCriticalScore = GetoTotalCriticalScore;
             
         }
         
@@ -352,25 +200,15 @@ this.GetoTotalCriticalScore = GetoTotalCriticalScore;
             sb.Append("class AnalyticsEvaluation {\n");
             
             sb.Append("  EvaluationId: ").Append(EvaluationId).Append("\n");
-            
             sb.Append("  EvaluatorId: ").Append(EvaluatorId).Append("\n");
-            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
-            
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
-            
             sb.Append("  FormId: ").Append(FormId).Append("\n");
-            
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
-            
             sb.Append("  FormName: ").Append(FormName).Append("\n");
-            
             sb.Append("  GetoTotalScore: ").Append(GetoTotalScore).Append("\n");
-            
             sb.Append("  GetoTotalCriticalScore: ").Append(GetoTotalCriticalScore).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -35,32 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Certificate" /> class.
         /// </summary>
-        
-        
         /// <param name="_Certificate">The certificate to parse. (required).</param>
-        
-        
         public Certificate(string _Certificate = null)
         {
-            
-            
-            
-            // to ensure "_Certificate" is required (not null)
-            if (_Certificate == null)
-            {
-                throw new InvalidDataException("_Certificate is a required property for Certificate and cannot be null");
-            }
-            else
-            {
-                this._Certificate = _Certificate;
-            }
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -84,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class Certificate {\n");
             
             sb.Append("  _Certificate: ").Append(_Certificate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

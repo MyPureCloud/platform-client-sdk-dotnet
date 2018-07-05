@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetricsCalls" /> class.
         /// </summary>
-        
-        
         /// <param name="InboundCallCount">InboundCallCount.</param>
-        
-        
-        
         /// <param name="OutboundCallCount">OutboundCallCount.</param>
-        
-        
         public TrunkMetricsCalls(int? InboundCallCount = null, int? OutboundCallCount = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.InboundCallCount = InboundCallCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OutboundCallCount = OutboundCallCount;
-            
-            
-            
+            this.InboundCallCount = InboundCallCount;
+            this.OutboundCallCount = OutboundCallCount;
             
         }
         
@@ -102,9 +70,7 @@ this.OutboundCallCount = OutboundCallCount;
             sb.Append("class TrunkMetricsCalls {\n");
             
             sb.Append("  InboundCallCount: ").Append(InboundCallCount).Append("\n");
-            
             sb.Append("  OutboundCallCount: ").Append(OutboundCallCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

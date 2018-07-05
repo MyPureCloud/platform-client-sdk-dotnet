@@ -45,66 +45,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseSubstitution" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Response substitution identifier. (required).</param>
-        
-        
-        
         /// <param name="Description">Response substitution description..</param>
-        
-        
-        
         /// <param name="DefaultValue">Response substitution default value..</param>
-        
-        
         public ResponseSubstitution(string Id = null, string Description = null, string DefaultValue = null)
         {
-            
-            
-            
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for ResponseSubstitution and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DefaultValue = DefaultValue;
-            
-            
-            
+            this.Description = Description;
+            this.DefaultValue = DefaultValue;
             
         }
         
@@ -146,11 +93,8 @@ this.DefaultValue = DefaultValue;
             sb.Append("class ResponseSubstitution {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  DefaultValue: ").Append(DefaultValue).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

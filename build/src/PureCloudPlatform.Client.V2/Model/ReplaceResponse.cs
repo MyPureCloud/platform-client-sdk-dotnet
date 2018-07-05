@@ -87,112 +87,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ChangeNumber">ChangeNumber.</param>
-        
-        
-        
         /// <param name="UploadStatus">UploadStatus.</param>
-        
-        
-        
         /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
-        
-        
-        
         /// <param name="UploadMethod">UploadMethod.</param>
-        
-        
         public ReplaceResponse(string Id = null, string Name = null, int? ChangeNumber = null, UriReference UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ChangeNumber = ChangeNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadStatus = UploadStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadDestinationUri = UploadDestinationUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadMethod = UploadMethod;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.ChangeNumber = ChangeNumber;
+            this.UploadStatus = UploadStatus;
+            this.UploadDestinationUri = UploadDestinationUri;
+            this.UploadMethod = UploadMethod;
             
         }
         
@@ -249,17 +157,11 @@ this.UploadMethod = UploadMethod;
             sb.Append("class ReplaceResponse {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ChangeNumber: ").Append(ChangeNumber).Append("\n");
-            
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
-            
             sb.Append("  UploadDestinationUri: ").Append(UploadDestinationUri).Append("\n");
-            
             sb.Append("  UploadMethod: ").Append(UploadMethod).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

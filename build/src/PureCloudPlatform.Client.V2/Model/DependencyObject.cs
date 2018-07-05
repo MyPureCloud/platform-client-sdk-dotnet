@@ -293,158 +293,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DependencyObject" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Version">Version.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="Deleted">Deleted.</param>
-        
-        
-        
         /// <param name="Updated">Updated.</param>
-        
-        
-        
         /// <param name="StateUnknown">StateUnknown.</param>
-        
-        
-        
         /// <param name="ConsumedResources">ConsumedResources.</param>
-        
-        
-        
         /// <param name="ConsumingResources">ConsumingResources.</param>
-        
-        
-        
-        
         public DependencyObject(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null, bool? Updated = null, bool? StateUnknown = null, List<Dependency> ConsumedResources = null, List<Dependency> ConsumingResources = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Deleted = Deleted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Updated = Updated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StateUnknown = StateUnknown;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConsumedResources = ConsumedResources;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConsumingResources = ConsumingResources;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Version = Version;
+            this.Type = Type;
+            this.Deleted = Deleted;
+            this.Updated = Updated;
+            this.StateUnknown = StateUnknown;
+            this.ConsumedResources = ConsumedResources;
+            this.ConsumingResources = ConsumingResources;
             
         }
         
@@ -535,25 +401,15 @@ this.ConsumingResources = ConsumingResources;
             sb.Append("class DependencyObject {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
-            
             sb.Append("  Updated: ").Append(Updated).Append("\n");
-            
             sb.Append("  StateUnknown: ").Append(StateUnknown).Append("\n");
-            
             sb.Append("  ConsumedResources: ").Append(ConsumedResources).Append("\n");
-            
             sb.Append("  ConsumingResources: ").Append(ConsumingResources).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -327,8 +327,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ServerDate>(localVarStatusCode,
                 localVarHeaders,
-                (ServerDate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerDate)));
-            
+                (ServerDate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerDate)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -416,8 +417,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ServerDate>(localVarStatusCode,
                 localVarHeaders,
-                (ServerDate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerDate)));
-            
+                (ServerDate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerDate)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -511,8 +513,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<TimeZoneEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (TimeZoneEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeZoneEntityListing)));
-            
+                (TimeZoneEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeZoneEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -606,8 +609,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<TimeZoneEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (TimeZoneEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeZoneEntityListing)));
-            
+                (TimeZoneEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeZoneEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -705,8 +709,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ParsedCertificate>(localVarStatusCode,
                 localVarHeaders,
-                (ParsedCertificate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParsedCertificate)));
-            
+                (ParsedCertificate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParsedCertificate)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -805,8 +810,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ParsedCertificate>(localVarStatusCode,
                 localVarHeaders,
-                (ParsedCertificate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParsedCertificate)));
-            
+                (ParsedCertificate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParsedCertificate)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

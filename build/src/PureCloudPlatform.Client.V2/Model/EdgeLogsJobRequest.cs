@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogsJobRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="Path">A relative directory to the root Edge log folder to query from..</param>
-        
-        
-        
         /// <param name="Query">The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe &#39;|&#39; as a delimiter..</param>
-        
-        
-        
         /// <param name="Recurse">Boolean whether or not to recurse into directories..</param>
-        
-        
         public EdgeLogsJobRequest(string Path = null, string Query = null, bool? Recurse = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Path = Path;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Query = Query;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Recurse = Recurse;
-            
-            
-            
+            this.Path = Path;
+            this.Query = Query;
+            this.Recurse = Recurse;
             
         }
         
@@ -135,11 +88,8 @@ this.Recurse = Recurse;
             sb.Append("class EdgeLogsJobRequest {\n");
             
             sb.Append("  Path: ").Append(Path).Append("\n");
-            
             sb.Append("  Query: ").Append(Query).Append("\n");
-            
             sb.Append("  Recurse: ").Append(Recurse).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VideoConversationNotificationWrapup" /> class.
         /// </summary>
-        
-        
         /// <param name="Code">Code.</param>
-        
-        
-        
         /// <param name="Notes">Notes.</param>
-        
-        
-        
         /// <param name="Tags">Tags.</param>
-        
-        
-        
         /// <param name="DurationSeconds">DurationSeconds.</param>
-        
-        
-        
         /// <param name="EndTime">EndTime.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public VideoConversationNotificationWrapup(string Code = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Code = Code;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Notes = Notes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Tags = Tags;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationSeconds = DurationSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndTime = EndTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Code = Code;
+            this.Notes = Notes;
+            this.Tags = Tags;
+            this.DurationSeconds = DurationSeconds;
+            this.EndTime = EndTime;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -222,17 +130,11 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class VideoConversationNotificationWrapup {\n");
             
             sb.Append("  Code: ").Append(Code).Append("\n");
-            
             sb.Append("  Notes: ").Append(Notes).Append("\n");
-            
             sb.Append("  Tags: ").Append(Tags).Append("\n");
-            
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
-            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

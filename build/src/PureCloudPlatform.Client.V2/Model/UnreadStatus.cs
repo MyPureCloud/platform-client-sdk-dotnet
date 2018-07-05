@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UnreadStatus" /> class.
         /// </summary>
-        
-        
         /// <param name="Unread">Sets if the alert is read or unread..</param>
-        
-        
         public UnreadStatus(bool? Unread = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Unread = Unread;
-            
-            
-            
+            this.Unread = Unread;
             
         }
         
@@ -73,7 +56,6 @@ this.Unread = Unread;
             sb.Append("class UnreadStatus {\n");
             
             sb.Append("  Unread: ").Append(Unread).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

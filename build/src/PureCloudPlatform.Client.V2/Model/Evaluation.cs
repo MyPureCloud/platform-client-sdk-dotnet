@@ -192,328 +192,44 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Evaluation" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Conversation">Conversation.</param>
-        
-        
-        
         /// <param name="EvaluationForm">Evaluation form used for evaluation..</param>
-        
-        
-        
         /// <param name="Evaluator">Evaluator.</param>
-        
-        
-        
         /// <param name="Agent">Agent.</param>
-        
-        
-        
         /// <param name="Calibration">Calibration.</param>
-        
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="Answers">Answers.</param>
-        
-        
-        
         /// <param name="AgentHasRead">AgentHasRead.</param>
-        
-        
-        
         /// <param name="ReleaseDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="AssignedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ChangedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Queue">Queue.</param>
-        
-        
-        
         /// <param name="NeverRelease">Signifies if the evaluation is never to be released. This cannot be set true if release date is also set..</param>
-        
-        
-        
         /// <param name="ResourceId">Only used for email evaluations. Will be null for all other evaluations..</param>
-        
-        
-        
         /// <param name="ResourceType">The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources..</param>
-        
-        
-        
         /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation.</param>
-        
-        
-        
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
-        
-        
-        
-        
         public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Conversation = Conversation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EvaluationForm = EvaluationForm;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Evaluator = Evaluator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Agent = Agent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Calibration = Calibration;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Answers = Answers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AgentHasRead = AgentHasRead;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReleaseDate = ReleaseDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AssignedDate = AssignedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ChangedDate = ChangedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Queue = Queue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NeverRelease = NeverRelease;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ResourceId = ResourceId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ResourceType = ResourceType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Redacted = Redacted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IsScoringIndex = IsScoringIndex;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Conversation = Conversation;
+            this.EvaluationForm = EvaluationForm;
+            this.Evaluator = Evaluator;
+            this.Agent = Agent;
+            this.Calibration = Calibration;
+            this.Status = Status;
+            this.Answers = Answers;
+            this.AgentHasRead = AgentHasRead;
+            this.ReleaseDate = ReleaseDate;
+            this.AssignedDate = AssignedDate;
+            this.ChangedDate = ChangedDate;
+            this.Queue = Queue;
+            this.NeverRelease = NeverRelease;
+            this.ResourceId = ResourceId;
+            this.ResourceType = ResourceType;
+            this.Redacted = Redacted;
+            this.IsScoringIndex = IsScoringIndex;
             
         }
         
@@ -685,45 +401,25 @@ this.IsScoringIndex = IsScoringIndex;
             sb.Append("class Evaluation {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
-            
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
-            
             sb.Append("  Evaluator: ").Append(Evaluator).Append("\n");
-            
             sb.Append("  Agent: ").Append(Agent).Append("\n");
-            
             sb.Append("  Calibration: ").Append(Calibration).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  Answers: ").Append(Answers).Append("\n");
-            
             sb.Append("  AgentHasRead: ").Append(AgentHasRead).Append("\n");
-            
             sb.Append("  ReleaseDate: ").Append(ReleaseDate).Append("\n");
-            
             sb.Append("  AssignedDate: ").Append(AssignedDate).Append("\n");
-            
             sb.Append("  ChangedDate: ").Append(ChangedDate).Append("\n");
-            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
-            
             sb.Append("  NeverRelease: ").Append(NeverRelease).Append("\n");
-            
             sb.Append("  ResourceId: ").Append(ResourceId).Append("\n");
-            
             sb.Append("  ResourceType: ").Append(ResourceType).Append("\n");
-            
             sb.Append("  Redacted: ").Append(Redacted).Append("\n");
-            
             sb.Append("  IsScoringIndex: ").Append(IsScoringIndex).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

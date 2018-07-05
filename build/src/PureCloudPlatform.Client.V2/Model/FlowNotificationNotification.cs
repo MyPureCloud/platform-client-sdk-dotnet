@@ -64,146 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowNotificationNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="Deleted">Deleted.</param>
-        
-        
-        
         /// <param name="CheckedInVersion">CheckedInVersion.</param>
-        
-        
-        
         /// <param name="SavedVersion">SavedVersion.</param>
-        
-        
-        
         /// <param name="PublishedVersion">PublishedVersion.</param>
-        
-        
-        
         /// <param name="CurrentOperation">CurrentOperation.</param>
-        
-        
         public FlowNotificationNotification(string Id = null, string Name = null, string Description = null, bool? Deleted = null, DocumentDataV2NotificationWorkspace CheckedInVersion = null, FlowNotificationNotificationFlowVersion SavedVersion = null, FlowNotificationNotificationFlowVersion PublishedVersion = null, PromptNotificationNotificationCurrentOperation CurrentOperation = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Deleted = Deleted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CheckedInVersion = CheckedInVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SavedVersion = SavedVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PublishedVersion = PublishedVersion;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CurrentOperation = CurrentOperation;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.Description = Description;
+            this.Deleted = Deleted;
+            this.CheckedInVersion = CheckedInVersion;
+            this.SavedVersion = SavedVersion;
+            this.PublishedVersion = PublishedVersion;
+            this.CurrentOperation = CurrentOperation;
             
         }
         
@@ -282,21 +160,13 @@ this.CurrentOperation = CurrentOperation;
             sb.Append("class FlowNotificationNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
-            
             sb.Append("  CheckedInVersion: ").Append(CheckedInVersion).Append("\n");
-            
             sb.Append("  SavedVersion: ").Append(SavedVersion).Append("\n");
-            
             sb.Append("  PublishedVersion: ").Append(PublishedVersion).Append("\n");
-            
             sb.Append("  CurrentOperation: ").Append(CurrentOperation).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

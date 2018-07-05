@@ -59,129 +59,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleActivity" /> class.
         /// </summary>
-        
-        
         /// <param name="ActivityCodeId">The id for the activity code.  Look up a map of activity codes with the activities route.</param>
-        
-        
-        
         /// <param name="StartDate">Start time in UTC for this activity, in ISO-8601 format.</param>
-        
-        
-        
         /// <param name="LengthInMinutes">Length in minutes for this activity.</param>
-        
-        
-        
         /// <param name="Description">Description for this activity.</param>
-        
-        
-        
         /// <param name="CountsAsPaidTime">Whether this activity is paid.</param>
-        
-        
-        
         /// <param name="IsDstFallback">Whether this activity spans a DST fallback.</param>
-        
-        
-        
         /// <param name="TimeOffRequestId">Time off request id of this activity.</param>
-        
-        
         public UserScheduleActivity(string ActivityCodeId = null, DateTime? StartDate = null, int? LengthInMinutes = null, string Description = null, bool? CountsAsPaidTime = null, bool? IsDstFallback = null, string TimeOffRequestId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActivityCodeId = ActivityCodeId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartDate = StartDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LengthInMinutes = LengthInMinutes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CountsAsPaidTime = CountsAsPaidTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IsDstFallback = IsDstFallback;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeOffRequestId = TimeOffRequestId;
-            
-            
-            
+            this.ActivityCodeId = ActivityCodeId;
+            this.StartDate = StartDate;
+            this.LengthInMinutes = LengthInMinutes;
+            this.Description = Description;
+            this.CountsAsPaidTime = CountsAsPaidTime;
+            this.IsDstFallback = IsDstFallback;
+            this.TimeOffRequestId = TimeOffRequestId;
             
         }
         
@@ -259,19 +152,12 @@ this.TimeOffRequestId = TimeOffRequestId;
             sb.Append("class UserScheduleActivity {\n");
             
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
-            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  CountsAsPaidTime: ").Append(CountsAsPaidTime).Append("\n");
-            
             sb.Append("  IsDstFallback: ").Append(IsDstFallback).Append("\n");
-            
             sb.Append("  TimeOffRequestId: ").Append(TimeOffRequestId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

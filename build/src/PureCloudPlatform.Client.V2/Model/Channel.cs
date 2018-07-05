@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Channel" /> class.
         /// </summary>
-        
-        
         /// <param name="ConnectUri">ConnectUri.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Expires">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
         public Channel(string ConnectUri = null, string Id = null, DateTime? Expires = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectUri = ConnectUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Expires = Expires;
-            
-            
-            
+            this.ConnectUri = ConnectUri;
+            this.Id = Id;
+            this.Expires = Expires;
             
         }
         
@@ -133,11 +86,8 @@ this.Expires = Expires;
             sb.Append("class Channel {\n");
             
             sb.Append("  ConnectUri: ").Append(ConnectUri).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Expires: ").Append(Expires).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

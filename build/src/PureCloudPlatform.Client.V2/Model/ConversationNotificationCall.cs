@@ -415,401 +415,54 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationCall" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="State">State.</param>
-        
-        
-        
         /// <param name="Recording">Recording.</param>
-        
-        
-        
         /// <param name="RecordingState">RecordingState.</param>
-        
-        
-        
         /// <param name="Muted">Muted.</param>
-        
-        
-        
         /// <param name="Confined">Confined.</param>
-        
-        
-        
         /// <param name="Held">Held.</param>
-        
-        
-        
         /// <param name="ErrorInfo">ErrorInfo.</param>
-        
-        
-        
         /// <param name="DisconnectType">DisconnectType.</param>
-        
-        
-        
         /// <param name="StartHoldTime">StartHoldTime.</param>
-        
-        
-        
         /// <param name="Direction">Direction.</param>
-        
-        
-        
         /// <param name="DocumentId">DocumentId.</param>
-        
-        
-        
         /// <param name="Self">Self.</param>
-        
-        
-        
         /// <param name="Other">Other.</param>
-        
-        
-        
         /// <param name="Provider">Provider.</param>
-        
-        
-        
         /// <param name="ScriptId">ScriptId.</param>
-        
-        
-        
         /// <param name="PeerId">PeerId.</param>
-        
-        
-        
         /// <param name="ConnectedTime">ConnectedTime.</param>
-        
-        
-        
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
-        
-        
-        
         /// <param name="DisconnectReasons">DisconnectReasons.</param>
-        
-        
-        
         /// <param name="FaxStatus">FaxStatus.</param>
-        
-        
-        
         /// <param name="UuiData">UuiData.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ConversationNotificationCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationNotificationErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationNotificationSelf Self = null, ConversationNotificationAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationNotificationDisconnectReasons> DisconnectReasons = null, ConversationNotificationFaxStatus FaxStatus = null, string UuiData = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Recording = Recording;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingState = RecordingState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Muted = Muted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Confined = Confined;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Held = Held;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorInfo = ErrorInfo;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartHoldTime = StartHoldTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DocumentId = DocumentId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Self = Self;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Other = Other;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScriptId = ScriptId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerId = PeerId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectedTime = DisconnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectReasons = DisconnectReasons;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FaxStatus = FaxStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UuiData = UuiData;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Id = Id;
+            this.State = State;
+            this.Recording = Recording;
+            this.RecordingState = RecordingState;
+            this.Muted = Muted;
+            this.Confined = Confined;
+            this.Held = Held;
+            this.ErrorInfo = ErrorInfo;
+            this.DisconnectType = DisconnectType;
+            this.StartHoldTime = StartHoldTime;
+            this.Direction = Direction;
+            this.DocumentId = DocumentId;
+            this.Self = Self;
+            this.Other = Other;
+            this.Provider = Provider;
+            this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
+            this.DisconnectReasons = DisconnectReasons;
+            this.FaxStatus = FaxStatus;
+            this.UuiData = UuiData;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -984,51 +637,28 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ConversationNotificationCall {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Recording: ").Append(Recording).Append("\n");
-            
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
-            
             sb.Append("  Muted: ").Append(Muted).Append("\n");
-            
             sb.Append("  Confined: ").Append(Confined).Append("\n");
-            
             sb.Append("  Held: ").Append(Held).Append("\n");
-            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
-            
             sb.Append("  Self: ").Append(Self).Append("\n");
-            
             sb.Append("  Other: ").Append(Other).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
-            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
-            
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
-            
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

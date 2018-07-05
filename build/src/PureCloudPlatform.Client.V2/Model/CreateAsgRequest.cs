@@ -115,185 +115,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAsgRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="AsgOwnerEmail">Email address of the individual starting the ASG (required).</param>
-        
-        
-        
         /// <param name="EdgeGroupId">Edge group that the user wants the asg edges to be assigned to..</param>
-        
-        
-        
         /// <param name="ExternalTrunkBaseId">Trunk base that the user wants the asg edges to be assigned to.</param>
-        
-        
-        
         /// <param name="AsgLogicalIAMInstanceProfile">Overrides the default logical IAM Instance Profile.</param>
-        
-        
-        
         /// <param name="AsgAmi">Overrides the default EDGE AMI used with the ASG.</param>
-        
-        
-        
         /// <param name="AsgType">Overrides the type of ASG being created.  By default we always create a &#39;standard&#39; asg..</param>
-        
-        
-        
         /// <param name="AsgInstanceCount">Overrides the default number of Edge instances to start in the ASG.</param>
-        
-        
-        
         /// <param name="AsgNetworkSpace">Overrides the network space the ASG will start in.  The default will always be mediaservices.</param>
-        
-        
-        
         /// <param name="AsgChaosExempt">Optional parameter that exempts this ASG from chaos monkey killing one of its instances..</param>
-        
-        
-        
         /// <param name="AsgRecoveryShutdownMinutes">Number of minutes a recovery ASG will stay active before it is torn down.</param>
-        
-        
         public CreateAsgRequest(string AsgOwnerEmail = null, string EdgeGroupId = null, string ExternalTrunkBaseId = null, string AsgLogicalIAMInstanceProfile = null, bool? AsgAmi = null, AsgTypeEnum? AsgType = null, int? AsgInstanceCount = null, string AsgNetworkSpace = null, bool? AsgChaosExempt = null, int? AsgRecoveryShutdownMinutes = null)
         {
-            
-            
-            
-            // to ensure "AsgOwnerEmail" is required (not null)
-            if (AsgOwnerEmail == null)
-            {
-                throw new InvalidDataException("AsgOwnerEmail is a required property for CreateAsgRequest and cannot be null");
-            }
-            else
-            {
-                this.AsgOwnerEmail = AsgOwnerEmail;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgeGroupId = EdgeGroupId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalTrunkBaseId = ExternalTrunkBaseId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AsgLogicalIAMInstanceProfile = AsgLogicalIAMInstanceProfile;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AsgAmi = AsgAmi;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AsgType = AsgType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AsgInstanceCount = AsgInstanceCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AsgNetworkSpace = AsgNetworkSpace;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AsgChaosExempt = AsgChaosExempt;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AsgRecoveryShutdownMinutes = AsgRecoveryShutdownMinutes;
-            
-            
-            
+            this.EdgeGroupId = EdgeGroupId;
+            this.ExternalTrunkBaseId = ExternalTrunkBaseId;
+            this.AsgLogicalIAMInstanceProfile = AsgLogicalIAMInstanceProfile;
+            this.AsgAmi = AsgAmi;
+            this.AsgType = AsgType;
+            this.AsgInstanceCount = AsgInstanceCount;
+            this.AsgNetworkSpace = AsgNetworkSpace;
+            this.AsgChaosExempt = AsgChaosExempt;
+            this.AsgRecoveryShutdownMinutes = AsgRecoveryShutdownMinutes;
             
         }
         
@@ -391,25 +233,15 @@ this.AsgRecoveryShutdownMinutes = AsgRecoveryShutdownMinutes;
             sb.Append("class CreateAsgRequest {\n");
             
             sb.Append("  AsgOwnerEmail: ").Append(AsgOwnerEmail).Append("\n");
-            
             sb.Append("  EdgeGroupId: ").Append(EdgeGroupId).Append("\n");
-            
             sb.Append("  ExternalTrunkBaseId: ").Append(ExternalTrunkBaseId).Append("\n");
-            
             sb.Append("  AsgLogicalIAMInstanceProfile: ").Append(AsgLogicalIAMInstanceProfile).Append("\n");
-            
             sb.Append("  AsgAmi: ").Append(AsgAmi).Append("\n");
-            
             sb.Append("  AsgType: ").Append(AsgType).Append("\n");
-            
             sb.Append("  AsgInstanceCount: ").Append(AsgInstanceCount).Append("\n");
-            
             sb.Append("  AsgNetworkSpace: ").Append(AsgNetworkSpace).Append("\n");
-            
             sb.Append("  AsgChaosExempt: ").Append(AsgChaosExempt).Append("\n");
-            
             sb.Append("  AsgRecoveryShutdownMinutes: ").Append(AsgRecoveryShutdownMinutes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

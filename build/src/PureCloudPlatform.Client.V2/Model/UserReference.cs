@@ -34,33 +34,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserReference" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The globally unique identifier for the object..</param>
-        
-        
-        
-        
         public UserReference(string Id = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
+            this.Id = Id;
             
         }
         
@@ -93,9 +70,7 @@ this.Id = Id;
             sb.Append("class UserReference {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -60,84 +60,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Trustor" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Enabled">If disabled no trustee user will have access, even if they were previously added. (required).</param>
-        
-        
-        
-        
-        
         /// <param name="CreatedBy">User that created trust..</param>
-        
-        
-        
         /// <param name="Organization">Organization associated with this trust..</param>
-        
-        
-        
-        
         public Trustor(bool? Enabled = null, OrgUser CreatedBy = null, Organization Organization = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Enabled" is required (not null)
-            if (Enabled == null)
-            {
-                throw new InvalidDataException("Enabled is a required property for Trustor and cannot be null");
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Organization = Organization;
-            
-            
-            
-            
-            
+            this.CreatedBy = CreatedBy;
+            this.Organization = Organization;
             
         }
         
@@ -206,17 +135,11 @@ this.Organization = Organization;
             sb.Append("class Trustor {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  Organization: ").Append(Organization).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

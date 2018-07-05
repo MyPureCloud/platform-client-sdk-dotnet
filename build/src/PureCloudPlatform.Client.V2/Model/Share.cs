@@ -145,175 +145,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Share" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="SharedEntityType">SharedEntityType.</param>
-        
-        
-        
         /// <param name="SharedEntity">SharedEntity.</param>
-        
-        
-        
         /// <param name="MemberType">MemberType.</param>
-        
-        
-        
         /// <param name="Member">Member.</param>
-        
-        
-        
         /// <param name="SharedBy">SharedBy.</param>
-        
-        
-        
         /// <param name="Workspace">Workspace.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="Group">Group.</param>
-        
-        
-        
-        
         public Share(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, UriReference SharedEntity = null, MemberTypeEnum? MemberType = null, UriReference Member = null, UriReference SharedBy = null, UriReference Workspace = null, User User = null, Group Group = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SharedEntityType = SharedEntityType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SharedEntity = SharedEntity;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MemberType = MemberType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Member = Member;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SharedBy = SharedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Workspace = Workspace;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Group = Group;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.SharedEntityType = SharedEntityType;
+            this.SharedEntity = SharedEntity;
+            this.MemberType = MemberType;
+            this.Member = Member;
+            this.SharedBy = SharedBy;
+            this.Workspace = Workspace;
+            this.User = User;
+            this.Group = Group;
             
         }
         
@@ -406,27 +257,16 @@ this.Group = Group;
             sb.Append("class Share {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  SharedEntityType: ").Append(SharedEntityType).Append("\n");
-            
             sb.Append("  SharedEntity: ").Append(SharedEntity).Append("\n");
-            
             sb.Append("  MemberType: ").Append(MemberType).Append("\n");
-            
             sb.Append("  Member: ").Append(Member).Append("\n");
-            
             sb.Append("  SharedBy: ").Append(SharedBy).Append("\n");
-            
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Group: ").Append(Group).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -294,282 +294,40 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SocialExpression" /> class.
         /// </summary>
-        
-        
         /// <param name="State">The connection state of this communication..</param>
-        
-        
-        
         /// <param name="Id">A globally unique identifier for this communication..</param>
-        
-        
-        
         /// <param name="SocialMediaId">A globally unique identifier for the social media..</param>
-        
-        
-        
         /// <param name="SocialMediaHub">The social network of the communication.</param>
-        
-        
-        
         /// <param name="SocialUserName">The user name for the communication..</param>
-        
-        
-        
         /// <param name="PreviewText">The text preview of the communication contents.</param>
-        
-        
-        
         /// <param name="RecordingId">A globally unique identifier for the recording associated with this chat..</param>
-        
-        
-        
         /// <param name="Segments">The time line of the participant&#39;s chat, divided into activity segments..</param>
-        
-        
-        
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
-        
-        
-        
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
-        
-        
-        
         /// <param name="StartHoldTime">The timestamp the chat was placed on hold in the cloud clock if the chat is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Provider">The source provider for the social expression..</param>
-        
-        
-        
         /// <param name="ScriptId">The UUID of the script to use..</param>
-        
-        
-        
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
-        
-        
         public SocialExpression(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SocialMediaId = SocialMediaId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SocialMediaHub = SocialMediaHub;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SocialUserName = SocialUserName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PreviewText = PreviewText;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingId = RecordingId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Segments = Segments;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Held = Held;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartHoldTime = StartHoldTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectedTime = DisconnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScriptId = ScriptId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerId = PeerId;
-            
-            
-            
+            this.State = State;
+            this.Id = Id;
+            this.SocialMediaId = SocialMediaId;
+            this.SocialMediaHub = SocialMediaHub;
+            this.SocialUserName = SocialUserName;
+            this.PreviewText = PreviewText;
+            this.RecordingId = RecordingId;
+            this.Segments = Segments;
+            this.Held = Held;
+            this.DisconnectType = DisconnectType;
+            this.StartHoldTime = StartHoldTime;
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
+            this.Provider = Provider;
+            this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
             
         }
         
@@ -714,37 +472,21 @@ this.PeerId = PeerId;
             sb.Append("class SocialExpression {\n");
             
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  SocialMediaId: ").Append(SocialMediaId).Append("\n");
-            
             sb.Append("  SocialMediaHub: ").Append(SocialMediaHub).Append("\n");
-            
             sb.Append("  SocialUserName: ").Append(SocialUserName).Append("\n");
-            
             sb.Append("  PreviewText: ").Append(PreviewText).Append("\n");
-            
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
-            
             sb.Append("  Segments: ").Append(Segments).Append("\n");
-            
             sb.Append("  Held: ").Append(Held).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
-            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

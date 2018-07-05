@@ -82,95 +82,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregationResult" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="Dimension">For termFrequency aggregations.</param>
-        
-        
-        
         /// <param name="Metric">For numericRange aggregations.</param>
-        
-        
-        
         /// <param name="Count">Count.</param>
-        
-        
-        
         /// <param name="Results">Results.</param>
-        
-        
         public AggregationResult(TypeEnum? Type = null, string Dimension = null, string Metric = null, long? Count = null, List<AggregationResultEntry> Results = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Dimension = Dimension;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metric = Metric;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Count = Count;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Results = Results;
-            
-            
-            
+            this.Type = Type;
+            this.Dimension = Dimension;
+            this.Metric = Metric;
+            this.Count = Count;
+            this.Results = Results;
             
         }
         
@@ -221,15 +144,10 @@ this.Results = Results;
             sb.Append("class AggregationResult {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
-            
             sb.Append("  Metric: ").Append(Metric).Append("\n");
-            
             sb.Append("  Count: ").Append(Count).Append("\n");
-            
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

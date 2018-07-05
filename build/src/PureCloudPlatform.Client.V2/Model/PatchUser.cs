@@ -44,56 +44,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchUser" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="AcdAutoAnswer">The value that denotes if acdAutoAnswer is set on the user.</param>
-        
-        
-        
-        
         public PatchUser(string Name = null, bool? AcdAutoAnswer = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AcdAutoAnswer = AcdAutoAnswer;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.AcdAutoAnswer = AcdAutoAnswer;
             
         }
         
@@ -143,13 +99,9 @@ this.AcdAutoAnswer = AcdAutoAnswer;
             sb.Append("class PatchUser {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

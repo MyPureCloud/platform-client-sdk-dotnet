@@ -284,192 +284,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrphanRecording" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="CreatedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="RecoveredTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ProviderType">ProviderType.</param>
-        
-        
-        
         /// <param name="MediaSizeBytes">MediaSizeBytes.</param>
-        
-        
-        
         /// <param name="MediaType">MediaType.</param>
-        
-        
-        
         /// <param name="FileState">FileState.</param>
-        
-        
-        
         /// <param name="ProviderEndpoint">ProviderEndpoint.</param>
-        
-        
-        
         /// <param name="Recording">Recording.</param>
-        
-        
-        
         /// <param name="OrphanStatus">The status of the orphaned recording&#39;s conversation..</param>
-        
-        
-        
-        
         public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null, OrphanStatusEnum? OrphanStatus = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedTime = CreatedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecoveredTime = RecoveredTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ProviderType = ProviderType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaSizeBytes = MediaSizeBytes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaType = MediaType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FileState = FileState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ProviderEndpoint = ProviderEndpoint;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Recording = Recording;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OrphanStatus = OrphanStatus;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.CreatedTime = CreatedTime;
+            this.RecoveredTime = RecoveredTime;
+            this.ProviderType = ProviderType;
+            this.MediaSizeBytes = MediaSizeBytes;
+            this.MediaType = MediaType;
+            this.FileState = FileState;
+            this.ProviderEndpoint = ProviderEndpoint;
+            this.Recording = Recording;
+            this.OrphanStatus = OrphanStatus;
             
         }
         
@@ -560,29 +396,17 @@ this.OrphanStatus = OrphanStatus;
             sb.Append("class OrphanRecording {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  CreatedTime: ").Append(CreatedTime).Append("\n");
-            
             sb.Append("  RecoveredTime: ").Append(RecoveredTime).Append("\n");
-            
             sb.Append("  ProviderType: ").Append(ProviderType).Append("\n");
-            
             sb.Append("  MediaSizeBytes: ").Append(MediaSizeBytes).Append("\n");
-            
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("  FileState: ").Append(FileState).Append("\n");
-            
             sb.Append("  ProviderEndpoint: ").Append(ProviderEndpoint).Append("\n");
-            
             sb.Append("  Recording: ").Append(Recording).Append("\n");
-            
             sb.Append("  OrphanStatus: ").Append(OrphanStatus).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

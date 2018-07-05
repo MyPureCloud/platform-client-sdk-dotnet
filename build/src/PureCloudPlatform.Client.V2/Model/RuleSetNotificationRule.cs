@@ -92,129 +92,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleSetNotificationRule" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Order">Order.</param>
-        
-        
-        
         /// <param name="Category">Category.</param>
-        
-        
-        
         /// <param name="Conditions">Conditions.</param>
-        
-        
-        
         /// <param name="Actions">Actions.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public RuleSetNotificationRule(string Id = null, string Name = null, int? Order = null, CategoryEnum? Category = null, List<RuleSetNotificationConditions> Conditions = null, List<RuleSetNotificationActions> Actions = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Order = Order;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Category = Category;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Conditions = Conditions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Actions = Actions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.Order = Order;
+            this.Category = Category;
+            this.Conditions = Conditions;
+            this.Actions = Actions;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -279,19 +172,12 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class RuleSetNotificationRule {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Order: ").Append(Order).Append("\n");
-            
             sb.Append("  Category: ").Append(Category).Append("\n");
-            
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
-            
             sb.Append("  Actions: ").Append(Actions).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

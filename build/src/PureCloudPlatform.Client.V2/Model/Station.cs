@@ -122,187 +122,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Station" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="UserId">The Id of the user currently logged in and associated with the station..</param>
-        
-        
-        
         /// <param name="WebRtcUserId">The Id of the user configured for the station if it is of type inin_webrtc_softphone. Empty if station type is not inin_webrtc_softphone..</param>
-        
-        
-        
         /// <param name="PrimaryEdge">PrimaryEdge.</param>
-        
-        
-        
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="LineAppearanceId">LineAppearanceId.</param>
-        
-        
-        
-        
-        
-        
-        
-        
         public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, string WebRtcUserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, string Type = null, string LineAppearanceId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WebRtcUserId = WebRtcUserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PrimaryEdge = PrimaryEdge;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SecondaryEdge = SecondaryEdge;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LineAppearanceId = LineAppearanceId;
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Description = Description;
+            this.Status = Status;
+            this.UserId = UserId;
+            this.WebRtcUserId = WebRtcUserId;
+            this.PrimaryEdge = PrimaryEdge;
+            this.SecondaryEdge = SecondaryEdge;
+            this.Type = Type;
+            this.LineAppearanceId = LineAppearanceId;
             
         }
         
@@ -421,31 +260,18 @@ this.LineAppearanceId = LineAppearanceId;
             sb.Append("class Station {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  WebRtcUserId: ").Append(WebRtcUserId).Append("\n");
-            
             sb.Append("  PrimaryEdge: ").Append(PrimaryEdge).Append("\n");
-            
             sb.Append("  SecondaryEdge: ").Append(SecondaryEdge).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  LineAppearanceId: ").Append(LineAppearanceId).Append("\n");
-            
             sb.Append("  WebRtcMediaDscp: ").Append(WebRtcMediaDscp).Append("\n");
-            
             sb.Append("  WebRtcPersistentEnabled: ").Append(WebRtcPersistentEnabled).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

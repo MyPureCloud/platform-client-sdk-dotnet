@@ -704,260 +704,36 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentAudit" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="Workspace">Workspace.</param>
-        
-        
-        
         /// <param name="TransactionId">TransactionId.</param>
-        
-        
-        
         /// <param name="TransactionInitiator">TransactionInitiator.</param>
-        
-        
-        
         /// <param name="Application">Application.</param>
-        
-        
-        
         /// <param name="ServiceName">ServiceName.</param>
-        
-        
-        
         /// <param name="Level">Level.</param>
-        
-        
-        
         /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="ActionContext">ActionContext.</param>
-        
-        
-        
         /// <param name="Action">Action.</param>
-        
-        
-        
         /// <param name="Entity">Entity.</param>
-        
-        
-        
         /// <param name="Changes">Changes.</param>
-        
-        
-        
-        
         public DocumentAudit(string Name = null, UriReference User = null, UriReference Workspace = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, LevelEnum? Level = null, DateTime? Timestamp = null, StatusEnum? Status = null, ActionContextEnum? ActionContext = null, ActionEnum? Action = null, AuditEntityReference Entity = null, List<AuditChange> Changes = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Workspace = Workspace;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TransactionId = TransactionId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TransactionInitiator = TransactionInitiator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Application = Application;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ServiceName = ServiceName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Level = Level;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Timestamp = Timestamp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActionContext = ActionContext;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Action = Action;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Entity = Entity;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Changes = Changes;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.User = User;
+            this.Workspace = Workspace;
+            this.TransactionId = TransactionId;
+            this.TransactionInitiator = TransactionInitiator;
+            this.Application = Application;
+            this.ServiceName = ServiceName;
+            this.Level = Level;
+            this.Timestamp = Timestamp;
+            this.Status = Status;
+            this.ActionContext = ActionContext;
+            this.Action = Action;
+            this.Entity = Entity;
+            this.Changes = Changes;
             
         }
         
@@ -1079,37 +855,21 @@ this.Changes = Changes;
             sb.Append("class DocumentAudit {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
-            
             sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
-            
             sb.Append("  TransactionInitiator: ").Append(TransactionInitiator).Append("\n");
-            
             sb.Append("  Application: ").Append(Application).Append("\n");
-            
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
-            
             sb.Append("  Level: ").Append(Level).Append("\n");
-            
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  ActionContext: ").Append(ActionContext).Append("\n");
-            
             sb.Append("  Action: ").Append(Action).Append("\n");
-            
             sb.Append("  Entity: ").Append(Entity).Append("\n");
-            
             sb.Append("  Changes: ").Append(Changes).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

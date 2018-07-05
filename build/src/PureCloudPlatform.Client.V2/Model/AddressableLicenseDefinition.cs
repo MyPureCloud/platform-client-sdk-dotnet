@@ -34,22 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressableLicenseDefinition" /> class.
         /// </summary>
-        
-        
-        
-        
-        
         public AddressableLicenseDefinition()
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -82,9 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AddressableLicenseDefinition {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

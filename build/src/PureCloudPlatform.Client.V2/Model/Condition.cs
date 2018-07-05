@@ -311,163 +311,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Condition" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">The type of the condition..</param>
-        
-        
-        
         /// <param name="Inverted">If true, inverts the result of evaluating this Condition. Default is false..</param>
-        
-        
-        
         /// <param name="AttributeName">An attribute name associated with this Condition. Required for a contactAttributeCondition..</param>
-        
-        
-        
         /// <param name="Value">A value associated with this Condition. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes)..</param>
-        
-        
-        
         /// <param name="ValueType">The type of the value associated with this Condition..</param>
-        
-        
-        
         /// <param name="_Operator">An operation with which to evaluate the Condition..</param>
-        
-        
-        
         /// <param name="Codes">List of wrap-up code identifiers. Required for a wrapupCondition..</param>
-        
-        
-        
         /// <param name="Property">A value associated with the property type of this Condition. Required for a contactPropertyCondition..</param>
-        
-        
-        
         /// <param name="PropertyType">The type of the property associated with this Condition..</param>
-        
-        
         public Condition(TypeEnum? Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null, string Property = null, PropertyTypeEnum? PropertyType = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Inverted = Inverted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AttributeName = AttributeName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ValueType = ValueType;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Operator = _Operator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Codes = Codes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Property = Property;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PropertyType = PropertyType;
-            
-            
-            
+            this.Type = Type;
+            this.Inverted = Inverted;
+            this.AttributeName = AttributeName;
+            this.Value = Value;
+            this.ValueType = ValueType;
+            this._Operator = _Operator;
+            this.Codes = Codes;
+            this.Property = Property;
+            this.PropertyType = PropertyType;
             
         }
         
@@ -535,23 +398,14 @@ this.PropertyType = PropertyType;
             sb.Append("class Condition {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
-            
             sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  ValueType: ").Append(ValueType).Append("\n");
-            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-            
             sb.Append("  Codes: ").Append(Codes).Append("\n");
-            
             sb.Append("  Property: ").Append(Property).Append("\n");
-            
             sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

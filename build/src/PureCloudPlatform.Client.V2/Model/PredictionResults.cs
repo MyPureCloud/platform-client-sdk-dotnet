@@ -163,71 +163,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PredictionResults" /> class.
         /// </summary>
-        
-        
         /// <param name="Intent">Indicates the media type scope of this estimated wait time.</param>
-        
-        
-        
         /// <param name="Formula">Indicates the estimated wait time Formula (required).</param>
-        
-        
-        
         /// <param name="EstimatedWaitTimeSeconds">Estimated wait time in seconds (required).</param>
-        
-        
         public PredictionResults(IntentEnum? Intent = null, FormulaEnum? Formula = null, int? EstimatedWaitTimeSeconds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Formula" is required (not null)
-            if (Formula == null)
-            {
-                throw new InvalidDataException("Formula is a required property for PredictionResults and cannot be null");
-            }
-            else
-            {
-                this.Formula = Formula;
-            }
-            
-            
-            
-            
-            
-            // to ensure "EstimatedWaitTimeSeconds" is required (not null)
-            if (EstimatedWaitTimeSeconds == null)
-            {
-                throw new InvalidDataException("EstimatedWaitTimeSeconds is a required property for PredictionResults and cannot be null");
-            }
-            else
-            {
-                this.EstimatedWaitTimeSeconds = EstimatedWaitTimeSeconds;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-this.Intent = Intent;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Intent = Intent;
             
         }
         
@@ -255,11 +196,8 @@ this.Intent = Intent;
             sb.Append("class PredictionResults {\n");
             
             sb.Append("  Intent: ").Append(Intent).Append("\n");
-            
             sb.Append("  Formula: ").Append(Formula).Append("\n");
-            
             sb.Append("  EstimatedWaitTimeSeconds: ").Append(EstimatedWaitTimeSeconds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

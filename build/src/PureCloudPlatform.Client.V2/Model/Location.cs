@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Location" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="FloorplanId">FloorplanId.</param>
-        
-        
-        
         /// <param name="Coordinates">Coordinates.</param>
-        
-        
-        
         /// <param name="Notes">Notes.</param>
-        
-        
-        
         /// <param name="LocationDefinition">LocationDefinition.</param>
-        
-        
         public Location(string Id = null, string FloorplanId = null, Dictionary<string, double?> Coordinates = null, string Notes = null, LocationDefinition LocationDefinition = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FloorplanId = FloorplanId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Coordinates = Coordinates;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Notes = Notes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LocationDefinition = LocationDefinition;
-            
-            
-            
+            this.Id = Id;
+            this.FloorplanId = FloorplanId;
+            this.Coordinates = Coordinates;
+            this.Notes = Notes;
+            this.LocationDefinition = LocationDefinition;
             
         }
         
@@ -192,15 +115,10 @@ this.LocationDefinition = LocationDefinition;
             sb.Append("class Location {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  FloorplanId: ").Append(FloorplanId).Append("\n");
-            
             sb.Append("  Coordinates: ").Append(Coordinates).Append("\n");
-            
             sb.Append("  Notes: ").Append(Notes).Append("\n");
-            
             sb.Append("  LocationDefinition: ").Append(LocationDefinition).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

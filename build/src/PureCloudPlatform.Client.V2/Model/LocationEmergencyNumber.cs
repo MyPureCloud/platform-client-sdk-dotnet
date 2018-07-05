@@ -74,61 +74,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationEmergencyNumber" /> class.
         /// </summary>
-        
-        
         /// <param name="E164">E164.</param>
-        
-        
-        
         /// <param name="Number">Number.</param>
-        
-        
-        
         /// <param name="Type">The type of emergency number..</param>
-        
-        
         public LocationEmergencyNumber(string E164 = null, string Number = null, TypeEnum? Type = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.E164 = E164;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Number = Number;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
+            this.E164 = E164;
+            this.Number = Number;
+            this.Type = Type;
             
         }
         
@@ -161,11 +114,8 @@ this.Type = Type;
             sb.Append("class LocationEmergencyNumber {\n");
             
             sb.Append("  E164: ").Append(E164).Append("\n");
-            
             sb.Append("  Number: ").Append(Number).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -193,197 +193,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleAdherenceUpdateNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="ManagementUnitId">ManagementUnitId.</param>
-        
-        
-        
         /// <param name="ScheduledActivityCategory">ScheduledActivityCategory.</param>
-        
-        
-        
         /// <param name="SystemPresence">SystemPresence.</param>
-        
-        
-        
         /// <param name="RoutingStatus">RoutingStatus.</param>
-        
-        
-        
         /// <param name="ActualActivityCategory">ActualActivityCategory.</param>
-        
-        
-        
         /// <param name="IsOutOfOffice">IsOutOfOffice.</param>
-        
-        
-        
         /// <param name="AdherenceState">AdherenceState.</param>
-        
-        
-        
         /// <param name="Impact">Impact.</param>
-        
-        
-        
         /// <param name="AdherenceChangeTime">AdherenceChangeTime.</param>
-        
-        
-        
         /// <param name="PresenceUpdateTime">PresenceUpdateTime.</param>
-        
-        
         public UserScheduleAdherenceUpdateNotification(DocumentDataV2NotificationWorkspace User = null, string ManagementUnitId = null, string ScheduledActivityCategory = null, string SystemPresence = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, IntradayDataUpdateNotificationStartDate AdherenceChangeTime = null, UserScheduleAdherenceUpdateNotificationDateTime PresenceUpdateTime = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ManagementUnitId = ManagementUnitId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScheduledActivityCategory = ScheduledActivityCategory;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SystemPresence = SystemPresence;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoutingStatus = RoutingStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActualActivityCategory = ActualActivityCategory;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IsOutOfOffice = IsOutOfOffice;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdherenceState = AdherenceState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Impact = Impact;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdherenceChangeTime = AdherenceChangeTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PresenceUpdateTime = PresenceUpdateTime;
-            
-            
-            
+            this.User = User;
+            this.ManagementUnitId = ManagementUnitId;
+            this.ScheduledActivityCategory = ScheduledActivityCategory;
+            this.SystemPresence = SystemPresence;
+            this.RoutingStatus = RoutingStatus;
+            this.ActualActivityCategory = ActualActivityCategory;
+            this.IsOutOfOffice = IsOutOfOffice;
+            this.AdherenceState = AdherenceState;
+            this.Impact = Impact;
+            this.AdherenceChangeTime = AdherenceChangeTime;
+            this.PresenceUpdateTime = PresenceUpdateTime;
             
         }
         
@@ -474,27 +307,16 @@ this.PresenceUpdateTime = PresenceUpdateTime;
             sb.Append("class UserScheduleAdherenceUpdateNotification {\n");
             
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  ManagementUnitId: ").Append(ManagementUnitId).Append("\n");
-            
             sb.Append("  ScheduledActivityCategory: ").Append(ScheduledActivityCategory).Append("\n");
-            
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
-            
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
-            
             sb.Append("  ActualActivityCategory: ").Append(ActualActivityCategory).Append("\n");
-            
             sb.Append("  IsOutOfOffice: ").Append(IsOutOfOffice).Append("\n");
-            
             sb.Append("  AdherenceState: ").Append(AdherenceState).Append("\n");
-            
             sb.Append("  Impact: ").Append(Impact).Append("\n");
-            
             sb.Append("  AdherenceChangeTime: ").Append(AdherenceChangeTime).Append("\n");
-            
             sb.Append("  PresenceUpdateTime: ").Append(PresenceUpdateTime).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -59,107 +59,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentEvaluatorActivity" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Agent">Agent.</param>
-        
-        
-        
         /// <param name="Evaluator">Evaluator.</param>
-        
-        
-        
         /// <param name="NumEvaluations">NumEvaluations.</param>
-        
-        
-        
         /// <param name="AverageEvaluationScore">AverageEvaluationScore.</param>
-        
-        
-        
-        
         public AgentEvaluatorActivity(string Name = null, User Agent = null, User Evaluator = null, int? NumEvaluations = null, int? AverageEvaluationScore = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Agent = Agent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Evaluator = Evaluator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumEvaluations = NumEvaluations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageEvaluationScore = AverageEvaluationScore;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Agent = Agent;
+            this.Evaluator = Evaluator;
+            this.NumEvaluations = NumEvaluations;
+            this.AverageEvaluationScore = AverageEvaluationScore;
             
         }
         
@@ -232,19 +143,12 @@ this.AverageEvaluationScore = AverageEvaluationScore;
             sb.Append("class AgentEvaluatorActivity {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Agent: ").Append(Agent).Append("\n");
-            
             sb.Append("  Evaluator: ").Append(Evaluator).Append("\n");
-            
             sb.Append("  NumEvaluations: ").Append(NumEvaluations).Append("\n");
-            
             sb.Append("  AverageEvaluationScore: ").Append(AverageEvaluationScore).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -146,78 +146,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Parameter" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ParameterType">ParameterType.</param>
-        
-        
-        
         /// <param name="Domain">Domain.</param>
-        
-        
-        
         /// <param name="Required">Required.</param>
-        
-        
         public Parameter(string Name = null, ParameterTypeEnum? ParameterType = null, DomainEnum? Domain = null, bool? Required = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ParameterType = ParameterType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Domain = Domain;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Required = Required;
-            
-            
-            
+            this.Name = Name;
+            this.ParameterType = ParameterType;
+            this.Domain = Domain;
+            this.Required = Required;
             
         }
         
@@ -252,13 +190,9 @@ this.Required = Required;
             sb.Append("class Parameter {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ParameterType: ").Append(ParameterType).Append("\n");
-            
             sb.Append("  Domain: ").Append(Domain).Append("\n");
-            
             sb.Append("  Required: ").Append(Required).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

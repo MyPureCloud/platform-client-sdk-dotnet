@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayPerformancePredictionAgentData" /> class.
         /// </summary>
-        
-        
         /// <param name="InteractingTimeSeconds">The total time spent interacting in seconds for all agents in this group.</param>
-        
-        
         public IntradayPerformancePredictionAgentData(double? InteractingTimeSeconds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.InteractingTimeSeconds = InteractingTimeSeconds;
-            
-            
-            
+            this.InteractingTimeSeconds = InteractingTimeSeconds;
             
         }
         
@@ -73,7 +56,6 @@ this.InteractingTimeSeconds = InteractingTimeSeconds;
             sb.Append("class IntradayPerformancePredictionAgentData {\n");
             
             sb.Append("  InteractingTimeSeconds: ").Append(InteractingTimeSeconds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

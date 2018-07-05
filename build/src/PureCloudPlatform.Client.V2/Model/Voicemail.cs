@@ -81,44 +81,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Voicemail" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The voicemail id.</param>
-        
-        
-        
         /// <param name="UploadStatus">current state of the voicemail upload.</param>
-        
-        
         public Voicemail(string Id = null, UploadStatusEnum? UploadStatus = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadStatus = UploadStatus;
-            
-            
-            
+            this.Id = Id;
+            this.UploadStatus = UploadStatus;
             
         }
         
@@ -144,9 +112,7 @@ this.UploadStatus = UploadStatus;
             sb.Append("class Voicemail {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -126,185 +126,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Response" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Version">Version number required for updates..</param>
-        
-        
-        
         /// <param name="Libraries">One or more libraries response is associated with. (required).</param>
-        
-        
-        
         /// <param name="Texts">One or more texts associated with the response. (required).</param>
-        
-        
-        
         /// <param name="CreatedBy">User that created the response.</param>
-        
-        
-        
         /// <param name="DateCreated">The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="InteractionType">The interaction type for this response..</param>
-        
-        
-        
         /// <param name="Substitutions">Details about any text substitutions used in the texts for this response..</param>
-        
-        
-        
         /// <param name="SubstitutionsSchema">Metadata about the text substitutions in json schema format..</param>
-        
-        
-        
-        
         public Response(string Name = null, int? Version = null, List<UriReference> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, DateTime? DateCreated = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Libraries" is required (not null)
-            if (Libraries == null)
-            {
-                throw new InvalidDataException("Libraries is a required property for Response and cannot be null");
-            }
-            else
-            {
-                this.Libraries = Libraries;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Texts" is required (not null)
-            if (Texts == null)
-            {
-                throw new InvalidDataException("Texts is a required property for Response and cannot be null");
-            }
-            else
-            {
-                this.Texts = Texts;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InteractionType = InteractionType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Substitutions = Substitutions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SubstitutionsSchema = SubstitutionsSchema;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Version = Version;
+            this.CreatedBy = CreatedBy;
+            this.DateCreated = DateCreated;
+            this.InteractionType = InteractionType;
+            this.Substitutions = Substitutions;
+            this.SubstitutionsSchema = SubstitutionsSchema;
             
         }
         
@@ -410,27 +249,16 @@ this.SubstitutionsSchema = SubstitutionsSchema;
             sb.Append("class Response {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  Libraries: ").Append(Libraries).Append("\n");
-            
             sb.Append("  Texts: ").Append(Texts).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  InteractionType: ").Append(InteractionType).Append("\n");
-            
             sb.Append("  Substitutions: ").Append(Substitutions).Append("\n");
-            
             sb.Append("  SubstitutionsSchema: ").Append(SubstitutionsSchema).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

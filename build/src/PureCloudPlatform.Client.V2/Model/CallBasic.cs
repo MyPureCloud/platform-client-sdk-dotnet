@@ -428,418 +428,56 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallBasic" /> class.
         /// </summary>
-        
-        
         /// <param name="State">The connection state of this communication..</param>
-        
-        
-        
         /// <param name="Id">A globally unique identifier for this communication..</param>
-        
-        
-        
         /// <param name="Direction">The direction of the call.</param>
-        
-        
-        
         /// <param name="Recording">True if this call is being recorded..</param>
-        
-        
-        
         /// <param name="RecordingState">State of recording on this call..</param>
-        
-        
-        
         /// <param name="Muted">True if this call is muted so that remote participants can&#39;t hear any audio from this end..</param>
-        
-        
-        
         /// <param name="Confined">True if this call is held and the person on this side hears hold music..</param>
-        
-        
-        
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
-        
-        
-        
         /// <param name="RecordingId">A globally unique identifier for the recording associated with this call..</param>
-        
-        
-        
         /// <param name="Segments">The time line of the participant&#39;s call, divided into activity segments..</param>
-        
-        
-        
         /// <param name="ErrorInfo">ErrorInfo.</param>
-        
-        
-        
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
-        
-        
-        
         /// <param name="StartHoldTime">The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DocumentId">If call is an outbound fax of a document from content management, then this is the id in content management..</param>
-        
-        
-        
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DisconnectReasons">List of reasons that this call was disconnected. This will be set once the call disconnects..</param>
-        
-        
-        
         /// <param name="FaxStatus">Extra information on fax transmission..</param>
-        
-        
-        
         /// <param name="Provider">The source provider for the call..</param>
-        
-        
-        
         /// <param name="ScriptId">The UUID of the script to use..</param>
-        
-        
-        
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
-        
-        
-        
         /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
-        
-        
-        
         /// <param name="Self">Address and name data for a call endpoint..</param>
-        
-        
-        
         /// <param name="Other">Address and name data for a call endpoint..</param>
-        
-        
         public CallBasic(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Recording = Recording;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingState = RecordingState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Muted = Muted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Confined = Confined;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Held = Held;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingId = RecordingId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Segments = Segments;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorInfo = ErrorInfo;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartHoldTime = StartHoldTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DocumentId = DocumentId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectedTime = DisconnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectReasons = DisconnectReasons;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FaxStatus = FaxStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScriptId = ScriptId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerId = PeerId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UuiData = UuiData;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Self = Self;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Other = Other;
-            
-            
-            
+            this.State = State;
+            this.Id = Id;
+            this.Direction = Direction;
+            this.Recording = Recording;
+            this.RecordingState = RecordingState;
+            this.Muted = Muted;
+            this.Confined = Confined;
+            this.Held = Held;
+            this.RecordingId = RecordingId;
+            this.Segments = Segments;
+            this.ErrorInfo = ErrorInfo;
+            this.DisconnectType = DisconnectType;
+            this.StartHoldTime = StartHoldTime;
+            this.DocumentId = DocumentId;
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
+            this.DisconnectReasons = DisconnectReasons;
+            this.FaxStatus = FaxStatus;
+            this.Provider = Provider;
+            this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
+            this.UuiData = UuiData;
+            this.Self = Self;
+            this.Other = Other;
             
         }
         
@@ -1041,53 +679,29 @@ this.Other = Other;
             sb.Append("class CallBasic {\n");
             
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  Recording: ").Append(Recording).Append("\n");
-            
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
-            
             sb.Append("  Muted: ").Append(Muted).Append("\n");
-            
             sb.Append("  Confined: ").Append(Confined).Append("\n");
-            
             sb.Append("  Held: ").Append(Held).Append("\n");
-            
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
-            
             sb.Append("  Segments: ").Append(Segments).Append("\n");
-            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
-            
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
-            
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
-            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
-            
             sb.Append("  Self: ").Append(Self).Append("\n");
-            
             sb.Append("  Other: ").Append(Other).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

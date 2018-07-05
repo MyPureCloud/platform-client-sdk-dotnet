@@ -74,158 +74,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluatorActivity" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Evaluator">Evaluator.</param>
-        
-        
-        
         /// <param name="NumEvaluationsAssigned">NumEvaluationsAssigned.</param>
-        
-        
-        
         /// <param name="NumEvaluationsStarted">NumEvaluationsStarted.</param>
-        
-        
-        
         /// <param name="NumEvaluationsCompleted">NumEvaluationsCompleted.</param>
-        
-        
-        
         /// <param name="NumCalibrationsAssigned">NumCalibrationsAssigned.</param>
-        
-        
-        
         /// <param name="NumCalibrationsStarted">NumCalibrationsStarted.</param>
-        
-        
-        
         /// <param name="NumCalibrationsCompleted">NumCalibrationsCompleted.</param>
-        
-        
-        
-        
         public EvaluatorActivity(string Name = null, User Evaluator = null, int? NumEvaluationsAssigned = null, int? NumEvaluationsStarted = null, int? NumEvaluationsCompleted = null, int? NumCalibrationsAssigned = null, int? NumCalibrationsStarted = null, int? NumCalibrationsCompleted = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Evaluator = Evaluator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumEvaluationsAssigned = NumEvaluationsAssigned;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumEvaluationsStarted = NumEvaluationsStarted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumEvaluationsCompleted = NumEvaluationsCompleted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumCalibrationsAssigned = NumCalibrationsAssigned;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumCalibrationsStarted = NumCalibrationsStarted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumCalibrationsCompleted = NumCalibrationsCompleted;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Evaluator = Evaluator;
+            this.NumEvaluationsAssigned = NumEvaluationsAssigned;
+            this.NumEvaluationsStarted = NumEvaluationsStarted;
+            this.NumEvaluationsCompleted = NumEvaluationsCompleted;
+            this.NumCalibrationsAssigned = NumCalibrationsAssigned;
+            this.NumCalibrationsStarted = NumCalibrationsStarted;
+            this.NumCalibrationsCompleted = NumCalibrationsCompleted;
             
         }
         
@@ -322,25 +188,15 @@ this.NumCalibrationsCompleted = NumCalibrationsCompleted;
             sb.Append("class EvaluatorActivity {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Evaluator: ").Append(Evaluator).Append("\n");
-            
             sb.Append("  NumEvaluationsAssigned: ").Append(NumEvaluationsAssigned).Append("\n");
-            
             sb.Append("  NumEvaluationsStarted: ").Append(NumEvaluationsStarted).Append("\n");
-            
             sb.Append("  NumEvaluationsCompleted: ").Append(NumEvaluationsCompleted).Append("\n");
-            
             sb.Append("  NumCalibrationsAssigned: ").Append(NumCalibrationsAssigned).Append("\n");
-            
             sb.Append("  NumCalibrationsStarted: ").Append(NumCalibrationsStarted).Append("\n");
-            
             sb.Append("  NumCalibrationsCompleted: ").Append(NumCalibrationsCompleted).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

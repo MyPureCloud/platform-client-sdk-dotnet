@@ -69,75 +69,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueUtilizationDiagnostic" /> class.
         /// </summary>
-        
-        
         /// <param name="Queue">Identifier of the queue.</param>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         public QueueUtilizationDiagnostic(UriReference Queue = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Queue = Queue;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Queue = Queue;
             
         }
         
@@ -233,23 +168,14 @@ this.Queue = Queue;
             sb.Append("class QueueUtilizationDiagnostic {\n");
             
             sb.Append("  Queue: ").Append(Queue).Append("\n");
-            
             sb.Append("  UsersInQueue: ").Append(UsersInQueue).Append("\n");
-            
             sb.Append("  ActiveUsersInQueue: ").Append(ActiveUsersInQueue).Append("\n");
-            
             sb.Append("  UsersOnQueue: ").Append(UsersOnQueue).Append("\n");
-            
             sb.Append("  UsersNotUtilized: ").Append(UsersNotUtilized).Append("\n");
-            
             sb.Append("  UsersOnQueueWithStation: ").Append(UsersOnQueueWithStation).Append("\n");
-            
             sb.Append("  UsersOnACampaignCall: ").Append(UsersOnACampaignCall).Append("\n");
-            
             sb.Append("  UsersOnDifferentEdgeGroup: ").Append(UsersOnDifferentEdgeGroup).Append("\n");
-            
             sb.Append("  UsersOnANonCampaignCall: ").Append(UsersOnANonCampaignCall).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

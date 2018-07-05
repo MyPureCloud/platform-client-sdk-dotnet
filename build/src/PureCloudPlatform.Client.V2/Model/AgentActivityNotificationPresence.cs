@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentActivityNotificationPresence" /> class.
         /// </summary>
-        
-        
         /// <param name="PresenceDefinition">PresenceDefinition.</param>
-        
-        
-        
         /// <param name="PresenceMessage">PresenceMessage.</param>
-        
-        
-        
         /// <param name="ModifiedDate">ModifiedDate.</param>
-        
-        
         public AgentActivityNotificationPresence(AgentActivityNotificationPresencePresenceDefinition PresenceDefinition = null, string PresenceMessage = null, DateTime? ModifiedDate = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.PresenceDefinition = PresenceDefinition;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PresenceMessage = PresenceMessage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
+            this.PresenceDefinition = PresenceDefinition;
+            this.PresenceMessage = PresenceMessage;
+            this.ModifiedDate = ModifiedDate;
             
         }
         
@@ -132,11 +85,8 @@ this.ModifiedDate = ModifiedDate;
             sb.Append("class AgentActivityNotificationPresence {\n");
             
             sb.Append("  PresenceDefinition: ").Append(PresenceDefinition).Append("\n");
-            
             sb.Append("  PresenceMessage: ").Append(PresenceMessage).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

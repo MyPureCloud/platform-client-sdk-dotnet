@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeAllowed" /> class.
         /// </summary>
-        
-        
         /// <param name="TimeSlots">TimeSlots.</param>
-        
-        
-        
         /// <param name="TimeZoneId">TimeZoneId.</param>
-        
-        
-        
         /// <param name="Empty">Empty.</param>
-        
-        
         public TimeAllowed(List<TimeSlot> TimeSlots = null, string TimeZoneId = null, bool? Empty = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeSlots = TimeSlots;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeZoneId = TimeZoneId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Empty = Empty;
-            
-            
-            
+            this.TimeSlots = TimeSlots;
+            this.TimeZoneId = TimeZoneId;
+            this.Empty = Empty;
             
         }
         
@@ -132,11 +85,8 @@ this.Empty = Empty;
             sb.Append("class TimeAllowed {\n");
             
             sb.Append("  TimeSlots: ").Append(TimeSlots).Append("\n");
-            
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
-            
             sb.Append("  Empty: ").Append(Empty).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatConfig" /> class.
         /// </summary>
-        
-        
         /// <param name="WebChatSkin">css class to be applied to the web chat widget..</param>
-        
-        
         public WebChatConfig(string WebChatSkin = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.WebChatSkin = WebChatSkin;
-            
-            
-            
+            this.WebChatSkin = WebChatSkin;
             
         }
         
@@ -73,7 +56,6 @@ this.WebChatSkin = WebChatSkin;
             sb.Append("class WebChatConfig {\n");
             
             sb.Append("  WebChatSkin: ").Append(WebChatSkin).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

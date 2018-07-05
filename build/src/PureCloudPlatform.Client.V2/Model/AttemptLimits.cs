@@ -114,153 +114,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AttemptLimits" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        
-        
-        
         /// <param name="MaxAttemptsPerContact">The maximum number of times a contact can be called within the resetPeriod. Required if maxAttemptsPerNumber is not defined..</param>
-        
-        
-        
         /// <param name="MaxAttemptsPerNumber">The maximum number of times a phone number can be called within the resetPeriod. Required if maxAttemptsPerContact is not defined..</param>
-        
-        
-        
         /// <param name="TimeZoneId">If the resetPeriod is TODAY, this specifies the timezone in which TODAY occurs. Required if the resetPeriod is TODAY..</param>
-        
-        
-        
         /// <param name="ResetPeriod">After how long the number of attempts will be set back to 0. Defaults to NEVER..</param>
-        
-        
-        
         /// <param name="RecallEntries">Configuration for recall attempts..</param>
-        
-        
-        
-        
         public AttemptLimits(string Name = null, int? Version = null, int? MaxAttemptsPerContact = null, int? MaxAttemptsPerNumber = null, string TimeZoneId = null, ResetPeriodEnum? ResetPeriod = null, Dictionary<string, RecallEntry> RecallEntries = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxAttemptsPerContact = MaxAttemptsPerContact;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxAttemptsPerNumber = MaxAttemptsPerNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeZoneId = TimeZoneId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ResetPeriod = ResetPeriod;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecallEntries = RecallEntries;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Version = Version;
+            this.MaxAttemptsPerContact = MaxAttemptsPerContact;
+            this.MaxAttemptsPerNumber = MaxAttemptsPerNumber;
+            this.TimeZoneId = TimeZoneId;
+            this.ResetPeriod = ResetPeriod;
+            this.RecallEntries = RecallEntries;
             
         }
         
@@ -366,27 +235,16 @@ this.RecallEntries = RecallEntries;
             sb.Append("class AttemptLimits {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  MaxAttemptsPerContact: ").Append(MaxAttemptsPerContact).Append("\n");
-            
             sb.Append("  MaxAttemptsPerNumber: ").Append(MaxAttemptsPerNumber).Append("\n");
-            
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
-            
             sb.Append("  ResetPeriod: ").Append(ResetPeriod).Append("\n");
-            
             sb.Append("  RecallEntries: ").Append(RecallEntries).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -64,146 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPermissionPolicy" /> class.
         /// </summary>
-        
-        
         /// <param name="Domain">Domain.</param>
-        
-        
-        
         /// <param name="EntityName">EntityName.</param>
-        
-        
-        
         /// <param name="PolicyName">PolicyName.</param>
-        
-        
-        
         /// <param name="PolicyDescription">PolicyDescription.</param>
-        
-        
-        
         /// <param name="ActionSet">ActionSet.</param>
-        
-        
-        
         /// <param name="NamedResources">NamedResources.</param>
-        
-        
-        
         /// <param name="AllowConditions">AllowConditions.</param>
-        
-        
-        
         /// <param name="ResourceConditionNode">ResourceConditionNode.</param>
-        
-        
         public DomainPermissionPolicy(string Domain = null, string EntityName = null, string PolicyName = null, string PolicyDescription = null, List<string> ActionSet = null, List<string> NamedResources = null, bool? AllowConditions = null, DomainResourceConditionNode ResourceConditionNode = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Domain = Domain;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EntityName = EntityName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PolicyName = PolicyName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PolicyDescription = PolicyDescription;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActionSet = ActionSet;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NamedResources = NamedResources;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AllowConditions = AllowConditions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ResourceConditionNode = ResourceConditionNode;
-            
-            
-            
+            this.Domain = Domain;
+            this.EntityName = EntityName;
+            this.PolicyName = PolicyName;
+            this.PolicyDescription = PolicyDescription;
+            this.ActionSet = ActionSet;
+            this.NamedResources = NamedResources;
+            this.AllowConditions = AllowConditions;
+            this.ResourceConditionNode = ResourceConditionNode;
             
         }
         
@@ -282,21 +160,13 @@ this.ResourceConditionNode = ResourceConditionNode;
             sb.Append("class DomainPermissionPolicy {\n");
             
             sb.Append("  Domain: ").Append(Domain).Append("\n");
-            
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
-            
             sb.Append("  PolicyName: ").Append(PolicyName).Append("\n");
-            
             sb.Append("  PolicyDescription: ").Append(PolicyDescription).Append("\n");
-            
             sb.Append("  ActionSet: ").Append(ActionSet).Append("\n");
-            
             sb.Append("  NamedResources: ").Append(NamedResources).Append("\n");
-            
             sb.Append("  AllowConditions: ").Append(AllowConditions).Append("\n");
-            
             sb.Append("  ResourceConditionNode: ").Append(ResourceConditionNode).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

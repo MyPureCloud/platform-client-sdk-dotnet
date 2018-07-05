@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentActivityNotificationOutOfOffice" /> class.
         /// </summary>
-        
-        
         /// <param name="Active">Active.</param>
-        
-        
-        
         /// <param name="ModifiedDate">ModifiedDate.</param>
-        
-        
         public AgentActivityNotificationOutOfOffice(bool? Active = null, DateTime? ModifiedDate = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Active = Active;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
+            this.Active = Active;
+            this.ModifiedDate = ModifiedDate;
             
         }
         
@@ -102,9 +70,7 @@ this.ModifiedDate = ModifiedDate;
             sb.Append("class AgentActivityNotificationOutOfOffice {\n");
             
             sb.Append("  Active: ").Append(Active).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

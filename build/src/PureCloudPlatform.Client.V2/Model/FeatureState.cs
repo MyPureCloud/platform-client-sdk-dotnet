@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FeatureState" /> class.
         /// </summary>
-        
-        
         /// <param name="Enabled">Enabled.</param>
-        
-        
         public FeatureState(bool? Enabled = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Enabled = Enabled;
-            
-            
-            
+            this.Enabled = Enabled;
             
         }
         
@@ -72,7 +55,6 @@ this.Enabled = Enabled;
             sb.Append("class FeatureState {\n");
             
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserPresenceNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Source">Source.</param>
-        
-        
-        
         /// <param name="PresenceDefinition">PresenceDefinition.</param>
-        
-        
-        
         /// <param name="Primary">Primary.</param>
-        
-        
-        
         /// <param name="Message">Message.</param>
-        
-        
-        
         /// <param name="ModifiedDate">ModifiedDate.</param>
-        
-        
         public UserPresenceNotification(string Source = null, AgentActivityNotificationPresencePresenceDefinition PresenceDefinition = null, bool? Primary = null, string Message = null, DateTime? ModifiedDate = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Source = Source;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PresenceDefinition = PresenceDefinition;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Primary = Primary;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Message = Message;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
+            this.Source = Source;
+            this.PresenceDefinition = PresenceDefinition;
+            this.Primary = Primary;
+            this.Message = Message;
+            this.ModifiedDate = ModifiedDate;
             
         }
         
@@ -192,15 +115,10 @@ this.ModifiedDate = ModifiedDate;
             sb.Append("class UserPresenceNotification {\n");
             
             sb.Append("  Source: ").Append(Source).Append("\n");
-            
             sb.Append("  PresenceDefinition: ").Append(PresenceDefinition).Append("\n");
-            
             sb.Append("  Primary: ").Append(Primary).Append("\n");
-            
             sb.Append("  Message: ").Append(Message).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

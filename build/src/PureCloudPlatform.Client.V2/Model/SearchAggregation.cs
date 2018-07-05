@@ -160,112 +160,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchAggregation" /> class.
         /// </summary>
-        
-        
         /// <param name="Field">The field used for aggregation.</param>
-        
-        
-        
         /// <param name="Name">The name of the aggregation. The response aggregation uses this name..</param>
-        
-        
-        
         /// <param name="Type">The type of aggregation to perform.</param>
-        
-        
-        
         /// <param name="Value">A value to use for aggregation.</param>
-        
-        
-        
         /// <param name="Size">The number aggregations results to return out of the entire result set.</param>
-        
-        
-        
         /// <param name="Order">The order in which aggregation results are sorted.</param>
-        
-        
         public SearchAggregation(string Field = null, string Name = null, TypeEnum? Type = null, string Value = null, int? Size = null, List<OrderEnum> Order = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Field = Field;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Size = Size;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Order = Order;
-            
-            
-            
+            this.Field = Field;
+            this.Name = Name;
+            this.Type = Type;
+            this.Value = Value;
+            this.Size = Size;
+            this.Order = Order;
             
         }
         
@@ -327,17 +235,11 @@ this.Order = Order;
             sb.Append("class SearchAggregation {\n");
             
             sb.Append("  Field: ").Append(Field).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  Size: ").Append(Size).Append("\n");
-            
             sb.Append("  Order: ").Append(Order).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DownloadResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="ContentLocationUri">ContentLocationUri.</param>
-        
-        
-        
         /// <param name="ImageUri">ImageUri.</param>
-        
-        
-        
         /// <param name="Thumbnails">Thumbnails.</param>
-        
-        
         public DownloadResponse(string ContentLocationUri = null, string ImageUri = null, List<DocumentThumbnail> Thumbnails = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentLocationUri = ContentLocationUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ImageUri = ImageUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Thumbnails = Thumbnails;
-            
-            
-            
+            this.ContentLocationUri = ContentLocationUri;
+            this.ImageUri = ImageUri;
+            this.Thumbnails = Thumbnails;
             
         }
         
@@ -132,11 +85,8 @@ this.Thumbnails = Thumbnails;
             sb.Append("class DownloadResponse {\n");
             
             sb.Append("  ContentLocationUri: ").Append(ContentLocationUri).Append("\n");
-            
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
-            
             sb.Append("  Thumbnails: ").Append(Thumbnails).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

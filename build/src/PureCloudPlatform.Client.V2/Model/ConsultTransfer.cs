@@ -81,49 +81,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsultTransfer" /> class.
         /// </summary>
-        
-        
         /// <param name="SpeakTo">Determines to whom the initiating participant is speaking. Defaults to DESTINATION.</param>
-        
-        
-        
         /// <param name="Destination">Destination phone number and name. (required).</param>
-        
-        
         public ConsultTransfer(SpeakToEnum? SpeakTo = null, Destination Destination = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Destination" is required (not null)
-            if (Destination == null)
-            {
-                throw new InvalidDataException("Destination is a required property for ConsultTransfer and cannot be null");
-            }
-            else
-            {
-                this.Destination = Destination;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-this.SpeakTo = SpeakTo;
-            
-            
-            
-            
-            
-            
-            
+            this.SpeakTo = SpeakTo;
             
         }
         
@@ -149,9 +111,7 @@ this.SpeakTo = SpeakTo;
             sb.Append("class ConsultTransfer {\n");
             
             sb.Append("  SpeakTo: ").Append(SpeakTo).Append("\n");
-            
             sb.Append("  Destination: ").Append(Destination).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

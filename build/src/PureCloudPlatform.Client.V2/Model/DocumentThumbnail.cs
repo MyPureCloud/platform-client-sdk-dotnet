@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentThumbnail" /> class.
         /// </summary>
-        
-        
         /// <param name="Resolution">Resolution.</param>
-        
-        
-        
         /// <param name="ImageUri">ImageUri.</param>
-        
-        
-        
         /// <param name="Height">Height.</param>
-        
-        
-        
         /// <param name="Width">Width.</param>
-        
-        
         public DocumentThumbnail(string Resolution = null, string ImageUri = null, int? Height = null, int? Width = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Resolution = Resolution;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ImageUri = ImageUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Height = Height;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Width = Width;
-            
-            
-            
+            this.Resolution = Resolution;
+            this.ImageUri = ImageUri;
+            this.Height = Height;
+            this.Width = Width;
             
         }
         
@@ -162,13 +100,9 @@ this.Width = Width;
             sb.Append("class DocumentThumbnail {\n");
             
             sb.Append("  Resolution: ").Append(Resolution).Append("\n");
-            
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
-            
             sb.Append("  Height: ").Append(Height).Append("\n");
-            
             sb.Append("  Width: ").Append(Width).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -107,105 +107,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsPhoneNumberProvision" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="PhoneNumber">A phone number to be used for SMS communications. E.g. +13175555555 or +34234234234 (required).</param>
-        
-        
-        
         /// <param name="PhoneNumberType">Type of the phone number provisioned. (required).</param>
-        
-        
-        
         /// <param name="CountryCode">The ISO 3166-1 alpha-2 country code of the country this phone number is associated with. (required).</param>
-        
-        
-        
-        
         public SmsPhoneNumberProvision(string Name = null, string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, string CountryCode = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "PhoneNumber" is required (not null)
-            if (PhoneNumber == null)
-            {
-                throw new InvalidDataException("PhoneNumber is a required property for SmsPhoneNumberProvision and cannot be null");
-            }
-            else
-            {
-                this.PhoneNumber = PhoneNumber;
-            }
-            
-            
-            
-            
-            
-            // to ensure "PhoneNumberType" is required (not null)
-            if (PhoneNumberType == null)
-            {
-                throw new InvalidDataException("PhoneNumberType is a required property for SmsPhoneNumberProvision and cannot be null");
-            }
-            else
-            {
-                this.PhoneNumberType = PhoneNumberType;
-            }
-            
-            
-            
-            
-            
-            // to ensure "CountryCode" is required (not null)
-            if (CountryCode == null)
-            {
-                throw new InvalidDataException("CountryCode is a required property for SmsPhoneNumberProvision and cannot be null");
-            }
-            else
-            {
-                this.CountryCode = CountryCode;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
             
         }
         
@@ -266,17 +174,11 @@ this.Name = Name;
             sb.Append("class SmsPhoneNumberProvision {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
-            
             sb.Append("  PhoneNumberType: ").Append(PhoneNumberType).Append("\n");
-            
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

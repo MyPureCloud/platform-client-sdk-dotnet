@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageConversationNotificationMessageMedia" /> class.
         /// </summary>
-        
-        
         /// <param name="Url">Url.</param>
-        
-        
-        
         /// <param name="MediaType">MediaType.</param>
-        
-        
-        
         /// <param name="ContentLengthBytes">ContentLengthBytes.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
         public MessageConversationNotificationMessageMedia(string Url = null, string MediaType = null, int? ContentLengthBytes = null, string Name = null, string Id = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Url = Url;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaType = MediaType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentLengthBytes = ContentLengthBytes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
+            this.Url = Url;
+            this.MediaType = MediaType;
+            this.ContentLengthBytes = ContentLengthBytes;
+            this.Name = Name;
+            this.Id = Id;
             
         }
         
@@ -192,15 +115,10 @@ this.Id = Id;
             sb.Append("class MessageConversationNotificationMessageMedia {\n");
             
             sb.Append("  Url: ").Append(Url).Append("\n");
-            
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("  ContentLengthBytes: ").Append(ContentLengthBytes).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

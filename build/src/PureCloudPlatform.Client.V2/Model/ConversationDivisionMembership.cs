@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationDivisionMembership" /> class.
         /// </summary>
-        
-        
         /// <param name="Division">A division the conversation belongs to..</param>
-        
-        
-        
         /// <param name="Entities">The entities on the conversation within the division. These are the users, queues, work flows, etc. that can be on conversations and and be assigned to different divisions..</param>
-        
-        
         public ConversationDivisionMembership(UriReference Division = null, List<UriReference> Entities = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Division = Division;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Entities = Entities;
-            
-            
-            
+            this.Division = Division;
+            this.Entities = Entities;
             
         }
         
@@ -104,9 +72,7 @@ this.Entities = Entities;
             sb.Append("class ConversationDivisionMembership {\n");
             
             sb.Append("  Division: ").Append(Division).Append("\n");
-            
             sb.Append("  Entities: ").Append(Entities).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

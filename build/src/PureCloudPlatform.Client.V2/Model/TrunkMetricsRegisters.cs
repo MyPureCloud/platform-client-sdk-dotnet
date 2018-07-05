@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetricsRegisters" /> class.
         /// </summary>
-        
-        
         /// <param name="ProxyAddress">Server proxy address that this registers array element represents..</param>
-        
-        
-        
         /// <param name="RegisterState">True if last REGISTER message had positive response; false if error response or no response..</param>
-        
-        
-        
         /// <param name="RegisterStateTime">ISO 8601 format UTC absolute date &amp; time of the last change of the register state..</param>
-        
-        
-        
         /// <param name="ErrorInfo">ErrorInfo.</param>
-        
-        
         public TrunkMetricsRegisters(string ProxyAddress = null, bool? RegisterState = null, DateTime? RegisterStateTime = null, TrunkErrorInfo ErrorInfo = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ProxyAddress = ProxyAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RegisterState = RegisterState;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RegisterStateTime = RegisterStateTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorInfo = ErrorInfo;
-            
-            
-            
+            this.ProxyAddress = ProxyAddress;
+            this.RegisterState = RegisterState;
+            this.RegisterStateTime = RegisterStateTime;
+            this.ErrorInfo = ErrorInfo;
             
         }
         
@@ -165,13 +103,9 @@ this.ErrorInfo = ErrorInfo;
             sb.Append("class TrunkMetricsRegisters {\n");
             
             sb.Append("  ProxyAddress: ").Append(ProxyAddress).Append("\n");
-            
             sb.Append("  RegisterState: ").Append(RegisterState).Append("\n");
-            
             sb.Append("  RegisterStateTime: ").Append(RegisterStateTime).Append("\n");
-            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

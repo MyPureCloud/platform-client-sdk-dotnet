@@ -75,151 +75,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContact" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ContactListId">The identifier of the contact list containing this contact. (required).</param>
-        
-        
-        
         /// <param name="Data">An ordered map of the contact&#39;s columns and corresponding values. (required).</param>
-        
-        
-        
         /// <param name="CallRecords">A map of call records for the contact phone columns..</param>
-        
-        
-        
         /// <param name="Callable">Indicates whether or not the contact can be called..</param>
-        
-        
-        
         /// <param name="PhoneNumberStatus">A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not..</param>
-        
-        
-        
         /// <param name="ContactColumnTimeZones">Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip.</param>
-        
-        
-        
-        
         public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, Dictionary<string, ContactColumnTimeZone> ContactColumnTimeZones = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "ContactListId" is required (not null)
-            if (ContactListId == null)
-            {
-                throw new InvalidDataException("ContactListId is a required property for DialerContact and cannot be null");
-            }
-            else
-            {
-                this.ContactListId = ContactListId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Data" is required (not null)
-            if (Data == null)
-            {
-                throw new InvalidDataException("Data is a required property for DialerContact and cannot be null");
-            }
-            else
-            {
-                this.Data = Data;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallRecords = CallRecords;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Callable = Callable;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneNumberStatus = PhoneNumberStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactColumnTimeZones = ContactColumnTimeZones;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.CallRecords = CallRecords;
+            this.Callable = Callable;
+            this.PhoneNumberStatus = PhoneNumberStatus;
+            this.ContactColumnTimeZones = ContactColumnTimeZones;
             
         }
         
@@ -314,23 +183,14 @@ this.ContactColumnTimeZones = ContactColumnTimeZones;
             sb.Append("class DialerContact {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
-            
             sb.Append("  Data: ").Append(Data).Append("\n");
-            
             sb.Append("  CallRecords: ").Append(CallRecords).Append("\n");
-            
             sb.Append("  Callable: ").Append(Callable).Append("\n");
-            
             sb.Append("  PhoneNumberStatus: ").Append(PhoneNumberStatus).Append("\n");
-            
             sb.Append("  ContactColumnTimeZones: ").Append(ContactColumnTimeZones).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

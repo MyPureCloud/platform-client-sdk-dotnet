@@ -284,435 +284,58 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewFilter" /> class.
         /// </summary>
-        
-        
         /// <param name="MediaTypes">The media types are used to filter the view.</param>
-        
-        
-        
         /// <param name="QueueIds">The queue ids are used to filter the view.</param>
-        
-        
-        
         /// <param name="SkillIds">The skill ids are used to filter the view.</param>
-        
-        
-        
         /// <param name="SkillGroups">The skill groups used to filter the view.</param>
-        
-        
-        
         /// <param name="LanguageIds">The language ids are used to filter the view.</param>
-        
-        
-        
         /// <param name="LanguageGroups">The language groups used to filter the view.</param>
-        
-        
-        
         /// <param name="Directions">The directions are used to filter the view.</param>
-        
-        
-        
         /// <param name="WrapUpCodes">The wrap up codes are used to filter the view.</param>
-        
-        
-        
         /// <param name="DnisList">The dnis list is used to filter the view.</param>
-        
-        
-        
         /// <param name="UserIds">The user ids are used to filter the view.</param>
-        
-        
-        
         /// <param name="AddressTos">The address To values are used to filter the view.</param>
-        
-        
-        
         /// <param name="AddressFroms">The address from values are used to filter the view.</param>
-        
-        
-        
         /// <param name="OutboundCampaignIds">The outbound campaign ids are used to filter the view.</param>
-        
-        
-        
         /// <param name="OutboundContactListIds">The outbound contact list ids are used to filter the view.</param>
-        
-        
-        
         /// <param name="ContactIds">The contact ids are used to filter the view.</param>
-        
-        
-        
         /// <param name="AniList">The ani list ids are used to filter the view.</param>
-        
-        
-        
         /// <param name="DurationsMilliseconds">The durations in milliseconds used to filter the view.</param>
-        
-        
-        
         /// <param name="EvaluationScore">The evaluationScore is used to filter the view.</param>
-        
-        
-        
         /// <param name="EvaluationCriticalScore">The evaluationCriticalScore is used to filter the view.</param>
-        
-        
-        
         /// <param name="EvaluationFormIds">The evaluation form ids are used to filter the view.</param>
-        
-        
-        
         /// <param name="EvaluatedAgentIds">The evaluated agent ids are used to filter the view.</param>
-        
-        
-        
         /// <param name="EvaluatorIds">The evaluator ids are used to filter the view.</param>
-        
-        
-        
         /// <param name="Transferred">Indicates filtering for transfers.</param>
-        
-        
-        
         /// <param name="Abandoned">Indicates filtering for abandons.</param>
-        
-        
-        
         /// <param name="MessageTypes">The message media types used to filter the view.</param>
-        
-        
         public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaTypes = MediaTypes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueIds = QueueIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SkillIds = SkillIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SkillGroups = SkillGroups;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LanguageIds = LanguageIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LanguageGroups = LanguageGroups;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Directions = Directions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapUpCodes = WrapUpCodes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DnisList = DnisList;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserIds = UserIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressTos = AddressTos;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressFroms = AddressFroms;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OutboundCampaignIds = OutboundCampaignIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OutboundContactListIds = OutboundContactListIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactIds = ContactIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AniList = AniList;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationsMilliseconds = DurationsMilliseconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EvaluationScore = EvaluationScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EvaluationCriticalScore = EvaluationCriticalScore;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EvaluationFormIds = EvaluationFormIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EvaluatedAgentIds = EvaluatedAgentIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EvaluatorIds = EvaluatorIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Transferred = Transferred;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Abandoned = Abandoned;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageTypes = MessageTypes;
-            
-            
-            
+            this.MediaTypes = MediaTypes;
+            this.QueueIds = QueueIds;
+            this.SkillIds = SkillIds;
+            this.SkillGroups = SkillGroups;
+            this.LanguageIds = LanguageIds;
+            this.LanguageGroups = LanguageGroups;
+            this.Directions = Directions;
+            this.WrapUpCodes = WrapUpCodes;
+            this.DnisList = DnisList;
+            this.UserIds = UserIds;
+            this.AddressTos = AddressTos;
+            this.AddressFroms = AddressFroms;
+            this.OutboundCampaignIds = OutboundCampaignIds;
+            this.OutboundContactListIds = OutboundContactListIds;
+            this.ContactIds = ContactIds;
+            this.AniList = AniList;
+            this.DurationsMilliseconds = DurationsMilliseconds;
+            this.EvaluationScore = EvaluationScore;
+            this.EvaluationCriticalScore = EvaluationCriticalScore;
+            this.EvaluationFormIds = EvaluationFormIds;
+            this.EvaluatedAgentIds = EvaluatedAgentIds;
+            this.EvaluatorIds = EvaluatorIds;
+            this.Transferred = Transferred;
+            this.Abandoned = Abandoned;
+            this.MessageTypes = MessageTypes;
             
         }
         
@@ -952,55 +575,30 @@ this.MessageTypes = MessageTypes;
             sb.Append("class ViewFilter {\n");
             
             sb.Append("  MediaTypes: ").Append(MediaTypes).Append("\n");
-            
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
-            
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
-            
             sb.Append("  SkillGroups: ").Append(SkillGroups).Append("\n");
-            
             sb.Append("  LanguageIds: ").Append(LanguageIds).Append("\n");
-            
             sb.Append("  LanguageGroups: ").Append(LanguageGroups).Append("\n");
-            
             sb.Append("  Directions: ").Append(Directions).Append("\n");
-            
             sb.Append("  WrapUpCodes: ").Append(WrapUpCodes).Append("\n");
-            
             sb.Append("  DnisList: ").Append(DnisList).Append("\n");
-            
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
-            
             sb.Append("  AddressTos: ").Append(AddressTos).Append("\n");
-            
             sb.Append("  AddressFroms: ").Append(AddressFroms).Append("\n");
-            
             sb.Append("  OutboundCampaignIds: ").Append(OutboundCampaignIds).Append("\n");
-            
             sb.Append("  OutboundContactListIds: ").Append(OutboundContactListIds).Append("\n");
-            
             sb.Append("  ContactIds: ").Append(ContactIds).Append("\n");
-            
             sb.Append("  AniList: ").Append(AniList).Append("\n");
-            
             sb.Append("  DurationsMilliseconds: ").Append(DurationsMilliseconds).Append("\n");
-            
             sb.Append("  EvaluationScore: ").Append(EvaluationScore).Append("\n");
-            
             sb.Append("  EvaluationCriticalScore: ").Append(EvaluationCriticalScore).Append("\n");
-            
             sb.Append("  EvaluationFormIds: ").Append(EvaluationFormIds).Append("\n");
-            
             sb.Append("  EvaluatedAgentIds: ").Append(EvaluatedAgentIds).Append("\n");
-            
             sb.Append("  EvaluatorIds: ").Append(EvaluatorIds).Append("\n");
-            
             sb.Append("  Transferred: ").Append(Transferred).Append("\n");
-            
             sb.Append("  Abandoned: ").Append(Abandoned).Append("\n");
-            
             sb.Append("  MessageTypes: ").Append(MessageTypes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

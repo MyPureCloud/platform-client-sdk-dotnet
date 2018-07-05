@@ -89,78 +89,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainResourceConditionValue" /> class.
         /// </summary>
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="Queue">Queue.</param>
-        
-        
-        
         /// <param name="Value">Value.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
         public DomainResourceConditionValue(User User = null, Queue Queue = null, string Value = null, TypeEnum? Type = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Queue = Queue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
+            this.User = User;
+            this.Queue = Queue;
+            this.Value = Value;
+            this.Type = Type;
             
         }
         
@@ -201,13 +139,9 @@ this.Type = Type;
             sb.Append("class DomainResourceConditionValue {\n");
             
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

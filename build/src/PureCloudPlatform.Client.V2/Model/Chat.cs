@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Chat" /> class.
         /// </summary>
-        
-        
         /// <param name="JabberId">JabberId.</param>
-        
-        
         public Chat(string JabberId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.JabberId = JabberId;
-            
-            
-            
+            this.JabberId = JabberId;
             
         }
         
@@ -72,7 +55,6 @@ this.JabberId = JabberId;
             sb.Append("class Chat {\n");
             
             sb.Append("  JabberId: ").Append(JabberId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

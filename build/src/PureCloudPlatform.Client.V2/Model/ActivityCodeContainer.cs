@@ -40,49 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityCodeContainer" /> class.
         /// </summary>
-        
-        
         /// <param name="ActivityCodes">Map of activity code id to activity code.</param>
-        
-        
-        
         /// <param name="Metadata">Version metadata for the associated management unit&#39;s list of activity codes (required).</param>
-        
-        
         public ActivityCodeContainer(Dictionary<string, ActivityCode> ActivityCodes = null, WfmVersionedEntityMetadata Metadata = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Metadata" is required (not null)
-            if (Metadata == null)
-            {
-                throw new InvalidDataException("Metadata is a required property for ActivityCodeContainer and cannot be null");
-            }
-            else
-            {
-                this.Metadata = Metadata;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActivityCodes = ActivityCodes;
-            
-            
-            
-            
-            
-            
-            
+            this.ActivityCodes = ActivityCodes;
             
         }
         
@@ -115,9 +77,7 @@ this.ActivityCodes = ActivityCodes;
             sb.Append("class ActivityCodeContainer {\n");
             
             sb.Append("  ActivityCodes: ").Append(ActivityCodes).Append("\n");
-            
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

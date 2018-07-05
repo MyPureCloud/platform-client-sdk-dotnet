@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignInteractions" /> class.
         /// </summary>
-        
-        
         /// <param name="Campaign">Campaign.</param>
-        
-        
-        
         /// <param name="PendingInteractions">PendingInteractions.</param>
-        
-        
-        
         /// <param name="ProceedingInteractions">ProceedingInteractions.</param>
-        
-        
-        
         /// <param name="PreviewingInteractions">PreviewingInteractions.</param>
-        
-        
-        
         /// <param name="InteractingInteractions">InteractingInteractions.</param>
-        
-        
-        
         /// <param name="ScheduledInteractions">ScheduledInteractions.</param>
-        
-        
         public CampaignInteractions(UriReference Campaign = null, List<CampaignInteraction> PendingInteractions = null, List<CampaignInteraction> ProceedingInteractions = null, List<CampaignInteraction> PreviewingInteractions = null, List<CampaignInteraction> InteractingInteractions = null, List<CampaignInteraction> ScheduledInteractions = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Campaign = Campaign;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PendingInteractions = PendingInteractions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ProceedingInteractions = ProceedingInteractions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PreviewingInteractions = PreviewingInteractions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InteractingInteractions = InteractingInteractions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScheduledInteractions = ScheduledInteractions;
-            
-            
-            
+            this.Campaign = Campaign;
+            this.PendingInteractions = PendingInteractions;
+            this.ProceedingInteractions = ProceedingInteractions;
+            this.PreviewingInteractions = PreviewingInteractions;
+            this.InteractingInteractions = InteractingInteractions;
+            this.ScheduledInteractions = ScheduledInteractions;
             
         }
         
@@ -222,17 +130,11 @@ this.ScheduledInteractions = ScheduledInteractions;
             sb.Append("class CampaignInteractions {\n");
             
             sb.Append("  Campaign: ").Append(Campaign).Append("\n");
-            
             sb.Append("  PendingInteractions: ").Append(PendingInteractions).Append("\n");
-            
             sb.Append("  ProceedingInteractions: ").Append(ProceedingInteractions).Append("\n");
-            
             sb.Append("  PreviewingInteractions: ").Append(PreviewingInteractions).Append("\n");
-            
             sb.Append("  InteractingInteractions: ").Append(InteractingInteractions).Append("\n");
-            
             sb.Append("  ScheduledInteractions: ").Append(ScheduledInteractions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

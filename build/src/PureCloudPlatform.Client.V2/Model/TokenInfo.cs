@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenInfo" /> class.
         /// </summary>
-        
-        
         /// <param name="Organization">The current organization.</param>
-        
-        
-        
         /// <param name="HomeOrganization">The token&#39;s home organization.</param>
-        
-        
-        
         /// <param name="OAuthClient">OAuthClient.</param>
-        
-        
         public TokenInfo(NamedEntity Organization = null, NamedEntity HomeOrganization = null, OrgOAuthClient OAuthClient = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Organization = Organization;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HomeOrganization = HomeOrganization;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OAuthClient = OAuthClient;
-            
-            
-            
+            this.Organization = Organization;
+            this.HomeOrganization = HomeOrganization;
+            this.OAuthClient = OAuthClient;
             
         }
         
@@ -134,11 +87,8 @@ this.OAuthClient = OAuthClient;
             sb.Append("class TokenInfo {\n");
             
             sb.Append("  Organization: ").Append(Organization).Append("\n");
-            
             sb.Append("  HomeOrganization: ").Append(HomeOrganization).Append("\n");
-            
             sb.Append("  OAuthClient: ").Append(OAuthClient).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

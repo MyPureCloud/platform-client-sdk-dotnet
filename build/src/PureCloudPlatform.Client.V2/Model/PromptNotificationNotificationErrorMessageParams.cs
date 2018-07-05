@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PromptNotificationNotificationErrorMessageParams" /> class.
         /// </summary>
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public PromptNotificationNotificationErrorMessageParams(Dictionary<string, string> AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -72,7 +55,6 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class PromptNotificationNotificationErrorMessageParams {\n");
             
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

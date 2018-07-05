@@ -40,54 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneColumn" /> class.
         /// </summary>
-        
-        
         /// <param name="ColumnName">The name of the phone column. (required).</param>
-        
-        
-        
         /// <param name="Type">The type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;. (required).</param>
-        
-        
         public PhoneColumn(string ColumnName = null, string Type = null)
         {
-            
-            
-            
-            // to ensure "ColumnName" is required (not null)
-            if (ColumnName == null)
-            {
-                throw new InvalidDataException("ColumnName is a required property for PhoneColumn and cannot be null");
-            }
-            else
-            {
-                this.ColumnName = ColumnName;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for PhoneColumn and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -120,9 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class PhoneColumn {\n");
             
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

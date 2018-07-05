@@ -45,55 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmVersionedEntityMetadata" /> class.
         /// </summary>
-        
-        
         /// <param name="Version">The version of the associated entity.  Used to prevent conflicts on concurrent edits (required).</param>
-        
-        
-        
         /// <param name="ModifiedBy">The user who last modified the associated entity.</param>
-        
-        
-        
-        
         public WfmVersionedEntityMetadata(int? Version = null, UserReference ModifiedBy = null)
         {
-            
-            
-            
-            // to ensure "Version" is required (not null)
-            if (Version == null)
-            {
-                throw new InvalidDataException("Version is a required property for WfmVersionedEntityMetadata and cannot be null");
-            }
-            else
-            {
-                this.Version = Version;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
+            this.ModifiedBy = ModifiedBy;
             
         }
         
@@ -135,11 +91,8 @@ this.ModifiedBy = ModifiedBy;
             sb.Append("class WfmVersionedEntityMetadata {\n");
             
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

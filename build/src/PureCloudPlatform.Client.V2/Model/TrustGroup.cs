@@ -222,219 +222,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustGroup" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The group name. (required).</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Type">Type of group. (required).</param>
-        
-        
-        
         /// <param name="Images">Images.</param>
-        
-        
-        
         /// <param name="Addresses">Addresses.</param>
-        
-        
-        
         /// <param name="RulesVisible">Are membership rules visible to the person requesting to view the group (required).</param>
-        
-        
-        
         /// <param name="Visibility">Who can view this group (required).</param>
-        
-        
-        
         /// <param name="Owners">Owners of the group.</param>
-        
-        
-        
-        
-        
         /// <param name="CreatedBy">The user that added trusted group..</param>
-        
-        
         public TrustGroup(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null, List<User> Owners = null, OrgUser CreatedBy = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for TrustGroup and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for TrustGroup and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "RulesVisible" is required (not null)
-            if (RulesVisible == null)
-            {
-                throw new InvalidDataException("RulesVisible is a required property for TrustGroup and cannot be null");
-            }
-            else
-            {
-                this.RulesVisible = RulesVisible;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Visibility" is required (not null)
-            if (Visibility == null)
-            {
-                throw new InvalidDataException("Visibility is a required property for TrustGroup and cannot be null");
-            }
-            else
-            {
-                this.Visibility = Visibility;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Images = Images;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Addresses = Addresses;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Owners = Owners;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
+            this.Description = Description;
+            this.Images = Images;
+            this.Addresses = Addresses;
+            this.Owners = Owners;
+            this.CreatedBy = CreatedBy;
             
         }
         
@@ -560,35 +363,20 @@ this.CreatedBy = CreatedBy;
             sb.Append("class TrustGroup {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Images: ").Append(Images).Append("\n");
-            
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
-            
             sb.Append("  RulesVisible: ").Append(RulesVisible).Append("\n");
-            
             sb.Append("  Visibility: ").Append(Visibility).Append("\n");
-            
             sb.Append("  Owners: ").Append(Owners).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

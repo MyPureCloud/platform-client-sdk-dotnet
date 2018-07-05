@@ -55,120 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EffectiveConfiguration" /> class.
         /// </summary>
-        
-        
         /// <param name="Properties">Key-value configuration settings described by the schema in the propertiesSchemaUri field. (required).</param>
-        
-        
-        
         /// <param name="Advanced">Advanced configuration described by the schema in the advancedSchemaUri field. (required).</param>
-        
-        
-        
         /// <param name="Name">The name of the integration, used to distinguish this integration from others of the same type. (required).</param>
-        
-        
-        
         /// <param name="Notes">Notes about the integration. (required).</param>
-        
-        
-        
         /// <param name="Credentials">Credentials required by the integration. The required keys are indicated in the credentials property of the Integration Type (required).</param>
-        
-        
         public EffectiveConfiguration(Dictionary<string, Object> Properties = null, Dictionary<string, Object> Advanced = null, string Name = null, string Notes = null, Dictionary<string, CredentialInfo> Credentials = null)
         {
-            
-            
-            
-            // to ensure "Properties" is required (not null)
-            if (Properties == null)
-            {
-                throw new InvalidDataException("Properties is a required property for EffectiveConfiguration and cannot be null");
-            }
-            else
-            {
-                this.Properties = Properties;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Advanced" is required (not null)
-            if (Advanced == null)
-            {
-                throw new InvalidDataException("Advanced is a required property for EffectiveConfiguration and cannot be null");
-            }
-            else
-            {
-                this.Advanced = Advanced;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for EffectiveConfiguration and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Notes" is required (not null)
-            if (Notes == null)
-            {
-                throw new InvalidDataException("Notes is a required property for EffectiveConfiguration and cannot be null");
-            }
-            else
-            {
-                this.Notes = Notes;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Credentials" is required (not null)
-            if (Credentials == null)
-            {
-                throw new InvalidDataException("Credentials is a required property for EffectiveConfiguration and cannot be null");
-            }
-            else
-            {
-                this.Credentials = Credentials;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -228,15 +121,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class EffectiveConfiguration {\n");
             
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            
             sb.Append("  Advanced: ").Append(Advanced).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Notes: ").Append(Notes).Append("\n");
-            
             sb.Append("  Credentials: ").Append(Credentials).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -140,372 +140,46 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalContact" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="FirstName">The first name of the contact. (required).</param>
-        
-        
-        
         /// <param name="MiddleName">MiddleName.</param>
-        
-        
-        
         /// <param name="LastName">The last name of the contact. (required).</param>
-        
-        
-        
         /// <param name="Salutation">Salutation.</param>
-        
-        
-        
         /// <param name="Title">Title.</param>
-        
-        
-        
         /// <param name="WorkPhone">WorkPhone.</param>
-        
-        
-        
         /// <param name="CellPhone">CellPhone.</param>
-        
-        
-        
         /// <param name="HomePhone">HomePhone.</param>
-        
-        
-        
         /// <param name="OtherPhone">OtherPhone.</param>
-        
-        
-        
         /// <param name="WorkEmail">WorkEmail.</param>
-        
-        
-        
         /// <param name="PersonalEmail">PersonalEmail.</param>
-        
-        
-        
         /// <param name="OtherEmail">OtherEmail.</param>
-        
-        
-        
         /// <param name="Address">Address.</param>
-        
-        
-        
         /// <param name="TwitterId">TwitterId.</param>
-        
-        
-        
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
-        
-        
-        
         /// <param name="SurveyOptOut">SurveyOptOut.</param>
-        
-        
-        
         /// <param name="ExternalSystemUrl">A string that identifies an external system-of-record resource that may have more detailed information on the organization. It should be a valid URL (including the HTTP protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace..</param>
-        
-        
-        
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        
-        
-        
-        
         public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, List<ExternalDataSource> ExternalDataSources = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "FirstName" is required (not null)
-            if (FirstName == null)
-            {
-                throw new InvalidDataException("FirstName is a required property for ExternalContact and cannot be null");
-            }
-            else
-            {
-                this.FirstName = FirstName;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "LastName" is required (not null)
-            if (LastName == null)
-            {
-                throw new InvalidDataException("LastName is a required property for ExternalContact and cannot be null");
-            }
-            else
-            {
-                this.LastName = LastName;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MiddleName = MiddleName;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Salutation = Salutation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Title = Title;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WorkPhone = WorkPhone;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CellPhone = CellPhone;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HomePhone = HomePhone;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OtherPhone = OtherPhone;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WorkEmail = WorkEmail;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PersonalEmail = PersonalEmail;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OtherEmail = OtherEmail;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TwitterId = TwitterId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifyDate = ModifyDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreateDate = CreateDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalOrganization = ExternalOrganization;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SurveyOptOut = SurveyOptOut;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalSystemUrl = ExternalSystemUrl;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalDataSources = ExternalDataSources;
-            
-            
-            
-            
-            
+            this.MiddleName = MiddleName;
+            this.Salutation = Salutation;
+            this.Title = Title;
+            this.WorkPhone = WorkPhone;
+            this.CellPhone = CellPhone;
+            this.HomePhone = HomePhone;
+            this.OtherPhone = OtherPhone;
+            this.WorkEmail = WorkEmail;
+            this.PersonalEmail = PersonalEmail;
+            this.OtherEmail = OtherEmail;
+            this.Address = Address;
+            this.TwitterId = TwitterId;
+            this.ModifyDate = ModifyDate;
+            this.CreateDate = CreateDate;
+            this.ExternalOrganization = ExternalOrganization;
+            this.SurveyOptOut = SurveyOptOut;
+            this.ExternalSystemUrl = ExternalSystemUrl;
+            this.ExternalDataSources = ExternalDataSources;
             
         }
         
@@ -704,49 +378,27 @@ this.ExternalDataSources = ExternalDataSources;
             sb.Append("class ExternalContact {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
-            
             sb.Append("  MiddleName: ").Append(MiddleName).Append("\n");
-            
             sb.Append("  LastName: ").Append(LastName).Append("\n");
-            
             sb.Append("  Salutation: ").Append(Salutation).Append("\n");
-            
             sb.Append("  Title: ").Append(Title).Append("\n");
-            
             sb.Append("  WorkPhone: ").Append(WorkPhone).Append("\n");
-            
             sb.Append("  CellPhone: ").Append(CellPhone).Append("\n");
-            
             sb.Append("  HomePhone: ").Append(HomePhone).Append("\n");
-            
             sb.Append("  OtherPhone: ").Append(OtherPhone).Append("\n");
-            
             sb.Append("  WorkEmail: ").Append(WorkEmail).Append("\n");
-            
             sb.Append("  PersonalEmail: ").Append(PersonalEmail).Append("\n");
-            
             sb.Append("  OtherEmail: ").Append(OtherEmail).Append("\n");
-            
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  TwitterId: ").Append(TwitterId).Append("\n");
-            
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
-            
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
-            
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
-            
             sb.Append("  SurveyOptOut: ").Append(SurveyOptOut).Append("\n");
-            
             sb.Append("  ExternalSystemUrl: ").Append(ExternalSystemUrl).Append("\n");
-            
             sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

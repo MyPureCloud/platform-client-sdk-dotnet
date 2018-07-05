@@ -79,44 +79,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationVoicemail" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="UploadStatus">UploadStatus.</param>
-        
-        
         public ConversationNotificationVoicemail(string Id = null, UploadStatusEnum? UploadStatus = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadStatus = UploadStatus;
-            
-            
-            
+            this.Id = Id;
+            this.UploadStatus = UploadStatus;
             
         }
         
@@ -141,9 +109,7 @@ this.UploadStatus = UploadStatus;
             sb.Append("class ConversationNotificationVoicemail {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

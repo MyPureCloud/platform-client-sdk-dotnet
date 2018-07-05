@@ -49,73 +49,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignDiagnostics" /> class.
         /// </summary>
-        
-        
         /// <param name="CallableContacts">Campaign properties that can impact which contacts are callable.</param>
-        
-        
-        
         /// <param name="QueueUtilizationDiagnostic">Information regarding the campaign&#39;s queue.</param>
-        
-        
-        
         /// <param name="RuleSetDiagnostics">Information regarding the campaign&#39;s rule sets.</param>
-        
-        
-        
-        
-        
-        
         public CampaignDiagnostics(CallableContactsDiagnostic CallableContacts = null, QueueUtilizationDiagnostic QueueUtilizationDiagnostic = null, List<RuleSetDiagnostic> RuleSetDiagnostics = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallableContacts = CallableContacts;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueUtilizationDiagnostic = QueueUtilizationDiagnostic;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RuleSetDiagnostics = RuleSetDiagnostics;
-            
-            
-            
-            
-            
-            
-            
+            this.CallableContacts = CallableContacts;
+            this.QueueUtilizationDiagnostic = QueueUtilizationDiagnostic;
+            this.RuleSetDiagnostics = RuleSetDiagnostics;
             
         }
         
@@ -175,15 +116,10 @@ this.RuleSetDiagnostics = RuleSetDiagnostics;
             sb.Append("class CampaignDiagnostics {\n");
             
             sb.Append("  CallableContacts: ").Append(CallableContacts).Append("\n");
-            
             sb.Append("  QueueUtilizationDiagnostic: ").Append(QueueUtilizationDiagnostic).Append("\n");
-            
             sb.Append("  RuleSetDiagnostics: ").Append(RuleSetDiagnostics).Append("\n");
-            
             sb.Append("  OutstandingInteractionsCount: ").Append(OutstandingInteractionsCount).Append("\n");
-            
             sb.Append("  ScheduledInteractionsCount: ").Append(ScheduledInteractionsCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

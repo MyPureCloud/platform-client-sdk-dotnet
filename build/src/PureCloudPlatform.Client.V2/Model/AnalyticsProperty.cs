@@ -104,76 +104,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsProperty" /> class.
         /// </summary>
-        
-        
         /// <param name="PropertyType">Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match (required).</param>
-        
-        
-        
         /// <param name="Property">User-defined rather than intrinsic system-observed values. These are tagged onto segments by other components within PureCloud or by API users directly.  This is the name of the user-defined property. (required).</param>
-        
-        
-        
         /// <param name="Value">What property value to match against (required).</param>
-        
-        
         public AnalyticsProperty(PropertyTypeEnum? PropertyType = null, string Property = null, string Value = null)
         {
-            
-            
-            
-            // to ensure "PropertyType" is required (not null)
-            if (PropertyType == null)
-            {
-                throw new InvalidDataException("PropertyType is a required property for AnalyticsProperty and cannot be null");
-            }
-            else
-            {
-                this.PropertyType = PropertyType;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Property" is required (not null)
-            if (Property == null)
-            {
-                throw new InvalidDataException("Property is a required property for AnalyticsProperty and cannot be null");
-            }
-            else
-            {
-                this.Property = Property;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Value" is required (not null)
-            if (Value == null)
-            {
-                throw new InvalidDataException("Value is a required property for AnalyticsProperty and cannot be null");
-            }
-            else
-            {
-                this.Value = Value;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -208,11 +143,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AnalyticsProperty {\n");
             
             sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
-            
             sb.Append("  Property: ").Append(Property).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

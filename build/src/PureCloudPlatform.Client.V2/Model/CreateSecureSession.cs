@@ -50,88 +50,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSecureSession" /> class.
         /// </summary>
-        
-        
         /// <param name="SourceParticipantId">requesting participant.</param>
-        
-        
-        
         /// <param name="FlowId">the flow id to execute in the secure session (required).</param>
-        
-        
-        
         /// <param name="UserData">user data for the secure session (required).</param>
-        
-        
-        
         /// <param name="Disconnect">if true, disconnect the agent after creating the session.</param>
-        
-        
         public CreateSecureSession(string SourceParticipantId = null, string FlowId = null, string UserData = null, bool? Disconnect = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "FlowId" is required (not null)
-            if (FlowId == null)
-            {
-                throw new InvalidDataException("FlowId is a required property for CreateSecureSession and cannot be null");
-            }
-            else
-            {
-                this.FlowId = FlowId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "UserData" is required (not null)
-            if (UserData == null)
-            {
-                throw new InvalidDataException("UserData is a required property for CreateSecureSession and cannot be null");
-            }
-            else
-            {
-                this.UserData = UserData;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SourceParticipantId = SourceParticipantId;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Disconnect = Disconnect;
-            
-            
-            
+            this.SourceParticipantId = SourceParticipantId;
+            this.Disconnect = Disconnect;
             
         }
         
@@ -182,13 +108,9 @@ this.Disconnect = Disconnect;
             sb.Append("class CreateSecureSession {\n");
             
             sb.Append("  SourceParticipantId: ").Append(SourceParticipantId).Append("\n");
-            
             sb.Append("  FlowId: ").Append(FlowId).Append("\n");
-            
             sb.Append("  UserData: ").Append(UserData).Append("\n");
-            
             sb.Append("  Disconnect: ").Append(Disconnect).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

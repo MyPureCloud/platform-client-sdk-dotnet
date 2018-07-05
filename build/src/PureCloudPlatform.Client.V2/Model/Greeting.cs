@@ -172,207 +172,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Greeting" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Type">Greeting type (required).</param>
-        
-        
-        
         /// <param name="OwnerType">Greeting owner type (required).</param>
-        
-        
-        
         /// <param name="Owner">Greeting owner (required).</param>
-        
-        
-        
         /// <param name="AudioFile">AudioFile.</param>
-        
-        
-        
         /// <param name="AudioTTS">AudioTTS.</param>
-        
-        
-        
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="CreatedBy">CreatedBy.</param>
-        
-        
-        
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        
-        
-        
-        
         public Greeting(string Name = null, TypeEnum? Type = null, OwnerTypeEnum? OwnerType = null, DomainEntity Owner = null, GreetingAudioFile AudioFile = null, string AudioTTS = null, DateTime? CreatedDate = null, string CreatedBy = null, DateTime? ModifiedDate = null, string ModifiedBy = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for Greeting and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            // to ensure "OwnerType" is required (not null)
-            if (OwnerType == null)
-            {
-                throw new InvalidDataException("OwnerType is a required property for Greeting and cannot be null");
-            }
-            else
-            {
-                this.OwnerType = OwnerType;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Owner" is required (not null)
-            if (Owner == null)
-            {
-                throw new InvalidDataException("Owner is a required property for Greeting and cannot be null");
-            }
-            else
-            {
-                this.Owner = Owner;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AudioFile = AudioFile;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AudioTTS = AudioTTS;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedDate = CreatedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.AudioFile = AudioFile;
+            this.AudioTTS = AudioTTS;
+            this.CreatedDate = CreatedDate;
+            this.CreatedBy = CreatedBy;
+            this.ModifiedDate = ModifiedDate;
+            this.ModifiedBy = ModifiedBy;
             
         }
         
@@ -476,29 +294,17 @@ this.ModifiedBy = ModifiedBy;
             sb.Append("class Greeting {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  OwnerType: ").Append(OwnerType).Append("\n");
-            
             sb.Append("  Owner: ").Append(Owner).Append("\n");
-            
             sb.Append("  AudioFile: ").Append(AudioFile).Append("\n");
-            
             sb.Append("  AudioTTS: ").Append(AudioTTS).Append("\n");
-            
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

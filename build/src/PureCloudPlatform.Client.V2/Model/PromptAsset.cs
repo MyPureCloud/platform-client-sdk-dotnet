@@ -84,192 +84,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PromptAsset" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="PromptId">PromptId.</param>
-        
-        
-        
         /// <param name="Language">Language.</param>
-        
-        
-        
         /// <param name="MediaUri">MediaUri.</param>
-        
-        
-        
         /// <param name="TtsString">TtsString.</param>
-        
-        
-        
         /// <param name="UploadStatus">UploadStatus.</param>
-        
-        
-        
         /// <param name="UploadUri">UploadUri.</param>
-        
-        
-        
         /// <param name="LanguageDefault">LanguageDefault.</param>
-        
-        
-        
         /// <param name="Tags">Tags.</param>
-        
-        
-        
         /// <param name="DurationSeconds">DurationSeconds.</param>
-        
-        
-        
-        
         public PromptAsset(string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string UploadStatus = null, string UploadUri = null, bool? LanguageDefault = null, Dictionary<string, List<string>> Tags = null, double? DurationSeconds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PromptId = PromptId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Language = Language;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaUri = MediaUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TtsString = TtsString;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadStatus = UploadStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadUri = UploadUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LanguageDefault = LanguageDefault;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Tags = Tags;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationSeconds = DurationSeconds;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.PromptId = PromptId;
+            this.Language = Language;
+            this.MediaUri = MediaUri;
+            this.TtsString = TtsString;
+            this.UploadStatus = UploadStatus;
+            this.UploadUri = UploadUri;
+            this.LanguageDefault = LanguageDefault;
+            this.Tags = Tags;
+            this.DurationSeconds = DurationSeconds;
             
         }
         
@@ -382,29 +218,17 @@ this.DurationSeconds = DurationSeconds;
             sb.Append("class PromptAsset {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  PromptId: ").Append(PromptId).Append("\n");
-            
             sb.Append("  Language: ").Append(Language).Append("\n");
-            
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
-            
             sb.Append("  TtsString: ").Append(TtsString).Append("\n");
-            
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
-            
             sb.Append("  UploadUri: ").Append(UploadUri).Append("\n");
-            
             sb.Append("  LanguageDefault: ").Append(LanguageDefault).Append("\n");
-            
             sb.Append("  Tags: ").Append(Tags).Append("\n");
-            
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LocalEncryptionConfigurationListing" /> class.
         /// </summary>
-        
-        
         /// <param name="Total">Total.</param>
-        
-        
-        
         /// <param name="Entities">Entities.</param>
-        
-        
-        
         /// <param name="SelfUri">SelfUri.</param>
-        
-        
         public LocalEncryptionConfigurationListing(long? Total = null, List<LocalEncryptionConfiguration> Entities = null, string SelfUri = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Total = Total;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Entities = Entities;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SelfUri = SelfUri;
-            
-            
-            
+            this.Total = Total;
+            this.Entities = Entities;
+            this.SelfUri = SelfUri;
             
         }
         
@@ -132,11 +85,8 @@ this.SelfUri = SelfUri;
             sb.Append("class LocalEncryptionConfigurationListing {\n");
             
             sb.Append("  Total: ").Append(Total).Append("\n");
-            
             sb.Append("  Entities: ").Append(Entities).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

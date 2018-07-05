@@ -137,122 +137,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateActivityCodeRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">The name of the activity code (required).</param>
-        
-        
-        
         /// <param name="Category">The activity code&#39;s category (required).</param>
-        
-        
-        
         /// <param name="LengthInMinutes">The default length of the activity in minutes.</param>
-        
-        
-        
         /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity.</param>
-        
-        
-        
         /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as work time.</param>
-        
-        
-        
         /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request.</param>
-        
-        
         public CreateActivityCodeRequest(string Name = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null)
         {
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for CreateActivityCodeRequest and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Category" is required (not null)
-            if (Category == null)
-            {
-                throw new InvalidDataException("Category is a required property for CreateActivityCodeRequest and cannot be null");
-            }
-            else
-            {
-                this.Category = Category;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.LengthInMinutes = LengthInMinutes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CountsAsPaidTime = CountsAsPaidTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CountsAsWorkTime = CountsAsWorkTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AgentTimeOffSelectable = AgentTimeOffSelectable;
-            
-            
-            
+            this.LengthInMinutes = LengthInMinutes;
+            this.CountsAsPaidTime = CountsAsPaidTime;
+            this.CountsAsWorkTime = CountsAsWorkTime;
+            this.AgentTimeOffSelectable = AgentTimeOffSelectable;
             
         }
         
@@ -314,17 +210,11 @@ this.AgentTimeOffSelectable = AgentTimeOffSelectable;
             sb.Append("class CreateActivityCodeRequest {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Category: ").Append(Category).Append("\n");
-            
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
-            
             sb.Append("  CountsAsPaidTime: ").Append(CountsAsPaidTime).Append("\n");
-            
             sb.Append("  CountsAsWorkTime: ").Append(CountsAsWorkTime).Append("\n");
-            
             sb.Append("  AgentTimeOffSelectable: ").Append(AgentTimeOffSelectable).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

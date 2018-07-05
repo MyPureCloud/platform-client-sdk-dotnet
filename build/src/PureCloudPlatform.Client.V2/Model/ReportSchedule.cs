@@ -115,287 +115,36 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportSchedule" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="QuartzCronExpression">Quartz Cron Expression (required).</param>
-        
-        
-        
         /// <param name="NextFireTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="TimeZone">TimeZone.</param>
-        
-        
-        
         /// <param name="TimePeriod">TimePeriod.</param>
-        
-        
-        
         /// <param name="Interval">Interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
-        
-        
-        
         /// <param name="ReportFormat">ReportFormat.</param>
-        
-        
-        
         /// <param name="Locale">Locale.</param>
-        
-        
-        
         /// <param name="Enabled">Enabled.</param>
-        
-        
-        
         /// <param name="ReportId">Report ID (required).</param>
-        
-        
-        
         /// <param name="Parameters">Parameters.</param>
-        
-        
-        
         /// <param name="LastRun">LastRun.</param>
-        
-        
-        
-        
         public ReportSchedule(string Name = null, string QuartzCronExpression = null, DateTime? NextFireTime = null, DateTime? DateCreated = null, DateTime? DateModified = null, string Description = null, string TimeZone = null, string TimePeriod = null, string Interval = null, string ReportFormat = null, string Locale = null, bool? Enabled = null, string ReportId = null, Dictionary<string, Object> Parameters = null, ReportRunEntry LastRun = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "QuartzCronExpression" is required (not null)
-            if (QuartzCronExpression == null)
-            {
-                throw new InvalidDataException("QuartzCronExpression is a required property for ReportSchedule and cannot be null");
-            }
-            else
-            {
-                this.QuartzCronExpression = QuartzCronExpression;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "ReportId" is required (not null)
-            if (ReportId == null)
-            {
-                throw new InvalidDataException("ReportId is a required property for ReportSchedule and cannot be null");
-            }
-            else
-            {
-                this.ReportId = ReportId;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.NextFireTime = NextFireTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeZone = TimeZone;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimePeriod = TimePeriod;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Interval = Interval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReportFormat = ReportFormat;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Locale = Locale;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Enabled = Enabled;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Parameters = Parameters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LastRun = LastRun;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.NextFireTime = NextFireTime;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Description = Description;
+            this.TimeZone = TimeZone;
+            this.TimePeriod = TimePeriod;
+            this.Interval = Interval;
+            this.ReportFormat = ReportFormat;
+            this.Locale = Locale;
+            this.Enabled = Enabled;
+            this.Parameters = Parameters;
+            this.LastRun = LastRun;
             
         }
         
@@ -554,39 +303,22 @@ this.LastRun = LastRun;
             sb.Append("class ReportSchedule {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  QuartzCronExpression: ").Append(QuartzCronExpression).Append("\n");
-            
             sb.Append("  NextFireTime: ").Append(NextFireTime).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-            
             sb.Append("  TimePeriod: ").Append(TimePeriod).Append("\n");
-            
             sb.Append("  Interval: ").Append(Interval).Append("\n");
-            
             sb.Append("  ReportFormat: ").Append(ReportFormat).Append("\n");
-            
             sb.Append("  Locale: ").Append(Locale).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  ReportId: ").Append(ReportId).Append("\n");
-            
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
-            
             sb.Append("  LastRun: ").Append(LastRun).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

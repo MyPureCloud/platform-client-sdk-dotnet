@@ -55,110 +55,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayQueryDataCommand" /> class.
         /// </summary>
-        
-        
         /// <param name="StartDate">Start date of the requested date range in ISO-8601 format (required).</param>
-        
-        
-        
         /// <param name="EndDate">End date of the requested date range in ISO-8601 format.  Must be within the same 7 day schedule week as defined by the management unit&#39;s start day of week (required).</param>
-        
-        
-        
         /// <param name="Metrics">The metrics to validate (required).</param>
-        
-        
-        
         /// <param name="QueueIds">The queue IDs for which to fetch data.  Omitting or passing an empty list will return all available queues.</param>
-        
-        
-        
         /// <param name="IntervalLengthMinutes">The period/interval for which to aggregate the data.  Optional, defaults to 15.</param>
-        
-        
         public IntradayQueryDataCommand(DateTime? StartDate = null, DateTime? EndDate = null, List<IntradayMetric> Metrics = null, List<string> QueueIds = null, int? IntervalLengthMinutes = null)
         {
-            
-            
-            
-            // to ensure "StartDate" is required (not null)
-            if (StartDate == null)
-            {
-                throw new InvalidDataException("StartDate is a required property for IntradayQueryDataCommand and cannot be null");
-            }
-            else
-            {
-                this.StartDate = StartDate;
-            }
-            
-            
-            
-            
-            
-            // to ensure "EndDate" is required (not null)
-            if (EndDate == null)
-            {
-                throw new InvalidDataException("EndDate is a required property for IntradayQueryDataCommand and cannot be null");
-            }
-            else
-            {
-                this.EndDate = EndDate;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Metrics" is required (not null)
-            if (Metrics == null)
-            {
-                throw new InvalidDataException("Metrics is a required property for IntradayQueryDataCommand and cannot be null");
-            }
-            else
-            {
-                this.Metrics = Metrics;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueIds = QueueIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IntervalLengthMinutes = IntervalLengthMinutes;
-            
-            
-            
+            this.QueueIds = QueueIds;
+            this.IntervalLengthMinutes = IntervalLengthMinutes;
             
         }
         
@@ -218,15 +123,10 @@ this.IntervalLengthMinutes = IntervalLengthMinutes;
             sb.Append("class IntradayQueryDataCommand {\n");
             
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
-            
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
-            
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
-            
             sb.Append("  IntervalLengthMinutes: ").Append(IntervalLengthMinutes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

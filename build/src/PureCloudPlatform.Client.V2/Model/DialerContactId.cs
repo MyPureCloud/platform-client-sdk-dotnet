@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContactId" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="ContactListId">ContactListId.</param>
-        
-        
         public DialerContactId(string Id = null, string ContactListId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactListId = ContactListId;
-            
-            
-            
+            this.Id = Id;
+            this.ContactListId = ContactListId;
             
         }
         
@@ -102,9 +70,7 @@ this.ContactListId = ContactListId;
             sb.Append("class DialerContactId {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

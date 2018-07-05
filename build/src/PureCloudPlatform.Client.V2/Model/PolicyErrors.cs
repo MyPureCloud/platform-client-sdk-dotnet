@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyErrors" /> class.
         /// </summary>
-        
-        
         /// <param name="PolicyErrorMessages">PolicyErrorMessages.</param>
-        
-        
         public PolicyErrors(List<PolicyErrorMessage> PolicyErrorMessages = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.PolicyErrorMessages = PolicyErrorMessages;
-            
-            
-            
+            this.PolicyErrorMessages = PolicyErrorMessages;
             
         }
         
@@ -72,7 +55,6 @@ this.PolicyErrorMessages = PolicyErrorMessages;
             sb.Append("class PolicyErrors {\n");
             
             sb.Append("  PolicyErrorMessages: ").Append(PolicyErrorMessages).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

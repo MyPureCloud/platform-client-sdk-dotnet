@@ -78,61 +78,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmHistoricalAdherenceCalculationsCompleteNoticeNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="DownloadUrl">DownloadUrl.</param>
-        
-        
-        
         /// <param name="QueryState">QueryState.</param>
-        
-        
         public WfmHistoricalAdherenceCalculationsCompleteNoticeNotification(string Id = null, string DownloadUrl = null, QueryStateEnum? QueryState = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DownloadUrl = DownloadUrl;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueryState = QueryState;
-            
-            
-            
+            this.Id = Id;
+            this.DownloadUrl = DownloadUrl;
+            this.QueryState = QueryState;
             
         }
         
@@ -165,11 +118,8 @@ this.QueryState = QueryState;
             sb.Append("class WfmHistoricalAdherenceCalculationsCompleteNoticeNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
-            
             sb.Append("  QueryState: ").Append(QueryState).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

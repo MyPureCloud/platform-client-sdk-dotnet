@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DraftValidationResult" /> class.
         /// </summary>
-        
-        
         /// <param name="Valid">Indicates if configuration is valid.</param>
-        
-        
-        
         /// <param name="Errors">List of errors causing validation failure.</param>
-        
-        
         public DraftValidationResult(bool? Valid = null, List<ErrorBody> Errors = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Valid = Valid;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Errors = Errors;
-            
-            
-            
+            this.Valid = Valid;
+            this.Errors = Errors;
             
         }
         
@@ -104,9 +72,7 @@ this.Errors = Errors;
             sb.Append("class DraftValidationResult {\n");
             
             sb.Append("  Valid: ").Append(Valid).Append("\n");
-            
             sb.Append("  Errors: ").Append(Errors).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

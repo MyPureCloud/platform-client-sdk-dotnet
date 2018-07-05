@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionInput" /> class.
         /// </summary>
-        
-        
         /// <param name="InputSchema">JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both..</param>
-        
-        
-        
         /// <param name="InputSchemaFlattened">JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either inputSchema or inputSchemaFlattened will be returned, not both..</param>
-        
-        
-        
         /// <param name="InputSchemaUri">The URI of the input schema.</param>
-        
-        
         public ActionInput(JsonSchemaDocument InputSchema = null, JsonSchemaDocument InputSchemaFlattened = null, string InputSchemaUri = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.InputSchema = InputSchema;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InputSchemaFlattened = InputSchemaFlattened;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InputSchemaUri = InputSchemaUri;
-            
-            
-            
+            this.InputSchema = InputSchema;
+            this.InputSchemaFlattened = InputSchemaFlattened;
+            this.InputSchemaUri = InputSchemaUri;
             
         }
         
@@ -135,11 +88,8 @@ this.InputSchemaUri = InputSchemaUri;
             sb.Append("class ActionInput {\n");
             
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
-            
             sb.Append("  InputSchemaFlattened: ").Append(InputSchemaFlattened).Append("\n");
-            
             sb.Append("  InputSchemaUri: ").Append(InputSchemaUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

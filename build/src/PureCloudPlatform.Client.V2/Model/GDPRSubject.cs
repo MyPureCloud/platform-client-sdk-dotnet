@@ -59,129 +59,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GDPRSubject" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="UserId">UserId.</param>
-        
-        
-        
         /// <param name="ExternalContactId">ExternalContactId.</param>
-        
-        
-        
         /// <param name="DialerContactId">DialerContactId.</param>
-        
-        
-        
         /// <param name="Addresses">Addresses.</param>
-        
-        
-        
         /// <param name="PhoneNumbers">PhoneNumbers.</param>
-        
-        
-        
         /// <param name="EmailAddresses">EmailAddresses.</param>
-        
-        
         public GDPRSubject(string Name = null, string UserId = null, string ExternalContactId = null, DialerContactId DialerContactId = null, List<string> Addresses = null, List<string> PhoneNumbers = null, List<string> EmailAddresses = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalContactId = ExternalContactId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DialerContactId = DialerContactId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Addresses = Addresses;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneNumbers = PhoneNumbers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EmailAddresses = EmailAddresses;
-            
-            
-            
+            this.Name = Name;
+            this.UserId = UserId;
+            this.ExternalContactId = ExternalContactId;
+            this.DialerContactId = DialerContactId;
+            this.Addresses = Addresses;
+            this.PhoneNumbers = PhoneNumbers;
+            this.EmailAddresses = EmailAddresses;
             
         }
         
@@ -252,19 +145,12 @@ this.EmailAddresses = EmailAddresses;
             sb.Append("class GDPRSubject {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
-            
             sb.Append("  DialerContactId: ").Append(DialerContactId).Append("\n");
-            
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
-            
             sb.Append("  PhoneNumbers: ").Append(PhoneNumbers).Append("\n");
-            
             sb.Append("  EmailAddresses: ").Append(EmailAddresses).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

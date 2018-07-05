@@ -92,66 +92,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Reaction" /> class.
         /// </summary>
-        
-        
         /// <param name="Data">Parameter for this reaction. For transfer_flow, this would be the outbound flow id..</param>
-        
-        
-        
         /// <param name="Name">Name of the parameter for this reaction. For transfer_flow, this would be the outbound flow name..</param>
-        
-        
-        
         /// <param name="ReactionType">The reaction to take for a given call analysis result. (required).</param>
-        
-        
         public Reaction(string Data = null, string Name = null, ReactionTypeEnum? ReactionType = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "ReactionType" is required (not null)
-            if (ReactionType == null)
-            {
-                throw new InvalidDataException("ReactionType is a required property for Reaction and cannot be null");
-            }
-            else
-            {
-                this.ReactionType = ReactionType;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-this.Data = Data;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
+            this.Data = Data;
+            this.Name = Name;
             
         }
         
@@ -186,11 +133,8 @@ this.Name = Name;
             sb.Append("class Reaction {\n");
             
             sb.Append("  Data: ").Append(Data).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ReactionType: ").Append(ReactionType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

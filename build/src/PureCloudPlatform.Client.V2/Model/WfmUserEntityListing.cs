@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmUserEntityListing" /> class.
         /// </summary>
-        
-        
         /// <param name="Entities">Entities.</param>
-        
-        
         public WfmUserEntityListing(List<User> Entities = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Entities = Entities;
-            
-            
-            
+            this.Entities = Entities;
             
         }
         
@@ -72,7 +55,6 @@ this.Entities = Entities;
             sb.Append("class WfmUserEntityListing {\n");
             
             sb.Append("  Entities: ").Append(Entities).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

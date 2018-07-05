@@ -70,134 +70,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationForm" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The evaluation form name (required).</param>
-        
-        
-        
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Published">Published.</param>
-        
-        
-        
         /// <param name="ContextId">ContextId.</param>
-        
-        
-        
         /// <param name="QuestionGroups">A list of question groups (required).</param>
-        
-        
-        
         /// <param name="PublishedVersions">PublishedVersions.</param>
-        
-        
-        
-        
         public EvaluationForm(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for EvaluationForm and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "QuestionGroups" is required (not null)
-            if (QuestionGroups == null)
-            {
-                throw new InvalidDataException("QuestionGroups is a required property for EvaluationForm and cannot be null");
-            }
-            else
-            {
-                this.QuestionGroups = QuestionGroups;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Published = Published;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContextId = ContextId;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.PublishedVersions = PublishedVersions;
-            
-            
-            
-            
-            
+            this.ModifiedDate = ModifiedDate;
+            this.Published = Published;
+            this.ContextId = ContextId;
+            this.PublishedVersions = PublishedVersions;
             
         }
         
@@ -281,21 +165,13 @@ this.PublishedVersions = PublishedVersions;
             sb.Append("class EvaluationForm {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  Published: ").Append(Published).Append("\n");
-            
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
-            
             sb.Append("  QuestionGroups: ").Append(QuestionGroups).Append("\n");
-            
             sb.Append("  PublishedVersions: ").Append(PublishedVersions).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

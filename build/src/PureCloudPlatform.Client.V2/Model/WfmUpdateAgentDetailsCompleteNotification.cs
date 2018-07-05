@@ -68,27 +68,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmUpdateAgentDetailsCompleteNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
         public WfmUpdateAgentDetailsCompleteNotification(StatusEnum? Status = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
+            this.Status = Status;
             
         }
         
@@ -105,7 +88,6 @@ this.Status = Status;
             sb.Append("class WfmUpdateAgentDetailsCompleteNotification {\n");
             
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

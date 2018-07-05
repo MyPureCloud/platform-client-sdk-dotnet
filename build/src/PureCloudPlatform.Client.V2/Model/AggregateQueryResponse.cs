@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregateQueryResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="Results">Results.</param>
-        
-        
         public AggregateQueryResponse(List<AggregateDataContainer> Results = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Results = Results;
-            
-            
-            
+            this.Results = Results;
             
         }
         
@@ -72,7 +55,6 @@ this.Results = Results;
             sb.Append("class AggregateQueryResponse {\n");
             
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

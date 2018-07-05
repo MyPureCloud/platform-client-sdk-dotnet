@@ -114,61 +114,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentAttributeFilterItem" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="_Operator">_Operator.</param>
-        
-        
-        
         /// <param name="Values">Values.</param>
-        
-        
         public ContentAttributeFilterItem(string Id = null, OperatorEnum? _Operator = null, List<string> Values = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Operator = _Operator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Values = Values;
-            
-            
-            
+            this.Id = Id;
+            this._Operator = _Operator;
+            this.Values = Values;
             
         }
         
@@ -201,11 +154,8 @@ this.Values = Values;
             sb.Append("class ContentAttributeFilterItem {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-            
             sb.Append("  Values: ").Append(Values).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

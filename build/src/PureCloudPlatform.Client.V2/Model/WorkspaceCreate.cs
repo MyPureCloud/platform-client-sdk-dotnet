@@ -45,66 +45,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceCreate" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">The workspace name (required).</param>
-        
-        
-        
         /// <param name="Bucket">Bucket.</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
         public WorkspaceCreate(string Name = null, string Bucket = null, string Description = null)
         {
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for WorkspaceCreate and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Bucket = Bucket;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
+            this.Bucket = Bucket;
+            this.Description = Description;
             
         }
         
@@ -144,11 +91,8 @@ this.Description = Description;
             sb.Append("class WorkspaceCreate {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Bucket: ").Append(Bucket).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

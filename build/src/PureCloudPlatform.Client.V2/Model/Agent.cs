@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Agent" /> class.
         /// </summary>
-        
-        
         /// <param name="Stage">The current stage for this agent.</param>
-        
-        
         public Agent(string Stage = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Stage = Stage;
-            
-            
-            
+            this.Stage = Stage;
             
         }
         
@@ -73,7 +56,6 @@ this.Stage = Stage;
             sb.Append("class Agent {\n");
             
             sb.Append("  Stage: ").Append(Stage).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

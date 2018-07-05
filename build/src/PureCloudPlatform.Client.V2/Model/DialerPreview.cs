@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerPreview" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="ContactId">The contact associated with this preview data pop.</param>
-        
-        
-        
         /// <param name="ContactListId">The contactList associated with this preview data pop..</param>
-        
-        
-        
         /// <param name="CampaignId">The campaignId associated with this preview data pop..</param>
-        
-        
-        
         /// <param name="PhoneNumberColumns">The phone number columns associated with this campaign.</param>
-        
-        
         public DialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<PhoneNumberColumn> PhoneNumberColumns = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactId = ContactId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactListId = ContactListId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CampaignId = CampaignId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneNumberColumns = PhoneNumberColumns;
-            
-            
-            
+            this.Id = Id;
+            this.ContactId = ContactId;
+            this.ContactListId = ContactListId;
+            this.CampaignId = CampaignId;
+            this.PhoneNumberColumns = PhoneNumberColumns;
             
         }
         
@@ -196,15 +119,10 @@ this.PhoneNumberColumns = PhoneNumberColumns;
             sb.Append("class DialerPreview {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  ContactId: ").Append(ContactId).Append("\n");
-            
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
-            
             sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
-            
             sb.Append("  PhoneNumberColumns: ").Append(PhoneNumberColumns).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

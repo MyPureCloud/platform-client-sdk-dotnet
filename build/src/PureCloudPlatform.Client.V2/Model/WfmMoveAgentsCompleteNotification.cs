@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmMoveAgentsCompleteNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="RequestingUser">RequestingUser.</param>
-        
-        
-        
         /// <param name="DestinationManagementUnit">DestinationManagementUnit.</param>
-        
-        
-        
         /// <param name="Results">Results.</param>
-        
-        
         public WfmMoveAgentsCompleteNotification(DocumentDataV2NotificationWorkspace RequestingUser = null, DocumentDataV2NotificationWorkspace DestinationManagementUnit = null, List<WfmMoveAgentsCompleteNotificationResults> Results = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RequestingUser = RequestingUser;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DestinationManagementUnit = DestinationManagementUnit;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Results = Results;
-            
-            
-            
+            this.RequestingUser = RequestingUser;
+            this.DestinationManagementUnit = DestinationManagementUnit;
+            this.Results = Results;
             
         }
         
@@ -132,11 +85,8 @@ this.Results = Results;
             sb.Append("class WfmMoveAgentsCompleteNotification {\n");
             
             sb.Append("  RequestingUser: ").Append(RequestingUser).Append("\n");
-            
             sb.Append("  DestinationManagementUnit: ").Append(DestinationManagementUnit).Append("\n");
-            
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

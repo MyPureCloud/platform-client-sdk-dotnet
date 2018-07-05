@@ -40,49 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateAddressResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="Valid">Was the passed in address valid (required).</param>
-        
-        
-        
         /// <param name="Response">Subscriber schema.</param>
-        
-        
         public ValidateAddressResponse(bool? Valid = null, SubscriberResponse Response = null)
         {
-            
-            
-            
-            // to ensure "Valid" is required (not null)
-            if (Valid == null)
-            {
-                throw new InvalidDataException("Valid is a required property for ValidateAddressResponse and cannot be null");
-            }
-            else
-            {
-                this.Valid = Valid;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Response = Response;
-            
-            
-            
+            this.Response = Response;
             
         }
         
@@ -115,9 +77,7 @@ this.Response = Response;
             sb.Append("class ValidateAddressResponse {\n");
             
             sb.Append("  Valid: ").Append(Valid).Append("\n");
-            
             sb.Append("  Response: ").Append(Response).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

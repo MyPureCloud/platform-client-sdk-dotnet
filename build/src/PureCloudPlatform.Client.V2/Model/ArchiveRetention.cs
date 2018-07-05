@@ -61,44 +61,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchiveRetention" /> class.
         /// </summary>
-        
-        
         /// <param name="Days">Days.</param>
-        
-        
-        
         /// <param name="StorageMedium">StorageMedium.</param>
-        
-        
         public ArchiveRetention(int? Days = null, StorageMediumEnum? StorageMedium = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Days = Days;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StorageMedium = StorageMedium;
-            
-            
-            
+            this.Days = Days;
+            this.StorageMedium = StorageMedium;
             
         }
         
@@ -123,9 +91,7 @@ this.StorageMedium = StorageMedium;
             sb.Append("class ArchiveRetention {\n");
             
             sb.Append("  Days: ").Append(Days).Append("\n");
-            
             sb.Append("  StorageMedium: ").Append(StorageMedium).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

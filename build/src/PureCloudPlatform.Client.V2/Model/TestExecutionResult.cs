@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TestExecutionResult" /> class.
         /// </summary>
-        
-        
         /// <param name="Operations">Execution operations performed as part of the test.</param>
-        
-        
-        
         /// <param name="Error">The final error encountered during the test that resulted in test failure.</param>
-        
-        
-        
         /// <param name="FinalResult">The final result of the test. This is the response that would be returned during normal action execution.</param>
-        
-        
-        
         /// <param name="Success">Indicates whether or not the test was a success.</param>
-        
-        
         public TestExecutionResult(List<TestExecutionOperationResult> Operations = null, ErrorBody Error = null, Object FinalResult = null, bool? Success = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Operations = Operations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Error = Error;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FinalResult = FinalResult;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Success = Success;
-            
-            
-            
+            this.Operations = Operations;
+            this.Error = Error;
+            this.FinalResult = FinalResult;
+            this.Success = Success;
             
         }
         
@@ -166,13 +104,9 @@ this.Success = Success;
             sb.Append("class TestExecutionResult {\n");
             
             sb.Append("  Operations: ").Append(Operations).Append("\n");
-            
             sb.Append("  Error: ").Append(Error).Append("\n");
-            
             sb.Append("  FinalResult: ").Append(FinalResult).Append("\n");
-            
             sb.Append("  Success: ").Append(Success).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

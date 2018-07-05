@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyFormUriReference" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="SelfUri">SelfUri.</param>
-        
-        
-        
         /// <param name="ContextId">The context id of this form..</param>
-        
-        
         public SurveyFormUriReference(string Id = null, string Name = null, string SelfUri = null, string ContextId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SelfUri = SelfUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContextId = ContextId;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.SelfUri = SelfUri;
+            this.ContextId = ContextId;
             
         }
         
@@ -163,13 +101,9 @@ this.ContextId = ContextId;
             sb.Append("class SurveyFormUriReference {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -64,124 +64,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatDeployment" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="AuthenticationRequired">AuthenticationRequired.</param>
-        
-        
-        
         /// <param name="AuthenticationUrl">URL for third party service authenticating web chat clients. See https://github.com/MyPureCloud/authenticated-web-chat-server-examples.</param>
-        
-        
-        
         /// <param name="Disabled">Disabled.</param>
-        
-        
-        
         /// <param name="WebChatConfig">WebChatConfig.</param>
-        
-        
-        
-        
         public WebChatDeployment(string Name = null, string Description = null, bool? AuthenticationRequired = null, string AuthenticationUrl = null, bool? Disabled = null, WebChatConfig WebChatConfig = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AuthenticationRequired = AuthenticationRequired;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AuthenticationUrl = AuthenticationUrl;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Disabled = Disabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WebChatConfig = WebChatConfig;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Description = Description;
+            this.AuthenticationRequired = AuthenticationRequired;
+            this.AuthenticationUrl = AuthenticationUrl;
+            this.Disabled = Disabled;
+            this.WebChatConfig = WebChatConfig;
             
         }
         
@@ -263,21 +159,13 @@ this.WebChatConfig = WebChatConfig;
             sb.Append("class WebChatDeployment {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  AuthenticationRequired: ").Append(AuthenticationRequired).Append("\n");
-            
             sb.Append("  AuthenticationUrl: ").Append(AuthenticationUrl).Append("\n");
-            
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
-            
             sb.Append("  WebChatConfig: ").Append(WebChatConfig).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

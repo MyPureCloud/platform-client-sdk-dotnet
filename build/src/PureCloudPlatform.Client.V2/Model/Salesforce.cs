@@ -59,107 +59,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Salesforce" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Certificate">Certificate.</param>
-        
-        
-        
         /// <param name="IssuerURI">IssuerURI.</param>
-        
-        
-        
         /// <param name="SsoTargetURI">SsoTargetURI.</param>
-        
-        
-        
         /// <param name="Disabled">Disabled.</param>
-        
-        
-        
-        
         public Salesforce(string Name = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null, bool? Disabled = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Certificate = Certificate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IssuerURI = IssuerURI;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SsoTargetURI = SsoTargetURI;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Disabled = Disabled;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Certificate = Certificate;
+            this.IssuerURI = IssuerURI;
+            this.SsoTargetURI = SsoTargetURI;
+            this.Disabled = Disabled;
             
         }
         
@@ -232,19 +143,12 @@ this.Disabled = Disabled;
             sb.Append("class Salesforce {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
-            
             sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
-            
             sb.Append("  SsoTargetURI: ").Append(SsoTargetURI).Append("\n");
-            
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayForecastData" /> class.
         /// </summary>
-        
-        
         /// <param name="Offered">The number of interactions routed into the queue for the given media type(s) for an agent to answer.</param>
-        
-        
-        
         /// <param name="AverageTalkTimeSeconds">The average time in seconds an agent spends interacting with a customer.</param>
-        
-        
-        
         /// <param name="AverageAfterCallWorkSeconds">The average time in seconds spent in after-call work. After-call work is the work that an agent performs immediately following an interaction.</param>
-        
-        
         public IntradayForecastData(double? Offered = null, double? AverageTalkTimeSeconds = null, double? AverageAfterCallWorkSeconds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Offered = Offered;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
-            
-            
-            
+            this.Offered = Offered;
+            this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
+            this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
             
         }
         
@@ -135,11 +88,8 @@ this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
             sb.Append("class IntradayForecastData {\n");
             
             sb.Append("  Offered: ").Append(Offered).Append("\n");
-            
             sb.Append("  AverageTalkTimeSeconds: ").Append(AverageTalkTimeSeconds).Append("\n");
-            
             sb.Append("  AverageAfterCallWorkSeconds: ").Append(AverageAfterCallWorkSeconds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

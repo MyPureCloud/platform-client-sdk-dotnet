@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayScheduleData" /> class.
         /// </summary>
-        
-        
         /// <param name="OnQueueTimeSeconds">The total scheduled on-queue time in seconds for all agents in this group.</param>
-        
-        
-        
         /// <param name="ScheduledTimeSeconds">The total scheduled time in seconds for all agents in this group.</param>
-        
-        
         public IntradayScheduleData(int? OnQueueTimeSeconds = null, int? ScheduledTimeSeconds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.OnQueueTimeSeconds = OnQueueTimeSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScheduledTimeSeconds = ScheduledTimeSeconds;
-            
-            
-            
+            this.OnQueueTimeSeconds = OnQueueTimeSeconds;
+            this.ScheduledTimeSeconds = ScheduledTimeSeconds;
             
         }
         
@@ -104,9 +72,7 @@ this.ScheduledTimeSeconds = ScheduledTimeSeconds;
             sb.Append("class IntradayScheduleData {\n");
             
             sb.Append("  OnQueueTimeSeconds: ").Append(OnQueueTimeSeconds).Append("\n");
-            
             sb.Append("  ScheduledTimeSeconds: ").Append(ScheduledTimeSeconds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

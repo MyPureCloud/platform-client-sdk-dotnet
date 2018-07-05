@@ -65,122 +65,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Relationship" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="User">The user associated with the external organization (required).</param>
-        
-        
-        
         /// <param name="ExternalOrganization">The external organization this relationship is attached to (required).</param>
-        
-        
-        
         /// <param name="_Relationship">The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant (required).</param>
-        
-        
-        
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        
-        
-        
-        
         public Relationship(string Name = null, User User = null, ExternalOrganization ExternalOrganization = null, string _Relationship = null, List<ExternalDataSource> ExternalDataSources = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "User" is required (not null)
-            if (User == null)
-            {
-                throw new InvalidDataException("User is a required property for Relationship and cannot be null");
-            }
-            else
-            {
-                this.User = User;
-            }
-            
-            
-            
-            
-            
-            // to ensure "ExternalOrganization" is required (not null)
-            if (ExternalOrganization == null)
-            {
-                throw new InvalidDataException("ExternalOrganization is a required property for Relationship and cannot be null");
-            }
-            else
-            {
-                this.ExternalOrganization = ExternalOrganization;
-            }
-            
-            
-            
-            
-            
-            // to ensure "_Relationship" is required (not null)
-            if (_Relationship == null)
-            {
-                throw new InvalidDataException("_Relationship is a required property for Relationship and cannot be null");
-            }
-            else
-            {
-                this._Relationship = _Relationship;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalDataSources = ExternalDataSources;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.ExternalDataSources = ExternalDataSources;
             
         }
         
@@ -257,19 +150,12 @@ this.ExternalDataSources = ExternalDataSources;
             sb.Append("class Relationship {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
-            
             sb.Append("  _Relationship: ").Append(_Relationship).Append("\n");
-            
             sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

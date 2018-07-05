@@ -34,33 +34,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustUserDetails" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="CreatedBy">User that added trusted user..</param>
-        
-        
         public TrustUserDetails(OrgUser CreatedBy = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
+            this.CreatedBy = CreatedBy;
             
         }
         
@@ -93,9 +70,7 @@ this.CreatedBy = CreatedBy;
             sb.Append("class TrustUserDetails {\n");
             
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MaxParticipants" /> class.
         /// </summary>
-        
-        
         /// <param name="_MaxParticipants">The maximum number of participants that are allowed on a conversation..</param>
-        
-        
         public MaxParticipants(int? _MaxParticipants = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this._MaxParticipants = _MaxParticipants;
-            
-            
-            
+            this._MaxParticipants = _MaxParticipants;
             
         }
         
@@ -73,7 +56,6 @@ this._MaxParticipants = _MaxParticipants;
             sb.Append("class MaxParticipants {\n");
             
             sb.Append("  _MaxParticipants: ").Append(_MaxParticipants).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

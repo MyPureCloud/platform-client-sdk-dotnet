@@ -72,61 +72,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterNotificationClauses" /> class.
         /// </summary>
-        
-        
         /// <param name="FilterType">FilterType.</param>
-        
-        
-        
         /// <param name="Predicates">Predicates.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ContactListFilterNotificationClauses(FilterTypeEnum? FilterType = null, List<ContactListFilterNotificationPredicates> Predicates = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.FilterType = FilterType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Predicates = Predicates;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.FilterType = FilterType;
+            this.Predicates = Predicates;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -159,11 +112,8 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ContactListFilterNotificationClauses {\n");
             
             sb.Append("  FilterType: ").Append(FilterType).Append("\n");
-            
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

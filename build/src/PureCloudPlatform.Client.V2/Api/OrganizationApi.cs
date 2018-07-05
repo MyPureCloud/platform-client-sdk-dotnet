@@ -377,8 +377,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FieldConfig>(localVarStatusCode,
                 localVarHeaders,
-                (FieldConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldConfig)));
-            
+                (FieldConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -473,8 +474,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FieldConfig>(localVarStatusCode,
                 localVarHeaders,
-                (FieldConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldConfig)));
-            
+                (FieldConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -562,8 +564,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Organization>(localVarStatusCode,
                 localVarHeaders,
-                (Organization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Organization)));
-            
+                (Organization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Organization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -651,8 +654,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Organization>(localVarStatusCode,
                 localVarHeaders,
-                (Organization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Organization)));
-            
+                (Organization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Organization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -756,8 +760,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<OrganizationFeatures>(localVarStatusCode,
                 localVarHeaders,
-                (OrganizationFeatures) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationFeatures)));
-            
+                (OrganizationFeatures) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationFeatures)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -863,8 +868,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<OrganizationFeatures>(localVarStatusCode,
                 localVarHeaders,
-                (OrganizationFeatures) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationFeatures)));
-            
+                (OrganizationFeatures) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationFeatures)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -959,8 +965,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Organization>(localVarStatusCode,
                 localVarHeaders,
-                (Organization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Organization)));
-            
+                (Organization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Organization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1055,8 +1062,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Organization>(localVarStatusCode,
                 localVarHeaders,
-                (Organization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Organization)));
-            
+                (Organization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Organization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

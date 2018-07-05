@@ -40,49 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallCommand" /> class.
         /// </summary>
-        
-        
         /// <param name="CallNumber">The phone number to dial for this call. (required).</param>
-        
-        
-        
         /// <param name="PhoneColumn">For a dialer preview or scheduled callback, the phone column associated with the phone number.</param>
-        
-        
         public CallCommand(string CallNumber = null, string PhoneColumn = null)
         {
-            
-            
-            
-            // to ensure "CallNumber" is required (not null)
-            if (CallNumber == null)
-            {
-                throw new InvalidDataException("CallNumber is a required property for CallCommand and cannot be null");
-            }
-            else
-            {
-                this.CallNumber = CallNumber;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneColumn = PhoneColumn;
-            
-            
-            
+            this.PhoneColumn = PhoneColumn;
             
         }
         
@@ -115,9 +77,7 @@ this.PhoneColumn = PhoneColumn;
             sb.Append("class CallCommand {\n");
             
             sb.Append("  CallNumber: ").Append(CallNumber).Append("\n");
-            
             sb.Append("  PhoneColumn: ").Append(PhoneColumn).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

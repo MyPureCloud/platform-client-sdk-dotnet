@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTranslations" /> class.
         /// </summary>
-        
-        
         /// <param name="OrgSpecific">OrgSpecific.</param>
-        
-        
-        
         /// <param name="Builtin">Builtin.</param>
-        
-        
         public AvailableTranslations(List<string> OrgSpecific = null, List<string> Builtin = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.OrgSpecific = OrgSpecific;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Builtin = Builtin;
-            
-            
-            
+            this.OrgSpecific = OrgSpecific;
+            this.Builtin = Builtin;
             
         }
         
@@ -102,9 +70,7 @@ this.Builtin = Builtin;
             sb.Append("class AvailableTranslations {\n");
             
             sb.Append("  OrgSpecific: ").Append(OrgSpecific).Append("\n");
-            
             sb.Append("  Builtin: ").Append(Builtin).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

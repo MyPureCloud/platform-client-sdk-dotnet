@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingDataV2NotificationWorkspaceData" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
         public RecordingDataV2NotificationWorkspaceData(string Id = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
+            this.Id = Id;
             
         }
         
@@ -72,7 +55,6 @@ this.Id = Id;
             sb.Append("class RecordingDataV2NotificationWorkspaceData {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -95,251 +95,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Keyword" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Phrase">The word or phrase which is being looked for with speech recognition. (required).</param>
-        
-        
-        
         /// <param name="Confidence">A sensitivity threshold that can be increased to lower false positives or decreased to reduce false negatives. (required).</param>
-        
-        
-        
         /// <param name="AgentScoreModifier">A modifier to the evaluation score when the phrase is spotted in the agent channel (required).</param>
-        
-        
-        
         /// <param name="CustomerScoreModifier">A modifier to the evaluation score when the phrase is spotted in the customer channel (required).</param>
-        
-        
-        
         /// <param name="AlternateSpellings">Other spellings of the phrase that can be added to reduce missed spots (false negatives)..</param>
-        
-        
-        
         /// <param name="Pronunciations">The phonetic spellings for the phrase and alternate spellings..</param>
-        
-        
-        
         /// <param name="AntiWords">Words that are similar to the phrase but not desired. Added to reduce incorrect spots (false positives)..</param>
-        
-        
-        
         /// <param name="AntiPronunciations">The phonetic spellings for the antiWords..</param>
-        
-        
-        
         /// <param name="SpotabilityIndex">A prediction of how easy it is to unambiguously spot the keyword within its language based on spelling..</param>
-        
-        
-        
         /// <param name="MarginOfError">MarginOfError.</param>
-        
-        
-        
         /// <param name="Pronunciation">Pronunciation.</param>
-        
-        
         public Keyword(string Id = null, string Name = null, string Phrase = null, int? Confidence = null, int? AgentScoreModifier = null, int? CustomerScoreModifier = null, List<string> AlternateSpellings = null, List<string> Pronunciations = null, List<string> AntiWords = null, List<string> AntiPronunciations = null, double? SpotabilityIndex = null, double? MarginOfError = null, string Pronunciation = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Phrase" is required (not null)
-            if (Phrase == null)
-            {
-                throw new InvalidDataException("Phrase is a required property for Keyword and cannot be null");
-            }
-            else
-            {
-                this.Phrase = Phrase;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Confidence" is required (not null)
-            if (Confidence == null)
-            {
-                throw new InvalidDataException("Confidence is a required property for Keyword and cannot be null");
-            }
-            else
-            {
-                this.Confidence = Confidence;
-            }
-            
-            
-            
-            
-            
-            // to ensure "AgentScoreModifier" is required (not null)
-            if (AgentScoreModifier == null)
-            {
-                throw new InvalidDataException("AgentScoreModifier is a required property for Keyword and cannot be null");
-            }
-            else
-            {
-                this.AgentScoreModifier = AgentScoreModifier;
-            }
-            
-            
-            
-            
-            
-            // to ensure "CustomerScoreModifier" is required (not null)
-            if (CustomerScoreModifier == null)
-            {
-                throw new InvalidDataException("CustomerScoreModifier is a required property for Keyword and cannot be null");
-            }
-            else
-            {
-                this.CustomerScoreModifier = CustomerScoreModifier;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AlternateSpellings = AlternateSpellings;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Pronunciations = Pronunciations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AntiWords = AntiWords;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AntiPronunciations = AntiPronunciations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SpotabilityIndex = SpotabilityIndex;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MarginOfError = MarginOfError;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Pronunciation = Pronunciation;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.AlternateSpellings = AlternateSpellings;
+            this.Pronunciations = Pronunciations;
+            this.AntiWords = AntiWords;
+            this.AntiPronunciations = AntiPronunciations;
+            this.SpotabilityIndex = SpotabilityIndex;
+            this.MarginOfError = MarginOfError;
+            this.Pronunciation = Pronunciation;
             
         }
         
@@ -467,31 +246,18 @@ this.Pronunciation = Pronunciation;
             sb.Append("class Keyword {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Phrase: ").Append(Phrase).Append("\n");
-            
             sb.Append("  Confidence: ").Append(Confidence).Append("\n");
-            
             sb.Append("  AgentScoreModifier: ").Append(AgentScoreModifier).Append("\n");
-            
             sb.Append("  CustomerScoreModifier: ").Append(CustomerScoreModifier).Append("\n");
-            
             sb.Append("  AlternateSpellings: ").Append(AlternateSpellings).Append("\n");
-            
             sb.Append("  Pronunciations: ").Append(Pronunciations).Append("\n");
-            
             sb.Append("  AntiWords: ").Append(AntiWords).Append("\n");
-            
             sb.Append("  AntiPronunciations: ").Append(AntiPronunciations).Append("\n");
-            
             sb.Append("  SpotabilityIndex: ").Append(SpotabilityIndex).Append("\n");
-            
             sb.Append("  MarginOfError: ").Append(MarginOfError).Append("\n");
-            
             sb.Append("  Pronunciation: ").Append(Pronunciation).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

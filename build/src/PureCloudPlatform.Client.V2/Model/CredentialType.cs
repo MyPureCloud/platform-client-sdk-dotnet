@@ -49,84 +49,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CredentialType" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Properties">Properties describing credentials of this type..</param>
-        
-        
-        
         /// <param name="DisplayOrder">Order in which properties should be displayed in the UI..</param>
-        
-        
-        
         /// <param name="Required">Properties that are required fields..</param>
-        
-        
         public CredentialType(string Name = null, Object Properties = null, List<string> DisplayOrder = null, List<string> Required = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Properties = Properties;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisplayOrder = DisplayOrder;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Required = Required;
-            
-            
-            
+            this.Name = Name;
+            this.Properties = Properties;
+            this.DisplayOrder = DisplayOrder;
+            this.Required = Required;
             
         }
         
@@ -185,15 +117,10 @@ this.Required = Required;
             sb.Append("class CredentialType {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
-            
             sb.Append("  Required: ").Append(Required).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -63,44 +63,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalDataSource" /> class.
         /// </summary>
-        
-        
         /// <param name="Platform">The platform that was the source of the data.  Example: a CRM like SALESFORCE..</param>
-        
-        
-        
         /// <param name="Url">An URL that links to the source record that contributed data to the associated entity..</param>
-        
-        
         public ExternalDataSource(PlatformEnum? Platform = null, string Url = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Platform = Platform;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Url = Url;
-            
-            
-            
+            this.Platform = Platform;
+            this.Url = Url;
             
         }
         
@@ -126,9 +94,7 @@ this.Url = Url;
             sb.Append("class ExternalDataSource {\n");
             
             sb.Append("  Platform: ").Append(Platform).Append("\n");
-            
             sb.Append("  Url: ").Append(Url).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

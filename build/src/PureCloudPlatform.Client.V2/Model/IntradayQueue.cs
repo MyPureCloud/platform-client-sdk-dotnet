@@ -86,61 +86,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayQueue" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Queue ID.</param>
-        
-        
-        
         /// <param name="Name">Queue name.</param>
-        
-        
-        
         /// <param name="MediaTypes">The media types valid for this queue as defined by the service goal groups in this management unit.</param>
-        
-        
         public IntradayQueue(string Id = null, string Name = null, List<MediaTypesEnum> MediaTypes = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaTypes = MediaTypes;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.MediaTypes = MediaTypes;
             
         }
         
@@ -182,11 +135,8 @@ this.MediaTypes = MediaTypes;
             sb.Append("class IntradayQueue {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  MediaTypes: ").Append(MediaTypes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

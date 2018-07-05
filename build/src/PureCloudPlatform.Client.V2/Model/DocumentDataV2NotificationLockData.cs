@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentDataV2NotificationLockData" /> class.
         /// </summary>
-        
-        
         /// <param name="LockedBy">LockedBy.</param>
-        
-        
-        
         /// <param name="DateCreated">DateCreated.</param>
-        
-        
-        
         /// <param name="DateExpires">DateExpires.</param>
-        
-        
         public DocumentDataV2NotificationLockData(DocumentDataV2NotificationUserData LockedBy = null, DateTime? DateCreated = null, DateTime? DateExpires = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.LockedBy = LockedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateExpires = DateExpires;
-            
-            
-            
+            this.LockedBy = LockedBy;
+            this.DateCreated = DateCreated;
+            this.DateExpires = DateExpires;
             
         }
         
@@ -132,11 +85,8 @@ this.DateExpires = DateExpires;
             sb.Append("class DocumentDataV2NotificationLockData {\n");
             
             sb.Append("  LockedBy: ").Append(LockedBy).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateExpires: ").Append(DateExpires).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Bullseye" /> class.
         /// </summary>
-        
-        
         /// <param name="Rings">Rings.</param>
-        
-        
         public Bullseye(List<Ring> Rings = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Rings = Rings;
-            
-            
-            
+            this.Rings = Rings;
             
         }
         
@@ -72,7 +55,6 @@ this.Rings = Rings;
             sb.Append("class Bullseye {\n");
             
             sb.Append("  Rings: ").Append(Rings).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -1018,10 +1018,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationRole: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1113,10 +1114,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationRole: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1207,10 +1209,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1302,10 +1305,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1399,8 +1403,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<PermissionCollectionEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (PermissionCollectionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionCollectionEntityListing)));
-            
+                (PermissionCollectionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionCollectionEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1494,8 +1499,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<PermissionCollectionEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (PermissionCollectionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionCollectionEntityListing)));
-            
+                (PermissionCollectionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionCollectionEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1583,8 +1589,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<OrganizationProductEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (OrganizationProductEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationProductEntityListing)));
-            
+                (OrganizationProductEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationProductEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1672,8 +1679,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<OrganizationProductEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (OrganizationProductEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationProductEntityListing)));
-            
+                (OrganizationProductEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationProductEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1767,8 +1775,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DomainOrganizationRole>(localVarStatusCode,
                 localVarHeaders,
-                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)));
-            
+                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1863,8 +1872,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DomainOrganizationRole>(localVarStatusCode,
                 localVarHeaders,
-                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)));
-            
+                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1964,8 +1974,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DomainOrgRoleDifference>(localVarStatusCode,
                 localVarHeaders,
-                (DomainOrgRoleDifference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrgRoleDifference)));
-            
+                (DomainOrgRoleDifference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrgRoleDifference)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2067,8 +2078,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DomainOrgRoleDifference>(localVarStatusCode,
                 localVarHeaders,
-                (DomainOrgRoleDifference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrgRoleDifference)));
-            
+                (DomainOrgRoleDifference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrgRoleDifference)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2189,8 +2201,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<OrganizationRoleEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)));
-            
+                (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2311,8 +2324,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<OrganizationRoleEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)));
-            
+                (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2406,8 +2420,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<UserAuthorization>(localVarStatusCode,
                 localVarHeaders,
-                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)));
-            
+                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2502,8 +2517,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<UserAuthorization>(localVarStatusCode,
                 localVarHeaders,
-                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)));
-            
+                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2607,8 +2623,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DomainOrganizationRole>(localVarStatusCode,
                 localVarHeaders,
-                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)));
-            
+                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2714,8 +2731,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DomainOrganizationRole>(localVarStatusCode,
                 localVarHeaders,
-                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)));
-            
+                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2825,8 +2843,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DomainOrgRoleDifference>(localVarStatusCode,
                 localVarHeaders,
-                (DomainOrgRoleDifference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrgRoleDifference)));
-            
+                (DomainOrgRoleDifference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrgRoleDifference)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2939,8 +2958,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DomainOrgRoleDifference>(localVarStatusCode,
                 localVarHeaders,
-                (DomainOrgRoleDifference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrgRoleDifference)));
-            
+                (DomainOrgRoleDifference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrgRoleDifference)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3038,8 +3058,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DomainOrganizationRole>(localVarStatusCode,
                 localVarHeaders,
-                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)));
-            
+                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3138,8 +3159,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DomainOrganizationRole>(localVarStatusCode,
                 localVarHeaders,
-                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)));
-            
+                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3230,8 +3252,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<OrganizationRoleEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)));
-            
+                (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3322,8 +3345,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<OrganizationRoleEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)));
-            
+                (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3427,8 +3451,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DomainOrganizationRole>(localVarStatusCode,
                 localVarHeaders,
-                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)));
-            
+                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3534,8 +3559,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DomainOrganizationRole>(localVarStatusCode,
                 localVarHeaders,
-                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)));
-            
+                (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3639,8 +3665,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<List<string>>(localVarStatusCode,
                 localVarHeaders,
-                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)));
-            
+                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3746,8 +3773,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<List<string>>(localVarStatusCode,
                 localVarHeaders,
-                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)));
-            
+                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3851,8 +3879,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<List<string>>(localVarStatusCode,
                 localVarHeaders,
-                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)));
-            
+                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3958,8 +3987,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<List<string>>(localVarStatusCode,
                 localVarHeaders,
-                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)));
-            
+                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4057,8 +4087,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<OrganizationRoleEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)));
-            
+                (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4157,8 +4188,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<OrganizationRoleEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)));
-            
+                (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4262,8 +4294,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<UserAuthorization>(localVarStatusCode,
                 localVarHeaders,
-                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)));
-            
+                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4369,8 +4402,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<UserAuthorization>(localVarStatusCode,
                 localVarHeaders,
-                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)));
-            
+                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

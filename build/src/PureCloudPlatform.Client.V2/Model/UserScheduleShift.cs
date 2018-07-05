@@ -54,90 +54,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleShift" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">ID of the schedule shift. This is only for the case of updating and deleting an existing shift.</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Activities">List of activities in this shift.</param>
-        
-        
-        
         /// <param name="Delete">If marked true for updating this schedule shift, it will be deleted.</param>
-        
-        
-        
         /// <param name="ManuallyEdited">Whether the shift was set as manually edited.</param>
-        
-        
         public UserScheduleShift(string Id = null, List<UserScheduleActivity> Activities = null, bool? Delete = null, bool? ManuallyEdited = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Activities = Activities;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Delete = Delete;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ManuallyEdited = ManuallyEdited;
-            
-            
-            
+            this.Id = Id;
+            this.Activities = Activities;
+            this.Delete = Delete;
+            this.ManuallyEdited = ManuallyEdited;
             
         }
         
@@ -206,17 +132,11 @@ this.ManuallyEdited = ManuallyEdited;
             sb.Append("class UserScheduleShift {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
-            
             sb.Append("  Activities: ").Append(Activities).Append("\n");
-            
             sb.Append("  Delete: ").Append(Delete).Append("\n");
-            
             sb.Append("  ManuallyEdited: ").Append(ManuallyEdited).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

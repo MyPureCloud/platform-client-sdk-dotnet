@@ -99,112 +99,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageConversationNotificationMessageDetails" /> class.
         /// </summary>
-        
-        
         /// <param name="Message">Message.</param>
-        
-        
-        
         /// <param name="MessageTime">MessageTime.</param>
-        
-        
-        
         /// <param name="MessageSegmentCount">MessageSegmentCount.</param>
-        
-        
-        
         /// <param name="MessageStatus">MessageStatus.</param>
-        
-        
-        
         /// <param name="Media">Media.</param>
-        
-        
-        
         /// <param name="Stickers">Stickers.</param>
-        
-        
         public MessageConversationNotificationMessageDetails(MessageConversationNotificationUriReference Message = null, DateTime? MessageTime = null, int? MessageSegmentCount = null, MessageStatusEnum? MessageStatus = null, List<ConversationNotificationMedia> Media = null, List<ConversationNotificationStickers> Stickers = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Message = Message;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageTime = MessageTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageSegmentCount = MessageSegmentCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageStatus = MessageStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Media = Media;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Stickers = Stickers;
-            
-            
-            
+            this.Message = Message;
+            this.MessageTime = MessageTime;
+            this.MessageSegmentCount = MessageSegmentCount;
+            this.MessageStatus = MessageStatus;
+            this.Media = Media;
+            this.Stickers = Stickers;
             
         }
         
@@ -261,17 +169,11 @@ this.Stickers = Stickers;
             sb.Append("class MessageConversationNotificationMessageDetails {\n");
             
             sb.Append("  Message: ").Append(Message).Append("\n");
-            
             sb.Append("  MessageTime: ").Append(MessageTime).Append("\n");
-            
             sb.Append("  MessageSegmentCount: ").Append(MessageSegmentCount).Append("\n");
-            
             sb.Append("  MessageStatus: ").Append(MessageStatus).Append("\n");
-            
             sb.Append("  Media: ").Append(Media).Append("\n");
-            
             sb.Append("  Stickers: ").Append(Stickers).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

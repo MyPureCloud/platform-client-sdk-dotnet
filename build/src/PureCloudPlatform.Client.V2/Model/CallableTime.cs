@@ -40,54 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableTime" /> class.
         /// </summary>
-        
-        
         /// <param name="TimeSlots">The time intervals for which it is acceptable to place outbound calls. (required).</param>
-        
-        
-        
         /// <param name="TimeZoneId">The time zone for the time slots; for example, Africa/Abidjan (required).</param>
-        
-        
         public CallableTime(List<CampaignTimeSlot> TimeSlots = null, string TimeZoneId = null)
         {
-            
-            
-            
-            // to ensure "TimeSlots" is required (not null)
-            if (TimeSlots == null)
-            {
-                throw new InvalidDataException("TimeSlots is a required property for CallableTime and cannot be null");
-            }
-            else
-            {
-                this.TimeSlots = TimeSlots;
-            }
-            
-            
-            
-            
-            
-            // to ensure "TimeZoneId" is required (not null)
-            if (TimeZoneId == null)
-            {
-                throw new InvalidDataException("TimeZoneId is a required property for CallableTime and cannot be null");
-            }
-            else
-            {
-                this.TimeZoneId = TimeZoneId;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -120,9 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class CallableTime {\n");
             
             sb.Append("  TimeSlots: ").Append(TimeSlots).Append("\n");
-            
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

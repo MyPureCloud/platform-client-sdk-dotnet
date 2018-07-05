@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerDate" /> class.
         /// </summary>
-        
-        
         /// <param name="CurrentDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
         public ServerDate(DateTime? CurrentDate = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CurrentDate = CurrentDate;
-            
-            
-            
+            this.CurrentDate = CurrentDate;
             
         }
         
@@ -73,7 +56,6 @@ this.CurrentDate = CurrentDate;
             sb.Append("class ServerDate {\n");
             
             sb.Append("  CurrentDate: ").Append(CurrentDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LicenseOrgToggle" /> class.
         /// </summary>
-        
-        
         /// <param name="FeatureName">FeatureName.</param>
-        
-        
-        
         /// <param name="Enabled">Enabled.</param>
-        
-        
         public LicenseOrgToggle(string FeatureName = null, bool? Enabled = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.FeatureName = FeatureName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Enabled = Enabled;
-            
-            
-            
+            this.FeatureName = FeatureName;
+            this.Enabled = Enabled;
             
         }
         
@@ -102,9 +70,7 @@ this.Enabled = Enabled;
             sb.Append("class LicenseOrgToggle {\n");
             
             sb.Append("  FeatureName: ").Append(FeatureName).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

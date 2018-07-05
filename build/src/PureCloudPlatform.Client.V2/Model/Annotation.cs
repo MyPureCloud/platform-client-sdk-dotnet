@@ -140,372 +140,46 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Annotation" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="Location">Offset of annotation in milliseconds..</param>
-        
-        
-        
         /// <param name="DurationMs">Duration of annotation in milliseconds..</param>
-        
-        
-        
         /// <param name="AbsoluteLocation">Offset of annotation (milliseconds) from start of recording..</param>
-        
-        
-        
         /// <param name="AbsoluteDurationMs">Duration of annotation (milliseconds)..</param>
-        
-        
-        
         /// <param name="RecordingLocation">Offset of annotation (milliseconds) from start of recording, adjusted for any recording cuts.</param>
-        
-        
-        
         /// <param name="RecordingDurationMs">Duration of annotation (milliseconds), adjusted for any recording cuts..</param>
-        
-        
-        
         /// <param name="User">User that created this annotation (if any)..</param>
-        
-        
-        
         /// <param name="Description">Text of annotation..</param>
-        
-        
-        
         /// <param name="KeywordName">The word or phrase which is being looked for with speech recognition..</param>
-        
-        
-        
         /// <param name="Confidence">Actual confidence that this is an accurate match..</param>
-        
-        
-        
         /// <param name="KeywordSetId">A unique identifier for the keyword set to which this spotted keyword belongs..</param>
-        
-        
-        
         /// <param name="KeywordSetName">The keyword set to which this spotted keyword belongs..</param>
-        
-        
-        
         /// <param name="Utterance">The phonetic spellings for the phrase and alternate spellings..</param>
-        
-        
-        
         /// <param name="TimeBegin">Beginning time offset of the keyword spot match..</param>
-        
-        
-        
         /// <param name="TimeEnd">Ending time offset of the keyword spot match..</param>
-        
-        
-        
         /// <param name="KeywordConfidenceThreshold">Configured sensitivity threshold that can be increased to lower false positives or decreased to reduce false negatives..</param>
-        
-        
-        
         /// <param name="AgentScoreModifier">A modifier to the evaluation score when the phrase is spotted in the agent channel. (required).</param>
-        
-        
-        
         /// <param name="CustomerScoreModifier">A modifier to the evaluation score when the phrase is spotted in the customer channel. (required).</param>
-        
-        
-        
-        
         public Annotation(string Name = null, string Type = null, long? Location = null, long? DurationMs = null, long? AbsoluteLocation = null, long? AbsoluteDurationMs = null, long? RecordingLocation = null, long? RecordingDurationMs = null, User User = null, string Description = null, string KeywordName = null, float? Confidence = null, string KeywordSetId = null, string KeywordSetName = null, string Utterance = null, string TimeBegin = null, string TimeEnd = null, string KeywordConfidenceThreshold = null, string AgentScoreModifier = null, string CustomerScoreModifier = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "AgentScoreModifier" is required (not null)
-            if (AgentScoreModifier == null)
-            {
-                throw new InvalidDataException("AgentScoreModifier is a required property for Annotation and cannot be null");
-            }
-            else
-            {
-                this.AgentScoreModifier = AgentScoreModifier;
-            }
-            
-            
-            
-            
-            
-            // to ensure "CustomerScoreModifier" is required (not null)
-            if (CustomerScoreModifier == null)
-            {
-                throw new InvalidDataException("CustomerScoreModifier is a required property for Annotation and cannot be null");
-            }
-            else
-            {
-                this.CustomerScoreModifier = CustomerScoreModifier;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Location = Location;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationMs = DurationMs;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AbsoluteLocation = AbsoluteLocation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AbsoluteDurationMs = AbsoluteDurationMs;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingLocation = RecordingLocation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingDurationMs = RecordingDurationMs;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.KeywordName = KeywordName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Confidence = Confidence;
-            
-            
-            
-            
-            
-            
-            
-            
-this.KeywordSetId = KeywordSetId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.KeywordSetName = KeywordSetName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Utterance = Utterance;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeBegin = TimeBegin;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeEnd = TimeEnd;
-            
-            
-            
-            
-            
-            
-            
-            
-this.KeywordConfidenceThreshold = KeywordConfidenceThreshold;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Type = Type;
+            this.Location = Location;
+            this.DurationMs = DurationMs;
+            this.AbsoluteLocation = AbsoluteLocation;
+            this.AbsoluteDurationMs = AbsoluteDurationMs;
+            this.RecordingLocation = RecordingLocation;
+            this.RecordingDurationMs = RecordingDurationMs;
+            this.User = User;
+            this.Description = Description;
+            this.KeywordName = KeywordName;
+            this.Confidence = Confidence;
+            this.KeywordSetId = KeywordSetId;
+            this.KeywordSetName = KeywordSetName;
+            this.Utterance = Utterance;
+            this.TimeBegin = TimeBegin;
+            this.TimeEnd = TimeEnd;
+            this.KeywordConfidenceThreshold = KeywordConfidenceThreshold;
             
         }
         
@@ -716,49 +390,27 @@ this.KeywordConfidenceThreshold = KeywordConfidenceThreshold;
             sb.Append("class Annotation {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Location: ").Append(Location).Append("\n");
-            
             sb.Append("  DurationMs: ").Append(DurationMs).Append("\n");
-            
             sb.Append("  AbsoluteLocation: ").Append(AbsoluteLocation).Append("\n");
-            
             sb.Append("  AbsoluteDurationMs: ").Append(AbsoluteDurationMs).Append("\n");
-            
             sb.Append("  RecordingLocation: ").Append(RecordingLocation).Append("\n");
-            
             sb.Append("  RecordingDurationMs: ").Append(RecordingDurationMs).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  KeywordName: ").Append(KeywordName).Append("\n");
-            
             sb.Append("  Confidence: ").Append(Confidence).Append("\n");
-            
             sb.Append("  KeywordSetId: ").Append(KeywordSetId).Append("\n");
-            
             sb.Append("  KeywordSetName: ").Append(KeywordSetName).Append("\n");
-            
             sb.Append("  Utterance: ").Append(Utterance).Append("\n");
-            
             sb.Append("  TimeBegin: ").Append(TimeBegin).Append("\n");
-            
             sb.Append("  TimeEnd: ").Append(TimeEnd).Append("\n");
-            
             sb.Append("  KeywordConfidenceThreshold: ").Append(KeywordConfidenceThreshold).Append("\n");
-            
             sb.Append("  AgentScoreModifier: ").Append(AgentScoreModifier).Append("\n");
-            
             sb.Append("  CustomerScoreModifier: ").Append(CustomerScoreModifier).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

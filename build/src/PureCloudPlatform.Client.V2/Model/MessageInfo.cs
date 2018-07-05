@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageInfo" /> class.
         /// </summary>
-        
-        
         /// <param name="LocalizableMessageCode">LocalizableMessageCode.</param>
-        
-        
-        
         /// <param name="Message">Message.</param>
-        
-        
-        
         /// <param name="MessageWithParams">MessageWithParams.</param>
-        
-        
-        
         /// <param name="MessageParams">MessageParams.</param>
-        
-        
         public MessageInfo(string LocalizableMessageCode = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.LocalizableMessageCode = LocalizableMessageCode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Message = Message;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageWithParams = MessageWithParams;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessageParams = MessageParams;
-            
-            
-            
+            this.LocalizableMessageCode = LocalizableMessageCode;
+            this.Message = Message;
+            this.MessageWithParams = MessageWithParams;
+            this.MessageParams = MessageParams;
             
         }
         
@@ -162,13 +100,9 @@ this.MessageParams = MessageParams;
             sb.Append("class MessageInfo {\n");
             
             sb.Append("  LocalizableMessageCode: ").Append(LocalizableMessageCode).Append("\n");
-            
             sb.Append("  Message: ").Append(Message).Append("\n");
-            
             sb.Append("  MessageWithParams: ").Append(MessageWithParams).Append("\n");
-            
             sb.Append("  MessageParams: ").Append(MessageParams).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

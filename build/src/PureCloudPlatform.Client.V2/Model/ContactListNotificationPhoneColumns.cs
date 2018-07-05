@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListNotificationPhoneColumns" /> class.
         /// </summary>
-        
-        
         /// <param name="ColumnName">ColumnName.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="CallableTimeColumn">CallableTimeColumn.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ContactListNotificationPhoneColumns(string ColumnName = null, string Type = null, string CallableTimeColumn = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ColumnName = ColumnName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallableTimeColumn = CallableTimeColumn;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.ColumnName = ColumnName;
+            this.Type = Type;
+            this.CallableTimeColumn = CallableTimeColumn;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -162,13 +100,9 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ContactListNotificationPhoneColumns {\n");
             
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  CallableTimeColumn: ").Append(CallableTimeColumn).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

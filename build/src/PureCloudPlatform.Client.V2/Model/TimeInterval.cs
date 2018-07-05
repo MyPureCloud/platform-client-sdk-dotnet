@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeInterval" /> class.
         /// </summary>
-        
-        
         /// <param name="Days">Days.</param>
-        
-        
-        
         /// <param name="Hours">Hours.</param>
-        
-        
         public TimeInterval(int? Days = null, int? Hours = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Days = Days;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Hours = Hours;
-            
-            
-            
+            this.Days = Days;
+            this.Hours = Hours;
             
         }
         
@@ -102,9 +70,7 @@ this.Hours = Hours;
             sb.Append("class TimeInterval {\n");
             
             sb.Append("  Days: ").Append(Days).Append("\n");
-            
             sb.Append("  Hours: ").Append(Hours).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

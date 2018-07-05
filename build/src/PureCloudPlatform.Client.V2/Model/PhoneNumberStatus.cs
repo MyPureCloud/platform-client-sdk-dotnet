@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumberStatus" /> class.
         /// </summary>
-        
-        
         /// <param name="Callable">Indicates whether or not a phone number is callable..</param>
-        
-        
         public PhoneNumberStatus(bool? Callable = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Callable = Callable;
-            
-            
-            
+            this.Callable = Callable;
             
         }
         
@@ -73,7 +56,6 @@ this.Callable = Callable;
             sb.Append("class PhoneNumberStatus {\n");
             
             sb.Append("  Callable: ").Append(Callable).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

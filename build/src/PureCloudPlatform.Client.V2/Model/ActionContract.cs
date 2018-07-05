@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionContract" /> class.
         /// </summary>
-        
-        
         /// <param name="Output">The output to expect when executing this action..</param>
-        
-        
-        
         /// <param name="Input">The input required when executing this action..</param>
-        
-        
         public ActionContract(ActionOutput Output = null, ActionInput Input = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Output = Output;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Input = Input;
-            
-            
-            
+            this.Output = Output;
+            this.Input = Input;
             
         }
         
@@ -104,9 +72,7 @@ this.Input = Input;
             sb.Append("class ActionContract {\n");
             
             sb.Append("  Output: ").Append(Output).Append("\n");
-            
             sb.Append("  Input: ").Append(Input).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

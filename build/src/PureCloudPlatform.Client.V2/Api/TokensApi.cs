@@ -272,10 +272,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTokensMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -360,10 +361,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTokensMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -451,8 +453,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<TokenInfo>(localVarStatusCode,
                 localVarHeaders,
-                (TokenInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TokenInfo)));
-            
+                (TokenInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TokenInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -540,8 +543,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<TokenInfo>(localVarStatusCode,
                 localVarHeaders,
-                (TokenInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TokenInfo)));
-            
+                (TokenInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TokenInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

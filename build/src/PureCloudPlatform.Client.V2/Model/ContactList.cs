@@ -105,220 +105,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactList" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        
-        
-        
         /// <param name="ColumnNames">The names of the contact data columns. (required).</param>
-        
-        
-        
         /// <param name="PhoneColumns">Indicates which columns are phone numbers. (required).</param>
-        
-        
-        
         /// <param name="ImportStatus">The status of the import process..</param>
-        
-        
-        
         /// <param name="PreviewModeColumnName">A column to check if a contact should always be dialed in preview mode..</param>
-        
-        
-        
         /// <param name="PreviewModeAcceptedValues">The values in the previewModeColumnName column that indicate a contact should always be dialed in preview mode..</param>
-        
-        
-        
-        
-        
         /// <param name="AttemptLimits">AttemptLimits for this ContactList..</param>
-        
-        
-        
         /// <param name="AutomaticTimeZoneMapping">Indicates if automatic time zone mapping is to be used for this ContactList..</param>
-        
-        
-        
         /// <param name="ZipCodeColumnName">The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true..</param>
-        
-        
-        
-        
         public ContactList(string Name = null, int? Version = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, UriReference AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "ColumnNames" is required (not null)
-            if (ColumnNames == null)
-            {
-                throw new InvalidDataException("ColumnNames is a required property for ContactList and cannot be null");
-            }
-            else
-            {
-                this.ColumnNames = ColumnNames;
-            }
-            
-            
-            
-            
-            
-            // to ensure "PhoneColumns" is required (not null)
-            if (PhoneColumns == null)
-            {
-                throw new InvalidDataException("PhoneColumns is a required property for ContactList and cannot be null");
-            }
-            else
-            {
-                this.PhoneColumns = PhoneColumns;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ImportStatus = ImportStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PreviewModeColumnName = PreviewModeColumnName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PreviewModeAcceptedValues = PreviewModeAcceptedValues;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AttemptLimits = AttemptLimits;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AutomaticTimeZoneMapping = AutomaticTimeZoneMapping;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ZipCodeColumnName = ZipCodeColumnName;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Version = Version;
+            this.ImportStatus = ImportStatus;
+            this.PreviewModeColumnName = PreviewModeColumnName;
+            this.PreviewModeAcceptedValues = PreviewModeAcceptedValues;
+            this.AttemptLimits = AttemptLimits;
+            this.AutomaticTimeZoneMapping = AutomaticTimeZoneMapping;
+            this.ZipCodeColumnName = ZipCodeColumnName;
             
         }
         
@@ -467,35 +273,20 @@ this.ZipCodeColumnName = ZipCodeColumnName;
             sb.Append("class ContactList {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  ColumnNames: ").Append(ColumnNames).Append("\n");
-            
             sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
-            
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
-            
             sb.Append("  PreviewModeColumnName: ").Append(PreviewModeColumnName).Append("\n");
-            
             sb.Append("  PreviewModeAcceptedValues: ").Append(PreviewModeAcceptedValues).Append("\n");
-            
             sb.Append("  Size: ").Append(Size).Append("\n");
-            
             sb.Append("  AttemptLimits: ").Append(AttemptLimits).Append("\n");
-            
             sb.Append("  AutomaticTimeZoneMapping: ").Append(AutomaticTimeZoneMapping).Append("\n");
-            
             sb.Append("  ZipCodeColumnName: ").Append(ZipCodeColumnName).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

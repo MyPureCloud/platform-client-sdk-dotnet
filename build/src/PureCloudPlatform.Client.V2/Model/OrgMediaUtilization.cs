@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrgMediaUtilization" /> class.
         /// </summary>
-        
-        
         /// <param name="MaximumCapacity">Defines the maximum number of conversations of this type that an agent can handle at one time..</param>
-        
-        
-        
         /// <param name="InterruptableMediaTypes">Defines the list of other media types that can interrupt a conversation of this media type.  Values can be: call, chat, email, or socialExpression.</param>
-        
-        
-        
         /// <param name="IncludeNonAcd">If true, then track non-ACD conversations against utilization.</param>
-        
-        
         public OrgMediaUtilization(int? MaximumCapacity = null, List<string> InterruptableMediaTypes = null, bool? IncludeNonAcd = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaximumCapacity = MaximumCapacity;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InterruptableMediaTypes = InterruptableMediaTypes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IncludeNonAcd = IncludeNonAcd;
-            
-            
-            
+            this.MaximumCapacity = MaximumCapacity;
+            this.InterruptableMediaTypes = InterruptableMediaTypes;
+            this.IncludeNonAcd = IncludeNonAcd;
             
         }
         
@@ -135,11 +88,8 @@ this.IncludeNonAcd = IncludeNonAcd;
             sb.Append("class OrgMediaUtilization {\n");
             
             sb.Append("  MaximumCapacity: ").Append(MaximumCapacity).Append("\n");
-            
             sb.Append("  InterruptableMediaTypes: ").Append(InterruptableMediaTypes).Append("\n");
-            
             sb.Append("  IncludeNonAcd: ").Append(IncludeNonAcd).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

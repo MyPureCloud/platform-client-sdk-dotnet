@@ -59,129 +59,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneCapabilities" /> class.
         /// </summary>
-        
-        
         /// <param name="Provisions">Provisions.</param>
-        
-        
-        
         /// <param name="Registers">Registers.</param>
-        
-        
-        
         /// <param name="DualRegisters">DualRegisters.</param>
-        
-        
-        
         /// <param name="HardwareIdType">HardwareIdType.</param>
-        
-        
-        
         /// <param name="AllowReboot">AllowReboot.</param>
-        
-        
-        
         /// <param name="NoRebalance">NoRebalance.</param>
-        
-        
-        
         /// <param name="NoCloudProvisioning">NoCloudProvisioning.</param>
-        
-        
         public PhoneCapabilities(bool? Provisions = null, bool? Registers = null, bool? DualRegisters = null, string HardwareIdType = null, bool? AllowReboot = null, bool? NoRebalance = null, bool? NoCloudProvisioning = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provisions = Provisions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Registers = Registers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DualRegisters = DualRegisters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HardwareIdType = HardwareIdType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AllowReboot = AllowReboot;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NoRebalance = NoRebalance;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NoCloudProvisioning = NoCloudProvisioning;
-            
-            
-            
+            this.Provisions = Provisions;
+            this.Registers = Registers;
+            this.DualRegisters = DualRegisters;
+            this.HardwareIdType = HardwareIdType;
+            this.AllowReboot = AllowReboot;
+            this.NoRebalance = NoRebalance;
+            this.NoCloudProvisioning = NoCloudProvisioning;
             
         }
         
@@ -252,19 +145,12 @@ this.NoCloudProvisioning = NoCloudProvisioning;
             sb.Append("class PhoneCapabilities {\n");
             
             sb.Append("  Provisions: ").Append(Provisions).Append("\n");
-            
             sb.Append("  Registers: ").Append(Registers).Append("\n");
-            
             sb.Append("  DualRegisters: ").Append(DualRegisters).Append("\n");
-            
             sb.Append("  HardwareIdType: ").Append(HardwareIdType).Append("\n");
-            
             sb.Append("  AllowReboot: ").Append(AllowReboot).Append("\n");
-            
             sb.Append("  NoRebalance: ").Append(NoRebalance).Append("\n");
-            
             sb.Append("  NoCloudProvisioning: ").Append(NoCloudProvisioning).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

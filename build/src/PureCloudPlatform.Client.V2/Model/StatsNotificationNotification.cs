@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StatsNotificationNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Group">Group.</param>
-        
-        
-        
         /// <param name="Data">Data.</param>
-        
-        
         public StatsNotificationNotification(Dictionary<string, string> Group = null, List<StatsNotificationNotificationData> Data = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Group = Group;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Data = Data;
-            
-            
-            
+            this.Group = Group;
+            this.Data = Data;
             
         }
         
@@ -102,9 +70,7 @@ this.Data = Data;
             sb.Append("class StatsNotificationNotification {\n");
             
             sb.Append("  Group: ").Append(Group).Append("\n");
-            
             sb.Append("  Data: ").Append(Data).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

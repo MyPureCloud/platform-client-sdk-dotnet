@@ -126,78 +126,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainNetworkAddress" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">The type of address..</param>
-        
-        
-        
         /// <param name="Address">An IPv4 or IPv6 IP address. When specifying an address of type \&quot;ip\&quot;, use CIDR format for the subnet mask..</param>
-        
-        
-        
         /// <param name="Persistent">True if this address will persist on Edge restart.  Addresses assigned by DHCP will be returned as false..</param>
-        
-        
-        
         /// <param name="Family">The address family for this address..</param>
-        
-        
         public DomainNetworkAddress(TypeEnum? Type = null, string Address = null, bool? Persistent = null, FamilyEnum? Family = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Persistent = Persistent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Family = Family;
-            
-            
-            
+            this.Type = Type;
+            this.Address = Address;
+            this.Persistent = Persistent;
+            this.Family = Family;
             
         }
         
@@ -234,13 +172,9 @@ this.Family = Family;
             sb.Append("class DomainNetworkAddress {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  Persistent: ").Append(Persistent).Append("\n");
-            
             sb.Append("  Family: ").Append(Family).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

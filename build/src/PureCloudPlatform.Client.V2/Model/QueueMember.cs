@@ -64,135 +64,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueMember" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The queue member&#39;s id..</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="RingNumber">RingNumber.</param>
-        
-        
-        
         /// <param name="Joined">Joined.</param>
-        
-        
-        
         /// <param name="MemberBy">MemberBy.</param>
-        
-        
-        
         /// <param name="RoutingStatus">RoutingStatus.</param>
-        
-        
-        
-        
         public QueueMember(string Id = null, string Name = null, User User = null, int? RingNumber = null, bool? Joined = null, string MemberBy = null, RoutingStatus RoutingStatus = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RingNumber = RingNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Joined = Joined;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MemberBy = MemberBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoutingStatus = RoutingStatus;
-            
-            
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.User = User;
+            this.RingNumber = RingNumber;
+            this.Joined = Joined;
+            this.MemberBy = MemberBy;
+            this.RoutingStatus = RoutingStatus;
             
         }
         
@@ -273,21 +160,13 @@ this.RoutingStatus = RoutingStatus;
             sb.Append("class QueueMember {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  RingNumber: ").Append(RingNumber).Append("\n");
-            
             sb.Append("  Joined: ").Append(Joined).Append("\n");
-            
             sb.Append("  MemberBy: ").Append(MemberBy).Append("\n");
-            
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

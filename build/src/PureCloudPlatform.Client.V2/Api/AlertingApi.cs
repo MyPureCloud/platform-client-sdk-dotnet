@@ -702,10 +702,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAlertingInteractionstatsAlert: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -797,10 +798,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAlertingInteractionstatsAlert: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -891,10 +893,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAlertingInteractionstatsRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -986,10 +989,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAlertingInteractionstatsRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1077,8 +1081,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ActiveAlertCount>(localVarStatusCode,
                 localVarHeaders,
-                (ActiveAlertCount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActiveAlertCount)));
-            
+                (ActiveAlertCount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActiveAlertCount)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1166,8 +1171,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ActiveAlertCount>(localVarStatusCode,
                 localVarHeaders,
-                (ActiveAlertCount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActiveAlertCount)));
-            
+                (ActiveAlertCount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActiveAlertCount)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1264,8 +1270,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<InteractionStatsAlert>(localVarStatusCode,
                 localVarHeaders,
-                (InteractionStatsAlert) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsAlert)));
-            
+                (InteractionStatsAlert) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsAlert)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1363,8 +1370,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<InteractionStatsAlert>(localVarStatusCode,
                 localVarHeaders,
-                (InteractionStatsAlert) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsAlert)));
-            
+                (InteractionStatsAlert) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsAlert)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1455,8 +1463,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<InteractionStatsAlertContainer>(localVarStatusCode,
                 localVarHeaders,
-                (InteractionStatsAlertContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsAlertContainer)));
-            
+                (InteractionStatsAlertContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsAlertContainer)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1547,8 +1556,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<InteractionStatsAlertContainer>(localVarStatusCode,
                 localVarHeaders,
-                (InteractionStatsAlertContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsAlertContainer)));
-            
+                (InteractionStatsAlertContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsAlertContainer)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1636,8 +1646,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<UnreadMetric>(localVarStatusCode,
                 localVarHeaders,
-                (UnreadMetric) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnreadMetric)));
-            
+                (UnreadMetric) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnreadMetric)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1725,8 +1736,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<UnreadMetric>(localVarStatusCode,
                 localVarHeaders,
-                (UnreadMetric) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnreadMetric)));
-            
+                (UnreadMetric) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnreadMetric)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1823,8 +1835,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<InteractionStatsRule>(localVarStatusCode,
                 localVarHeaders,
-                (InteractionStatsRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)));
-            
+                (InteractionStatsRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1922,8 +1935,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<InteractionStatsRule>(localVarStatusCode,
                 localVarHeaders,
-                (InteractionStatsRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)));
-            
+                (InteractionStatsRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2014,8 +2028,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<InteractionStatsRuleContainer>(localVarStatusCode,
                 localVarHeaders,
-                (InteractionStatsRuleContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRuleContainer)));
-            
+                (InteractionStatsRuleContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRuleContainer)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2106,8 +2121,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<InteractionStatsRuleContainer>(localVarStatusCode,
                 localVarHeaders,
-                (InteractionStatsRuleContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRuleContainer)));
-            
+                (InteractionStatsRuleContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRuleContainer)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2208,8 +2224,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<InteractionStatsRule>(localVarStatusCode,
                 localVarHeaders,
-                (InteractionStatsRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)));
-            
+                (InteractionStatsRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2311,8 +2328,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<InteractionStatsRule>(localVarStatusCode,
                 localVarHeaders,
-                (InteractionStatsRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)));
-            
+                (InteractionStatsRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2419,8 +2437,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<UnreadStatus>(localVarStatusCode,
                 localVarHeaders,
-                (UnreadStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnreadStatus)));
-            
+                (UnreadStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnreadStatus)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2529,8 +2548,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<UnreadStatus>(localVarStatusCode,
                 localVarHeaders,
-                (UnreadStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnreadStatus)));
-            
+                (UnreadStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnreadStatus)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2637,8 +2657,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<InteractionStatsRule>(localVarStatusCode,
                 localVarHeaders,
-                (InteractionStatsRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)));
-            
+                (InteractionStatsRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2747,8 +2768,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<InteractionStatsRule>(localVarStatusCode,
                 localVarHeaders,
-                (InteractionStatsRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)));
-            
+                (InteractionStatsRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

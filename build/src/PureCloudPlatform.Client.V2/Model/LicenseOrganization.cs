@@ -44,56 +44,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LicenseOrganization" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Licenses">Licenses.</param>
-        
-        
-        
-        
         public LicenseOrganization(string Name = null, Dictionary<string, List<AddressableEntityUser>> Licenses = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Licenses = Licenses;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Licenses = Licenses;
             
         }
         
@@ -142,13 +98,9 @@ this.Licenses = Licenses;
             sb.Append("class LicenseOrganization {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Licenses: ").Append(Licenses).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

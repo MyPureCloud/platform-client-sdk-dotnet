@@ -44,67 +44,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMediaInfo" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="MediaFileUri">MediaFileUri.</param>
-        
-        
-        
         /// <param name="MediaImageUri">MediaImageUri.</param>
-        
-        
-        
         /// <param name="WaveformData">WaveformData.</param>
-        
-        
         public VoicemailMediaInfo(string MediaFileUri = null, string MediaImageUri = null, List<float?> WaveformData = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaFileUri = MediaFileUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaImageUri = MediaImageUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WaveformData = WaveformData;
-            
-            
-            
+            this.MediaFileUri = MediaFileUri;
+            this.MediaImageUri = MediaImageUri;
+            this.WaveformData = WaveformData;
             
         }
         
@@ -152,13 +99,9 @@ this.WaveformData = WaveformData;
             sb.Append("class VoicemailMediaInfo {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  MediaFileUri: ").Append(MediaFileUri).Append("\n");
-            
             sb.Append("  MediaImageUri: ").Append(MediaImageUri).Append("\n");
-            
             sb.Append("  WaveformData: ").Append(WaveformData).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

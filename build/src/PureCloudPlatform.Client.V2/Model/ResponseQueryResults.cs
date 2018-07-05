@@ -35,32 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseQueryResults" /> class.
         /// </summary>
-        
-        
         /// <param name="Results">Contains the query results (required).</param>
-        
-        
         public ResponseQueryResults(ResponseEntityList Results = null)
         {
-            
-            
-            
-            // to ensure "Results" is required (not null)
-            if (Results == null)
-            {
-                throw new InvalidDataException("Results is a required property for ResponseQueryResults and cannot be null");
-            }
-            else
-            {
-                this.Results = Results;
-            }
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -84,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ResponseQueryResults {\n");
             
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

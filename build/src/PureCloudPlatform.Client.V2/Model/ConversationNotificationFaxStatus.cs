@@ -64,146 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationFaxStatus" /> class.
         /// </summary>
-        
-        
         /// <param name="Direction">Direction.</param>
-        
-        
-        
         /// <param name="ExpectedPages">ExpectedPages.</param>
-        
-        
-        
         /// <param name="ActivePage">ActivePage.</param>
-        
-        
-        
         /// <param name="LinesTransmitted">LinesTransmitted.</param>
-        
-        
-        
         /// <param name="BytesTransmitted">BytesTransmitted.</param>
-        
-        
-        
         /// <param name="BaudRate">BaudRate.</param>
-        
-        
-        
         /// <param name="PageErrors">PageErrors.</param>
-        
-        
-        
         /// <param name="LineErrors">LineErrors.</param>
-        
-        
         public ConversationNotificationFaxStatus(string Direction = null, int? ExpectedPages = null, int? ActivePage = null, int? LinesTransmitted = null, int? BytesTransmitted = null, int? BaudRate = null, int? PageErrors = null, int? LineErrors = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExpectedPages = ExpectedPages;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActivePage = ActivePage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LinesTransmitted = LinesTransmitted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.BytesTransmitted = BytesTransmitted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.BaudRate = BaudRate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageErrors = PageErrors;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LineErrors = LineErrors;
-            
-            
-            
+            this.Direction = Direction;
+            this.ExpectedPages = ExpectedPages;
+            this.ActivePage = ActivePage;
+            this.LinesTransmitted = LinesTransmitted;
+            this.BytesTransmitted = BytesTransmitted;
+            this.BaudRate = BaudRate;
+            this.PageErrors = PageErrors;
+            this.LineErrors = LineErrors;
             
         }
         
@@ -282,21 +160,13 @@ this.LineErrors = LineErrors;
             sb.Append("class ConversationNotificationFaxStatus {\n");
             
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  ExpectedPages: ").Append(ExpectedPages).Append("\n");
-            
             sb.Append("  ActivePage: ").Append(ActivePage).Append("\n");
-            
             sb.Append("  LinesTransmitted: ").Append(LinesTransmitted).Append("\n");
-            
             sb.Append("  BytesTransmitted: ").Append(BytesTransmitted).Append("\n");
-            
             sb.Append("  BaudRate: ").Append(BaudRate).Append("\n");
-            
             sb.Append("  PageErrors: ").Append(PageErrors).Append("\n");
-            
             sb.Append("  LineErrors: ").Append(LineErrors).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

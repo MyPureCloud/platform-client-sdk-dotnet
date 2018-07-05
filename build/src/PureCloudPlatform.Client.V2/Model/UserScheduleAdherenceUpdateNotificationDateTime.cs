@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleAdherenceUpdateNotificationDateTime" /> class.
         /// </summary>
-        
-        
         /// <param name="IMillis">IMillis.</param>
-        
-        
-        
-        /// <param name="AfterNow">AfterNow.</param>
-        
-        
-        
-        /// <param name="EqualNow">EqualNow.</param>
-        
-        
-        
         /// <param name="BeforeNow">BeforeNow.</param>
-        
-        
-        public UserScheduleAdherenceUpdateNotificationDateTime(int? IMillis = null, bool? AfterNow = null, bool? EqualNow = null, bool? BeforeNow = null)
+        /// <param name="AfterNow">AfterNow.</param>
+        /// <param name="EqualNow">EqualNow.</param>
+        public UserScheduleAdherenceUpdateNotificationDateTime(int? IMillis = null, bool? BeforeNow = null, bool? AfterNow = null, bool? EqualNow = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.IMillis = IMillis;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AfterNow = AfterNow;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EqualNow = EqualNow;
-            
-            
-            
-            
-            
-            
-            
-            
-this.BeforeNow = BeforeNow;
-            
-            
-            
+            this.IMillis = IMillis;
+            this.BeforeNow = BeforeNow;
+            this.AfterNow = AfterNow;
+            this.EqualNow = EqualNow;
             
         }
         
@@ -126,6 +64,14 @@ this.BeforeNow = BeforeNow;
         /// </summary>
         [DataMember(Name="iMillis", EmitDefaultValue=false)]
         public int? IMillis { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets BeforeNow
+        /// </summary>
+        [DataMember(Name="beforeNow", EmitDefaultValue=false)]
+        public bool? BeforeNow { get; set; }
         
         
         
@@ -144,14 +90,6 @@ this.BeforeNow = BeforeNow;
         public bool? EqualNow { get; set; }
         
         
-        
-        /// <summary>
-        /// Gets or Sets BeforeNow
-        /// </summary>
-        [DataMember(Name="beforeNow", EmitDefaultValue=false)]
-        public bool? BeforeNow { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -162,13 +100,9 @@ this.BeforeNow = BeforeNow;
             sb.Append("class UserScheduleAdherenceUpdateNotificationDateTime {\n");
             
             sb.Append("  IMillis: ").Append(IMillis).Append("\n");
-            
-            sb.Append("  AfterNow: ").Append(AfterNow).Append("\n");
-            
-            sb.Append("  EqualNow: ").Append(EqualNow).Append("\n");
-            
             sb.Append("  BeforeNow: ").Append(BeforeNow).Append("\n");
-            
+            sb.Append("  AfterNow: ").Append(AfterNow).Append("\n");
+            sb.Append("  EqualNow: ").Append(EqualNow).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -211,6 +145,11 @@ this.BeforeNow = BeforeNow;
                     this.IMillis.Equals(other.IMillis)
                 ) &&
                 (
+                    this.BeforeNow == other.BeforeNow ||
+                    this.BeforeNow != null &&
+                    this.BeforeNow.Equals(other.BeforeNow)
+                ) &&
+                (
                     this.AfterNow == other.AfterNow ||
                     this.AfterNow != null &&
                     this.AfterNow.Equals(other.AfterNow)
@@ -219,11 +158,6 @@ this.BeforeNow = BeforeNow;
                     this.EqualNow == other.EqualNow ||
                     this.EqualNow != null &&
                     this.EqualNow.Equals(other.EqualNow)
-                ) &&
-                (
-                    this.BeforeNow == other.BeforeNow ||
-                    this.BeforeNow != null &&
-                    this.BeforeNow.Equals(other.BeforeNow)
                 );
         }
 
@@ -242,14 +176,14 @@ this.BeforeNow = BeforeNow;
                 if (this.IMillis != null)
                     hash = hash * 59 + this.IMillis.GetHashCode();
                 
+                if (this.BeforeNow != null)
+                    hash = hash * 59 + this.BeforeNow.GetHashCode();
+                
                 if (this.AfterNow != null)
                     hash = hash * 59 + this.AfterNow.GetHashCode();
                 
                 if (this.EqualNow != null)
                     hash = hash * 59 + this.EqualNow.GetHashCode();
-                
-                if (this.BeforeNow != null)
-                    hash = hash * 59 + this.BeforeNow.GetHashCode();
                 
                 return hash;
             }

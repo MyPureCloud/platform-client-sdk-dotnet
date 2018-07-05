@@ -69,163 +69,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatMessage" /> class.
         /// </summary>
-        
-        
         /// <param name="Body">Body.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="To">To.</param>
-        
-        
-        
         /// <param name="From">From.</param>
-        
-        
-        
         /// <param name="Utc">Utc.</param>
-        
-        
-        
         /// <param name="Chat">Chat.</param>
-        
-        
-        
         /// <param name="Message">Message.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
         public ChatMessage(string Body = null, string Id = null, string To = null, string From = null, string Utc = null, string Chat = null, string Message = null, string Type = null, ChatMessageUser User = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Body = Body;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.To = To;
-            
-            
-            
-            
-            
-            
-            
-            
-this.From = From;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Utc = Utc;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Chat = Chat;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Message = Message;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
+            this.Body = Body;
+            this.Id = Id;
+            this.To = To;
+            this.From = From;
+            this.Utc = Utc;
+            this.Chat = Chat;
+            this.Message = Message;
+            this.Type = Type;
+            this.User = User;
             
         }
         
@@ -312,23 +175,14 @@ this.User = User;
             sb.Append("class ChatMessage {\n");
             
             sb.Append("  Body: ").Append(Body).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  To: ").Append(To).Append("\n");
-            
             sb.Append("  From: ").Append(From).Append("\n");
-            
             sb.Append("  Utc: ").Append(Utc).Append("\n");
-            
             sb.Append("  Chat: ").Append(Chat).Append("\n");
-            
             sb.Append("  Message: ").Append(Message).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

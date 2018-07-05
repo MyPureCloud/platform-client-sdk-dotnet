@@ -40,54 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingUsageResource" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Identifies the resource (e.g. license user, device). (required).</param>
-        
-        
-        
         /// <param name="Date">The date that the usage was first observed by the billing subsystem. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
         public BillingUsageResource(string Name = null, DateTime? Date = null)
         {
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for BillingUsageResource and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Date" is required (not null)
-            if (Date == null)
-            {
-                throw new InvalidDataException("Date is a required property for BillingUsageResource and cannot be null");
-            }
-            else
-            {
-                this.Date = Date;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -120,9 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class BillingUsageResource {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Date: ").Append(Date).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

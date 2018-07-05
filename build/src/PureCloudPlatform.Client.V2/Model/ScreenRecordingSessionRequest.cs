@@ -68,61 +68,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScreenRecordingSessionRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="State">The screen recording session&#39;s state.  Values can be: &#39;stopped&#39;.</param>
-        
-        
-        
         /// <param name="ArchiveDate">The screen recording session&#39;s archive date. Must be greater than 1 day from now if set. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DeleteDate">The screen recording session&#39;s delete date. Must be greater than archiveDate if set, otherwise one day from now. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
         public ScreenRecordingSessionRequest(StateEnum? State = null, DateTime? ArchiveDate = null, DateTime? DeleteDate = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ArchiveDate = ArchiveDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DeleteDate = DeleteDate;
-            
-            
-            
+            this.State = State;
+            this.ArchiveDate = ArchiveDate;
+            this.DeleteDate = DeleteDate;
             
         }
         
@@ -157,11 +110,8 @@ this.DeleteDate = DeleteDate;
             sb.Append("class ScreenRecordingSessionRequest {\n");
             
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  ArchiveDate: ").Append(ArchiveDate).Append("\n");
-            
             sb.Append("  DeleteDate: ").Append(DeleteDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

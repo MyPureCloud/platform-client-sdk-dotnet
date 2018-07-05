@@ -50,83 +50,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Destination" /> class.
         /// </summary>
-        
-        
         /// <param name="Address">Address or phone number. (required).</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="UserId">UserId.</param>
-        
-        
-        
         /// <param name="QueueId">QueueId.</param>
-        
-        
         public Destination(string Address = null, string Name = null, string UserId = null, string QueueId = null)
         {
-            
-            
-            
-            // to ensure "Address" is required (not null)
-            if (Address == null)
-            {
-                throw new InvalidDataException("Address is a required property for Destination and cannot be null");
-            }
-            else
-            {
-                this.Address = Address;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueId = QueueId;
-            
-            
-            
+            this.Name = Name;
+            this.UserId = UserId;
+            this.QueueId = QueueId;
             
         }
         
@@ -174,13 +106,9 @@ this.QueueId = QueueId;
             sb.Append("class Destination {\n");
             
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

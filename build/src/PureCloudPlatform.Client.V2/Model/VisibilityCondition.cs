@@ -67,44 +67,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VisibilityCondition" /> class.
         /// </summary>
-        
-        
         /// <param name="CombiningOperation">CombiningOperation.</param>
-        
-        
-        
         /// <param name="Predicates">A list of strings, each representing the location in the form of the Answer Option to depend on. In the format of \&quot;/form/questionGroup/{questionGroupIndex}/question/{questionIndex}/answer/{answerIndex}\&quot; or, to assume the current question group, \&quot;../question/{questionIndex}/answer/{answerIndex}\&quot;. Note: Indexes are zero-based.</param>
-        
-        
         public VisibilityCondition(CombiningOperationEnum? CombiningOperation = null, List<Object> Predicates = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CombiningOperation = CombiningOperation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Predicates = Predicates;
-            
-            
-            
+            this.CombiningOperation = CombiningOperation;
+            this.Predicates = Predicates;
             
         }
         
@@ -130,9 +98,7 @@ this.Predicates = Predicates;
             sb.Append("class VisibilityCondition {\n");
             
             sb.Append("  CombiningOperation: ").Append(CombiningOperation).Append("\n");
-            
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

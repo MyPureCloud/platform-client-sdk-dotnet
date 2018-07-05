@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayHistoricalAgentData" /> class.
         /// </summary>
-        
-        
         /// <param name="OnQueueTimeSeconds">The total on-queue time in seconds for all agents in this group.</param>
-        
-        
-        
         /// <param name="InteractingTimeSeconds">The total time spent interacting in seconds for all agents in this group.</param>
-        
-        
         public IntradayHistoricalAgentData(double? OnQueueTimeSeconds = null, double? InteractingTimeSeconds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.OnQueueTimeSeconds = OnQueueTimeSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InteractingTimeSeconds = InteractingTimeSeconds;
-            
-            
-            
+            this.OnQueueTimeSeconds = OnQueueTimeSeconds;
+            this.InteractingTimeSeconds = InteractingTimeSeconds;
             
         }
         
@@ -104,9 +72,7 @@ this.InteractingTimeSeconds = InteractingTimeSeconds;
             sb.Append("class IntradayHistoricalAgentData {\n");
             
             sb.Append("  OnQueueTimeSeconds: ").Append(OnQueueTimeSeconds).Append("\n");
-            
             sb.Append("  InteractingTimeSeconds: ").Append(InteractingTimeSeconds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -105,146 +105,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="StartDate">The start of the date range for which this data applies.  This is also the start reference point for the intervals represented in the various arrays. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="EndDate">The end of the date range for which this data applies. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="IntervalLengthMinutes">The aggregation period in minutes, which determines the interval duration of the returned data.</param>
-        
-        
-        
         /// <param name="NumberOfIntervals">The total number of time intervals represented by this data.</param>
-        
-        
-        
         /// <param name="Metrics">The metrics to which this data corresponds.</param>
-        
-        
-        
         /// <param name="NoDataReason">If not null, the reason there was no data for the request.</param>
-        
-        
-        
         /// <param name="QueueIds">The IDs of the queues this data corresponds to.</param>
-        
-        
-        
         /// <param name="IntradayDataGroupings">Intraday data grouped by a single media type and set of queue IDs.</param>
-        
-        
         public IntradayResponse(DateTime? StartDate = null, DateTime? EndDate = null, int? IntervalLengthMinutes = null, int? NumberOfIntervals = null, List<IntradayMetric> Metrics = null, NoDataReasonEnum? NoDataReason = null, List<string> QueueIds = null, List<IntradayDataGroup> IntradayDataGroupings = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartDate = StartDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndDate = EndDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IntervalLengthMinutes = IntervalLengthMinutes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumberOfIntervals = NumberOfIntervals;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metrics = Metrics;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NoDataReason = NoDataReason;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueIds = QueueIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IntradayDataGroupings = IntradayDataGroupings;
-            
-            
-            
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
+            this.IntervalLengthMinutes = IntervalLengthMinutes;
+            this.NumberOfIntervals = NumberOfIntervals;
+            this.Metrics = Metrics;
+            this.NoDataReason = NoDataReason;
+            this.QueueIds = QueueIds;
+            this.IntradayDataGroupings = IntradayDataGroupings;
             
         }
         
@@ -324,21 +202,13 @@ this.IntradayDataGroupings = IntradayDataGroupings;
             sb.Append("class IntradayResponse {\n");
             
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
-            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
-            
             sb.Append("  IntervalLengthMinutes: ").Append(IntervalLengthMinutes).Append("\n");
-            
             sb.Append("  NumberOfIntervals: ").Append(NumberOfIntervals).Append("\n");
-            
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
-            
             sb.Append("  NoDataReason: ").Append(NoDataReason).Append("\n");
-            
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
-            
             sb.Append("  IntradayDataGroupings: ").Append(IntradayDataGroupings).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

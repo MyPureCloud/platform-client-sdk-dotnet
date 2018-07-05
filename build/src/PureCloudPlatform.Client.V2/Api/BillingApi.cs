@@ -255,8 +255,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<BillingUsageReport>(localVarStatusCode,
                 localVarHeaders,
-                (BillingUsageReport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingUsageReport)));
-            
+                (BillingUsageReport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingUsageReport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -358,8 +359,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<BillingUsageReport>(localVarStatusCode,
                 localVarHeaders,
-                (BillingUsageReport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingUsageReport)));
-            
+                (BillingUsageReport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingUsageReport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

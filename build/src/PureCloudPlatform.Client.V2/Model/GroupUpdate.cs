@@ -167,180 +167,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupUpdate" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The group name..</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="State">State of the group..</param>
-        
-        
-        
         /// <param name="Version">Current version for this resource. (required).</param>
-        
-        
-        
         /// <param name="Images">Images.</param>
-        
-        
-        
         /// <param name="Addresses">Addresses.</param>
-        
-        
-        
         /// <param name="RulesVisible">Are membership rules visible to the person requesting to view the group.</param>
-        
-        
-        
         /// <param name="Visibility">Who can view this group.</param>
-        
-        
-        
         /// <param name="OwnerIds">Owners of the group.</param>
-        
-        
-        
-        
         public GroupUpdate(string Name = null, string Description = null, StateEnum? State = null, int? Version = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null, List<string> OwnerIds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Version" is required (not null)
-            if (Version == null)
-            {
-                throw new InvalidDataException("Version is a required property for GroupUpdate and cannot be null");
-            }
-            else
-            {
-                this.Version = Version;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Images = Images;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Addresses = Addresses;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RulesVisible = RulesVisible;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Visibility = Visibility;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OwnerIds = OwnerIds;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Description = Description;
+            this.State = State;
+            this.Images = Images;
+            this.Addresses = Addresses;
+            this.RulesVisible = RulesVisible;
+            this.Visibility = Visibility;
+            this.OwnerIds = OwnerIds;
             
         }
         
@@ -437,27 +282,16 @@ this.OwnerIds = OwnerIds;
             sb.Append("class GroupUpdate {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  Images: ").Append(Images).Append("\n");
-            
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
-            
             sb.Append("  RulesVisible: ").Append(RulesVisible).Append("\n");
-            
             sb.Append("  Visibility: ").Append(Visibility).Append("\n");
-            
             sb.Append("  OwnerIds: ").Append(OwnerIds).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

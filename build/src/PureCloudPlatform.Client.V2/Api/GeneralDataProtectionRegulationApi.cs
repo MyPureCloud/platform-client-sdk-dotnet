@@ -389,8 +389,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GDPRRequest>(localVarStatusCode,
                 localVarHeaders,
-                (GDPRRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRRequest)));
-            
+                (GDPRRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRRequest)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -485,8 +486,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GDPRRequest>(localVarStatusCode,
                 localVarHeaders,
-                (GDPRRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRRequest)));
-            
+                (GDPRRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRRequest)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -580,8 +582,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GDPRRequestEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (GDPRRequestEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRRequestEntityListing)));
-            
+                (GDPRRequestEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRRequestEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -675,8 +678,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GDPRRequestEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (GDPRRequestEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRRequestEntityListing)));
-            
+                (GDPRRequestEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRRequestEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -776,8 +780,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GDPRSubjectEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (GDPRSubjectEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRSubjectEntityListing)));
-            
+                (GDPRSubjectEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRSubjectEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -879,8 +884,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GDPRSubjectEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (GDPRSubjectEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRSubjectEntityListing)));
-            
+                (GDPRSubjectEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRSubjectEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -981,8 +987,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GDPRRequest>(localVarStatusCode,
                 localVarHeaders,
-                (GDPRRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRRequest)));
-            
+                (GDPRRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRRequest)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1084,8 +1091,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GDPRRequest>(localVarStatusCode,
                 localVarHeaders,
-                (GDPRRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRRequest)));
-            
+                (GDPRRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GDPRRequest)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

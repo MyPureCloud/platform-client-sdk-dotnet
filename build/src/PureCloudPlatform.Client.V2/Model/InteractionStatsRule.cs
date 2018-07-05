@@ -412,270 +412,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InteractionStatsRule" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name of the rule (required).</param>
-        
-        
-        
         /// <param name="Dimension">The dimension of concern. (required).</param>
-        
-        
-        
         /// <param name="DimensionValue">The value of the dimension. (required).</param>
-        
-        
-        
         /// <param name="Metric">The metric to be assessed. (required).</param>
-        
-        
-        
         /// <param name="MediaType">The media type. (required).</param>
-        
-        
-        
         /// <param name="NumericRange">The comparison descriptor used against the metric&#39;s value. (required).</param>
-        
-        
-        
         /// <param name="Statistic">The statistic of concern for the metric. (required).</param>
-        
-        
-        
         /// <param name="Value">The threshold value. (required).</param>
-        
-        
-        
         /// <param name="Enabled">Indicates if the rule is enabled. (required).</param>
-        
-        
-        
-        
-        
         /// <param name="NotificationUsers">The ids of users who will be notified of alarm state change. (required).</param>
-        
-        
-        
         /// <param name="AlertTypes">A collection of notification methods. (required).</param>
-        
-        
-        
-        
         public InteractionStatsRule(string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Enabled = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for InteractionStatsRule and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Dimension" is required (not null)
-            if (Dimension == null)
-            {
-                throw new InvalidDataException("Dimension is a required property for InteractionStatsRule and cannot be null");
-            }
-            else
-            {
-                this.Dimension = Dimension;
-            }
-            
-            
-            
-            
-            
-            // to ensure "DimensionValue" is required (not null)
-            if (DimensionValue == null)
-            {
-                throw new InvalidDataException("DimensionValue is a required property for InteractionStatsRule and cannot be null");
-            }
-            else
-            {
-                this.DimensionValue = DimensionValue;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Metric" is required (not null)
-            if (Metric == null)
-            {
-                throw new InvalidDataException("Metric is a required property for InteractionStatsRule and cannot be null");
-            }
-            else
-            {
-                this.Metric = Metric;
-            }
-            
-            
-            
-            
-            
-            // to ensure "MediaType" is required (not null)
-            if (MediaType == null)
-            {
-                throw new InvalidDataException("MediaType is a required property for InteractionStatsRule and cannot be null");
-            }
-            else
-            {
-                this.MediaType = MediaType;
-            }
-            
-            
-            
-            
-            
-            // to ensure "NumericRange" is required (not null)
-            if (NumericRange == null)
-            {
-                throw new InvalidDataException("NumericRange is a required property for InteractionStatsRule and cannot be null");
-            }
-            else
-            {
-                this.NumericRange = NumericRange;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Statistic" is required (not null)
-            if (Statistic == null)
-            {
-                throw new InvalidDataException("Statistic is a required property for InteractionStatsRule and cannot be null");
-            }
-            else
-            {
-                this.Statistic = Statistic;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Value" is required (not null)
-            if (Value == null)
-            {
-                throw new InvalidDataException("Value is a required property for InteractionStatsRule and cannot be null");
-            }
-            else
-            {
-                this.Value = Value;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Enabled" is required (not null)
-            if (Enabled == null)
-            {
-                throw new InvalidDataException("Enabled is a required property for InteractionStatsRule and cannot be null");
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "NotificationUsers" is required (not null)
-            if (NotificationUsers == null)
-            {
-                throw new InvalidDataException("NotificationUsers is a required property for InteractionStatsRule and cannot be null");
-            }
-            else
-            {
-                this.NotificationUsers = NotificationUsers;
-            }
-            
-            
-            
-            
-            
-            // to ensure "AlertTypes" is required (not null)
-            if (AlertTypes == null)
-            {
-                throw new InvalidDataException("AlertTypes is a required property for InteractionStatsRule and cannot be null");
-            }
-            else
-            {
-                this.AlertTypes = AlertTypes;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -781,33 +530,19 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class InteractionStatsRule {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
-            
             sb.Append("  DimensionValue: ").Append(DimensionValue).Append("\n");
-            
             sb.Append("  Metric: ").Append(Metric).Append("\n");
-            
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("  NumericRange: ").Append(NumericRange).Append("\n");
-            
             sb.Append("  Statistic: ").Append(Statistic).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  InAlarm: ").Append(InAlarm).Append("\n");
-            
             sb.Append("  NotificationUsers: ").Append(NotificationUsers).Append("\n");
-            
             sb.Append("  AlertTypes: ").Append(AlertTypes).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

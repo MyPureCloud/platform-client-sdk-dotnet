@@ -105,146 +105,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeInterface" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="IpAddress">IpAddress.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="MacAddress">MacAddress.</param>
-        
-        
-        
         /// <param name="IfName">IfName.</param>
-        
-        
-        
         /// <param name="Endpoints">Endpoints.</param>
-        
-        
-        
         /// <param name="LineTypes">LineTypes.</param>
-        
-        
-        
         /// <param name="AddressFamilyId">AddressFamilyId.</param>
-        
-        
         public EdgeInterface(string Type = null, string IpAddress = null, string Name = null, string MacAddress = null, string IfName = null, List<UriReference> Endpoints = null, List<LineTypesEnum> LineTypes = null, string AddressFamilyId = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IpAddress = IpAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MacAddress = MacAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IfName = IfName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Endpoints = Endpoints;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LineTypes = LineTypes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressFamilyId = AddressFamilyId;
-            
-            
-            
+            this.Type = Type;
+            this.IpAddress = IpAddress;
+            this.Name = Name;
+            this.MacAddress = MacAddress;
+            this.IfName = IfName;
+            this.Endpoints = Endpoints;
+            this.LineTypes = LineTypes;
+            this.AddressFamilyId = AddressFamilyId;
             
         }
         
@@ -323,21 +201,13 @@ this.AddressFamilyId = AddressFamilyId;
             sb.Append("class EdgeInterface {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  IpAddress: ").Append(IpAddress).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  MacAddress: ").Append(MacAddress).Append("\n");
-            
             sb.Append("  IfName: ").Append(IfName).Append("\n");
-            
             sb.Append("  Endpoints: ").Append(Endpoints).Append("\n");
-            
             sb.Append("  LineTypes: ").Append(LineTypes).Append("\n");
-            
             sb.Append("  AddressFamilyId: ").Append(AddressFamilyId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

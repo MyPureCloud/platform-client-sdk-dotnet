@@ -59,129 +59,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyErrorMessage" /> class.
         /// </summary>
-        
-        
         /// <param name="StatusCode">StatusCode.</param>
-        
-        
-        
         /// <param name="UserMessage">UserMessage.</param>
-        
-        
-        
         /// <param name="UserParamsMessage">UserParamsMessage.</param>
-        
-        
-        
         /// <param name="ErrorCode">ErrorCode.</param>
-        
-        
-        
         /// <param name="CorrelationId">CorrelationId.</param>
-        
-        
-        
         /// <param name="UserParams">UserParams.</param>
-        
-        
-        
         /// <param name="InsertDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
         public PolicyErrorMessage(int? StatusCode = null, Object UserMessage = null, string UserParamsMessage = null, string ErrorCode = null, string CorrelationId = null, List<UserParam> UserParams = null, DateTime? InsertDate = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.StatusCode = StatusCode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserMessage = UserMessage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserParamsMessage = UserParamsMessage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorCode = ErrorCode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CorrelationId = CorrelationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserParams = UserParams;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InsertDate = InsertDate;
-            
-            
-            
+            this.StatusCode = StatusCode;
+            this.UserMessage = UserMessage;
+            this.UserParamsMessage = UserParamsMessage;
+            this.ErrorCode = ErrorCode;
+            this.CorrelationId = CorrelationId;
+            this.UserParams = UserParams;
+            this.InsertDate = InsertDate;
             
         }
         
@@ -253,19 +146,12 @@ this.InsertDate = InsertDate;
             sb.Append("class PolicyErrorMessage {\n");
             
             sb.Append("  StatusCode: ").Append(StatusCode).Append("\n");
-            
             sb.Append("  UserMessage: ").Append(UserMessage).Append("\n");
-            
             sb.Append("  UserParamsMessage: ").Append(UserParamsMessage).Append("\n");
-            
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            
             sb.Append("  CorrelationId: ").Append(CorrelationId).Append("\n");
-            
             sb.Append("  UserParams: ").Append(UserParams).Append("\n");
-            
             sb.Append("  InsertDate: ").Append(InsertDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -296,540 +296,58 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Campaign" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the Campaign. (required).</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        
-        
-        
         /// <param name="ContactList">The ContactList for this Campaign to dial. (required).</param>
-        
-        
-        
         /// <param name="Queue">The Queue for this Campaign to route calls to. Required for all dialing modes except agentless..</param>
-        
-        
-        
         /// <param name="DialingMode">The strategy this Campaign will use for dialing. (required).</param>
-        
-        
-        
         /// <param name="Script">The Script to be displayed to agents that are handling outbound calls. Required for all dialing modes except agentless..</param>
-        
-        
-        
         /// <param name="EdgeGroup">The EdgeGroup that will place the calls. Required for all dialing modes except preview..</param>
-        
-        
-        
         /// <param name="Site">The identifier of the site to be used for dialing; can be set in place of an edge group..</param>
-        
-        
-        
         /// <param name="CampaignStatus">The current status of the Campaign. A Campaign may be turned &#39;on&#39; or &#39;off&#39;. Required for updates..</param>
-        
-        
-        
         /// <param name="PhoneColumns">The ContactPhoneNumberColumns on the ContactList that this Campaign should dial. (required).</param>
-        
-        
-        
         /// <param name="AbandonRate">The targeted abandon rate percentage. Required for progressive, power, and predictive campaigns..</param>
-        
-        
-        
         /// <param name="DncLists">DncLists for this Campaign to check before placing a call..</param>
-        
-        
-        
         /// <param name="CallableTimeSet">The callable time set for this campaign to check before placing a call..</param>
-        
-        
-        
         /// <param name="CallAnalysisResponseSet">The call analysis response set to handle call analysis results from the edge. Required for all dialing modes except preview..</param>
-        
-        
-        
         /// <param name="Errors">A list of current error conditions associated with the campaign..</param>
-        
-        
-        
         /// <param name="CallerName">The caller id name to be displayed on the outbound call. (required).</param>
-        
-        
-        
         /// <param name="CallerAddress">The caller id phone number to be displayed on the outbound call. (required).</param>
-        
-        
-        
         /// <param name="OutboundLineCount">The number of outbound lines to be concurrently dialed. Only applicable to non-preview campaigns; only required for agentless..</param>
-        
-        
-        
         /// <param name="RuleSets">Rule sets to be applied while this campaign is dialing..</param>
-        
-        
-        
         /// <param name="SkipPreviewDisabled">Whether or not agents can skip previews without placing a call. Only applicable for preview campaigns..</param>
-        
-        
-        
         /// <param name="PreviewTimeOutSeconds">The number of seconds before a call will be automatically placed on a preview. A value of 0 indicates no automatic placement of calls. Only applicable to preview campaigns..</param>
-        
-        
-        
         /// <param name="AlwaysRunning">Indicates (when true) that the campaign will remain on after contacts are depleted, allowing additional contacts to be appended/added to the contact list and processed by the still-running campaign. The campaign can still be turned off manually..</param>
-        
-        
-        
         /// <param name="ContactSort">The order in which to sort contacts for dialing, based on a column..</param>
-        
-        
-        
         /// <param name="ContactSorts">The order in which to sort contacts for dialing, based on up to four columns..</param>
-        
-        
-        
         /// <param name="NoAnswerTimeout">How long to wait before dispositioning a call as &#39;no-answer&#39;. Default 30 seconds. Only applicable to non-preview campaigns..</param>
-        
-        
-        
         /// <param name="CallAnalysisLanguage">The language the edge will use to analyze the call..</param>
-        
-        
-        
         /// <param name="Priority">The priority of this campaign relative to other campaigns that are running on the same queue. 5 is the highest priority, 1 the lowest..</param>
-        
-        
-        
         /// <param name="ContactListFilters">Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied..</param>
-        
-        
-        
-        
         public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, UriReference Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<UriReference> ContactListFilters = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for Campaign and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "ContactList" is required (not null)
-            if (ContactList == null)
-            {
-                throw new InvalidDataException("ContactList is a required property for Campaign and cannot be null");
-            }
-            else
-            {
-                this.ContactList = ContactList;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "DialingMode" is required (not null)
-            if (DialingMode == null)
-            {
-                throw new InvalidDataException("DialingMode is a required property for Campaign and cannot be null");
-            }
-            else
-            {
-                this.DialingMode = DialingMode;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "PhoneColumns" is required (not null)
-            if (PhoneColumns == null)
-            {
-                throw new InvalidDataException("PhoneColumns is a required property for Campaign and cannot be null");
-            }
-            else
-            {
-                this.PhoneColumns = PhoneColumns;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "CallerName" is required (not null)
-            if (CallerName == null)
-            {
-                throw new InvalidDataException("CallerName is a required property for Campaign and cannot be null");
-            }
-            else
-            {
-                this.CallerName = CallerName;
-            }
-            
-            
-            
-            
-            
-            // to ensure "CallerAddress" is required (not null)
-            if (CallerAddress == null)
-            {
-                throw new InvalidDataException("CallerAddress is a required property for Campaign and cannot be null");
-            }
-            else
-            {
-                this.CallerAddress = CallerAddress;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Queue = Queue;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Script = Script;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EdgeGroup = EdgeGroup;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Site = Site;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CampaignStatus = CampaignStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AbandonRate = AbandonRate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DncLists = DncLists;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallableTimeSet = CallableTimeSet;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallAnalysisResponseSet = CallAnalysisResponseSet;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Errors = Errors;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.OutboundLineCount = OutboundLineCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RuleSets = RuleSets;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SkipPreviewDisabled = SkipPreviewDisabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PreviewTimeOutSeconds = PreviewTimeOutSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AlwaysRunning = AlwaysRunning;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactSort = ContactSort;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactSorts = ContactSorts;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NoAnswerTimeout = NoAnswerTimeout;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallAnalysisLanguage = CallAnalysisLanguage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Priority = Priority;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactListFilters = ContactListFilters;
-            
-            
-            
-            
-            
+            this.Version = Version;
+            this.Queue = Queue;
+            this.Script = Script;
+            this.EdgeGroup = EdgeGroup;
+            this.Site = Site;
+            this.CampaignStatus = CampaignStatus;
+            this.AbandonRate = AbandonRate;
+            this.DncLists = DncLists;
+            this.CallableTimeSet = CallableTimeSet;
+            this.CallAnalysisResponseSet = CallAnalysisResponseSet;
+            this.Errors = Errors;
+            this.OutboundLineCount = OutboundLineCount;
+            this.RuleSets = RuleSets;
+            this.SkipPreviewDisabled = SkipPreviewDisabled;
+            this.PreviewTimeOutSeconds = PreviewTimeOutSeconds;
+            this.AlwaysRunning = AlwaysRunning;
+            this.ContactSort = ContactSort;
+            this.ContactSorts = ContactSorts;
+            this.NoAnswerTimeout = NoAnswerTimeout;
+            this.CallAnalysisLanguage = CallAnalysisLanguage;
+            this.Priority = Priority;
+            this.ContactListFilters = ContactListFilters;
             
         }
         
@@ -1118,69 +636,37 @@ this.ContactListFilters = ContactListFilters;
             sb.Append("class Campaign {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
-            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
-            
             sb.Append("  DialingMode: ").Append(DialingMode).Append("\n");
-            
             sb.Append("  Script: ").Append(Script).Append("\n");
-            
             sb.Append("  EdgeGroup: ").Append(EdgeGroup).Append("\n");
-            
             sb.Append("  Site: ").Append(Site).Append("\n");
-            
             sb.Append("  CampaignStatus: ").Append(CampaignStatus).Append("\n");
-            
             sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
-            
             sb.Append("  AbandonRate: ").Append(AbandonRate).Append("\n");
-            
             sb.Append("  DncLists: ").Append(DncLists).Append("\n");
-            
             sb.Append("  CallableTimeSet: ").Append(CallableTimeSet).Append("\n");
-            
             sb.Append("  CallAnalysisResponseSet: ").Append(CallAnalysisResponseSet).Append("\n");
-            
             sb.Append("  Errors: ").Append(Errors).Append("\n");
-            
             sb.Append("  CallerName: ").Append(CallerName).Append("\n");
-            
             sb.Append("  CallerAddress: ").Append(CallerAddress).Append("\n");
-            
             sb.Append("  OutboundLineCount: ").Append(OutboundLineCount).Append("\n");
-            
             sb.Append("  RuleSets: ").Append(RuleSets).Append("\n");
-            
             sb.Append("  SkipPreviewDisabled: ").Append(SkipPreviewDisabled).Append("\n");
-            
             sb.Append("  PreviewTimeOutSeconds: ").Append(PreviewTimeOutSeconds).Append("\n");
-            
             sb.Append("  AlwaysRunning: ").Append(AlwaysRunning).Append("\n");
-            
             sb.Append("  ContactSort: ").Append(ContactSort).Append("\n");
-            
             sb.Append("  ContactSorts: ").Append(ContactSorts).Append("\n");
-            
             sb.Append("  NoAnswerTimeout: ").Append(NoAnswerTimeout).Append("\n");
-            
             sb.Append("  CallAnalysisLanguage: ").Append(CallAnalysisLanguage).Append("\n");
-            
             sb.Append("  Priority: ").Append(Priority).Append("\n");
-            
             sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

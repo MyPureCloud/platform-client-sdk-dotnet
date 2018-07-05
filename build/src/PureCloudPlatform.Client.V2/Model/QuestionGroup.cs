@@ -74,180 +74,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QuestionGroup" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
-        
         /// <param name="DefaultAnswersToHighest">DefaultAnswersToHighest.</param>
-        
-        
-        
         /// <param name="DefaultAnswersToNA">DefaultAnswersToNA.</param>
-        
-        
-        
         /// <param name="NaEnabled">NaEnabled.</param>
-        
-        
-        
         /// <param name="Weight">Weight.</param>
-        
-        
-        
         /// <param name="ManualWeight">ManualWeight.</param>
-        
-        
-        
         /// <param name="Questions">Questions.</param>
-        
-        
-        
         /// <param name="VisibilityCondition">VisibilityCondition.</param>
-        
-        
         public QuestionGroup(string Id = null, string Name = null, string Type = null, bool? DefaultAnswersToHighest = null, bool? DefaultAnswersToNA = null, bool? NaEnabled = null, float? Weight = null, bool? ManualWeight = null, List<Question> Questions = null, VisibilityCondition VisibilityCondition = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DefaultAnswersToHighest = DefaultAnswersToHighest;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DefaultAnswersToNA = DefaultAnswersToNA;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NaEnabled = NaEnabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Weight = Weight;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ManualWeight = ManualWeight;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Questions = Questions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VisibilityCondition = VisibilityCondition;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.Type = Type;
+            this.DefaultAnswersToHighest = DefaultAnswersToHighest;
+            this.DefaultAnswersToNA = DefaultAnswersToNA;
+            this.NaEnabled = NaEnabled;
+            this.Weight = Weight;
+            this.ManualWeight = ManualWeight;
+            this.Questions = Questions;
+            this.VisibilityCondition = VisibilityCondition;
             
         }
         
@@ -342,25 +190,15 @@ this.VisibilityCondition = VisibilityCondition;
             sb.Append("class QuestionGroup {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  DefaultAnswersToHighest: ").Append(DefaultAnswersToHighest).Append("\n");
-            
             sb.Append("  DefaultAnswersToNA: ").Append(DefaultAnswersToNA).Append("\n");
-            
             sb.Append("  NaEnabled: ").Append(NaEnabled).Append("\n");
-            
             sb.Append("  Weight: ").Append(Weight).Append("\n");
-            
             sb.Append("  ManualWeight: ").Append(ManualWeight).Append("\n");
-            
             sb.Append("  Questions: ").Append(Questions).Append("\n");
-            
             sb.Append("  VisibilityCondition: ").Append(VisibilityCondition).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

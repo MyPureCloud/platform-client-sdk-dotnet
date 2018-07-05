@@ -100,129 +100,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailSearchRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="SortOrder">The sort order for results.</param>
-        
-        
-        
         /// <param name="SortBy">The field in the resource that you want to sort the results by.</param>
-        
-        
-        
         /// <param name="PageSize">The number of results per page.</param>
-        
-        
-        
         /// <param name="PageNumber">The page of resources you want to retrieve.</param>
-        
-        
-        
         /// <param name="Sort">Multi-value sort order, list of multiple sort values.</param>
-        
-        
-        
         /// <param name="Expand">Provides more details about a specified resource.</param>
-        
-        
-        
         /// <param name="Query">Query.</param>
-        
-        
         public VoicemailSearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<SearchSort> Sort = null, List<string> Expand = null, List<VoicemailSearchCriteria> Query = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SortOrder = SortOrder;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SortBy = SortBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageSize = PageSize;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageNumber = PageNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Sort = Sort;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Expand = Expand;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Query = Query;
-            
-            
-            
+            this.SortOrder = SortOrder;
+            this.SortBy = SortBy;
+            this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
+            this.Sort = Sort;
+            this.Expand = Expand;
+            this.Query = Query;
             
         }
         
@@ -292,19 +185,12 @@ this.Query = Query;
             sb.Append("class VoicemailSearchRequest {\n");
             
             sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
-            
             sb.Append("  SortBy: ").Append(SortBy).Append("\n");
-            
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            
             sb.Append("  Sort: ").Append(Sort).Append("\n");
-            
             sb.Append("  Expand: ").Append(Expand).Append("\n");
-            
             sb.Append("  Query: ").Append(Query).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -247,241 +247,29 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageData" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ProviderMessageId">The unique identifier of the message from provider.</param>
-        
-        
-        
         /// <param name="Timestamp">The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
-        
         /// <param name="FromAddress">The sender of the text message..</param>
-        
-        
-        
         /// <param name="ToAddress">The recipient of the text message..</param>
-        
-        
-        
         /// <param name="Direction">The direction of the message..</param>
-        
-        
-        
         /// <param name="MessengerType">Type of text messenger..</param>
-        
-        
-        
         /// <param name="TextBody">The body of the text message. (required).</param>
-        
-        
-        
         /// <param name="Status">The status of the message. (required).</param>
-        
-        
-        
         /// <param name="Media">The media details associated to a message..</param>
-        
-        
-        
         /// <param name="Stickers">The sticker details associated to a message..</param>
-        
-        
-        
         /// <param name="CreatedBy">User who sent this message..</param>
-        
-        
-        
-        
         public MessageData(string Name = null, string ProviderMessageId = null, DateTime? Timestamp = null, string FromAddress = null, string ToAddress = null, DirectionEnum? Direction = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, StatusEnum? Status = null, List<MessageMedia> Media = null, List<MessageSticker> Stickers = null, User CreatedBy = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Timestamp" is required (not null)
-            if (Timestamp == null)
-            {
-                throw new InvalidDataException("Timestamp is a required property for MessageData and cannot be null");
-            }
-            else
-            {
-                this.Timestamp = Timestamp;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "TextBody" is required (not null)
-            if (TextBody == null)
-            {
-                throw new InvalidDataException("TextBody is a required property for MessageData and cannot be null");
-            }
-            else
-            {
-                this.TextBody = TextBody;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Status" is required (not null)
-            if (Status == null)
-            {
-                throw new InvalidDataException("Status is a required property for MessageData and cannot be null");
-            }
-            else
-            {
-                this.Status = Status;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ProviderMessageId = ProviderMessageId;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.FromAddress = FromAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ToAddress = ToAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MessengerType = MessengerType;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Media = Media;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Stickers = Stickers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.ProviderMessageId = ProviderMessageId;
+            this.FromAddress = FromAddress;
+            this.ToAddress = ToAddress;
+            this.Direction = Direction;
+            this.MessengerType = MessengerType;
+            this.Media = Media;
+            this.Stickers = Stickers;
+            this.CreatedBy = CreatedBy;
             
         }
         
@@ -600,33 +388,19 @@ this.CreatedBy = CreatedBy;
             sb.Append("class MessageData {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ProviderMessageId: ").Append(ProviderMessageId).Append("\n");
-            
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
-            
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
-            
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  MessengerType: ").Append(MessengerType).Append("\n");
-            
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  Media: ").Append(Media).Append("\n");
-            
             sb.Append("  Stickers: ").Append(Stickers).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

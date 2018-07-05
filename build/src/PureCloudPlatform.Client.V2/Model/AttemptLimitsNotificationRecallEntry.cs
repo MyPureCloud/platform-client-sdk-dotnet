@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AttemptLimitsNotificationRecallEntry" /> class.
         /// </summary>
-        
-        
         /// <param name="NbrAttempts">NbrAttempts.</param>
-        
-        
-        
         /// <param name="MinutesBetweenAttempts">MinutesBetweenAttempts.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public AttemptLimitsNotificationRecallEntry(int? NbrAttempts = null, int? MinutesBetweenAttempts = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.NbrAttempts = NbrAttempts;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MinutesBetweenAttempts = MinutesBetweenAttempts;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.NbrAttempts = NbrAttempts;
+            this.MinutesBetweenAttempts = MinutesBetweenAttempts;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -132,11 +85,8 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class AttemptLimitsNotificationRecallEntry {\n");
             
             sb.Append("  NbrAttempts: ").Append(NbrAttempts).Append("\n");
-            
             sb.Append("  MinutesBetweenAttempts: ").Append(MinutesBetweenAttempts).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

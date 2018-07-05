@@ -76,32 +76,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsultTransferUpdate" /> class.
         /// </summary>
-        
-        
         /// <param name="SpeakTo">Determines to whom the initiating participant is speaking. (required).</param>
-        
-        
         public ConsultTransferUpdate(SpeakToEnum? SpeakTo = null)
         {
-            
-            
-            
-            // to ensure "SpeakTo" is required (not null)
-            if (SpeakTo == null)
-            {
-                throw new InvalidDataException("SpeakTo is a required property for ConsultTransferUpdate and cannot be null");
-            }
-            else
-            {
-                this.SpeakTo = SpeakTo;
-            }
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -118,7 +95,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConsultTransferUpdate {\n");
             
             sb.Append("  SpeakTo: ").Append(SpeakTo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

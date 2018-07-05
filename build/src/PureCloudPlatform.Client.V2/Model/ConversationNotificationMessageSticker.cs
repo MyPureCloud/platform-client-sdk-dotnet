@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationMessageSticker" /> class.
         /// </summary>
-        
-        
         /// <param name="Url">Url.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
         public ConversationNotificationMessageSticker(string Url = null, string Id = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Url = Url;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
+            this.Url = Url;
+            this.Id = Id;
             
         }
         
@@ -102,9 +70,7 @@ this.Id = Id;
             sb.Append("class ConversationNotificationMessageSticker {\n");
             
             sb.Append("  Url: ").Append(Url).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

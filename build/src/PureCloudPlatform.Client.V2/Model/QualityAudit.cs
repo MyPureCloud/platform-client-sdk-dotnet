@@ -79,175 +79,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QualityAudit" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="Timestamp">Timestamp.</param>
-        
-        
-        
         /// <param name="Level">Level.</param>
-        
-        
-        
         /// <param name="Entity">Entity.</param>
-        
-        
-        
         /// <param name="Action">Action.</param>
-        
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="Changes">Changes.</param>
-        
-        
-        
         /// <param name="EntityType">EntityType.</param>
-        
-        
-        
-        
         public QualityAudit(string Name = null, User User = null, string Timestamp = null, string Level = null, AuditEntity Entity = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Timestamp = Timestamp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Level = Level;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Entity = Entity;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Action = Action;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Changes = Changes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EntityType = EntityType;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.User = User;
+            this.Timestamp = Timestamp;
+            this.Level = Level;
+            this.Entity = Entity;
+            this.Action = Action;
+            this.Status = Status;
+            this.Changes = Changes;
+            this.EntityType = EntityType;
             
         }
         
@@ -352,27 +203,16 @@ this.EntityType = EntityType;
             sb.Append("class QualityAudit {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
-            
             sb.Append("  Level: ").Append(Level).Append("\n");
-            
             sb.Append("  Entity: ").Append(Entity).Append("\n");
-            
             sb.Append("  Action: ").Append(Action).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  Changes: ").Append(Changes).Append("\n");
-            
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

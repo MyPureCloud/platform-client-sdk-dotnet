@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestUpdateNotificationUserReference" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
         public TimeOffRequestUpdateNotificationUserReference(string Id = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
+            this.Id = Id;
             
         }
         
@@ -72,7 +55,6 @@ this.Id = Id;
             sb.Append("class TimeOffRequestUpdateNotificationUserReference {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

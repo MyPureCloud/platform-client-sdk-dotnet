@@ -1286,10 +1286,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteVoicemailMessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1381,10 +1382,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteVoicemailMessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1469,10 +1471,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteVoicemailMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1557,10 +1560,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteVoicemailMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1654,8 +1658,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMailboxInfo>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMailboxInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)));
-            
+                (VoicemailMailboxInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1750,8 +1755,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMailboxInfo>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMailboxInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)));
-            
+                (VoicemailMailboxInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1851,8 +1857,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessageEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)));
-            
+                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1953,8 +1960,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessageEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)));
-            
+                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2048,8 +2056,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailGroupPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailGroupPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailGroupPolicy)));
-            
+                (VoicemailGroupPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailGroupPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2144,8 +2153,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailGroupPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailGroupPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailGroupPolicy)));
-            
+                (VoicemailGroupPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailGroupPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2233,8 +2243,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMailboxInfo>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMailboxInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)));
-            
+                (VoicemailMailboxInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2322,8 +2333,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMailboxInfo>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMailboxInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)));
-            
+                (VoicemailMailboxInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2411,8 +2423,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMailboxInfo>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMailboxInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)));
-            
+                (VoicemailMailboxInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2500,8 +2513,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMailboxInfo>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMailboxInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)));
-            
+                (VoicemailMailboxInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2595,8 +2609,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessageEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)));
-            
+                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2690,8 +2705,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessageEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)));
-            
+                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2779,8 +2795,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
-            
+                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2868,8 +2885,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
-            
+                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2966,8 +2984,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessage>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)));
-            
+                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3065,8 +3084,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessage>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)));
-            
+                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3163,8 +3183,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMediaInfo>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMediaInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMediaInfo)));
-            
+                (VoicemailMediaInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMediaInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3262,8 +3283,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMediaInfo>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMediaInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMediaInfo)));
-            
+                (VoicemailMediaInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMediaInfo)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3357,8 +3379,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessageEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)));
-            
+                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3452,8 +3475,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessageEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)));
-            
+                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3541,8 +3565,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailOrganizationPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailOrganizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailOrganizationPolicy)));
-            
+                (VoicemailOrganizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailOrganizationPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3630,8 +3655,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailOrganizationPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailOrganizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailOrganizationPolicy)));
-            
+                (VoicemailOrganizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailOrganizationPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3731,8 +3757,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessageEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)));
-            
+                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3833,8 +3860,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessageEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)));
-            
+                (VoicemailMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3931,8 +3959,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailsSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)));
-            
+                (VoicemailsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4030,8 +4059,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailsSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)));
-            
+                (VoicemailsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4125,8 +4155,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
-            
+                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4221,8 +4252,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
-            
+                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4326,8 +4358,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailGroupPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailGroupPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailGroupPolicy)));
-            
+                (VoicemailGroupPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailGroupPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4433,8 +4466,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailGroupPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailGroupPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailGroupPolicy)));
-            
+                (VoicemailGroupPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailGroupPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4532,8 +4566,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
-            
+                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4632,8 +4667,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
-            
+                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4737,8 +4773,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessage>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)));
-            
+                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4844,8 +4881,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessage>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)));
-            
+                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -4949,8 +4987,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
-            
+                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -5056,8 +5095,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
-            
+                (VoicemailUserPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -5152,8 +5192,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessage>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)));
-            
+                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -5248,8 +5289,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessage>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)));
-            
+                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -5347,8 +5389,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailsSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)));
-            
+                (VoicemailsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -5447,8 +5490,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailsSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)));
-            
+                (VoicemailsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -5552,8 +5596,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessage>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)));
-            
+                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -5659,8 +5704,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailMessage>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)));
-            
+                (VoicemailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -5758,8 +5804,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailOrganizationPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailOrganizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailOrganizationPolicy)));
-            
+                (VoicemailOrganizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailOrganizationPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -5858,8 +5905,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<VoicemailOrganizationPolicy>(localVarStatusCode,
                 localVarHeaders,
-                (VoicemailOrganizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailOrganizationPolicy)));
-            
+                (VoicemailOrganizationPolicy) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailOrganizationPolicy)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

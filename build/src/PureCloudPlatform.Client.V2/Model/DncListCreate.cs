@@ -131,164 +131,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DncListCreate" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the list. (required).</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        
-        
-        
         /// <param name="ImportStatus">the status of the import process.</param>
-        
-        
-        
-        
-        
         /// <param name="DncSourceType">the type of dnc list being created, rds (csv file), gryphon, or dnc.com.</param>
-        
-        
-        
         /// <param name="LoginId">the loginId if the dncSourceType is dnc.com.</param>
-        
-        
-        
         /// <param name="DncCodes">the list of dnc.com codes to be treated as DNC.</param>
-        
-        
-        
         /// <param name="LicenseId">the license number if the dncSourceType is gryphon.</param>
-        
-        
-        
-        
         public DncListCreate(string Name = null, int? Version = null, ImportStatus ImportStatus = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for DncListCreate and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ImportStatus = ImportStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.DncSourceType = DncSourceType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LoginId = LoginId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DncCodes = DncCodes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LicenseId = LicenseId;
-            
-            
-            
-            
-            
+            this.Version = Version;
+            this.ImportStatus = ImportStatus;
+            this.DncSourceType = DncSourceType;
+            this.LoginId = LoginId;
+            this.DncCodes = DncCodes;
+            this.LicenseId = LicenseId;
             
         }
         
@@ -404,29 +261,17 @@ this.LicenseId = LicenseId;
             sb.Append("class DncListCreate {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
-            
             sb.Append("  Size: ").Append(Size).Append("\n");
-            
             sb.Append("  DncSourceType: ").Append(DncSourceType).Append("\n");
-            
             sb.Append("  LoginId: ").Append(LoginId).Append("\n");
-            
             sb.Append("  DncCodes: ").Append(DncCodes).Append("\n");
-            
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

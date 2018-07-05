@@ -50,83 +50,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateActionInput" /> class.
         /// </summary>
-        
-        
         /// <param name="Category">Category of action.</param>
-        
-        
-        
         /// <param name="Name">Name of action.</param>
-        
-        
-        
         /// <param name="Config">Configuration to support request and response processing.</param>
-        
-        
-        
         /// <param name="Version">Version of this action (required).</param>
-        
-        
         public UpdateActionInput(string Category = null, string Name = null, ActionConfig Config = null, int? Version = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Version" is required (not null)
-            if (Version == null)
-            {
-                throw new InvalidDataException("Version is a required property for UpdateActionInput and cannot be null");
-            }
-            else
-            {
-                this.Version = Version;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-this.Category = Category;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Config = Config;
-            
-            
-            
-            
-            
-            
-            
+            this.Category = Category;
+            this.Name = Name;
+            this.Config = Config;
             
         }
         
@@ -177,13 +109,9 @@ this.Config = Config;
             sb.Append("class UpdateActionInput {\n");
             
             sb.Append("  Category: ").Append(Category).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Config: ").Append(Config).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

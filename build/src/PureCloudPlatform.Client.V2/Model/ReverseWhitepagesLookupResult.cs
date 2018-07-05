@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ReverseWhitepagesLookupResult" /> class.
         /// </summary>
-        
-        
         /// <param name="Contacts">Contacts.</param>
-        
-        
-        
         /// <param name="ExternalOrganizations">ExternalOrganizations.</param>
-        
-        
         public ReverseWhitepagesLookupResult(List<ExternalContact> Contacts = null, List<ExternalOrganization> ExternalOrganizations = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Contacts = Contacts;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalOrganizations = ExternalOrganizations;
-            
-            
-            
+            this.Contacts = Contacts;
+            this.ExternalOrganizations = ExternalOrganizations;
             
         }
         
@@ -102,9 +70,7 @@ this.ExternalOrganizations = ExternalOrganizations;
             sb.Append("class ReverseWhitepagesLookupResult {\n");
             
             sb.Append("  Contacts: ").Append(Contacts).Append("\n");
-            
             sb.Append("  ExternalOrganizations: ").Append(ExternalOrganizations).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

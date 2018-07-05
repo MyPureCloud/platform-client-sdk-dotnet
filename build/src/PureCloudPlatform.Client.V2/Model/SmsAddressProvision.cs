@@ -75,171 +75,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsAddressProvision" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name associated with this address (required).</param>
-        
-        
-        
         /// <param name="Street">The number and street address where this address is located. (required).</param>
-        
-        
-        
         /// <param name="City">The city in which this address is in (required).</param>
-        
-        
-        
         /// <param name="Region">The state or region this address is in (required).</param>
-        
-        
-        
         /// <param name="PostalCode">The postal code this address is in (required).</param>
-        
-        
-        
         /// <param name="CountryCode">The ISO country code of this address (required).</param>
-        
-        
-        
         /// <param name="AutoCorrectAddress">This is used when the address is created. If the value is not set or true, then the system will, if necessary, auto-correct the address you provide. Set this value to false if the system should not auto-correct the address..</param>
-        
-        
-        
-        
         public SmsAddressProvision(string Name = null, string Street = null, string City = null, string Region = null, string PostalCode = null, string CountryCode = null, bool? AutoCorrectAddress = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for SmsAddressProvision and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Street" is required (not null)
-            if (Street == null)
-            {
-                throw new InvalidDataException("Street is a required property for SmsAddressProvision and cannot be null");
-            }
-            else
-            {
-                this.Street = Street;
-            }
-            
-            
-            
-            
-            
-            // to ensure "City" is required (not null)
-            if (City == null)
-            {
-                throw new InvalidDataException("City is a required property for SmsAddressProvision and cannot be null");
-            }
-            else
-            {
-                this.City = City;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Region" is required (not null)
-            if (Region == null)
-            {
-                throw new InvalidDataException("Region is a required property for SmsAddressProvision and cannot be null");
-            }
-            else
-            {
-                this.Region = Region;
-            }
-            
-            
-            
-            
-            
-            // to ensure "PostalCode" is required (not null)
-            if (PostalCode == null)
-            {
-                throw new InvalidDataException("PostalCode is a required property for SmsAddressProvision and cannot be null");
-            }
-            else
-            {
-                this.PostalCode = PostalCode;
-            }
-            
-            
-            
-            
-            
-            // to ensure "CountryCode" is required (not null)
-            if (CountryCode == null)
-            {
-                throw new InvalidDataException("CountryCode is a required property for SmsAddressProvision and cannot be null");
-            }
-            else
-            {
-                this.CountryCode = CountryCode;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AutoCorrectAddress = AutoCorrectAddress;
-            
-            
-            
-            
-            
+            this.AutoCorrectAddress = AutoCorrectAddress;
             
         }
         
@@ -335,23 +180,14 @@ this.AutoCorrectAddress = AutoCorrectAddress;
             sb.Append("class SmsAddressProvision {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Street: ").Append(Street).Append("\n");
-            
             sb.Append("  City: ").Append(City).Append("\n");
-            
             sb.Append("  Region: ").Append(Region).Append("\n");
-            
             sb.Append("  PostalCode: ").Append(PostalCode).Append("\n");
-            
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
-            
             sb.Append("  AutoCorrectAddress: ").Append(AutoCorrectAddress).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

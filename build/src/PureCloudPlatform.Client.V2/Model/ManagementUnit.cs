@@ -150,174 +150,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ManagementUnit" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Division">The division to which this entity belongs..</param>
-        
-        
-        
         /// <param name="StartDayOfWeek">Start day of week for scheduling and forecasting purposes.</param>
-        
-        
-        
         /// <param name="TimeZone">The time zone for the management unit in standard Olson Format (See https://en.wikipedia.org/wiki/Tz_database).</param>
-        
-        
-        
         /// <param name="Settings">The configuration settings for this management unit.</param>
-        
-        
-        
         /// <param name="Version">The version of the underlying entity.  Deprecated, use metadata field instead (required).</param>
-        
-        
-        
-        
-        
         /// <param name="ModifiedBy">The user who last modified this entity.  Deprecated, use metadata field instead.</param>
-        
-        
-        
         /// <param name="Metadata">Version info metadata for this management unit (required).</param>
-        
-        
-        
-        
         public ManagementUnit(string Name = null, Division Division = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, ManagementUnitSettings Settings = null, int? Version = null, UserReference ModifiedBy = null, WfmVersionedEntityMetadata Metadata = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Version" is required (not null)
-            if (Version == null)
-            {
-                throw new InvalidDataException("Version is a required property for ManagementUnit and cannot be null");
-            }
-            else
-            {
-                this.Version = Version;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Metadata" is required (not null)
-            if (Metadata == null)
-            {
-                throw new InvalidDataException("Metadata is a required property for ManagementUnit and cannot be null");
-            }
-            else
-            {
-                this.Metadata = Metadata;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Division = Division;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartDayOfWeek = StartDayOfWeek;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeZone = TimeZone;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Settings = Settings;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Division = Division;
+            this.StartDayOfWeek = StartDayOfWeek;
+            this.TimeZone = TimeZone;
+            this.Settings = Settings;
+            this.ModifiedBy = ModifiedBy;
             
         }
         
@@ -423,27 +271,16 @@ this.ModifiedBy = ModifiedBy;
             sb.Append("class ManagementUnit {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Division: ").Append(Division).Append("\n");
-            
             sb.Append("  StartDayOfWeek: ").Append(StartDayOfWeek).Append("\n");
-            
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-            
             sb.Append("  Settings: ").Append(Settings).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -203,78 +203,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleParameters" /> class.
         /// </summary>
-        
-        
         /// <param name="_Operator">The operator for comparison. Required for a CampaignRuleCondition..</param>
-        
-        
-        
         /// <param name="Value">The value for comparison. Required for a CampaignRuleCondition..</param>
-        
-        
-        
         /// <param name="Priority">The priority to set a campaign to. Required for the &#39;setCampaignPriority&#39; action..</param>
-        
-        
-        
         /// <param name="DialingMode">The dialing mode to set a campaign to. Required for the &#39;setCampaignDialingMode&#39; action..</param>
-        
-        
         public CampaignRuleParameters(OperatorEnum? _Operator = null, string Value = null, PriorityEnum? Priority = null, DialingModeEnum? DialingMode = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this._Operator = _Operator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Priority = Priority;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DialingMode = DialingMode;
-            
-            
-            
+            this._Operator = _Operator;
+            this.Value = Value;
+            this.Priority = Priority;
+            this.DialingMode = DialingMode;
             
         }
         
@@ -304,13 +242,9 @@ this.DialingMode = DialingMode;
             sb.Append("class CampaignRuleParameters {\n");
             
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  Priority: ").Append(Priority).Append("\n");
-            
             sb.Append("  DialingMode: ").Append(DialingMode).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

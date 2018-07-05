@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactAddress" /> class.
         /// </summary>
-        
-        
         /// <param name="Address1">Address1.</param>
-        
-        
-        
         /// <param name="Address2">Address2.</param>
-        
-        
-        
         /// <param name="City">City.</param>
-        
-        
-        
         /// <param name="State">State.</param>
-        
-        
-        
         /// <param name="PostalCode">PostalCode.</param>
-        
-        
-        
         /// <param name="CountryCode">CountryCode.</param>
-        
-        
         public ContactAddress(string Address1 = null, string Address2 = null, string City = null, string State = null, string PostalCode = null, string CountryCode = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address1 = Address1;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address2 = Address2;
-            
-            
-            
-            
-            
-            
-            
-            
-this.City = City;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PostalCode = PostalCode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CountryCode = CountryCode;
-            
-            
-            
+            this.Address1 = Address1;
+            this.Address2 = Address2;
+            this.City = City;
+            this.State = State;
+            this.PostalCode = PostalCode;
+            this.CountryCode = CountryCode;
             
         }
         
@@ -222,17 +130,11 @@ this.CountryCode = CountryCode;
             sb.Append("class ContactAddress {\n");
             
             sb.Append("  Address1: ").Append(Address1).Append("\n");
-            
             sb.Append("  Address2: ").Append(Address2).Append("\n");
-            
             sb.Append("  City: ").Append(City).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  PostalCode: ").Append(PostalCode).Append("\n");
-            
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueEmailAddress" /> class.
         /// </summary>
-        
-        
         /// <param name="Domain">Domain.</param>
-        
-        
-        
         /// <param name="Route">Route.</param>
-        
-        
         public QueueEmailAddress(UriReference Domain = null, InboundRoute Route = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Domain = Domain;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Route = Route;
-            
-            
-            
+            this.Domain = Domain;
+            this.Route = Route;
             
         }
         
@@ -102,9 +70,7 @@ this.Route = Route;
             sb.Append("class QueueEmailAddress {\n");
             
             sb.Append("  Domain: ").Append(Domain).Append("\n");
-            
             sb.Append("  Route: ").Append(Route).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

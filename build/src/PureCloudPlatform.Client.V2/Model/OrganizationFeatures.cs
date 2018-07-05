@@ -89,231 +89,34 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationFeatures" /> class.
         /// </summary>
-        
-        
         /// <param name="RealtimeCIC">RealtimeCIC.</param>
-        
-        
-        
         /// <param name="Purecloud">Purecloud.</param>
-        
-        
-        
         /// <param name="Hipaa">Hipaa.</param>
-        
-        
-        
         /// <param name="UcEnabled">UcEnabled.</param>
-        
-        
-        
         /// <param name="Pci">Pci.</param>
-        
-        
-        
         /// <param name="PurecloudVoice">PurecloudVoice.</param>
-        
-        
-        
         /// <param name="XmppFederation">XmppFederation.</param>
-        
-        
-        
         /// <param name="Chat">Chat.</param>
-        
-        
-        
         /// <param name="InformalPhotos">InformalPhotos.</param>
-        
-        
-        
         /// <param name="Directory">Directory.</param>
-        
-        
-        
         /// <param name="ContactCenter">ContactCenter.</param>
-        
-        
-        
         /// <param name="UnifiedCommunications">UnifiedCommunications.</param>
-        
-        
-        
         /// <param name="Custserv">Custserv.</param>
-        
-        
         public OrganizationFeatures(bool? RealtimeCIC = null, bool? Purecloud = null, bool? Hipaa = null, bool? UcEnabled = null, bool? Pci = null, bool? PurecloudVoice = null, bool? XmppFederation = null, bool? Chat = null, bool? InformalPhotos = null, bool? Directory = null, bool? ContactCenter = null, bool? UnifiedCommunications = null, bool? Custserv = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RealtimeCIC = RealtimeCIC;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Purecloud = Purecloud;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Hipaa = Hipaa;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UcEnabled = UcEnabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Pci = Pci;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PurecloudVoice = PurecloudVoice;
-            
-            
-            
-            
-            
-            
-            
-            
-this.XmppFederation = XmppFederation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Chat = Chat;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InformalPhotos = InformalPhotos;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Directory = Directory;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactCenter = ContactCenter;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UnifiedCommunications = UnifiedCommunications;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Custserv = Custserv;
-            
-            
-            
+            this.RealtimeCIC = RealtimeCIC;
+            this.Purecloud = Purecloud;
+            this.Hipaa = Hipaa;
+            this.UcEnabled = UcEnabled;
+            this.Pci = Pci;
+            this.PurecloudVoice = PurecloudVoice;
+            this.XmppFederation = XmppFederation;
+            this.Chat = Chat;
+            this.InformalPhotos = InformalPhotos;
+            this.Directory = Directory;
+            this.ContactCenter = ContactCenter;
+            this.UnifiedCommunications = UnifiedCommunications;
+            this.Custserv = Custserv;
             
         }
         
@@ -432,31 +235,18 @@ this.Custserv = Custserv;
             sb.Append("class OrganizationFeatures {\n");
             
             sb.Append("  RealtimeCIC: ").Append(RealtimeCIC).Append("\n");
-            
             sb.Append("  Purecloud: ").Append(Purecloud).Append("\n");
-            
             sb.Append("  Hipaa: ").Append(Hipaa).Append("\n");
-            
             sb.Append("  UcEnabled: ").Append(UcEnabled).Append("\n");
-            
             sb.Append("  Pci: ").Append(Pci).Append("\n");
-            
             sb.Append("  PurecloudVoice: ").Append(PurecloudVoice).Append("\n");
-            
             sb.Append("  XmppFederation: ").Append(XmppFederation).Append("\n");
-            
             sb.Append("  Chat: ").Append(Chat).Append("\n");
-            
             sb.Append("  InformalPhotos: ").Append(InformalPhotos).Append("\n");
-            
             sb.Append("  Directory: ").Append(Directory).Append("\n");
-            
             sb.Append("  ContactCenter: ").Append(ContactCenter).Append("\n");
-            
             sb.Append("  UnifiedCommunications: ").Append(UnifiedCommunications).Append("\n");
-            
             sb.Append("  Custserv: ").Append(Custserv).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

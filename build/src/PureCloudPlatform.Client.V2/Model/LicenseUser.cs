@@ -39,39 +39,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LicenseUser" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Licenses">Licenses.</param>
-        
-        
-        
-        
         public LicenseUser(List<LicenseDefinition> Licenses = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Licenses = Licenses;
-            
-            
-            
-            
-            
+            this.Licenses = Licenses;
             
         }
         
@@ -112,11 +83,8 @@ this.Licenses = Licenses;
             sb.Append("class LicenseUser {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Licenses: ").Append(Licenses).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

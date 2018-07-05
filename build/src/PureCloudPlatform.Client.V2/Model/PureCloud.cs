@@ -44,56 +44,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PureCloud" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Disabled">Disabled.</param>
-        
-        
-        
-        
         public PureCloud(string Name = null, bool? Disabled = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Disabled = Disabled;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Disabled = Disabled;
             
         }
         
@@ -142,13 +98,9 @@ this.Disabled = Disabled;
             sb.Append("class PureCloud {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

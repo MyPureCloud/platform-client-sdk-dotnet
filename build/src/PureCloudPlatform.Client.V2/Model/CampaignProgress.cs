@@ -55,72 +55,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignProgress" /> class.
         /// </summary>
-        
-        
         /// <param name="Campaign">Identifier of the campaign (required).</param>
-        
-        
-        
         /// <param name="ContactList">Identifier of the contact list (required).</param>
-        
-        
-        
-        
-        
-        
-        
-        
         public CampaignProgress(UriReference Campaign = null, UriReference ContactList = null)
         {
-            
-            
-            
-            // to ensure "Campaign" is required (not null)
-            if (Campaign == null)
-            {
-                throw new InvalidDataException("Campaign is a required property for CampaignProgress and cannot be null");
-            }
-            else
-            {
-                this.Campaign = Campaign;
-            }
-            
-            
-            
-            
-            
-            // to ensure "ContactList" is required (not null)
-            if (ContactList == null)
-            {
-                throw new InvalidDataException("ContactList is a required property for CampaignProgress and cannot be null");
-            }
-            else
-            {
-                this.ContactList = ContactList;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -180,15 +118,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class CampaignProgress {\n");
             
             sb.Append("  Campaign: ").Append(Campaign).Append("\n");
-            
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
-            
             sb.Append("  NumberOfContactsCalled: ").Append(NumberOfContactsCalled).Append("\n");
-            
             sb.Append("  TotalNumberOfContacts: ").Append(TotalNumberOfContacts).Append("\n");
-            
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

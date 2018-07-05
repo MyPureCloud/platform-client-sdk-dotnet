@@ -90,197 +90,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyCreate" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The policy name. (required).</param>
-        
-        
-        
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Order">Order.</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="Enabled">Enabled.</param>
-        
-        
-        
         /// <param name="MediaPolicies">Conditions and actions per media type.</param>
-        
-        
-        
         /// <param name="Conditions">Conditions.</param>
-        
-        
-        
         /// <param name="Actions">Actions.</param>
-        
-        
-        
         /// <param name="PolicyErrors">PolicyErrors.</param>
-        
-        
-        
-        
         public PolicyCreate(string Name = null, DateTime? ModifiedDate = null, DateTime? CreatedDate = null, int? Order = null, string Description = null, bool? Enabled = null, MediaPolicies MediaPolicies = null, PolicyConditions Conditions = null, PolicyActions Actions = null, PolicyErrors PolicyErrors = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for PolicyCreate and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedDate = CreatedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Order = Order;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Enabled = Enabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaPolicies = MediaPolicies;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Conditions = Conditions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Actions = Actions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PolicyErrors = PolicyErrors;
-            
-            
-            
-            
-            
+            this.ModifiedDate = ModifiedDate;
+            this.CreatedDate = CreatedDate;
+            this.Order = Order;
+            this.Description = Description;
+            this.Enabled = Enabled;
+            this.MediaPolicies = MediaPolicies;
+            this.Conditions = Conditions;
+            this.Actions = Actions;
+            this.PolicyErrors = PolicyErrors;
             
         }
         
@@ -399,29 +229,17 @@ this.PolicyErrors = PolicyErrors;
             sb.Append("class PolicyCreate {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
-            
             sb.Append("  Order: ").Append(Order).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  MediaPolicies: ").Append(MediaPolicies).Append("\n");
-            
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
-            
             sb.Append("  Actions: ").Append(Actions).Append("\n");
-            
             sb.Append("  PolicyErrors: ").Append(PolicyErrors).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

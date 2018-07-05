@@ -24,10 +24,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Empty" /> class.
         /// </summary>
-        
         public Empty()
         {
-            
             
         }
         

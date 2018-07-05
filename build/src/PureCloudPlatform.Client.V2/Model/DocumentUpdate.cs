@@ -75,168 +75,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentUpdate" /> class.
         /// </summary>
-        
-        
         /// <param name="ChangeNumber">ChangeNumber.</param>
-        
-        
-        
         /// <param name="Name">The name of the document (required).</param>
-        
-        
-        
         /// <param name="Read">Read.</param>
-        
-        
-        
         /// <param name="AddTags">AddTags.</param>
-        
-        
-        
         /// <param name="RemoveTags">RemoveTags.</param>
-        
-        
-        
         /// <param name="AddTagIds">AddTagIds.</param>
-        
-        
-        
         /// <param name="RemoveTagIds">RemoveTagIds.</param>
-        
-        
-        
         /// <param name="UpdateAttributes">UpdateAttributes.</param>
-        
-        
-        
         /// <param name="RemoveAttributes">RemoveAttributes.</param>
-        
-        
         public DocumentUpdate(int? ChangeNumber = null, string Name = null, bool? Read = null, List<string> AddTags = null, List<string> RemoveTags = null, List<string> AddTagIds = null, List<string> RemoveTagIds = null, List<DocumentAttribute> UpdateAttributes = null, List<string> RemoveAttributes = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for DocumentUpdate and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ChangeNumber = ChangeNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Read = Read;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddTags = AddTags;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RemoveTags = RemoveTags;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddTagIds = AddTagIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RemoveTagIds = RemoveTagIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UpdateAttributes = UpdateAttributes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RemoveAttributes = RemoveAttributes;
-            
-            
-            
+            this.ChangeNumber = ChangeNumber;
+            this.Read = Read;
+            this.AddTags = AddTags;
+            this.RemoveTags = RemoveTags;
+            this.AddTagIds = AddTagIds;
+            this.RemoveTagIds = RemoveTagIds;
+            this.UpdateAttributes = UpdateAttributes;
+            this.RemoveAttributes = RemoveAttributes;
             
         }
         
@@ -324,23 +181,14 @@ this.RemoveAttributes = RemoveAttributes;
             sb.Append("class DocumentUpdate {\n");
             
             sb.Append("  ChangeNumber: ").Append(ChangeNumber).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Read: ").Append(Read).Append("\n");
-            
             sb.Append("  AddTags: ").Append(AddTags).Append("\n");
-            
             sb.Append("  RemoveTags: ").Append(RemoveTags).Append("\n");
-            
             sb.Append("  AddTagIds: ").Append(AddTagIds).Append("\n");
-            
             sb.Append("  RemoveTagIds: ").Append(RemoveTagIds).Append("\n");
-            
             sb.Append("  UpdateAttributes: ").Append(UpdateAttributes).Append("\n");
-            
             sb.Append("  RemoveAttributes: ").Append(RemoveAttributes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

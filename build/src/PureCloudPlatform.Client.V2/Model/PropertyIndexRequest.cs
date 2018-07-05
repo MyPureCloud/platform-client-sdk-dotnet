@@ -45,76 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PropertyIndexRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="SessionId">Attach properties to a segment in the indicated session (required).</param>
-        
-        
-        
         /// <param name="TargetDate">Attach properties to a segment covering a specific point in time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        
-        
-        
         /// <param name="Properties">The list of properties to index (required).</param>
-        
-        
         public PropertyIndexRequest(string SessionId = null, DateTime? TargetDate = null, List<AnalyticsProperty> Properties = null)
         {
-            
-            
-            
-            // to ensure "SessionId" is required (not null)
-            if (SessionId == null)
-            {
-                throw new InvalidDataException("SessionId is a required property for PropertyIndexRequest and cannot be null");
-            }
-            else
-            {
-                this.SessionId = SessionId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "TargetDate" is required (not null)
-            if (TargetDate == null)
-            {
-                throw new InvalidDataException("TargetDate is a required property for PropertyIndexRequest and cannot be null");
-            }
-            else
-            {
-                this.TargetDate = TargetDate;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Properties" is required (not null)
-            if (Properties == null)
-            {
-                throw new InvalidDataException("Properties is a required property for PropertyIndexRequest and cannot be null");
-            }
-            else
-            {
-                this.Properties = Properties;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -156,11 +91,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class PropertyIndexRequest {\n");
             
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
-            
             sb.Append("  TargetDate: ").Append(TargetDate).Append("\n");
-            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

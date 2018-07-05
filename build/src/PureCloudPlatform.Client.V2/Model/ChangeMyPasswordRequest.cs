@@ -40,54 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeMyPasswordRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="NewPassword">The new password (required).</param>
-        
-        
-        
         /// <param name="OldPassword">Your current password (required).</param>
-        
-        
         public ChangeMyPasswordRequest(string NewPassword = null, string OldPassword = null)
         {
-            
-            
-            
-            // to ensure "NewPassword" is required (not null)
-            if (NewPassword == null)
-            {
-                throw new InvalidDataException("NewPassword is a required property for ChangeMyPasswordRequest and cannot be null");
-            }
-            else
-            {
-                this.NewPassword = NewPassword;
-            }
-            
-            
-            
-            
-            
-            // to ensure "OldPassword" is required (not null)
-            if (OldPassword == null)
-            {
-                throw new InvalidDataException("OldPassword is a required property for ChangeMyPasswordRequest and cannot be null");
-            }
-            else
-            {
-                this.OldPassword = OldPassword;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -120,9 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ChangeMyPasswordRequest {\n");
             
             sb.Append("  NewPassword: ").Append(NewPassword).Append("\n");
-            
             sb.Append("  OldPassword: ").Append(OldPassword).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

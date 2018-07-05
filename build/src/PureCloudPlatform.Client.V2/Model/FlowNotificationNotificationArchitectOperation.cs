@@ -195,163 +195,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowNotificationNotificationArchitectOperation" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Complete">Complete.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="ActionName">ActionName.</param>
-        
-        
-        
         /// <param name="ActionStatus">ActionStatus.</param>
-        
-        
-        
         /// <param name="ErrorMessage">ErrorMessage.</param>
-        
-        
-        
         /// <param name="ErrorCode">ErrorCode.</param>
-        
-        
-        
         /// <param name="ErrorMessageParams">ErrorMessageParams.</param>
-        
-        
-        
         /// <param name="ErrorDetails">ErrorDetails.</param>
-        
-        
         public FlowNotificationNotificationArchitectOperation(string Id = null, bool? Complete = null, DependencyTrackingBuildNotificationNotificationUser User = null, ActionNameEnum? ActionName = null, ActionStatusEnum? ActionStatus = null, string ErrorMessage = null, string ErrorCode = null, PromptNotificationNotificationCurrentOperationErrorMessageParams ErrorMessageParams = null, List<PromptNotificationNotificationCurrentOperationErrorDetails> ErrorDetails = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Complete = Complete;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActionName = ActionName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActionStatus = ActionStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorMessage = ErrorMessage;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorCode = ErrorCode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorMessageParams = ErrorMessageParams;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorDetails = ErrorDetails;
-            
-            
-            
+            this.Id = Id;
+            this.Complete = Complete;
+            this.User = User;
+            this.ActionName = ActionName;
+            this.ActionStatus = ActionStatus;
+            this.ErrorMessage = ErrorMessage;
+            this.ErrorCode = ErrorCode;
+            this.ErrorMessageParams = ErrorMessageParams;
+            this.ErrorDetails = ErrorDetails;
             
         }
         
@@ -426,23 +289,14 @@ this.ErrorDetails = ErrorDetails;
             sb.Append("class FlowNotificationNotificationArchitectOperation {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Complete: ").Append(Complete).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  ActionName: ").Append(ActionName).Append("\n");
-            
             sb.Append("  ActionStatus: ").Append(ActionStatus).Append("\n");
-            
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            
             sb.Append("  ErrorMessageParams: ").Append(ErrorMessageParams).Append("\n");
-            
             sb.Append("  ErrorDetails: ").Append(ErrorDetails).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

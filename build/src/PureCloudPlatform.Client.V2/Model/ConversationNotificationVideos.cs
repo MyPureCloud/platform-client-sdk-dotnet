@@ -285,265 +285,38 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationVideos" /> class.
         /// </summary>
-        
-        
         /// <param name="State">State.</param>
-        
-        
-        
         /// <param name="Self">Self.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Context">Context.</param>
-        
-        
-        
         /// <param name="AudioMuted">AudioMuted.</param>
-        
-        
-        
         /// <param name="VideoMuted">VideoMuted.</param>
-        
-        
-        
         /// <param name="SharingScreen">SharingScreen.</param>
-        
-        
-        
         /// <param name="Provider">Provider.</param>
-        
-        
-        
         /// <param name="ScriptId">ScriptId.</param>
-        
-        
-        
         /// <param name="PeerId">PeerId.</param>
-        
-        
-        
         /// <param name="DisconnectType">DisconnectType.</param>
-        
-        
-        
         /// <param name="ConnectedTime">ConnectedTime.</param>
-        
-        
-        
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
-        
-        
-        
         /// <param name="Msids">Msids.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ConversationNotificationVideos(StateEnum? State = null, ConversationNotificationAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<string> Msids = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Self = Self;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Context = Context;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AudioMuted = AudioMuted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VideoMuted = VideoMuted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SharingScreen = SharingScreen;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScriptId = ScriptId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerId = PeerId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectedTime = DisconnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Msids = Msids;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.State = State;
+            this.Self = Self;
+            this.Id = Id;
+            this.Context = Context;
+            this.AudioMuted = AudioMuted;
+            this.VideoMuted = VideoMuted;
+            this.SharingScreen = SharingScreen;
+            this.Provider = Provider;
+            this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
+            this.DisconnectType = DisconnectType;
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
+            this.Msids = Msids;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -666,35 +439,20 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ConversationNotificationVideos {\n");
             
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Self: ").Append(Self).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Context: ").Append(Context).Append("\n");
-            
             sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
-            
             sb.Append("  VideoMuted: ").Append(VideoMuted).Append("\n");
-            
             sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
-            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            
             sb.Append("  Msids: ").Append(Msids).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

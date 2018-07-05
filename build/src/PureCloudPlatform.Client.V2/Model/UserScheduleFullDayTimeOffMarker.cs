@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleFullDayTimeOffMarker" /> class.
         /// </summary>
-        
-        
         /// <param name="ManagementUnitDate">The date associated with the time off request that this marker corresponds to.  Date only, in ISO-8601 format..</param>
-        
-        
-        
         /// <param name="ActivityCodeId">The id for the activity code.  Look up a map of activity codes with the activities route.</param>
-        
-        
-        
         /// <param name="IsPaid">Whether this is paid time off.</param>
-        
-        
-        
         /// <param name="LengthInMinutes">The length in minutes of this time off marker.</param>
-        
-        
-        
         /// <param name="Description">The description associated with the time off request that this marker corresponds to.</param>
-        
-        
-        
         /// <param name="Delete">If marked true for updating an existing full day time off marker, it will be deleted.</param>
-        
-        
         public UserScheduleFullDayTimeOffMarker(string ManagementUnitDate = null, string ActivityCodeId = null, bool? IsPaid = null, int? LengthInMinutes = null, string Description = null, bool? Delete = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ManagementUnitDate = ManagementUnitDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActivityCodeId = ActivityCodeId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IsPaid = IsPaid;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LengthInMinutes = LengthInMinutes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Delete = Delete;
-            
-            
-            
+            this.ManagementUnitDate = ManagementUnitDate;
+            this.ActivityCodeId = ActivityCodeId;
+            this.IsPaid = IsPaid;
+            this.LengthInMinutes = LengthInMinutes;
+            this.Description = Description;
+            this.Delete = Delete;
             
         }
         
@@ -228,17 +136,11 @@ this.Delete = Delete;
             sb.Append("class UserScheduleFullDayTimeOffMarker {\n");
             
             sb.Append("  ManagementUnitDate: ").Append(ManagementUnitDate).Append("\n");
-            
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
-            
             sb.Append("  IsPaid: ").Append(IsPaid).Append("\n");
-            
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Delete: ").Append(Delete).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

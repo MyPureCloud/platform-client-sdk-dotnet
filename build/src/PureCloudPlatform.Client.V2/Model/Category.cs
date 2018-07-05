@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Category" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Category name.</param>
-        
-        
         public Category(string Name = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
+            this.Name = Name;
             
         }
         
@@ -73,7 +56,6 @@ this.Name = Name;
             sb.Append("class Category {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

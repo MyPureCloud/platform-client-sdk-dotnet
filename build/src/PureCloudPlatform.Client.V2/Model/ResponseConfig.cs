@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseConfig" /> class.
         /// </summary>
-        
-        
         /// <param name="TranslationMap">Map &#39;attribute name&#39; and &#39;JSON path&#39; pairs used to extract data from REST response..</param>
-        
-        
-        
         /// <param name="SuccessTemplate">Velocity template to build response to return from Action..</param>
-        
-        
-        
         /// <param name="SuccessTemplateUri">URI to retrieve success template..</param>
-        
-        
         public ResponseConfig(Dictionary<string, string> TranslationMap = null, string SuccessTemplate = null, string SuccessTemplateUri = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.TranslationMap = TranslationMap;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SuccessTemplate = SuccessTemplate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SuccessTemplateUri = SuccessTemplateUri;
-            
-            
-            
+            this.TranslationMap = TranslationMap;
+            this.SuccessTemplate = SuccessTemplate;
+            this.SuccessTemplateUri = SuccessTemplateUri;
             
         }
         
@@ -135,11 +88,8 @@ this.SuccessTemplateUri = SuccessTemplateUri;
             sb.Append("class ResponseConfig {\n");
             
             sb.Append("  TranslationMap: ").Append(TranslationMap).Append("\n");
-            
             sb.Append("  SuccessTemplate: ").Append(SuccessTemplate).Append("\n");
-            
             sb.Append("  SuccessTemplateUri: ").Append(SuccessTemplateUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

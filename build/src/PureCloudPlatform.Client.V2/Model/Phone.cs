@@ -196,422 +196,48 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Phone" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the entity. (required).</param>
-        
-        
-        
         /// <param name="Description">The resource&#39;s description..</param>
-        
-        
-        
         /// <param name="Version">The current version of the resource..</param>
-        
-        
-        
         /// <param name="DateCreated">The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateModified">The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ModifiedBy">The ID of the user that last modified the resource..</param>
-        
-        
-        
         /// <param name="CreatedBy">The ID of the user that created the resource..</param>
-        
-        
-        
-        
-        
         /// <param name="ModifiedByApp">The application that last modified the resource..</param>
-        
-        
-        
         /// <param name="CreatedByApp">The application that created the resource..</param>
-        
-        
-        
         /// <param name="Site">The site associated to the phone. (required).</param>
-        
-        
-        
         /// <param name="PhoneBaseSettings">Phone Base Settings (required).</param>
-        
-        
-        
         /// <param name="LineBaseSettings">LineBaseSettings.</param>
-        
-        
-        
         /// <param name="PhoneMetaBase">PhoneMetaBase.</param>
-        
-        
-        
         /// <param name="Lines">Lines (required).</param>
-        
-        
-        
         /// <param name="Status">The status of the phone and lines from the primary Edge..</param>
-        
-        
-        
         /// <param name="SecondaryStatus">The status of the phone and lines from the secondary Edge..</param>
-        
-        
-        
         /// <param name="UserAgentInfo">User Agent Information for this phone. This includes model, firmware version, and manufacturer..</param>
-        
-        
-        
         /// <param name="Properties">Properties.</param>
-        
-        
-        
         /// <param name="Capabilities">Capabilities.</param>
-        
-        
-        
         /// <param name="WebRtcUser">This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones..</param>
-        
-        
-        
         /// <param name="PrimaryEdge">PrimaryEdge.</param>
-        
-        
-        
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
-        
-        
-        
-        
         public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, UserAgentInfo UserAgentInfo = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, UriReference WebRtcUser = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for Phone and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Site" is required (not null)
-            if (Site == null)
-            {
-                throw new InvalidDataException("Site is a required property for Phone and cannot be null");
-            }
-            else
-            {
-                this.Site = Site;
-            }
-            
-            
-            
-            
-            
-            // to ensure "PhoneBaseSettings" is required (not null)
-            if (PhoneBaseSettings == null)
-            {
-                throw new InvalidDataException("PhoneBaseSettings is a required property for Phone and cannot be null");
-            }
-            else
-            {
-                this.PhoneBaseSettings = PhoneBaseSettings;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Lines" is required (not null)
-            if (Lines == null)
-            {
-                throw new InvalidDataException("Lines is a required property for Phone and cannot be null");
-            }
-            else
-            {
-                this.Lines = Lines;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedByApp = ModifiedByApp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedByApp = CreatedByApp;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.LineBaseSettings = LineBaseSettings;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneMetaBase = PhoneMetaBase;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SecondaryStatus = SecondaryStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserAgentInfo = UserAgentInfo;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Properties = Properties;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Capabilities = Capabilities;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WebRtcUser = WebRtcUser;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PrimaryEdge = PrimaryEdge;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SecondaryEdge = SecondaryEdge;
-            
-            
-            
-            
-            
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.LineBaseSettings = LineBaseSettings;
+            this.PhoneMetaBase = PhoneMetaBase;
+            this.Status = Status;
+            this.SecondaryStatus = SecondaryStatus;
+            this.UserAgentInfo = UserAgentInfo;
+            this.Properties = Properties;
+            this.Capabilities = Capabilities;
+            this.WebRtcUser = WebRtcUser;
+            this.PrimaryEdge = PrimaryEdge;
+            this.SecondaryEdge = SecondaryEdge;
             
         }
         
@@ -838,55 +464,30 @@ this.SecondaryEdge = SecondaryEdge;
             sb.Append("class Phone {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
-            
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
-            
             sb.Append("  Site: ").Append(Site).Append("\n");
-            
             sb.Append("  PhoneBaseSettings: ").Append(PhoneBaseSettings).Append("\n");
-            
             sb.Append("  LineBaseSettings: ").Append(LineBaseSettings).Append("\n");
-            
             sb.Append("  PhoneMetaBase: ").Append(PhoneMetaBase).Append("\n");
-            
             sb.Append("  Lines: ").Append(Lines).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  SecondaryStatus: ").Append(SecondaryStatus).Append("\n");
-            
             sb.Append("  UserAgentInfo: ").Append(UserAgentInfo).Append("\n");
-            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            
             sb.Append("  Capabilities: ").Append(Capabilities).Append("\n");
-            
             sb.Append("  WebRtcUser: ").Append(WebRtcUser).Append("\n");
-            
             sb.Append("  PrimaryEdge: ").Append(PrimaryEdge).Append("\n");
-            
             sb.Append("  SecondaryEdge: ").Append(SecondaryEdge).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

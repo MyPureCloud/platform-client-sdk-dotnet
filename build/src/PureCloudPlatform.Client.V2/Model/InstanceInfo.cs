@@ -108,95 +108,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InstanceInfo" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id of the ec2 instance..</param>
-        
-        
-        
         /// <param name="State">State of the instance in AWS.</param>
-        
-        
-        
         /// <param name="Edge">Edge object that the instance is associated with..</param>
-        
-        
-        
         /// <param name="AssignedPhoneCount">Number of phones assigned to the edge..</param>
-        
-        
-        
         /// <param name="Ami">The image id of the instance..</param>
-        
-        
         public InstanceInfo(string Id = null, StateEnum? State = null, Edge Edge = null, int? AssignedPhoneCount = null, string Ami = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Edge = Edge;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AssignedPhoneCount = AssignedPhoneCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Ami = Ami;
-            
-            
-            
+            this.Id = Id;
+            this.State = State;
+            this.Edge = Edge;
+            this.AssignedPhoneCount = AssignedPhoneCount;
+            this.Ami = Ami;
             
         }
         
@@ -249,15 +172,10 @@ this.Ami = Ami;
             sb.Append("class InstanceInfo {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Edge: ").Append(Edge).Append("\n");
-            
             sb.Append("  AssignedPhoneCount: ").Append(AssignedPhoneCount).Append("\n");
-            
             sb.Append("  Ami: ").Append(Ami).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

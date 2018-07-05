@@ -64,124 +64,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserPresence" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Source">Represents the source where the Presence was set. Some examples are: PURECLOUD, LYNC, OUTLOOK, etc..</param>
-        
-        
-        
         /// <param name="Primary">A boolean used to tell whether or not to set this presence source as the primary on a PATCH.</param>
-        
-        
-        
         /// <param name="PresenceDefinition">PresenceDefinition.</param>
-        
-        
-        
         /// <param name="Message">Message.</param>
-        
-        
-        
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
-        
         public UserPresence(string Name = null, string Source = null, bool? Primary = null, PresenceDefinition PresenceDefinition = null, string Message = null, DateTime? ModifiedDate = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Source = Source;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Primary = Primary;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PresenceDefinition = PresenceDefinition;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Message = Message;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Source = Source;
+            this.Primary = Primary;
+            this.PresenceDefinition = PresenceDefinition;
+            this.Message = Message;
+            this.ModifiedDate = ModifiedDate;
             
         }
         
@@ -265,21 +161,13 @@ this.ModifiedDate = ModifiedDate;
             sb.Append("class UserPresence {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Source: ").Append(Source).Append("\n");
-            
             sb.Append("  Primary: ").Append(Primary).Append("\n");
-            
             sb.Append("  PresenceDefinition: ").Append(PresenceDefinition).Append("\n");
-            
             sb.Append("  Message: ").Append(Message).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

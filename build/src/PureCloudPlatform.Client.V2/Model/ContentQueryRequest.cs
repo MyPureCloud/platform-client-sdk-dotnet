@@ -64,146 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentQueryRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="QueryPhrase">QueryPhrase.</param>
-        
-        
-        
         /// <param name="PageNumber">PageNumber.</param>
-        
-        
-        
         /// <param name="PageSize">PageSize.</param>
-        
-        
-        
         /// <param name="FacetNameRequests">FacetNameRequests.</param>
-        
-        
-        
         /// <param name="Sort">Sort.</param>
-        
-        
-        
         /// <param name="Filters">Filters.</param>
-        
-        
-        
         /// <param name="AttributeFilters">AttributeFilters.</param>
-        
-        
-        
         /// <param name="IncludeShares">IncludeShares.</param>
-        
-        
         public ContentQueryRequest(string QueryPhrase = null, int? PageNumber = null, int? PageSize = null, List<string> FacetNameRequests = null, List<ContentSortItem> Sort = null, List<ContentFacetFilterItem> Filters = null, List<ContentAttributeFilterItem> AttributeFilters = null, bool? IncludeShares = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueryPhrase = QueryPhrase;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageNumber = PageNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageSize = PageSize;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FacetNameRequests = FacetNameRequests;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Sort = Sort;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Filters = Filters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AttributeFilters = AttributeFilters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IncludeShares = IncludeShares;
-            
-            
-            
+            this.QueryPhrase = QueryPhrase;
+            this.PageNumber = PageNumber;
+            this.PageSize = PageSize;
+            this.FacetNameRequests = FacetNameRequests;
+            this.Sort = Sort;
+            this.Filters = Filters;
+            this.AttributeFilters = AttributeFilters;
+            this.IncludeShares = IncludeShares;
             
         }
         
@@ -282,21 +160,13 @@ this.IncludeShares = IncludeShares;
             sb.Append("class ContentQueryRequest {\n");
             
             sb.Append("  QueryPhrase: ").Append(QueryPhrase).Append("\n");
-            
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            
             sb.Append("  FacetNameRequests: ").Append(FacetNameRequests).Append("\n");
-            
             sb.Append("  Sort: ").Append(Sort).Append("\n");
-            
             sb.Append("  Filters: ").Append(Filters).Append("\n");
-            
             sb.Append("  AttributeFilters: ").Append(AttributeFilters).Append("\n");
-            
             sb.Append("  IncludeShares: ").Append(IncludeShares).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

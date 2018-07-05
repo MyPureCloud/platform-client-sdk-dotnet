@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemPromptResourceNotificationNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="PromptId">PromptId.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Language">Language.</param>
-        
-        
-        
         /// <param name="MediaUri">MediaUri.</param>
-        
-        
-        
         /// <param name="UploadStatus">UploadStatus.</param>
-        
-        
-        
         /// <param name="DurationSeconds">DurationSeconds.</param>
-        
-        
         public SystemPromptResourceNotificationNotification(string PromptId = null, string Id = null, string Language = null, string MediaUri = null, string UploadStatus = null, double? DurationSeconds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.PromptId = PromptId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Language = Language;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaUri = MediaUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadStatus = UploadStatus;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationSeconds = DurationSeconds;
-            
-            
-            
+            this.PromptId = PromptId;
+            this.Id = Id;
+            this.Language = Language;
+            this.MediaUri = MediaUri;
+            this.UploadStatus = UploadStatus;
+            this.DurationSeconds = DurationSeconds;
             
         }
         
@@ -222,17 +130,11 @@ this.DurationSeconds = DurationSeconds;
             sb.Append("class SystemPromptResourceNotificationNotification {\n");
             
             sb.Append("  PromptId: ").Append(PromptId).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Language: ").Append(Language).Append("\n");
-            
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
-            
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
-            
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

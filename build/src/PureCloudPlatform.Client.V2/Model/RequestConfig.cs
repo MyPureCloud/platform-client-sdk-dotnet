@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestConfig" /> class.
         /// </summary>
-        
-        
         /// <param name="RequestUrlTemplate">URL that may include placeholders for requests to 3rd party service.</param>
-        
-        
-        
         /// <param name="RequestTemplate">Velocity template to define request body sent to 3rd party service..</param>
-        
-        
-        
         /// <param name="RequestTemplateUri">URI to retrieve requestTemplate.</param>
-        
-        
-        
         /// <param name="RequestType">HTTP method to use for request.</param>
-        
-        
-        
         /// <param name="Headers">Headers to include in request in (Header Name, Value) pairs..</param>
-        
-        
         public RequestConfig(string RequestUrlTemplate = null, string RequestTemplate = null, string RequestTemplateUri = null, string RequestType = null, Dictionary<string, string> Headers = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RequestUrlTemplate = RequestUrlTemplate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RequestTemplate = RequestTemplate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RequestTemplateUri = RequestTemplateUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RequestType = RequestType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Headers = Headers;
-            
-            
-            
+            this.RequestUrlTemplate = RequestUrlTemplate;
+            this.RequestTemplate = RequestTemplate;
+            this.RequestTemplateUri = RequestTemplateUri;
+            this.RequestType = RequestType;
+            this.Headers = Headers;
             
         }
         
@@ -197,15 +120,10 @@ this.Headers = Headers;
             sb.Append("class RequestConfig {\n");
             
             sb.Append("  RequestUrlTemplate: ").Append(RequestUrlTemplate).Append("\n");
-            
             sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
-            
             sb.Append("  RequestTemplateUri: ").Append(RequestTemplateUri).Append("\n");
-            
             sb.Append("  RequestType: ").Append(RequestType).Append("\n");
-            
             sb.Append("  Headers: ").Append(Headers).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

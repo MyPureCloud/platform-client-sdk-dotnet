@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Usage" /> class.
         /// </summary>
-        
-        
         /// <param name="Types">Types.</param>
-        
-        
         public Usage(List<UsageItem> Types = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Types = Types;
-            
-            
-            
+            this.Types = Types;
             
         }
         
@@ -72,7 +55,6 @@ this.Types = Types;
             sb.Append("class Usage {\n");
             
             sb.Append("  Types: ").Append(Types).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

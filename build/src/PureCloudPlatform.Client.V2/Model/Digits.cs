@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Digits" /> class.
         /// </summary>
-        
-        
         /// <param name="_Digits">A string representing the digits pressed on phone..</param>
-        
-        
         public Digits(string _Digits = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this._Digits = _Digits;
-            
-            
-            
+            this._Digits = _Digits;
             
         }
         
@@ -73,7 +56,6 @@ this._Digits = _Digits;
             sb.Append("class Digits {\n");
             
             sb.Append("  _Digits: ").Append(_Digits).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

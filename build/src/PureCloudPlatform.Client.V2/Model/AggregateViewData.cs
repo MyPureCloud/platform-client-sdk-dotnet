@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregateViewData" /> class.
         /// </summary>
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Stats">Stats.</param>
-        
-        
         public AggregateViewData(string Name = null, StatisticalSummary Stats = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Stats = Stats;
-            
-            
-            
+            this.Name = Name;
+            this.Stats = Stats;
             
         }
         
@@ -102,9 +70,7 @@ this.Stats = Stats;
             sb.Append("class AggregateViewData {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Stats: ").Append(Stats).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

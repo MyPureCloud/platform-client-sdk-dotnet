@@ -64,124 +64,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchDownloadJobStatusResult" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="JobId">JobId returned when job was initially submitted.</param>
-        
-        
-        
         /// <param name="ExpectedResultCount">Number of results expected when job is completed.</param>
-        
-        
-        
         /// <param name="ResultCount">Current number of results available.</param>
-        
-        
-        
         /// <param name="ErrorCount">Number of error results produced so far.</param>
-        
-        
-        
         /// <param name="Results">Current set of results for the job.</param>
-        
-        
-        
-        
         public BatchDownloadJobStatusResult(string Name = null, string JobId = null, int? ExpectedResultCount = null, int? ResultCount = null, int? ErrorCount = null, List<BatchDownloadJobResult> Results = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.JobId = JobId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExpectedResultCount = ExpectedResultCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ResultCount = ResultCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorCount = ErrorCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Results = Results;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.JobId = JobId;
+            this.ExpectedResultCount = ExpectedResultCount;
+            this.ResultCount = ResultCount;
+            this.ErrorCount = ErrorCount;
+            this.Results = Results;
             
         }
         
@@ -267,21 +163,13 @@ this.Results = Results;
             sb.Append("class BatchDownloadJobStatusResult {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  JobId: ").Append(JobId).Append("\n");
-            
             sb.Append("  ExpectedResultCount: ").Append(ExpectedResultCount).Append("\n");
-            
             sb.Append("  ResultCount: ").Append(ResultCount).Append("\n");
-            
             sb.Append("  ErrorCount: ").Append(ErrorCount).Append("\n");
-            
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

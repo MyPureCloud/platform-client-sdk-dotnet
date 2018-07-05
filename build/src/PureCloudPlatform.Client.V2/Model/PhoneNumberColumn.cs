@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumberColumn" /> class.
         /// </summary>
-        
-        
         /// <param name="ColumnName">ColumnName.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
         public PhoneNumberColumn(string ColumnName = null, string Type = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ColumnName = ColumnName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
+            this.ColumnName = ColumnName;
+            this.Type = Type;
             
         }
         
@@ -102,9 +70,7 @@ this.Type = Type;
             sb.Append("class PhoneNumberColumn {\n");
             
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

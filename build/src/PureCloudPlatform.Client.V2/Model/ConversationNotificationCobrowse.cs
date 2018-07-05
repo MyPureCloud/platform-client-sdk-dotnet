@@ -278,282 +278,40 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationCobrowse" /> class.
         /// </summary>
-        
-        
         /// <param name="State">State.</param>
-        
-        
-        
         /// <param name="DisconnectType">DisconnectType.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Self">Self.</param>
-        
-        
-        
         /// <param name="RoomId">RoomId.</param>
-        
-        
-        
         /// <param name="CobrowseSessionId">CobrowseSessionId.</param>
-        
-        
-        
         /// <param name="CobrowseRole">CobrowseRole.</param>
-        
-        
-        
         /// <param name="Controlling">Controlling.</param>
-        
-        
-        
         /// <param name="ViewerUrl">ViewerUrl.</param>
-        
-        
-        
         /// <param name="Provider">Provider.</param>
-        
-        
-        
         /// <param name="ScriptId">ScriptId.</param>
-        
-        
-        
         /// <param name="PeerId">PeerId.</param>
-        
-        
-        
         /// <param name="ProviderEventTime">ProviderEventTime.</param>
-        
-        
-        
         /// <param name="ConnectedTime">ConnectedTime.</param>
-        
-        
-        
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ConversationNotificationCobrowse(StateEnum? State = null, DisconnectTypeEnum? DisconnectType = null, string Id = null, ConversationNotificationAddress Self = null, string RoomId = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Self = Self;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RoomId = RoomId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CobrowseSessionId = CobrowseSessionId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CobrowseRole = CobrowseRole;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Controlling = Controlling;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ViewerUrl = ViewerUrl;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ScriptId = ScriptId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerId = PeerId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ProviderEventTime = ProviderEventTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectedTime = DisconnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.State = State;
+            this.DisconnectType = DisconnectType;
+            this.Id = Id;
+            this.Self = Self;
+            this.RoomId = RoomId;
+            this.CobrowseSessionId = CobrowseSessionId;
+            this.CobrowseRole = CobrowseRole;
+            this.Controlling = Controlling;
+            this.ViewerUrl = ViewerUrl;
+            this.Provider = Provider;
+            this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
+            this.ProviderEventTime = ProviderEventTime;
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -684,37 +442,21 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ConversationNotificationCobrowse {\n");
             
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Self: ").Append(Self).Append("\n");
-            
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
-            
             sb.Append("  CobrowseSessionId: ").Append(CobrowseSessionId).Append("\n");
-            
             sb.Append("  CobrowseRole: ").Append(CobrowseRole).Append("\n");
-            
             sb.Append("  Controlling: ").Append(Controlling).Append("\n");
-            
             sb.Append("  ViewerUrl: ").Append(ViewerUrl).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
-            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            
             sb.Append("  ProviderEventTime: ").Append(ProviderEventTime).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

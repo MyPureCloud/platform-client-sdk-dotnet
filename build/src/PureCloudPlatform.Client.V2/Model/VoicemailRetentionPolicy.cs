@@ -75,44 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailRetentionPolicy" /> class.
         /// </summary>
-        
-        
         /// <param name="VoicemailRetentionPolicyType">The retention policy type.</param>
-        
-        
-        
         /// <param name="NumberOfDays">If retentionPolicyType == RETAIN_WITH_TTL, then this value represents the number of days for the TTL.</param>
-        
-        
         public VoicemailRetentionPolicy(VoicemailRetentionPolicyTypeEnum? VoicemailRetentionPolicyType = null, int? NumberOfDays = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.VoicemailRetentionPolicyType = VoicemailRetentionPolicyType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumberOfDays = NumberOfDays;
-            
-            
-            
+            this.VoicemailRetentionPolicyType = VoicemailRetentionPolicyType;
+            this.NumberOfDays = NumberOfDays;
             
         }
         
@@ -138,9 +106,7 @@ this.NumberOfDays = NumberOfDays;
             sb.Append("class VoicemailRetentionPolicy {\n");
             
             sb.Append("  VoicemailRetentionPolicyType: ").Append(VoicemailRetentionPolicyType).Append("\n");
-            
             sb.Append("  NumberOfDays: ").Append(NumberOfDays).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

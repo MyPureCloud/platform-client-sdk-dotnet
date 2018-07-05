@@ -69,141 +69,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Action" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="IntegrationId">The ID of the integration for which this action is associated.</param>
-        
-        
-        
         /// <param name="Category">Category of Action.</param>
-        
-        
-        
         /// <param name="Contract">Action contract.</param>
-        
-        
-        
         /// <param name="Version">Version of this action.</param>
-        
-        
-        
         /// <param name="Secure">Indication of whether or not the action is designed to accept sensitive data.</param>
-        
-        
-        
         /// <param name="Config">Configuration to support request and response processing.</param>
-        
-        
-        
-        
         public Action(string Name = null, string IntegrationId = null, string Category = null, ActionContract Contract = null, int? Version = null, bool? Secure = null, ActionConfig Config = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IntegrationId = IntegrationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Category = Category;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Contract = Contract;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Secure = Secure;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Config = Config;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.IntegrationId = IntegrationId;
+            this.Category = Category;
+            this.Contract = Contract;
+            this.Version = Version;
+            this.Secure = Secure;
+            this.Config = Config;
             
         }
         
@@ -298,23 +179,14 @@ this.Config = Config;
             sb.Append("class Action {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
-            
             sb.Append("  Category: ").Append(Category).Append("\n");
-            
             sb.Append("  Contract: ").Append(Contract).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  Secure: ").Append(Secure).Append("\n");
-            
             sb.Append("  Config: ").Append(Config).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

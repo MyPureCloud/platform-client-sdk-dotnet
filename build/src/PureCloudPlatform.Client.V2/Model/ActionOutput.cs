@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionOutput" /> class.
         /// </summary>
-        
-        
         /// <param name="SuccessSchema">JSON schema that defines the transformed, successful result that will be sent back to the caller. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both..</param>
-        
-        
-        
         /// <param name="SuccessSchemaUri">URI to retrieve success schema.</param>
-        
-        
-        
         /// <param name="ErrorSchema">JSON schema that defines the body of response when request is not successful. If the &#39;flatten&#39; query parameter is omitted or false, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both..</param>
-        
-        
-        
         /// <param name="ErrorSchemaUri">URI to retrieve error schema.</param>
-        
-        
-        
         /// <param name="SuccessSchemaFlattened">JSON schema that defines the transformed, successful result that will be sent back to the caller. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either successSchema or successSchemaFlattened will be returned, not both..</param>
-        
-        
-        
         /// <param name="ErrorSchemaFlattened">JSON schema that defines the body of response when request is not successful. The schema is transformed based on Architect&#39;s flattened format. If the &#39;flatten&#39; query parameter is supplied as true, this field will be returned. Either errorSchema or errorSchemaFlattened will be returned, not both..</param>
-        
-        
         public ActionOutput(JsonSchemaDocument SuccessSchema = null, string SuccessSchemaUri = null, JsonSchemaDocument ErrorSchema = null, string ErrorSchemaUri = null, JsonSchemaDocument SuccessSchemaFlattened = null, Object ErrorSchemaFlattened = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SuccessSchema = SuccessSchema;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SuccessSchemaUri = SuccessSchemaUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorSchema = ErrorSchema;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorSchemaUri = ErrorSchemaUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SuccessSchemaFlattened = SuccessSchemaFlattened;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorSchemaFlattened = ErrorSchemaFlattened;
-            
-            
-            
+            this.SuccessSchema = SuccessSchema;
+            this.SuccessSchemaUri = SuccessSchemaUri;
+            this.ErrorSchema = ErrorSchema;
+            this.ErrorSchemaUri = ErrorSchemaUri;
+            this.SuccessSchemaFlattened = SuccessSchemaFlattened;
+            this.ErrorSchemaFlattened = ErrorSchemaFlattened;
             
         }
         
@@ -228,17 +136,11 @@ this.ErrorSchemaFlattened = ErrorSchemaFlattened;
             sb.Append("class ActionOutput {\n");
             
             sb.Append("  SuccessSchema: ").Append(SuccessSchema).Append("\n");
-            
             sb.Append("  SuccessSchemaUri: ").Append(SuccessSchemaUri).Append("\n");
-            
             sb.Append("  ErrorSchema: ").Append(ErrorSchema).Append("\n");
-            
             sb.Append("  ErrorSchemaUri: ").Append(ErrorSchemaUri).Append("\n");
-            
             sb.Append("  SuccessSchemaFlattened: ").Append(SuccessSchemaFlattened).Append("\n");
-            
             sb.Append("  ErrorSchemaFlattened: ").Append(ErrorSchemaFlattened).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

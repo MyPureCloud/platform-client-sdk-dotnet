@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatSettings" /> class.
         /// </summary>
-        
-        
         /// <param name="RequireDeployment">RequireDeployment.</param>
-        
-        
         public WebChatSettings(bool? RequireDeployment = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RequireDeployment = RequireDeployment;
-            
-            
-            
+            this.RequireDeployment = RequireDeployment;
             
         }
         
@@ -72,7 +55,6 @@ this.RequireDeployment = RequireDeployment;
             sb.Append("class WebChatSettings {\n");
             
             sb.Append("  RequireDeployment: ").Append(RequireDeployment).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

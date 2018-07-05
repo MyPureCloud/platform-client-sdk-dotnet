@@ -45,76 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignTimeSlot" /> class.
         /// </summary>
-        
-        
         /// <param name="StartTime">The start time of the interval as an ISO-8601 string, i.e. HH:mm:ss (required).</param>
-        
-        
-        
         /// <param name="StopTime">The end time of the interval as an ISO-8601 string, i.e. HH:mm:ss (required).</param>
-        
-        
-        
         /// <param name="Day">The day of the interval. Valid values: [1-7], representing Monday through Sunday (required).</param>
-        
-        
         public CampaignTimeSlot(string StartTime = null, string StopTime = null, int? Day = null)
         {
-            
-            
-            
-            // to ensure "StartTime" is required (not null)
-            if (StartTime == null)
-            {
-                throw new InvalidDataException("StartTime is a required property for CampaignTimeSlot and cannot be null");
-            }
-            else
-            {
-                this.StartTime = StartTime;
-            }
-            
-            
-            
-            
-            
-            // to ensure "StopTime" is required (not null)
-            if (StopTime == null)
-            {
-                throw new InvalidDataException("StopTime is a required property for CampaignTimeSlot and cannot be null");
-            }
-            else
-            {
-                this.StopTime = StopTime;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Day" is required (not null)
-            if (Day == null)
-            {
-                throw new InvalidDataException("Day is a required property for CampaignTimeSlot and cannot be null");
-            }
-            else
-            {
-                this.Day = Day;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -156,11 +91,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class CampaignTimeSlot {\n");
             
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  StopTime: ").Append(StopTime).Append("\n");
-            
             sb.Append("  Day: ").Append(Day).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

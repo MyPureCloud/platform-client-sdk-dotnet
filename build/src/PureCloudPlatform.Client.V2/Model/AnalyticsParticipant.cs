@@ -206,146 +206,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsParticipant" /> class.
         /// </summary>
-        
-        
         /// <param name="ParticipantId">Unique identifier for the participant.</param>
-        
-        
-        
         /// <param name="ParticipantName">A human readable name identifying the participant.</param>
-        
-        
-        
         /// <param name="UserId">If a user, then this will be the unique identifier for the user.</param>
-        
-        
-        
         /// <param name="Purpose">The participant&#39;s purpose.</param>
-        
-        
-        
         /// <param name="ExternalContactId">External Contact Identifier.</param>
-        
-        
-        
         /// <param name="ExternalOrganizationId">External Organization Identifier.</param>
-        
-        
-        
         /// <param name="FlaggedReason">Reason for which participant flagged conversation.</param>
-        
-        
-        
         /// <param name="Sessions">List of sessions associated to this participant.</param>
-        
-        
         public AnalyticsParticipant(string ParticipantId = null, string ParticipantName = null, string UserId = null, PurposeEnum? Purpose = null, string ExternalContactId = null, string ExternalOrganizationId = null, FlaggedReasonEnum? FlaggedReason = null, List<AnalyticsSession> Sessions = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ParticipantId = ParticipantId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ParticipantName = ParticipantName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Purpose = Purpose;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalContactId = ExternalContactId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalOrganizationId = ExternalOrganizationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FlaggedReason = FlaggedReason;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Sessions = Sessions;
-            
-            
-            
+            this.ParticipantId = ParticipantId;
+            this.ParticipantName = ParticipantName;
+            this.UserId = UserId;
+            this.Purpose = Purpose;
+            this.ExternalContactId = ExternalContactId;
+            this.ExternalOrganizationId = ExternalOrganizationId;
+            this.FlaggedReason = FlaggedReason;
+            this.Sessions = Sessions;
             
         }
         
@@ -418,21 +296,13 @@ this.Sessions = Sessions;
             sb.Append("class AnalyticsParticipant {\n");
             
             sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
-            
             sb.Append("  ParticipantName: ").Append(ParticipantName).Append("\n");
-            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
-            
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
-            
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
-            
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
-            
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

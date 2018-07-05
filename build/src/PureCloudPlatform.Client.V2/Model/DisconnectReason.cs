@@ -74,61 +74,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DisconnectReason" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">Disconnect reason protocol type..</param>
-        
-        
-        
         /// <param name="Code">Protocol specific reason code. See the Q.850 and SIP specs..</param>
-        
-        
-        
         /// <param name="Phrase">Human readable English description of the disconnect reason..</param>
-        
-        
         public DisconnectReason(TypeEnum? Type = null, int? Code = null, string Phrase = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Code = Code;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Phrase = Phrase;
-            
-            
-            
+            this.Type = Type;
+            this.Code = Code;
+            this.Phrase = Phrase;
             
         }
         
@@ -163,11 +116,8 @@ this.Phrase = Phrase;
             sb.Append("class DisconnectReason {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Code: ").Append(Code).Append("\n");
-            
             sb.Append("  Phrase: ").Append(Phrase).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

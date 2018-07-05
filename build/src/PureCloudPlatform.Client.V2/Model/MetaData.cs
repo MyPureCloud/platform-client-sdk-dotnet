@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MetaData" /> class.
         /// </summary>
-        
-        
         /// <param name="PairingToken">PairingToken.</param>
-        
-        
-        
         /// <param name="PairingTrust">PairingTrust.</param>
-        
-        
-        
         /// <param name="PairingUrl">PairingUrl.</param>
-        
-        
         public MetaData(string PairingToken = null, List<string> PairingTrust = null, string PairingUrl = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.PairingToken = PairingToken;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PairingTrust = PairingTrust;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PairingUrl = PairingUrl;
-            
-            
-            
+            this.PairingToken = PairingToken;
+            this.PairingTrust = PairingTrust;
+            this.PairingUrl = PairingUrl;
             
         }
         
@@ -132,11 +85,8 @@ this.PairingUrl = PairingUrl;
             sb.Append("class MetaData {\n");
             
             sb.Append("  PairingToken: ").Append(PairingToken).Append("\n");
-            
             sb.Append("  PairingTrust: ").Append(PairingTrust).Append("\n");
-            
             sb.Append("  PairingUrl: ").Append(PairingUrl).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

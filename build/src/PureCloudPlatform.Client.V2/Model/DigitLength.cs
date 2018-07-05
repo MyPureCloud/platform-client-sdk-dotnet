@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DigitLength" /> class.
         /// </summary>
-        
-        
         /// <param name="Start">Start.</param>
-        
-        
-        
         /// <param name="End">End.</param>
-        
-        
         public DigitLength(string Start = null, string End = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Start = Start;
-            
-            
-            
-            
-            
-            
-            
-            
-this.End = End;
-            
-            
-            
+            this.Start = Start;
+            this.End = End;
             
         }
         
@@ -102,9 +70,7 @@ this.End = End;
             sb.Append("class DigitLength {\n");
             
             sb.Append("  Start: ").Append(Start).Append("\n");
-            
             sb.Append("  End: ").Append(End).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

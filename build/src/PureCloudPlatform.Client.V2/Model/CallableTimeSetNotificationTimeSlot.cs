@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableTimeSetNotificationTimeSlot" /> class.
         /// </summary>
-        
-        
         /// <param name="StartTime">StartTime.</param>
-        
-        
-        
         /// <param name="StopTime">StopTime.</param>
-        
-        
-        
         /// <param name="Day">Day.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public CallableTimeSetNotificationTimeSlot(string StartTime = null, string StopTime = null, int? Day = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartTime = StartTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StopTime = StopTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Day = Day;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.StartTime = StartTime;
+            this.StopTime = StopTime;
+            this.Day = Day;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -162,13 +100,9 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class CallableTimeSetNotificationTimeSlot {\n");
             
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  StopTime: ").Append(StopTime).Append("\n");
-            
             sb.Append("  Day: ").Append(Day).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

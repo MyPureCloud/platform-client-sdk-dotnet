@@ -75,129 +75,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleSet" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">The name of the RuleSet. (required).</param>
-        
-        
-        
-        
-        
-        
-        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        
-        
-        
         /// <param name="ContactList">A ContactList to provide user-interface suggestions for contact columns on relevant conditions and actions..</param>
-        
-        
-        
         /// <param name="Queue">A Queue to provide user-interface suggestions for wrap-up codes on relevant conditions and actions..</param>
-        
-        
-        
         /// <param name="Rules">The list of rules. (required).</param>
-        
-        
-        
-        
         public RuleSet(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, List<DialerRule> Rules = null)
         {
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for RuleSet and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Rules" is required (not null)
-            if (Rules == null)
-            {
-                throw new InvalidDataException("Rules is a required property for RuleSet and cannot be null");
-            }
-            else
-            {
-                this.Rules = Rules;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactList = ContactList;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Queue = Queue;
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Version = Version;
+            this.ContactList = ContactList;
+            this.Queue = Queue;
             
         }
         
@@ -293,23 +180,14 @@ this.Queue = Queue;
             sb.Append("class RuleSet {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
-            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
-            
             sb.Append("  Rules: ").Append(Rules).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

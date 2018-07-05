@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Actions" /> class.
         /// </summary>
-        
-        
         /// <param name="SkillsToRemove">SkillsToRemove.</param>
-        
-        
         public Actions(List<SkillsToRemove> SkillsToRemove = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SkillsToRemove = SkillsToRemove;
-            
-            
-            
+            this.SkillsToRemove = SkillsToRemove;
             
         }
         
@@ -72,7 +55,6 @@ this.SkillsToRemove = SkillsToRemove;
             sb.Append("class Actions {\n");
             
             sb.Append("  SkillsToRemove: ").Append(SkillsToRemove).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -216,146 +216,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchCriteria" /> class.
         /// </summary>
-        
-        
         /// <param name="EndValue">The end value of the range. This field is used for range search types..</param>
-        
-        
-        
         /// <param name="Values">A list of values for the search to match against.</param>
-        
-        
-        
         /// <param name="StartValue">The start value of the range. This field is used for range search types..</param>
-        
-        
-        
         /// <param name="Fields">Field names to search against.</param>
-        
-        
-        
         /// <param name="Value">A value for the search to match against.</param>
-        
-        
-        
         /// <param name="_Operator">How to apply this search criteria against other criteria.</param>
-        
-        
-        
         /// <param name="Group">Groups multiple conditions.</param>
-        
-        
-        
         /// <param name="Type">Type.</param>
-        
-        
         public SearchCriteria(string EndValue = null, List<string> Values = null, string StartValue = null, List<string> Fields = null, string Value = null, OperatorEnum? _Operator = null, List<SearchCriteria> Group = null, TypeEnum? Type = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.EndValue = EndValue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Values = Values;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartValue = StartValue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Fields = Fields;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Operator = _Operator;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Group = Group;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
-            
-            
-            
+            this.EndValue = EndValue;
+            this.Values = Values;
+            this.StartValue = StartValue;
+            this.Fields = Fields;
+            this.Value = Value;
+            this._Operator = _Operator;
+            this.Group = Group;
+            this.Type = Type;
             
         }
         
@@ -428,21 +306,13 @@ this.Type = Type;
             sb.Append("class SearchCriteria {\n");
             
             sb.Append("  EndValue: ").Append(EndValue).Append("\n");
-            
             sb.Append("  Values: ").Append(Values).Append("\n");
-            
             sb.Append("  StartValue: ").Append(StartValue).Append("\n");
-            
             sb.Append("  Fields: ").Append(Fields).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-            
             sb.Append("  Group: ").Append(Group).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

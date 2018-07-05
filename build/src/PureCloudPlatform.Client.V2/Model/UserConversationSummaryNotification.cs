@@ -64,146 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserConversationSummaryNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="UserId">UserId.</param>
-        
-        
-        
         /// <param name="Call">Call.</param>
-        
-        
-        
         /// <param name="Callback">Callback.</param>
-        
-        
-        
         /// <param name="Email">Email.</param>
-        
-        
-        
         /// <param name="Message">Message.</param>
-        
-        
-        
         /// <param name="Chat">Chat.</param>
-        
-        
-        
         /// <param name="SocialExpression">SocialExpression.</param>
-        
-        
-        
         /// <param name="Video">Video.</param>
-        
-        
         public UserConversationSummaryNotification(string UserId = null, UserConversationSummaryNotificationCall Call = null, UserConversationSummaryNotificationMediaSummary Callback = null, UserConversationSummaryNotificationMediaSummary Email = null, UserConversationSummaryNotificationMediaSummary Message = null, UserConversationSummaryNotificationMediaSummary Chat = null, UserConversationSummaryNotificationMediaSummary SocialExpression = null, UserConversationSummaryNotificationMediaSummary Video = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.UserId = UserId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Call = Call;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Callback = Callback;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Email = Email;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Message = Message;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Chat = Chat;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SocialExpression = SocialExpression;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Video = Video;
-            
-            
-            
+            this.UserId = UserId;
+            this.Call = Call;
+            this.Callback = Callback;
+            this.Email = Email;
+            this.Message = Message;
+            this.Chat = Chat;
+            this.SocialExpression = SocialExpression;
+            this.Video = Video;
             
         }
         
@@ -282,21 +160,13 @@ this.Video = Video;
             sb.Append("class UserConversationSummaryNotification {\n");
             
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("  Call: ").Append(Call).Append("\n");
-            
             sb.Append("  Callback: ").Append(Callback).Append("\n");
-            
             sb.Append("  Email: ").Append(Email).Append("\n");
-            
             sb.Append("  Message: ").Append(Message).Append("\n");
-            
             sb.Append("  Chat: ").Append(Chat).Append("\n");
-            
             sb.Append("  SocialExpression: ").Append(SocialExpression).Append("\n");
-            
             sb.Append("  Video: ").Append(Video).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Ring" /> class.
         /// </summary>
-        
-        
         /// <param name="ExpansionCriteria">ExpansionCriteria.</param>
-        
-        
-        
         /// <param name="Actions">Actions.</param>
-        
-        
         public Ring(List<ExpansionCriterium> ExpansionCriteria = null, Actions Actions = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExpansionCriteria = ExpansionCriteria;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Actions = Actions;
-            
-            
-            
+            this.ExpansionCriteria = ExpansionCriteria;
+            this.Actions = Actions;
             
         }
         
@@ -102,9 +70,7 @@ this.Actions = Actions;
             sb.Append("class Ring {\n");
             
             sb.Append("  ExpansionCriteria: ").Append(ExpansionCriteria).Append("\n");
-            
             sb.Append("  Actions: ").Append(Actions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

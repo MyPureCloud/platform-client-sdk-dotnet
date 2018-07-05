@@ -91,44 +91,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmMoveAgentsCompleteNotificationWfmMoveAgentData" /> class.
         /// </summary>
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="Result">Result.</param>
-        
-        
         public WfmMoveAgentsCompleteNotificationWfmMoveAgentData(WfmMoveAgentsCompleteNotificationUserReference User = null, ResultEnum? Result = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Result = Result;
-            
-            
-            
+            this.User = User;
+            this.Result = Result;
             
         }
         
@@ -153,9 +121,7 @@ this.Result = Result;
             sb.Append("class WfmMoveAgentsCompleteNotificationWfmMoveAgentData {\n");
             
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  Result: ").Append(Result).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

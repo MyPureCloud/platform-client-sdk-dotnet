@@ -75,54 +75,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallbackIdentifier" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">The type of the associated callback participant (required).</param>
-        
-        
-        
         /// <param name="Id">The identifier of the callback (required).</param>
-        
-        
         public CallbackIdentifier(TypeEnum? Type = null, string Id = null)
         {
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for CallbackIdentifier and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for CallbackIdentifier and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -148,9 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class CallbackIdentifier {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

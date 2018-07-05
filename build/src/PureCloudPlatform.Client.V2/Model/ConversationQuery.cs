@@ -146,146 +146,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationQuery" /> class.
         /// </summary>
-        
-        
         /// <param name="Interval">Specifies the date and time range of data being queried. Results will include conversations that started, ended, or had any activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
-        
-        
-        
         /// <param name="ConversationFilters">Filters that target conversation-level data.</param>
-        
-        
-        
         /// <param name="EvaluationFilters">Filters that target quality management evaluation-level data.</param>
-        
-        
-        
         /// <param name="SegmentFilters">Filters that target individual segments within a conversation.</param>
-        
-        
-        
         /// <param name="Aggregations">Include faceted search and aggregate roll-ups describing your search results. This does not function as a filter, but rather, summary data about the data matching your filters.</param>
-        
-        
-        
         /// <param name="Paging">Page size and number to control iterating through large result sets. Default page size is 25.</param>
-        
-        
-        
         /// <param name="Order">Sort the result set in ascending/descending order. Default is ascending.</param>
-        
-        
-        
         /// <param name="OrderBy">Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart.</param>
-        
-        
         public ConversationQuery(string Interval = null, List<AnalyticsQueryFilter> ConversationFilters = null, List<AnalyticsQueryFilter> EvaluationFilters = null, List<AnalyticsQueryFilter> SegmentFilters = null, List<AnalyticsQueryAggregation> Aggregations = null, PagingSpec Paging = null, OrderEnum? Order = null, OrderByEnum? OrderBy = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Interval = Interval;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConversationFilters = ConversationFilters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EvaluationFilters = EvaluationFilters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SegmentFilters = SegmentFilters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Aggregations = Aggregations;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Paging = Paging;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Order = Order;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OrderBy = OrderBy;
-            
-            
-            
+            this.Interval = Interval;
+            this.ConversationFilters = ConversationFilters;
+            this.EvaluationFilters = EvaluationFilters;
+            this.SegmentFilters = SegmentFilters;
+            this.Aggregations = Aggregations;
+            this.Paging = Paging;
+            this.Order = Order;
+            this.OrderBy = OrderBy;
             
         }
         
@@ -358,21 +236,13 @@ this.OrderBy = OrderBy;
             sb.Append("class ConversationQuery {\n");
             
             sb.Append("  Interval: ").Append(Interval).Append("\n");
-            
             sb.Append("  ConversationFilters: ").Append(ConversationFilters).Append("\n");
-            
             sb.Append("  EvaluationFilters: ").Append(EvaluationFilters).Append("\n");
-            
             sb.Append("  SegmentFilters: ").Append(SegmentFilters).Append("\n");
-            
             sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
-            
             sb.Append("  Paging: ").Append(Paging).Append("\n");
-            
             sb.Append("  Order: ").Append(Order).Append("\n");
-            
             sb.Append("  OrderBy: ").Append(OrderBy).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

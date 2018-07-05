@@ -74,180 +74,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DIDEntityListing" /> class.
         /// </summary>
-        
-        
         /// <param name="Entities">Entities.</param>
-        
-        
-        
         /// <param name="PageSize">PageSize.</param>
-        
-        
-        
         /// <param name="PageNumber">PageNumber.</param>
-        
-        
-        
         /// <param name="Total">Total.</param>
-        
-        
-        
         /// <param name="SelfUri">SelfUri.</param>
-        
-        
-        
         /// <param name="FirstUri">FirstUri.</param>
-        
-        
-        
         /// <param name="PreviousUri">PreviousUri.</param>
-        
-        
-        
         /// <param name="NextUri">NextUri.</param>
-        
-        
-        
         /// <param name="LastUri">LastUri.</param>
-        
-        
-        
         /// <param name="PageCount">PageCount.</param>
-        
-        
         public DIDEntityListing(List<DID> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string SelfUri = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, int? PageCount = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Entities = Entities;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageSize = PageSize;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageNumber = PageNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Total = Total;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SelfUri = SelfUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FirstUri = FirstUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PreviousUri = PreviousUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NextUri = NextUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LastUri = LastUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageCount = PageCount;
-            
-            
-            
+            this.Entities = Entities;
+            this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
+            this.Total = Total;
+            this.SelfUri = SelfUri;
+            this.FirstUri = FirstUri;
+            this.PreviousUri = PreviousUri;
+            this.NextUri = NextUri;
+            this.LastUri = LastUri;
+            this.PageCount = PageCount;
             
         }
         
@@ -342,25 +190,15 @@ this.PageCount = PageCount;
             sb.Append("class DIDEntityListing {\n");
             
             sb.Append("  Entities: ").Append(Entities).Append("\n");
-            
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            
             sb.Append("  Total: ").Append(Total).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("  FirstUri: ").Append(FirstUri).Append("\n");
-            
             sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
-            
             sb.Append("  NextUri: ").Append(NextUri).Append("\n");
-            
             sb.Append("  LastUri: ").Append(LastUri).Append("\n");
-            
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

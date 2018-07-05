@@ -49,95 +49,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageMediaPolicyConditions" /> class.
         /// </summary>
-        
-        
         /// <param name="ForUsers">ForUsers.</param>
-        
-        
-        
         /// <param name="DateRanges">DateRanges.</param>
-        
-        
-        
         /// <param name="ForQueues">ForQueues.</param>
-        
-        
-        
         /// <param name="WrapupCodes">WrapupCodes.</param>
-        
-        
-        
         /// <param name="TimeAllowed">TimeAllowed.</param>
-        
-        
         public MessageMediaPolicyConditions(List<User> ForUsers = null, List<string> DateRanges = null, List<Queue> ForQueues = null, List<WrapupCode> WrapupCodes = null, TimeAllowed TimeAllowed = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ForUsers = ForUsers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateRanges = DateRanges;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ForQueues = ForQueues;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WrapupCodes = WrapupCodes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeAllowed = TimeAllowed;
-            
-            
-            
+            this.ForUsers = ForUsers;
+            this.DateRanges = DateRanges;
+            this.ForQueues = ForQueues;
+            this.WrapupCodes = WrapupCodes;
+            this.TimeAllowed = TimeAllowed;
             
         }
         
@@ -192,15 +115,10 @@ this.TimeAllowed = TimeAllowed;
             sb.Append("class MessageMediaPolicyConditions {\n");
             
             sb.Append("  ForUsers: ").Append(ForUsers).Append("\n");
-            
             sb.Append("  DateRanges: ").Append(DateRanges).Append("\n");
-            
             sb.Append("  ForQueues: ").Append(ForQueues).Append("\n");
-            
             sb.Append("  WrapupCodes: ").Append(WrapupCodes).Append("\n");
-            
             sb.Append("  TimeAllowed: ").Append(TimeAllowed).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

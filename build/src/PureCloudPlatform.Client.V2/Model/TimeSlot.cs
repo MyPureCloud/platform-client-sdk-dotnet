@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeSlot" /> class.
         /// </summary>
-        
-        
         /// <param name="StartTime">start time in xx:xx:xx.xxx format.</param>
-        
-        
-        
         /// <param name="StopTime">stop time in xx:xx:xx.xxx format.</param>
-        
-        
-        
         /// <param name="Day">Day for this time slot, Monday = 1 ... Sunday = 7.</param>
-        
-        
         public TimeSlot(string StartTime = null, string StopTime = null, int? Day = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartTime = StartTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StopTime = StopTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Day = Day;
-            
-            
-            
+            this.StartTime = StartTime;
+            this.StopTime = StopTime;
+            this.Day = Day;
             
         }
         
@@ -135,11 +88,8 @@ this.Day = Day;
             sb.Append("class TimeSlot {\n");
             
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  StopTime: ").Append(StopTime).Append("\n");
-            
             sb.Append("  Day: ").Append(Day).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

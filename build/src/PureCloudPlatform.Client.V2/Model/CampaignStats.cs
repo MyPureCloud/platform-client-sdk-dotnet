@@ -54,57 +54,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignStats" /> class.
         /// </summary>
-        
-        
         /// <param name="ContactRate">Information regarding the campaign&#39;s connect rate.</param>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         public CampaignStats(ConnectRate ContactRate = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContactRate = ContactRate;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.ContactRate = ContactRate;
             
         }
         
@@ -173,17 +126,11 @@ this.ContactRate = ContactRate;
             sb.Append("class CampaignStats {\n");
             
             sb.Append("  ContactRate: ").Append(ContactRate).Append("\n");
-            
             sb.Append("  IdleAgents: ").Append(IdleAgents).Append("\n");
-            
             sb.Append("  EffectiveIdleAgents: ").Append(EffectiveIdleAgents).Append("\n");
-            
             sb.Append("  AdjustedCallsPerAgent: ").Append(AdjustedCallsPerAgent).Append("\n");
-            
             sb.Append("  OutstandingCalls: ").Append(OutstandingCalls).Append("\n");
-            
             sb.Append("  ScheduledCalls: ").Append(ScheduledCalls).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

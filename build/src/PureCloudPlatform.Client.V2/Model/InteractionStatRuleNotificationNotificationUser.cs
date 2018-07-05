@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InteractionStatRuleNotificationNotificationUser" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="DisplayName">DisplayName.</param>
-        
-        
         public InteractionStatRuleNotificationNotificationUser(string Id = null, string DisplayName = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisplayName = DisplayName;
-            
-            
-            
+            this.Id = Id;
+            this.DisplayName = DisplayName;
             
         }
         
@@ -102,9 +70,7 @@ this.DisplayName = DisplayName;
             sb.Append("class InteractionStatRuleNotificationNotificationUser {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

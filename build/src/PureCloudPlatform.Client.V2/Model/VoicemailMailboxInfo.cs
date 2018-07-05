@@ -54,46 +54,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMailboxInfo" /> class.
         /// </summary>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         public VoicemailMailboxInfo()
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -162,17 +124,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class VoicemailMailboxInfo {\n");
             
             sb.Append("  UsageSizeBytes: ").Append(UsageSizeBytes).Append("\n");
-            
             sb.Append("  TotalCount: ").Append(TotalCount).Append("\n");
-            
             sb.Append("  UnreadCount: ").Append(UnreadCount).Append("\n");
-            
             sb.Append("  DeletedCount: ").Append(DeletedCount).Append("\n");
-            
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

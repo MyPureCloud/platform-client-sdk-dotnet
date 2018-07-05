@@ -50,83 +50,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditEntity" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">The type of the entity the action of this AuditEntity targeted. (required).</param>
-        
-        
-        
         /// <param name="Id">The id of the entity the action of this AuditEntity targeted..</param>
-        
-        
-        
         /// <param name="Name">The name of the entity the action of this AuditEntity targeted..</param>
-        
-        
-        
         /// <param name="SelfUri">The selfUri for this entity..</param>
-        
-        
         public AuditEntity(string Type = null, string Id = null, string Name = null, string SelfUri = null)
         {
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for AuditEntity and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SelfUri = SelfUri;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.SelfUri = SelfUri;
             
         }
         
@@ -177,13 +109,9 @@ this.SelfUri = SelfUri;
             sb.Append("class AuditEntity {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

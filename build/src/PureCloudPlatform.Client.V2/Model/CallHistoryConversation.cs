@@ -119,192 +119,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallHistoryConversation" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Participants">The list of participants involved in the conversation..</param>
-        
-        
-        
         /// <param name="Direction">The direction of the call relating to the current user.</param>
-        
-        
-        
         /// <param name="WentToVoicemail">Did the call end in the current user&#39;s voicemail.</param>
-        
-        
-        
         /// <param name="MissedCall">Did the user not answer this conversation.</param>
-        
-        
-        
         /// <param name="StartTime">The time the user joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="WasConference">Was this conversation a conference.</param>
-        
-        
-        
         /// <param name="WasCallback">Was this conversation a callback.</param>
-        
-        
-        
         /// <param name="HadScreenShare">Did this conversation have a screen share session.</param>
-        
-        
-        
         /// <param name="HadCobrowse">Did this conversation have a cobrowse session.</param>
-        
-        
-        
-        
         public CallHistoryConversation(string Name = null, List<CallHistoryParticipant> Participants = null, DirectionEnum? Direction = null, bool? WentToVoicemail = null, bool? MissedCall = null, DateTime? StartTime = null, bool? WasConference = null, bool? WasCallback = null, bool? HadScreenShare = null, bool? HadCobrowse = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Participants = Participants;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WentToVoicemail = WentToVoicemail;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MissedCall = MissedCall;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StartTime = StartTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WasConference = WasConference;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WasCallback = WasCallback;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HadScreenShare = HadScreenShare;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HadCobrowse = HadCobrowse;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Participants = Participants;
+            this.Direction = Direction;
+            this.WentToVoicemail = WentToVoicemail;
+            this.MissedCall = MissedCall;
+            this.StartTime = StartTime;
+            this.WasConference = WasConference;
+            this.WasCallback = WasCallback;
+            this.HadScreenShare = HadScreenShare;
+            this.HadCobrowse = HadCobrowse;
             
         }
         
@@ -419,29 +255,17 @@ this.HadCobrowse = HadCobrowse;
             sb.Append("class CallHistoryConversation {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  WentToVoicemail: ").Append(WentToVoicemail).Append("\n");
-            
             sb.Append("  MissedCall: ").Append(MissedCall).Append("\n");
-            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("  WasConference: ").Append(WasConference).Append("\n");
-            
             sb.Append("  WasCallback: ").Append(WasCallback).Append("\n");
-            
             sb.Append("  HadScreenShare: ").Append(HadScreenShare).Append("\n");
-            
             sb.Append("  HadCobrowse: ").Append(HadCobrowse).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

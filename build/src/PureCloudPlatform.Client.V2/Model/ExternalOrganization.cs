@@ -130,344 +130,45 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalOrganization" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The globally unique identifier for the object..</param>
-        
-        
-        
         /// <param name="Name">The name of the company. (required).</param>
-        
-        
-        
         /// <param name="CompanyType">CompanyType.</param>
-        
-        
-        
         /// <param name="Industry">Industry.</param>
-        
-        
-        
         /// <param name="PrimaryContactId">PrimaryContactId.</param>
-        
-        
-        
         /// <param name="Address">Address.</param>
-        
-        
-        
         /// <param name="PhoneNumber">PhoneNumber.</param>
-        
-        
-        
         /// <param name="FaxNumber">FaxNumber.</param>
-        
-        
-        
         /// <param name="EmployeeCount">EmployeeCount.</param>
-        
-        
-        
         /// <param name="Revenue">Revenue.</param>
-        
-        
-        
         /// <param name="Tags">Tags.</param>
-        
-        
-        
         /// <param name="Websites">Websites.</param>
-        
-        
-        
         /// <param name="Tickers">Tickers.</param>
-        
-        
-        
         /// <param name="TwitterId">TwitterId.</param>
-        
-        
-        
         /// <param name="ExternalSystemUrl">A string that identifies an external system-of-record resource that may have more detailed information on the organization. It should be a valid URL (including the HTTP protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace..</param>
-        
-        
-        
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Trustor">Trustor.</param>
-        
-        
-        
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        
-        
-        
-        
         public ExternalOrganization(string Id = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, List<ExternalDataSource> ExternalDataSources = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for ExternalOrganization and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CompanyType = CompanyType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Industry = Industry;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PrimaryContactId = PrimaryContactId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneNumber = PhoneNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FaxNumber = FaxNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EmployeeCount = EmployeeCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Revenue = Revenue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Tags = Tags;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Websites = Websites;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Tickers = Tickers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TwitterId = TwitterId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalSystemUrl = ExternalSystemUrl;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifyDate = ModifyDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreateDate = CreateDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Trustor = Trustor;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExternalDataSources = ExternalDataSources;
-            
-            
-            
-            
-            
+            this.Id = Id;
+            this.CompanyType = CompanyType;
+            this.Industry = Industry;
+            this.PrimaryContactId = PrimaryContactId;
+            this.Address = Address;
+            this.PhoneNumber = PhoneNumber;
+            this.FaxNumber = FaxNumber;
+            this.EmployeeCount = EmployeeCount;
+            this.Revenue = Revenue;
+            this.Tags = Tags;
+            this.Websites = Websites;
+            this.Tickers = Tickers;
+            this.TwitterId = TwitterId;
+            this.ExternalSystemUrl = ExternalSystemUrl;
+            this.ModifyDate = ModifyDate;
+            this.CreateDate = CreateDate;
+            this.Trustor = Trustor;
+            this.ExternalDataSources = ExternalDataSources;
             
         }
         
@@ -649,45 +350,25 @@ this.ExternalDataSources = ExternalDataSources;
             sb.Append("class ExternalOrganization {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  CompanyType: ").Append(CompanyType).Append("\n");
-            
             sb.Append("  Industry: ").Append(Industry).Append("\n");
-            
             sb.Append("  PrimaryContactId: ").Append(PrimaryContactId).Append("\n");
-            
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
-            
             sb.Append("  FaxNumber: ").Append(FaxNumber).Append("\n");
-            
             sb.Append("  EmployeeCount: ").Append(EmployeeCount).Append("\n");
-            
             sb.Append("  Revenue: ").Append(Revenue).Append("\n");
-            
             sb.Append("  Tags: ").Append(Tags).Append("\n");
-            
             sb.Append("  Websites: ").Append(Websites).Append("\n");
-            
             sb.Append("  Tickers: ").Append(Tickers).Append("\n");
-            
             sb.Append("  TwitterId: ").Append(TwitterId).Append("\n");
-            
             sb.Append("  ExternalSystemUrl: ").Append(ExternalSystemUrl).Append("\n");
-            
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
-            
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
-            
             sb.Append("  Trustor: ").Append(Trustor).Append("\n");
-            
             sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

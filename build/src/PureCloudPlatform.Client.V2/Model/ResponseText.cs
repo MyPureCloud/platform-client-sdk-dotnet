@@ -75,49 +75,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseText" /> class.
         /// </summary>
-        
-        
         /// <param name="Content">Response text content. (required).</param>
-        
-        
-        
         /// <param name="ContentType">Response text content type..</param>
-        
-        
         public ResponseText(string Content = null, ContentTypeEnum? ContentType = null)
         {
-            
-            
-            
-            // to ensure "Content" is required (not null)
-            if (Content == null)
-            {
-                throw new InvalidDataException("Content is a required property for ResponseText and cannot be null");
-            }
-            else
-            {
-                this.Content = Content;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentType = ContentType;
-            
-            
-            
+            this.ContentType = ContentType;
             
         }
         
@@ -143,9 +105,7 @@ this.ContentType = ContentType;
             sb.Append("class ResponseText {\n");
             
             sb.Append("  Content: ").Append(Content).Append("\n");
-            
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

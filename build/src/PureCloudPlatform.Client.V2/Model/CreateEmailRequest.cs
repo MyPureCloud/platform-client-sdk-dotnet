@@ -140,270 +140,37 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateEmailRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="QueueId">The ID of the queue to use for routing the email conversation. This field is mutually exclusive with flowId.</param>
-        
-        
-        
         /// <param name="FlowId">The ID of the flow to use for routing email conversation. This field is mutually exclusive with queueId.</param>
-        
-        
-        
         /// <param name="Provider">The name of the provider that is sourcing the emails. The Provider \&quot;PureCloud Email\&quot; is reserved for native emails. (required).</param>
-        
-        
-        
         /// <param name="SkillIds">The list of skill ID&#39;s to use for routing..</param>
-        
-        
-        
         /// <param name="LanguageId">The ID of the language to use for routing..</param>
-        
-        
-        
         /// <param name="Priority">The priority to assign to the conversation for routing..</param>
-        
-        
-        
         /// <param name="Attributes">The list of attributes to associate with the customer participant..</param>
-        
-        
-        
         /// <param name="ToAddress">The email address of the recipient of the email..</param>
-        
-        
-        
         /// <param name="ToName">The name of the recipient of the email..</param>
-        
-        
-        
         /// <param name="FromAddress">The email address of the sender of the email..</param>
-        
-        
-        
         /// <param name="FromName">The name of the sender of the email..</param>
-        
-        
-        
         /// <param name="Subject">The subject of the email.</param>
-        
-        
-        
         /// <param name="Direction">Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based..</param>
-        
-        
-        
         /// <param name="HtmlBody">An HTML body content of the email..</param>
-        
-        
-        
         /// <param name="TextBody">A text body content of the email..</param>
-        
-        
         public CreateEmailRequest(string QueueId = null, string FlowId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string ToAddress = null, string ToName = null, string FromAddress = null, string FromName = null, string Subject = null, DirectionEnum? Direction = null, string HtmlBody = null, string TextBody = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Provider" is required (not null)
-            if (Provider == null)
-            {
-                throw new InvalidDataException("Provider is a required property for CreateEmailRequest and cannot be null");
-            }
-            else
-            {
-                this.Provider = Provider;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueId = QueueId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FlowId = FlowId;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SkillIds = SkillIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LanguageId = LanguageId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Priority = Priority;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attributes = Attributes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ToAddress = ToAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ToName = ToName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FromAddress = FromAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FromName = FromName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Subject = Subject;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Direction = Direction;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HtmlBody = HtmlBody;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TextBody = TextBody;
-            
-            
-            
+            this.QueueId = QueueId;
+            this.FlowId = FlowId;
+            this.SkillIds = SkillIds;
+            this.LanguageId = LanguageId;
+            this.Priority = Priority;
+            this.Attributes = Attributes;
+            this.ToAddress = ToAddress;
+            this.ToName = ToName;
+            this.FromAddress = FromAddress;
+            this.FromName = FromName;
+            this.Subject = Subject;
+            this.Direction = Direction;
+            this.HtmlBody = HtmlBody;
+            this.TextBody = TextBody;
             
         }
         
@@ -546,35 +313,20 @@ this.TextBody = TextBody;
             sb.Append("class CreateEmailRequest {\n");
             
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
-            
             sb.Append("  FlowId: ").Append(FlowId).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
-            
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
-            
             sb.Append("  Priority: ").Append(Priority).Append("\n");
-            
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
-            
             sb.Append("  ToName: ").Append(ToName).Append("\n");
-            
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
-            
             sb.Append("  FromName: ").Append(FromName).Append("\n");
-            
             sb.Append("  Subject: ").Append(Subject).Append("\n");
-            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("  HtmlBody: ").Append(HtmlBody).Append("\n");
-            
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

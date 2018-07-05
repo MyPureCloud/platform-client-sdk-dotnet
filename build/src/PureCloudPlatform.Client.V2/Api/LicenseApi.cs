@@ -545,8 +545,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LicenseDefinition>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseDefinition)));
-            
+                (LicenseDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -641,8 +642,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LicenseDefinition>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseDefinition)));
-            
+                (LicenseDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -730,8 +732,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<List<LicenseDefinition>>(localVarStatusCode,
                 localVarHeaders,
-                (List<LicenseDefinition>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicenseDefinition>)));
-            
+                (List<LicenseDefinition>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicenseDefinition>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -819,8 +822,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<List<LicenseDefinition>>(localVarStatusCode,
                 localVarHeaders,
-                (List<LicenseDefinition>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicenseDefinition>)));
-            
+                (List<LicenseDefinition>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicenseDefinition>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -908,8 +912,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LicenseOrganization>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseOrganization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrganization)));
-            
+                (LicenseOrganization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrganization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -997,8 +1002,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LicenseOrganization>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseOrganization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrganization)));
-            
+                (LicenseOrganization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrganization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1092,8 +1098,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LicenseOrgToggle>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseOrgToggle) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrgToggle)));
-            
+                (LicenseOrgToggle) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrgToggle)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1188,8 +1195,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LicenseOrgToggle>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseOrgToggle) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrgToggle)));
-            
+                (LicenseOrgToggle) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrgToggle)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1283,8 +1291,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LicenseUser>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseUser) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseUser)));
-            
+                (LicenseUser) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseUser)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1379,8 +1388,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LicenseUser>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseUser) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseUser)));
-            
+                (LicenseUser) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseUser)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1475,8 +1485,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<List<LicenseUpdateStatus>>(localVarStatusCode,
                 localVarHeaders,
-                (List<LicenseUpdateStatus>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicenseUpdateStatus>)));
-            
+                (List<LicenseUpdateStatus>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicenseUpdateStatus>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1571,8 +1582,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<List<LicenseUpdateStatus>>(localVarStatusCode,
                 localVarHeaders,
-                (List<LicenseUpdateStatus>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicenseUpdateStatus>)));
-            
+                (List<LicenseUpdateStatus>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicenseUpdateStatus>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1666,8 +1678,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LicenseOrgToggle>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseOrgToggle) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrgToggle)));
-            
+                (LicenseOrgToggle) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrgToggle)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1762,8 +1775,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<LicenseOrgToggle>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseOrgToggle) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrgToggle)));
-            
+                (LicenseOrgToggle) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrgToggle)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1858,8 +1872,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarHeaders,
-                (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
-            
+                (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1954,8 +1969,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarHeaders,
-                (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
-            
+                (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

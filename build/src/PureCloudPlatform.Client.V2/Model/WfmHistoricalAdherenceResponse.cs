@@ -80,61 +80,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmHistoricalAdherenceResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The query ID to listen for.</param>
-        
-        
-        
         /// <param name="DownloadUrl">The uri to query to GET the results of the Historical Adherence query. This will return unpopulated but will be populated in the notification.</param>
-        
-        
-        
         /// <param name="QueryState">The state of the adherence query.</param>
-        
-        
         public WfmHistoricalAdherenceResponse(string Id = null, string DownloadUrl = null, QueryStateEnum? QueryState = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DownloadUrl = DownloadUrl;
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueryState = QueryState;
-            
-            
-            
+            this.Id = Id;
+            this.DownloadUrl = DownloadUrl;
+            this.QueryState = QueryState;
             
         }
         
@@ -169,11 +122,8 @@ this.QueryState = QueryState;
             sb.Append("class WfmHistoricalAdherenceResponse {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
-            
             sb.Append("  QueryState: ").Append(QueryState).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

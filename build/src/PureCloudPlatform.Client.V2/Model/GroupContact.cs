@@ -114,82 +114,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupContact" /> class.
         /// </summary>
-        
-        
         /// <param name="Address">Phone number for this contact type (required).</param>
-        
-        
-        
-        
-        
         /// <param name="Type">Contact type of the address (required).</param>
-        
-        
-        
         /// <param name="MediaType">Media type of the address (required).</param>
-        
-        
         public GroupContact(string Address = null, TypeEnum? Type = null, MediaTypeEnum? MediaType = null)
         {
-            
-            
-            
-            // to ensure "Address" is required (not null)
-            if (Address == null)
-            {
-                throw new InvalidDataException("Address is a required property for GroupContact and cannot be null");
-            }
-            else
-            {
-                this.Address = Address;
-            }
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for GroupContact and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            // to ensure "MediaType" is required (not null)
-            if (MediaType == null)
-            {
-                throw new InvalidDataException("MediaType is a required property for GroupContact and cannot be null");
-            }
-            else
-            {
-                this.MediaType = MediaType;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -226,13 +155,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class GroupContact {\n");
             
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  Display: ").Append(Display).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

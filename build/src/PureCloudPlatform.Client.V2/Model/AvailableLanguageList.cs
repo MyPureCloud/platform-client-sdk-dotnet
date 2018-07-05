@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableLanguageList" /> class.
         /// </summary>
-        
-        
         /// <param name="Languages">Languages.</param>
-        
-        
         public AvailableLanguageList(List<string> Languages = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Languages = Languages;
-            
-            
-            
+            this.Languages = Languages;
             
         }
         
@@ -72,7 +55,6 @@ this.Languages = Languages;
             sb.Append("class AvailableLanguageList {\n");
             
             sb.Append("  Languages: ").Append(Languages).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

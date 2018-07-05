@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableContactsDiagnostic" /> class.
         /// </summary>
-        
-        
         /// <param name="AttemptLimits">Attempt limits for the campaign&#39;s contact list.</param>
-        
-        
-        
         /// <param name="DncLists">Do not call lists for the campaign.</param>
-        
-        
-        
         /// <param name="CallableTimeSet">Callable time sets for the campaign.</param>
-        
-        
-        
         /// <param name="RuleSets">Rule sets for the campaign.</param>
-        
-        
         public CallableContactsDiagnostic(UriReference AttemptLimits = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, List<UriReference> RuleSets = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AttemptLimits = AttemptLimits;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DncLists = DncLists;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallableTimeSet = CallableTimeSet;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RuleSets = RuleSets;
-            
-            
-            
+            this.AttemptLimits = AttemptLimits;
+            this.DncLists = DncLists;
+            this.CallableTimeSet = CallableTimeSet;
+            this.RuleSets = RuleSets;
             
         }
         
@@ -166,13 +104,9 @@ this.RuleSets = RuleSets;
             sb.Append("class CallableContactsDiagnostic {\n");
             
             sb.Append("  AttemptLimits: ").Append(AttemptLimits).Append("\n");
-            
             sb.Append("  DncLists: ").Append(DncLists).Append("\n");
-            
             sb.Append("  CallableTimeSet: ").Append(CallableTimeSet).Append("\n");
-            
             sb.Append("  RuleSets: ").Append(RuleSets).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

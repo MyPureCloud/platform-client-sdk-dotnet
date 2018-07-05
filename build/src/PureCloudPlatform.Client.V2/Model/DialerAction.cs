@@ -209,88 +209,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerAction" /> class.
         /// </summary>
-        
-        
         /// <param name="Type">The type of this DialerAction. (required).</param>
-        
-        
-        
         /// <param name="ActionTypeName">Additional type specification for this DialerAction. (required).</param>
-        
-        
-        
         /// <param name="UpdateOption">Specifies how a contact attribute should be updated. Required for MODIFY_CONTACT_ATTRIBUTE..</param>
-        
-        
-        
         /// <param name="Properties">A map of key-value pairs pertinent to the DialerAction. Different types of DialerActions require different properties. MODIFY_CONTACT_ATTRIBUTE with an updateOption of SET takes a contact column as the key and accepts any value. SCHEDULE_CALLBACK takes a key &#39;callbackOffset&#39; that specifies how far in the future the callback should be scheduled, in minutes. SET_CALLER_ID takes two keys: &#39;callerAddress&#39;, which should be the caller id phone number, and &#39;callerName&#39;. For either key, you can also specify a column on the contact to get the value from. To do this, specify &#39;contact.Column&#39;, where &#39;Column&#39; is the name of the contact column from which to get the value. SET_SKILLS takes a key &#39;skills&#39; with an array of skill ids wrapped into a string (Example: {&#39;skills&#39;: &#39;[&#39;skillIdHere&#39;]&#39;} )..</param>
-        
-        
         public DialerAction(TypeEnum? Type = null, ActionTypeNameEnum? ActionTypeName = null, UpdateOptionEnum? UpdateOption = null, Dictionary<string, string> Properties = null)
         {
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for DialerAction and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            // to ensure "ActionTypeName" is required (not null)
-            if (ActionTypeName == null)
-            {
-                throw new InvalidDataException("ActionTypeName is a required property for DialerAction and cannot be null");
-            }
-            else
-            {
-                this.ActionTypeName = ActionTypeName;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.UpdateOption = UpdateOption;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Properties = Properties;
-            
-            
-            
+            this.UpdateOption = UpdateOption;
+            this.Properties = Properties;
             
         }
         
@@ -320,13 +246,9 @@ this.Properties = Properties;
             sb.Append("class DialerAction {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  ActionTypeName: ").Append(ActionTypeName).Append("\n");
-            
             sb.Append("  UpdateOption: ").Append(UpdateOption).Append("\n");
-            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

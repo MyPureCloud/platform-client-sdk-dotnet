@@ -55,78 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Credential" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Type">The type of credential. (required).</param>
-        
-        
-        
         /// <param name="CredentialFields">CredentialFields.</param>
-        
-        
-        
-        
         public Credential(string Name = null, CredentialType Type = null, Dictionary<string, string> CredentialFields = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for Credential and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CredentialFields = CredentialFields;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.CredentialFields = CredentialFields;
             
         }
         
@@ -184,15 +119,10 @@ this.CredentialFields = CredentialFields;
             sb.Append("class Credential {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  CredentialFields: ").Append(CredentialFields).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -35,32 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PostInputContract" /> class.
         /// </summary>
-        
-        
         /// <param name="InputSchema">JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. (required).</param>
-        
-        
         public PostInputContract(JsonSchemaDocument InputSchema = null)
         {
-            
-            
-            
-            // to ensure "InputSchema" is required (not null)
-            if (InputSchema == null)
-            {
-                throw new InvalidDataException("InputSchema is a required property for PostInputContract and cannot be null");
-            }
-            else
-            {
-                this.InputSchema = InputSchema;
-            }
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -84,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class PostInputContract {\n");
             
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

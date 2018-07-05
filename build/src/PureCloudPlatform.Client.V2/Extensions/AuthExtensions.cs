@@ -87,7 +87,9 @@ namespace PureCloudPlatform.Client.V2.Extensions
 
             return new ApiResponse<AuthTokenInfo>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AuthTokenInfo) apiClient.Configuration.ApiClient.Deserialize(response, typeof (AuthTokenInfo)));
+                (AuthTokenInfo) apiClient.Configuration.ApiClient.Deserialize(response, typeof (AuthTokenInfo)),
+                response.Content,
+                response.StatusDescription);
         }
 
         private static Object CallTokenApi(ApiClient apiClient,

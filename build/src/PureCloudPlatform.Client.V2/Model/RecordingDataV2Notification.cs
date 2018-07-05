@@ -109,299 +109,42 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingDataV2Notification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="DateCreated">DateCreated.</param>
-        
-        
-        
         /// <param name="DateModified">DateModified.</param>
-        
-        
-        
         /// <param name="Workspace">Workspace.</param>
-        
-        
-        
         /// <param name="CreatedBy">CreatedBy.</param>
-        
-        
-        
         /// <param name="ContentType">ContentType.</param>
-        
-        
-        
         /// <param name="ContentLength">ContentLength.</param>
-        
-        
-        
         /// <param name="Filename">Filename.</param>
-        
-        
-        
         /// <param name="ChangeNumber">ChangeNumber.</param>
-        
-        
-        
         /// <param name="DateUploaded">DateUploaded.</param>
-        
-        
-        
         /// <param name="UploadedBy">UploadedBy.</param>
-        
-        
-        
         /// <param name="LockInfo">LockInfo.</param>
-        
-        
-        
         /// <param name="SelfUri">SelfUri.</param>
-        
-        
-        
         /// <param name="DurationMillieconds">DurationMillieconds.</param>
-        
-        
-        
         /// <param name="Conversation">Conversation.</param>
-        
-        
-        
         /// <param name="Read">Read.</param>
-        
-        
         public RecordingDataV2Notification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, DocumentDataV2NotificationWorkspace Workspace = null, DocumentDataV2NotificationCreatedBy CreatedBy = null, string ContentType = null, int? ContentLength = null, string Filename = null, int? ChangeNumber = null, DateTime? DateUploaded = null, RecordingDataV2NotificationUserData UploadedBy = null, RecordingDataV2NotificationLockInfo LockInfo = null, string SelfUri = null, int? DurationMillieconds = null, DocumentDataV2NotificationWorkspace Conversation = null, bool? Read = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Workspace = Workspace;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentType = ContentType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentLength = ContentLength;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Filename = Filename;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ChangeNumber = ChangeNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateUploaded = DateUploaded;
-            
-            
-            
-            
-            
-            
-            
-            
-this.UploadedBy = UploadedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LockInfo = LockInfo;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SelfUri = SelfUri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DurationMillieconds = DurationMillieconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Conversation = Conversation;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Read = Read;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Workspace = Workspace;
+            this.CreatedBy = CreatedBy;
+            this.ContentType = ContentType;
+            this.ContentLength = ContentLength;
+            this.Filename = Filename;
+            this.ChangeNumber = ChangeNumber;
+            this.DateUploaded = DateUploaded;
+            this.UploadedBy = UploadedBy;
+            this.LockInfo = LockInfo;
+            this.SelfUri = SelfUri;
+            this.DurationMillieconds = DurationMillieconds;
+            this.Conversation = Conversation;
+            this.Read = Read;
             
         }
         
@@ -552,39 +295,22 @@ this.Read = Read;
             sb.Append("class RecordingDataV2Notification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
-            
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
-            
             sb.Append("  Filename: ").Append(Filename).Append("\n");
-            
             sb.Append("  ChangeNumber: ").Append(ChangeNumber).Append("\n");
-            
             sb.Append("  DateUploaded: ").Append(DateUploaded).Append("\n");
-            
             sb.Append("  UploadedBy: ").Append(UploadedBy).Append("\n");
-            
             sb.Append("  LockInfo: ").Append(LockInfo).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("  DurationMillieconds: ").Append(DurationMillieconds).Append("\n");
-            
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
-            
             sb.Append("  Read: ").Append(Read).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

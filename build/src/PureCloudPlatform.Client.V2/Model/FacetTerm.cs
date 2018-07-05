@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetTerm" /> class.
         /// </summary>
-        
-        
         /// <param name="Term">Term.</param>
-        
-        
-        
         /// <param name="Key">Key.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Count">Count.</param>
-        
-        
-        
         /// <param name="Time">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
         public FacetTerm(string Term = null, long? Key = null, string Id = null, string Name = null, long? Count = null, DateTime? Time = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Term = Term;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Key = Key;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Count = Count;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Time = Time;
-            
-            
-            
+            this.Term = Term;
+            this.Key = Key;
+            this.Id = Id;
+            this.Name = Name;
+            this.Count = Count;
+            this.Time = Time;
             
         }
         
@@ -223,17 +131,11 @@ this.Time = Time;
             sb.Append("class FacetTerm {\n");
             
             sb.Append("  Term: ").Append(Term).Append("\n");
-            
             sb.Append("  Key: ").Append(Key).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Count: ").Append(Count).Append("\n");
-            
             sb.Append("  Time: ").Append(Time).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

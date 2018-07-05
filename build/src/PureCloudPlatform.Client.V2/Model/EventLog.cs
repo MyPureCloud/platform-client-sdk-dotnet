@@ -206,158 +206,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EventLog" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="ErrorEntity">ErrorEntity.</param>
-        
-        
-        
         /// <param name="RelatedEntity">RelatedEntity.</param>
-        
-        
-        
         /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Level">Level.</param>
-        
-        
-        
         /// <param name="Category">Category.</param>
-        
-        
-        
         /// <param name="CorrelationId">CorrelationId.</param>
-        
-        
-        
         /// <param name="EventMessage">EventMessage.</param>
-        
-        
-        
-        
         public EventLog(string Name = null, UriReference ErrorEntity = null, UriReference RelatedEntity = null, DateTime? Timestamp = null, LevelEnum? Level = null, CategoryEnum? Category = null, string CorrelationId = null, EventMessage EventMessage = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorEntity = ErrorEntity;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RelatedEntity = RelatedEntity;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Timestamp = Timestamp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Level = Level;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Category = Category;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CorrelationId = CorrelationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EventMessage = EventMessage;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.ErrorEntity = ErrorEntity;
+            this.RelatedEntity = RelatedEntity;
+            this.Timestamp = Timestamp;
+            this.Level = Level;
+            this.Category = Category;
+            this.CorrelationId = CorrelationId;
+            this.EventMessage = EventMessage;
             
         }
         
@@ -443,25 +309,15 @@ this.EventMessage = EventMessage;
             sb.Append("class EventLog {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  ErrorEntity: ").Append(ErrorEntity).Append("\n");
-            
             sb.Append("  RelatedEntity: ").Append(RelatedEntity).Append("\n");
-            
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
-            
             sb.Append("  Level: ").Append(Level).Append("\n");
-            
             sb.Append("  Category: ").Append(Category).Append("\n");
-            
             sb.Append("  CorrelationId: ").Append(CorrelationId).Append("\n");
-            
             sb.Append("  EventMessage: ").Append(EventMessage).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

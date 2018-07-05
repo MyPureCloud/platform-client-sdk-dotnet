@@ -55,89 +55,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserSchedule" /> class.
         /// </summary>
-        
-        
         /// <param name="Shifts">The shifts that belong to this schedule.</param>
-        
-        
-        
         /// <param name="FullDayTimeOffMarkers">Markers to indicate a full day time off request, relative to the management unit time zone.</param>
-        
-        
-        
         /// <param name="Delete">If marked true for updating an existing user schedule, it will be deleted.</param>
-        
-        
-        
         /// <param name="Metadata">Version metadata for this schedule (required).</param>
-        
-        
-        
-        
         public UserSchedule(List<UserScheduleShift> Shifts = null, List<UserScheduleFullDayTimeOffMarker> FullDayTimeOffMarkers = null, bool? Delete = null, WfmVersionedEntityMetadata Metadata = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Metadata" is required (not null)
-            if (Metadata == null)
-            {
-                throw new InvalidDataException("Metadata is a required property for UserSchedule and cannot be null");
-            }
-            else
-            {
-                this.Metadata = Metadata;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Shifts = Shifts;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FullDayTimeOffMarkers = FullDayTimeOffMarkers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Delete = Delete;
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            this.Shifts = Shifts;
+            this.FullDayTimeOffMarkers = FullDayTimeOffMarkers;
+            this.Delete = Delete;
             
         }
         
@@ -197,15 +123,10 @@ this.Delete = Delete;
             sb.Append("class UserSchedule {\n");
             
             sb.Append("  Shifts: ").Append(Shifts).Append("\n");
-            
             sb.Append("  FullDayTimeOffMarkers: ").Append(FullDayTimeOffMarkers).Append("\n");
-            
             sb.Append("  Delete: ").Append(Delete).Append("\n");
-            
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
-            
             sb.Append("  WorkPlanId: ").Append(WorkPlanId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

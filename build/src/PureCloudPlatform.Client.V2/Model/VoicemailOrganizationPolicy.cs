@@ -59,107 +59,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailOrganizationPolicy" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="AlertTimeoutSeconds">The organization&#39;s default number of seconds to ring a user&#39;s phone before a call is transfered to voicemail.</param>
-        
-        
-        
         /// <param name="PinConfiguration">The configuration for user PINs to access their voicemail from a phone.</param>
-        
-        
-        
         /// <param name="VoicemailExtension">The extension for voicemail retrieval.  The default value is *86..</param>
-        
-        
-        
         /// <param name="PinRequired">If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone..</param>
-        
-        
-        
         /// <param name="SendEmailNotifications">Whether email notifications are sent for new voicemails in the organization. If false, new voicemail email notifications are not be sent for the organization overriding any user or group setting..</param>
-        
-        
-        
-        
         public VoicemailOrganizationPolicy(int? AlertTimeoutSeconds = null, PINConfiguration PinConfiguration = null, string VoicemailExtension = null, bool? PinRequired = null, bool? SendEmailNotifications = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.AlertTimeoutSeconds = AlertTimeoutSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PinConfiguration = PinConfiguration;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VoicemailExtension = VoicemailExtension;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PinRequired = PinRequired;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SendEmailNotifications = SendEmailNotifications;
-            
-            
-            
-            
-            
+            this.AlertTimeoutSeconds = AlertTimeoutSeconds;
+            this.PinConfiguration = PinConfiguration;
+            this.VoicemailExtension = VoicemailExtension;
+            this.PinRequired = PinRequired;
+            this.SendEmailNotifications = SendEmailNotifications;
             
         }
         
@@ -237,19 +148,12 @@ this.SendEmailNotifications = SendEmailNotifications;
             sb.Append("class VoicemailOrganizationPolicy {\n");
             
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  AlertTimeoutSeconds: ").Append(AlertTimeoutSeconds).Append("\n");
-            
             sb.Append("  PinConfiguration: ").Append(PinConfiguration).Append("\n");
-            
             sb.Append("  VoicemailExtension: ").Append(VoicemailExtension).Append("\n");
-            
             sb.Append("  PinRequired: ").Append(PinRequired).Append("\n");
-            
             sb.Append("  SendEmailNotifications: ").Append(SendEmailNotifications).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

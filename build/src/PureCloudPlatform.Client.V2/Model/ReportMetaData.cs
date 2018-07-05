@@ -69,141 +69,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportMetaData" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Title">Title.</param>
-        
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="Keywords">Keywords.</param>
-        
-        
-        
         /// <param name="AvailableLocales">AvailableLocales.</param>
-        
-        
-        
         /// <param name="Parameters">Parameters.</param>
-        
-        
-        
         /// <param name="ExampleUrl">ExampleUrl.</param>
-        
-        
-        
-        
         public ReportMetaData(string Name = null, string Title = null, string Description = null, List<string> Keywords = null, List<string> AvailableLocales = null, List<Parameter> Parameters = null, string ExampleUrl = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Title = Title;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Keywords = Keywords;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AvailableLocales = AvailableLocales;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Parameters = Parameters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExampleUrl = ExampleUrl;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Title = Title;
+            this.Description = Description;
+            this.Keywords = Keywords;
+            this.AvailableLocales = AvailableLocales;
+            this.Parameters = Parameters;
+            this.ExampleUrl = ExampleUrl;
             
         }
         
@@ -292,23 +173,14 @@ this.ExampleUrl = ExampleUrl;
             sb.Append("class ReportMetaData {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Title: ").Append(Title).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Keywords: ").Append(Keywords).Append("\n");
-            
             sb.Append("  AvailableLocales: ").Append(AvailableLocales).Append("\n");
-            
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
-            
             sb.Append("  ExampleUrl: ").Append(ExampleUrl).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

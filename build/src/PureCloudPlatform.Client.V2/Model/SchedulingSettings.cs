@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulingSettings" /> class.
         /// </summary>
-        
-        
         /// <param name="MaxOccupancyPercentForDeferredWork">Max occupancy percent for deferred work.</param>
-        
-        
-        
         /// <param name="DefaultShrinkagePercent">Default shrinkage percent for scheduling.</param>
-        
-        
-        
         /// <param name="ShrinkageOverrides">Shrinkage overrides for scheduling.</param>
-        
-        
         public SchedulingSettings(int? MaxOccupancyPercentForDeferredWork = null, double? DefaultShrinkagePercent = null, ShrinkageOverrides ShrinkageOverrides = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.MaxOccupancyPercentForDeferredWork = MaxOccupancyPercentForDeferredWork;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DefaultShrinkagePercent = DefaultShrinkagePercent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ShrinkageOverrides = ShrinkageOverrides;
-            
-            
-            
+            this.MaxOccupancyPercentForDeferredWork = MaxOccupancyPercentForDeferredWork;
+            this.DefaultShrinkagePercent = DefaultShrinkagePercent;
+            this.ShrinkageOverrides = ShrinkageOverrides;
             
         }
         
@@ -135,11 +88,8 @@ this.ShrinkageOverrides = ShrinkageOverrides;
             sb.Append("class SchedulingSettings {\n");
             
             sb.Append("  MaxOccupancyPercentForDeferredWork: ").Append(MaxOccupancyPercentForDeferredWork).Append("\n");
-            
             sb.Append("  DefaultShrinkagePercent: ").Append(DefaultShrinkagePercent).Append("\n");
-            
             sb.Append("  ShrinkageOverrides: ").Append(ShrinkageOverrides).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

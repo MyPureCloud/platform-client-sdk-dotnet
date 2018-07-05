@@ -64,146 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotificationHistoricalQueueDataPerInterval" /> class.
         /// </summary>
-        
-        
         /// <param name="Offered">Offered.</param>
-        
-        
-        
         /// <param name="Completed">Completed.</param>
-        
-        
-        
         /// <param name="Answered">Answered.</param>
-        
-        
-        
         /// <param name="Abandoned">Abandoned.</param>
-        
-        
-        
         /// <param name="AverageTalkTimeSeconds">AverageTalkTimeSeconds.</param>
-        
-        
-        
         /// <param name="AverageAfterCallWorkSeconds">AverageAfterCallWorkSeconds.</param>
-        
-        
-        
         /// <param name="ServiceLevelPercent">ServiceLevelPercent.</param>
-        
-        
-        
         /// <param name="AverageSpeedOfAnswerSeconds">AverageSpeedOfAnswerSeconds.</param>
-        
-        
         public IntradayDataUpdateNotificationHistoricalQueueDataPerInterval(int? Offered = null, int? Completed = null, int? Answered = null, int? Abandoned = null, double? AverageTalkTimeSeconds = null, double? AverageAfterCallWorkSeconds = null, double? ServiceLevelPercent = null, double? AverageSpeedOfAnswerSeconds = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Offered = Offered;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Completed = Completed;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Answered = Answered;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Abandoned = Abandoned;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ServiceLevelPercent = ServiceLevelPercent;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
-            
-            
-            
+            this.Offered = Offered;
+            this.Completed = Completed;
+            this.Answered = Answered;
+            this.Abandoned = Abandoned;
+            this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
+            this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
+            this.ServiceLevelPercent = ServiceLevelPercent;
+            this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
             
         }
         
@@ -282,21 +160,13 @@ this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
             sb.Append("class IntradayDataUpdateNotificationHistoricalQueueDataPerInterval {\n");
             
             sb.Append("  Offered: ").Append(Offered).Append("\n");
-            
             sb.Append("  Completed: ").Append(Completed).Append("\n");
-            
             sb.Append("  Answered: ").Append(Answered).Append("\n");
-            
             sb.Append("  Abandoned: ").Append(Abandoned).Append("\n");
-            
             sb.Append("  AverageTalkTimeSeconds: ").Append(AverageTalkTimeSeconds).Append("\n");
-            
             sb.Append("  AverageAfterCallWorkSeconds: ").Append(AverageAfterCallWorkSeconds).Append("\n");
-            
             sb.Append("  ServiceLevelPercent: ").Append(ServiceLevelPercent).Append("\n");
-            
             sb.Append("  AverageSpeedOfAnswerSeconds: ").Append(AverageSpeedOfAnswerSeconds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

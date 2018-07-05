@@ -104,141 +104,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationDefinition" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Address">Address.</param>
-        
-        
-        
         /// <param name="AddressVerified">AddressVerified.</param>
-        
-        
-        
         /// <param name="EmergencyNumber">EmergencyNumber.</param>
-        
-        
-        
         /// <param name="State">Current activity status of the location..</param>
-        
-        
-        
         /// <param name="Version">Version.</param>
-        
-        
-        
         /// <param name="Path">Path.</param>
-        
-        
-        
-        
         public LocationDefinition(string Name = null, LocationAddress Address = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, StateEnum? State = null, int? Version = null, List<string> Path = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Address = Address;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressVerified = AddressVerified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.EmergencyNumber = EmergencyNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Path = Path;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Address = Address;
+            this.AddressVerified = AddressVerified;
+            this.EmergencyNumber = EmergencyNumber;
+            this.State = State;
+            this.Version = Version;
+            this.Path = Path;
             
         }
         
@@ -321,23 +202,14 @@ this.Path = Path;
             sb.Append("class LocationDefinition {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("  AddressVerified: ").Append(AddressVerified).Append("\n");
-            
             sb.Append("  EmergencyNumber: ").Append(EmergencyNumber).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  Path: ").Append(Path).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

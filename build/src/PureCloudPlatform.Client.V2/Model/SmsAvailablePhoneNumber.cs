@@ -203,158 +203,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsAvailablePhoneNumber" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="PhoneNumber">A phone number available for provisioning in E.164 format. E.g. +13175555555 or +34234234234.</param>
-        
-        
-        
         /// <param name="CountryCode">The ISO 3166-1 alpha-2 country code of the country this phone number is associated with..</param>
-        
-        
-        
         /// <param name="Region">The region/province/state the phone number is associated with..</param>
-        
-        
-        
         /// <param name="City">The city the phone number is associated with..</param>
-        
-        
-        
         /// <param name="Capabilities">The capabilities of the phone number available for provisioning..</param>
-        
-        
-        
         /// <param name="PhoneNumberType">The type of phone number available for provisioning..</param>
-        
-        
-        
         /// <param name="AddressRequirement">The address requirement needed for provisioning this number. If there is a requirement, the address must be the residence or place of business of the individual or entity using the phone number..</param>
-        
-        
-        
-        
         public SmsAvailablePhoneNumber(string Name = null, string PhoneNumber = null, string CountryCode = null, string Region = null, string City = null, List<CapabilitiesEnum> Capabilities = null, PhoneNumberTypeEnum? PhoneNumberType = null, AddressRequirementEnum? AddressRequirement = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneNumber = PhoneNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CountryCode = CountryCode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Region = Region;
-            
-            
-            
-            
-            
-            
-            
-            
-this.City = City;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Capabilities = Capabilities;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PhoneNumberType = PhoneNumberType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AddressRequirement = AddressRequirement;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.PhoneNumber = PhoneNumber;
+            this.CountryCode = CountryCode;
+            this.Region = Region;
+            this.City = City;
+            this.Capabilities = Capabilities;
+            this.PhoneNumberType = PhoneNumberType;
+            this.AddressRequirement = AddressRequirement;
             
         }
         
@@ -444,25 +310,15 @@ this.AddressRequirement = AddressRequirement;
             sb.Append("class SmsAvailablePhoneNumber {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
-            
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
-            
             sb.Append("  Region: ").Append(Region).Append("\n");
-            
             sb.Append("  City: ").Append(City).Append("\n");
-            
             sb.Append("  Capabilities: ").Append(Capabilities).Append("\n");
-            
             sb.Append("  PhoneNumberType: ").Append(PhoneNumberType).Append("\n");
-            
             sb.Append("  AddressRequirement: ").Append(AddressRequirement).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

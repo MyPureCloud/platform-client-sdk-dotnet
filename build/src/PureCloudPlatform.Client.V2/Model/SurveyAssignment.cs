@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyAssignment" /> class.
         /// </summary>
-        
-        
         /// <param name="SurveyForm">The survey form used for this survey..</param>
-        
-        
-        
         /// <param name="Flow">The URI reference to the flow associated with this survey..</param>
-        
-        
-        
         /// <param name="InviteTimeInterval">An ISO 8601 repeated interval consisting of the number of repetitions, the start datetime, and the interval (e.g. R2/2018-03-01T13:00:00Z/P1M10DT2H30M). Total duration must not exceed 90 days..</param>
-        
-        
         public SurveyAssignment(SurveyFormUriReference SurveyForm = null, UriReference Flow = null, string InviteTimeInterval = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SurveyForm = SurveyForm;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Flow = Flow;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InviteTimeInterval = InviteTimeInterval;
-            
-            
-            
+            this.SurveyForm = SurveyForm;
+            this.Flow = Flow;
+            this.InviteTimeInterval = InviteTimeInterval;
             
         }
         
@@ -135,11 +88,8 @@ this.InviteTimeInterval = InviteTimeInterval;
             sb.Append("class SurveyAssignment {\n");
             
             sb.Append("  SurveyForm: ").Append(SurveyForm).Append("\n");
-            
             sb.Append("  Flow: ").Append(Flow).Append("\n");
-            
             sb.Append("  InviteTimeInterval: ").Append(InviteTimeInterval).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

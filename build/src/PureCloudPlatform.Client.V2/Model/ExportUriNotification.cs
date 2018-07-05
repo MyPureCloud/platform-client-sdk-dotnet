@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExportUriNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Uri">Uri.</param>
-        
-        
-        
         /// <param name="ExportTimestamp">ExportTimestamp.</param>
-        
-        
-        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        
-        
         public ExportUriNotification(string Uri = null, string ExportTimestamp = null, Object AdditionalProperties = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Uri = Uri;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ExportTimestamp = ExportTimestamp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AdditionalProperties = AdditionalProperties;
-            
-            
-            
+            this.Uri = Uri;
+            this.ExportTimestamp = ExportTimestamp;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -132,11 +85,8 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("class ExportUriNotification {\n");
             
             sb.Append("  Uri: ").Append(Uri).Append("\n");
-            
             sb.Append("  ExportTimestamp: ").Append(ExportTimestamp).Append("\n");
-            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

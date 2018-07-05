@@ -149,282 +149,40 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestUpdateNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="User">User.</param>
-        
-        
-        
         /// <param name="IsFullDayRequest">IsFullDayRequest.</param>
-        
-        
-        
         /// <param name="MarkedAsRead">MarkedAsRead.</param>
-        
-        
-        
         /// <param name="ActivityCodeId">ActivityCodeId.</param>
-        
-        
-        
         /// <param name="Status">Status.</param>
-        
-        
-        
         /// <param name="PartialDayStartDateTimes">PartialDayStartDateTimes.</param>
-        
-        
-        
         /// <param name="FullDayManagementUnitDates">FullDayManagementUnitDates.</param>
-        
-        
-        
         /// <param name="DailyDurationMinutes">DailyDurationMinutes.</param>
-        
-        
-        
         /// <param name="Notes">Notes.</param>
-        
-        
-        
         /// <param name="ReviewedDate">ReviewedDate.</param>
-        
-        
-        
         /// <param name="ReviewedBy">ReviewedBy.</param>
-        
-        
-        
         /// <param name="SubmittedDate">SubmittedDate.</param>
-        
-        
-        
         /// <param name="SubmittedBy">SubmittedBy.</param>
-        
-        
-        
         /// <param name="ModifiedDate">ModifiedDate.</param>
-        
-        
-        
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        
-        
         public TimeOffRequestUpdateNotification(string Id = null, DocumentDataV2NotificationWorkspace User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, StatusEnum? Status = null, List<string> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, string Notes = null, string ReviewedDate = null, string ReviewedBy = null, string SubmittedDate = null, string SubmittedBy = null, string ModifiedDate = null, string ModifiedBy = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.User = User;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IsFullDayRequest = IsFullDayRequest;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MarkedAsRead = MarkedAsRead;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ActivityCodeId = ActivityCodeId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Status = Status;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PartialDayStartDateTimes = PartialDayStartDateTimes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FullDayManagementUnitDates = FullDayManagementUnitDates;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DailyDurationMinutes = DailyDurationMinutes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Notes = Notes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReviewedDate = ReviewedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ReviewedBy = ReviewedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SubmittedDate = SubmittedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SubmittedBy = SubmittedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedDate = ModifiedDate;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
+            this.Id = Id;
+            this.User = User;
+            this.IsFullDayRequest = IsFullDayRequest;
+            this.MarkedAsRead = MarkedAsRead;
+            this.ActivityCodeId = ActivityCodeId;
+            this.Status = Status;
+            this.PartialDayStartDateTimes = PartialDayStartDateTimes;
+            this.FullDayManagementUnitDates = FullDayManagementUnitDates;
+            this.DailyDurationMinutes = DailyDurationMinutes;
+            this.Notes = Notes;
+            this.ReviewedDate = ReviewedDate;
+            this.ReviewedBy = ReviewedBy;
+            this.SubmittedDate = SubmittedDate;
+            this.SubmittedBy = SubmittedBy;
+            this.ModifiedDate = ModifiedDate;
+            this.ModifiedBy = ModifiedBy;
             
         }
         
@@ -561,37 +319,21 @@ this.ModifiedBy = ModifiedBy;
             sb.Append("class TimeOffRequestUpdateNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("  IsFullDayRequest: ").Append(IsFullDayRequest).Append("\n");
-            
             sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
-            
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
-            
             sb.Append("  Status: ").Append(Status).Append("\n");
-            
             sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
-            
             sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
-            
             sb.Append("  DailyDurationMinutes: ").Append(DailyDurationMinutes).Append("\n");
-            
             sb.Append("  Notes: ").Append(Notes).Append("\n");
-            
             sb.Append("  ReviewedDate: ").Append(ReviewedDate).Append("\n");
-            
             sb.Append("  ReviewedBy: ").Append(ReviewedBy).Append("\n");
-            
             sb.Append("  SubmittedDate: ").Append(SubmittedDate).Append("\n");
-            
             sb.Append("  SubmittedBy: ").Append(SubmittedBy).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -396,248 +396,36 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InteractionStatRuleNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Dimension">Dimension.</param>
-        
-        
-        
         /// <param name="DimensionValue">DimensionValue.</param>
-        
-        
-        
         /// <param name="DimensionValueName">DimensionValueName.</param>
-        
-        
-        
         /// <param name="Metric">Metric.</param>
-        
-        
-        
         /// <param name="MediaType">MediaType.</param>
-        
-        
-        
         /// <param name="NumericRange">NumericRange.</param>
-        
-        
-        
         /// <param name="Statistic">Statistic.</param>
-        
-        
-        
         /// <param name="Value">Value.</param>
-        
-        
-        
         /// <param name="InAlarm">InAlarm.</param>
-        
-        
-        
         /// <param name="Enabled">Enabled.</param>
-        
-        
-        
         /// <param name="NotificationUsers">NotificationUsers.</param>
-        
-        
-        
         /// <param name="AlertTypes">AlertTypes.</param>
-        
-        
         public InteractionStatRuleNotification(string Id = null, string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, string DimensionValueName = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? InAlarm = null, bool? Enabled = null, List<HeartBeatAlertNotificationNotificationUsers> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Dimension = Dimension;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DimensionValue = DimensionValue;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DimensionValueName = DimensionValueName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Metric = Metric;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaType = MediaType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NumericRange = NumericRange;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Statistic = Statistic;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Value = Value;
-            
-            
-            
-            
-            
-            
-            
-            
-this.InAlarm = InAlarm;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Enabled = Enabled;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NotificationUsers = NotificationUsers;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AlertTypes = AlertTypes;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.Dimension = Dimension;
+            this.DimensionValue = DimensionValue;
+            this.DimensionValueName = DimensionValueName;
+            this.Metric = Metric;
+            this.MediaType = MediaType;
+            this.NumericRange = NumericRange;
+            this.Statistic = Statistic;
+            this.Value = Value;
+            this.InAlarm = InAlarm;
+            this.Enabled = Enabled;
+            this.NotificationUsers = NotificationUsers;
+            this.AlertTypes = AlertTypes;
             
         }
         
@@ -734,33 +522,19 @@ this.AlertTypes = AlertTypes;
             sb.Append("class InteractionStatRuleNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
-            
             sb.Append("  DimensionValue: ").Append(DimensionValue).Append("\n");
-            
             sb.Append("  DimensionValueName: ").Append(DimensionValueName).Append("\n");
-            
             sb.Append("  Metric: ").Append(Metric).Append("\n");
-            
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
             sb.Append("  NumericRange: ").Append(NumericRange).Append("\n");
-            
             sb.Append("  Statistic: ").Append(Statistic).Append("\n");
-            
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("  InAlarm: ").Append(InAlarm).Append("\n");
-            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            
             sb.Append("  NotificationUsers: ").Append(NotificationUsers).Append("\n");
-            
             sb.Append("  AlertTypes: ").Append(AlertTypes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

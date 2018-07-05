@@ -237,428 +237,51 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Queue" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Division">The division to which this entity belongs..</param>
-        
-        
-        
         /// <param name="Description">The queue description..</param>
-        
-        
-        
         /// <param name="Version">The current version of the queue..</param>
-        
-        
-        
         /// <param name="DateCreated">The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DateModified">The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="ModifiedBy">The ID of the user that last modified the queue..</param>
-        
-        
-        
         /// <param name="CreatedBy">The ID of the user that created the queue..</param>
-        
-        
-        
         /// <param name="State">Indicates if the queue is active, inactive, or deleted..</param>
-        
-        
-        
         /// <param name="ModifiedByApp">The application that last modified the queue..</param>
-        
-        
-        
         /// <param name="CreatedByApp">The application that created the queue..</param>
-        
-        
-        
         /// <param name="MediaSettings">The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION (required).</param>
-        
-        
-        
         /// <param name="Bullseye">The bulls-eye settings for the queue..</param>
-        
-        
-        
         /// <param name="AcwSettings">The ACW settings for the queue. (required).</param>
-        
-        
-        
         /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations. (required).</param>
-        
-        
-        
         /// <param name="QueueFlow">The in-queue flow to use for conversations waiting in queue..</param>
-        
-        
-        
         /// <param name="WhisperPrompt">The prompt used for whisper on the queue, if configured..</param>
-        
-        
-        
         /// <param name="AutoAnswerOnly">Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered..</param>
-        
-        
-        
         /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
-        
-        
-        
         /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
-        
-        
-        
         /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
-        
-        
-        
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
-        
-        
-        
         /// <param name="MemberCount">MemberCount.</param>
-        
-        
-        
-        
         public Queue(string Name = null, Division Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference WhisperPrompt = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, int? MemberCount = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "MediaSettings" is required (not null)
-            if (MediaSettings == null)
-            {
-                throw new InvalidDataException("MediaSettings is a required property for Queue and cannot be null");
-            }
-            else
-            {
-                this.MediaSettings = MediaSettings;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "AcwSettings" is required (not null)
-            if (AcwSettings == null)
-            {
-                throw new InvalidDataException("AcwSettings is a required property for Queue and cannot be null");
-            }
-            else
-            {
-                this.AcwSettings = AcwSettings;
-            }
-            
-            
-            
-            
-            
-            // to ensure "SkillEvaluationMethod" is required (not null)
-            if (SkillEvaluationMethod == null)
-            {
-                throw new InvalidDataException("SkillEvaluationMethod is a required property for Queue and cannot be null");
-            }
-            else
-            {
-                this.SkillEvaluationMethod = SkillEvaluationMethod;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Division = Division;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateCreated = DateCreated;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedBy = CreatedBy;
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedByApp = ModifiedByApp;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CreatedByApp = CreatedByApp;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Bullseye = Bullseye;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.QueueFlow = QueueFlow;
-            
-            
-            
-            
-            
-            
-            
-            
-this.WhisperPrompt = WhisperPrompt;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AutoAnswerOnly = AutoAnswerOnly;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallingPartyName = CallingPartyName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CallingPartyNumber = CallingPartyNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DefaultScripts = DefaultScripts;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OutboundEmailAddress = OutboundEmailAddress;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MemberCount = MemberCount;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Division = Division;
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.State = State;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.Bullseye = Bullseye;
+            this.QueueFlow = QueueFlow;
+            this.WhisperPrompt = WhisperPrompt;
+            this.AutoAnswerOnly = AutoAnswerOnly;
+            this.CallingPartyName = CallingPartyName;
+            this.CallingPartyNumber = CallingPartyNumber;
+            this.DefaultScripts = DefaultScripts;
+            this.OutboundEmailAddress = OutboundEmailAddress;
+            this.MemberCount = MemberCount;
             
         }
         
@@ -881,55 +504,30 @@ this.MemberCount = MemberCount;
             sb.Append("class Queue {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Division: ").Append(Division).Append("\n");
-            
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
-            
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
-            
             sb.Append("  MediaSettings: ").Append(MediaSettings).Append("\n");
-            
             sb.Append("  Bullseye: ").Append(Bullseye).Append("\n");
-            
             sb.Append("  AcwSettings: ").Append(AcwSettings).Append("\n");
-            
             sb.Append("  SkillEvaluationMethod: ").Append(SkillEvaluationMethod).Append("\n");
-            
             sb.Append("  QueueFlow: ").Append(QueueFlow).Append("\n");
-            
             sb.Append("  WhisperPrompt: ").Append(WhisperPrompt).Append("\n");
-            
             sb.Append("  AutoAnswerOnly: ").Append(AutoAnswerOnly).Append("\n");
-            
             sb.Append("  CallingPartyName: ").Append(CallingPartyName).Append("\n");
-            
             sb.Append("  CallingPartyNumber: ").Append(CallingPartyNumber).Append("\n");
-            
             sb.Append("  DefaultScripts: ").Append(DefaultScripts).Append("\n");
-            
             sb.Append("  OutboundEmailAddress: ").Append(OutboundEmailAddress).Append("\n");
-            
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

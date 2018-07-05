@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainNetworkCommandResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="CorrelationId">CorrelationId.</param>
-        
-        
-        
         /// <param name="CommandName">CommandName.</param>
-        
-        
-        
         /// <param name="Acknowledged">Acknowledged.</param>
-        
-        
-        
         /// <param name="ErrorInfo">ErrorInfo.</param>
-        
-        
         public DomainNetworkCommandResponse(string CorrelationId = null, string CommandName = null, bool? Acknowledged = null, ErrorDetails ErrorInfo = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.CorrelationId = CorrelationId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CommandName = CommandName;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Acknowledged = Acknowledged;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ErrorInfo = ErrorInfo;
-            
-            
-            
+            this.CorrelationId = CorrelationId;
+            this.CommandName = CommandName;
+            this.Acknowledged = Acknowledged;
+            this.ErrorInfo = ErrorInfo;
             
         }
         
@@ -162,13 +100,9 @@ this.ErrorInfo = ErrorInfo;
             sb.Append("class DomainNetworkCommandResponse {\n");
             
             sb.Append("  CorrelationId: ").Append(CorrelationId).Append("\n");
-            
             sb.Append("  CommandName: ").Append(CommandName).Append("\n");
-            
             sb.Append("  Acknowledged: ").Append(Acknowledged).Append("\n");
-            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

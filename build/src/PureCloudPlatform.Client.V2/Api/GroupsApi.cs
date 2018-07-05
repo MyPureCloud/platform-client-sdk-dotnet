@@ -874,10 +874,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -969,10 +970,11 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1072,8 +1074,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
-            
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1175,8 +1178,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
-            
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1270,8 +1274,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FieldConfig>(localVarStatusCode,
                 localVarHeaders,
-                (FieldConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldConfig)));
-            
+                (FieldConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1366,8 +1371,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FieldConfig>(localVarStatusCode,
                 localVarHeaders,
-                (FieldConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldConfig)));
-            
+                (FieldConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1461,8 +1467,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Group>(localVarStatusCode,
                 localVarHeaders,
-                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
-            
+                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1557,8 +1564,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Group>(localVarStatusCode,
                 localVarHeaders,
-                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
-            
+                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1652,8 +1660,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<UserEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)));
-            
+                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1748,8 +1757,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<UserEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)));
-            
+                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1855,8 +1865,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<UserEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)));
-            
+                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -1963,8 +1974,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<UserEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)));
-            
+                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2061,8 +2073,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GroupProfile>(localVarStatusCode,
                 localVarHeaders,
-                (GroupProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupProfile)));
-            
+                (GroupProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupProfile)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2160,8 +2173,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GroupProfile>(localVarStatusCode,
                 localVarHeaders,
-                (GroupProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupProfile)));
-            
+                (GroupProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupProfile)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2261,8 +2275,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GroupEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (GroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupEntityListing)));
-            
+                (GroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2362,8 +2377,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GroupEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (GroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupEntityListing)));
-            
+                (GroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2460,8 +2476,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GroupsSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (GroupsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupsSearchResponse)));
-            
+                (GroupsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupsSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2559,8 +2576,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GroupsSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (GroupsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupsSearchResponse)));
-            
+                (GroupsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupsSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2660,8 +2678,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GroupProfileEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (GroupProfileEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupProfileEntityListing)));
-            
+                (GroupProfileEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupProfileEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2761,8 +2780,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GroupProfileEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (GroupProfileEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupProfileEntityListing)));
-            
+                (GroupProfileEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupProfileEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2866,8 +2886,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
-            
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -2973,8 +2994,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
-            
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3072,8 +3094,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Group>(localVarStatusCode,
                 localVarHeaders,
-                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
-            
+                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3172,8 +3195,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Group>(localVarStatusCode,
                 localVarHeaders,
-                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
-            
+                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3271,8 +3295,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GroupsSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (GroupsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupsSearchResponse)));
-            
+                (GroupsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupsSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3371,8 +3396,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<GroupsSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (GroupsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupsSearchResponse)));
-            
+                (GroupsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupsSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3473,8 +3499,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Group>(localVarStatusCode,
                 localVarHeaders,
-                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
-            
+                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         
@@ -3576,8 +3603,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Group>(localVarStatusCode,
                 localVarHeaders,
-                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
-            
+                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
         }
 
         

@@ -55,120 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactCallbackRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="CampaignId">Campaign identifier (required).</param>
-        
-        
-        
         /// <param name="ContactListId">Contact list identifier (required).</param>
-        
-        
-        
         /// <param name="ContactId">Contact identifier (required).</param>
-        
-        
-        
         /// <param name="PhoneColumn">Name of the phone column containing the number to be called (required).</param>
-        
-        
-        
         /// <param name="Schedule">The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\&quot;, example = \&quot;2016-01-02T16:59:59\&quot; (required).</param>
-        
-        
         public ContactCallbackRequest(string CampaignId = null, string ContactListId = null, string ContactId = null, string PhoneColumn = null, string Schedule = null)
         {
-            
-            
-            
-            // to ensure "CampaignId" is required (not null)
-            if (CampaignId == null)
-            {
-                throw new InvalidDataException("CampaignId is a required property for ContactCallbackRequest and cannot be null");
-            }
-            else
-            {
-                this.CampaignId = CampaignId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "ContactListId" is required (not null)
-            if (ContactListId == null)
-            {
-                throw new InvalidDataException("ContactListId is a required property for ContactCallbackRequest and cannot be null");
-            }
-            else
-            {
-                this.ContactListId = ContactListId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "ContactId" is required (not null)
-            if (ContactId == null)
-            {
-                throw new InvalidDataException("ContactId is a required property for ContactCallbackRequest and cannot be null");
-            }
-            else
-            {
-                this.ContactId = ContactId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "PhoneColumn" is required (not null)
-            if (PhoneColumn == null)
-            {
-                throw new InvalidDataException("PhoneColumn is a required property for ContactCallbackRequest and cannot be null");
-            }
-            else
-            {
-                this.PhoneColumn = PhoneColumn;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Schedule" is required (not null)
-            if (Schedule == null)
-            {
-                throw new InvalidDataException("Schedule is a required property for ContactCallbackRequest and cannot be null");
-            }
-            else
-            {
-                this.Schedule = Schedule;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         }
         
@@ -228,15 +121,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ContactCallbackRequest {\n");
             
             sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
-            
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
-            
             sb.Append("  ContactId: ").Append(ContactId).Append("\n");
-            
             sb.Append("  PhoneColumn: ").Append(PhoneColumn).Append("\n");
-            
             sb.Append("  Schedule: ").Append(Schedule).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

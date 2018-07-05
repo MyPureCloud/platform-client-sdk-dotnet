@@ -279,231 +279,34 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Video" /> class.
         /// </summary>
-        
-        
         /// <param name="State">The connection state of this communication..</param>
-        
-        
-        
         /// <param name="Id">A globally unique identifier for this communication..</param>
-        
-        
-        
         /// <param name="Context">The room id context (xmpp jid) for the conference session..</param>
-        
-        
-        
         /// <param name="AudioMuted">Indicates whether this participant has muted their outgoing audio..</param>
-        
-        
-        
         /// <param name="VideoMuted">Indicates whether this participant has muted/paused their outgoing video..</param>
-        
-        
-        
         /// <param name="SharingScreen">Indicates whether this participant is sharing their screen to the session..</param>
-        
-        
-        
         /// <param name="PeerCount">The number of peer participants from the perspective of the participant in the conference..</param>
-        
-        
-        
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
-        
-        
-        
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
         /// <param name="Provider">The source provider for the video..</param>
-        
-        
-        
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
-        
-        
-        
         /// <param name="Msids">List of media stream ids.</param>
-        
-        
         public Video(StateEnum? State = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<string> Msids = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.State = State;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Context = Context;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AudioMuted = AudioMuted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.VideoMuted = VideoMuted;
-            
-            
-            
-            
-            
-            
-            
-            
-this.SharingScreen = SharingScreen;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerCount = PeerCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectType = DisconnectType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConnectedTime = ConnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisconnectedTime = DisconnectedTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Provider = Provider;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PeerId = PeerId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Msids = Msids;
-            
-            
-            
+            this.State = State;
+            this.Id = Id;
+            this.Context = Context;
+            this.AudioMuted = AudioMuted;
+            this.VideoMuted = VideoMuted;
+            this.SharingScreen = SharingScreen;
+            this.PeerCount = PeerCount;
+            this.DisconnectType = DisconnectType;
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
+            this.Provider = Provider;
+            this.PeerId = PeerId;
+            this.Msids = Msids;
             
         }
         
@@ -621,31 +424,18 @@ this.Msids = Msids;
             sb.Append("class Video {\n");
             
             sb.Append("  State: ").Append(State).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Context: ").Append(Context).Append("\n");
-            
             sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
-            
             sb.Append("  VideoMuted: ").Append(VideoMuted).Append("\n");
-            
             sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
-            
             sb.Append("  PeerCount: ").Append(PeerCount).Append("\n");
-            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
-            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
-            
             sb.Append("  Msids: ").Append(Msids).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

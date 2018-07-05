@@ -29,27 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailSetup" /> class.
         /// </summary>
-        
-        
         /// <param name="RootDomain">The root PureCloud domain that all sub-domains are created from..</param>
-        
-        
         public EmailSetup(string RootDomain = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.RootDomain = RootDomain;
-            
-            
-            
+            this.RootDomain = RootDomain;
             
         }
         
@@ -73,7 +56,6 @@ this.RootDomain = RootDomain;
             sb.Append("class EmailSetup {\n");
             
             sb.Append("  RootDomain: ").Append(RootDomain).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

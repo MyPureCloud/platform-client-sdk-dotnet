@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStationsNotificationUserStation" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="AssociatedUser">AssociatedUser.</param>
-        
-        
         public UserStationsNotificationUserStation(string Id = null, string Name = null, DocumentDataV2NotificationWorkspace AssociatedUser = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AssociatedUser = AssociatedUser;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.AssociatedUser = AssociatedUser;
             
         }
         
@@ -132,11 +85,8 @@ this.AssociatedUser = AssociatedUser;
             sb.Append("class UserStationsNotificationUserStation {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  AssociatedUser: ").Append(AssociatedUser).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

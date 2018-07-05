@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FilterPreviewResponse" /> class.
         /// </summary>
-        
-        
         /// <param name="FilteredContacts">FilteredContacts.</param>
-        
-        
-        
         /// <param name="TotalContacts">TotalContacts.</param>
-        
-        
-        
         /// <param name="Preview">Preview.</param>
-        
-        
         public FilterPreviewResponse(long? FilteredContacts = null, long? TotalContacts = null, List<DialerContact> Preview = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.FilteredContacts = FilteredContacts;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TotalContacts = TotalContacts;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Preview = Preview;
-            
-            
-            
+            this.FilteredContacts = FilteredContacts;
+            this.TotalContacts = TotalContacts;
+            this.Preview = Preview;
             
         }
         
@@ -132,11 +85,8 @@ this.Preview = Preview;
             sb.Append("class FilterPreviewResponse {\n");
             
             sb.Append("  FilteredContacts: ").Append(FilteredContacts).Append("\n");
-            
             sb.Append("  TotalContacts: ").Append(TotalContacts).Append("\n");
-            
             sb.Append("  Preview: ").Append(Preview).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

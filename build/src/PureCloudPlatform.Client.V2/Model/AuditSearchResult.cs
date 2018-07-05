@@ -54,112 +54,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditSearchResult" /> class.
         /// </summary>
-        
-        
         /// <param name="PageNumber">Which page was returned..</param>
-        
-        
-        
         /// <param name="PageSize">The number of results in a page..</param>
-        
-        
-        
         /// <param name="Total">The total number of results..</param>
-        
-        
-        
         /// <param name="PageCount">The number of pages of results..</param>
-        
-        
-        
         /// <param name="FacetInfo">FacetInfo.</param>
-        
-        
-        
         /// <param name="AuditMessages">AuditMessages.</param>
-        
-        
         public AuditSearchResult(int? PageNumber = null, int? PageSize = null, int? Total = null, int? PageCount = null, List<FacetInfo> FacetInfo = null, List<AuditMessage> AuditMessages = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageNumber = PageNumber;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageSize = PageSize;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Total = Total;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PageCount = PageCount;
-            
-            
-            
-            
-            
-            
-            
-            
-this.FacetInfo = FacetInfo;
-            
-            
-            
-            
-            
-            
-            
-            
-this.AuditMessages = AuditMessages;
-            
-            
-            
+            this.PageNumber = PageNumber;
+            this.PageSize = PageSize;
+            this.Total = Total;
+            this.PageCount = PageCount;
+            this.FacetInfo = FacetInfo;
+            this.AuditMessages = AuditMessages;
             
         }
         
@@ -226,17 +134,11 @@ this.AuditMessages = AuditMessages;
             sb.Append("class AuditSearchResult {\n");
             
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            
             sb.Append("  Total: ").Append(Total).Append("\n");
-            
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
-            
             sb.Append("  FacetInfo: ").Append(FacetInfo).Append("\n");
-            
             sb.Append("  AuditMessages: ").Append(AuditMessages).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

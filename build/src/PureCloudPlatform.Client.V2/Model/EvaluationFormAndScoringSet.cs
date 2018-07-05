@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationFormAndScoringSet" /> class.
         /// </summary>
-        
-        
         /// <param name="EvaluationForm">EvaluationForm.</param>
-        
-        
-        
         /// <param name="Answers">Answers.</param>
-        
-        
         public EvaluationFormAndScoringSet(EvaluationForm EvaluationForm = null, EvaluationScoringSet Answers = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.EvaluationForm = EvaluationForm;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Answers = Answers;
-            
-            
-            
+            this.EvaluationForm = EvaluationForm;
+            this.Answers = Answers;
             
         }
         
@@ -102,9 +70,7 @@ this.Answers = Answers;
             sb.Append("class EvaluationFormAndScoringSet {\n");
             
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
-            
             sb.Append("  Answers: ").Append(Answers).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

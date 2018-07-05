@@ -34,44 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainRole" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">The ID of the role.</param>
-        
-        
-        
         /// <param name="Name">The name of the role.</param>
-        
-        
         public DomainRole(string Id = null, string Name = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
             
         }
         
@@ -104,9 +72,7 @@ this.Name = Name;
             sb.Append("class DomainRole {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

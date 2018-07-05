@@ -44,78 +44,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTopic" /> class.
         /// </summary>
-        
-        
         /// <param name="Description">Description.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="RequiresPermissions">RequiresPermissions.</param>
-        
-        
-        
         /// <param name="Schema">Schema.</param>
-        
-        
         public AvailableTopic(string Description = null, string Id = null, List<string> RequiresPermissions = null, Dictionary<string, Object> Schema = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RequiresPermissions = RequiresPermissions;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Schema = Schema;
-            
-            
-            
+            this.Description = Description;
+            this.Id = Id;
+            this.RequiresPermissions = RequiresPermissions;
+            this.Schema = Schema;
             
         }
         
@@ -162,13 +100,9 @@ this.Schema = Schema;
             sb.Append("class AvailableTopic {\n");
             
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  RequiresPermissions: ").Append(RequiresPermissions).Append("\n");
-            
             sb.Append("  Schema: ").Append(Schema).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

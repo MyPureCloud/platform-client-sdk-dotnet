@@ -49,73 +49,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPermissionCollection" /> class.
         /// </summary>
-        
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Domain">Domain.</param>
-        
-        
-        
         /// <param name="PermissionMap">PermissionMap.</param>
-        
-        
-        
-        
         public DomainPermissionCollection(string Name = null, string Domain = null, Dictionary<string, List<DomainPermission>> PermissionMap = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Domain = Domain;
-            
-            
-            
-            
-            
-            
-            
-            
-this.PermissionMap = PermissionMap;
-            
-            
-            
-            
-            
+            this.Name = Name;
+            this.Domain = Domain;
+            this.PermissionMap = PermissionMap;
             
         }
         
@@ -172,15 +113,10 @@ this.PermissionMap = PermissionMap;
             sb.Append("class DomainPermissionCollection {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Domain: ").Append(Domain).Append("\n");
-            
             sb.Append("  PermissionMap: ").Append(PermissionMap).Append("\n");
-            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

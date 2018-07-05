@@ -88,95 +88,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallConversationNotification" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Participants">Participants.</param>
-        
-        
-        
         /// <param name="OtherMediaUris">OtherMediaUris.</param>
-        
-        
-        
         /// <param name="RecordingState">RecordingState.</param>
-        
-        
         public CallConversationNotification(string Id = null, string Name = null, List<CallConversationNotificationParticipants> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Participants = Participants;
-            
-            
-            
-            
-            
-            
-            
-            
-this.OtherMediaUris = OtherMediaUris;
-            
-            
-            
-            
-            
-            
-            
-            
-this.RecordingState = RecordingState;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.Participants = Participants;
+            this.OtherMediaUris = OtherMediaUris;
+            this.RecordingState = RecordingState;
             
         }
         
@@ -225,15 +148,10 @@ this.RecordingState = RecordingState;
             sb.Append("class CallConversationNotification {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
-            
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
-            
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

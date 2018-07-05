@@ -39,61 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PromptNotificationNotificationUser" /> class.
         /// </summary>
-        
-        
         /// <param name="Id">Id.</param>
-        
-        
-        
         /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="HomeOrg">HomeOrg.</param>
-        
-        
         public PromptNotificationNotificationUser(string Id = null, string Name = null, DependencyTrackingBuildNotificationNotificationUserHomeOrg HomeOrg = null)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
-            
-            
-            
-            
-            
-            
-            
-            
-this.HomeOrg = HomeOrg;
-            
-            
-            
+            this.Id = Id;
+            this.Name = Name;
+            this.HomeOrg = HomeOrg;
             
         }
         
@@ -132,11 +85,8 @@ this.HomeOrg = HomeOrg;
             sb.Append("class PromptNotificationNotificationUser {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("  HomeOrg: ").Append(HomeOrg).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

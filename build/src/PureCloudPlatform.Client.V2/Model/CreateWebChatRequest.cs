@@ -65,139 +65,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWebChatRequest" /> class.
         /// </summary>
-        
-        
         /// <param name="QueueId">The ID of the queue to use for routing the chat conversation. (required).</param>
-        
-        
-        
         /// <param name="Provider">The name of the provider that is sourcing the web chat. (required).</param>
-        
-        
-        
         /// <param name="SkillIds">The list of skill ID&#39;s to use for routing..</param>
-        
-        
-        
         /// <param name="LanguageId">The ID of the langauge to use for routing..</param>
-        
-        
-        
         /// <param name="Priority">The priority to assign to the conversation for routing..</param>
-        
-        
-        
         /// <param name="Attributes">The list of attributes to associate with the customer participant..</param>
-        
-        
-        
         /// <param name="CustomerName">The name of the customer participating in the web chat..</param>
-        
-        
         public CreateWebChatRequest(string QueueId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string CustomerName = null)
         {
-            
-            
-            
-            // to ensure "QueueId" is required (not null)
-            if (QueueId == null)
-            {
-                throw new InvalidDataException("QueueId is a required property for CreateWebChatRequest and cannot be null");
-            }
-            else
-            {
-                this.QueueId = QueueId;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Provider" is required (not null)
-            if (Provider == null)
-            {
-                throw new InvalidDataException("Provider is a required property for CreateWebChatRequest and cannot be null");
-            }
-            else
-            {
-                this.Provider = Provider;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.SkillIds = SkillIds;
-            
-            
-            
-            
-            
-            
-            
-            
-this.LanguageId = LanguageId;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Priority = Priority;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Attributes = Attributes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.CustomerName = CustomerName;
-            
-            
-            
+            this.SkillIds = SkillIds;
+            this.LanguageId = LanguageId;
+            this.Priority = Priority;
+            this.Attributes = Attributes;
+            this.CustomerName = CustomerName;
             
         }
         
@@ -275,19 +156,12 @@ this.CustomerName = CustomerName;
             sb.Append("class CreateWebChatRequest {\n");
             
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
-            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
-            
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
-            
             sb.Append("  Priority: ").Append(Priority).Append("\n");
-            
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            
             sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }

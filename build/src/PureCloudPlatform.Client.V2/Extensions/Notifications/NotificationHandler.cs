@@ -63,9 +63,7 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
         /// <param name="type">The <see cref="Type"/> to cast notifications on this topic to</param>
         public void AddSubscription(string topic, Type type)
         {
-            _notificationsApi.PostNotificationsChannelSubscriptions(Channel.Id,
-                new List<ChannelTopic>() { new ChannelTopic(topic) });
-            _typeMap.Add(topic.ToLowerInvariant(), type);
+            AddSubscriptions(new List<Tuple<string, Type>> { new Tuple<string, Type>(topic, type) });
         }
 
         /// <summary>
@@ -73,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
         /// </summary>
         /// <param name="subscriptions">A List of Tuples where the first value is the notification topic to add and the second is the Type that should be used when deserializing the notification</param>
         public void AddSubscriptions(List<Tuple<string, Type>> subscriptions) {
-            var topicList = subscriptions.Select(s => new ChannelTopic(s.Item1)).ToList();
+            var topicList = subscriptions.Select(s => new ChannelTopic(s.Item1)).Where(t => t.Id.ToLowerInvariant() != "channel.metadata").ToList();
             _notificationsApi.PostNotificationsChannelSubscriptions(Channel.Id, topicList);
             subscriptions.ForEach(s => _typeMap.Add(s.Item1.ToLowerInvariant(), s.Item2));
         }
@@ -101,6 +99,14 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
         {
             _notificationsApi.DeleteNotificationsChannelSubscriptions(Channel.Id);
             _typeMap.Clear();
+        }
+
+        /// <summary>
+        /// Sends the ping message to the notification service. Must be subscribed using topic "channel.metadata" and handle with type ChannelMetadataNotification.
+        /// </summary>
+        public void Ping()
+        {
+            WebSocket.Send("{\"message\":\"ping\"}");
         }
 
         private void ConnectSocket(string uri)
