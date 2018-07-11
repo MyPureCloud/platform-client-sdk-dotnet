@@ -56,6 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">QueueId.</param>
         public Destination(string Address = null, string Name = null, string UserId = null, string QueueId = null)
         {
+            this.Address = Address;
             this.Name = Name;
             this.UserId = UserId;
             this.QueueId = QueueId;

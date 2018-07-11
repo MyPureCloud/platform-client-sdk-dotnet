@@ -44,6 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShrinkagePercent">Shrinkage override percent. Setting a null value will reset the interval to the default.</param>
         public ShrinkageOverride(int? IntervalIndex = null, double? ShrinkagePercent = null)
         {
+            this.IntervalIndex = IntervalIndex;
             this.ShrinkagePercent = ShrinkagePercent;
             
         }

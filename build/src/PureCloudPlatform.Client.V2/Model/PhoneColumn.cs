@@ -44,6 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;. (required).</param>
         public PhoneColumn(string ColumnName = null, string Type = null)
         {
+            this.ColumnName = ColumnName;
+            this.Type = Type;
             
         }
         

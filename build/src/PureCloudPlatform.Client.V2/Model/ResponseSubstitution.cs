@@ -50,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultValue">Response substitution default value..</param>
         public ResponseSubstitution(string Id = null, string Description = null, string DefaultValue = null)
         {
+            this.Id = Id;
             this.Description = Description;
             this.DefaultValue = DefaultValue;
             

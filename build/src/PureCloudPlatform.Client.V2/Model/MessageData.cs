@@ -263,10 +263,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             this.Name = Name;
             this.ProviderMessageId = ProviderMessageId;
+            this.Timestamp = Timestamp;
             this.FromAddress = FromAddress;
             this.ToAddress = ToAddress;
             this.Direction = Direction;
             this.MessengerType = MessengerType;
+            this.TextBody = TextBody;
+            this.Status = Status;
             this.Media = Media;
             this.Stickers = Stickers;
             this.CreatedBy = CreatedBy;

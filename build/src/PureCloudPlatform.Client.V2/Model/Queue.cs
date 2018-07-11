@@ -273,7 +273,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.State = State;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
+            this.MediaSettings = MediaSettings;
             this.Bullseye = Bullseye;
+            this.AcwSettings = AcwSettings;
+            this.SkillEvaluationMethod = SkillEvaluationMethod;
             this.QueueFlow = QueueFlow;
             this.WhisperPrompt = WhisperPrompt;
             this.AutoAnswerOnly = AutoAnswerOnly;

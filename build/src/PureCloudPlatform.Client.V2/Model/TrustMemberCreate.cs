@@ -44,6 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoleIds">The list of trustor organization roles granting this user or group access. (required).</param>
         public TrustMemberCreate(string Id = null, List<string> RoleIds = null)
         {
+            this.Id = Id;
+            this.RoleIds = RoleIds;
             
         }
         

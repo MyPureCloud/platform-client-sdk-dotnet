@@ -50,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Description.</param>
         public WorkspaceCreate(string Name = null, string Bucket = null, string Description = null)
         {
+            this.Name = Name;
             this.Bucket = Bucket;
             this.Description = Description;
             

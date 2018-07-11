@@ -64,6 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Shifts = Shifts;
             this.FullDayTimeOffMarkers = FullDayTimeOffMarkers;
             this.Delete = Delete;
+            this.Metadata = Metadata;
             
         }
         

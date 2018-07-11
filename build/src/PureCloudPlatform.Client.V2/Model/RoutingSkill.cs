@@ -104,6 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the skill. (required).</param>
         public RoutingSkill(string Name = null)
         {
+            this.Name = Name;
             
         }
         

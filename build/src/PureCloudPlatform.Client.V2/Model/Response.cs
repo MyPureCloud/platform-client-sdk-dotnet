@@ -139,6 +139,8 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             this.Name = Name;
             this.Version = Version;
+            this.Libraries = Libraries;
+            this.Texts = Texts;
             this.CreatedBy = CreatedBy;
             this.DateCreated = DateCreated;
             this.InteractionType = InteractionType;

@@ -199,6 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Value = Value;
             this._Operator = _Operator;
             this.Group = Group;
+            this.Type = Type;
             
         }
         

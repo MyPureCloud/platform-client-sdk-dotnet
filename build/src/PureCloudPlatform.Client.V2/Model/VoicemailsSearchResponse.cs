@@ -86,9 +86,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Results">Search results (required).</param>
         public VoicemailsSearchResponse(long? Total = null, int? PageCount = null, int? PageSize = null, int? PageNumber = null, string PreviousPage = null, string CurrentPage = null, string NextPage = null, List<string> Types = null, List<VoicemailMessage> Results = null)
         {
+            this.Total = Total;
+            this.PageCount = PageCount;
+            this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
             this.PreviousPage = PreviousPage;
             this.CurrentPage = CurrentPage;
             this.NextPage = NextPage;
+            this.Types = Types;
+            this.Results = Results;
             
         }
         

@@ -116,7 +116,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Name = Name;
             this.Description = Description;
             this.Queues = Queues;
+            this.Language = Language;
             this.Agents = Agents;
+            this.Keywords = Keywords;
+            this.ParticipantPurposes = ParticipantPurposes;
             
         }
         

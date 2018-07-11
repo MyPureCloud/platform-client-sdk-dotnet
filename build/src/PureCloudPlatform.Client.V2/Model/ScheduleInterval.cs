@@ -44,6 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="End">The scheduled end time as an ISO-8601 string, i.e. yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
         public ScheduleInterval(string Start = null, string End = null)
         {
+            this.Start = Start;
+            this.End = End;
             
         }
         

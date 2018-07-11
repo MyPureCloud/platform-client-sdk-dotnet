@@ -135,6 +135,8 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             this.Name = Name;
             this.Version = Version;
+            this.Campaigns = Campaigns;
+            this.Status = Status;
             this.Repeat = Repeat;
             
         }

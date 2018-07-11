@@ -59,6 +59,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactList">Identifier of the contact list (required).</param>
         public CampaignProgress(UriReference Campaign = null, UriReference ContactList = null)
         {
+            this.Campaign = Campaign;
+            this.ContactList = ContactList;
             
         }
         

@@ -45,6 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public ActivityCodeContainer(Dictionary<string, ActivityCode> ActivityCodes = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.ActivityCodes = ActivityCodes;
+            this.Metadata = Metadata;
             
         }
         

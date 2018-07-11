@@ -50,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public Permissions(string Name = null, List<string> Ids = null)
         {
             this.Name = Name;
+            this.Ids = Ids;
             
         }
         

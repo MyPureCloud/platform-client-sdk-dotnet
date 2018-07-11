@@ -94,7 +94,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">Whether or not this CampaignRule is currently enabled. Required on updates..</param>
         public CampaignRule(string Name = null, int? Version = null, CampaignRuleEntities CampaignRuleEntities = null, List<CampaignRuleCondition> CampaignRuleConditions = null, List<CampaignRuleAction> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null)
         {
+            this.Name = Name;
             this.Version = Version;
+            this.CampaignRuleEntities = CampaignRuleEntities;
+            this.CampaignRuleConditions = CampaignRuleConditions;
+            this.CampaignRuleActions = CampaignRuleActions;
             this.MatchAnyConditions = MatchAnyConditions;
             this.Enabled = Enabled;
             

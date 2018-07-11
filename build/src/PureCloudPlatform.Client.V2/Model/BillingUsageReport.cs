@@ -67,6 +67,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public BillingUsageReport(string Name = null, DateTime? StartDate = null, DateTime? EndDate = null, List<BillingUsage> Usages = null)
         {
             this.Name = Name;
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
+            this.Usages = Usages;
             
         }
         

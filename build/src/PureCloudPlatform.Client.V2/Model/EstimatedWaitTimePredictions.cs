@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Results">Returned upon a successful estimated wait time request. (required).</param>
         public EstimatedWaitTimePredictions(List<PredictionResults> Results = null)
         {
+            this.Results = Results;
             
         }
         

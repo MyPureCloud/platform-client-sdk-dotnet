@@ -91,6 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Values">Values to filter on. (required).</param>
         public ResponseFilter(string Name = null, OperatorEnum? _Operator = null, List<string> Values = null)
         {
+            this.Name = Name;
+            this._Operator = _Operator;
+            this.Values = Values;
             
         }
         

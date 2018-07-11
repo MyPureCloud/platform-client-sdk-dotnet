@@ -160,6 +160,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhoneTrunkBases">Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication. (required).</param>
         public EdgeGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Managed = null, TrunkBaseAssignment EdgeTrunkBaseAssignment = null, List<TrunkBase> PhoneTrunkBases = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -169,6 +170,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
             this.Managed = Managed;
+            this.EdgeTrunkBaseAssignment = EdgeTrunkBaseAssignment;
+            this.PhoneTrunkBases = PhoneTrunkBases;
             
         }
         

@@ -154,6 +154,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndNumber">The ending phone number for the range of this Extension pool. Must be in E.164 format.</param>
         public ExtensionPool(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string StartNumber = null, string EndNumber = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;

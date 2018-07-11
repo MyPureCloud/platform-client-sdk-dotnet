@@ -235,6 +235,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LogicalInterfaceId">LogicalInterfaceId.</param>
         public EdgeLine(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference Schema = null, Dictionary<string, Object> Properties = null, Edge Edge = null, EdgeGroup EdgeGroup = null, LineTypeEnum? LineType = null, Endpoint Endpoint = null, string IpAddress = null, string LogicalInterfaceId = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;

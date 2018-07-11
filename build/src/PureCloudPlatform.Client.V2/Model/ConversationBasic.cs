@@ -67,6 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationBasic(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ParticipantBasic> Participants = null)
         {
             this.Name = Name;
+            this.StartTime = StartTime;
             this.EndTime = EndTime;
             this.Participants = Participants;
             

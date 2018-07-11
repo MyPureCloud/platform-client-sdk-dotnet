@@ -102,6 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">User that last modified this client.</param>
         public OAuthClientListing(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null)
         {
+            this.Name = Name;
             this.AccessTokenValiditySeconds = AccessTokenValiditySeconds;
             this.Description = Description;
             this.RegisteredRedirectUri = RegisteredRedirectUri;

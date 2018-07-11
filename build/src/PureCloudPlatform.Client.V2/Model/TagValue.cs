@@ -60,6 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Acl">Acl.</param>
         public TagValue(string Name = null, bool? InUse = null, List<string> Acl = null)
         {
+            this.Name = Name;
             this.InUse = InUse;
             this.Acl = Acl;
             

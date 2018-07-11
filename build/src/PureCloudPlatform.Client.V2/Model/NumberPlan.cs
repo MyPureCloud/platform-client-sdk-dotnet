@@ -184,6 +184,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MatchType">MatchType.</param>
         public NumberPlan(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string Match = null, string NormalizedFormat = null, int? Priority = null, List<double?> Numbers = null, DigitLength DigitLength = null, string Classification = null, string MatchType = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;

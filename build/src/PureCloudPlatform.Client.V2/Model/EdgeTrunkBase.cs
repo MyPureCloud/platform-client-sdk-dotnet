@@ -201,6 +201,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TrunkType">The type of this trunk base. (required).</param>
         public EdgeTrunkBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference TrunkMetabase = null, Dictionary<string, Object> Properties = null, TrunkTypeEnum? TrunkType = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -209,7 +210,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedBy = CreatedBy;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
+            this.TrunkMetabase = TrunkMetabase;
             this.Properties = Properties;
+            this.TrunkType = TrunkType;
             
         }
         

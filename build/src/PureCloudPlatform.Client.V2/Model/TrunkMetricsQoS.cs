@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MismatchCount">Total number of QoS mismatches over the course of the last 24-hour period (sliding window). (required).</param>
         public TrunkMetricsQoS(int? MismatchCount = null)
         {
+            this.MismatchCount = MismatchCount;
             
         }
         

@@ -117,7 +117,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FilterType">How to join clauses together..</param>
         public ContactListFilter(string Name = null, int? Version = null, UriReference ContactList = null, List<ContactListFilterClause> Clauses = null, FilterTypeEnum? FilterType = null)
         {
+            this.Name = Name;
             this.Version = Version;
+            this.ContactList = ContactList;
             this.Clauses = Clauses;
             this.FilterType = FilterType;
             

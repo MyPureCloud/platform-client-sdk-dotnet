@@ -135,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         public FlowDivisionView(string Name = null, Division Division = null, TypeEnum? Type = null)
         {
+            this.Name = Name;
             this.Division = Division;
             this.Type = Type;
             

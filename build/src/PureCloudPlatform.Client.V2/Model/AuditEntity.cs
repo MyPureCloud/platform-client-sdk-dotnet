@@ -56,6 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SelfUri">The selfUri for this entity..</param>
         public AuditEntity(string Type = null, string Id = null, string Name = null, string SelfUri = null)
         {
+            this.Type = Type;
             this.Id = Id;
             this.Name = Name;
             this.SelfUri = SelfUri;

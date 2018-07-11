@@ -169,6 +169,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public PredictionResults(IntentEnum? Intent = null, FormulaEnum? Formula = null, int? EstimatedWaitTimeSeconds = null)
         {
             this.Intent = Intent;
+            this.Formula = Formula;
+            this.EstimatedWaitTimeSeconds = EstimatedWaitTimeSeconds;
             
         }
         

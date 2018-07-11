@@ -50,6 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserIdsRemove">The ids of users to unassign this license from. (required).</param>
         public LicenseAssignmentRequest(string LicenseId = null, List<string> UserIdsAdd = null, List<string> UserIdsRemove = null)
         {
+            this.LicenseId = LicenseId;
+            this.UserIdsAdd = UserIdsAdd;
+            this.UserIdsRemove = UserIdsRemove;
             
         }
         

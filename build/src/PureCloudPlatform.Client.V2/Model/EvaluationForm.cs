@@ -78,9 +78,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PublishedVersions">PublishedVersions.</param>
         public EvaluationForm(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null)
         {
+            this.Name = Name;
             this.ModifiedDate = ModifiedDate;
             this.Published = Published;
             this.ContextId = ContextId;
+            this.QuestionGroups = QuestionGroups;
             this.PublishedVersions = PublishedVersions;
             
         }

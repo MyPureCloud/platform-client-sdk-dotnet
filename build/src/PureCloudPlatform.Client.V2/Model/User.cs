@@ -230,6 +230,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Username = Username;
             this.Manager = Manager;
             this.Images = Images;
+            this.Version = Version;
             this.RoutingStatus = RoutingStatus;
             this.Presence = Presence;
             this.ConversationSummary = ConversationSummary;

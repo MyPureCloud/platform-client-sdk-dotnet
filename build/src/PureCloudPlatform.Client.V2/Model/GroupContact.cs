@@ -119,6 +119,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaType">Media type of the address (required).</param>
         public GroupContact(string Address = null, TypeEnum? Type = null, MediaTypeEnum? MediaType = null)
         {
+            this.Address = Address;
+            this.Type = Type;
+            this.MediaType = MediaType;
             
         }
         

@@ -102,7 +102,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Actions">The list of actions to be taken if the conditions are true..</param>
         public DialerRule(string Name = null, int? Order = null, CategoryEnum? Category = null, List<Condition> Conditions = null, List<DialerAction> Actions = null)
         {
+            this.Name = Name;
             this.Order = Order;
+            this.Category = Category;
+            this.Conditions = Conditions;
             this.Actions = Actions;
             
         }

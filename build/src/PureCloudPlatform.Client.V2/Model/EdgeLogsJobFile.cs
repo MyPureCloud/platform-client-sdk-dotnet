@@ -225,6 +225,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DownloadId">The download ID to use with the downloads API..</param>
         public EdgeLogsJobFile(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DateTime? TimeCreated = null, DateTime? TimeModified = null, double? SizeBytes = null, UploadStatusEnum? UploadStatus = null, string EdgePath = null, string DownloadId = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;

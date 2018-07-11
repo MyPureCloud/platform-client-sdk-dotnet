@@ -103,10 +103,13 @@ namespace PureCloudPlatform.Client.V2.Model
         public EmailMessage(string Name = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, string Subject = null, List<Attachment> Attachments = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null)
         {
             this.Name = Name;
+            this.To = To;
             this.Cc = Cc;
             this.Bcc = Bcc;
+            this.From = From;
             this.Subject = Subject;
             this.Attachments = Attachments;
+            this.TextBody = TextBody;
             this.HtmlBody = HtmlBody;
             this.Time = Time;
             

@@ -112,6 +112,10 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             this.Id = Id;
             this.Name = Name;
+            this.Phrase = Phrase;
+            this.Confidence = Confidence;
+            this.AgentScoreModifier = AgentScoreModifier;
+            this.CustomerScoreModifier = CustomerScoreModifier;
             this.AlternateSpellings = AlternateSpellings;
             this.Pronunciations = Pronunciations;
             this.AntiWords = AntiWords;

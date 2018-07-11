@@ -85,6 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Predicates">Like a three-word sentence: (attribute-name) (operator) (target-value). These can be one of three types: dimension, property, metric..</param>
         public AnalyticsQueryFilter(TypeEnum? Type = null, List<AnalyticsQueryClause> Clauses = null, List<AnalyticsQueryPredicate> Predicates = null)
         {
+            this.Type = Type;
             this.Clauses = Clauses;
             this.Predicates = Predicates;
             

@@ -140,8 +140,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LicenseId">A gryphon license number. Required if the dncSourceType is gryphon..</param>
         public DncList(string Name = null, int? Version = null, ImportStatus ImportStatus = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null)
         {
+            this.Name = Name;
             this.Version = Version;
             this.ImportStatus = ImportStatus;
+            this.DncSourceType = DncSourceType;
             this.LoginId = LoginId;
             this.DncCodes = DncCodes;
             this.LicenseId = LicenseId;

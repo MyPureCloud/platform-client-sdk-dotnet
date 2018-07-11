@@ -103,10 +103,13 @@ namespace PureCloudPlatform.Client.V2.Model
         public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null, UriReference Flow = null, QueueEmailAddress ReplyEmailAddress = null)
         {
             this.Name = Name;
+            this.Pattern = Pattern;
             this.Queue = Queue;
             this.Priority = Priority;
             this.Skills = Skills;
             this.Language = Language;
+            this.FromName = FromName;
+            this.FromEmail = FromEmail;
             this.Flow = Flow;
             this.ReplyEmailAddress = ReplyEmailAddress;
             

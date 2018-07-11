@@ -44,6 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Output">Execution output contract (required).</param>
         public ActionContractInput(PostInputContract Input = null, PostOutputContract Output = null)
         {
+            this.Input = Input;
+            this.Output = Output;
             
         }
         

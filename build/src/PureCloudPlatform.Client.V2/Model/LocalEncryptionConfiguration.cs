@@ -67,6 +67,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public LocalEncryptionConfiguration(string Name = null, string Url = null, string ApiId = null, string ApiKey = null)
         {
             this.Name = Name;
+            this.Url = Url;
+            this.ApiId = ApiId;
+            this.ApiKey = ApiKey;
             
         }
         

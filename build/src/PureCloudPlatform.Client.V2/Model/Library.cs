@@ -66,6 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public Library(string Name = null, int? Version = null, User CreatedBy = null, DateTime? DateCreated = null)
         {
+            this.Name = Name;
             this.Version = Version;
             this.CreatedBy = CreatedBy;
             this.DateCreated = DateCreated;

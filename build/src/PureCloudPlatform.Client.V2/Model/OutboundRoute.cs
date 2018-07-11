@@ -210,6 +210,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Site">The site associated to the outbound route..</param>
         public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, List<UriReference> ExternalTrunkBases = null, Site Site = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -218,6 +219,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedBy = CreatedBy;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
+            this.ClassificationTypes = ClassificationTypes;
             this.Enabled = Enabled;
             this.Distribution = Distribution;
             this.ExternalTrunkBases = ExternalTrunkBases;

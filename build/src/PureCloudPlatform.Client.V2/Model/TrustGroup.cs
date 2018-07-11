@@ -233,9 +233,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedBy">The user that added trusted group..</param>
         public TrustGroup(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null, List<User> Owners = null, OrgUser CreatedBy = null)
         {
+            this.Name = Name;
             this.Description = Description;
+            this.Type = Type;
             this.Images = Images;
             this.Addresses = Addresses;
+            this.RulesVisible = RulesVisible;
+            this.Visibility = Visibility;
             this.Owners = Owners;
             this.CreatedBy = CreatedBy;
             

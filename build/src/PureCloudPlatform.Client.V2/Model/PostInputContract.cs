@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InputSchema">JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. (required).</param>
         public PostInputContract(JsonSchemaDocument InputSchema = null)
         {
+            this.InputSchema = InputSchema;
             
         }
         

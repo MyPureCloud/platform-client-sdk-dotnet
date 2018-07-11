@@ -50,6 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndDate">End of the range of schedules to fetch, in ISO-8601 format (required).</param>
         public UserListScheduleRequestBody(List<string> UserIds = null, DateTime? StartDate = null, DateTime? EndDate = null)
         {
+            this.UserIds = UserIds;
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
             
         }
         

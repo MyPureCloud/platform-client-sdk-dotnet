@@ -84,6 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public Attribute(string Name = null, int? Version = null, string Description = null, UriReference CreatedBy = null, DateTime? DateCreated = null, UriReference ModifiedBy = null, DateTime? DateModified = null)
         {
+            this.Name = Name;
             this.Version = Version;
             this.Description = Description;
             this.CreatedBy = CreatedBy;

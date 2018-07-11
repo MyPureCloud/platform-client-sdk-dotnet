@@ -154,6 +154,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Properties">Properties.</param>
         public LineBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference LineMetaBase = null, Dictionary<string, Object> Properties = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;

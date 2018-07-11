@@ -44,6 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The type of the facet, DATE or STRING. (required).</param>
         public Facet(string Name = null, string Type = null)
         {
+            this.Name = Name;
+            this.Type = Type;
             
         }
         

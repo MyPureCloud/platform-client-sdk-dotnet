@@ -99,6 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             this.Data = Data;
             this.Name = Name;
+            this.ReactionType = ReactionType;
             
         }
         

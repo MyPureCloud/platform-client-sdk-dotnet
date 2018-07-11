@@ -224,6 +224,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">True if the Edge used by this trunk is in-service.</param>
         public Trunk(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, TrunkTypeEnum? TrunkType = null, UriReference Edge = null, UriReference TrunkBase = null, UriReference TrunkMetabase = null, UriReference EdgeGroup = null, bool? Enabled = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;

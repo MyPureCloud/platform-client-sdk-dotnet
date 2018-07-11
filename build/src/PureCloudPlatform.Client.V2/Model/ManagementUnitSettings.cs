@@ -66,6 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ShortTermForecasting = ShortTermForecasting;
             this.TimeOff = TimeOff;
             this.Scheduling = Scheduling;
+            this.Metadata = Metadata;
             
         }
         

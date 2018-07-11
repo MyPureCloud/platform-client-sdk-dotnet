@@ -152,6 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public ExternalOrganization(string Id = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             this.Id = Id;
+            this.Name = Name;
             this.CompanyType = CompanyType;
             this.Industry = Industry;
             this.PrimaryContactId = PrimaryContactId;

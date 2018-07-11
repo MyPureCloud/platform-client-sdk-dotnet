@@ -59,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Category = Category;
             this.Name = Name;
             this.Config = Config;
+            this.Version = Version;
             
         }
         

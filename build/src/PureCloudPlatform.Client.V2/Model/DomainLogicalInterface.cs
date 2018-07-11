@@ -359,6 +359,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhoneTrunkBaseAssignments">Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true..</param>
         public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -369,7 +370,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedByApp = CreatedByApp;
             this.EdgeUri = EdgeUri;
             this.EdgeAssignedId = EdgeAssignedId;
+            this.FriendlyName = FriendlyName;
             this.VlanTagId = VlanTagId;
+            this.HardwareAddress = HardwareAddress;
+            this.PhysicalAdapterId = PhysicalAdapterId;
             this.IfStatus = IfStatus;
             this.Routes = Routes;
             this.Addresses = Addresses;

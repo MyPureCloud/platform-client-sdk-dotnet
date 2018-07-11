@@ -121,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FullDayManagementUnitDates = FullDayManagementUnitDates;
             this.PartialDayStartDateTimes = PartialDayStartDateTimes;
             this.DailyDurationMinutes = DailyDurationMinutes;
+            this.Metadata = Metadata;
             
         }
         

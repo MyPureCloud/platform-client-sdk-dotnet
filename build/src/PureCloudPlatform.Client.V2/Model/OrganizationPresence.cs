@@ -97,6 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public OrganizationPresence(string Name = null, Dictionary<string, string> LanguageLabels = null, string SystemPresence = null, bool? Deactivated = null, bool? Primary = null, User CreatedBy = null, DateTime? CreatedDate = null, User ModifiedBy = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
+            this.LanguageLabels = LanguageLabels;
             this.SystemPresence = SystemPresence;
             this.Deactivated = Deactivated;
             this.Primary = Primary;

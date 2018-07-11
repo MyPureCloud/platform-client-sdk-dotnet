@@ -68,6 +68,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Secure">Indication of whether or not the action is designed to accept sensitive data.</param>
         public PostActionInput(string Category = null, string Name = null, string IntegrationId = null, ActionConfig Config = null, ActionContractInput Contract = null, bool? Secure = null)
         {
+            this.Category = Category;
+            this.Name = Name;
+            this.IntegrationId = IntegrationId;
+            this.Config = Config;
+            this.Contract = Contract;
             this.Secure = Secure;
             
         }

@@ -57,6 +57,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public CreateSecureSession(string SourceParticipantId = null, string FlowId = null, string UserData = null, bool? Disconnect = null)
         {
             this.SourceParticipantId = SourceParticipantId;
+            this.FlowId = FlowId;
+            this.UserData = UserData;
             this.Disconnect = Disconnect;
             
         }

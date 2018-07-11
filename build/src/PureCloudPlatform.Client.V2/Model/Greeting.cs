@@ -185,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public Greeting(string Name = null, TypeEnum? Type = null, OwnerTypeEnum? OwnerType = null, DomainEntity Owner = null, GreetingAudioFile AudioFile = null, string AudioTTS = null, DateTime? CreatedDate = null, string CreatedBy = null, DateTime? ModifiedDate = null, string ModifiedBy = null)
         {
             this.Name = Name;
+            this.Type = Type;
+            this.OwnerType = OwnerType;
+            this.Owner = Owner;
             this.AudioFile = AudioFile;
             this.AudioTTS = AudioTTS;
             this.CreatedDate = CreatedDate;

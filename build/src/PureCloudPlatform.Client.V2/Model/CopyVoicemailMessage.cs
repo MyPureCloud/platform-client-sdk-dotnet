@@ -50,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="GroupId">The id of the Group to copy the VoicemailMessage to.</param>
         public CopyVoicemailMessage(string VoicemailMessageId = null, string UserId = null, string GroupId = null)
         {
+            this.VoicemailMessageId = VoicemailMessageId;
             this.UserId = UserId;
             this.GroupId = GroupId;
             

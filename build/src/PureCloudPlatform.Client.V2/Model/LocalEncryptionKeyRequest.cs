@@ -50,6 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="KeypairId">The key pair id from the local service. (required).</param>
         public LocalEncryptionKeyRequest(string ConfigId = null, string PublicKey = null, string KeypairId = null)
         {
+            this.ConfigId = ConfigId;
+            this.PublicKey = PublicKey;
+            this.KeypairId = KeypairId;
             
         }
         

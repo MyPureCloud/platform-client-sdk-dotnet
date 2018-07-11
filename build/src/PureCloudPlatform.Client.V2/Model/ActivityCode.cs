@@ -181,6 +181,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CountsAsPaidTime = CountsAsPaidTime;
             this.CountsAsWorkTime = CountsAsWorkTime;
             this.AgentTimeOffSelectable = AgentTimeOffSelectable;
+            this.Metadata = Metadata;
             
         }
         

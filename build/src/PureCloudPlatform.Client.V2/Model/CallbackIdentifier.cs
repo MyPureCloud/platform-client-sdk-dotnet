@@ -79,6 +79,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The identifier of the callback (required).</param>
         public CallbackIdentifier(TypeEnum? Type = null, string Id = null)
         {
+            this.Type = Type;
+            this.Id = Id;
             
         }
         

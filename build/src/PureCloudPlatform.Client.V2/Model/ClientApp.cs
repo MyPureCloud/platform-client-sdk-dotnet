@@ -124,6 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public ClientApp(IntegrationType IntegrationType = null, IntendedStateEnum? IntendedState = null, ClientAppConfigurationInfo Config = null, IntegrationStatusInfo ReportedState = null, Dictionary<string, string> Attributes = null)
         {
             this.IntegrationType = IntegrationType;
+            this.IntendedState = IntendedState;
             this.Config = Config;
             this.ReportedState = ReportedState;
             this.Attributes = Attributes;

@@ -62,6 +62,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectType">A description of the event that disconnected the segment.</param>
         public Segment(DateTime? StartTime = null, DateTime? EndTime = null, string Type = null, string HowEnded = null, string DisconnectType = null)
         {
+            this.StartTime = StartTime;
+            this.EndTime = EndTime;
             this.Type = Type;
             this.HowEnded = HowEnded;
             this.DisconnectType = DisconnectType;

@@ -107,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserPermissions">List of permissions required to permit user access to the integration type..</param>
         public IntegrationType(string Id = null, string Name = null, List<UserImage> Images = null, Dictionary<string, CredentialSpecification> Credentials = null, List<string> UserPermissions = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Images = Images;
             this.Credentials = Credentials;

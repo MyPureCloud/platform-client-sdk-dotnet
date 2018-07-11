@@ -159,6 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DefaultCountryCode = DefaultCountryCode;
             this.ThirdPartyURI = ThirdPartyURI;
             this.Domain = Domain;
+            this.Version = Version;
             this.State = State;
             this.DefaultSiteId = DefaultSiteId;
             this.SupportURI = SupportURI;

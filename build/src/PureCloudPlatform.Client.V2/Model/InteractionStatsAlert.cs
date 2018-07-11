@@ -433,6 +433,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RuleUri">RuleUri.</param>
         public InteractionStatsAlert(bool? Unread = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null, string RuleUri = null)
         {
+            this.Unread = Unread;
+            this.NotificationUsers = NotificationUsers;
+            this.AlertTypes = AlertTypes;
             this.RuleUri = RuleUri;
             
         }

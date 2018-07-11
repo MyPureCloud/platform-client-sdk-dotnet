@@ -85,6 +85,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, Dictionary<string, ContactColumnTimeZone> ContactColumnTimeZones = null)
         {
             this.Name = Name;
+            this.ContactListId = ContactListId;
+            this.Data = Data;
             this.CallRecords = CallRecords;
             this.Callable = Callable;
             this.PhoneNumberStatus = PhoneNumberStatus;

@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Assignments">The list of license assignment updates to make. (required).</param>
         public LicenseBatchAssignmentRequest(List<LicenseAssignmentRequest> Assignments = null)
         {
+            this.Assignments = Assignments;
             
         }
         

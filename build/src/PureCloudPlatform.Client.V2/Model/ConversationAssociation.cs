@@ -134,6 +134,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationAssociation(string ExternalContactId = null, string ConversationId = null, string CommunicationId = null, MediaTypeEnum? MediaType = null)
         {
             this.ExternalContactId = ExternalContactId;
+            this.ConversationId = ConversationId;
+            this.CommunicationId = CommunicationId;
+            this.MediaType = MediaType;
             
         }
         

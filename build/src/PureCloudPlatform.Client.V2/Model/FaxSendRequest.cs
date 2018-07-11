@@ -138,6 +138,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public FaxSendRequest(string Name = null, List<string> Addresses = null, string DocumentId = null, ContentTypeEnum? ContentType = null, Workspace Workspace = null, CoverSheet CoverSheet = null, int? TimeZoneOffsetMinutes = null)
         {
             this.Name = Name;
+            this.Addresses = Addresses;
             this.DocumentId = DocumentId;
             this.ContentType = ContentType;
             this.Workspace = Workspace;

@@ -181,6 +181,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Name = Name;
             this.Description = Description;
             this.State = State;
+            this.Version = Version;
             this.Images = Images;
             this.Addresses = Addresses;
             this.RulesVisible = RulesVisible;

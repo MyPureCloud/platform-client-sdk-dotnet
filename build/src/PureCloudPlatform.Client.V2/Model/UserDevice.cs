@@ -126,6 +126,12 @@ namespace PureCloudPlatform.Client.V2.Model
         public UserDevice(string Name = null, string DeviceToken = null, string NotificationId = null, string Make = null, string Model = null, bool? AcceptNotifications = null, TypeEnum? Type = null, string SessionHash = null)
         {
             this.Name = Name;
+            this.DeviceToken = DeviceToken;
+            this.NotificationId = NotificationId;
+            this.Make = Make;
+            this.Model = Model;
+            this.AcceptNotifications = AcceptNotifications;
+            this.Type = Type;
             this.SessionHash = SessionHash;
             
         }

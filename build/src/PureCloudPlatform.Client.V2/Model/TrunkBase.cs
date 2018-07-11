@@ -207,6 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Managed">Is this trunk being managed remotely. This property is synchronized with the managed property of the Edge Group to which it is assigned..</param>
         public TrunkBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference TrunkMetabase = null, Dictionary<string, Object> Properties = null, TrunkTypeEnum? TrunkType = null, bool? Managed = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -215,7 +216,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedBy = CreatedBy;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
+            this.TrunkMetabase = TrunkMetabase;
             this.Properties = Properties;
+            this.TrunkType = TrunkType;
             this.Managed = Managed;
             
         }

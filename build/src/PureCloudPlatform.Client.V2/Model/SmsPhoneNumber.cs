@@ -197,6 +197,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public SmsPhoneNumber(string Name = null, string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null)
         {
             this.Name = Name;
+            this.PhoneNumber = PhoneNumber;
             this.PhoneNumberType = PhoneNumberType;
             this.ProvisionedThroughPureCloud = ProvisionedThroughPureCloud;
             this.PhoneNumberStatus = PhoneNumberStatus;

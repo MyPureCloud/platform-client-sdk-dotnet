@@ -165,7 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.StartDayOfWeek = StartDayOfWeek;
             this.TimeZone = TimeZone;
             this.Settings = Settings;
+            this.Version = Version;
             this.ModifiedBy = ModifiedBy;
+            this.Metadata = Metadata;
             
         }
         

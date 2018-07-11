@@ -211,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OwnerType">OwnerType.</param>
         public DID(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string PhoneNumber = null, UriReference DidPool = null, UriReference Owner = null, OwnerTypeEnum? OwnerType = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;

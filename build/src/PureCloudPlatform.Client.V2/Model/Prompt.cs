@@ -66,6 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CurrentOperation">CurrentOperation.</param>
         public Prompt(string Name = null, string Description = null, List<PromptAsset> Resources = null, Operation CurrentOperation = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Resources = Resources;
             this.CurrentOperation = CurrentOperation;

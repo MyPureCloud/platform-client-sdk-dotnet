@@ -104,10 +104,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PublishedVersions">List of published version of this form.</param>
         public SurveyForm(string Name = null, bool? Disabled = null, string HeaderImageId = null, string Header = null, string Footer = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingSurveyForm PublishedVersions = null)
         {
+            this.Name = Name;
             this.Disabled = Disabled;
             this.HeaderImageId = HeaderImageId;
             this.Header = Header;
             this.Footer = Footer;
+            this.QuestionGroups = QuestionGroups;
             this.PublishedVersions = PublishedVersions;
             
         }

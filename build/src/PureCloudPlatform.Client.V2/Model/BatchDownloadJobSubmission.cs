@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BatchDownloadRequestList">List of up to 100 items requested (required).</param>
         public BatchDownloadJobSubmission(List<BatchDownloadRequest> BatchDownloadRequestList = null)
         {
+            this.BatchDownloadRequestList = BatchDownloadRequestList;
             
         }
         

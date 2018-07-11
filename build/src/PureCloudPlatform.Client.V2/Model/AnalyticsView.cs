@@ -85,6 +85,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Range">Range of numbers for slicing up data.</param>
         public AnalyticsView(string Target = null, string Name = null, FunctionEnum? Function = null, AggregationRange Range = null)
         {
+            this.Target = Target;
+            this.Name = Name;
+            this.Function = Function;
             this.Range = Range;
             
         }

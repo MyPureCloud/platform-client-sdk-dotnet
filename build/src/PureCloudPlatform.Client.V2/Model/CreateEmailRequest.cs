@@ -159,6 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             this.QueueId = QueueId;
             this.FlowId = FlowId;
+            this.Provider = Provider;
             this.SkillIds = SkillIds;
             this.LanguageId = LanguageId;
             this.Priority = Priority;

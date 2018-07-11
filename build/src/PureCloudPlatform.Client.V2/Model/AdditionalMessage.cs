@@ -50,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StickerIds">The sticker ids associated with the text message..</param>
         public AdditionalMessage(string TextBody = null, List<string> MediaIds = null, List<string> StickerIds = null)
         {
+            this.TextBody = TextBody;
             this.MediaIds = MediaIds;
             this.StickerIds = StickerIds;
             

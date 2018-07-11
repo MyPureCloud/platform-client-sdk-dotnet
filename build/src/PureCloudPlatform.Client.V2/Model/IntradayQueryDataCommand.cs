@@ -62,6 +62,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IntervalLengthMinutes">The period/interval for which to aggregate the data.  Optional, defaults to 15.</param>
         public IntradayQueryDataCommand(DateTime? StartDate = null, DateTime? EndDate = null, List<IntradayMetric> Metrics = null, List<string> QueueIds = null, int? IntervalLengthMinutes = null)
         {
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
+            this.Metrics = Metrics;
             this.QueueIds = QueueIds;
             this.IntervalLengthMinutes = IntervalLengthMinutes;
             

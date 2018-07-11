@@ -44,6 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackIdentifiers">The list of communication identifiers for the callback participants (required).</param>
         public CreateCallbackResponse(UriReference Conversation = null, List<CallbackIdentifier> CallbackIdentifiers = null)
         {
+            this.Conversation = Conversation;
+            this.CallbackIdentifiers = CallbackIdentifiers;
             
         }
         

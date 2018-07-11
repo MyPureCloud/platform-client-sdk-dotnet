@@ -72,6 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedBy">CreatedBy.</param>
         public WrapupCode(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null)
         {
+            this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.ModifiedBy = ModifiedBy;

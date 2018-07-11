@@ -44,6 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Response">Subscriber schema.</param>
         public ValidateAddressResponse(bool? Valid = null, SubscriberResponse Response = null)
         {
+            this.Valid = Valid;
             this.Response = Response;
             
         }

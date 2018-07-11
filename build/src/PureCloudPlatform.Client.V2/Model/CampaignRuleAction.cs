@@ -123,6 +123,8 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             this.Id = Id;
             this.Parameters = Parameters;
+            this.ActionType = ActionType;
+            this.CampaignRuleActionEntities = CampaignRuleActionEntities;
             
         }
         

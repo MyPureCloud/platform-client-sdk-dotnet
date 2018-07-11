@@ -167,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Current">Current.</param>
         public DomainEdgeSoftwareUpdateDto(DomainEdgeSoftwareVersionDto Version = null, int? MaxDownloadRate = null, DateTime? DownloadStartTime = null, DateTime? ExecuteStartTime = null, DateTime? ExecuteStopTime = null, bool? ExecuteOnIdle = null, StatusEnum? Status = null, string EdgeUri = null, long? CallDrainingWaitTimeSeconds = null, bool? Current = null)
         {
+            this.Version = Version;
             this.MaxDownloadRate = MaxDownloadRate;
             this.DownloadStartTime = DownloadStartTime;
             this.ExecuteStartTime = ExecuteStartTime;

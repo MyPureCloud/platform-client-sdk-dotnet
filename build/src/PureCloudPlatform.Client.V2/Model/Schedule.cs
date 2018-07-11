@@ -160,6 +160,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Rrule">An iCal Recurrence Rule (RRULE) string. (required).</param>
         public Schedule(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DateTime? Start = null, DateTime? End = null, string Rrule = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -170,6 +171,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedByApp = CreatedByApp;
             this.Start = Start;
             this.End = End;
+            this.Rrule = Rrule;
             
         }
         

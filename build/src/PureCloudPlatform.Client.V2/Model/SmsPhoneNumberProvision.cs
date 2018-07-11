@@ -114,6 +114,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public SmsPhoneNumberProvision(string Name = null, string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, string CountryCode = null)
         {
             this.Name = Name;
+            this.PhoneNumber = PhoneNumber;
+            this.PhoneNumberType = PhoneNumberType;
+            this.CountryCode = CountryCode;
             
         }
         

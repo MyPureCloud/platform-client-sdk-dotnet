@@ -44,6 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Exchange">The exchange for this ticker symbol. Examples: NYSE, FTSE, NASDAQ, etc. (required).</param>
         public Ticker(string Symbol = null, string Exchange = null)
         {
+            this.Symbol = Symbol;
+            this.Exchange = Exchange;
             
         }
         

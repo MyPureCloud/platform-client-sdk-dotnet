@@ -50,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Display">The display name of the user who initiated the action of this AuditMessage..</param>
         public AuditUser(string Id = null, string Name = null, string Display = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Display = Display;
             

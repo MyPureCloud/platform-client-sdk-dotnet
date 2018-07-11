@@ -50,6 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Resources">The resources for which usage was observed (e.g. license users, devices). (required).</param>
         public BillingUsage(string Name = null, string TotalUsage = null, List<BillingUsageResource> Resources = null)
         {
+            this.Name = Name;
+            this.TotalUsage = TotalUsage;
+            this.Resources = Resources;
             
         }
         

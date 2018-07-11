@@ -194,7 +194,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public GDPRRequest(string Name = null, UriReference CreatedBy = null, List<ReplacementTerm> ReplacementTerms = null, RequestTypeEnum? RequestType = null, GDPRSubject Subject = null)
         {
             this.Name = Name;
+            this.CreatedBy = CreatedBy;
             this.ReplacementTerms = ReplacementTerms;
+            this.RequestType = RequestType;
+            this.Subject = Subject;
             
         }
         

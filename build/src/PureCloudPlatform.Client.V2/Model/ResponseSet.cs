@@ -70,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Responses">Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}. (required).</param>
         public ResponseSet(string Name = null, int? Version = null, Dictionary<string, Reaction> Responses = null)
         {
+            this.Name = Name;
             this.Version = Version;
+            this.Responses = Responses;
             
         }
         

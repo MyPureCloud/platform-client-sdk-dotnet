@@ -44,6 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PageNumber">How many pages in (required).</param>
         public PagingSpec(int? PageSize = null, int? PageNumber = null)
         {
+            this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
             
         }
         

@@ -109,6 +109,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Value">What property value to match against (required).</param>
         public AnalyticsProperty(PropertyTypeEnum? PropertyType = null, string Property = null, string Value = null)
         {
+            this.PropertyType = PropertyType;
+            this.Property = Property;
+            this.Value = Value;
             
         }
         

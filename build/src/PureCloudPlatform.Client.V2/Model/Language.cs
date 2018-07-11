@@ -105,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">Version.</param>
         public Language(string Name = null, DateTime? DateModified = null, StateEnum? State = null, string Version = null)
         {
+            this.Name = Name;
             this.DateModified = DateModified;
             this.State = State;
             this.Version = Version;

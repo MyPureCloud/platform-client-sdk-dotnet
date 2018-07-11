@@ -84,6 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.QueueId = QueueId;
             this.RoutingData = RoutingData;
             this.CallbackUserName = CallbackUserName;
+            this.CallbackNumbers = CallbackNumbers;
             this.CallbackScheduledTime = CallbackScheduledTime;
             this.CountryCode = CountryCode;
             this.Data = Data;

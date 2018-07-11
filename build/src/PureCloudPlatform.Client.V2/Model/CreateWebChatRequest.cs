@@ -74,6 +74,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomerName">The name of the customer participating in the web chat..</param>
         public CreateWebChatRequest(string QueueId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string CustomerName = null)
         {
+            this.QueueId = QueueId;
+            this.Provider = Provider;
             this.SkillIds = SkillIds;
             this.LanguageId = LanguageId;
             this.Priority = Priority;

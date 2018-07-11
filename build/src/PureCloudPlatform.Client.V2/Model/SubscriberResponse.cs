@@ -45,6 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public SubscriberResponse(List<string> MessageReturned = null, string Status = null)
         {
             this.MessageReturned = MessageReturned;
+            this.Status = Status;
             
         }
         

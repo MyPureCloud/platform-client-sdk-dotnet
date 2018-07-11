@@ -114,6 +114,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             this.Name = Name;
             this.State = State;
+            this.Version = Version;
             this.Expands = Expands;
             
         }

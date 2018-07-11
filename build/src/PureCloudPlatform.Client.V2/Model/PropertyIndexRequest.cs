@@ -50,6 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Properties">The list of properties to index (required).</param>
         public PropertyIndexRequest(string SessionId = null, DateTime? TargetDate = null, List<AnalyticsProperty> Properties = null)
         {
+            this.SessionId = SessionId;
+            this.TargetDate = TargetDate;
+            this.Properties = Properties;
             
         }
         

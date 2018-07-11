@@ -56,6 +56,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Values">The values to make the filter comparison against. (required).</param>
         public Filter(string Name = null, string Type = null, string _Operator = null, List<string> Values = null)
         {
+            this.Name = Name;
+            this.Type = Type;
+            this._Operator = _Operator;
+            this.Values = Values;
             
         }
         

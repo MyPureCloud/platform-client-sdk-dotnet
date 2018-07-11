@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="_Certificate">The certificate to parse. (required).</param>
         public Certificate(string _Certificate = null)
         {
+            this._Certificate = _Certificate;
             
         }
         

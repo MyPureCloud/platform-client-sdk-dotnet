@@ -61,6 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public Credential(string Name = null, CredentialType Type = null, Dictionary<string, string> CredentialFields = null)
         {
             this.Name = Name;
+            this.Type = Type;
             this.CredentialFields = CredentialFields;
             
         }

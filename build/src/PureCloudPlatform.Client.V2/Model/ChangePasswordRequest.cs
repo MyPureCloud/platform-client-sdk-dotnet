@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NewPassword">The new password (required).</param>
         public ChangePasswordRequest(string NewPassword = null)
         {
+            this.NewPassword = NewPassword;
             
         }
         

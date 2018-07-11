@@ -80,6 +80,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PC">PC.</param>
         public StreetAddress(string Country = null, string A1 = null, string A3 = null, string RD = null, string HNO = null, string LOC = null, string NAM = null, string PC = null)
         {
+            this.Country = Country;
+            this.A1 = A1;
+            this.A3 = A3;
             this.RD = RD;
             this.HNO = HNO;
             this.LOC = LOC;

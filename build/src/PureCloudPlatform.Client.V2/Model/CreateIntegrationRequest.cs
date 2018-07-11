@@ -54,6 +54,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IntegrationType">Type of the integration to create. (required).</param>
         public CreateIntegrationRequest(string Name = null, IntegrationType IntegrationType = null)
         {
+            this.Name = Name;
+            this.IntegrationType = IntegrationType;
             
         }
         

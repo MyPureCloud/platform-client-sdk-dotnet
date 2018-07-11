@@ -227,8 +227,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public Conversation(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null, StateEnum? State = null)
         {
             this.Name = Name;
+            this.StartTime = StartTime;
             this.EndTime = EndTime;
             this.Address = Address;
+            this.Participants = Participants;
             this.ConversationIds = ConversationIds;
             this.MaxParticipants = MaxParticipants;
             this.RecordingState = RecordingState;

@@ -216,9 +216,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Locale">The locale use for localization of the exported data, i.e. en-us, es-mx   (required).</param>
         public ReportingExportJobRequest(string Name = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null)
         {
+            this.Name = Name;
+            this.TimeZone = TimeZone;
+            this.ExportFormat = ExportFormat;
             this.Interval = Interval;
             this.Period = Period;
+            this.ViewType = ViewType;
+            this.Filter = Filter;
             this.Read = Read;
+            this.Locale = Locale;
             
         }
         

@@ -73,6 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Config = Config;
             this.Contract = Contract;
             this.Secure = Secure;
+            this.Version = Version;
             
         }
         

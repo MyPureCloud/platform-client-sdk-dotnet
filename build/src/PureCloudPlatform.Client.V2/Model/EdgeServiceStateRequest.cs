@@ -44,6 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallDrainingWaitTimeSeconds">The number of seconds to wait for call draining to complete before initiating the reboot. A value of 0 will prevent call draining and all calls will disconnect immediately..</param>
         public EdgeServiceStateRequest(bool? InService = null, int? CallDrainingWaitTimeSeconds = null)
         {
+            this.InService = InService;
             this.CallDrainingWaitTimeSeconds = CallDrainingWaitTimeSeconds;
             
         }

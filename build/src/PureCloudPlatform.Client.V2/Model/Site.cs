@@ -202,6 +202,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NtpSettings">Network Time Protocol settings for the site.</param>
         public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> PrimarySites = null, List<UriReference> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, LocationDefinition Location = null, bool? Managed = null, NTPSettings NtpSettings = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -217,6 +218,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Addresses = Addresses;
             this.Edges = Edges;
             this.EdgeAutoUpdateConfig = EdgeAutoUpdateConfig;
+            this.Location = Location;
             this.Managed = Managed;
             this.NtpSettings = NtpSettings;
             

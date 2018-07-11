@@ -54,6 +54,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Proficiency">Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular skill. It is used when a queue is set to \&quot;Best available skills\&quot; mode to allow acd interactions to target agents with higher proficiency ratings. (required).</param>
         public UserRoutingSkillPost(string Id = null, double? Proficiency = null)
         {
+            this.Id = Id;
+            this.Proficiency = Proficiency;
             
         }
         

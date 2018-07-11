@@ -78,6 +78,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Credentials">Credentials required by the integration. The required keys are indicated in the credentials property of the Integration Type (required).</param>
         public IntegrationConfiguration(string Name = null, int? Version = null, Object Properties = null, Object Advanced = null, string Notes = null, Dictionary<string, CredentialInfo> Credentials = null)
         {
+            this.Name = Name;
+            this.Version = Version;
+            this.Properties = Properties;
+            this.Advanced = Advanced;
+            this.Notes = Notes;
+            this.Credentials = Credentials;
             
         }
         

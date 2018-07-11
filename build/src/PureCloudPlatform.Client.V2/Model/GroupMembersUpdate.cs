@@ -44,6 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">The current group version. (required).</param>
         public GroupMembersUpdate(List<string> MemberIds = null, int? Version = null)
         {
+            this.MemberIds = MemberIds;
+            this.Version = Version;
             
         }
         

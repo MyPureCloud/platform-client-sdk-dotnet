@@ -119,6 +119,8 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             this.Name = Name;
             this.Version = Version;
+            this.ColumnNames = ColumnNames;
+            this.PhoneColumns = PhoneColumns;
             this.ImportStatus = ImportStatus;
             this.PreviewModeColumnName = PreviewModeColumnName;
             this.PreviewModeAcceptedValues = PreviewModeAcceptedValues;

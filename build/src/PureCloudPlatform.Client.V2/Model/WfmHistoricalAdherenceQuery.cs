@@ -62,6 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IncludeExceptions">Whether user exceptions should be returned as part of the results.</param>
         public WfmHistoricalAdherenceQuery(DateTime? StartDate = null, DateTime? EndDate = null, string TimeZone = null, List<string> UserIds = null, bool? IncludeExceptions = null)
         {
+            this.StartDate = StartDate;
             this.EndDate = EndDate;
             this.TimeZone = TimeZone;
             this.UserIds = UserIds;

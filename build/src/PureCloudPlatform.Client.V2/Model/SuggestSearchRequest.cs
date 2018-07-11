@@ -51,6 +51,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public SuggestSearchRequest(List<string> Expand = null, List<string> Types = null, List<SuggestSearchCriteria> Query = null)
         {
             this.Expand = Expand;
+            this.Types = Types;
+            this.Query = Query;
             
         }
         

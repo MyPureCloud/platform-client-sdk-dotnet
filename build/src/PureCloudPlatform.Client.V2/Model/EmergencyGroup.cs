@@ -154,6 +154,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EmergencyCallFlows">The emergency call flow(s) to use during an emergency..</param>
         public EmergencyGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Enabled = null, List<EmergencyCallFlow> EmergencyCallFlows = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;

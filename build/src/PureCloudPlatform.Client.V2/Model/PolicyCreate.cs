@@ -102,6 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PolicyErrors">PolicyErrors.</param>
         public PolicyCreate(string Name = null, DateTime? ModifiedDate = null, DateTime? CreatedDate = null, int? Order = null, string Description = null, bool? Enabled = null, MediaPolicies MediaPolicies = null, PolicyConditions Conditions = null, PolicyActions Actions = null, PolicyErrors PolicyErrors = null)
         {
+            this.Name = Name;
             this.ModifiedDate = ModifiedDate;
             this.CreatedDate = CreatedDate;
             this.Order = Order;

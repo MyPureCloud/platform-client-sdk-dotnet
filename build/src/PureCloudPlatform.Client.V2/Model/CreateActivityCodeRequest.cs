@@ -145,6 +145,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request.</param>
         public CreateActivityCodeRequest(string Name = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null)
         {
+            this.Name = Name;
+            this.Category = Category;
             this.LengthInMinutes = LengthInMinutes;
             this.CountsAsPaidTime = CountsAsPaidTime;
             this.CountsAsWorkTime = CountsAsWorkTime;

@@ -49,6 +49,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">The user who last modified the associated entity.</param>
         public WfmVersionedEntityMetadata(int? Version = null, UserReference ModifiedBy = null)
         {
+            this.Version = Version;
             this.ModifiedBy = ModifiedBy;
             
         }

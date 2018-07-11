@@ -132,10 +132,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Organization">The  oauth client&#39;s organization..</param>
         public OrgOAuthClient(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, NamedEntity Organization = null)
         {
+            this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.CreatedBy = CreatedBy;
             this.ModifiedBy = ModifiedBy;
+            this.AuthorizedGrantType = AuthorizedGrantType;
             this.Organization = Organization;
             
         }

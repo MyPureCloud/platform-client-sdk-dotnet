@@ -56,6 +56,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TagIds">TagIds.</param>
         public DocumentUpload(string Name = null, UriReference Workspace = null, List<string> Tags = null, List<string> TagIds = null)
         {
+            this.Name = Name;
+            this.Workspace = Workspace;
             this.Tags = Tags;
             this.TagIds = TagIds;
             

@@ -86,6 +86,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public CampaignRuleCondition(string Id = null, CampaignRuleParameters Parameters = null, ConditionTypeEnum? ConditionType = null)
         {
             this.Id = Id;
+            this.Parameters = Parameters;
+            this.ConditionType = ConditionType;
             
         }
         

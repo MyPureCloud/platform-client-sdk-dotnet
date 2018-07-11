@@ -349,6 +349,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Metrics">Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *)..</param>
         public ObservationQuery(AnalyticsQueryFilter Filter = null, List<MetricsEnum> Metrics = null)
         {
+            this.Filter = Filter;
             this.Metrics = Metrics;
             
         }

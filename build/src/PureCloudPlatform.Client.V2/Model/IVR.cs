@@ -172,6 +172,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ScheduleGroup">The schedule group defining the open and closed hours for an organization.  If this is provided, an open flow and a closed flow must be specified as well..</param>
         public IVR(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> Dnis = null, UriReference OpenHoursFlow = null, UriReference ClosedHoursFlow = null, UriReference HolidayHoursFlow = null, UriReference ScheduleGroup = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;

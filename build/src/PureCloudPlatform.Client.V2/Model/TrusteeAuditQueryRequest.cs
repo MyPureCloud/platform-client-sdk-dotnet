@@ -74,6 +74,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Filters">Additional custom filters to be applied to the query..</param>
         public TrusteeAuditQueryRequest(List<string> TrusteeOrganizationIds = null, List<string> TrusteeUserIds = null, DateTime? StartDate = null, DateTime? EndDate = null, string QueryPhrase = null, List<Facet> Facets = null, List<Filter> Filters = null)
         {
+            this.TrusteeOrganizationIds = TrusteeOrganizationIds;
+            this.TrusteeUserIds = TrusteeUserIds;
             this.StartDate = StartDate;
             this.EndDate = EndDate;
             this.QueryPhrase = QueryPhrase;

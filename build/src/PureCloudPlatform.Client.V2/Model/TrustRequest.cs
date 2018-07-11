@@ -72,6 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public TrustRequest(OrgUser CreatedBy = null, Organization Trustee = null, List<OrgUser> Users = null, List<TrustGroup> Groups = null)
         {
             this.CreatedBy = CreatedBy;
+            this.Trustee = Trustee;
             this.Users = Users;
             this.Groups = Groups;
             

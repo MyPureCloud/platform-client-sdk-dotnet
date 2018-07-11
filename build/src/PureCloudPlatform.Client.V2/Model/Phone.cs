@@ -220,6 +220,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
         public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, UserAgentInfo UserAgentInfo = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, UriReference WebRtcUser = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -228,8 +229,11 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedBy = CreatedBy;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
+            this.Site = Site;
+            this.PhoneBaseSettings = PhoneBaseSettings;
             this.LineBaseSettings = LineBaseSettings;
             this.PhoneMetaBase = PhoneMetaBase;
+            this.Lines = Lines;
             this.Status = Status;
             this.SecondaryStatus = SecondaryStatus;
             this.UserAgentInfo = UserAgentInfo;

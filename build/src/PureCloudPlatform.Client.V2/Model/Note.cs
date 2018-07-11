@@ -82,6 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.NoteText = NoteText;
             this.ModifyDate = ModifyDate;
             this.CreateDate = CreateDate;
+            this.CreatedBy = CreatedBy;
             this.ExternalDataSources = ExternalDataSources;
             
         }

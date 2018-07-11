@@ -166,6 +166,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HolidaySchedules">The schedules defining the hours an organization is closed for the holidays..</param>
         public ScheduleGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string TimeZone = null, List<UriReference> OpenSchedules = null, List<UriReference> ClosedSchedules = null, List<UriReference> HolidaySchedules = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;

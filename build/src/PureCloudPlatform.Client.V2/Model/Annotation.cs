@@ -180,6 +180,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TimeBegin = TimeBegin;
             this.TimeEnd = TimeEnd;
             this.KeywordConfidenceThreshold = KeywordConfidenceThreshold;
+            this.AgentScoreModifier = AgentScoreModifier;
+            this.CustomerScoreModifier = CustomerScoreModifier;
             
         }
         

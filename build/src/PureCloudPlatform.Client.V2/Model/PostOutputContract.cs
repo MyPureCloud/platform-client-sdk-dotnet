@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SuccessSchema">JSON schema that defines the transformed, successful result that will be sent back to the caller. (required).</param>
         public PostOutputContract(JsonSchemaDocument SuccessSchema = null)
         {
+            this.SuccessSchema = SuccessSchema;
             
         }
         

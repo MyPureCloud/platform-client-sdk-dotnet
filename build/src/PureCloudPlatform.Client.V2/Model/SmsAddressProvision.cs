@@ -84,6 +84,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoCorrectAddress">This is used when the address is created. If the value is not set or true, then the system will, if necessary, auto-correct the address you provide. Set this value to false if the system should not auto-correct the address..</param>
         public SmsAddressProvision(string Name = null, string Street = null, string City = null, string Region = null, string PostalCode = null, string CountryCode = null, bool? AutoCorrectAddress = null)
         {
+            this.Name = Name;
+            this.Street = Street;
+            this.City = City;
+            this.Region = Region;
+            this.PostalCode = PostalCode;
+            this.CountryCode = CountryCode;
             this.AutoCorrectAddress = AutoCorrectAddress;
             
         }

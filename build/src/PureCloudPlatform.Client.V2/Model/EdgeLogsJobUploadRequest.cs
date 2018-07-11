@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FileIds">A list of file ids to upload. (required).</param>
         public EdgeLogsJobUploadRequest(List<string> FileIds = null)
         {
+            this.FileIds = FileIds;
             
         }
         

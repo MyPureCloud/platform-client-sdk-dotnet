@@ -44,6 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OldPassword">Your current password (required).</param>
         public ChangeMyPasswordRequest(string NewPassword = null, string OldPassword = null)
         {
+            this.NewPassword = NewPassword;
+            this.OldPassword = OldPassword;
             
         }
         

@@ -96,6 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="_Base">_Base.</param>
         public DomainOrganizationRoleCreate(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null, bool? _Base = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.DefaultRoleId = DefaultRoleId;
             this.Permissions = Permissions;

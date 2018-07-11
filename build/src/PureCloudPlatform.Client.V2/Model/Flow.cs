@@ -207,6 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CurrentOperation">CurrentOperation.</param>
         public Flow(string Name = null, Division Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
         {
+            this.Name = Name;
             this.Division = Division;
             this.Description = Description;
             this.Type = Type;

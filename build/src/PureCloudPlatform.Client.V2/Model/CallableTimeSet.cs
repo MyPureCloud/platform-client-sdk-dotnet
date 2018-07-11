@@ -70,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallableTimes">The list of CallableTimes for which it is acceptable to place outbound calls. (required).</param>
         public CallableTimeSet(string Name = null, int? Version = null, List<CallableTime> CallableTimes = null)
         {
+            this.Name = Name;
             this.Version = Version;
+            this.CallableTimes = CallableTimes;
             
         }
         

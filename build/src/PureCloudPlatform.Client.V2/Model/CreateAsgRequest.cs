@@ -127,6 +127,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AsgRecoveryShutdownMinutes">Number of minutes a recovery ASG will stay active before it is torn down.</param>
         public CreateAsgRequest(string AsgOwnerEmail = null, string EdgeGroupId = null, string ExternalTrunkBaseId = null, string AsgLogicalIAMInstanceProfile = null, bool? AsgAmi = null, AsgTypeEnum? AsgType = null, int? AsgInstanceCount = null, string AsgNetworkSpace = null, bool? AsgChaosExempt = null, int? AsgRecoveryShutdownMinutes = null)
         {
+            this.AsgOwnerEmail = AsgOwnerEmail;
             this.EdgeGroupId = EdgeGroupId;
             this.ExternalTrunkBaseId = ExternalTrunkBaseId;
             this.AsgLogicalIAMInstanceProfile = AsgLogicalIAMInstanceProfile;

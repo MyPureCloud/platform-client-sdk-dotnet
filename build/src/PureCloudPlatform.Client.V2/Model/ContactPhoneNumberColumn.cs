@@ -50,6 +50,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallableTimeColumn">A column that indicates the timezone to use for a given contact when checking callable times. Not allowed if &#39;automaticTimeZoneMapping&#39; is set to true..</param>
         public ContactPhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumn = null)
         {
+            this.ColumnName = ColumnName;
+            this.Type = Type;
             this.CallableTimeColumn = CallableTimeColumn;
             
         }

@@ -133,6 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public ReportSchedule(string Name = null, string QuartzCronExpression = null, DateTime? NextFireTime = null, DateTime? DateCreated = null, DateTime? DateModified = null, string Description = null, string TimeZone = null, string TimePeriod = null, string Interval = null, string ReportFormat = null, string Locale = null, bool? Enabled = null, string ReportId = null, Dictionary<string, Object> Parameters = null, ReportRunEntry LastRun = null)
         {
             this.Name = Name;
+            this.QuartzCronExpression = QuartzCronExpression;
             this.NextFireTime = NextFireTime;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
@@ -143,6 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ReportFormat = ReportFormat;
             this.Locale = Locale;
             this.Enabled = Enabled;
+            this.ReportId = ReportId;
             this.Parameters = Parameters;
             this.LastRun = LastRun;
             

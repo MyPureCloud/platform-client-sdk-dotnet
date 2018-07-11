@@ -129,6 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Name = Name;
             this.Calibrator = Calibrator;
             this.Agent = Agent;
+            this.Conversation = Conversation;
             this.EvaluationForm = EvaluationForm;
             this.ContextId = ContextId;
             this.AverageScore = AverageScore;

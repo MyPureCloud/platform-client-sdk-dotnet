@@ -128,12 +128,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ServiceContext">The service-specific context associated with this AuditMessage..</param>
         public AuditMessage(string Id = null, AuditUser User = null, string CorrelationId = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, string Level = null, string Timestamp = null, string ReceivedTimestamp = null, string Status = null, string ActionContext = null, string Action = null, List<Change> Changes = null, AuditEntity Entity = null, ServiceContext ServiceContext = null)
         {
+            this.Id = Id;
             this.User = User;
             this.CorrelationId = CorrelationId;
             this.TransactionId = TransactionId;
             this.TransactionInitiator = TransactionInitiator;
             this.Application = Application;
+            this.ServiceName = ServiceName;
+            this.Level = Level;
             this.Timestamp = Timestamp;
+            this.ReceivedTimestamp = ReceivedTimestamp;
+            this.Status = Status;
             this.ActionContext = ActionContext;
             this.Action = Action;
             this.Changes = Changes;

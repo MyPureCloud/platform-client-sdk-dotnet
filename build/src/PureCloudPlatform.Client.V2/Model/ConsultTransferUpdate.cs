@@ -79,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SpeakTo">Determines to whom the initiating participant is speaking. (required).</param>
         public ConsultTransferUpdate(SpeakToEnum? SpeakTo = null)
         {
+            this.SpeakTo = SpeakTo;
             
         }
         

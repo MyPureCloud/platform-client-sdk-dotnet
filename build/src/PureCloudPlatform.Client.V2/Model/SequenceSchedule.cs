@@ -84,6 +84,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             this.Name = Name;
             this.Version = Version;
+            this.Intervals = Intervals;
+            this.TimeZone = TimeZone;
+            this.Sequence = Sequence;
             
         }
         

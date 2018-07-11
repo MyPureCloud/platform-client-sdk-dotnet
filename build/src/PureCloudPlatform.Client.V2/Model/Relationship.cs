@@ -73,6 +73,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public Relationship(string Name = null, User User = null, ExternalOrganization ExternalOrganization = null, string _Relationship = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             this.Name = Name;
+            this.User = User;
+            this.ExternalOrganization = ExternalOrganization;
+            this._Relationship = _Relationship;
             this.ExternalDataSources = ExternalDataSources;
             
         }

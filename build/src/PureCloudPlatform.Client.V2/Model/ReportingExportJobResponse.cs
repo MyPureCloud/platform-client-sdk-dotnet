@@ -381,10 +381,19 @@ namespace PureCloudPlatform.Client.V2.Model
         public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null)
         {
             this.Name = Name;
+            this.Status = Status;
+            this.TimeZone = TimeZone;
+            this.ExportFormat = ExportFormat;
             this.Interval = Interval;
             this.DownloadUrl = DownloadUrl;
+            this.ViewType = ViewType;
             this.ExportErrorMessagesType = ExportErrorMessagesType;
             this.Period = Period;
+            this.Filter = Filter;
+            this.Read = Read;
+            this.CreatedDateTime = CreatedDateTime;
+            this.ModifiedDateTime = ModifiedDateTime;
+            this.Locale = Locale;
             
         }
         

@@ -166,6 +166,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Capabilities">Capabilities.</param>
         public PhoneBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference PhoneMetaBase = null, List<LineBase> Lines = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -174,6 +175,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedBy = CreatedBy;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
+            this.PhoneMetaBase = PhoneMetaBase;
+            this.Lines = Lines;
             this.Properties = Properties;
             this.Capabilities = Capabilities;
             

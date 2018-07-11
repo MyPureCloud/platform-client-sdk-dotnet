@@ -86,6 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConsultTransfer(SpeakToEnum? SpeakTo = null, Destination Destination = null)
         {
             this.SpeakTo = SpeakTo;
+            this.Destination = Destination;
             
         }
         

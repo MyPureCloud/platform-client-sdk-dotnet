@@ -425,6 +425,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AlertTypes">A collection of notification methods. (required).</param>
         public InteractionStatsRule(string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Enabled = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
         {
+            this.Name = Name;
+            this.Dimension = Dimension;
+            this.DimensionValue = DimensionValue;
+            this.Metric = Metric;
+            this.MediaType = MediaType;
+            this.NumericRange = NumericRange;
+            this.Statistic = Statistic;
+            this.Value = Value;
+            this.Enabled = Enabled;
+            this.NotificationUsers = NotificationUsers;
+            this.AlertTypes = AlertTypes;
             
         }
         

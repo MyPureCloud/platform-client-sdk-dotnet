@@ -236,6 +236,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CertificateDetails">The details of the parsed certificate(s)..</param>
         public DomainCertificateAuthority(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string Certificate = null, TypeEnum? Type = null, List<ServicesEnum> Services = null, List<CertificateDetails> CertificateDetails = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -244,6 +245,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedBy = CreatedBy;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
+            this.Certificate = Certificate;
+            this.Type = Type;
+            this.Services = Services;
             this.CertificateDetails = CertificateDetails;
             
         }

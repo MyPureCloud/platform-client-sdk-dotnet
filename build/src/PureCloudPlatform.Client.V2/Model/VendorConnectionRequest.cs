@@ -50,6 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name of the integration or connector instance that registered the new connection. Example, my-wfm (required).</param>
         public VendorConnectionRequest(string Publisher = null, string Type = null, string Name = null)
         {
+            this.Publisher = Publisher;
+            this.Type = Type;
+            this.Name = Name;
             
         }
         

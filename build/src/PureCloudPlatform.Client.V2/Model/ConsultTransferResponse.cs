@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DestinationParticipantId">Participant ID to whom the call is being transferred. (required).</param>
         public ConsultTransferResponse(string DestinationParticipantId = null)
         {
+            this.DestinationParticipantId = DestinationParticipantId;
             
         }
         

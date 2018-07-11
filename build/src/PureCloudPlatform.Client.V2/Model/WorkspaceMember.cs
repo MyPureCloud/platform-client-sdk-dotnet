@@ -121,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             this.Name = Name;
             this.Workspace = Workspace;
+            this.MemberType = MemberType;
             this.Member = Member;
             this.User = User;
             this.Group = Group;

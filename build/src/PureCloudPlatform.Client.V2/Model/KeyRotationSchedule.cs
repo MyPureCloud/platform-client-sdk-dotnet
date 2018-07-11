@@ -108,6 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public KeyRotationSchedule(string Name = null, PeriodEnum? Period = null)
         {
             this.Name = Name;
+            this.Period = Period;
             
         }
         

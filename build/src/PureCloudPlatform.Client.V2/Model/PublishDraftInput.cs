@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">The current draft version. (required).</param>
         public PublishDraftInput(int? Version = null)
         {
+            this.Version = Version;
             
         }
         

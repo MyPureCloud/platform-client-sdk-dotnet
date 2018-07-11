@@ -149,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             this.Name = Name;
             this.PromptId = PromptId;
+            this.Language = Language;
             this.DurationSeconds = DurationSeconds;
             this.MediaUri = MediaUri;
             this.TtsString = TtsString;

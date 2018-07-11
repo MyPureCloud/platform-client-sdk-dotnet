@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Results">Contains the query results (required).</param>
         public ResponseQueryResults(ResponseEntityList Results = null)
         {
+            this.Results = Results;
             
         }
         

@@ -65,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Organization">Organization associated with this trust..</param>
         public Trustee(bool? Enabled = null, OrgUser CreatedBy = null, Organization Organization = null)
         {
+            this.Enabled = Enabled;
             this.CreatedBy = CreatedBy;
             this.Organization = Organization;
             

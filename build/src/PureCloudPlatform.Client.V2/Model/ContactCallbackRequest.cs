@@ -62,6 +62,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Schedule">The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\&quot;, example = \&quot;2016-01-02T16:59:59\&quot; (required).</param>
         public ContactCallbackRequest(string CampaignId = null, string ContactListId = null, string ContactId = null, string PhoneColumn = null, string Schedule = null)
         {
+            this.CampaignId = CampaignId;
+            this.ContactListId = ContactListId;
+            this.ContactId = ContactId;
+            this.PhoneColumn = PhoneColumn;
+            this.Schedule = Schedule;
             
         }
         

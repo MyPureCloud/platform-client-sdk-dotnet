@@ -44,6 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Unique Id for this version of this form (required).</param>
         public PublishForm(bool? Published = null, string Id = null)
         {
+            this.Published = Published;
+            this.Id = Id;
             
         }
         

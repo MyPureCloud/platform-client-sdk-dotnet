@@ -104,6 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             this.Id = Id;
             this.Name = Name;
+            this.MxRecordStatus = MxRecordStatus;
             this.SubDomain = SubDomain;
             
         }

@@ -44,6 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeZoneId">The time zone for the time slots; for example, Africa/Abidjan (required).</param>
         public CallableTime(List<CampaignTimeSlot> TimeSlots = null, string TimeZoneId = null)
         {
+            this.TimeSlots = TimeSlots;
+            this.TimeZoneId = TimeZoneId;
             
         }
         

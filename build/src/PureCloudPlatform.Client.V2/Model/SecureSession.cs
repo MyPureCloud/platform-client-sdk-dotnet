@@ -113,7 +113,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Disconnect">If true, disconnect the agent after creating the session.</param>
         public SecureSession(UriReference Flow = null, string UserData = null, StateEnum? State = null, string SourceParticipantId = null, bool? Disconnect = null)
         {
+            this.Flow = Flow;
             this.UserData = UserData;
+            this.State = State;
             this.SourceParticipantId = SourceParticipantId;
             this.Disconnect = Disconnect;
             

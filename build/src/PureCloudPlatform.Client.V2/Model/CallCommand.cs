@@ -44,6 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhoneColumn">For a dialer preview or scheduled callback, the phone column associated with the phone number.</param>
         public CallCommand(string CallNumber = null, string PhoneColumn = null)
         {
+            this.CallNumber = CallNumber;
             this.PhoneColumn = PhoneColumn;
             
         }

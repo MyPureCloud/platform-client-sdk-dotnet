@@ -62,6 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PreferredAgentIds">A list of agents to be preferred in routing.</param>
         public RoutingData(string QueueId = null, string LanguageId = null, int? Priority = null, List<string> SkillIds = null, List<string> PreferredAgentIds = null)
         {
+            this.QueueId = QueueId;
             this.LanguageId = LanguageId;
             this.Priority = Priority;
             this.SkillIds = SkillIds;

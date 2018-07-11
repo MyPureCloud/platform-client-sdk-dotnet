@@ -50,6 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EmitDate">Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
         public AnalyticsSessionMetric(string Name = null, long? Value = null, DateTime? EmitDate = null)
         {
+            this.Name = Name;
+            this.Value = Value;
+            this.EmitDate = EmitDate;
             
         }
         

@@ -152,6 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="VideoCategories">The video categories of the documentation entity. Will be returned in responses for certain entities..</param>
         public DocumentationResult(int? Id = null, List<int?> Categories = null, string Description = null, string Content = null, string Excerpt = null, string Link = null, DateTime? Modified = null, string Name = null, List<int?> Service = null, string Slug = null, string Title = null, string GetType = null, List<int?> FacetFeature = null, List<int?> FacetRole = null, List<int?> FacetService = null, List<int?> FaqCategories = null, List<int?> ReleasenoteCategory = null, List<int?> ReleasenoteTag = null, List<int?> ServiceArea = null, List<int?> VideoCategories = null)
         {
+            this.Id = Id;
             this.Categories = Categories;
             this.Description = Description;
             this.Content = Content;

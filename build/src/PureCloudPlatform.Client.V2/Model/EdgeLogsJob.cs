@@ -148,6 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Files">The files available to upload from the Edge to the cloud..</param>
         public EdgeLogsJob(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeLogsJobFile> Files = null)
         {
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;

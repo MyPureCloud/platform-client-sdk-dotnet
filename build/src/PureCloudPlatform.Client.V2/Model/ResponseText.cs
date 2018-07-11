@@ -79,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContentType">Response text content type..</param>
         public ResponseText(string Content = null, ContentTypeEnum? ContentType = null)
         {
+            this.Content = Content;
             this.ContentType = ContentType;
             
         }

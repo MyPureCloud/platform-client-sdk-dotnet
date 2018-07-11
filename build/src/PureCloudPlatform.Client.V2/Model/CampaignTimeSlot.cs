@@ -50,6 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Day">The day of the interval. Valid values: [1-7], representing Monday through Sunday (required).</param>
         public CampaignTimeSlot(string StartTime = null, string StopTime = null, int? Day = null)
         {
+            this.StartTime = StartTime;
+            this.StopTime = StopTime;
+            this.Day = Day;
             
         }
         

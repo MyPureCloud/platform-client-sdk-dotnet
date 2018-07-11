@@ -140,6 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Sort = Sort;
             this.ReturnFields = ReturnFields;
             this.Expand = Expand;
+            this.Types = Types;
             this.Query = Query;
             this.Aggregations = Aggregations;
             

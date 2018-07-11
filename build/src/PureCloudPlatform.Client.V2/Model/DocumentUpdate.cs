@@ -87,6 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public DocumentUpdate(int? ChangeNumber = null, string Name = null, bool? Read = null, List<string> AddTags = null, List<string> RemoveTags = null, List<string> AddTagIds = null, List<string> RemoveTagIds = null, List<DocumentAttribute> UpdateAttributes = null, List<string> RemoveAttributes = null)
         {
             this.ChangeNumber = ChangeNumber;
+            this.Name = Name;
             this.Read = Read;
             this.AddTags = AddTags;
             this.RemoveTags = RemoveTags;

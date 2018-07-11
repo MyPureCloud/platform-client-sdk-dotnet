@@ -326,17 +326,23 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactListFilters">Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied..</param>
         public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, UriReference Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<UriReference> ContactListFilters = null)
         {
+            this.Name = Name;
             this.Version = Version;
+            this.ContactList = ContactList;
             this.Queue = Queue;
+            this.DialingMode = DialingMode;
             this.Script = Script;
             this.EdgeGroup = EdgeGroup;
             this.Site = Site;
             this.CampaignStatus = CampaignStatus;
+            this.PhoneColumns = PhoneColumns;
             this.AbandonRate = AbandonRate;
             this.DncLists = DncLists;
             this.CallableTimeSet = CallableTimeSet;
             this.CallAnalysisResponseSet = CallAnalysisResponseSet;
             this.Errors = Errors;
+            this.CallerName = CallerName;
+            this.CallerAddress = CallerAddress;
             this.OutboundLineCount = OutboundLineCount;
             this.RuleSets = RuleSets;
             this.SkipPreviewDisabled = SkipPreviewDisabled;

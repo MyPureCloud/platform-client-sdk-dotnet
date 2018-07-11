@@ -82,9 +82,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Rules">The list of rules. (required).</param>
         public RuleSet(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, List<DialerRule> Rules = null)
         {
+            this.Name = Name;
             this.Version = Version;
             this.ContactList = ContactList;
             this.Queue = Queue;
+            this.Rules = Rules;
             
         }
         

@@ -130,6 +130,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Members">Members.</param>
         public CreateShareRequest(SharedEntityTypeEnum? SharedEntityType = null, SharedEntity SharedEntity = null, MemberTypeEnum? MemberType = null, SharedEntity Member = null, List<CreateShareRequestMember> Members = null)
         {
+            this.SharedEntityType = SharedEntityType;
+            this.SharedEntity = SharedEntity;
             this.MemberType = MemberType;
             this.Member = Member;
             this.Members = Members;

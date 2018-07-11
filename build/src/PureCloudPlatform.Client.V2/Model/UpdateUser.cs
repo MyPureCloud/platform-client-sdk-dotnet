@@ -189,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Username = Username;
             this.Manager = Manager;
             this.Images = Images;
+            this.Version = Version;
             this.ProfileSkills = ProfileSkills;
             this.Locations = Locations;
             this.Groups = Groups;
