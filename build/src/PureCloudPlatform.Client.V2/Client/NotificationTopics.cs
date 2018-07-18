@@ -20,6 +20,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.architect.systemprompts.{id}.resources.{id}", typeof(SystemPromptResourceNotificationNotification)},
               {"v2.contentmanagement.documents.{id}", typeof(DocumentDataV2Notification)},
               {"v2.contentmanagement.workspaces.{id}.documents", typeof(DocumentDataV2Notification)},
+              {"v2.flows.outcomes.{id}", typeof(FlowOutcomeNotificationNotification)},
               {"v2.flows.{id}", typeof(FlowNotificationNotification)},
               {"v2.groups.{id}.greetings", typeof(GreetingNotification)},
               {"v2.managementunits.{id}.workforcemanagement.intraday", typeof(IntradayDataUpdateNotification)},

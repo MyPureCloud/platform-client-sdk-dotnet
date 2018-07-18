@@ -37,6 +37,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundCampaignrule**](OutboundApi.html#getoutboundcampaignrule) | **GET** /api/v2/outbound/campaignrules/{campaignRuleId} | Get Campaign Rule |
 | [**GetOutboundCampaignrules**](OutboundApi.html#getoutboundcampaignrules) | **GET** /api/v2/outbound/campaignrules | Query Campaign Rule list |
 | [**GetOutboundCampaigns**](OutboundApi.html#getoutboundcampaigns) | **GET** /api/v2/outbound/campaigns | Query a list of dialer campaigns. |
+| [**GetOutboundCampaignsDivisionview**](OutboundApi.html#getoutboundcampaignsdivisionview) | **GET** /api/v2/outbound/campaigns/divisionviews/{campaignId} | Get a basic Campaign information object |
 | [**GetOutboundCampaignsDivisionviews**](OutboundApi.html#getoutboundcampaignsdivisionviews) | **GET** /api/v2/outbound/campaigns/divisionviews | Query a list of basic Campaign information objects |
 | [**GetOutboundContactlist**](OutboundApi.html#getoutboundcontactlist) | **GET** /api/v2/outbound/contactlists/{contactListId} | Get a dialer contact list. |
 | [**GetOutboundContactlistContact**](OutboundApi.html#getoutboundcontactlistcontact) | **GET** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get a contact. |
@@ -2248,7 +2249,7 @@ namespace Example
 
 <a name="getoutboundcampaigns"></a>
 
-## [**CampaignEntityListing**](CampaignEntityListing.html) GetOutboundCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null)
+## [**CampaignEntityListing**](CampaignEntityListing.html) GetOutboundCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -2332,6 +2333,11 @@ namespace Example
             
             
             
+            
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             
             
@@ -2347,7 +2353,7 @@ namespace Example
                 
                 // Query a list of dialer campaigns.
                 
-                CampaignEntityListing result = apiInstance.GetOutboundCampaigns(pageSize, pageNumber, filterType, name, id, contactListId, dncListId, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, sortBy, sortOrder);
+                CampaignEntityListing result = apiInstance.GetOutboundCampaigns(pageSize, pageNumber, filterType, name, id, contactListId, dncListId, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, divisionId, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2374,6 +2380,7 @@ namespace Example
 | **distributionQueueId** | **string**| Distribution queue ID | [optional]  |
 | **edgeGroupId** | **string**| Edge group ID | [optional]  |
 | **callAnalysisResponseSetId** | **string**| Call analysis response set ID | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
@@ -2382,9 +2389,79 @@ namespace Example
 
 [**CampaignEntityListing**](CampaignEntityListing.html)
 
+<a name="getoutboundcampaignsdivisionview"></a>
+
+## [**CampaignDivisionView**](CampaignDivisionView.html) GetOutboundCampaignsDivisionview (string campaignId)
+
+
+
+Get a basic Campaign information object
+
+This returns a simplified version of a Campaign, consisting of name and division.
+
+Requires ANY permissions: 
+
+* outbound:campaign:search
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundCampaignsDivisionviewExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new OutboundApi();
+            
+            
+            var campaignId = campaignId_example;  // string | Campaign ID
+            
+            
+            
+
+            try
+            {
+                
+                // Get a basic Campaign information object
+                
+                CampaignDivisionView result = apiInstance.GetOutboundCampaignsDivisionview(campaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundCampaignsDivisionview: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CampaignDivisionView**](CampaignDivisionView.html)
+
 <a name="getoutboundcampaignsdivisionviews"></a>
 
-## [**CampaignDivisionViewListing**](CampaignDivisionViewListing.html) GetOutboundCampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+## [**CampaignDivisionViewListing**](CampaignDivisionViewListing.html) GetOutboundCampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -2438,6 +2515,11 @@ namespace Example
             
             
             
+            
+            var id = new List<string>(); // List<string> | id (optional) 
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             
             
@@ -2453,7 +2535,7 @@ namespace Example
                 
                 // Query a list of basic Campaign information objects
                 
-                CampaignDivisionViewListing result = apiInstance.GetOutboundCampaignsDivisionviews(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                CampaignDivisionViewListing result = apiInstance.GetOutboundCampaignsDivisionviews(pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2474,6 +2556,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
+| **id** | [**List<string>**](string.html)| id | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}

@@ -41,6 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
@@ -74,6 +77,8 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
+        
+        
         
         
         
@@ -197,6 +202,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="User" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
+        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Chat">Chat.</param>
         /// <param name="Department">Department.</param>
         /// <param name="Email">Email.</param>
@@ -218,9 +224,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Locations">The user placement at each site location..</param>
         /// <param name="Groups">The groups the user is a member of.</param>
         /// <param name="AcdAutoAnswer">acd auto answer.</param>
-        public User(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, bool? AcdAutoAnswer = null)
+        public User(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, bool? AcdAutoAnswer = null)
         {
             this.Name = Name;
+            this.Division = Division;
             this.Chat = Chat;
             this.Department = Department;
             this.Email = Email;
@@ -261,6 +268,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public Division Division { get; set; }
         
         
         
@@ -467,6 +483,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Chat: ").Append(Chat).Append("\n");
             sb.Append("  Department: ").Append(Department).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
@@ -535,6 +552,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 ) &&
                 (
                     this.Chat == other.Chat ||
@@ -670,6 +692,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.Chat != null)
                     hash = hash * 59 + this.Chat.GetHashCode();

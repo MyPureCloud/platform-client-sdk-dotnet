@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Trustor" /> class.
@@ -63,11 +68,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">If disabled no trustee user will have access, even if they were previously added. (required).</param>
         /// <param name="CreatedBy">User that created trust..</param>
         /// <param name="Organization">Organization associated with this trust..</param>
-        public Trustor(bool? Enabled = null, OrgUser CreatedBy = null, Organization Organization = null)
+        /// <param name="Authorization">Authorization for the trustee user has in this trustor organization.</param>
+        public Trustor(bool? Enabled = null, OrgUser CreatedBy = null, Organization Organization = null, TrusteeAuthorization Authorization = null)
         {
             this.Enabled = Enabled;
             this.CreatedBy = CreatedBy;
             this.Organization = Organization;
+            this.Authorization = Authorization;
             
         }
         
@@ -119,6 +126,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Authorization for the trustee user has in this trustor organization
+        /// </summary>
+        /// <value>Authorization for the trustee user has in this trustor organization</value>
+        [DataMember(Name="authorization", EmitDefaultValue=false)]
+        public TrusteeAuthorization Authorization { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -140,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
+            sb.Append("  Authorization: ").Append(Authorization).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -203,6 +220,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Organization.Equals(other.Organization)
                 ) &&
                 (
+                    this.Authorization == other.Authorization ||
+                    this.Authorization != null &&
+                    this.Authorization.Equals(other.Authorization)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -235,6 +257,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Organization != null)
                     hash = hash * 59 + this.Organization.GetHashCode();
+                
+                if (this.Authorization != null)
+                    hash = hash * 59 + this.Authorization.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

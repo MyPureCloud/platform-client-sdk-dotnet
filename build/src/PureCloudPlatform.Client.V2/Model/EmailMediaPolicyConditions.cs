@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailMediaPolicyConditions" /> class.
@@ -53,13 +58,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateRanges">DateRanges.</param>
         /// <param name="ForQueues">ForQueues.</param>
         /// <param name="WrapupCodes">WrapupCodes.</param>
+        /// <param name="Languages">Languages.</param>
         /// <param name="TimeAllowed">TimeAllowed.</param>
-        public EmailMediaPolicyConditions(List<User> ForUsers = null, List<string> DateRanges = null, List<Queue> ForQueues = null, List<WrapupCode> WrapupCodes = null, TimeAllowed TimeAllowed = null)
+        public EmailMediaPolicyConditions(List<User> ForUsers = null, List<string> DateRanges = null, List<Queue> ForQueues = null, List<WrapupCode> WrapupCodes = null, List<Language> Languages = null, TimeAllowed TimeAllowed = null)
         {
             this.ForUsers = ForUsers;
             this.DateRanges = DateRanges;
             this.ForQueues = ForQueues;
             this.WrapupCodes = WrapupCodes;
+            this.Languages = Languages;
             this.TimeAllowed = TimeAllowed;
             
         }
@@ -99,6 +106,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Languages
+        /// </summary>
+        [DataMember(Name="languages", EmitDefaultValue=false)]
+        public List<Language> Languages { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets TimeAllowed
         /// </summary>
         [DataMember(Name="timeAllowed", EmitDefaultValue=false)]
@@ -118,6 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateRanges: ").Append(DateRanges).Append("\n");
             sb.Append("  ForQueues: ").Append(ForQueues).Append("\n");
             sb.Append("  WrapupCodes: ").Append(WrapupCodes).Append("\n");
+            sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  TimeAllowed: ").Append(TimeAllowed).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -176,6 +192,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WrapupCodes.SequenceEqual(other.WrapupCodes)
                 ) &&
                 (
+                    this.Languages == other.Languages ||
+                    this.Languages != null &&
+                    this.Languages.SequenceEqual(other.Languages)
+                ) &&
+                (
                     this.TimeAllowed == other.TimeAllowed ||
                     this.TimeAllowed != null &&
                     this.TimeAllowed.Equals(other.TimeAllowed)
@@ -205,6 +226,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WrapupCodes != null)
                     hash = hash * 59 + this.WrapupCodes.GetHashCode();
+                
+                if (this.Languages != null)
+                    hash = hash * 59 + this.Languages.GetHashCode();
                 
                 if (this.TimeAllowed != null)
                     hash = hash * 59 + this.TimeAllowed.GetHashCode();

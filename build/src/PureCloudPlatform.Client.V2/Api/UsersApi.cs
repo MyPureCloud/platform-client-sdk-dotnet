@@ -1164,9 +1164,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skills (optional)</param>
+        /// <param name="body">Skills</param>
         /// <returns>List&lt;string&gt;</returns>
-        List<string> PutUserProfileskills (string userId, List<string> body = null);
+        List<string> PutUserProfileskills (string userId, List<string> body);
 
         /// <summary>
         /// Update profile skills for a user
@@ -1176,9 +1176,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skills (optional)</param>
+        /// <param name="body">Skills</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> PutUserProfileskillsWithHttpInfo (string userId, List<string> body = null);
+        ApiResponse<List<string>> PutUserProfileskillsWithHttpInfo (string userId, List<string> body);
         
         /// <summary>
         /// Sets the user&#39;s roles
@@ -2454,9 +2454,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skills (optional)</param>
+        /// <param name="body">Skills</param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> PutUserProfileskillsAsync (string userId, List<string> body = null);
+        System.Threading.Tasks.Task<List<string>> PutUserProfileskillsAsync (string userId, List<string> body);
 
         /// <summary>
         /// Update profile skills for a user
@@ -2466,9 +2466,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skills (optional)</param>
+        /// <param name="body">Skills</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> PutUserProfileskillsAsyncWithHttpInfo (string userId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<List<string>>> PutUserProfileskillsAsyncWithHttpInfo (string userId, List<string> body);
         
         /// <summary>
         /// Sets the user&#39;s roles
@@ -12304,9 +12304,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skills (optional)</param>
+        /// <param name="body">Skills</param>
         /// <returns>List&lt;string&gt;</returns>
-        public List<string> PutUserProfileskills (string userId, List<string> body = null)
+        public List<string> PutUserProfileskills (string userId, List<string> body)
         {
              ApiResponse<List<string>> localVarResponse = PutUserProfileskillsWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -12317,13 +12317,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skills (optional)</param>
+        /// <param name="body">Skills</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public ApiResponse< List<string> > PutUserProfileskillsWithHttpInfo (string userId, List<string> body = null)
+        public ApiResponse< List<string> > PutUserProfileskillsWithHttpInfo (string userId, List<string> body)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PutUserProfileskills");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserProfileskills");
 
             var localVarPath = "/api/v2/users/{userId}/profileskills";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12406,9 +12409,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skills (optional)</param>
+        /// <param name="body">Skills</param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> PutUserProfileskillsAsync (string userId, List<string> body = null)
+        public async System.Threading.Tasks.Task<List<string>> PutUserProfileskillsAsync (string userId, List<string> body)
         {
              ApiResponse<List<string>> localVarResponse = await PutUserProfileskillsAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -12420,13 +12423,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skills (optional)</param>
+        /// <param name="body">Skills</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutUserProfileskillsAsyncWithHttpInfo (string userId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutUserProfileskillsAsyncWithHttpInfo (string userId, List<string> body)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PutUserProfileskills");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserProfileskills");
             
 
             var localVarPath = "/api/v2/users/{userId}/profileskills";

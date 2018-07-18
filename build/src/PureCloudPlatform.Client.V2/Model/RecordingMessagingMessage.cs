@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingMessagingMessage" /> class.
@@ -59,14 +64,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FromExternalContact">FromExternalContact.</param>
         /// <param name="To">To.</param>
         /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Id">Id.</param>
         /// <param name="MessageText">MessageText.</param>
-        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string MessageText = null)
+        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string MessageText = null)
         {
             this.From = From;
             this.FromUser = FromUser;
             this.FromExternalContact = FromExternalContact;
             this.To = To;
             this.Timestamp = Timestamp;
+            this.Id = Id;
             this.MessageText = MessageText;
             
         }
@@ -115,6 +122,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets MessageText
         /// </summary>
         [DataMember(Name="messageText", EmitDefaultValue=false)]
@@ -135,6 +150,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FromExternalContact: ").Append(FromExternalContact).Append("\n");
             sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  MessageText: ").Append(MessageText).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -198,6 +214,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Timestamp.Equals(other.Timestamp)
                 ) &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.MessageText == other.MessageText ||
                     this.MessageText != null &&
                     this.MessageText.Equals(other.MessageText)
@@ -230,6 +251,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
+                
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.MessageText != null)
                     hash = hash * 59 + this.MessageText.GetHashCode();

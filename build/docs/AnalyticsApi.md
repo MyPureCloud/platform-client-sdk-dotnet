@@ -183,7 +183,7 @@ Get all view export requests for a user
 
 Requires ANY permissions: 
 
-* analytics:conversationAggregate:view
+* analytics:dataExport:view
 
 ### Example
 ~~~csharp
@@ -1245,7 +1245,7 @@ Generate a view export request
 
 Requires ANY permissions: 
 
-* analytics:conversationAggregate:view
+* analytics:dataExport:add
 
 ### Example
 ~~~csharp

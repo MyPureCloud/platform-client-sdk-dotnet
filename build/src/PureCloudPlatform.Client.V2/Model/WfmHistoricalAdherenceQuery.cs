@@ -58,7 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartDate">Beginning of the date range to query in ISO-8601 format (required).</param>
         /// <param name="EndDate">End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time.</param>
         /// <param name="TimeZone">The time zone to use for returned results in olson format. If it is not set, the management unit time zone will be used to compute adherence.</param>
-        /// <param name="UserIds">The userIds to report on. If it is not set, adherence will be computed for all the users in management unit.</param>
+        /// <param name="UserIds">The userIds to report on. If null or not set, adherence will be computed for all the users in management unit.</param>
         /// <param name="IncludeExceptions">Whether user exceptions should be returned as part of the results.</param>
         public WfmHistoricalAdherenceQuery(DateTime? StartDate = null, DateTime? EndDate = null, string TimeZone = null, List<string> UserIds = null, bool? IncludeExceptions = null)
         {
@@ -100,9 +100,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The userIds to report on. If it is not set, adherence will be computed for all the users in management unit
+        /// The userIds to report on. If null or not set, adherence will be computed for all the users in management unit
         /// </summary>
-        /// <value>The userIds to report on. If it is not set, adherence will be computed for all the users in management unit</value>
+        /// <value>The userIds to report on. If null or not set, adherence will be computed for all the users in management unit</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
         

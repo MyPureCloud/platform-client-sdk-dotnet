@@ -9,6 +9,7 @@ title: TrustUser
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
+| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
 | **Chat** | [**Chat**](Chat.html) |  | [optional] |
 | **Department** | **string** |  | [optional] |
 | **Email** | **string** |  | [optional] |

@@ -280,6 +280,26 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewFilter" /> class.
@@ -309,7 +329,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Transferred">Indicates filtering for transfers.</param>
         /// <param name="Abandoned">Indicates filtering for abandons.</param>
         /// <param name="MessageTypes">The message media types used to filter the view.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null)
+        /// <param name="DivisionIds">The divison Ids used to filter the view.</param>
+        /// <param name="SurveyFormIds">The survey form ids used to filter the view.</param>
+        /// <param name="SurveyTotalScore">The survey total score used to filter the view.</param>
+        /// <param name="SurveyNpsScore">The survey NPS score used to filter the view.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -336,6 +360,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Transferred = Transferred;
             this.Abandoned = Abandoned;
             this.MessageTypes = MessageTypes;
+            this.DivisionIds = DivisionIds;
+            this.SurveyFormIds = SurveyFormIds;
+            this.SurveyTotalScore = SurveyTotalScore;
+            this.SurveyNpsScore = SurveyNpsScore;
             
         }
         
@@ -565,6 +593,42 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<MessageTypesEnum> MessageTypes { get; set; }
         
         
+        
+        /// <summary>
+        /// The divison Ids used to filter the view
+        /// </summary>
+        /// <value>The divison Ids used to filter the view</value>
+        [DataMember(Name="divisionIds", EmitDefaultValue=false)]
+        public List<string> DivisionIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The survey form ids used to filter the view
+        /// </summary>
+        /// <value>The survey form ids used to filter the view</value>
+        [DataMember(Name="surveyFormIds", EmitDefaultValue=false)]
+        public List<string> SurveyFormIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The survey total score used to filter the view
+        /// </summary>
+        /// <value>The survey total score used to filter the view</value>
+        [DataMember(Name="surveyTotalScore", EmitDefaultValue=false)]
+        public NumericRange SurveyTotalScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The survey NPS score used to filter the view
+        /// </summary>
+        /// <value>The survey NPS score used to filter the view</value>
+        [DataMember(Name="surveyNpsScore", EmitDefaultValue=false)]
+        public NumericRange SurveyNpsScore { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -599,6 +663,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Transferred: ").Append(Transferred).Append("\n");
             sb.Append("  Abandoned: ").Append(Abandoned).Append("\n");
             sb.Append("  MessageTypes: ").Append(MessageTypes).Append("\n");
+            sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
+            sb.Append("  SurveyFormIds: ").Append(SurveyFormIds).Append("\n");
+            sb.Append("  SurveyTotalScore: ").Append(SurveyTotalScore).Append("\n");
+            sb.Append("  SurveyNpsScore: ").Append(SurveyNpsScore).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -759,6 +827,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessageTypes == other.MessageTypes ||
                     this.MessageTypes != null &&
                     this.MessageTypes.SequenceEqual(other.MessageTypes)
+                ) &&
+                (
+                    this.DivisionIds == other.DivisionIds ||
+                    this.DivisionIds != null &&
+                    this.DivisionIds.SequenceEqual(other.DivisionIds)
+                ) &&
+                (
+                    this.SurveyFormIds == other.SurveyFormIds ||
+                    this.SurveyFormIds != null &&
+                    this.SurveyFormIds.SequenceEqual(other.SurveyFormIds)
+                ) &&
+                (
+                    this.SurveyTotalScore == other.SurveyTotalScore ||
+                    this.SurveyTotalScore != null &&
+                    this.SurveyTotalScore.Equals(other.SurveyTotalScore)
+                ) &&
+                (
+                    this.SurveyNpsScore == other.SurveyNpsScore ||
+                    this.SurveyNpsScore != null &&
+                    this.SurveyNpsScore.Equals(other.SurveyNpsScore)
                 );
         }
 
@@ -848,6 +936,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MessageTypes != null)
                     hash = hash * 59 + this.MessageTypes.GetHashCode();
+                
+                if (this.DivisionIds != null)
+                    hash = hash * 59 + this.DivisionIds.GetHashCode();
+                
+                if (this.SurveyFormIds != null)
+                    hash = hash * 59 + this.SurveyFormIds.GetHashCode();
+                
+                if (this.SurveyTotalScore != null)
+                    hash = hash * 59 + this.SurveyTotalScore.GetHashCode();
+                
+                if (this.SurveyNpsScore != null)
+                    hash = hash * 59 + this.SurveyNpsScore.GetHashCode();
                 
                 return hash;
             }

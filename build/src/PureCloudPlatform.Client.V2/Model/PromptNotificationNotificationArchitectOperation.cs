@@ -44,6 +44,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Create for "CREATE"
+            /// </summary>
+            [EnumMember(Value = "CREATE")]
+            Create,
+            
+            /// <summary>
             /// Enum Checkin for "CHECKIN"
             /// </summary>
             [EnumMember(Value = "CHECKIN")]
@@ -78,6 +84,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "STATE_CHANGE")]
             StateChange,
+            
+            /// <summary>
+            /// Enum Update for "UPDATE"
+            /// </summary>
+            [EnumMember(Value = "UPDATE")]
+            Update,
             
             /// <summary>
             /// Enum Validate for "VALIDATE"

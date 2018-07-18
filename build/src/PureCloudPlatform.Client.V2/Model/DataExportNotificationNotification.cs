@@ -122,16 +122,196 @@ namespace PureCloudPlatform.Client.V2.Model
             QueuePerformanceDetailView,
             
             /// <summary>
-            /// Enum InteractionSummaryView for "INTERACTION_SUMMARY_VIEW"
+            /// Enum InteractionSearchView for "INTERACTION_SEARCH_VIEW"
             /// </summary>
-            [EnumMember(Value = "INTERACTION_SUMMARY_VIEW")]
-            InteractionSummaryView,
+            [EnumMember(Value = "INTERACTION_SEARCH_VIEW")]
+            InteractionSearchView,
             
             /// <summary>
-            /// Enum AgentsPerformanceSummaryView for "AGENTS_PERFORMANCE_SUMMARY_VIEW"
+            /// Enum AgentPerformanceSummaryView for "AGENT_PERFORMANCE_SUMMARY_VIEW"
             /// </summary>
-            [EnumMember(Value = "AGENTS_PERFORMANCE_SUMMARY_VIEW")]
-            AgentsPerformanceSummaryView
+            [EnumMember(Value = "AGENT_PERFORMANCE_SUMMARY_VIEW")]
+            AgentPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum AgentPerformanceDetailView for "AGENT_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_PERFORMANCE_DETAIL_VIEW")]
+            AgentPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum AgentStatusSummaryView for "AGENT_STATUS_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_STATUS_SUMMARY_VIEW")]
+            AgentStatusSummaryView,
+            
+            /// <summary>
+            /// Enum AgentStatusDetailView for "AGENT_STATUS_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_STATUS_DETAIL_VIEW")]
+            AgentStatusDetailView,
+            
+            /// <summary>
+            /// Enum AgentEvaluationSummaryView for "AGENT_EVALUATION_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_EVALUATION_SUMMARY_VIEW")]
+            AgentEvaluationSummaryView,
+            
+            /// <summary>
+            /// Enum AgentEvaluationDetailView for "AGENT_EVALUATION_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_EVALUATION_DETAIL_VIEW")]
+            AgentEvaluationDetailView,
+            
+            /// <summary>
+            /// Enum AgentQueueDetailView for "AGENT_QUEUE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_QUEUE_DETAIL_VIEW")]
+            AgentQueueDetailView,
+            
+            /// <summary>
+            /// Enum AgentInteractionDetailView for "AGENT_INTERACTION_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_INTERACTION_DETAIL_VIEW")]
+            AgentInteractionDetailView,
+            
+            /// <summary>
+            /// Enum AbandonInsightsView for "ABANDON_INSIGHTS_VIEW"
+            /// </summary>
+            [EnumMember(Value = "ABANDON_INSIGHTS_VIEW")]
+            AbandonInsightsView,
+            
+            /// <summary>
+            /// Enum SkillsPerformanceView for "SKILLS_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "SKILLS_PERFORMANCE_VIEW")]
+            SkillsPerformanceView,
+            
+            /// <summary>
+            /// Enum SurveyFormPerformanceSummaryView for "SURVEY_FORM_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "SURVEY_FORM_PERFORMANCE_SUMMARY_VIEW")]
+            SurveyFormPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum SurveyFormPerformanceDetailView for "SURVEY_FORM_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "SURVEY_FORM_PERFORMANCE_DETAIL_VIEW")]
+            SurveyFormPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum DnisPerformanceSummaryView for "DNIS_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "DNIS_PERFORMANCE_SUMMARY_VIEW")]
+            DnisPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum DnisPerformanceDetailView for "DNIS_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "DNIS_PERFORMANCE_DETAIL_VIEW")]
+            DnisPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum WrapUpPerformanceSummaryView for "WRAP_UP_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "WRAP_UP_PERFORMANCE_SUMMARY_VIEW")]
+            WrapUpPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum AgentWrapUpPerformanceDetailView for "AGENT_WRAP_UP_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_WRAP_UP_PERFORMANCE_DETAIL_VIEW")]
+            AgentWrapUpPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum QueueActivitySummaryView for "QUEUE_ACTIVITY_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_ACTIVITY_SUMMARY_VIEW")]
+            QueueActivitySummaryView,
+            
+            /// <summary>
+            /// Enum QueueActivityDetailView for "QUEUE_ACTIVITY_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_ACTIVITY_DETAIL_VIEW")]
+            QueueActivityDetailView,
+            
+            /// <summary>
+            /// Enum AgentQueueActivitySummaryView for "AGENT_QUEUE_ACTIVITY_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_QUEUE_ACTIVITY_SUMMARY_VIEW")]
+            AgentQueueActivitySummaryView,
+            
+            /// <summary>
+            /// Enum QueueAgentDetailView for "QUEUE_AGENT_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_AGENT_DETAIL_VIEW")]
+            QueueAgentDetailView,
+            
+            /// <summary>
+            /// Enum QueueInteractionDetailView for "QUEUE_INTERACTION_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_INTERACTION_DETAIL_VIEW")]
+            QueueInteractionDetailView,
+            
+            /// <summary>
+            /// Enum AgentScheduleDetailView for "AGENT_SCHEDULE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_SCHEDULE_DETAIL_VIEW")]
+            AgentScheduleDetailView,
+            
+            /// <summary>
+            /// Enum IvrPerformanceSummaryView for "IVR_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "IVR_PERFORMANCE_SUMMARY_VIEW")]
+            IvrPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum IvrPerformanceDetailView for "IVR_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "IVR_PERFORMANCE_DETAIL_VIEW")]
+            IvrPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum AnswerInsightsView for "ANSWER_INSIGHTS_VIEW"
+            /// </summary>
+            [EnumMember(Value = "ANSWER_INSIGHTS_VIEW")]
+            AnswerInsightsView,
+            
+            /// <summary>
+            /// Enum HandleInsightsView for "HANDLE_INSIGHTS_VIEW"
+            /// </summary>
+            [EnumMember(Value = "HANDLE_INSIGHTS_VIEW")]
+            HandleInsightsView,
+            
+            /// <summary>
+            /// Enum TalkInsightsView for "TALK_INSIGHTS_VIEW"
+            /// </summary>
+            [EnumMember(Value = "TALK_INSIGHTS_VIEW")]
+            TalkInsightsView,
+            
+            /// <summary>
+            /// Enum HoldInsightsView for "HOLD_INSIGHTS_VIEW"
+            /// </summary>
+            [EnumMember(Value = "HOLD_INSIGHTS_VIEW")]
+            HoldInsightsView,
+            
+            /// <summary>
+            /// Enum AcwInsightsView for "ACW_INSIGHTS_VIEW"
+            /// </summary>
+            [EnumMember(Value = "ACW_INSIGHTS_VIEW")]
+            AcwInsightsView,
+            
+            /// <summary>
+            /// Enum WaitInsightsView for "WAIT_INSIGHTS_VIEW"
+            /// </summary>
+            [EnumMember(Value = "WAIT_INSIGHTS_VIEW")]
+            WaitInsightsView,
+            
+            /// <summary>
+            /// Enum AgentWrapUpPerformanceIntervalDetailView for "AGENT_WRAP_UP_PERFORMANCE_INTERVAL_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_WRAP_UP_PERFORMANCE_INTERVAL_DETAIL_VIEW")]
+            AgentWrapUpPerformanceIntervalDetailView
         }
         
         

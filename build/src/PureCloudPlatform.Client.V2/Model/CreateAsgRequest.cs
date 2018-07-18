@@ -125,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AsgNetworkSpace">Overrides the network space the ASG will start in.  The default will always be mediaservices.</param>
         /// <param name="AsgChaosExempt">Optional parameter that exempts this ASG from chaos monkey killing one of its instances..</param>
         /// <param name="AsgRecoveryShutdownMinutes">Number of minutes a recovery ASG will stay active before it is torn down.</param>
-        public CreateAsgRequest(string AsgOwnerEmail = null, string EdgeGroupId = null, string ExternalTrunkBaseId = null, string AsgLogicalIAMInstanceProfile = null, bool? AsgAmi = null, AsgTypeEnum? AsgType = null, int? AsgInstanceCount = null, string AsgNetworkSpace = null, bool? AsgChaosExempt = null, int? AsgRecoveryShutdownMinutes = null)
+        public CreateAsgRequest(string AsgOwnerEmail = null, string EdgeGroupId = null, string ExternalTrunkBaseId = null, string AsgLogicalIAMInstanceProfile = null, string AsgAmi = null, AsgTypeEnum? AsgType = null, int? AsgInstanceCount = null, string AsgNetworkSpace = null, bool? AsgChaosExempt = null, int? AsgRecoveryShutdownMinutes = null)
         {
             this.AsgOwnerEmail = AsgOwnerEmail;
             this.EdgeGroupId = EdgeGroupId;
@@ -183,7 +183,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Overrides the default EDGE AMI used with the ASG</value>
         [DataMember(Name="asgAmi", EmitDefaultValue=false)]
-        public bool? AsgAmi { get; set; }
+        public string AsgAmi { get; set; }
         
         
         

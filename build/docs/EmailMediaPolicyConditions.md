@@ -11,6 +11,7 @@ title: EmailMediaPolicyConditions
 | **DateRanges** | **List&lt;string&gt;** |  | [optional] |
 | **ForQueues** | [**List&lt;Queue&gt;**](Queue.html) |  | [optional] |
 | **WrapupCodes** | [**List&lt;WrapupCode&gt;**](WrapupCode.html) |  | [optional] |
+| **Languages** | [**List&lt;Language&gt;**](Language.html) |  | [optional] |
 | **TimeAllowed** | [**TimeAllowed**](TimeAllowed.html) |  | [optional] |
 {: class="table table-striped"}
 

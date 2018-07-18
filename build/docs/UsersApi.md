@@ -3651,7 +3651,7 @@ namespace Example
 
 <a name="putuserprofileskills"></a>
 
-## **List&lt;string&gt;** PutUserProfileskills (string userId, List<string> body = null)
+## **List&lt;string&gt;** PutUserProfileskills (string userId, List<string> body)
 
 
 
@@ -3693,7 +3693,7 @@ namespace Example
             
             
             
-            var body = ;  // List<string> | Skills (optional) 
+            var body = ;  // List<string> | Skills
             
             
             
@@ -3721,7 +3721,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | **List<string>**| Skills | [optional]  |
+| **body** | **List<string>**| Skills |  |
 {: class="table table-striped"}
 
 ### Return type

@@ -13,21 +13,11 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SurveyFormUriReference
+    /// LanguageReference
     /// </summary>
     [DataContract]
-    public partial class SurveyFormUriReference :  IEquatable<SurveyFormUriReference>
+    public partial class LanguageReference :  IEquatable<LanguageReference>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -42,53 +32,32 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="SurveyFormUriReference" /> class.
+        /// Initializes a new instance of the <see cref="LanguageReference" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="SelfUri">SelfUri.</param>
-        /// <param name="ContextId">The context id of this form..</param>
-        public SurveyFormUriReference(string Id = null, string Name = null, string SelfUri = null, string ContextId = null)
+        /// <param name="Id">The globally unique identifier for the object..</param>
+        public LanguageReference(string Id = null)
         {
             this.Id = Id;
-            this.Name = Name;
-            this.SelfUri = SelfUri;
-            this.ContextId = ContextId;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The globally unique identifier for the object.
         /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The URI for this object
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets SelfUri
-        /// </summary>
+        /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The context id of this form.
-        /// </summary>
-        /// <value>The context id of this form.</value>
-        [DataMember(Name="contextId", EmitDefaultValue=false)]
-        public string ContextId { get; set; }
+        public string SelfUri { get; private set; }
         
         
         /// <summary>
@@ -98,12 +67,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SurveyFormUriReference {\n");
+            sb.Append("class LanguageReference {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -125,15 +92,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SurveyFormUriReference);
+            return this.Equals(obj as LanguageReference);
         }
 
         /// <summary>
-        /// Returns true if SurveyFormUriReference instances are equal
+        /// Returns true if LanguageReference instances are equal
         /// </summary>
-        /// <param name="other">Instance of SurveyFormUriReference to be compared</param>
+        /// <param name="other">Instance of LanguageReference to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SurveyFormUriReference other)
+        public bool Equals(LanguageReference other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -146,19 +113,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) &&
-                (
-                    this.ContextId == other.ContextId ||
-                    this.ContextId != null &&
-                    this.ContextId.Equals(other.ContextId)
                 );
         }
 
@@ -177,14 +134,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
-                if (this.ContextId != null)
-                    hash = hash * 59 + this.ContextId.GetHashCode();
                 
                 return hash;
             }

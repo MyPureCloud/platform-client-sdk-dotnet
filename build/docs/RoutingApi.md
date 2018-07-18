@@ -32,7 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingQueueUsers**](RoutingApi.html#getroutingqueueusers) | **GET** /api/v2/routing/queues/{queueId}/users | Get the members of this queue |
 | [**GetRoutingQueueWrapupcodes**](RoutingApi.html#getroutingqueuewrapupcodes) | **GET** /api/v2/routing/queues/{queueId}/wrapupcodes | Get the wrap-up codes for a queue |
 | [**GetRoutingQueues**](RoutingApi.html#getroutingqueues) | **GET** /api/v2/routing/queues | Get list of queues. |
-| [**GetRoutingQueuesSearch**](RoutingApi.html#getroutingqueuessearch) | **GET** /api/v2/routing/queues/search | Search for queues by name |
+| [**GetRoutingQueuesDivisionviews**](RoutingApi.html#getroutingqueuesdivisionviews) | **GET** /api/v2/routing/queues/divisionviews | Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s). |
 | [**GetRoutingSkill**](RoutingApi.html#getroutingskill) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
 | [**GetRoutingSkills**](RoutingApi.html#getroutingskills) | **GET** /api/v2/routing/skills | Get the list of routing skills. |
 | [**GetRoutingSmsAvailablephonenumbers**](RoutingApi.html#getroutingsmsavailablephonenumbers) | **GET** /api/v2/routing/sms/availablephonenumbers | Get a list of available phone numbers for SMS provisioning. |
@@ -1974,13 +1974,13 @@ namespace Example
 
 [**QueueEntityListing**](QueueEntityListing.html)
 
-<a name="getroutingqueuessearch"></a>
+<a name="getroutingqueuesdivisionviews"></a>
 
-## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueuesSearch (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
+## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueuesDivisionviews (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
 
 
 
-Search for queues by name
+Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
 
 
 
@@ -1998,7 +1998,7 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace Example
 {
-    public class GetRoutingQueuesSearchExample
+    public class GetRoutingQueuesDivisionviewsExample
     {
         public void main()
         {
@@ -2048,14 +2048,14 @@ namespace Example
             try
             {
                 
-                // Search for queues by name
+                // Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
                 
-                QueueEntityListing result = apiInstance.GetRoutingQueuesSearch(pageSize, pageNumber, sortBy, sortOrder, name, id, divisionId);
+                QueueEntityListing result = apiInstance.GetRoutingQueuesDivisionviews(pageSize, pageNumber, sortBy, sortOrder, name, id, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.GetRoutingQueuesSearch: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.GetRoutingQueuesDivisionviews: " + e.Message );
             }
         }
     }

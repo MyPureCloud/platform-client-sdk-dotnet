@@ -35,6 +35,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SurveyAssignment" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected SurveyAssignment() { }
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyAssignment" /> class.
@@ -42,11 +58,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurveyForm">The survey form used for this survey..</param>
         /// <param name="Flow">The URI reference to the flow associated with this survey..</param>
         /// <param name="InviteTimeInterval">An ISO 8601 repeated interval consisting of the number of repetitions, the start datetime, and the interval (e.g. R2/2018-03-01T13:00:00Z/P1M10DT2H30M). Total duration must not exceed 90 days..</param>
-        public SurveyAssignment(SurveyFormUriReference SurveyForm = null, UriReference Flow = null, string InviteTimeInterval = null)
+        /// <param name="SendingUser">User together with sendingDomain used to send email, null to use no-reply.</param>
+        /// <param name="SendingDomain">Validated email domain, required (required).</param>
+        public SurveyAssignment(PublishedSurveyFormReference SurveyForm = null, UriReference Flow = null, string InviteTimeInterval = null, string SendingUser = null, string SendingDomain = null)
         {
             this.SurveyForm = SurveyForm;
             this.Flow = Flow;
             this.InviteTimeInterval = InviteTimeInterval;
+            this.SendingUser = SendingUser;
+            this.SendingDomain = SendingDomain;
             
         }
         
@@ -57,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The survey form used for this survey.</value>
         [DataMember(Name="surveyForm", EmitDefaultValue=false)]
-        public SurveyFormUriReference SurveyForm { get; set; }
+        public PublishedSurveyFormReference SurveyForm { get; set; }
         
         
         
@@ -78,6 +98,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public string InviteTimeInterval { get; set; }
         
         
+        
+        /// <summary>
+        /// User together with sendingDomain used to send email, null to use no-reply
+        /// </summary>
+        /// <value>User together with sendingDomain used to send email, null to use no-reply</value>
+        [DataMember(Name="sendingUser", EmitDefaultValue=false)]
+        public string SendingUser { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Validated email domain, required
+        /// </summary>
+        /// <value>Validated email domain, required</value>
+        [DataMember(Name="sendingDomain", EmitDefaultValue=false)]
+        public string SendingDomain { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +128,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SurveyForm: ").Append(SurveyForm).Append("\n");
             sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  InviteTimeInterval: ").Append(InviteTimeInterval).Append("\n");
+            sb.Append("  SendingUser: ").Append(SendingUser).Append("\n");
+            sb.Append("  SendingDomain: ").Append(SendingDomain).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,6 +180,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InviteTimeInterval == other.InviteTimeInterval ||
                     this.InviteTimeInterval != null &&
                     this.InviteTimeInterval.Equals(other.InviteTimeInterval)
+                ) &&
+                (
+                    this.SendingUser == other.SendingUser ||
+                    this.SendingUser != null &&
+                    this.SendingUser.Equals(other.SendingUser)
+                ) &&
+                (
+                    this.SendingDomain == other.SendingDomain ||
+                    this.SendingDomain != null &&
+                    this.SendingDomain.Equals(other.SendingDomain)
                 );
         }
 
@@ -163,6 +213,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.InviteTimeInterval != null)
                     hash = hash * 59 + this.InviteTimeInterval.GetHashCode();
+                
+                if (this.SendingUser != null)
+                    hash = hash * 59 + this.SendingUser.GetHashCode();
+                
+                if (this.SendingDomain != null)
+                    hash = hash * 59 + this.SendingDomain.GetHashCode();
                 
                 return hash;
             }

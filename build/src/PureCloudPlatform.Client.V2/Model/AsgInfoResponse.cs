@@ -54,12 +54,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AsgInfoResponse" /> class.
         /// </summary>
+        /// <param name="Id">The full id of the asg &lt;orgId&gt;-&lt;siteId&gt;-ASG-&lt;asgVersion&gt;.</param>
         /// <param name="Site">The site that the asg belongs to..</param>
-        /// <param name="Ami">The ami ami of the asg..</param>
+        /// <param name="Ami">The version of the asg, ex &#39;003&#39;.</param>
         /// <param name="EdgeVersion">The software ami of the edges in the asg..</param>
         /// <param name="InstanceInfo">List of instances and their information that live in the ASG..</param>
-        public AsgInfoResponse(Site Site = null, string Ami = null, string EdgeVersion = null, List<InstanceInfo> InstanceInfo = null)
+        public AsgInfoResponse(string Id = null, Site Site = null, string Ami = null, string EdgeVersion = null, List<InstanceInfo> InstanceInfo = null)
         {
+            this.Id = Id;
             this.Site = Site;
             this.Ami = Ami;
             this.EdgeVersion = EdgeVersion;
@@ -70,11 +72,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The full id of the asg &lt;orgId&gt;-&lt;siteId&gt;-ASG-&lt;asgVersion&gt;
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The full id of the asg &lt;orgId&gt;-&lt;siteId&gt;-ASG-&lt;asgVersion&gt;</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         
@@ -88,9 +90,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The ami ami of the asg.
+        /// The version of the asg, ex &#39;003&#39;
         /// </summary>
-        /// <value>The ami ami of the asg.</value>
+        /// <value>The version of the asg, ex &#39;003&#39;</value>
         [DataMember(Name="ami", EmitDefaultValue=false)]
         public string Ami { get; set; }
         

@@ -36,6 +36,7 @@ Delete group
 Requires ANY permissions: 
 
 * group_administration
+* admin
 
 ### Example
 ~~~csharp
@@ -1019,6 +1020,7 @@ Update group
 Requires ANY permissions: 
 
 * group_administration
+* admin
 
 ### Example
 ~~~csharp

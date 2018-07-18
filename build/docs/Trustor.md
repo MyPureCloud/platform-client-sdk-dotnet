@@ -12,6 +12,7 @@ title: Trustor
 | **DateCreated** | **DateTime?** | Date Trust was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **CreatedBy** | [**OrgUser**](OrgUser.html) | User that created trust. | [optional] |
 | **Organization** | [**Organization**](Organization.html) | Organization associated with this trust. | [optional] |
+| **Authorization** | [**TrusteeAuthorization**](TrusteeAuthorization.html) | Authorization for the trustee user has in this trustor organization | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -85,6 +85,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyForm" /> class.
@@ -97,15 +102,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The survey form name (required).</param>
         /// <param name="Disabled">Is this form disabled.</param>
+        /// <param name="Language">Language for survey viewer localization. Currently localized languages: da, de, en-US, es, fi, fr, it, ja, ko, nl, no, pl, pt-BR, sv, th, tr, zh-CH, zh-TW (required).</param>
         /// <param name="HeaderImageId">Id of the header image appearing at the top of the form..</param>
         /// <param name="Header">Markdown text for the top of the form..</param>
         /// <param name="Footer">Markdown text for the bottom of the form..</param>
         /// <param name="QuestionGroups">A list of question groups (required).</param>
         /// <param name="PublishedVersions">List of published version of this form.</param>
-        public SurveyForm(string Name = null, bool? Disabled = null, string HeaderImageId = null, string Header = null, string Footer = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingSurveyForm PublishedVersions = null)
+        public SurveyForm(string Name = null, bool? Disabled = null, string Language = null, string HeaderImageId = null, string Header = null, string Footer = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingSurveyForm PublishedVersions = null)
         {
             this.Name = Name;
             this.Disabled = Disabled;
+            this.Language = Language;
             this.HeaderImageId = HeaderImageId;
             this.Header = Header;
             this.Footer = Footer;
@@ -167,6 +174,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Unique Id for all versions of this form</value>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Language for survey viewer localization. Currently localized languages: da, de, en-US, es, fi, fr, it, ja, ko, nl, no, pl, pt-BR, sv, th, tr, zh-CH, zh-TW
+        /// </summary>
+        /// <value>Language for survey viewer localization. Currently localized languages: da, de, en-US, es, fi, fr, it, ja, ko, nl, no, pl, pt-BR, sv, th, tr, zh-CH, zh-TW</value>
+        [DataMember(Name="language", EmitDefaultValue=false)]
+        public string Language { get; set; }
         
         
         
@@ -247,6 +263,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Published: ").Append(Published).Append("\n");
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
+            sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  HeaderImageId: ").Append(HeaderImageId).Append("\n");
             sb.Append("  HeaderImageUrl: ").Append(HeaderImageUrl).Append("\n");
             sb.Append("  Header: ").Append(Header).Append("\n");
@@ -321,6 +338,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContextId.Equals(other.ContextId)
                 ) &&
                 (
+                    this.Language == other.Language ||
+                    this.Language != null &&
+                    this.Language.Equals(other.Language)
+                ) &&
+                (
                     this.HeaderImageId == other.HeaderImageId ||
                     this.HeaderImageId != null &&
                     this.HeaderImageId.Equals(other.HeaderImageId)
@@ -386,6 +408,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ContextId != null)
                     hash = hash * 59 + this.ContextId.GetHashCode();
+                
+                if (this.Language != null)
+                    hash = hash * 59 + this.Language.GetHashCode();
                 
                 if (this.HeaderImageId != null)
                     hash = hash * 59 + this.HeaderImageId.GetHashCode();

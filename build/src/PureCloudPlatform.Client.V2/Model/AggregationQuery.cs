@@ -537,6 +537,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Thandle,
             
             /// <summary>
+            /// Enum Tcontacting for "tContacting"
+            /// </summary>
+            [EnumMember(Value = "tContacting")]
+            Tcontacting,
+            
+            /// <summary>
+            /// Enum Tdialing for "tDialing"
+            /// </summary>
+            [EnumMember(Value = "tDialing")]
+            Tdialing,
+            
+            /// <summary>
             /// Enum Twait for "tWait"
             /// </summary>
             [EnumMember(Value = "tWait")]
