@@ -1968,6 +1968,7 @@ Use \"recent\" for the `weekDateId` path parameter to fetch all forecasts for +/
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:administer
+* wfm:schedule:generate
 
 ### Example
 ~~~csharp

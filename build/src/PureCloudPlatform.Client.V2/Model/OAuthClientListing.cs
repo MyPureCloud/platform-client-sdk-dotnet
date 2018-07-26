@@ -80,6 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthClientListing" /> class.
@@ -100,7 +105,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreatedBy">User that created this client.</param>
         /// <param name="ModifiedBy">User that last modified this client.</param>
-        public OAuthClientListing(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null)
+        /// <param name="Scope">The scope requested by this client (required).</param>
+        public OAuthClientListing(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, List<string> Scope = null)
         {
             this.Name = Name;
             this.AccessTokenValiditySeconds = AccessTokenValiditySeconds;
@@ -112,6 +118,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateModified = DateModified;
             this.CreatedBy = CreatedBy;
             this.ModifiedBy = ModifiedBy;
+            this.Scope = Scope;
             
         }
         
@@ -216,6 +223,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The scope requested by this client
+        /// </summary>
+        /// <value>The scope requested by this client</value>
+        [DataMember(Name="scope", EmitDefaultValue=false)]
+        public List<string> Scope { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -243,6 +259,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            sb.Append("  Scope: ").Append(Scope).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -336,6 +353,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedBy.Equals(other.ModifiedBy)
                 ) &&
                 (
+                    this.Scope == other.Scope ||
+                    this.Scope != null &&
+                    this.Scope.SequenceEqual(other.Scope)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -386,6 +408,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
+                
+                if (this.Scope != null)
+                    hash = hash * 59 + this.Scope.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

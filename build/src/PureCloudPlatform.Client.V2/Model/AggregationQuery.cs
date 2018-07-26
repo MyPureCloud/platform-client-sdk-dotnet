@@ -400,6 +400,42 @@ namespace PureCloudPlatform.Client.V2.Model
             Eventtime,
             
             /// <summary>
+            /// Enum Surveyid for "surveyId"
+            /// </summary>
+            [EnumMember(Value = "surveyId")]
+            Surveyid,
+            
+            /// <summary>
+            /// Enum Surveyformcontextid for "surveyFormContextId"
+            /// </summary>
+            [EnumMember(Value = "surveyFormContextId")]
+            Surveyformcontextid,
+            
+            /// <summary>
+            /// Enum Surveyformid for "surveyFormId"
+            /// </summary>
+            [EnumMember(Value = "surveyFormId")]
+            Surveyformid,
+            
+            /// <summary>
+            /// Enum Surveyanswerid for "surveyAnswerId"
+            /// </summary>
+            [EnumMember(Value = "surveyAnswerId")]
+            Surveyanswerid,
+            
+            /// <summary>
+            /// Enum Surveyquestionid for "surveyQuestionId"
+            /// </summary>
+            [EnumMember(Value = "surveyQuestionId")]
+            Surveyquestionid,
+            
+            /// <summary>
+            /// Enum Surveyquestiongroupid for "surveyQuestionGroupId"
+            /// </summary>
+            [EnumMember(Value = "surveyQuestionGroupId")]
+            Surveyquestiongroupid,
+            
+            /// <summary>
             /// Enum Systempresence for "systemPresence"
             /// </summary>
             [EnumMember(Value = "systemPresence")]
@@ -738,7 +774,97 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Ouserroutingstatuses for "oUserRoutingStatuses"
             /// </summary>
             [EnumMember(Value = "oUserRoutingStatuses")]
-            Ouserroutingstatuses
+            Ouserroutingstatuses,
+            
+            /// <summary>
+            /// Enum Nsurveyssent for "nSurveysSent"
+            /// </summary>
+            [EnumMember(Value = "nSurveysSent")]
+            Nsurveyssent,
+            
+            /// <summary>
+            /// Enum Nsurveysstarted for "nSurveysStarted"
+            /// </summary>
+            [EnumMember(Value = "nSurveysStarted")]
+            Nsurveysstarted,
+            
+            /// <summary>
+            /// Enum Nsurveysabandoned for "nSurveysAbandoned"
+            /// </summary>
+            [EnumMember(Value = "nSurveysAbandoned")]
+            Nsurveysabandoned,
+            
+            /// <summary>
+            /// Enum Nsurveysexpired for "nSurveysExpired"
+            /// </summary>
+            [EnumMember(Value = "nSurveysExpired")]
+            Nsurveysexpired,
+            
+            /// <summary>
+            /// Enum Nsurveysbounced for "nSurveysBounced"
+            /// </summary>
+            [EnumMember(Value = "nSurveysBounced")]
+            Nsurveysbounced,
+            
+            /// <summary>
+            /// Enum Nsurveyresponses for "nSurveyResponses"
+            /// </summary>
+            [EnumMember(Value = "nSurveyResponses")]
+            Nsurveyresponses,
+            
+            /// <summary>
+            /// Enum Nsurveyanswerresponses for "nSurveyAnswerResponses"
+            /// </summary>
+            [EnumMember(Value = "nSurveyAnswerResponses")]
+            Nsurveyanswerresponses,
+            
+            /// <summary>
+            /// Enum Osurveytotalscore for "oSurveyTotalScore"
+            /// </summary>
+            [EnumMember(Value = "oSurveyTotalScore")]
+            Osurveytotalscore,
+            
+            /// <summary>
+            /// Enum Osurveyquestiongroupscore for "oSurveyQuestionGroupScore"
+            /// </summary>
+            [EnumMember(Value = "oSurveyQuestionGroupScore")]
+            Osurveyquestiongroupscore,
+            
+            /// <summary>
+            /// Enum Nsurveyquestiongroupresponses for "nSurveyQuestionGroupResponses"
+            /// </summary>
+            [EnumMember(Value = "nSurveyQuestionGroupResponses")]
+            Nsurveyquestiongroupresponses,
+            
+            /// <summary>
+            /// Enum Osurveyquestionscore for "oSurveyQuestionScore"
+            /// </summary>
+            [EnumMember(Value = "oSurveyQuestionScore")]
+            Osurveyquestionscore,
+            
+            /// <summary>
+            /// Enum Nsurveyquestionresponses for "nSurveyQuestionResponses"
+            /// </summary>
+            [EnumMember(Value = "nSurveyQuestionResponses")]
+            Nsurveyquestionresponses,
+            
+            /// <summary>
+            /// Enum Nsurveynpsresponses for "nSurveyNpsResponses"
+            /// </summary>
+            [EnumMember(Value = "nSurveyNpsResponses")]
+            Nsurveynpsresponses,
+            
+            /// <summary>
+            /// Enum Nsurveynpspromoters for "nSurveyNpsPromoters"
+            /// </summary>
+            [EnumMember(Value = "nSurveyNpsPromoters")]
+            Nsurveynpspromoters,
+            
+            /// <summary>
+            /// Enum Nsurveynpsdetractors for "nSurveyNpsDetractors"
+            /// </summary>
+            [EnumMember(Value = "nSurveyNpsDetractors")]
+            Nsurveynpsdetractors
         }
         
         

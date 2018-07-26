@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversation" /> class.
@@ -59,14 +64,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationEnd">Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Participants">Participants in the conversation.</param>
         /// <param name="Evaluations">Evaluations tied to this conversation.</param>
+        /// <param name="Surveys">Surveys tied to this conversation.</param>
         /// <param name="DivisionIds">Identifiers of divisions associated with this conversation.</param>
-        public AnalyticsConversation(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, List<AnalyticsParticipant> Participants = null, List<AnalyticsEvaluation> Evaluations = null, List<string> DivisionIds = null)
+        public AnalyticsConversation(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, List<AnalyticsParticipant> Participants = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<string> DivisionIds = null)
         {
             this.ConversationId = ConversationId;
             this.ConversationStart = ConversationStart;
             this.ConversationEnd = ConversationEnd;
             this.Participants = Participants;
             this.Evaluations = Evaluations;
+            this.Surveys = Surveys;
             this.DivisionIds = DivisionIds;
             
         }
@@ -119,6 +126,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Surveys tied to this conversation
+        /// </summary>
+        /// <value>Surveys tied to this conversation</value>
+        [DataMember(Name="surveys", EmitDefaultValue=false)]
+        public List<AnalyticsSurvey> Surveys { get; set; }
+        
+        
+        
+        /// <summary>
         /// Identifiers of divisions associated with this conversation
         /// </summary>
         /// <value>Identifiers of divisions associated with this conversation</value>
@@ -140,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationEnd: ").Append(ConversationEnd).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
+            sb.Append("  Surveys: ").Append(Surveys).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -203,6 +220,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Evaluations.SequenceEqual(other.Evaluations)
                 ) &&
                 (
+                    this.Surveys == other.Surveys ||
+                    this.Surveys != null &&
+                    this.Surveys.SequenceEqual(other.Surveys)
+                ) &&
+                (
                     this.DivisionIds == other.DivisionIds ||
                     this.DivisionIds != null &&
                     this.DivisionIds.SequenceEqual(other.DivisionIds)
@@ -235,6 +257,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Evaluations != null)
                     hash = hash * 59 + this.Evaluations.GetHashCode();
+                
+                if (this.Surveys != null)
+                    hash = hash * 59 + this.Surveys.GetHashCode();
                 
                 if (this.DivisionIds != null)
                     hash = hash * 59 + this.DivisionIds.GetHashCode();

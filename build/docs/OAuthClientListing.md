@@ -18,6 +18,7 @@ title: OAuthClientListing
 | **DateModified** | **DateTime?** | Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **CreatedBy** | [**UriReference**](UriReference.html) | User that created this client | [optional] |
 | **ModifiedBy** | [**UriReference**](UriReference.html) | User that last modified this client | [optional] |
+| **Scope** | **List&lt;string&gt;** | The scope requested by this client | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

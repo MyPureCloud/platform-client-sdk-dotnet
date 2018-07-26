@@ -1222,9 +1222,8 @@ Get the list of supported languages.
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* routing:skill:manage
 
 ### Example
 ~~~csharp
@@ -2090,9 +2089,8 @@ Get Routing Skill
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* routing:skill:manage
 
 ### Example
 ~~~csharp
@@ -2160,9 +2158,8 @@ Get the list of routing skills.
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* routing:skill:manage
 
 ### Example
 ~~~csharp

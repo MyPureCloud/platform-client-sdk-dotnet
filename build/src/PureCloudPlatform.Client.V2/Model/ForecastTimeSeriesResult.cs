@@ -85,10 +85,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Autoregressiveintegratedmovingaverage,
             
             /// <summary>
-            /// Enum Simplemovingaverage for "SimpleMovingAverage"
+            /// Enum Movingaverage for "MovingAverage"
             /// </summary>
-            [EnumMember(Value = "SimpleMovingAverage")]
-            Simplemovingaverage,
+            [EnumMember(Value = "MovingAverage")]
+            Movingaverage,
             
             /// <summary>
             /// Enum Singleexponentialsmoothing for "SingleExponentialSmoothing"
@@ -97,10 +97,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Singleexponentialsmoothing,
             
             /// <summary>
-            /// Enum Samevalueforecast for "SameValueForecast"
+            /// Enum Randomwalk for "RandomWalk"
             /// </summary>
-            [EnumMember(Value = "SameValueForecast")]
-            Samevalueforecast,
+            [EnumMember(Value = "RandomWalk")]
+            Randomwalk,
             
             /// <summary>
             /// Enum Decompositionusingadditiveseasonality for "DecompositionUsingAdditiveSeasonality"
@@ -185,6 +185,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "PointEstimateUsingLinearExponentialSmoothing")]
             Pointestimateusinglinearexponentialsmoothing,
+            
+            /// <summary>
+            /// Enum Curvefit for "CurveFit"
+            /// </summary>
+            [EnumMember(Value = "CurveFit")]
+            Curvefit,
+            
+            /// <summary>
+            /// Enum Multilinearregression for "MultiLinearRegression"
+            /// </summary>
+            [EnumMember(Value = "MultiLinearRegression")]
+            Multilinearregression,
             
             /// <summary>
             /// Enum Other for "Other"
