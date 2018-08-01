@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AnyFailedKillQuestions">AnyFailedKillQuestions.</param>
         /// <param name="Comments">Comments.</param>
         /// <param name="AgentComments">AgentComments.</param>
-        public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, List<QuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string AgentComments = null)
+        public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, List<EvaluationQuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string AgentComments = null)
         {
             this.TotalScore = TotalScore;
             this.TotalCriticalScore = TotalCriticalScore;
@@ -93,7 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets QuestionGroupScores
         /// </summary>
         [DataMember(Name="questionGroupScores", EmitDefaultValue=false)]
-        public List<QuestionGroupScore> QuestionGroupScores { get; set; }
+        public List<EvaluationQuestionGroupScore> QuestionGroupScores { get; set; }
         
         
         

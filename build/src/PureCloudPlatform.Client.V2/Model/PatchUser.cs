@@ -30,11 +30,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchUser" /> class.
@@ -67,15 +62,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AcdAutoAnswer { get; set; }
         
         
-        
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -87,7 +73,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -133,11 +118,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AcdAutoAnswer == other.AcdAutoAnswer ||
                     this.AcdAutoAnswer != null &&
                     this.AcdAutoAnswer.Equals(other.AcdAutoAnswer)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -158,9 +138,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AcdAutoAnswer != null)
                     hash = hash * 59 + this.AcdAutoAnswer.GetHashCode();
-                
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

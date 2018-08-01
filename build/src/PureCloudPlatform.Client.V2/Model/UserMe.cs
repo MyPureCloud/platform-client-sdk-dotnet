@@ -191,12 +191,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -308,7 +313,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FieldConfigs">The field config for all entities types of user&#39;s organization.</param>
         /// <param name="Token">Information about the current token.</param>
         /// <param name="Trustors">Organizations having this user as a trustee.</param>
-        public UserMe(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, bool? AcdAutoAnswer = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null, FieldConfigs FieldConfigs = null, TokenInfo Token = null, List<Trustor> Trustors = null)
+        /// <param name="OrgProducts">Products enabled in this organization.</param>
+        public UserMe(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, bool? AcdAutoAnswer = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null, FieldConfigs FieldConfigs = null, TokenInfo Token = null, List<Trustor> Trustors = null, List<DomainOrganizationProduct> OrgProducts = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -347,6 +353,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FieldConfigs = FieldConfigs;
             this.Token = Token;
             this.Trustors = Trustors;
+            this.OrgProducts = OrgProducts;
             
         }
         
@@ -689,6 +696,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Products enabled in this organization
+        /// </summary>
+        /// <value>Products enabled in this organization</value>
+        [DataMember(Name="orgProducts", EmitDefaultValue=false)]
+        public List<DomainOrganizationProduct> OrgProducts { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -744,6 +760,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FieldConfigs: ").Append(FieldConfigs).Append("\n");
             sb.Append("  Token: ").Append(Token).Append("\n");
             sb.Append("  Trustors: ").Append(Trustors).Append("\n");
+            sb.Append("  OrgProducts: ").Append(OrgProducts).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -977,6 +994,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Trustors.SequenceEqual(other.Trustors)
                 ) &&
                 (
+                    this.OrgProducts == other.OrgProducts ||
+                    this.OrgProducts != null &&
+                    this.OrgProducts.SequenceEqual(other.OrgProducts)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -1111,6 +1133,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Trustors != null)
                     hash = hash * 59 + this.Trustors.GetHashCode();
+                
+                if (this.OrgProducts != null)
+                    hash = hash * 59 + this.OrgProducts.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// QuestionGroupScore
+    /// EvaluationQuestionGroupScore
     /// </summary>
     [DataContract]
-    public partial class QuestionGroupScore :  IEquatable<QuestionGroupScore>
+    public partial class EvaluationQuestionGroupScore :  IEquatable<EvaluationQuestionGroupScore>
     {
         
         
@@ -77,31 +77,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="QuestionGroupScore" /> class.
+        /// Initializes a new instance of the <see cref="EvaluationQuestionGroupScore" /> class.
         /// </summary>
         /// <param name="QuestionGroupId">QuestionGroupId.</param>
         /// <param name="TotalScore">TotalScore.</param>
         /// <param name="MaxTotalScore">MaxTotalScore.</param>
+        /// <param name="MarkedNA">MarkedNA.</param>
         /// <param name="TotalCriticalScore">TotalCriticalScore.</param>
         /// <param name="MaxTotalCriticalScore">MaxTotalCriticalScore.</param>
         /// <param name="TotalScoreUnweighted">TotalScoreUnweighted.</param>
         /// <param name="MaxTotalScoreUnweighted">MaxTotalScoreUnweighted.</param>
         /// <param name="TotalCriticalScoreUnweighted">TotalCriticalScoreUnweighted.</param>
         /// <param name="MaxTotalCriticalScoreUnweighted">MaxTotalCriticalScoreUnweighted.</param>
-        /// <param name="MarkedNA">MarkedNA.</param>
         /// <param name="QuestionScores">QuestionScores.</param>
-        public QuestionGroupScore(string QuestionGroupId = null, float? TotalScore = null, float? MaxTotalScore = null, float? TotalCriticalScore = null, float? MaxTotalCriticalScore = null, float? TotalScoreUnweighted = null, float? MaxTotalScoreUnweighted = null, float? TotalCriticalScoreUnweighted = null, float? MaxTotalCriticalScoreUnweighted = null, bool? MarkedNA = null, List<QuestionScore> QuestionScores = null)
+        public EvaluationQuestionGroupScore(string QuestionGroupId = null, float? TotalScore = null, float? MaxTotalScore = null, bool? MarkedNA = null, float? TotalCriticalScore = null, float? MaxTotalCriticalScore = null, float? TotalScoreUnweighted = null, float? MaxTotalScoreUnweighted = null, float? TotalCriticalScoreUnweighted = null, float? MaxTotalCriticalScoreUnweighted = null, List<EvaluationQuestionScore> QuestionScores = null)
         {
             this.QuestionGroupId = QuestionGroupId;
             this.TotalScore = TotalScore;
             this.MaxTotalScore = MaxTotalScore;
+            this.MarkedNA = MarkedNA;
             this.TotalCriticalScore = TotalCriticalScore;
             this.MaxTotalCriticalScore = MaxTotalCriticalScore;
             this.TotalScoreUnweighted = TotalScoreUnweighted;
             this.MaxTotalScoreUnweighted = MaxTotalScoreUnweighted;
             this.TotalCriticalScoreUnweighted = TotalCriticalScoreUnweighted;
             this.MaxTotalCriticalScoreUnweighted = MaxTotalCriticalScoreUnweighted;
-            this.MarkedNA = MarkedNA;
             this.QuestionScores = QuestionScores;
             
         }
@@ -129,6 +129,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="maxTotalScore", EmitDefaultValue=false)]
         public float? MaxTotalScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets MarkedNA
+        /// </summary>
+        [DataMember(Name="markedNA", EmitDefaultValue=false)]
+        public bool? MarkedNA { get; set; }
         
         
         
@@ -181,18 +189,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets MarkedNA
-        /// </summary>
-        [DataMember(Name="markedNA", EmitDefaultValue=false)]
-        public bool? MarkedNA { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets QuestionScores
         /// </summary>
         [DataMember(Name="questionScores", EmitDefaultValue=false)]
-        public List<QuestionScore> QuestionScores { get; set; }
+        public List<EvaluationQuestionScore> QuestionScores { get; set; }
         
         
         /// <summary>
@@ -202,18 +202,18 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class QuestionGroupScore {\n");
+            sb.Append("class EvaluationQuestionGroupScore {\n");
             
             sb.Append("  QuestionGroupId: ").Append(QuestionGroupId).Append("\n");
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
             sb.Append("  MaxTotalScore: ").Append(MaxTotalScore).Append("\n");
+            sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
             sb.Append("  TotalCriticalScore: ").Append(TotalCriticalScore).Append("\n");
             sb.Append("  MaxTotalCriticalScore: ").Append(MaxTotalCriticalScore).Append("\n");
             sb.Append("  TotalScoreUnweighted: ").Append(TotalScoreUnweighted).Append("\n");
             sb.Append("  MaxTotalScoreUnweighted: ").Append(MaxTotalScoreUnweighted).Append("\n");
             sb.Append("  TotalCriticalScoreUnweighted: ").Append(TotalCriticalScoreUnweighted).Append("\n");
             sb.Append("  MaxTotalCriticalScoreUnweighted: ").Append(MaxTotalCriticalScoreUnweighted).Append("\n");
-            sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
             sb.Append("  QuestionScores: ").Append(QuestionScores).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -236,15 +236,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as QuestionGroupScore);
+            return this.Equals(obj as EvaluationQuestionGroupScore);
         }
 
         /// <summary>
-        /// Returns true if QuestionGroupScore instances are equal
+        /// Returns true if EvaluationQuestionGroupScore instances are equal
         /// </summary>
-        /// <param name="other">Instance of QuestionGroupScore to be compared</param>
+        /// <param name="other">Instance of EvaluationQuestionGroupScore to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(QuestionGroupScore other)
+        public bool Equals(EvaluationQuestionGroupScore other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -265,6 +265,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxTotalScore == other.MaxTotalScore ||
                     this.MaxTotalScore != null &&
                     this.MaxTotalScore.Equals(other.MaxTotalScore)
+                ) &&
+                (
+                    this.MarkedNA == other.MarkedNA ||
+                    this.MarkedNA != null &&
+                    this.MarkedNA.Equals(other.MarkedNA)
                 ) &&
                 (
                     this.TotalCriticalScore == other.TotalCriticalScore ||
@@ -297,11 +302,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxTotalCriticalScoreUnweighted.Equals(other.MaxTotalCriticalScoreUnweighted)
                 ) &&
                 (
-                    this.MarkedNA == other.MarkedNA ||
-                    this.MarkedNA != null &&
-                    this.MarkedNA.Equals(other.MarkedNA)
-                ) &&
-                (
                     this.QuestionScores == other.QuestionScores ||
                     this.QuestionScores != null &&
                     this.QuestionScores.SequenceEqual(other.QuestionScores)
@@ -329,6 +329,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.MaxTotalScore != null)
                     hash = hash * 59 + this.MaxTotalScore.GetHashCode();
                 
+                if (this.MarkedNA != null)
+                    hash = hash * 59 + this.MarkedNA.GetHashCode();
+                
                 if (this.TotalCriticalScore != null)
                     hash = hash * 59 + this.TotalCriticalScore.GetHashCode();
                 
@@ -346,9 +349,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MaxTotalCriticalScoreUnweighted != null)
                     hash = hash * 59 + this.MaxTotalCriticalScoreUnweighted.GetHashCode();
-                
-                if (this.MarkedNA != null)
-                    hash = hash * 59 + this.MarkedNA.GetHashCode();
                 
                 if (this.QuestionScores != null)
                     hash = hash * 59 + this.QuestionScores.GetHashCode();

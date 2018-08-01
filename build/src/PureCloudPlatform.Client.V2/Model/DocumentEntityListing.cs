@@ -79,22 +79,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PageNumber">PageNumber.</param>
         /// <param name="Total">Total.</param>
         /// <param name="SelfUri">SelfUri.</param>
+        /// <param name="FirstUri">FirstUri.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
         /// <param name="NextUri">NextUri.</param>
         /// <param name="LastUri">LastUri.</param>
-        /// <param name="FirstUri">FirstUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public DocumentEntityListing(List<Document> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string SelfUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, string FirstUri = null, int? PageCount = null)
+        public DocumentEntityListing(List<Document> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string SelfUri = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
             this.Total = Total;
             this.SelfUri = SelfUri;
+            this.FirstUri = FirstUri;
             this.PreviousUri = PreviousUri;
             this.NextUri = NextUri;
             this.LastUri = LastUri;
-            this.FirstUri = FirstUri;
             this.PageCount = PageCount;
             
         }
@@ -142,6 +142,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets FirstUri
+        /// </summary>
+        [DataMember(Name="firstUri", EmitDefaultValue=false)]
+        public string FirstUri { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets PreviousUri
         /// </summary>
         [DataMember(Name="previousUri", EmitDefaultValue=false)]
@@ -166,14 +174,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets FirstUri
-        /// </summary>
-        [DataMember(Name="firstUri", EmitDefaultValue=false)]
-        public string FirstUri { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets PageCount
         /// </summary>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
@@ -194,10 +194,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  FirstUri: ").Append(FirstUri).Append("\n");
             sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
             sb.Append("  NextUri: ").Append(NextUri).Append("\n");
             sb.Append("  LastUri: ").Append(LastUri).Append("\n");
-            sb.Append("  FirstUri: ").Append(FirstUri).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -261,6 +261,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelfUri.Equals(other.SelfUri)
                 ) &&
                 (
+                    this.FirstUri == other.FirstUri ||
+                    this.FirstUri != null &&
+                    this.FirstUri.Equals(other.FirstUri)
+                ) &&
+                (
                     this.PreviousUri == other.PreviousUri ||
                     this.PreviousUri != null &&
                     this.PreviousUri.Equals(other.PreviousUri)
@@ -274,11 +279,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LastUri == other.LastUri ||
                     this.LastUri != null &&
                     this.LastUri.Equals(other.LastUri)
-                ) &&
-                (
-                    this.FirstUri == other.FirstUri ||
-                    this.FirstUri != null &&
-                    this.FirstUri.Equals(other.FirstUri)
                 ) &&
                 (
                     this.PageCount == other.PageCount ||
@@ -314,6 +314,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 
+                if (this.FirstUri != null)
+                    hash = hash * 59 + this.FirstUri.GetHashCode();
+                
                 if (this.PreviousUri != null)
                     hash = hash * 59 + this.PreviousUri.GetHashCode();
                 
@@ -322,9 +325,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LastUri != null)
                     hash = hash * 59 + this.LastUri.GetHashCode();
-                
-                if (this.FirstUri != null)
-                    hash = hash * 59 + this.FirstUri.GetHashCode();
                 
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();

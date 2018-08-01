@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// QuestionScore
+    /// EvaluationQuestionScore
     /// </summary>
     [DataContract]
-    public partial class QuestionScore :  IEquatable<QuestionScore>
+    public partial class EvaluationQuestionScore :  IEquatable<EvaluationQuestionScore>
     {
         
         
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="QuestionScore" /> class.
+        /// Initializes a new instance of the <see cref="EvaluationQuestionScore" /> class.
         /// </summary>
         /// <param name="QuestionId">QuestionId.</param>
         /// <param name="AnswerId">AnswerId.</param>
@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MarkedNA">MarkedNA.</param>
         /// <param name="FailedKillQuestion">FailedKillQuestion.</param>
         /// <param name="Comments">Comments.</param>
-        public QuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, bool? FailedKillQuestion = null, string Comments = null)
+        public EvaluationQuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, bool? FailedKillQuestion = null, string Comments = null)
         {
             this.QuestionId = QuestionId;
             this.AnswerId = AnswerId;
@@ -127,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class QuestionScore {\n");
+            sb.Append("class EvaluationQuestionScore {\n");
             
             sb.Append("  QuestionId: ").Append(QuestionId).Append("\n");
             sb.Append("  AnswerId: ").Append(AnswerId).Append("\n");
@@ -156,15 +156,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as QuestionScore);
+            return this.Equals(obj as EvaluationQuestionScore);
         }
 
         /// <summary>
-        /// Returns true if QuestionScore instances are equal
+        /// Returns true if EvaluationQuestionScore instances are equal
         /// </summary>
-        /// <param name="other">Instance of QuestionScore to be compared</param>
+        /// <param name="other">Instance of EvaluationQuestionScore to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(QuestionScore other)
+        public bool Equals(EvaluationQuestionScore other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

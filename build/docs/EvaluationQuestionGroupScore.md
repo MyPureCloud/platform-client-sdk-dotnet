@@ -1,7 +1,7 @@
 ---
-title: QuestionGroupScore
+title: EvaluationQuestionGroupScore
 ---
-## ININ.PureCloudApi.Model.QuestionGroupScore
+## ININ.PureCloudApi.Model.EvaluationQuestionGroupScore
 
 ## Properties
 
@@ -10,14 +10,14 @@ title: QuestionGroupScore
 | **QuestionGroupId** | **string** |  | [optional] |
 | **TotalScore** | **float?** |  | [optional] |
 | **MaxTotalScore** | **float?** |  | [optional] |
+| **MarkedNA** | **bool?** |  | [optional] |
 | **TotalCriticalScore** | **float?** |  | [optional] |
 | **MaxTotalCriticalScore** | **float?** |  | [optional] |
 | **TotalScoreUnweighted** | **float?** |  | [optional] |
 | **MaxTotalScoreUnweighted** | **float?** |  | [optional] |
 | **TotalCriticalScoreUnweighted** | **float?** |  | [optional] |
 | **MaxTotalCriticalScoreUnweighted** | **float?** |  | [optional] |
-| **MarkedNA** | **bool?** |  | [optional] |
-| **QuestionScores** | [**List&lt;QuestionScore&gt;**](QuestionScore.html) |  | [optional] |
+| **QuestionScores** | [**List&lt;EvaluationQuestionScore&gt;**](EvaluationQuestionScore.html) |  | [optional] |
 {: class="table table-striped"}
 
 

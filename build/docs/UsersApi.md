@@ -72,8 +72,11 @@ Delete user
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:delete
+* user_manager
+* user_administration
 
 ### Example
 ~~~csharp
@@ -1360,7 +1363,7 @@ Get queues for user
 
 Requires ANY permissions: 
 
-* routing:queue:view
+* routing:queue:join
 
 ### Example
 ~~~csharp
@@ -2142,7 +2145,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token, trustors |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, orgproducts, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token, trustors |
 {: class="table table-striped"}
 
 ### Return type
@@ -2234,8 +2237,11 @@ Update user
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:edit
+* user_manager
+* user_administration
 
 ### Example
 ~~~csharp

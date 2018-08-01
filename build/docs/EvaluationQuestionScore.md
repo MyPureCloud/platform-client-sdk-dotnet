@@ -1,7 +1,7 @@
 ---
-title: QuestionScore
+title: EvaluationQuestionScore
 ---
-## ININ.PureCloudApi.Model.QuestionScore
+## ININ.PureCloudApi.Model.EvaluationQuestionScore
 
 ## Properties
 

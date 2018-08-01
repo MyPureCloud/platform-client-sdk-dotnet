@@ -9,7 +9,6 @@ title: PatchUser
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **AcdAutoAnswer** | **bool?** | The value that denotes if acdAutoAnswer is set on the user | [optional] |
-| **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 
 
