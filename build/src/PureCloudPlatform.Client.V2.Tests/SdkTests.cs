@@ -59,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Tests
         [Test, Order(1)]
         public void Authenticate()
         {
+            PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.RestClient.BaseUrl = new Uri("https://api." + environment);
             var accessTokenInfo = PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.PostToken(clientId, clientSecret);
             PureCloudPlatform.Client.V2.Client.Configuration.Default.AccessToken = accessTokenInfo.AccessToken;
 

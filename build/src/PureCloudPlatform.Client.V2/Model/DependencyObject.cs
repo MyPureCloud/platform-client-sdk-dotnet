@@ -104,6 +104,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Emergencygroup,
             
             /// <summary>
+            /// Enum Flowoutcome for "FLOWOUTCOME"
+            /// </summary>
+            [EnumMember(Value = "FLOWOUTCOME")]
+            Flowoutcome,
+            
+            /// <summary>
             /// Enum Group for "GROUP"
             /// </summary>
             [EnumMember(Value = "GROUP")]
