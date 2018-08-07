@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuthorizationProducts**](AuthorizationApi.html#getauthorizationproducts) | **GET** /api/v2/authorization/products | Get the list of enabled products |
 | [**GetAuthorizationRole**](AuthorizationApi.html#getauthorizationrole) | **GET** /api/v2/authorization/roles/{roleId} | Get a single organization role. |
 | [**GetAuthorizationRoleComparedefaultRightRoleId**](AuthorizationApi.html#getauthorizationrolecomparedefaultrightroleid) | **GET** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an org role to default role comparison comparison |
+| [**GetAuthorizationRoleSubjectgrants**](AuthorizationApi.html#getauthorizationrolesubjectgrants) | **GET** /api/v2/authorization/roles/{roleId}/subjectgrants | Get the subjects&#39; granted divisions in the specified role. |
 | [**GetAuthorizationRoles**](AuthorizationApi.html#getauthorizationroles) | **GET** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
 | [**GetUserRoles**](AuthorizationApi.html#getuserroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
 | [**PatchAuthorizationRole**](AuthorizationApi.html#patchauthorizationrole) | **PATCH** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
@@ -448,6 +449,112 @@ namespace Example
 ### Return type
 
 [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html)
+
+<a name="getauthorizationrolesubjectgrants"></a>
+
+## [**SubjectDivisionGrantsEntityListing**](SubjectDivisionGrantsEntityListing.html) GetAuthorizationRoleSubjectgrants (string roleId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+
+
+
+Get the subjects' granted divisions in the specified role.
+
+Includes the divisions for which the subject has a grant.
+
+Requires ANY permissions: 
+
+* authorization:role:view
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationRoleSubjectgrantsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            var roleId = roleId_example;  // string | Role ID
+            
+            
+            
+            
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            
+            
+            
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Get the subjects' granted divisions in the specified role.
+                
+                SubjectDivisionGrantsEntityListing result = apiInstance.GetAuthorizationRoleSubjectgrants(roleId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationRoleSubjectgrants: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **roleId** | **string**| Role ID |  |
+| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **string**| variable name requested to sort by | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **nextPage** | **string**| next page token | [optional]  |
+| **previousPage** | **string**| Previous page token | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SubjectDivisionGrantsEntityListing**](SubjectDivisionGrantsEntityListing.html)
 
 <a name="getauthorizationroles"></a>
 

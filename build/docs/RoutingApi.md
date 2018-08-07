@@ -52,7 +52,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRoutingLanguages**](RoutingApi.html#postroutinglanguages) | **POST** /api/v2/routing/languages | Create Language |
 | [**PostRoutingQueueUsers**](RoutingApi.html#postroutingqueueusers) | **POST** /api/v2/routing/queues/{queueId}/users | Bulk add or delete up to 100 queue members |
 | [**PostRoutingQueueWrapupcodes**](RoutingApi.html#postroutingqueuewrapupcodes) | **POST** /api/v2/routing/queues/{queueId}/wrapupcodes | Add up to 100 wrap-up codes to a queue |
-| [**PostRoutingQueues**](RoutingApi.html#postroutingqueues) | **POST** /api/v2/routing/queues | Create queue |
+| [**PostRoutingQueues**](RoutingApi.html#postroutingqueues) | **POST** /api/v2/routing/queues | Create a queue |
 | [**PostRoutingSkills**](RoutingApi.html#postroutingskills) | **POST** /api/v2/routing/skills | Create Skill |
 | [**PostRoutingSmsAddresses**](RoutingApi.html#postroutingsmsaddresses) | **POST** /api/v2/routing/sms/addresses | Provision an Address for SMS |
 | [**PostRoutingSmsPhonenumbers**](RoutingApi.html#postroutingsmsphonenumbers) | **POST** /api/v2/routing/sms/phonenumbers | Provision a phone number for SMS |
@@ -3584,7 +3584,7 @@ namespace Example
 
 
 
-Create queue
+Create a queue
 
 
 
@@ -3622,7 +3622,7 @@ namespace Example
             try
             {
                 
-                // Create queue
+                // Create a queue
                 
                 Queue result = apiInstance.PostRoutingQueues(body);
                 Debug.WriteLine(result);
@@ -4242,7 +4242,7 @@ namespace Example
 
 <a name="putroutingqueue"></a>
 
-## [**Queue**](Queue.html) PutRoutingQueue (string queueId, Queue body)
+## [**Queue**](Queue.html) PutRoutingQueue (string queueId, QueueRequest body)
 
 
 
@@ -4282,7 +4282,7 @@ namespace Example
             
             
             
-            var body = new Queue(); // Queue | Queue
+            var body = new QueueRequest(); // QueueRequest | Queue
             
             
 
@@ -4309,7 +4309,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **body** | [**Queue**](Queue.html)| Queue |  |
+| **body** | [**QueueRequest**](QueueRequest.html)| Queue |  |
 {: class="table table-striped"}
 
 ### Return type

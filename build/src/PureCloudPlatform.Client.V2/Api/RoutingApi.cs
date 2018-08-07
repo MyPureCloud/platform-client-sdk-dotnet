@@ -1135,7 +1135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<WrapupCode>> PostRoutingQueueWrapupcodesWithHttpInfo (string queueId, List<WrapUpCodeReference> body);
         
         /// <summary>
-        /// Create queue
+        /// Create a queue
         /// </summary>
         /// <remarks>
         /// 
@@ -1146,7 +1146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Queue PostRoutingQueues (CreateQueueRequest body);
 
         /// <summary>
-        /// Create queue
+        /// Create a queue
         /// </summary>
         /// <remarks>
         /// 
@@ -1352,7 +1352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Queue</returns>
-        Queue PutRoutingQueue (string queueId, Queue body);
+        Queue PutRoutingQueue (string queueId, QueueRequest body);
 
         /// <summary>
         /// Update a queue
@@ -1364,7 +1364,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>ApiResponse of Queue</returns>
-        ApiResponse<Queue> PutRoutingQueueWithHttpInfo (string queueId, Queue body);
+        ApiResponse<Queue> PutRoutingQueueWithHttpInfo (string queueId, QueueRequest body);
         
         /// <summary>
         /// Update a phone number provisioned for SMS.
@@ -2585,7 +2585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostRoutingQueueWrapupcodesAsyncWithHttpInfo (string queueId, List<WrapUpCodeReference> body);
         
         /// <summary>
-        /// Create queue
+        /// Create a queue
         /// </summary>
         /// <remarks>
         /// 
@@ -2596,7 +2596,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Queue> PostRoutingQueuesAsync (CreateQueueRequest body);
 
         /// <summary>
-        /// Create queue
+        /// Create a queue
         /// </summary>
         /// <remarks>
         /// 
@@ -2802,7 +2802,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
-        System.Threading.Tasks.Task<Queue> PutRoutingQueueAsync (string queueId, Queue body);
+        System.Threading.Tasks.Task<Queue> PutRoutingQueueAsync (string queueId, QueueRequest body);
 
         /// <summary>
         /// Update a queue
@@ -2814,7 +2814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Queue>> PutRoutingQueueAsyncWithHttpInfo (string queueId, Queue body);
+        System.Threading.Tasks.Task<ApiResponse<Queue>> PutRoutingQueueAsyncWithHttpInfo (string queueId, QueueRequest body);
         
         /// <summary>
         /// Update a phone number provisioned for SMS.
@@ -12159,7 +12159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create queue 
+        /// Create a queue 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
@@ -12171,7 +12171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create queue 
+        /// Create a queue 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
@@ -12258,7 +12258,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Create queue 
+        /// Create a queue 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
@@ -12271,7 +12271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create queue 
+        /// Create a queue 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
@@ -14039,7 +14039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Queue</returns>
-        public Queue PutRoutingQueue (string queueId, Queue body)
+        public Queue PutRoutingQueue (string queueId, QueueRequest body)
         {
              ApiResponse<Queue> localVarResponse = PutRoutingQueueWithHttpInfo(queueId, body);
              return localVarResponse.Data;
@@ -14052,7 +14052,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>ApiResponse of Queue</returns>
-        public ApiResponse< Queue > PutRoutingQueueWithHttpInfo (string queueId, Queue body)
+        public ApiResponse< Queue > PutRoutingQueueWithHttpInfo (string queueId, QueueRequest body)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -14144,7 +14144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
-        public async System.Threading.Tasks.Task<Queue> PutRoutingQueueAsync (string queueId, Queue body)
+        public async System.Threading.Tasks.Task<Queue> PutRoutingQueueAsync (string queueId, QueueRequest body)
         {
              ApiResponse<Queue> localVarResponse = await PutRoutingQueueAsyncWithHttpInfo(queueId, body);
              return localVarResponse.Data;
@@ -14158,7 +14158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Queue>> PutRoutingQueueAsyncWithHttpInfo (string queueId, Queue body)
+        public async System.Threading.Tasks.Task<ApiResponse<Queue>> PutRoutingQueueAsyncWithHttpInfo (string queueId, QueueRequest body)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)

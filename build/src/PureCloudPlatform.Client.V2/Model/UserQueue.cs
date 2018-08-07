@@ -182,9 +182,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// Indicates if the queue is active, inactive, or deleted.
         /// </summary>
@@ -210,8 +207,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The skill evaluation method to use when routing conversations.</value>
         [DataMember(Name="skillEvaluationMethod", EmitDefaultValue=false)]
         public SkillEvaluationMethodEnum? SkillEvaluationMethod { get; set; }
-        
-        
         
         
         
@@ -259,14 +254,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations. (required).</param>
         /// <param name="QueueFlow">The in-queue flow to use for conversations waiting in queue..</param>
         /// <param name="WhisperPrompt">The prompt used for whisper on the queue, if configured..</param>
-        /// <param name="AutoAnswerOnly">Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered..</param>
         /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
         /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
         /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="Joined">Joined.</param>
         /// <param name="MemberCount">MemberCount.</param>
-        public UserQueue(string Name = null, Division Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference WhisperPrompt = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, bool? Joined = null, int? MemberCount = null)
+        public UserQueue(string Name = null, Division Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference WhisperPrompt = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, bool? Joined = null, int? MemberCount = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -285,7 +279,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SkillEvaluationMethod = SkillEvaluationMethod;
             this.QueueFlow = QueueFlow;
             this.WhisperPrompt = WhisperPrompt;
-            this.AutoAnswerOnly = AutoAnswerOnly;
             this.CallingPartyName = CallingPartyName;
             this.CallingPartyNumber = CallingPartyNumber;
             this.DefaultScripts = DefaultScripts;
@@ -445,15 +438,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered.
-        /// </summary>
-        /// <value>Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered.</value>
-        [DataMember(Name="autoAnswerOnly", EmitDefaultValue=false)]
-        public bool? AutoAnswerOnly { get; set; }
-        
-        
-        
-        /// <summary>
         /// The name to use for caller identification for outbound calls from this queue.
         /// </summary>
         /// <value>The name to use for caller identification for outbound calls from this queue.</value>
@@ -539,7 +523,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SkillEvaluationMethod: ").Append(SkillEvaluationMethod).Append("\n");
             sb.Append("  QueueFlow: ").Append(QueueFlow).Append("\n");
             sb.Append("  WhisperPrompt: ").Append(WhisperPrompt).Append("\n");
-            sb.Append("  AutoAnswerOnly: ").Append(AutoAnswerOnly).Append("\n");
             sb.Append("  CallingPartyName: ").Append(CallingPartyName).Append("\n");
             sb.Append("  CallingPartyNumber: ").Append(CallingPartyNumber).Append("\n");
             sb.Append("  DefaultScripts: ").Append(DefaultScripts).Append("\n");
@@ -674,11 +657,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WhisperPrompt.Equals(other.WhisperPrompt)
                 ) &&
                 (
-                    this.AutoAnswerOnly == other.AutoAnswerOnly ||
-                    this.AutoAnswerOnly != null &&
-                    this.AutoAnswerOnly.Equals(other.AutoAnswerOnly)
-                ) &&
-                (
                     this.CallingPartyName == other.CallingPartyName ||
                     this.CallingPartyName != null &&
                     this.CallingPartyName.Equals(other.CallingPartyName)
@@ -780,9 +758,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WhisperPrompt != null)
                     hash = hash * 59 + this.WhisperPrompt.GetHashCode();
-                
-                if (this.AutoAnswerOnly != null)
-                    hash = hash * 59 + this.AutoAnswerOnly.GetHashCode();
                 
                 if (this.CallingPartyName != null)
                     hash = hash * 59 + this.CallingPartyName.GetHashCode();

@@ -181,10 +181,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Pointestimateusingdoubleexponentialsmoothing,
             
             /// <summary>
+            /// Enum Pointestimateusinglatestweek for "PointEstimateUsingLatestWeek"
+            /// </summary>
+            [EnumMember(Value = "PointEstimateUsingLatestWeek")]
+            Pointestimateusinglatestweek,
+            
+            /// <summary>
             /// Enum Pointestimateusinglinearexponentialsmoothing for "PointEstimateUsingLinearExponentialSmoothing"
             /// </summary>
             [EnumMember(Value = "PointEstimateUsingLinearExponentialSmoothing")]
             Pointestimateusinglinearexponentialsmoothing,
+            
+            /// <summary>
+            /// Enum Pointestimateusingweightedaverage for "PointEstimateUsingWeightedAverage"
+            /// </summary>
+            [EnumMember(Value = "PointEstimateUsingWeightedAverage")]
+            Pointestimateusingweightedaverage,
             
             /// <summary>
             /// Enum Curvefit for "CurveFit"

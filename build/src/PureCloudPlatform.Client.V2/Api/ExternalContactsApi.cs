@@ -465,7 +465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Relationship> GetExternalcontactsRelationshipWithHttpInfo (string relationshipId, string expand = null);
         
         /// <summary>
-        /// Lookup contacts and externalOrganizations based on an attribute
+        /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
         /// </summary>
         /// <remarks>
         /// 
@@ -477,7 +477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ReverseWhitepagesLookupResult GetExternalcontactsReversewhitepageslookup (string lookupVal, List<string> expand = null);
 
         /// <summary>
-        /// Lookup contacts and externalOrganizations based on an attribute
+        /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
         /// </summary>
         /// <remarks>
         /// 
@@ -1227,7 +1227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Relationship>> GetExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, string expand = null);
         
         /// <summary>
-        /// Lookup contacts and externalOrganizations based on an attribute
+        /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
         /// </summary>
         /// <remarks>
         /// 
@@ -1239,7 +1239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ReverseWhitepagesLookupResult> GetExternalcontactsReversewhitepageslookupAsync (string lookupVal, List<string> expand = null);
 
         /// <summary>
-        /// Lookup contacts and externalOrganizations based on an attribute
+        /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
         /// </summary>
         /// <remarks>
         /// 
@@ -5134,7 +5134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Lookup contacts and externalOrganizations based on an attribute 
+        /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
@@ -5147,7 +5147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Lookup contacts and externalOrganizations based on an attribute 
+        /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
@@ -5232,7 +5232,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Lookup contacts and externalOrganizations based on an attribute 
+        /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
@@ -5246,7 +5246,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Lookup contacts and externalOrganizations based on an attribute 
+        /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
