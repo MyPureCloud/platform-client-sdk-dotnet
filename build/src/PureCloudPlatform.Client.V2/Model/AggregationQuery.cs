@@ -451,7 +451,91 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Routingstatus for "routingStatus"
             /// </summary>
             [EnumMember(Value = "routingStatus")]
-            Routingstatus
+            Routingstatus,
+            
+            /// <summary>
+            /// Enum Flowid for "flowId"
+            /// </summary>
+            [EnumMember(Value = "flowId")]
+            Flowid,
+            
+            /// <summary>
+            /// Enum Flowname for "flowName"
+            /// </summary>
+            [EnumMember(Value = "flowName")]
+            Flowname,
+            
+            /// <summary>
+            /// Enum Flowversion for "flowVersion"
+            /// </summary>
+            [EnumMember(Value = "flowVersion")]
+            Flowversion,
+            
+            /// <summary>
+            /// Enum Flowtype for "flowType"
+            /// </summary>
+            [EnumMember(Value = "flowType")]
+            Flowtype,
+            
+            /// <summary>
+            /// Enum Exitreason for "exitReason"
+            /// </summary>
+            [EnumMember(Value = "exitReason")]
+            Exitreason,
+            
+            /// <summary>
+            /// Enum Transfertype for "transferType"
+            /// </summary>
+            [EnumMember(Value = "transferType")]
+            Transfertype,
+            
+            /// <summary>
+            /// Enum Transfertargetname for "transferTargetName"
+            /// </summary>
+            [EnumMember(Value = "transferTargetName")]
+            Transfertargetname,
+            
+            /// <summary>
+            /// Enum Transfertargetaddress for "transferTargetAddress"
+            /// </summary>
+            [EnumMember(Value = "transferTargetAddress")]
+            Transfertargetaddress,
+            
+            /// <summary>
+            /// Enum Issuedcallback for "issuedCallback"
+            /// </summary>
+            [EnumMember(Value = "issuedCallback")]
+            Issuedcallback,
+            
+            /// <summary>
+            /// Enum Startinglanguage for "startingLanguage"
+            /// </summary>
+            [EnumMember(Value = "startingLanguage")]
+            Startinglanguage,
+            
+            /// <summary>
+            /// Enum Endinglanguage for "endingLanguage"
+            /// </summary>
+            [EnumMember(Value = "endingLanguage")]
+            Endinglanguage,
+            
+            /// <summary>
+            /// Enum Flowoutcomeid for "flowOutcomeId"
+            /// </summary>
+            [EnumMember(Value = "flowOutcomeId")]
+            Flowoutcomeid,
+            
+            /// <summary>
+            /// Enum Flowoutcomevalue for "flowOutcomeValue"
+            /// </summary>
+            [EnumMember(Value = "flowOutcomeValue")]
+            Flowoutcomevalue,
+            
+            /// <summary>
+            /// Enum Flowoutcome for "flowOutcome"
+            /// </summary>
+            [EnumMember(Value = "flowOutcome")]
+            Flowoutcome
         }
         
         
@@ -864,7 +948,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nsurveynpsdetractors for "nSurveyNpsDetractors"
             /// </summary>
             [EnumMember(Value = "nSurveyNpsDetractors")]
-            Nsurveynpsdetractors
+            Nsurveynpsdetractors,
+            
+            /// <summary>
+            /// Enum Nflow for "nFlow"
+            /// </summary>
+            [EnumMember(Value = "nFlow")]
+            Nflow,
+            
+            /// <summary>
+            /// Enum Tflowhangup for "tFlowHangUp"
+            /// </summary>
+            [EnumMember(Value = "tFlowHangUp")]
+            Tflowhangup,
+            
+            /// <summary>
+            /// Enum Tflowexit for "tFlowExit"
+            /// </summary>
+            [EnumMember(Value = "tFlowExit")]
+            Tflowexit,
+            
+            /// <summary>
+            /// Enum Tflow for "tFlow"
+            /// </summary>
+            [EnumMember(Value = "tFlow")]
+            Tflow,
+            
+            /// <summary>
+            /// Enum Tflowoutcome for "tFlowOutcome"
+            /// </summary>
+            [EnumMember(Value = "tFlowOutcome")]
+            Tflowoutcome,
+            
+            /// <summary>
+            /// Enum Nflowoutcome for "nFlowOutcome"
+            /// </summary>
+            [EnumMember(Value = "nFlowOutcome")]
+            Nflowoutcome
         }
         
         

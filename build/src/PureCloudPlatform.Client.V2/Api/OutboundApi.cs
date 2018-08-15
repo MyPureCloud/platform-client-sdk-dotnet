@@ -711,7 +711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
-        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="dncListIds">DNC list ID (optional)</param>
         /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
         /// <param name="edgeGroupId">Edge group ID (optional)</param>
         /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
@@ -719,7 +719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CampaignEntityListing</returns>
-        CampaignEntityListing GetOutboundCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
+        CampaignEntityListing GetOutboundCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Query a list of dialer campaigns.
@@ -734,7 +734,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
-        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="dncListIds">DNC list ID (optional)</param>
         /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
         /// <param name="edgeGroupId">Edge group ID (optional)</param>
         /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
@@ -742,7 +742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CampaignEntityListing</returns>
-        ApiResponse<CampaignEntityListing> GetOutboundCampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<CampaignEntityListing> GetOutboundCampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Get a basic Campaign information object
@@ -2933,7 +2933,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
-        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="dncListIds">DNC list ID (optional)</param>
         /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
         /// <param name="edgeGroupId">Edge group ID (optional)</param>
         /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
@@ -2941,7 +2941,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CampaignEntityListing</returns>
-        System.Threading.Tasks.Task<CampaignEntityListing> GetOutboundCampaignsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<CampaignEntityListing> GetOutboundCampaignsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Query a list of dialer campaigns.
@@ -2956,7 +2956,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
-        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="dncListIds">DNC list ID (optional)</param>
         /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
         /// <param name="edgeGroupId">Edge group ID (optional)</param>
         /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
@@ -2964,7 +2964,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CampaignEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CampaignEntityListing>> GetOutboundCampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<CampaignEntityListing>> GetOutboundCampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Get a basic Campaign information object
@@ -10243,7 +10243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
-        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="dncListIds">DNC list ID (optional)</param>
         /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
         /// <param name="edgeGroupId">Edge group ID (optional)</param>
         /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
@@ -10251,9 +10251,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CampaignEntityListing</returns>
-        public CampaignEntityListing GetOutboundCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
+        public CampaignEntityListing GetOutboundCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<CampaignEntityListing> localVarResponse = GetOutboundCampaignsWithHttpInfo(pageSize, pageNumber, filterType, name, id, contactListId, dncListId, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, divisionId, sortBy, sortOrder);
+             ApiResponse<CampaignEntityListing> localVarResponse = GetOutboundCampaignsWithHttpInfo(pageSize, pageNumber, filterType, name, id, contactListId, dncListIds, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, divisionId, sortBy, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -10267,7 +10267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
-        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="dncListIds">DNC list ID (optional)</param>
         /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
         /// <param name="edgeGroupId">Edge group ID (optional)</param>
         /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
@@ -10275,7 +10275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CampaignEntityListing</returns>
-        public ApiResponse< CampaignEntityListing > GetOutboundCampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< CampaignEntityListing > GetOutboundCampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/outbound/campaigns";
@@ -10317,7 +10317,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (contactListId != null) localVarQueryParams.Add(new Tuple<string, string>("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId)));
-            if (dncListId != null) localVarQueryParams.Add(new Tuple<string, string>("dncListId", this.Configuration.ApiClient.ParameterToString(dncListId)));
+            if (dncListIds != null) localVarQueryParams.Add(new Tuple<string, string>("dncListIds", this.Configuration.ApiClient.ParameterToString(dncListIds)));
             if (distributionQueueId != null) localVarQueryParams.Add(new Tuple<string, string>("distributionQueueId", this.Configuration.ApiClient.ParameterToString(distributionQueueId)));
             if (edgeGroupId != null) localVarQueryParams.Add(new Tuple<string, string>("edgeGroupId", this.Configuration.ApiClient.ParameterToString(edgeGroupId)));
             if (callAnalysisResponseSetId != null) localVarQueryParams.Add(new Tuple<string, string>("callAnalysisResponseSetId", this.Configuration.ApiClient.ParameterToString(callAnalysisResponseSetId)));
@@ -10371,7 +10371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
-        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="dncListIds">DNC list ID (optional)</param>
         /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
         /// <param name="edgeGroupId">Edge group ID (optional)</param>
         /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
@@ -10379,9 +10379,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CampaignEntityListing</returns>
-        public async System.Threading.Tasks.Task<CampaignEntityListing> GetOutboundCampaignsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<CampaignEntityListing> GetOutboundCampaignsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<CampaignEntityListing> localVarResponse = await GetOutboundCampaignsAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, id, contactListId, dncListId, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, divisionId, sortBy, sortOrder);
+             ApiResponse<CampaignEntityListing> localVarResponse = await GetOutboundCampaignsAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, id, contactListId, dncListIds, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, divisionId, sortBy, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -10396,7 +10396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
-        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="dncListIds">DNC list ID (optional)</param>
         /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
         /// <param name="edgeGroupId">Edge group ID (optional)</param>
         /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
@@ -10404,7 +10404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CampaignEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CampaignEntityListing>> GetOutboundCampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignEntityListing>> GetOutboundCampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/outbound/campaigns";
@@ -10446,7 +10446,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (contactListId != null) localVarQueryParams.Add(new Tuple<string, string>("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId)));
-            if (dncListId != null) localVarQueryParams.Add(new Tuple<string, string>("dncListId", this.Configuration.ApiClient.ParameterToString(dncListId)));
+            if (dncListIds != null) localVarQueryParams.Add(new Tuple<string, string>("dncListIds", this.Configuration.ApiClient.ParameterToString(dncListIds)));
             if (distributionQueueId != null) localVarQueryParams.Add(new Tuple<string, string>("distributionQueueId", this.Configuration.ApiClient.ParameterToString(distributionQueueId)));
             if (edgeGroupId != null) localVarQueryParams.Add(new Tuple<string, string>("edgeGroupId", this.Configuration.ApiClient.ParameterToString(edgeGroupId)));
             if (callAnalysisResponseSetId != null) localVarQueryParams.Add(new Tuple<string, string>("callAnalysisResponseSetId", this.Configuration.ApiClient.ParameterToString(callAnalysisResponseSetId)));

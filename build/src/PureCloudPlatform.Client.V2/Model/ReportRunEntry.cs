@@ -80,7 +80,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum FailedDatalimit for "FAILED_DATALIMIT"
             /// </summary>
             [EnumMember(Value = "FAILED_DATALIMIT")]
-            FailedDatalimit
+            FailedDatalimit,
+            
+            /// <summary>
+            /// Enum UnableToComplete for "UNABLE_TO_COMPLETE"
+            /// </summary>
+            [EnumMember(Value = "UNABLE_TO_COMPLETE")]
+            UnableToComplete
         }
         
         

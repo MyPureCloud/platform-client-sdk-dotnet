@@ -74,6 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets ScreenRecordingState
         /// </summary>
@@ -124,6 +127,8 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "TIMEOUT")]
             Timeout
         }
+        
+        
         
         
         
@@ -253,6 +258,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapupPrompt">WrapupPrompt.</param>
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
         /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="AlertingTimeoutMs">AlertingTimeoutMs.</param>
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
         /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
         /// <param name="FlaggedReason">FlaggedReason.</param>
@@ -267,7 +273,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationParticipants(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationNotificationWrapup Wrapup = null, string MonitoredParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<ConversationNotificationCalls> Calls = null, List<ConversationNotificationCallbacks> Callbacks = null, List<ConversationNotificationChats> Chats = null, List<ConversationNotificationCobrowsesessions> Cobrowsesessions = null, List<ConversationNotificationEmails> Emails = null, List<ConversationNotificationMessages1> Messages = null, List<ConversationNotificationScreenshares> Screenshares = null, List<ConversationNotificationSocialExpressions> SocialExpressions = null, List<ConversationNotificationVideos> Videos = null, Object AdditionalProperties = null)
+        public ConversationNotificationParticipants(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationNotificationWrapup Wrapup = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<ConversationNotificationCalls> Calls = null, List<ConversationNotificationCallbacks> Callbacks = null, List<ConversationNotificationChats> Chats = null, List<ConversationNotificationCobrowsesessions> Cobrowsesessions = null, List<ConversationNotificationEmails> Emails = null, List<ConversationNotificationMessages1> Messages = null, List<ConversationNotificationScreenshares> Screenshares = null, List<ConversationNotificationSocialExpressions> SocialExpressions = null, List<ConversationNotificationVideos> Videos = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.ConnectedTime = ConnectedTime;
@@ -286,6 +292,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WrapupPrompt = WrapupPrompt;
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.Wrapup = Wrapup;
+            this.AlertingTimeoutMs = AlertingTimeoutMs;
             this.MonitoredParticipantId = MonitoredParticipantId;
             this.ScreenRecordingState = ScreenRecordingState;
             this.FlaggedReason = FlaggedReason;
@@ -442,6 +449,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets AlertingTimeoutMs
+        /// </summary>
+        [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
+        public int? AlertingTimeoutMs { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets MonitoredParticipantId
         /// </summary>
         [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
@@ -572,6 +587,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  AlertingTimeoutMs: ").Append(AlertingTimeoutMs).Append("\n");
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
@@ -708,6 +724,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup.Equals(other.Wrapup)
                 ) &&
                 (
+                    this.AlertingTimeoutMs == other.AlertingTimeoutMs ||
+                    this.AlertingTimeoutMs != null &&
+                    this.AlertingTimeoutMs.Equals(other.AlertingTimeoutMs)
+                ) &&
+                (
                     this.MonitoredParticipantId == other.MonitoredParticipantId ||
                     this.MonitoredParticipantId != null &&
                     this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
@@ -841,6 +862,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                
+                if (this.AlertingTimeoutMs != null)
+                    hash = hash * 59 + this.AlertingTimeoutMs.GetHashCode();
                 
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();

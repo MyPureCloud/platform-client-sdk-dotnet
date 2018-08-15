@@ -7,10 +7,10 @@ title: TimeZone
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **DisplayName** | **string** |  | [optional] |
+| **Id** | **string** |  | [optional] |
 | **Dstsavings** | **int?** |  | [optional] |
 | **RawOffset** | **int?** |  | [optional] |
-| **Id** | **string** |  | [optional] |
-| **DisplayName** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

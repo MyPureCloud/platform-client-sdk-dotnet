@@ -246,6 +246,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The session media type
         /// </summary>
@@ -282,6 +285,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Direction</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
         
         
         
@@ -381,7 +386,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="VideoAddressSelf">Direct Video address.</param>
         /// <param name="Segments">List of segments for this session.</param>
         /// <param name="Metrics">List of metrics for this session.</param>
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null)
+        /// <param name="Flow">IVR flow execution associated with this session.</param>
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null)
         {
             this.MediaType = MediaType;
             this.SessionId = SessionId;
@@ -420,6 +426,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.VideoAddressSelf = VideoAddressSelf;
             this.Segments = Segments;
             this.Metrics = Metrics;
+            this.Flow = Flow;
             
         }
         
@@ -729,6 +736,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<AnalyticsSessionMetric> Metrics { get; set; }
         
         
+        
+        /// <summary>
+        /// IVR flow execution associated with this session
+        /// </summary>
+        /// <value>IVR flow execution associated with this session</value>
+        [DataMember(Name="flow", EmitDefaultValue=false)]
+        public AnalyticsFlow Flow { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -775,6 +791,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  VideoAddressSelf: ").Append(VideoAddressSelf).Append("\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
+            sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -995,6 +1012,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Metrics == other.Metrics ||
                     this.Metrics != null &&
                     this.Metrics.SequenceEqual(other.Metrics)
+                ) &&
+                (
+                    this.Flow == other.Flow ||
+                    this.Flow != null &&
+                    this.Flow.Equals(other.Flow)
                 );
         }
 
@@ -1120,6 +1142,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
+                
+                if (this.Flow != null)
+                    hash = hash * 59 + this.Flow.GetHashCode();
                 
                 return hash;
             }

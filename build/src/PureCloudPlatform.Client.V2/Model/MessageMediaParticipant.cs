@@ -308,6 +308,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The reason specifying why participant flagged the conversation.
         /// </summary>
@@ -483,6 +486,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The reason specifying why participant flagged the conversation.
         /// </summary>
@@ -535,6 +540,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Script">The Engage script that should be used by this participant..</param>
         /// <param name="WrapupTimeoutMs">The amount of time the participant has to complete wrap-up..</param>
         /// <param name="WrapupSkipped">Value is true when the participant has skipped wrap-up..</param>
+        /// <param name="AlertingTimeoutMs">Specifies how long the agent has to answer an interaction before being marked as not responding..</param>
         /// <param name="Provider">The source provider for the communication..</param>
         /// <param name="ExternalContact">If this participant represents an external contact, then this will be the reference for the external contact..</param>
         /// <param name="ExternalOrganization">If this participant represents an external org, then this will be the reference for the external org..</param>
@@ -547,7 +553,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Indicates the type of message platform from which the message originated..</param>
         /// <param name="RecipientCountry">Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format..</param>
         /// <param name="RecipientType">The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type..</param>
-        public MessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
+        public MessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -570,6 +576,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Script = Script;
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.WrapupSkipped = WrapupSkipped;
+            this.AlertingTimeoutMs = AlertingTimeoutMs;
             this.Provider = Provider;
             this.ExternalContact = ExternalContact;
             this.ExternalOrganization = ExternalOrganization;
@@ -756,6 +763,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Specifies how long the agent has to answer an interaction before being marked as not responding.
+        /// </summary>
+        /// <value>Specifies how long the agent has to answer an interaction before being marked as not responding.</value>
+        [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
+        public int? AlertingTimeoutMs { get; set; }
+        
+        
+        
+        /// <summary>
         /// The source provider for the communication.
         /// </summary>
         /// <value>The source provider for the communication.</value>
@@ -878,6 +894,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Script: ").Append(Script).Append("\n");
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
+            sb.Append("  AlertingTimeoutMs: ").Append(AlertingTimeoutMs).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
@@ -1032,6 +1049,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WrapupSkipped.Equals(other.WrapupSkipped)
                 ) &&
                 (
+                    this.AlertingTimeoutMs == other.AlertingTimeoutMs ||
+                    this.AlertingTimeoutMs != null &&
+                    this.AlertingTimeoutMs.Equals(other.AlertingTimeoutMs)
+                ) &&
+                (
                     this.Provider == other.Provider ||
                     this.Provider != null &&
                     this.Provider.Equals(other.Provider)
@@ -1167,6 +1189,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
+                
+                if (this.AlertingTimeoutMs != null)
+                    hash = hash * 59 + this.AlertingTimeoutMs.GetHashCode();
                 
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();

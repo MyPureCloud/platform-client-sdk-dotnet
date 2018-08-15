@@ -2249,7 +2249,7 @@ namespace Example
 
 <a name="getoutboundcampaigns"></a>
 
-## [**CampaignEntityListing**](CampaignEntityListing.html) GetOutboundCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
+## [**CampaignEntityListing**](CampaignEntityListing.html) GetOutboundCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -2313,7 +2313,7 @@ namespace Example
             
             
             
-            var dncListId = dncListId_example;  // string | DNC list ID (optional) 
+            var dncListIds = dncListIds_example;  // string | DNC list ID (optional) 
             
             
             
@@ -2353,7 +2353,7 @@ namespace Example
                 
                 // Query a list of dialer campaigns.
                 
-                CampaignEntityListing result = apiInstance.GetOutboundCampaigns(pageSize, pageNumber, filterType, name, id, contactListId, dncListId, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, divisionId, sortBy, sortOrder);
+                CampaignEntityListing result = apiInstance.GetOutboundCampaigns(pageSize, pageNumber, filterType, name, id, contactListId, dncListIds, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, divisionId, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2376,7 +2376,7 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **id** | [**List<string>**](string.html)| id | [optional]  |
 | **contactListId** | **string**| Contact List ID | [optional]  |
-| **dncListId** | **string**| DNC list ID | [optional]  |
+| **dncListIds** | **string**| DNC list ID | [optional]  |
 | **distributionQueueId** | **string**| Distribution queue ID | [optional]  |
 | **edgeGroupId** | **string**| Edge group ID | [optional]  |
 | **callAnalysisResponseSetId** | **string**| Call analysis response set ID | [optional]  |

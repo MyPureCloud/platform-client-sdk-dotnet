@@ -308,6 +308,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The reason specifying why participant flagged the conversation.
         /// </summary>
@@ -422,6 +425,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The reason specifying why participant flagged the conversation.
         /// </summary>
@@ -465,6 +470,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Script">The Engage script that should be used by this participant..</param>
         /// <param name="WrapupTimeoutMs">The amount of time the participant has to complete wrap-up..</param>
         /// <param name="WrapupSkipped">Value is true when the participant has skipped wrap-up..</param>
+        /// <param name="AlertingTimeoutMs">Specifies how long the agent has to answer an interaction before being marked as not responding..</param>
         /// <param name="Provider">The source provider for the communication..</param>
         /// <param name="ExternalContact">If this participant represents an external contact, then this will be the reference for the external contact..</param>
         /// <param name="ExternalOrganization">If this participant represents an external org, then this will be the reference for the external org..</param>
@@ -476,7 +482,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Controlling">ID of co-browse participants for which this client has been granted control (list is empty if this client cannot control any shared pages)..</param>
         /// <param name="ViewerUrl">The URL that can be used to open co-browse session in web browser..</param>
         /// <param name="ProviderEventTime">The time when the provider event which triggered this conversation update happened in the corrected provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public CobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null)
+        public CobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -499,6 +505,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Script = Script;
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.WrapupSkipped = WrapupSkipped;
+            this.AlertingTimeoutMs = AlertingTimeoutMs;
             this.Provider = Provider;
             this.ExternalContact = ExternalContact;
             this.ExternalOrganization = ExternalOrganization;
@@ -684,6 +691,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Specifies how long the agent has to answer an interaction before being marked as not responding.
+        /// </summary>
+        /// <value>Specifies how long the agent has to answer an interaction before being marked as not responding.</value>
+        [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
+        public int? AlertingTimeoutMs { get; set; }
+        
+        
+        
+        /// <summary>
         /// The source provider for the communication.
         /// </summary>
         /// <value>The source provider for the communication.</value>
@@ -804,6 +820,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Script: ").Append(Script).Append("\n");
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
+            sb.Append("  AlertingTimeoutMs: ").Append(AlertingTimeoutMs).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
@@ -957,6 +974,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WrapupSkipped.Equals(other.WrapupSkipped)
                 ) &&
                 (
+                    this.AlertingTimeoutMs == other.AlertingTimeoutMs ||
+                    this.AlertingTimeoutMs != null &&
+                    this.AlertingTimeoutMs.Equals(other.AlertingTimeoutMs)
+                ) &&
+                (
                     this.Provider == other.Provider ||
                     this.Provider != null &&
                     this.Provider.Equals(other.Provider)
@@ -1087,6 +1109,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
+                
+                if (this.AlertingTimeoutMs != null)
+                    hash = hash * 59 + this.AlertingTimeoutMs.GetHashCode();
                 
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();

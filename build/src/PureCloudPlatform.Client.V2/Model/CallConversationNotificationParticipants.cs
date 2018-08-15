@@ -326,6 +326,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets FlaggedReason
         /// </summary>
@@ -489,6 +492,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets FlaggedReason
         /// </summary>
@@ -549,6 +554,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Script">Script.</param>
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
         /// <param name="WrapupSkipped">WrapupSkipped.</param>
+        /// <param name="AlertingTimeoutMs">AlertingTimeoutMs.</param>
         /// <param name="Provider">Provider.</param>
         /// <param name="ExternalContact">ExternalContact.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
@@ -567,7 +573,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
         /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
         /// <param name="FaxStatus">FaxStatus.</param>
-        public CallConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CallConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallConversationNotificationErrorInfo ErrorInfo = null, CallConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallConversationNotificationUriReference ExternalContact = null, CallConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, CallConversationNotificationUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, CallConversationNotificationFaxStatus FaxStatus = null)
+        public CallConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CallConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallConversationNotificationErrorInfo ErrorInfo = null, CallConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, CallConversationNotificationUriReference ExternalContact = null, CallConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, CallConversationNotificationUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, CallConversationNotificationFaxStatus FaxStatus = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -590,6 +596,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Script = Script;
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.WrapupSkipped = WrapupSkipped;
+            this.AlertingTimeoutMs = AlertingTimeoutMs;
             this.Provider = Provider;
             this.ExternalContact = ExternalContact;
             this.ExternalOrganization = ExternalOrganization;
@@ -764,6 +771,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets AlertingTimeoutMs
+        /// </summary>
+        [DataMember(Name="alertingTimeoutMs", EmitDefaultValue=false)]
+        public int? AlertingTimeoutMs { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Provider
         /// </summary>
         [DataMember(Name="provider", EmitDefaultValue=false)]
@@ -924,6 +939,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Script: ").Append(Script).Append("\n");
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
+            sb.Append("  AlertingTimeoutMs: ").Append(AlertingTimeoutMs).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
@@ -1082,6 +1098,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WrapupSkipped == other.WrapupSkipped ||
                     this.WrapupSkipped != null &&
                     this.WrapupSkipped.Equals(other.WrapupSkipped)
+                ) &&
+                (
+                    this.AlertingTimeoutMs == other.AlertingTimeoutMs ||
+                    this.AlertingTimeoutMs != null &&
+                    this.AlertingTimeoutMs.Equals(other.AlertingTimeoutMs)
                 ) &&
                 (
                     this.Provider == other.Provider ||
@@ -1249,6 +1270,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
+                
+                if (this.AlertingTimeoutMs != null)
+                    hash = hash * 59 + this.AlertingTimeoutMs.GetHashCode();
                 
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();

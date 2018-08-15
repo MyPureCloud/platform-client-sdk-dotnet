@@ -2113,6 +2113,8 @@ Requires ANY permissions:
 
 * wfm:workPlan:administer
 * wfm:workPlan:view
+* wfm:schedule:administer
+* wfm:schedule:edit
 
 ### Example
 ~~~csharp
@@ -3021,7 +3023,6 @@ Update a time off request for the current user
 
 Requires ANY permissions: 
 
-* wfm:agentSchedule:view
 * wfm:agentTimeOffRequest:submit
 
 ### Example
@@ -4804,7 +4805,6 @@ Create a time off request for the current user
 
 Requires ANY permissions: 
 
-* wfm:agentSchedule:view
 * wfm:agentTimeOffRequest:submit
 
 ### Example

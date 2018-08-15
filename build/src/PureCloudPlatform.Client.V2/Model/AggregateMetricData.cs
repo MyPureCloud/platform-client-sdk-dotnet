@@ -422,7 +422,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nsurveynpsdetractors for "nSurveyNpsDetractors"
             /// </summary>
             [EnumMember(Value = "nSurveyNpsDetractors")]
-            Nsurveynpsdetractors
+            Nsurveynpsdetractors,
+            
+            /// <summary>
+            /// Enum Nflow for "nFlow"
+            /// </summary>
+            [EnumMember(Value = "nFlow")]
+            Nflow,
+            
+            /// <summary>
+            /// Enum Tflowhangup for "tFlowHangUp"
+            /// </summary>
+            [EnumMember(Value = "tFlowHangUp")]
+            Tflowhangup,
+            
+            /// <summary>
+            /// Enum Tflowexit for "tFlowExit"
+            /// </summary>
+            [EnumMember(Value = "tFlowExit")]
+            Tflowexit,
+            
+            /// <summary>
+            /// Enum Tflow for "tFlow"
+            /// </summary>
+            [EnumMember(Value = "tFlow")]
+            Tflow,
+            
+            /// <summary>
+            /// Enum Tflowoutcome for "tFlowOutcome"
+            /// </summary>
+            [EnumMember(Value = "tFlowOutcome")]
+            Tflowoutcome,
+            
+            /// <summary>
+            /// Enum Nflowoutcome for "nFlowOutcome"
+            /// </summary>
+            [EnumMember(Value = "nFlowOutcome")]
+            Nflowoutcome
         }
         
         
