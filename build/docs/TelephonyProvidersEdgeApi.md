@@ -75,7 +75,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesPhonesTemplate**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesphonestemplate) | **GET** /api/v2/telephony/providers/edges/phones/template | Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance |
 | [**GetTelephonyProvidersEdgesPhysicalinterfaces**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesphysicalinterfaces) | **GET** /api/v2/telephony/providers/edges/physicalinterfaces | Get physical interfaces for edges. |
 | [**GetTelephonyProvidersEdgesSite**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgessite) | **GET** /api/v2/telephony/providers/edges/sites/{siteId} | Get a Site by ID. |
-| [**GetTelephonyProvidersEdgesSiteAutoscalinggroups**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgessiteautoscalinggroups) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/autoscalinggroups | Gets the basic information about an asg in a specified site |
 | [**GetTelephonyProvidersEdgesSiteNumberplan**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgessitenumberplan) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/{numberPlanId} | Get a Number Plan by ID. |
 | [**GetTelephonyProvidersEdgesSiteNumberplans**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgessitenumberplans) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans | Get the list of Number Plans for this Site. |
 | [**GetTelephonyProvidersEdgesSiteNumberplansClassifications**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgessitenumberplansclassifications) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/classifications | Get a list of Classifications for this Site |
@@ -111,7 +110,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTelephonyProvidersEdgesPhonebasesettings**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesphonebasesettings) | **POST** /api/v2/telephony/providers/edges/phonebasesettings | Create a new Phone Base Settings object |
 | [**PostTelephonyProvidersEdgesPhones**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesphones) | **POST** /api/v2/telephony/providers/edges/phones | Create a new Phone |
 | [**PostTelephonyProvidersEdgesPhonesReboot**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesphonesreboot) | **POST** /api/v2/telephony/providers/edges/phones/reboot | Reboot Multiple Phones |
-| [**PostTelephonyProvidersEdgesSiteAutoscalinggroups**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgessiteautoscalinggroups) | **POST** /api/v2/telephony/providers/edges/sites/{siteId}/autoscalinggroups | Creates an ASG for the specified site |
 | [**PostTelephonyProvidersEdgesSiteOutboundroutes**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgessiteoutboundroutes) | **POST** /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes | Create outbound route |
 | [**PostTelephonyProvidersEdgesSiteRebalance**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgessiterebalance) | **POST** /api/v2/telephony/providers/edges/sites/{siteId}/rebalance | Triggers the rebalance operation. |
 | [**PostTelephonyProvidersEdgesSites**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgessites) | **POST** /api/v2/telephony/providers/edges/sites | Create a Site. |
@@ -5380,76 +5378,6 @@ namespace Example
 
 [**Site**](Site.html)
 
-<a name="gettelephonyprovidersedgessiteautoscalinggroups"></a>
-
-## [**AsgInfoResponse**](AsgInfoResponse.html) GetTelephonyProvidersEdgesSiteAutoscalinggroups (string siteId)
-
-
-
-Gets the basic information about an asg in a specified site
-
-
-
-Requires ANY permissions: 
-
-* managed:all:all
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetTelephonyProvidersEdgesSiteAutoscalinggroupsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            
-            
-            var siteId = siteId_example;  // string | Site id associated with the asg
-            
-            
-            
-
-            try
-            {
-                
-                // Gets the basic information about an asg in a specified site
-                
-                AsgInfoResponse result = apiInstance.GetTelephonyProvidersEdgesSiteAutoscalinggroups(siteId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesSiteAutoscalinggroups: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **siteId** | **string**| Site id associated with the asg |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**AsgInfoResponse**](AsgInfoResponse.html)
-
 <a name="gettelephonyprovidersedgessitenumberplan"></a>
 
 ## [**NumberPlan**](NumberPlan.html) GetTelephonyProvidersEdgesSiteNumberplan (string siteId, string numberPlanId)
@@ -8121,82 +8049,6 @@ namespace Example
 ### Return type
 
 void (empty response body)
-
-<a name="posttelephonyprovidersedgessiteautoscalinggroups"></a>
-
-## **string** PostTelephonyProvidersEdgesSiteAutoscalinggroups (string siteId, CreateAsgRequest body)
-
-
-
-Creates an ASG for the specified site
-
-
-
-Requires ANY permissions: 
-
-* managed:all:all
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostTelephonyProvidersEdgesSiteAutoscalinggroupsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            
-            
-            var siteId = siteId_example;  // string | Site that will be associated with the asg
-            
-            
-            
-            
-            
-            var body = new CreateAsgRequest(); // CreateAsgRequest | CreateAsgRequest
-            
-            
-
-            try
-            {
-                
-                // Creates an ASG for the specified site
-                
-                string result = apiInstance.PostTelephonyProvidersEdgesSiteAutoscalinggroups(siteId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostTelephonyProvidersEdgesSiteAutoscalinggroups: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **siteId** | **string**| Site that will be associated with the asg |  |
-| **body** | [**CreateAsgRequest**](CreateAsgRequest.html)| CreateAsgRequest |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
 
 <a name="posttelephonyprovidersedgessiteoutboundroutes"></a>
 
