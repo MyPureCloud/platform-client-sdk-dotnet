@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**GetDocumentationGknSearch**](SearchApi.html#getdocumentationgknsearch) | **GET** /api/v2/documentation/gkn/search | Search gkn documentation using the q64 value returned from a previous search |
 | [**GetDocumentationSearch**](SearchApi.html#getdocumentationsearch) | **GET** /api/v2/documentation/search | Search documentation using the q64 value returned from a previous search |
 | [**GetGroupsSearch**](SearchApi.html#getgroupssearch) | **GET** /api/v2/groups/search | Search groups using the q64 value returned from a previous search |
 | [**GetLocationsSearch**](SearchApi.html#getlocationssearch) | **GET** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
@@ -14,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSearchSuggest**](SearchApi.html#getsearchsuggest) | **GET** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
 | [**GetUsersSearch**](SearchApi.html#getuserssearch) | **GET** /api/v2/users/search | Search users using the q64 value returned from a previous search |
 | [**GetVoicemailSearch**](SearchApi.html#getvoicemailsearch) | **GET** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
+| [**PostDocumentationGknSearch**](SearchApi.html#postdocumentationgknsearch) | **POST** /api/v2/documentation/gkn/search | Search gkn documentation |
 | [**PostDocumentationSearch**](SearchApi.html#postdocumentationsearch) | **POST** /api/v2/documentation/search | Search documentation |
 | [**PostGroupsSearch**](SearchApi.html#postgroupssearch) | **POST** /api/v2/groups/search | Search groups |
 | [**PostLocationsSearch**](SearchApi.html#postlocationssearch) | **POST** /api/v2/locations/search | Search locations |
@@ -22,6 +24,75 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUsersSearch**](SearchApi.html#postuserssearch) | **POST** /api/v2/users/search | Search users |
 | [**PostVoicemailSearch**](SearchApi.html#postvoicemailsearch) | **POST** /api/v2/voicemail/search | Search voicemails |
 {: class="table table-striped"}
+
+<a name="getdocumentationgknsearch"></a>
+
+## [**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse.html) GetDocumentationGknSearch (string q64)
+
+
+
+Search gkn documentation using the q64 value returned from a previous search
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetDocumentationGknSearchExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new SearchApi();
+            
+            
+            var q64 = q64_example;  // string | q64
+            
+            
+            
+
+            try
+            {
+                
+                // Search gkn documentation using the q64 value returned from a previous search
+                
+                GKNDocumentationSearchResponse result = apiInstance.GetDocumentationGknSearch(q64);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.GetDocumentationGknSearch: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **q64** | **string**| q64 |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse.html)
 
 <a name="getdocumentationsearch"></a>
 
@@ -315,7 +386,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
 | **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -396,7 +467,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
 | **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -553,6 +624,75 @@ namespace Example
 ### Return type
 
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse.html)
+
+<a name="postdocumentationgknsearch"></a>
+
+## [**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse.html) PostDocumentationGknSearch (GKNDocumentationSearchRequest body)
+
+
+
+Search gkn documentation
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostDocumentationGknSearchExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new SearchApi();
+            
+            
+            
+            var body = new GKNDocumentationSearchRequest(); // GKNDocumentationSearchRequest | Search request options
+            
+            
+
+            try
+            {
+                
+                // Search gkn documentation
+                
+                GKNDocumentationSearchResponse result = apiInstance.PostDocumentationGknSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PostDocumentationGknSearch: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**GKNDocumentationSearchRequest**](GKNDocumentationSearchRequest.html)| Search request options |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse.html)
 
 <a name="postdocumentationsearch"></a>
 

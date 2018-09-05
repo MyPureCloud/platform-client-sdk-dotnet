@@ -35,16 +35,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseConfig" /> class.
         /// </summary>
         /// <param name="TranslationMap">Map &#39;attribute name&#39; and &#39;JSON path&#39; pairs used to extract data from REST response..</param>
+        /// <param name="TranslationMapDefaults">Map &#39;attribute name&#39; and &#39;default value&#39; pairs used as fallback values if JSON path extraction fails for specified key..</param>
         /// <param name="SuccessTemplate">Velocity template to build response to return from Action..</param>
         /// <param name="SuccessTemplateUri">URI to retrieve success template..</param>
-        public ResponseConfig(Dictionary<string, string> TranslationMap = null, string SuccessTemplate = null, string SuccessTemplateUri = null)
+        public ResponseConfig(Dictionary<string, string> TranslationMap = null, Dictionary<string, string> TranslationMapDefaults = null, string SuccessTemplate = null, string SuccessTemplateUri = null)
         {
             this.TranslationMap = TranslationMap;
+            this.TranslationMapDefaults = TranslationMapDefaults;
             this.SuccessTemplate = SuccessTemplate;
             this.SuccessTemplateUri = SuccessTemplateUri;
             
@@ -58,6 +65,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Map &#39;attribute name&#39; and &#39;JSON path&#39; pairs used to extract data from REST response.</value>
         [DataMember(Name="translationMap", EmitDefaultValue=false)]
         public Dictionary<string, string> TranslationMap { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Map &#39;attribute name&#39; and &#39;default value&#39; pairs used as fallback values if JSON path extraction fails for specified key.
+        /// </summary>
+        /// <value>Map &#39;attribute name&#39; and &#39;default value&#39; pairs used as fallback values if JSON path extraction fails for specified key.</value>
+        [DataMember(Name="translationMapDefaults", EmitDefaultValue=false)]
+        public Dictionary<string, string> TranslationMapDefaults { get; set; }
         
         
         
@@ -88,6 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ResponseConfig {\n");
             
             sb.Append("  TranslationMap: ").Append(TranslationMap).Append("\n");
+            sb.Append("  TranslationMapDefaults: ").Append(TranslationMapDefaults).Append("\n");
             sb.Append("  SuccessTemplate: ").Append(SuccessTemplate).Append("\n");
             sb.Append("  SuccessTemplateUri: ").Append(SuccessTemplateUri).Append("\n");
             sb.Append("}\n");
@@ -132,6 +149,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TranslationMap.SequenceEqual(other.TranslationMap)
                 ) &&
                 (
+                    this.TranslationMapDefaults == other.TranslationMapDefaults ||
+                    this.TranslationMapDefaults != null &&
+                    this.TranslationMapDefaults.SequenceEqual(other.TranslationMapDefaults)
+                ) &&
+                (
                     this.SuccessTemplate == other.SuccessTemplate ||
                     this.SuccessTemplate != null &&
                     this.SuccessTemplate.Equals(other.SuccessTemplate)
@@ -157,6 +179,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TranslationMap != null)
                     hash = hash * 59 + this.TranslationMap.GetHashCode();
+                
+                if (this.TranslationMapDefaults != null)
+                    hash = hash * 59 + this.TranslationMapDefaults.GetHashCode();
                 
                 if (this.SuccessTemplate != null)
                     hash = hash * 59 + this.SuccessTemplate.GetHashCode();

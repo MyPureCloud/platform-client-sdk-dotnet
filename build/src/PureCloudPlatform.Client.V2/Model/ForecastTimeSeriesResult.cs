@@ -211,6 +211,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Multilinearregression,
             
             /// <summary>
+            /// Enum Dynamicharmonicregression for "DynamicHarmonicRegression"
+            /// </summary>
+            [EnumMember(Value = "DynamicHarmonicRegression")]
+            Dynamicharmonicregression,
+            
+            /// <summary>
             /// Enum Other for "Other"
             /// </summary>
             [EnumMember(Value = "Other")]

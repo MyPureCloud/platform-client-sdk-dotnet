@@ -149,12 +149,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
         
         
         
@@ -220,12 +230,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Geolocation">Current geolocation position.</param>
         /// <param name="Station">Effective, default, and last station information.</param>
         /// <param name="Authorization">Roles and permissions assigned to the user.</param>
-        /// <param name="ProfileSkills">Skills possessed by the user.</param>
+        /// <param name="ProfileSkills">Profile skills possessed by the user.</param>
         /// <param name="Locations">The user placement at each site location..</param>
         /// <param name="Groups">The groups the user is a member of.</param>
+        /// <param name="Skills">Routing (ACD) skills possessed by the user.</param>
+        /// <param name="Languages">Routing (ACD) languages possessed by the user.</param>
         /// <param name="AcdAutoAnswer">acd auto answer.</param>
         /// <param name="Organization">Organization.</param>
-        public OrgUser(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, bool? AcdAutoAnswer = null, Organization Organization = null)
+        public OrgUser(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, List<UserRoutingSkill> Skills = null, List<UserRoutingLanguage> Languages = null, bool? AcdAutoAnswer = null, Organization Organization = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -249,6 +261,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ProfileSkills = ProfileSkills;
             this.Locations = Locations;
             this.Groups = Groups;
+            this.Skills = Skills;
+            this.Languages = Languages;
             this.AcdAutoAnswer = AcdAutoAnswer;
             this.Organization = Organization;
             
@@ -431,9 +445,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Skills possessed by the user
+        /// Profile skills possessed by the user
         /// </summary>
-        /// <value>Skills possessed by the user</value>
+        /// <value>Profile skills possessed by the user</value>
         [DataMember(Name="profileSkills", EmitDefaultValue=false)]
         public List<string> ProfileSkills { get; set; }
         
@@ -454,6 +468,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The groups the user is a member of</value>
         [DataMember(Name="groups", EmitDefaultValue=false)]
         public List<Group> Groups { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Routing (ACD) skills possessed by the user
+        /// </summary>
+        /// <value>Routing (ACD) skills possessed by the user</value>
+        [DataMember(Name="skills", EmitDefaultValue=false)]
+        public List<UserRoutingSkill> Skills { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Routing (ACD) languages possessed by the user
+        /// </summary>
+        /// <value>Routing (ACD) languages possessed by the user</value>
+        [DataMember(Name="languages", EmitDefaultValue=false)]
+        public List<UserRoutingLanguage> Languages { get; set; }
         
         
         
@@ -506,6 +538,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ProfileSkills: ").Append(ProfileSkills).Append("\n");
             sb.Append("  Locations: ").Append(Locations).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
+            sb.Append("  Skills: ").Append(Skills).Append("\n");
+            sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
             sb.Append("}\n");
@@ -665,6 +699,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Groups.SequenceEqual(other.Groups)
                 ) &&
                 (
+                    this.Skills == other.Skills ||
+                    this.Skills != null &&
+                    this.Skills.SequenceEqual(other.Skills)
+                ) &&
+                (
+                    this.Languages == other.Languages ||
+                    this.Languages != null &&
+                    this.Languages.SequenceEqual(other.Languages)
+                ) &&
+                (
                     this.AcdAutoAnswer == other.AcdAutoAnswer ||
                     this.AcdAutoAnswer != null &&
                     this.AcdAutoAnswer.Equals(other.AcdAutoAnswer)
@@ -759,6 +803,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Groups != null)
                     hash = hash * 59 + this.Groups.GetHashCode();
+                
+                if (this.Skills != null)
+                    hash = hash * 59 + this.Skills.GetHashCode();
+                
+                if (this.Languages != null)
+                    hash = hash * 59 + this.Languages.GetHashCode();
                 
                 if (this.AcdAutoAnswer != null)
                     hash = hash * 59 + this.AcdAutoAnswer.GetHashCode();

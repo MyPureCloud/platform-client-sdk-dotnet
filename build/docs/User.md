@@ -28,9 +28,11 @@ title: User
 | **Geolocation** | [**Geolocation**](Geolocation.html) | Current geolocation position | [optional] |
 | **Station** | [**UserStations**](UserStations.html) | Effective, default, and last station information | [optional] |
 | **Authorization** | [**UserAuthorization**](UserAuthorization.html) | Roles and permissions assigned to the user | [optional] |
-| **ProfileSkills** | **List&lt;string&gt;** | Skills possessed by the user | [optional] |
+| **ProfileSkills** | **List&lt;string&gt;** | Profile skills possessed by the user | [optional] |
 | **Locations** | [**List&lt;Location&gt;**](Location.html) | The user placement at each site location. | [optional] |
 | **Groups** | [**List&lt;Group&gt;**](Group.html) | The groups the user is a member of | [optional] |
+| **Skills** | [**List&lt;UserRoutingSkill&gt;**](UserRoutingSkill.html) | Routing (ACD) skills possessed by the user | [optional] |
+| **Languages** | [**List&lt;UserRoutingLanguage&gt;**](UserRoutingLanguage.html) | Routing (ACD) languages possessed by the user | [optional] |
 | **AcdAutoAnswer** | **bool?** | acd auto answer | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchUserPresence**](PresenceApi.html#patchuserpresence) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
 | [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create a Presence Definition |
 | [**PutPresencedefinition**](PresenceApi.html#putpresencedefinition) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition |
+| [**PutUsersPresencesBulk**](PresenceApi.html#putuserspresencesbulk) | **PUT** /api/v2/users/presences/bulk | Update bulk user Presences |
 {: class="table table-striped"}
 
 <a name="deletepresencedefinition"></a>
@@ -609,4 +610,74 @@ namespace Example
 ### Return type
 
 [**OrganizationPresence**](OrganizationPresence.html)
+
+<a name="putuserspresencesbulk"></a>
+
+## [**List&lt;UserPresence&gt;**](UserPresence.html) PutUsersPresencesBulk (List<UserPresence> body)
+
+
+
+Update bulk user Presences
+
+
+
+Requires ANY permissions: 
+
+* user_administration
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutUsersPresencesBulkExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new PresenceApi();
+            
+            
+            
+            var body = new List<UserPresence>(); // List<UserPresence> | List of User presences
+            
+            
+
+            try
+            {
+                
+                // Update bulk user Presences
+                
+                List&lt;UserPresence&gt; result = apiInstance.PutUsersPresencesBulk(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.PutUsersPresencesBulk: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**List<UserPresence>**](UserPresence.html)| List of User presences |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<UserPresence>**](UserPresence.html)
 

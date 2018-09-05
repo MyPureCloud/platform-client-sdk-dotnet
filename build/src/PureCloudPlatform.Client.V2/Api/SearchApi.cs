@@ -17,6 +17,28 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// Search gkn documentation using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <returns>GKNDocumentationSearchResponse</returns>
+        GKNDocumentationSearchResponse GetDocumentationGknSearch (string q64);
+
+        /// <summary>
+        /// Search gkn documentation using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <returns>ApiResponse of GKNDocumentationSearchResponse</returns>
+        ApiResponse<GKNDocumentationSearchResponse> GetDocumentationGknSearchWithHttpInfo (string q64);
+        
+        /// <summary>
         /// Search documentation using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
@@ -187,6 +209,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<VoicemailsSearchResponse> GetVoicemailSearchWithHttpInfo (string q64, List<string> expand = null);
         
         /// <summary>
+        /// Search gkn documentation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>GKNDocumentationSearchResponse</returns>
+        GKNDocumentationSearchResponse PostDocumentationGknSearch (GKNDocumentationSearchRequest body);
+
+        /// <summary>
+        /// Search gkn documentation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of GKNDocumentationSearchResponse</returns>
+        ApiResponse<GKNDocumentationSearchResponse> PostDocumentationGknSearchWithHttpInfo (GKNDocumentationSearchRequest body);
+        
+        /// <summary>
         /// Search documentation
         /// </summary>
         /// <remarks>
@@ -347,6 +391,28 @@ namespace PureCloudPlatform.Client.V2.Api
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
+        
+        /// <summary>
+        /// Search gkn documentation using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <returns>Task of GKNDocumentationSearchResponse</returns>
+        System.Threading.Tasks.Task<GKNDocumentationSearchResponse> GetDocumentationGknSearchAsync (string q64);
+
+        /// <summary>
+        /// Search gkn documentation using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <returns>Task of ApiResponse (GKNDocumentationSearchResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GKNDocumentationSearchResponse>> GetDocumentationGknSearchAsyncWithHttpInfo (string q64);
         
         /// <summary>
         /// Search documentation using the q64 value returned from a previous search
@@ -517,6 +583,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> GetVoicemailSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
+        
+        /// <summary>
+        /// Search gkn documentation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of GKNDocumentationSearchResponse</returns>
+        System.Threading.Tasks.Task<GKNDocumentationSearchResponse> PostDocumentationGknSearchAsync (GKNDocumentationSearchRequest body);
+
+        /// <summary>
+        /// Search gkn documentation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (GKNDocumentationSearchResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GKNDocumentationSearchResponse>> PostDocumentationGknSearchAsyncWithHttpInfo (GKNDocumentationSearchRequest body);
         
         /// <summary>
         /// Search documentation
@@ -767,6 +855,199 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
+        
+        /// <summary>
+        /// Search gkn documentation using the q64 value returned from a previous search 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <returns>GKNDocumentationSearchResponse</returns>
+        public GKNDocumentationSearchResponse GetDocumentationGknSearch (string q64)
+        {
+             ApiResponse<GKNDocumentationSearchResponse> localVarResponse = GetDocumentationGknSearchWithHttpInfo(q64);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search gkn documentation using the q64 value returned from a previous search 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <returns>ApiResponse of GKNDocumentationSearchResponse</returns>
+        public ApiResponse< GKNDocumentationSearchResponse > GetDocumentationGknSearchWithHttpInfo (string q64)
+        { 
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling SearchApi->GetDocumentationGknSearch");
+
+            var localVarPath = "/api/v2/documentation/gkn/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (q64 != null) localVarQueryParams.Add(new Tuple<string, string>("q64", this.Configuration.ApiClient.ParameterToString(q64)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetDocumentationGknSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDocumentationGknSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GKNDocumentationSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GKNDocumentationSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GKNDocumentationSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Search gkn documentation using the q64 value returned from a previous search 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <returns>Task of GKNDocumentationSearchResponse</returns>
+        public async System.Threading.Tasks.Task<GKNDocumentationSearchResponse> GetDocumentationGknSearchAsync (string q64)
+        {
+             ApiResponse<GKNDocumentationSearchResponse> localVarResponse = await GetDocumentationGknSearchAsyncWithHttpInfo(q64);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search gkn documentation using the q64 value returned from a previous search 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <returns>Task of ApiResponse (GKNDocumentationSearchResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GKNDocumentationSearchResponse>> GetDocumentationGknSearchAsyncWithHttpInfo (string q64)
+        { 
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling SearchApi->GetDocumentationGknSearch");
+            
+
+            var localVarPath = "/api/v2/documentation/gkn/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (q64 != null) localVarQueryParams.Add(new Tuple<string, string>("q64", this.Configuration.ApiClient.ParameterToString(q64)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetDocumentationGknSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDocumentationGknSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GKNDocumentationSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GKNDocumentationSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GKNDocumentationSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
         
         /// <summary>
         /// Search documentation using the q64 value returned from a previous search 
@@ -2161,6 +2442,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<VoicemailsSearchResponse>(localVarStatusCode,
                 localVarHeaders,
                 (VoicemailsSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Search gkn documentation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>GKNDocumentationSearchResponse</returns>
+        public GKNDocumentationSearchResponse PostDocumentationGknSearch (GKNDocumentationSearchRequest body)
+        {
+             ApiResponse<GKNDocumentationSearchResponse> localVarResponse = PostDocumentationGknSearchWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search gkn documentation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of GKNDocumentationSearchResponse</returns>
+        public ApiResponse< GKNDocumentationSearchResponse > PostDocumentationGknSearchWithHttpInfo (GKNDocumentationSearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostDocumentationGknSearch");
+
+            var localVarPath = "/api/v2/documentation/gkn/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostDocumentationGknSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostDocumentationGknSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GKNDocumentationSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GKNDocumentationSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GKNDocumentationSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Search gkn documentation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of GKNDocumentationSearchResponse</returns>
+        public async System.Threading.Tasks.Task<GKNDocumentationSearchResponse> PostDocumentationGknSearchAsync (GKNDocumentationSearchRequest body)
+        {
+             ApiResponse<GKNDocumentationSearchResponse> localVarResponse = await PostDocumentationGknSearchAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search gkn documentation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (GKNDocumentationSearchResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GKNDocumentationSearchResponse>> PostDocumentationGknSearchAsyncWithHttpInfo (GKNDocumentationSearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostDocumentationGknSearch");
+            
+
+            var localVarPath = "/api/v2/documentation/gkn/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostDocumentationGknSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostDocumentationGknSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GKNDocumentationSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GKNDocumentationSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GKNDocumentationSearchResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

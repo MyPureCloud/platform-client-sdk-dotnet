@@ -5071,7 +5071,7 @@ namespace Example
 
 <a name="postoutboundcontactlistcontacts"></a>
 
-## [**List&lt;DialerContact&gt;**](DialerContact.html) PostOutboundContactlistContacts (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
+## [**List&lt;DialerContact&gt;**](DialerContact.html) PostOutboundContactlistContacts (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
 
 
 
@@ -5111,7 +5111,7 @@ namespace Example
             
             
             
-            var body = new List<DialerContact>(); // List<DialerContact> | Contact
+            var body = new List<WritableDialerContact>(); // List<WritableDialerContact> | Contact
             
             
             
@@ -5153,7 +5153,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
-| **body** | [**List<DialerContact>**](DialerContact.html)| Contact |  |
+| **body** | [**List<WritableDialerContact>**](WritableDialerContact.html)| Contact |  |
 | **priority** | **bool?**| Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. | [optional]  |
 | **clearSystemData** | **bool?**| Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. | [optional]  |
 | **doNotQueue** | **bool?**| Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the &#39;priority&#39; parameter. | [optional]  |

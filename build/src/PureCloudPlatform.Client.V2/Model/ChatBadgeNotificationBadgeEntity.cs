@@ -23,89 +23,26 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum TypeEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum User for "user"
-            /// </summary>
-            [EnumMember(Value = "user")]
-            User,
-            
-            /// <summary>
-            /// Enum Group for "group"
-            /// </summary>
-            [EnumMember(Value = "group")]
-            Group,
-            
-            /// <summary>
-            /// Enum Adhoc for "adhoc"
-            /// </summary>
-            [EnumMember(Value = "adhoc")]
-            Adhoc
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-        
-        
         
         
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatBadgeNotificationBadgeEntity" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="Jid">Jid.</param>
-        public ChatBadgeNotificationBadgeEntity(string Id = null, TypeEnum? Type = null, string Jid = null)
+        /// <param name="JabberId">JabberId.</param>
+        public ChatBadgeNotificationBadgeEntity(string JabberId = null)
         {
-            this.Id = Id;
-            this.Type = Type;
-            this.Jid = Jid;
+            this.JabberId = JabberId;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Gets or Sets JabberId
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-        
-        
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Jid
-        /// </summary>
-        [DataMember(Name="jid", EmitDefaultValue=false)]
-        public string Jid { get; set; }
+        [DataMember(Name="jabberId", EmitDefaultValue=false)]
+        public string JabberId { get; set; }
         
         
         /// <summary>
@@ -117,9 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ChatBadgeNotificationBadgeEntity {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Jid: ").Append(Jid).Append("\n");
+            sb.Append("  JabberId: ").Append(JabberId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -157,19 +92,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
-                ) &&
-                (
-                    this.Jid == other.Jid ||
-                    this.Jid != null &&
-                    this.Jid.Equals(other.Jid)
+                    this.JabberId == other.JabberId ||
+                    this.JabberId != null &&
+                    this.JabberId.Equals(other.JabberId)
                 );
         }
 
@@ -185,14 +110,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
-                
-                if (this.Jid != null)
-                    hash = hash * 59 + this.Jid.GetHashCode();
+                if (this.JabberId != null)
+                    hash = hash * 59 + this.JabberId.GetHashCode();
                 
                 return hash;
             }

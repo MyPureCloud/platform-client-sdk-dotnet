@@ -172,7 +172,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Manager">Manager.</param>
         /// <param name="Images">Images.</param>
         /// <param name="Version">This value should be the current version of the user. The current version can be obtained with a GET on the user before doing a PATCH. (required).</param>
-        /// <param name="ProfileSkills">Skills possessed by the user.</param>
+        /// <param name="ProfileSkills">Profile skills possessed by the user.</param>
         /// <param name="Locations">The user placement at each site location..</param>
         /// <param name="Groups">The groups the user is a member of.</param>
         /// <param name="State">The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field..</param>
@@ -301,9 +301,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Skills possessed by the user
+        /// Profile skills possessed by the user
         /// </summary>
-        /// <value>Skills possessed by the user</value>
+        /// <value>Profile skills possessed by the user</value>
         [DataMember(Name="profileSkills", EmitDefaultValue=false)]
         public List<string> ProfileSkills { get; set; }
         

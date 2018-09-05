@@ -60,6 +60,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallbackCommand" /> class.
@@ -77,8 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackNumbers">A list of phone numbers for the callback. (required).</param>
         /// <param name="CallbackScheduledTime">The scheduled date-time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CountryCode">The country code to be associated with the callback numbers..</param>
+        /// <param name="ValidateCallbackNumbers">Whether or not to validate the callback numbers for phone number format..</param>
         /// <param name="Data">A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }.</param>
-        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, Dictionary<string, string> Data = null)
+        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? ValidateCallbackNumbers = null, Dictionary<string, string> Data = null)
         {
             this.ScriptId = ScriptId;
             this.QueueId = QueueId;
@@ -87,6 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackScheduledTime = CallbackScheduledTime;
             this.CountryCode = CountryCode;
+            this.ValidateCallbackNumbers = ValidateCallbackNumbers;
             this.Data = Data;
             
         }
@@ -157,6 +164,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Whether or not to validate the callback numbers for phone number format.
+        /// </summary>
+        /// <value>Whether or not to validate the callback numbers for phone number format.</value>
+        [DataMember(Name="validateCallbackNumbers", EmitDefaultValue=false)]
+        public bool? ValidateCallbackNumbers { get; set; }
+        
+        
+        
+        /// <summary>
         /// A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }
         /// </summary>
         /// <value>A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }</value>
@@ -180,6 +196,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
+            sb.Append("  ValidateCallbackNumbers: ").Append(ValidateCallbackNumbers).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -253,6 +270,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CountryCode.Equals(other.CountryCode)
                 ) &&
                 (
+                    this.ValidateCallbackNumbers == other.ValidateCallbackNumbers ||
+                    this.ValidateCallbackNumbers != null &&
+                    this.ValidateCallbackNumbers.Equals(other.ValidateCallbackNumbers)
+                ) &&
+                (
                     this.Data == other.Data ||
                     this.Data != null &&
                     this.Data.SequenceEqual(other.Data)
@@ -291,6 +313,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
+                
+                if (this.ValidateCallbackNumbers != null)
+                    hash = hash * 59 + this.ValidateCallbackNumbers.GetHashCode();
                 
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();

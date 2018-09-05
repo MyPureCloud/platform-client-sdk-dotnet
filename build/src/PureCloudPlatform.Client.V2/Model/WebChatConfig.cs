@@ -20,21 +20,35 @@ namespace PureCloudPlatform.Client.V2.Model
     {
         
         
-        
-        
-        
-        
-        
-    
         /// <summary>
-        /// Initializes a new instance of the <see cref="WebChatConfig" /> class.
+        /// css class to be applied to the web chat widget.
         /// </summary>
-        /// <param name="WebChatSkin">css class to be applied to the web chat widget..</param>
-        public WebChatConfig(string WebChatSkin = null)
+        /// <value>css class to be applied to the web chat widget.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum WebChatSkinEnum
         {
-            this.WebChatSkin = WebChatSkin;
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
+            /// <summary>
+            /// Enum Basic for "basic"
+            /// </summary>
+            [EnumMember(Value = "basic")]
+            Basic,
+            
+            /// <summary>
+            /// Enum Moderncaretskin for "modern-caret-skin"
+            /// </summary>
+            [EnumMember(Value = "modern-caret-skin")]
+            Moderncaretskin
         }
+        
+        
         
         
         
@@ -43,7 +57,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>css class to be applied to the web chat widget.</value>
         [DataMember(Name="webChatSkin", EmitDefaultValue=false)]
-        public string WebChatSkin { get; set; }
+        public WebChatSkinEnum? WebChatSkin { get; set; }
+        
+        
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebChatConfig" /> class.
+        /// </summary>
+        /// <param name="WebChatSkin">css class to be applied to the web chat widget..</param>
+        public WebChatConfig(WebChatSkinEnum? WebChatSkin = null)
+        {
+            this.WebChatSkin = WebChatSkin;
+            
+        }
+        
+        
         
         
         /// <summary>

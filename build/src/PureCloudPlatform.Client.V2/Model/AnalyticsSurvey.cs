@@ -70,6 +70,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSurvey" /> class.
@@ -84,7 +89,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">Unique identifier for the queue the conversation was on.</param>
         /// <param name="Status">Survey status.</param>
         /// <param name="CreatedDate">Creation date of survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public AnalyticsSurvey(string SurveyId = null, string SurveyFormId = null, string SurveyFormContextId = null, string ParticipantId = null, string ExternalContactId = null, string CustomerAddress = null, string UserId = null, string QueueId = null, string Status = null, DateTime? CreatedDate = null)
+        /// <param name="GetoSurveyTotalScore">The total score for the survey.</param>
+        public AnalyticsSurvey(string SurveyId = null, string SurveyFormId = null, string SurveyFormContextId = null, string ParticipantId = null, string ExternalContactId = null, string CustomerAddress = null, string UserId = null, string QueueId = null, string Status = null, DateTime? CreatedDate = null, long? GetoSurveyTotalScore = null)
         {
             this.SurveyId = SurveyId;
             this.SurveyFormId = SurveyFormId;
@@ -96,6 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.QueueId = QueueId;
             this.Status = Status;
             this.CreatedDate = CreatedDate;
+            this.GetoSurveyTotalScore = GetoSurveyTotalScore;
             
         }
         
@@ -190,6 +197,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? CreatedDate { get; set; }
         
         
+        
+        /// <summary>
+        /// The total score for the survey
+        /// </summary>
+        /// <value>The total score for the survey</value>
+        [DataMember(Name="getoSurveyTotalScore", EmitDefaultValue=false)]
+        public long? GetoSurveyTotalScore { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -209,6 +225,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
+            sb.Append("  GetoSurveyTotalScore: ").Append(GetoSurveyTotalScore).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -294,6 +311,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
+                ) &&
+                (
+                    this.GetoSurveyTotalScore == other.GetoSurveyTotalScore ||
+                    this.GetoSurveyTotalScore != null &&
+                    this.GetoSurveyTotalScore.Equals(other.GetoSurveyTotalScore)
                 );
         }
 
@@ -338,6 +360,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
+                
+                if (this.GetoSurveyTotalScore != null)
+                    hash = hash * 59 + this.GetoSurveyTotalScore.GetHashCode();
                 
                 return hash;
             }

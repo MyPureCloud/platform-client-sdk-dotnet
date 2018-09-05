@@ -206,6 +206,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of OrganizationPresence</returns>
         ApiResponse<OrganizationPresence> PutPresencedefinitionWithHttpInfo (string presenceId, OrganizationPresence body);
         
+        /// <summary>
+        /// Update bulk user Presences
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of User presences</param>
+        /// <returns>List&lt;UserPresence&gt;</returns>
+        List<UserPresence> PutUsersPresencesBulk (List<UserPresence> body);
+
+        /// <summary>
+        /// Update bulk user Presences
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of User presences</param>
+        /// <returns>ApiResponse of List&lt;UserPresence&gt;</returns>
+        ApiResponse<List<UserPresence>> PutUsersPresencesBulkWithHttpInfo (List<UserPresence> body);
+        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
@@ -399,6 +421,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PutPresencedefinitionAsyncWithHttpInfo (string presenceId, OrganizationPresence body);
+        
+        /// <summary>
+        /// Update bulk user Presences
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of User presences</param>
+        /// <returns>Task of List&lt;UserPresence&gt;</returns>
+        System.Threading.Tasks.Task<List<UserPresence>> PutUsersPresencesBulkAsync (List<UserPresence> body);
+
+        /// <summary>
+        /// Update bulk user Presences
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of User presences</param>
+        /// <returns>Task of ApiResponse (List&lt;UserPresence&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UserPresence>>> PutUsersPresencesBulkAsyncWithHttpInfo (List<UserPresence> body);
         
         #endregion Asynchronous Operations
         
@@ -2108,6 +2152,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<OrganizationPresence>(localVarStatusCode,
                 localVarHeaders,
                 (OrganizationPresence) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresence)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update bulk user Presences 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of User presences</param>
+        /// <returns>List&lt;UserPresence&gt;</returns>
+        public List<UserPresence> PutUsersPresencesBulk (List<UserPresence> body)
+        {
+             ApiResponse<List<UserPresence>> localVarResponse = PutUsersPresencesBulkWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update bulk user Presences 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of User presences</param>
+        /// <returns>ApiResponse of List&lt;UserPresence&gt;</returns>
+        public ApiResponse< List<UserPresence> > PutUsersPresencesBulkWithHttpInfo (List<UserPresence> body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutUsersPresencesBulk");
+
+            var localVarPath = "/api/v2/users/presences/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersPresencesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersPresencesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<UserPresence>>(localVarStatusCode,
+                localVarHeaders,
+                (List<UserPresence>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserPresence>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update bulk user Presences 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of User presences</param>
+        /// <returns>Task of List&lt;UserPresence&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UserPresence>> PutUsersPresencesBulkAsync (List<UserPresence> body)
+        {
+             ApiResponse<List<UserPresence>> localVarResponse = await PutUsersPresencesBulkAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update bulk user Presences 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of User presences</param>
+        /// <returns>Task of ApiResponse (List&lt;UserPresence&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UserPresence>>> PutUsersPresencesBulkAsyncWithHttpInfo (List<UserPresence> body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutUsersPresencesBulk");
+            
+
+            var localVarPath = "/api/v2/users/presences/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersPresencesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersPresencesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<UserPresence>>(localVarStatusCode,
+                localVarHeaders,
+                (List<UserPresence>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserPresence>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

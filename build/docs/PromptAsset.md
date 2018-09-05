@@ -13,6 +13,7 @@ title: PromptAsset
 | **Language** | **string** |  | [optional] |
 | **MediaUri** | **string** |  | [optional] |
 | **TtsString** | **string** |  | [optional] |
+| **Text** | **string** |  | [optional] |
 | **UploadStatus** | **string** |  | [optional] |
 | **UploadUri** | **string** |  | [optional] |
 | **LanguageDefault** | **bool?** |  | [optional] |

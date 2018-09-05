@@ -38,6 +38,39 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The condition to notify agents about schedule updates. Applicable to only published schedule
+        /// </summary>
+        /// <value>The condition to notify agents about schedule updates. Applicable to only published schedule</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AgentUpdateFilterEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum All for "All"
+            /// </summary>
+            [EnumMember(Value = "All")]
+            All,
+            
+            /// <summary>
+            /// Enum Shifttimechange for "ShiftTimeChange"
+            /// </summary>
+            [EnumMember(Value = "ShiftTimeChange")]
+            Shifttimechange,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None
+        }
         
         
         
@@ -48,6 +81,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The condition to notify agents about schedule updates. Applicable to only published schedule
+        /// </summary>
+        /// <value>The condition to notify agents about schedule updates. Applicable to only published schedule</value>
+        [DataMember(Name="agentUpdateFilter", EmitDefaultValue=false)]
+        public AgentUpdateFilterEnum? AgentUpdateFilter { get; set; }
         
         
     
@@ -66,7 +112,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PartialUploadIds">IDs of partial uploads to include in this imported schedule. It is applicable only for large schedules where activity count in schedule is greater than 17500.</param>
         /// <param name="Metadata">Version metadata for this work plan (required).</param>
         /// <param name="AgentSchedulesVersion">Version of agent schedules in the week schedule (required).</param>
-        public UpdateWeekScheduleRequest(string Description = null, bool? Published = null, Dictionary<string, UserSchedule> UserSchedules = null, List<string> PartialUploadIds = null, WfmVersionedEntityMetadata Metadata = null, int? AgentSchedulesVersion = null)
+        /// <param name="AgentUpdateFilter">The condition to notify agents about schedule updates. Applicable to only published schedule.</param>
+        public UpdateWeekScheduleRequest(string Description = null, bool? Published = null, Dictionary<string, UserSchedule> UserSchedules = null, List<string> PartialUploadIds = null, WfmVersionedEntityMetadata Metadata = null, int? AgentSchedulesVersion = null, AgentUpdateFilterEnum? AgentUpdateFilter = null)
         {
             this.Description = Description;
             this.Published = Published;
@@ -74,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PartialUploadIds = PartialUploadIds;
             this.Metadata = Metadata;
             this.AgentSchedulesVersion = AgentSchedulesVersion;
+            this.AgentUpdateFilter = AgentUpdateFilter;
             
         }
         
@@ -132,6 +180,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? AgentSchedulesVersion { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -147,6 +197,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PartialUploadIds: ").Append(PartialUploadIds).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  AgentSchedulesVersion: ").Append(AgentSchedulesVersion).Append("\n");
+            sb.Append("  AgentUpdateFilter: ").Append(AgentUpdateFilter).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -212,6 +263,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentSchedulesVersion == other.AgentSchedulesVersion ||
                     this.AgentSchedulesVersion != null &&
                     this.AgentSchedulesVersion.Equals(other.AgentSchedulesVersion)
+                ) &&
+                (
+                    this.AgentUpdateFilter == other.AgentUpdateFilter ||
+                    this.AgentUpdateFilter != null &&
+                    this.AgentUpdateFilter.Equals(other.AgentUpdateFilter)
                 );
         }
 
@@ -244,6 +300,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AgentSchedulesVersion != null)
                     hash = hash * 59 + this.AgentSchedulesVersion.GetHashCode();
+                
+                if (this.AgentUpdateFilter != null)
+                    hash = hash * 59 + this.AgentUpdateFilter.GetHashCode();
                 
                 return hash;
             }

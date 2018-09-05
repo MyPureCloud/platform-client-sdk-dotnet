@@ -17,6 +17,28 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// Delete a division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <returns></returns>
+        void DeleteAuthorizationDivision (string divisionId);
+
+        /// <summary>
+        /// Delete a division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteAuthorizationDivisionWithHttpInfo (string divisionId);
+        
+        /// <summary>
         /// Delete an organization role.
         /// </summary>
         /// <remarks>
@@ -39,6 +61,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteAuthorizationRoleWithHttpInfo (string roleId);
         
         /// <summary>
+        /// Delete a grant of a role in a division
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division of the grant</param>
+        /// <param name="roleId">the id of the role of the grant</param>
+        /// <returns></returns>
+        void DeleteAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId);
+
+        /// <summary>
+        /// Delete a grant of a role in a division
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division of the grant</param>
+        /// <param name="roleId">the id of the role of the grant</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId);
+        
+        /// <summary>
         /// Removes all the roles from the user.
         /// </summary>
         /// <remarks>
@@ -59,6 +107,158 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteUserRolesWithHttpInfo (string userId);
+        
+        /// <summary>
+        /// Returns an authorization division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
+        /// <returns>AuthzDivision</returns>
+        AuthzDivision GetAuthorizationDivision (string divisionId, bool? objectCount = null);
+
+        /// <summary>
+        /// Returns an authorization division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
+        /// <returns>ApiResponse of AuthzDivision</returns>
+        ApiResponse<AuthzDivision> GetAuthorizationDivisionWithHttpInfo (string divisionId, bool? objectCount = null);
+        
+        /// <summary>
+        /// Retrieve a list of all divisions defined for the organization
+        /// </summary>
+        /// <remarks>
+        /// Request specific divisions by id using a query param \&quot;id\&quot;, e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&amp;id=72e9fb25-c484-488d-9312-7acba82435b3
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="objectCount">Include the count of objects contained in the division (optional, default to false)</param>
+        /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>AuthzDivisionEntityListing</returns>
+        AuthzDivisionEntityListing GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
+
+        /// <summary>
+        /// Retrieve a list of all divisions defined for the organization
+        /// </summary>
+        /// <remarks>
+        /// Request specific divisions by id using a query param \&quot;id\&quot;, e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&amp;id=72e9fb25-c484-488d-9312-7acba82435b3
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="objectCount">Include the count of objects contained in the division (optional, default to false)</param>
+        /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>ApiResponse of AuthzDivisionEntityListing</returns>
+        ApiResponse<AuthzDivisionEntityListing> GetAuthorizationDivisionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
+        
+        /// <summary>
+        /// Retrieve the home division for the organization.
+        /// </summary>
+        /// <remarks>
+        /// Will not include object counts.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>AuthzDivision</returns>
+        AuthzDivision GetAuthorizationDivisionsHome ();
+
+        /// <summary>
+        /// Retrieve the home division for the organization.
+        /// </summary>
+        /// <remarks>
+        /// Will not include object counts.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of AuthzDivision</returns>
+        ApiResponse<AuthzDivision> GetAuthorizationDivisionsHomeWithHttpInfo ();
+        
+        /// <summary>
+        /// Returns the maximum allowed number of divisions.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>int?</returns>
+        int? GetAuthorizationDivisionsLimit ();
+
+        /// <summary>
+        /// Returns the maximum allowed number of divisions.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of int?</returns>
+        ApiResponse<int?> GetAuthorizationDivisionsLimitWithHttpInfo ();
+        
+        /// <summary>
+        /// Returns whether or not current user can perform the specified action(s).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>List&lt;AuthzDivision&gt;</returns>
+        List<AuthzDivision> GetAuthorizationDivisionspermittedMe (string permission, string name = null);
+
+        /// <summary>
+        /// Returns whether or not current user can perform the specified action(s).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>ApiResponse of List&lt;AuthzDivision&gt;</returns>
+        ApiResponse<List<AuthzDivision>> GetAuthorizationDivisionspermittedMeWithHttpInfo (string permission, string name = null);
+        
+        /// <summary>
+        /// Returns whether or not specified user can perform the specified action(s).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>List&lt;AuthzDivision&gt;</returns>
+        List<AuthzDivision> GetAuthorizationDivisionspermittedSubjectId (string subjectId, string permission, string name = null);
+
+        /// <summary>
+        /// Returns whether or not specified user can perform the specified action(s).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>ApiResponse of List&lt;AuthzDivision&gt;</returns>
+        ApiResponse<List<AuthzDivision>> GetAuthorizationDivisionspermittedSubjectIdWithHttpInfo (string subjectId, string permission, string name = null);
         
         /// <summary>
         /// Get all permissions.
@@ -185,6 +385,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SubjectDivisionGrantsEntityListing> GetAuthorizationRoleSubjectgrantsWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
+        /// Get a list of the users in a specified role.
+        /// </summary>
+        /// <remarks>
+        /// Get an array of the UUIDs of the users in the specified role.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>UserEntityListing</returns>
+        UserEntityListing GetAuthorizationRoleUsers (string roleId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a list of the users in a specified role.
+        /// </summary>
+        /// <remarks>
+        /// Get an array of the UUIDs of the users in the specified role.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of UserEntityListing</returns>
+        ApiResponse<UserEntityListing> GetAuthorizationRoleUsersWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null);
+        
+        /// <summary>
         /// Retrieve a list of all roles defined for the organization
         /// </summary>
         /// <remarks>
@@ -233,6 +459,48 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <returns>AuthzSubject</returns>
+        AuthzSubject GetAuthorizationSubject (string subjectId);
+
+        /// <summary>
+        /// Returns a listing of roles and permissions for a user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <returns>ApiResponse of AuthzSubject</returns>
+        ApiResponse<AuthzSubject> GetAuthorizationSubjectWithHttpInfo (string subjectId);
+        
+        /// <summary>
+        /// Returns a listing of roles and permissions for the currently authenticated user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>AuthzSubject</returns>
+        AuthzSubject GetAuthorizationSubjectsMe ();
+
+        /// <summary>
+        /// Returns a listing of roles and permissions for the currently authenticated user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of AuthzSubject</returns>
+        ApiResponse<AuthzSubject> GetAuthorizationSubjectsMeWithHttpInfo ();
+        
+        /// <summary>
+        /// Returns a listing of roles and permissions for a user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>UserAuthorization</returns>
         UserAuthorization GetUserRoles (string userId);
@@ -271,6 +539,78 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
         ApiResponse<DomainOrganizationRole> PatchAuthorizationRoleWithHttpInfo (string roleId, DomainOrganizationRole body);
+        
+        /// <summary>
+        /// Assign a list of objects to a division
+        /// </summary>
+        /// <remarks>
+        /// Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\&quot;206ce31f-61ec-40ed-a8b1-be6f06303998\&quot;,\&quot;250a754e-f5e4-4f51-800f-a92f09d3bf8c\&quot;]
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
+        /// <param name="body">Object Id List</param>
+        /// <returns></returns>
+        void PostAuthorizationDivisionObject (string divisionId, string objectType, List<string> body);
+
+        /// <summary>
+        /// Assign a list of objects to a division
+        /// </summary>
+        /// <remarks>
+        /// Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\&quot;206ce31f-61ec-40ed-a8b1-be6f06303998\&quot;,\&quot;250a754e-f5e4-4f51-800f-a92f09d3bf8c\&quot;]
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
+        /// <param name="body">Object Id List</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostAuthorizationDivisionObjectWithHttpInfo (string divisionId, string objectType, List<string> body);
+        
+        /// <summary>
+        /// Create a division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Division</param>
+        /// <returns>AuthzDivision</returns>
+        AuthzDivision PostAuthorizationDivisions (AuthzDivision body);
+
+        /// <summary>
+        /// Create a division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Division</param>
+        /// <returns>ApiResponse of AuthzDivision</returns>
+        ApiResponse<AuthzDivision> PostAuthorizationDivisionsWithHttpInfo (AuthzDivision body);
+        
+        /// <summary>
+        /// Bulk-grant subjects and divisions with an organization role.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="body">Subjects and Divisions</param>
+        /// <returns></returns>
+        void PostAuthorizationRole (string roleId, SubjectDivisions body);
+
+        /// <summary>
+        /// Bulk-grant subjects and divisions with an organization role.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="body">Subjects and Divisions</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostAuthorizationRoleWithHttpInfo (string roleId, SubjectDivisions body);
         
         /// <summary>
         /// Get an unsaved org role to default role comparison
@@ -341,6 +681,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Restore default roles (optional, default to false)</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
         ApiResponse<OrganizationRoleEntityListing> PostAuthorizationRolesDefaultWithHttpInfo (bool? force = null);
+        
+        /// <summary>
+        /// Make a grant of a role in a division
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division to which to make the grant</param>
+        /// <param name="roleId">the id of the role to grant</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <returns></returns>
+        void PostAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId, string subjectType = null);
+
+        /// <summary>
+        /// Make a grant of a role in a division
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division to which to make the grant</param>
+        /// <param name="roleId">the id of the role to grant</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null);
+        
+        /// <summary>
+        /// Update a division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Updated division data</param>
+        /// <returns>AuthzDivision</returns>
+        AuthzDivision PutAuthorizationDivision (string divisionId, AuthzDivision body);
+
+        /// <summary>
+        /// Update a division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Updated division data</param>
+        /// <returns>ApiResponse of AuthzDivision</returns>
+        ApiResponse<AuthzDivision> PutAuthorizationDivisionWithHttpInfo (string divisionId, AuthzDivision body);
         
         /// <summary>
         /// Update an organization role.
@@ -465,6 +857,28 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
         
         /// <summary>
+        /// Delete a division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteAuthorizationDivisionAsync (string divisionId);
+
+        /// <summary>
+        /// Delete a division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationDivisionAsyncWithHttpInfo (string divisionId);
+        
+        /// <summary>
         /// Delete an organization role.
         /// </summary>
         /// <remarks>
@@ -487,6 +901,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationRoleAsyncWithHttpInfo (string roleId);
         
         /// <summary>
+        /// Delete a grant of a role in a division
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division of the grant</param>
+        /// <param name="roleId">the id of the role of the grant</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId);
+
+        /// <summary>
+        /// Delete a grant of a role in a division
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division of the grant</param>
+        /// <param name="roleId">the id of the role of the grant</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId);
+        
+        /// <summary>
         /// Removes all the roles from the user.
         /// </summary>
         /// <remarks>
@@ -507,6 +947,158 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRolesAsyncWithHttpInfo (string userId);
+        
+        /// <summary>
+        /// Returns an authorization division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
+        /// <returns>Task of AuthzDivision</returns>
+        System.Threading.Tasks.Task<AuthzDivision> GetAuthorizationDivisionAsync (string divisionId, bool? objectCount = null);
+
+        /// <summary>
+        /// Returns an authorization division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? objectCount = null);
+        
+        /// <summary>
+        /// Retrieve a list of all divisions defined for the organization
+        /// </summary>
+        /// <remarks>
+        /// Request specific divisions by id using a query param \&quot;id\&quot;, e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&amp;id=72e9fb25-c484-488d-9312-7acba82435b3
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="objectCount">Include the count of objects contained in the division (optional, default to false)</param>
+        /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>Task of AuthzDivisionEntityListing</returns>
+        System.Threading.Tasks.Task<AuthzDivisionEntityListing> GetAuthorizationDivisionsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
+
+        /// <summary>
+        /// Retrieve a list of all divisions defined for the organization
+        /// </summary>
+        /// <remarks>
+        /// Request specific divisions by id using a query param \&quot;id\&quot;, e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&amp;id=72e9fb25-c484-488d-9312-7acba82435b3
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="objectCount">Include the count of objects contained in the division (optional, default to false)</param>
+        /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>Task of ApiResponse (AuthzDivisionEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthzDivisionEntityListing>> GetAuthorizationDivisionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
+        
+        /// <summary>
+        /// Retrieve the home division for the organization.
+        /// </summary>
+        /// <remarks>
+        /// Will not include object counts.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of AuthzDivision</returns>
+        System.Threading.Tasks.Task<AuthzDivision> GetAuthorizationDivisionsHomeAsync ();
+
+        /// <summary>
+        /// Retrieve the home division for the organization.
+        /// </summary>
+        /// <remarks>
+        /// Will not include object counts.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionsHomeAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Returns the maximum allowed number of divisions.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of int?</returns>
+        System.Threading.Tasks.Task<int?> GetAuthorizationDivisionsLimitAsync ();
+
+        /// <summary>
+        /// Returns the maximum allowed number of divisions.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (int?)</returns>
+        System.Threading.Tasks.Task<ApiResponse<int?>> GetAuthorizationDivisionsLimitAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Returns whether or not current user can perform the specified action(s).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>Task of List&lt;AuthzDivision&gt;</returns>
+        System.Threading.Tasks.Task<List<AuthzDivision>> GetAuthorizationDivisionspermittedMeAsync (string permission, string name = null);
+
+        /// <summary>
+        /// Returns whether or not current user can perform the specified action(s).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;AuthzDivision&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<AuthzDivision>>> GetAuthorizationDivisionspermittedMeAsyncWithHttpInfo (string permission, string name = null);
+        
+        /// <summary>
+        /// Returns whether or not specified user can perform the specified action(s).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>Task of List&lt;AuthzDivision&gt;</returns>
+        System.Threading.Tasks.Task<List<AuthzDivision>> GetAuthorizationDivisionspermittedSubjectIdAsync (string subjectId, string permission, string name = null);
+
+        /// <summary>
+        /// Returns whether or not specified user can perform the specified action(s).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;AuthzDivision&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<AuthzDivision>>> GetAuthorizationDivisionspermittedSubjectIdAsyncWithHttpInfo (string subjectId, string permission, string name = null);
         
         /// <summary>
         /// Get all permissions.
@@ -633,6 +1225,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SubjectDivisionGrantsEntityListing>> GetAuthorizationRoleSubjectgrantsAsyncWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
+        /// Get a list of the users in a specified role.
+        /// </summary>
+        /// <remarks>
+        /// Get an array of the UUIDs of the users in the specified role.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of UserEntityListing</returns>
+        System.Threading.Tasks.Task<UserEntityListing> GetAuthorizationRoleUsersAsync (string roleId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a list of the users in a specified role.
+        /// </summary>
+        /// <remarks>
+        /// Get an array of the UUIDs of the users in the specified role.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetAuthorizationRoleUsersAsyncWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null);
+        
+        /// <summary>
         /// Retrieve a list of all roles defined for the organization
         /// </summary>
         /// <remarks>
@@ -681,6 +1299,48 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <returns>Task of AuthzSubject</returns>
+        System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId);
+
+        /// <summary>
+        /// Returns a listing of roles and permissions for a user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <returns>Task of ApiResponse (AuthzSubject)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId);
+        
+        /// <summary>
+        /// Returns a listing of roles and permissions for the currently authenticated user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of AuthzSubject</returns>
+        System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync ();
+
+        /// <summary>
+        /// Returns a listing of roles and permissions for the currently authenticated user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (AuthzSubject)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Returns a listing of roles and permissions for a user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of UserAuthorization</returns>
         System.Threading.Tasks.Task<UserAuthorization> GetUserRolesAsync (string userId);
@@ -719,6 +1379,78 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
         System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PatchAuthorizationRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRole body);
+        
+        /// <summary>
+        /// Assign a list of objects to a division
+        /// </summary>
+        /// <remarks>
+        /// Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\&quot;206ce31f-61ec-40ed-a8b1-be6f06303998\&quot;,\&quot;250a754e-f5e4-4f51-800f-a92f09d3bf8c\&quot;]
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
+        /// <param name="body">Object Id List</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostAuthorizationDivisionObjectAsync (string divisionId, string objectType, List<string> body);
+
+        /// <summary>
+        /// Assign a list of objects to a division
+        /// </summary>
+        /// <remarks>
+        /// Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\&quot;206ce31f-61ec-40ed-a8b1-be6f06303998\&quot;,\&quot;250a754e-f5e4-4f51-800f-a92f09d3bf8c\&quot;]
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
+        /// <param name="body">Object Id List</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationDivisionObjectAsyncWithHttpInfo (string divisionId, string objectType, List<string> body);
+        
+        /// <summary>
+        /// Create a division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Division</param>
+        /// <returns>Task of AuthzDivision</returns>
+        System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionsAsync (AuthzDivision body);
+
+        /// <summary>
+        /// Create a division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Division</param>
+        /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionsAsyncWithHttpInfo (AuthzDivision body);
+        
+        /// <summary>
+        /// Bulk-grant subjects and divisions with an organization role.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="body">Subjects and Divisions</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostAuthorizationRoleAsync (string roleId, SubjectDivisions body);
+
+        /// <summary>
+        /// Bulk-grant subjects and divisions with an organization role.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="body">Subjects and Divisions</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationRoleAsyncWithHttpInfo (string roleId, SubjectDivisions body);
         
         /// <summary>
         /// Get an unsaved org role to default role comparison
@@ -789,6 +1521,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Restore default roles (optional, default to false)</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PostAuthorizationRolesDefaultAsyncWithHttpInfo (bool? force = null);
+        
+        /// <summary>
+        /// Make a grant of a role in a division
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division to which to make the grant</param>
+        /// <param name="roleId">the id of the role to grant</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId, string subjectType = null);
+
+        /// <summary>
+        /// Make a grant of a role in a division
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division to which to make the grant</param>
+        /// <param name="roleId">the id of the role to grant</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null);
+        
+        /// <summary>
+        /// Update a division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Updated division data</param>
+        /// <returns>Task of AuthzDivision</returns>
+        System.Threading.Tasks.Task<AuthzDivision> PutAuthorizationDivisionAsync (string divisionId, AuthzDivision body);
+
+        /// <summary>
+        /// Update a division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Updated division data</param>
+        /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PutAuthorizationDivisionAsyncWithHttpInfo (string divisionId, AuthzDivision body);
         
         /// <summary>
         /// Update an organization role.
@@ -1001,6 +1785,197 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
+        /// Delete a division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <returns></returns>
+        public void DeleteAuthorizationDivision (string divisionId)
+        {
+             DeleteAuthorizationDivisionWithHttpInfo(divisionId);
+        }
+
+        /// <summary>
+        /// Delete a division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteAuthorizationDivisionWithHttpInfo (string divisionId)
+        { 
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->DeleteAuthorizationDivision");
+
+            var localVarPath = "/api/v2/authorization/divisions/{divisionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationDivision: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationDivision: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete a division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteAuthorizationDivisionAsync (string divisionId)
+        {
+             await DeleteAuthorizationDivisionAsyncWithHttpInfo(divisionId);
+
+        }
+
+        /// <summary>
+        /// Delete a division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationDivisionAsyncWithHttpInfo (string divisionId)
+        { 
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->DeleteAuthorizationDivision");
+            
+
+            var localVarPath = "/api/v2/authorization/divisions/{divisionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationDivision: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationDivision: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Delete an organization role. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1181,6 +2156,223 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationRole: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationRole: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete a grant of a role in a division 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division of the grant</param>
+        /// <param name="roleId">the id of the role of the grant</param>
+        /// <returns></returns>
+        public void DeleteAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId)
+        {
+             DeleteAuthorizationSubjectDivisionRoleWithHttpInfo(subjectId, divisionId, roleId);
+        }
+
+        /// <summary>
+        /// Delete a grant of a role in a division 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division of the grant</param>
+        /// <param name="roleId">the id of the role of the grant</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId)
+        { 
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->DeleteAuthorizationSubjectDivisionRole");
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->DeleteAuthorizationSubjectDivisionRole");
+            // verify the required parameter 'roleId' is set
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->DeleteAuthorizationSubjectDivisionRole");
+
+            var localVarPath = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+            if (roleId != null) localVarPathParams.Add("roleId", this.Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationSubjectDivisionRole: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationSubjectDivisionRole: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete a grant of a role in a division 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division of the grant</param>
+        /// <param name="roleId">the id of the role of the grant</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId)
+        {
+             await DeleteAuthorizationSubjectDivisionRoleAsyncWithHttpInfo(subjectId, divisionId, roleId);
+
+        }
+
+        /// <summary>
+        /// Delete a grant of a role in a division 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division of the grant</param>
+        /// <param name="roleId">the id of the role of the grant</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId)
+        { 
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->DeleteAuthorizationSubjectDivisionRole");
+            
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->DeleteAuthorizationSubjectDivisionRole");
+            
+            // verify the required parameter 'roleId' is set
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->DeleteAuthorizationSubjectDivisionRole");
+            
+
+            var localVarPath = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+            if (roleId != null) localVarPathParams.Add("roleId", this.Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationSubjectDivisionRole: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationSubjectDivisionRole: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -1376,6 +2568,1210 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Returns an authorization division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
+        /// <returns>AuthzDivision</returns>
+        public AuthzDivision GetAuthorizationDivision (string divisionId, bool? objectCount = null)
+        {
+             ApiResponse<AuthzDivision> localVarResponse = GetAuthorizationDivisionWithHttpInfo(divisionId, objectCount);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns an authorization division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
+        /// <returns>ApiResponse of AuthzDivision</returns>
+        public ApiResponse< AuthzDivision > GetAuthorizationDivisionWithHttpInfo (string divisionId, bool? objectCount = null)
+        { 
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->GetAuthorizationDivision");
+
+            var localVarPath = "/api/v2/authorization/divisions/{divisionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+
+            // Query params
+            if (objectCount != null) localVarQueryParams.Add(new Tuple<string, string>("objectCount", this.Configuration.ApiClient.ParameterToString(objectCount)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivision: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivision: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivision>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivision) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivision)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Returns an authorization division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
+        /// <returns>Task of AuthzDivision</returns>
+        public async System.Threading.Tasks.Task<AuthzDivision> GetAuthorizationDivisionAsync (string divisionId, bool? objectCount = null)
+        {
+             ApiResponse<AuthzDivision> localVarResponse = await GetAuthorizationDivisionAsyncWithHttpInfo(divisionId, objectCount);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns an authorization division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? objectCount = null)
+        { 
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->GetAuthorizationDivision");
+            
+
+            var localVarPath = "/api/v2/authorization/divisions/{divisionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+
+            // Query params
+            if (objectCount != null) localVarQueryParams.Add(new Tuple<string, string>("objectCount", this.Configuration.ApiClient.ParameterToString(objectCount)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivision: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivision: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivision>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivision) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivision)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve a list of all divisions defined for the organization Request specific divisions by id using a query param \&quot;id\&quot;, e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&amp;id=72e9fb25-c484-488d-9312-7acba82435b3
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="objectCount">Include the count of objects contained in the division (optional, default to false)</param>
+        /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>AuthzDivisionEntityListing</returns>
+        public AuthzDivisionEntityListing GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
+        {
+             ApiResponse<AuthzDivisionEntityListing> localVarResponse = GetAuthorizationDivisionsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, id, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a list of all divisions defined for the organization Request specific divisions by id using a query param \&quot;id\&quot;, e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&amp;id=72e9fb25-c484-488d-9312-7acba82435b3
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="objectCount">Include the count of objects contained in the division (optional, default to false)</param>
+        /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>ApiResponse of AuthzDivisionEntityListing</returns>
+        public ApiResponse< AuthzDivisionEntityListing > GetAuthorizationDivisionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/authorization/divisions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
+            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (objectCount != null) localVarQueryParams.Add(new Tuple<string, string>("objectCount", this.Configuration.ApiClient.ParameterToString(objectCount)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivisionEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivisionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivisionEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve a list of all divisions defined for the organization Request specific divisions by id using a query param \&quot;id\&quot;, e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&amp;id=72e9fb25-c484-488d-9312-7acba82435b3
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="objectCount">Include the count of objects contained in the division (optional, default to false)</param>
+        /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>Task of AuthzDivisionEntityListing</returns>
+        public async System.Threading.Tasks.Task<AuthzDivisionEntityListing> GetAuthorizationDivisionsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
+        {
+             ApiResponse<AuthzDivisionEntityListing> localVarResponse = await GetAuthorizationDivisionsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, id, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a list of all divisions defined for the organization Request specific divisions by id using a query param \&quot;id\&quot;, e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&amp;id=72e9fb25-c484-488d-9312-7acba82435b3
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="objectCount">Include the count of objects contained in the division (optional, default to false)</param>
+        /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>Task of ApiResponse (AuthzDivisionEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzDivisionEntityListing>> GetAuthorizationDivisionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/authorization/divisions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
+            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (objectCount != null) localVarQueryParams.Add(new Tuple<string, string>("objectCount", this.Configuration.ApiClient.ParameterToString(objectCount)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivisionEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivisionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivisionEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve the home division for the organization. Will not include object counts.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>AuthzDivision</returns>
+        public AuthzDivision GetAuthorizationDivisionsHome ()
+        {
+             ApiResponse<AuthzDivision> localVarResponse = GetAuthorizationDivisionsHomeWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve the home division for the organization. Will not include object counts.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of AuthzDivision</returns>
+        public ApiResponse< AuthzDivision > GetAuthorizationDivisionsHomeWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/authorization/divisions/home";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionsHome: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionsHome: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivision>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivision) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivision)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve the home division for the organization. Will not include object counts.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of AuthzDivision</returns>
+        public async System.Threading.Tasks.Task<AuthzDivision> GetAuthorizationDivisionsHomeAsync ()
+        {
+             ApiResponse<AuthzDivision> localVarResponse = await GetAuthorizationDivisionsHomeAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve the home division for the organization. Will not include object counts.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionsHomeAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/authorization/divisions/home";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionsHome: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionsHome: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivision>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivision) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivision)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Returns the maximum allowed number of divisions. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>int?</returns>
+        public int? GetAuthorizationDivisionsLimit ()
+        {
+             ApiResponse<int?> localVarResponse = GetAuthorizationDivisionsLimitWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the maximum allowed number of divisions. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of int?</returns>
+        public ApiResponse< int? > GetAuthorizationDivisionsLimitWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/authorization/divisions/limit";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionsLimit: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionsLimit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<int?>(localVarStatusCode,
+                localVarHeaders,
+                (int?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(int?)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Returns the maximum allowed number of divisions. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of int?</returns>
+        public async System.Threading.Tasks.Task<int?> GetAuthorizationDivisionsLimitAsync ()
+        {
+             ApiResponse<int?> localVarResponse = await GetAuthorizationDivisionsLimitAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns the maximum allowed number of divisions. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (int?)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<int?>> GetAuthorizationDivisionsLimitAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/authorization/divisions/limit";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionsLimit: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionsLimit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<int?>(localVarStatusCode,
+                localVarHeaders,
+                (int?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(int?)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Returns whether or not current user can perform the specified action(s). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>List&lt;AuthzDivision&gt;</returns>
+        public List<AuthzDivision> GetAuthorizationDivisionspermittedMe (string permission, string name = null)
+        {
+             ApiResponse<List<AuthzDivision>> localVarResponse = GetAuthorizationDivisionspermittedMeWithHttpInfo(permission, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns whether or not current user can perform the specified action(s). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>ApiResponse of List&lt;AuthzDivision&gt;</returns>
+        public ApiResponse< List<AuthzDivision> > GetAuthorizationDivisionspermittedMeWithHttpInfo (string permission, string name = null)
+        { 
+            // verify the required parameter 'permission' is set
+            if (permission == null)
+                throw new ApiException(400, "Missing required parameter 'permission' when calling AuthorizationApi->GetAuthorizationDivisionspermittedMe");
+
+            var localVarPath = "/api/v2/authorization/divisionspermitted/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (permission != null) localVarQueryParams.Add(new Tuple<string, string>("permission", this.Configuration.ApiClient.ParameterToString(permission)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<AuthzDivision>>(localVarStatusCode,
+                localVarHeaders,
+                (List<AuthzDivision>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<AuthzDivision>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Returns whether or not current user can perform the specified action(s). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>Task of List&lt;AuthzDivision&gt;</returns>
+        public async System.Threading.Tasks.Task<List<AuthzDivision>> GetAuthorizationDivisionspermittedMeAsync (string permission, string name = null)
+        {
+             ApiResponse<List<AuthzDivision>> localVarResponse = await GetAuthorizationDivisionspermittedMeAsyncWithHttpInfo(permission, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns whether or not current user can perform the specified action(s). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;AuthzDivision&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<AuthzDivision>>> GetAuthorizationDivisionspermittedMeAsyncWithHttpInfo (string permission, string name = null)
+        { 
+            // verify the required parameter 'permission' is set
+            if (permission == null)
+                throw new ApiException(400, "Missing required parameter 'permission' when calling AuthorizationApi->GetAuthorizationDivisionspermittedMe");
+            
+
+            var localVarPath = "/api/v2/authorization/divisionspermitted/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (permission != null) localVarQueryParams.Add(new Tuple<string, string>("permission", this.Configuration.ApiClient.ParameterToString(permission)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<AuthzDivision>>(localVarStatusCode,
+                localVarHeaders,
+                (List<AuthzDivision>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<AuthzDivision>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Returns whether or not specified user can perform the specified action(s). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>List&lt;AuthzDivision&gt;</returns>
+        public List<AuthzDivision> GetAuthorizationDivisionspermittedSubjectId (string subjectId, string permission, string name = null)
+        {
+             ApiResponse<List<AuthzDivision>> localVarResponse = GetAuthorizationDivisionspermittedSubjectIdWithHttpInfo(subjectId, permission, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns whether or not specified user can perform the specified action(s). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>ApiResponse of List&lt;AuthzDivision&gt;</returns>
+        public ApiResponse< List<AuthzDivision> > GetAuthorizationDivisionspermittedSubjectIdWithHttpInfo (string subjectId, string permission, string name = null)
+        { 
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationDivisionspermittedSubjectId");
+            // verify the required parameter 'permission' is set
+            if (permission == null)
+                throw new ApiException(400, "Missing required parameter 'permission' when calling AuthorizationApi->GetAuthorizationDivisionspermittedSubjectId");
+
+            var localVarPath = "/api/v2/authorization/divisionspermitted/{subjectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+
+            // Query params
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (permission != null) localVarQueryParams.Add(new Tuple<string, string>("permission", this.Configuration.ApiClient.ParameterToString(permission)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedSubjectId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedSubjectId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<AuthzDivision>>(localVarStatusCode,
+                localVarHeaders,
+                (List<AuthzDivision>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<AuthzDivision>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Returns whether or not specified user can perform the specified action(s). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>Task of List&lt;AuthzDivision&gt;</returns>
+        public async System.Threading.Tasks.Task<List<AuthzDivision>> GetAuthorizationDivisionspermittedSubjectIdAsync (string subjectId, string permission, string name = null)
+        {
+             ApiResponse<List<AuthzDivision>> localVarResponse = await GetAuthorizationDivisionspermittedSubjectIdAsyncWithHttpInfo(subjectId, permission, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns whether or not specified user can perform the specified action(s). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="name">Search term to filter by division name (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;AuthzDivision&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<AuthzDivision>>> GetAuthorizationDivisionspermittedSubjectIdAsyncWithHttpInfo (string subjectId, string permission, string name = null)
+        { 
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationDivisionspermittedSubjectId");
+            
+            // verify the required parameter 'permission' is set
+            if (permission == null)
+                throw new ApiException(400, "Missing required parameter 'permission' when calling AuthorizationApi->GetAuthorizationDivisionspermittedSubjectId");
+            
+
+            var localVarPath = "/api/v2/authorization/divisionspermitted/{subjectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+
+            // Query params
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (permission != null) localVarQueryParams.Add(new Tuple<string, string>("permission", this.Configuration.ApiClient.ParameterToString(permission)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedSubjectId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedSubjectId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<AuthzDivision>>(localVarStatusCode,
+                localVarHeaders,
+                (List<AuthzDivision>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<AuthzDivision>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2383,6 +4779,211 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get a list of the users in a specified role. Get an array of the UUIDs of the users in the specified role.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>UserEntityListing</returns>
+        public UserEntityListing GetAuthorizationRoleUsers (string roleId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<UserEntityListing> localVarResponse = GetAuthorizationRoleUsersWithHttpInfo(roleId, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of the users in a specified role. Get an array of the UUIDs of the users in the specified role.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of UserEntityListing</returns>
+        public ApiResponse< UserEntityListing > GetAuthorizationRoleUsersWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null)
+        { 
+            // verify the required parameter 'roleId' is set
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->GetAuthorizationRoleUsers");
+
+            var localVarPath = "/api/v2/authorization/roles/{roleId}/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", this.Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationRoleUsers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationRoleUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a list of the users in a specified role. Get an array of the UUIDs of the users in the specified role.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of UserEntityListing</returns>
+        public async System.Threading.Tasks.Task<UserEntityListing> GetAuthorizationRoleUsersAsync (string roleId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<UserEntityListing> localVarResponse = await GetAuthorizationRoleUsersAsyncWithHttpInfo(roleId, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of the users in a specified role. Get an array of the UUIDs of the users in the specified role.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetAuthorizationRoleUsersAsyncWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null)
+        { 
+            // verify the required parameter 'roleId' is set
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->GetAuthorizationRoleUsers");
+            
+
+            var localVarPath = "/api/v2/authorization/roles/{roleId}/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", this.Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationRoleUsers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationRoleUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Retrieve a list of all roles defined for the organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2622,6 +5223,379 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<OrganizationRoleEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Returns a listing of roles and permissions for a user. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <returns>AuthzSubject</returns>
+        public AuthzSubject GetAuthorizationSubject (string subjectId)
+        {
+             ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectWithHttpInfo(subjectId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns a listing of roles and permissions for a user. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <returns>ApiResponse of AuthzSubject</returns>
+        public ApiResponse< AuthzSubject > GetAuthorizationSubjectWithHttpInfo (string subjectId)
+        { 
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationSubject");
+
+            var localVarPath = "/api/v2/authorization/subjects/{subjectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationSubject: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationSubject: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzSubject>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzSubject) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzSubject)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Returns a listing of roles and permissions for a user. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <returns>Task of AuthzSubject</returns>
+        public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId)
+        {
+             ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectAsyncWithHttpInfo(subjectId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns a listing of roles and permissions for a user. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <returns>Task of ApiResponse (AuthzSubject)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId)
+        { 
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationSubject");
+            
+
+            var localVarPath = "/api/v2/authorization/subjects/{subjectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationSubject: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationSubject: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzSubject>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzSubject) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzSubject)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Returns a listing of roles and permissions for the currently authenticated user. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>AuthzSubject</returns>
+        public AuthzSubject GetAuthorizationSubjectsMe ()
+        {
+             ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectsMeWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns a listing of roles and permissions for the currently authenticated user. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of AuthzSubject</returns>
+        public ApiResponse< AuthzSubject > GetAuthorizationSubjectsMeWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/authorization/subjects/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationSubjectsMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationSubjectsMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzSubject>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzSubject) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzSubject)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Returns a listing of roles and permissions for the currently authenticated user. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of AuthzSubject</returns>
+        public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync ()
+        {
+             ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectsMeAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns a listing of roles and permissions for the currently authenticated user. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (AuthzSubject)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/authorization/subjects/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationSubjectsMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationSubjectsMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzSubject>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzSubject) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzSubject)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -3029,6 +6003,644 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DomainOrganizationRole>(localVarStatusCode,
                 localVarHeaders,
                 (DomainOrganizationRole) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainOrganizationRole)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Assign a list of objects to a division Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\&quot;206ce31f-61ec-40ed-a8b1-be6f06303998\&quot;,\&quot;250a754e-f5e4-4f51-800f-a92f09d3bf8c\&quot;]
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
+        /// <param name="body">Object Id List</param>
+        /// <returns></returns>
+        public void PostAuthorizationDivisionObject (string divisionId, string objectType, List<string> body)
+        {
+             PostAuthorizationDivisionObjectWithHttpInfo(divisionId, objectType, body);
+        }
+
+        /// <summary>
+        /// Assign a list of objects to a division Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\&quot;206ce31f-61ec-40ed-a8b1-be6f06303998\&quot;,\&quot;250a754e-f5e4-4f51-800f-a92f09d3bf8c\&quot;]
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
+        /// <param name="body">Object Id List</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostAuthorizationDivisionObjectWithHttpInfo (string divisionId, string objectType, List<string> body)
+        { 
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->PostAuthorizationDivisionObject");
+            // verify the required parameter 'objectType' is set
+            if (objectType == null)
+                throw new ApiException(400, "Missing required parameter 'objectType' when calling AuthorizationApi->PostAuthorizationDivisionObject");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationDivisionObject");
+
+            var localVarPath = "/api/v2/authorization/divisions/{divisionId}/objects/{objectType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+            if (objectType != null) localVarPathParams.Add("objectType", this.Configuration.ApiClient.ParameterToString(objectType));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationDivisionObject: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationDivisionObject: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Assign a list of objects to a division Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\&quot;206ce31f-61ec-40ed-a8b1-be6f06303998\&quot;,\&quot;250a754e-f5e4-4f51-800f-a92f09d3bf8c\&quot;]
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
+        /// <param name="body">Object Id List</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostAuthorizationDivisionObjectAsync (string divisionId, string objectType, List<string> body)
+        {
+             await PostAuthorizationDivisionObjectAsyncWithHttpInfo(divisionId, objectType, body);
+
+        }
+
+        /// <summary>
+        /// Assign a list of objects to a division Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\&quot;206ce31f-61ec-40ed-a8b1-be6f06303998\&quot;,\&quot;250a754e-f5e4-4f51-800f-a92f09d3bf8c\&quot;]
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
+        /// <param name="body">Object Id List</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationDivisionObjectAsyncWithHttpInfo (string divisionId, string objectType, List<string> body)
+        { 
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->PostAuthorizationDivisionObject");
+            
+            // verify the required parameter 'objectType' is set
+            if (objectType == null)
+                throw new ApiException(400, "Missing required parameter 'objectType' when calling AuthorizationApi->PostAuthorizationDivisionObject");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationDivisionObject");
+            
+
+            var localVarPath = "/api/v2/authorization/divisions/{divisionId}/objects/{objectType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+            if (objectType != null) localVarPathParams.Add("objectType", this.Configuration.ApiClient.ParameterToString(objectType));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationDivisionObject: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationDivisionObject: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Create a division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Division</param>
+        /// <returns>AuthzDivision</returns>
+        public AuthzDivision PostAuthorizationDivisions (AuthzDivision body)
+        {
+             ApiResponse<AuthzDivision> localVarResponse = PostAuthorizationDivisionsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Division</param>
+        /// <returns>ApiResponse of AuthzDivision</returns>
+        public ApiResponse< AuthzDivision > PostAuthorizationDivisionsWithHttpInfo (AuthzDivision body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationDivisions");
+
+            var localVarPath = "/api/v2/authorization/divisions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationDivisions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationDivisions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivision>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivision) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivision)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Division</param>
+        /// <returns>Task of AuthzDivision</returns>
+        public async System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionsAsync (AuthzDivision body)
+        {
+             ApiResponse<AuthzDivision> localVarResponse = await PostAuthorizationDivisionsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Division</param>
+        /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionsAsyncWithHttpInfo (AuthzDivision body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationDivisions");
+            
+
+            var localVarPath = "/api/v2/authorization/divisions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationDivisions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationDivisions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivision>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivision) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivision)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Bulk-grant subjects and divisions with an organization role. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="body">Subjects and Divisions</param>
+        /// <returns></returns>
+        public void PostAuthorizationRole (string roleId, SubjectDivisions body)
+        {
+             PostAuthorizationRoleWithHttpInfo(roleId, body);
+        }
+
+        /// <summary>
+        /// Bulk-grant subjects and divisions with an organization role. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="body">Subjects and Divisions</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostAuthorizationRoleWithHttpInfo (string roleId, SubjectDivisions body)
+        { 
+            // verify the required parameter 'roleId' is set
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PostAuthorizationRole");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationRole");
+
+            var localVarPath = "/api/v2/authorization/roles/{roleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", this.Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationRole: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationRole: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Bulk-grant subjects and divisions with an organization role. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="body">Subjects and Divisions</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostAuthorizationRoleAsync (string roleId, SubjectDivisions body)
+        {
+             await PostAuthorizationRoleAsyncWithHttpInfo(roleId, body);
+
+        }
+
+        /// <summary>
+        /// Bulk-grant subjects and divisions with an organization role. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roleId">Role ID</param>
+        /// <param name="body">Subjects and Divisions</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationRoleAsyncWithHttpInfo (string roleId, SubjectDivisions body)
+        { 
+            // verify the required parameter 'roleId' is set
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PostAuthorizationRole");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationRole");
+            
+
+            var localVarPath = "/api/v2/authorization/roles/{roleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", this.Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationRole: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationRole: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -3643,6 +7255,443 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<OrganizationRoleEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (OrganizationRoleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationRoleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Make a grant of a role in a division 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division to which to make the grant</param>
+        /// <param name="roleId">the id of the role to grant</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <returns></returns>
+        public void PostAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId, string subjectType = null)
+        {
+             PostAuthorizationSubjectDivisionRoleWithHttpInfo(subjectId, divisionId, roleId, subjectType);
+        }
+
+        /// <summary>
+        /// Make a grant of a role in a division 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division to which to make the grant</param>
+        /// <param name="roleId">the id of the role to grant</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null)
+        { 
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->PostAuthorizationSubjectDivisionRole");
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->PostAuthorizationSubjectDivisionRole");
+            // verify the required parameter 'roleId' is set
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PostAuthorizationSubjectDivisionRole");
+
+            var localVarPath = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+            if (roleId != null) localVarPathParams.Add("roleId", this.Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+            if (subjectType != null) localVarQueryParams.Add(new Tuple<string, string>("subjectType", this.Configuration.ApiClient.ParameterToString(subjectType)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationSubjectDivisionRole: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationSubjectDivisionRole: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Make a grant of a role in a division 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division to which to make the grant</param>
+        /// <param name="roleId">the id of the role to grant</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId, string subjectType = null)
+        {
+             await PostAuthorizationSubjectDivisionRoleAsyncWithHttpInfo(subjectId, divisionId, roleId, subjectType);
+
+        }
+
+        /// <summary>
+        /// Make a grant of a role in a division 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="divisionId">the id of the division to which to make the grant</param>
+        /// <param name="roleId">the id of the role to grant</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null)
+        { 
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->PostAuthorizationSubjectDivisionRole");
+            
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->PostAuthorizationSubjectDivisionRole");
+            
+            // verify the required parameter 'roleId' is set
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PostAuthorizationSubjectDivisionRole");
+            
+
+            var localVarPath = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+            if (roleId != null) localVarPathParams.Add("roleId", this.Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+            if (subjectType != null) localVarQueryParams.Add(new Tuple<string, string>("subjectType", this.Configuration.ApiClient.ParameterToString(subjectType)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationSubjectDivisionRole: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAuthorizationSubjectDivisionRole: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update a division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Updated division data</param>
+        /// <returns>AuthzDivision</returns>
+        public AuthzDivision PutAuthorizationDivision (string divisionId, AuthzDivision body)
+        {
+             ApiResponse<AuthzDivision> localVarResponse = PutAuthorizationDivisionWithHttpInfo(divisionId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Updated division data</param>
+        /// <returns>ApiResponse of AuthzDivision</returns>
+        public ApiResponse< AuthzDivision > PutAuthorizationDivisionWithHttpInfo (string divisionId, AuthzDivision body)
+        { 
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->PutAuthorizationDivision");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationDivision");
+
+            var localVarPath = "/api/v2/authorization/divisions/{divisionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutAuthorizationDivision: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutAuthorizationDivision: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivision>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivision) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivision)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update a division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Updated division data</param>
+        /// <returns>Task of AuthzDivision</returns>
+        public async System.Threading.Tasks.Task<AuthzDivision> PutAuthorizationDivisionAsync (string divisionId, AuthzDivision body)
+        {
+             ApiResponse<AuthzDivision> localVarResponse = await PutAuthorizationDivisionAsyncWithHttpInfo(divisionId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a division. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">Division ID</param>
+        /// <param name="body">Updated division data</param>
+        /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PutAuthorizationDivisionAsyncWithHttpInfo (string divisionId, AuthzDivision body)
+        { 
+            // verify the required parameter 'divisionId' is set
+            if (divisionId == null)
+                throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->PutAuthorizationDivision");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationDivision");
+            
+
+            var localVarPath = "/api/v2/authorization/divisions/{divisionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutAuthorizationDivision: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutAuthorizationDivision: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzDivision>(localVarStatusCode,
+                localVarHeaders,
+                (AuthzDivision) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzDivision)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

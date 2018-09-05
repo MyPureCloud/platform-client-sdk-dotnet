@@ -7,12 +7,17 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteAuthorizationSubjectDivisionRole**](UsersApi.html#deleteauthorizationsubjectdivisionrole) | **DELETE** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
 | [**DeleteUser**](UsersApi.html#deleteuser) | **DELETE** /api/v2/users/{userId} | Delete user |
 | [**DeleteUserRoles**](UsersApi.html#deleteuserroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
 | [**DeleteUserRoutinglanguage**](UsersApi.html#deleteuserroutinglanguage) | **DELETE** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
 | [**DeleteUserRoutingskill**](UsersApi.html#deleteuserroutingskill) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
 | [**DeleteUserStationAssociatedstation**](UsersApi.html#deleteuserstationassociatedstation) | **DELETE** /api/v2/users/{userId}/station/associatedstation | Clear associated station |
 | [**DeleteUserStationDefaultstation**](UsersApi.html#deleteuserstationdefaultstation) | **DELETE** /api/v2/users/{userId}/station/defaultstation | Clear default station |
+| [**GetAuthorizationDivisionspermittedMe**](UsersApi.html#getauthorizationdivisionspermittedme) | **GET** /api/v2/authorization/divisionspermitted/me | Returns whether or not current user can perform the specified action(s). |
+| [**GetAuthorizationDivisionspermittedSubjectId**](UsersApi.html#getauthorizationdivisionspermittedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/{subjectId} | Returns whether or not specified user can perform the specified action(s). |
+| [**GetAuthorizationSubject**](UsersApi.html#getauthorizationsubject) | **GET** /api/v2/authorization/subjects/{subjectId} | Returns a listing of roles and permissions for a user. |
+| [**GetAuthorizationSubjectsMe**](UsersApi.html#getauthorizationsubjectsme) | **GET** /api/v2/authorization/subjects/me | Returns a listing of roles and permissions for the currently authenticated user. |
 | [**GetFieldconfig**](UsersApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
 | [**GetProfilesUsers**](UsersApi.html#getprofilesusers) | **GET** /api/v2/profiles/users | Get a user profile listing |
 | [**GetUser**](UsersApi.html#getuser) | **GET** /api/v2/users/{userId} | Get user. |
@@ -41,10 +46,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchUserQueue**](UsersApi.html#patchuserqueue) | **PATCH** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
 | [**PatchUserQueues**](UsersApi.html#patchuserqueues) | **PATCH** /api/v2/users/{userId}/queues | Join or unjoin a set of queues for a user |
 | [**PatchUserRoutinglanguage**](UsersApi.html#patchuserroutinglanguage) | **PATCH** /api/v2/users/{userId}/routinglanguages/{languageId} | Update routing language proficiency or state. |
+| [**PatchUserRoutinglanguagesBulk**](UsersApi.html#patchuserroutinglanguagesbulk) | **PATCH** /api/v2/users/{userId}/routinglanguages/bulk | Add bulk routing language to user. Max limit 50 languages |
+| [**PatchUserRoutingskillsBulk**](UsersApi.html#patchuserroutingskillsbulk) | **PATCH** /api/v2/users/{userId}/routingskills/bulk | Add bulk routing skills to user |
 | [**PatchUsersBulk**](UsersApi.html#patchusersbulk) | **PATCH** /api/v2/users/bulk | Update bulk acd autoanswer on users |
 | [**PostAnalyticsUsersAggregatesQuery**](UsersApi.html#postanalyticsusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
 | [**PostAnalyticsUsersDetailsQuery**](UsersApi.html#postanalyticsusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
 | [**PostAnalyticsUsersObservationsQuery**](UsersApi.html#postanalyticsusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
+| [**PostAuthorizationSubjectDivisionRole**](UsersApi.html#postauthorizationsubjectdivisionrole) | **POST** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Make a grant of a role in a division |
 | [**PostUserInvite**](UsersApi.html#postuserinvite) | **POST** /api/v2/users/{userId}/invite | Send an activation email to the user |
 | [**PostUserPassword**](UsersApi.html#postuserpassword) | **POST** /api/v2/users/{userId}/password | Change a users password |
 | [**PostUserRoutinglanguages**](UsersApi.html#postuserroutinglanguages) | **POST** /api/v2/users/{userId}/routinglanguages | Add routing language to user |
@@ -61,6 +69,87 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutUserStationAssociatedstationStationId**](UsersApi.html#putuserstationassociatedstationstationid) | **PUT** /api/v2/users/{userId}/station/associatedstation/{stationId} | Set associated station |
 | [**PutUserStationDefaultstationStationId**](UsersApi.html#putuserstationdefaultstationstationid) | **PUT** /api/v2/users/{userId}/station/defaultstation/{stationId} | Set default station |
 {: class="table table-striped"}
+
+<a name="deleteauthorizationsubjectdivisionrole"></a>
+
+## void DeleteAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId)
+
+
+
+Delete a grant of a role in a division
+
+
+
+Requires ANY permissions: 
+
+* authorization:grant:delete
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteAuthorizationSubjectDivisionRoleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            
+            
+            
+            
+            var divisionId = divisionId_example;  // string | the id of the division of the grant
+            
+            
+            
+            
+            var roleId = roleId_example;  // string | the id of the role of the grant
+            
+            
+            
+
+            try
+            {
+                
+                // Delete a grant of a role in a division
+                
+                apiInstance.DeleteAuthorizationSubjectDivisionRole(subjectId, divisionId, roleId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.DeleteAuthorizationSubjectDivisionRole: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| Subject ID (user or group) |  |
+| **divisionId** | **string**| the id of the division of the grant |  |
+| **roleId** | **string**| the id of the role of the grant |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deleteuser"></a>
 
@@ -495,6 +584,292 @@ namespace Example
 
 void (empty response body)
 
+<a name="getauthorizationdivisionspermittedme"></a>
+
+## [**List&lt;AuthzDivision&gt;**](AuthzDivision.html) GetAuthorizationDivisionspermittedMe (string permission, string name = null)
+
+
+
+Returns whether or not current user can perform the specified action(s).
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionspermittedMeExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            var permission = permission_example;  // string | The permission string, including the object to access, e.g. routing:queue:view
+            
+            
+            
+            
+            var name = name_example;  // string | Search term to filter by division name (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Returns whether or not current user can perform the specified action(s).
+                
+                List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedMe(permission, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetAuthorizationDivisionspermittedMe: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
+| **name** | **string**| Search term to filter by division name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<AuthzDivision>**](AuthzDivision.html)
+
+<a name="getauthorizationdivisionspermittedsubjectid"></a>
+
+## [**List&lt;AuthzDivision&gt;**](AuthzDivision.html) GetAuthorizationDivisionspermittedSubjectId (string subjectId, string permission, string name = null)
+
+
+
+Returns whether or not specified user can perform the specified action(s).
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionspermittedSubjectIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            
+            
+            
+            
+            var permission = permission_example;  // string | The permission string, including the object to access, e.g. routing:queue:view
+            
+            
+            
+            
+            var name = name_example;  // string | Search term to filter by division name (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Returns whether or not specified user can perform the specified action(s).
+                
+                List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedSubjectId(subjectId, permission, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetAuthorizationDivisionspermittedSubjectId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| Subject ID (user or group) |  |
+| **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
+| **name** | **string**| Search term to filter by division name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<AuthzDivision>**](AuthzDivision.html)
+
+<a name="getauthorizationsubject"></a>
+
+## [**AuthzSubject**](AuthzSubject.html) GetAuthorizationSubject (string subjectId)
+
+
+
+Returns a listing of roles and permissions for a user.
+
+
+
+Requires ANY permissions: 
+
+* authorization:grant:view
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationSubjectExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            
+            
+            
+
+            try
+            {
+                
+                // Returns a listing of roles and permissions for a user.
+                
+                AuthzSubject result = apiInstance.GetAuthorizationSubject(subjectId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetAuthorizationSubject: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| Subject ID (user or group) |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AuthzSubject**](AuthzSubject.html)
+
+<a name="getauthorizationsubjectsme"></a>
+
+## [**AuthzSubject**](AuthzSubject.html) GetAuthorizationSubjectsMe ()
+
+
+
+Returns a listing of roles and permissions for the currently authenticated user.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationSubjectsMeExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+
+            try
+            {
+                
+                // Returns a listing of roles and permissions for the currently authenticated user.
+                
+                AuthzSubject result = apiInstance.GetAuthorizationSubjectsMe();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetAuthorizationSubjectsMe: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**AuthzSubject**](AuthzSubject.html)
+
 <a name="getfieldconfig"></a>
 
 ## [**FieldConfig**](FieldConfig.html) GetFieldconfig (string type)
@@ -742,7 +1117,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
 | **state** | **string**| Search for a user with this state | [optional] [default to active]<br />**Values**: active, deleted |
 {: class="table table-striped"}
 
@@ -818,7 +1193,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
 {: class="table table-striped"}
 
 ### Return type
@@ -962,7 +1337,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
 {: class="table table-striped"}
 
 ### Return type
@@ -1055,7 +1430,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
 {: class="table table-striped"}
 
 ### Return type
@@ -1274,7 +1649,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| userId |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
 {: class="table table-striped"}
 
 ### Return type
@@ -1895,7 +2270,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
 {: class="table table-striped"}
 
 ### Return type
@@ -2075,7 +2450,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **id** | [**List<string>**](string.html)| id | [optional]  |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
 | **state** | **string**| Only list users of this state | [optional] [default to active]<br />**Values**: active, inactive, deleted |
 {: class="table table-striped"}
 
@@ -2145,7 +2520,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, orgproducts, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token, trustors |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, orgproducts, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token, trustors |
 {: class="table table-striped"}
 
 ### Return type
@@ -2708,6 +3083,160 @@ namespace Example
 
 [**UserRoutingLanguage**](UserRoutingLanguage.html)
 
+<a name="patchuserroutinglanguagesbulk"></a>
+
+## [**UserLanguageEntityListing**](UserLanguageEntityListing.html) PatchUserRoutinglanguagesBulk (string userId, List<UserRoutingLanguagePost> body)
+
+
+
+Add bulk routing language to user. Max limit 50 languages
+
+
+
+Requires ANY permissions: 
+
+* routing:skill:assign
+* admin
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchUserRoutinglanguagesBulkExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
+            var body = new List<UserRoutingLanguagePost>(); // List<UserRoutingLanguagePost> | Language
+            
+            
+
+            try
+            {
+                
+                // Add bulk routing language to user. Max limit 50 languages
+                
+                UserLanguageEntityListing result = apiInstance.PatchUserRoutinglanguagesBulk(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PatchUserRoutinglanguagesBulk: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**List<UserRoutingLanguagePost>**](UserRoutingLanguagePost.html)| Language |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserLanguageEntityListing**](UserLanguageEntityListing.html)
+
+<a name="patchuserroutingskillsbulk"></a>
+
+## [**UserSkillEntityListing**](UserSkillEntityListing.html) PatchUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body)
+
+
+
+Add bulk routing skills to user
+
+
+
+Requires ANY permissions: 
+
+* routing:skill:assign
+* admin
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchUserRoutingskillsBulkExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
+            var body = new List<UserRoutingSkillPost>(); // List<UserRoutingSkillPost> | Skill
+            
+            
+
+            try
+            {
+                
+                // Add bulk routing skills to user
+                
+                UserSkillEntityListing result = apiInstance.PatchUserRoutingskillsBulk(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PatchUserRoutingskillsBulk: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**List<UserRoutingSkillPost>**](UserRoutingSkillPost.html)| Skill |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserSkillEntityListing**](UserSkillEntityListing.html)
+
 <a name="patchusersbulk"></a>
 
 ## [**UserEntityListing**](UserEntityListing.html) PatchUsersBulk (List<PatchUser> body)
@@ -2990,6 +3519,93 @@ namespace Example
 ### Return type
 
 [**ObservationQueryResponse**](ObservationQueryResponse.html)
+
+<a name="postauthorizationsubjectdivisionrole"></a>
+
+## void PostAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId, string subjectType = null)
+
+
+
+Make a grant of a role in a division
+
+
+
+Requires ANY permissions: 
+
+* authorization:grant:add
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuthorizationSubjectDivisionRoleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            
+            
+            
+            
+            var divisionId = divisionId_example;  // string | the id of the division to which to make the grant
+            
+            
+            
+            
+            var roleId = roleId_example;  // string | the id of the role to grant
+            
+            
+            
+            
+            var subjectType = subjectType_example;  // string | what the type of the subject is, PC_GROUP or PC_USER (optional)  (default to PC_USER)
+            
+            
+            
+
+            try
+            {
+                
+                // Make a grant of a role in a division
+                
+                apiInstance.PostAuthorizationSubjectDivisionRole(subjectId, divisionId, roleId, subjectType);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostAuthorizationSubjectDivisionRole: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| Subject ID (user or group) |  |
+| **divisionId** | **string**| the id of the division to which to make the grant |  |
+| **roleId** | **string**| the id of the role to grant |  |
+| **subjectType** | **string**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postuserinvite"></a>
 

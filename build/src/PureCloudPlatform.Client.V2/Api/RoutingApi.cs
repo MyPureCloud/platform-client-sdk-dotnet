@@ -843,10 +843,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>WrapupCodeEntityListing</returns>
-        WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
 
         /// <summary>
         /// Get list of wrapup codes.
@@ -857,10 +857,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
-        ApiResponse<WrapupCodeEntityListing> GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        ApiResponse<WrapupCodeEntityListing> GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
         
         /// <summary>
         /// List routing language for user
@@ -993,6 +993,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of UserRoutingLanguage</returns>
         ApiResponse<UserRoutingLanguage> PatchUserRoutinglanguageWithHttpInfo (string userId, string languageId, UserRoutingLanguage body);
+        
+        /// <summary>
+        /// Add bulk routing language to user. Max limit 50 languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>UserLanguageEntityListing</returns>
+        UserLanguageEntityListing PatchUserRoutinglanguagesBulk (string userId, List<UserRoutingLanguagePost> body);
+
+        /// <summary>
+        /// Add bulk routing language to user. Max limit 50 languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>ApiResponse of UserLanguageEntityListing</returns>
+        ApiResponse<UserLanguageEntityListing> PatchUserRoutinglanguagesBulkWithHttpInfo (string userId, List<UserRoutingLanguagePost> body);
+        
+        /// <summary>
+        /// Add bulk routing skills to user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>UserSkillEntityListing</returns>
+        UserSkillEntityListing PatchUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body);
+
+        /// <summary>
+        /// Add bulk routing skills to user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>ApiResponse of UserSkillEntityListing</returns>
+        ApiResponse<UserSkillEntityListing> PatchUserRoutingskillsBulkWithHttpInfo (string userId, List<UserRoutingSkillPost> body);
         
         /// <summary>
         /// Query for queue observations
@@ -2293,10 +2341,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
-        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
 
         /// <summary>
         /// Get list of wrapup codes.
@@ -2307,10 +2355,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
         
         /// <summary>
         /// List routing language for user
@@ -2443,6 +2491,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (UserRoutingLanguage)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PatchUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId, UserRoutingLanguage body);
+        
+        /// <summary>
+        /// Add bulk routing language to user. Max limit 50 languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>Task of UserLanguageEntityListing</returns>
+        System.Threading.Tasks.Task<UserLanguageEntityListing> PatchUserRoutinglanguagesBulkAsync (string userId, List<UserRoutingLanguagePost> body);
+
+        /// <summary>
+        /// Add bulk routing language to user. Max limit 50 languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>Task of ApiResponse (UserLanguageEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> PatchUserRoutinglanguagesBulkAsyncWithHttpInfo (string userId, List<UserRoutingLanguagePost> body);
+        
+        /// <summary>
+        /// Add bulk routing skills to user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of UserSkillEntityListing</returns>
+        System.Threading.Tasks.Task<UserSkillEntityListing> PatchUserRoutingskillsBulkAsync (string userId, List<UserRoutingSkillPost> body);
+
+        /// <summary>
+        /// Add bulk routing skills to user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> PatchUserRoutingskillsBulkAsyncWithHttpInfo (string userId, List<UserRoutingSkillPost> body);
         
         /// <summary>
         /// Query for queue observations
@@ -9619,12 +9715,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>WrapupCodeEntityListing</returns>
-        public WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
         {
-             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetRoutingWrapupcodesWithHttpInfo(pageSize, pageNumber, name, sortBy);
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetRoutingWrapupcodesWithHttpInfo(pageSize, pageNumber, sortBy, name);
              return localVarResponse.Data;
         }
 
@@ -9634,10 +9730,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
-        public ApiResponse< WrapupCodeEntityListing > GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public ApiResponse< WrapupCodeEntityListing > GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/routing/wrapupcodes";
@@ -9675,8 +9771,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -9720,12 +9816,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
-        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
         {
-             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetRoutingWrapupcodesAsyncWithHttpInfo(pageSize, pageNumber, name, sortBy);
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetRoutingWrapupcodesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name);
              return localVarResponse.Data;
 
         }
@@ -9736,10 +9832,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/routing/wrapupcodes";
@@ -9777,8 +9873,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -10901,6 +10997,434 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UserRoutingLanguage>(localVarStatusCode,
                 localVarHeaders,
                 (UserRoutingLanguage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserRoutingLanguage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Add bulk routing language to user. Max limit 50 languages 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>UserLanguageEntityListing</returns>
+        public UserLanguageEntityListing PatchUserRoutinglanguagesBulk (string userId, List<UserRoutingLanguagePost> body)
+        {
+             ApiResponse<UserLanguageEntityListing> localVarResponse = PatchUserRoutinglanguagesBulkWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add bulk routing language to user. Max limit 50 languages 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>ApiResponse of UserLanguageEntityListing</returns>
+        public ApiResponse< UserLanguageEntityListing > PatchUserRoutinglanguagesBulkWithHttpInfo (string userId, List<UserRoutingLanguagePost> body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PatchUserRoutinglanguagesBulk");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchUserRoutinglanguagesBulk");
+
+            var localVarPath = "/api/v2/users/{userId}/routinglanguages/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserRoutinglanguagesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserRoutinglanguagesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserLanguageEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserLanguageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserLanguageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Add bulk routing language to user. Max limit 50 languages 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>Task of UserLanguageEntityListing</returns>
+        public async System.Threading.Tasks.Task<UserLanguageEntityListing> PatchUserRoutinglanguagesBulkAsync (string userId, List<UserRoutingLanguagePost> body)
+        {
+             ApiResponse<UserLanguageEntityListing> localVarResponse = await PatchUserRoutinglanguagesBulkAsyncWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add bulk routing language to user. Max limit 50 languages 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>Task of ApiResponse (UserLanguageEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> PatchUserRoutinglanguagesBulkAsyncWithHttpInfo (string userId, List<UserRoutingLanguagePost> body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PatchUserRoutinglanguagesBulk");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchUserRoutinglanguagesBulk");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/routinglanguages/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserRoutinglanguagesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserRoutinglanguagesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserLanguageEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserLanguageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserLanguageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Add bulk routing skills to user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>UserSkillEntityListing</returns>
+        public UserSkillEntityListing PatchUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body)
+        {
+             ApiResponse<UserSkillEntityListing> localVarResponse = PatchUserRoutingskillsBulkWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add bulk routing skills to user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>ApiResponse of UserSkillEntityListing</returns>
+        public ApiResponse< UserSkillEntityListing > PatchUserRoutingskillsBulkWithHttpInfo (string userId, List<UserRoutingSkillPost> body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PatchUserRoutingskillsBulk");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchUserRoutingskillsBulk");
+
+            var localVarPath = "/api/v2/users/{userId}/routingskills/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserRoutingskillsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserRoutingskillsBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserSkillEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserSkillEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserSkillEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Add bulk routing skills to user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of UserSkillEntityListing</returns>
+        public async System.Threading.Tasks.Task<UserSkillEntityListing> PatchUserRoutingskillsBulkAsync (string userId, List<UserRoutingSkillPost> body)
+        {
+             ApiResponse<UserSkillEntityListing> localVarResponse = await PatchUserRoutingskillsBulkAsyncWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add bulk routing skills to user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> PatchUserRoutingskillsBulkAsyncWithHttpInfo (string userId, List<UserRoutingSkillPost> body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PatchUserRoutingskillsBulk");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchUserRoutingskillsBulk");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/routingskills/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserRoutingskillsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserRoutingskillsBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserSkillEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserSkillEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserSkillEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

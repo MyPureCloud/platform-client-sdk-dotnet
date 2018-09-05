@@ -242,7 +242,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateQueueRequest" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        /// <param name="Name">The queue name (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Description">The queue description..</param>
         /// <param name="Version">The current version of the queue..</param>
@@ -307,8 +307,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The queue name
         /// </summary>
+        /// <value>The queue name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         

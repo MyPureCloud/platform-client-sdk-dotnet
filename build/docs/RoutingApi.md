@@ -46,6 +46,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRoutingQueueUser**](RoutingApi.html#patchroutingqueueuser) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | Update the ring number of joined status for a User in a Queue |
 | [**PatchRoutingQueueUsers**](RoutingApi.html#patchroutingqueueusers) | **PATCH** /api/v2/routing/queues/{queueId}/users | Join or unjoin a set of users for a queue |
 | [**PatchUserRoutinglanguage**](RoutingApi.html#patchuserroutinglanguage) | **PATCH** /api/v2/users/{userId}/routinglanguages/{languageId} | Update routing language proficiency or state. |
+| [**PatchUserRoutinglanguagesBulk**](RoutingApi.html#patchuserroutinglanguagesbulk) | **PATCH** /api/v2/users/{userId}/routinglanguages/bulk | Add bulk routing language to user. Max limit 50 languages |
+| [**PatchUserRoutingskillsBulk**](RoutingApi.html#patchuserroutingskillsbulk) | **PATCH** /api/v2/users/{userId}/routingskills/bulk | Add bulk routing skills to user |
 | [**PostAnalyticsQueuesObservationsQuery**](RoutingApi.html#postanalyticsqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
 | [**PostRoutingEmailDomainRoutes**](RoutingApi.html#postroutingemaildomainroutes) | **POST** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
 | [**PostRoutingEmailDomains**](RoutingApi.html#postroutingemaildomains) | **POST** /api/v2/routing/email/domains | Create a domain |
@@ -1789,7 +1791,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, orgproducts, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token, trustors |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
 | **joined** | **bool?**| Filter by joined status | [optional]  |
 | **name** | **string**| Filter by queue member name | [optional]  |
 | **profileSkills** | [**List<string>**](string.html)| Filter by profile skill | [optional]  |
@@ -2633,7 +2635,7 @@ namespace Example
 
 <a name="getroutingwrapupcodes"></a>
 
-## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
 
 
 
@@ -2677,12 +2679,12 @@ namespace Example
             
             
             
-            var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
+            var name = name_example;  // string | Name (optional) 
             
             
             
@@ -2692,7 +2694,7 @@ namespace Example
                 
                 // Get list of wrapup codes.
                 
-                WrapupCodeEntityListing result = apiInstance.GetRoutingWrapupcodes(pageSize, pageNumber, name, sortBy);
+                WrapupCodeEntityListing result = apiInstance.GetRoutingWrapupcodes(pageSize, pageNumber, sortBy, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2711,8 +2713,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortBy** | **string**| Sort by | [optional] [default to name]<br />**Values**: name, id |
 | **name** | **string**| Name | [optional]  |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
 {: class="table table-striped"}
 
 ### Return type
@@ -3133,6 +3135,160 @@ namespace Example
 ### Return type
 
 [**UserRoutingLanguage**](UserRoutingLanguage.html)
+
+<a name="patchuserroutinglanguagesbulk"></a>
+
+## [**UserLanguageEntityListing**](UserLanguageEntityListing.html) PatchUserRoutinglanguagesBulk (string userId, List<UserRoutingLanguagePost> body)
+
+
+
+Add bulk routing language to user. Max limit 50 languages
+
+
+
+Requires ANY permissions: 
+
+* routing:skill:assign
+* admin
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchUserRoutinglanguagesBulkExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new RoutingApi();
+            
+            
+            var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
+            var body = new List<UserRoutingLanguagePost>(); // List<UserRoutingLanguagePost> | Language
+            
+            
+
+            try
+            {
+                
+                // Add bulk routing language to user. Max limit 50 languages
+                
+                UserLanguageEntityListing result = apiInstance.PatchUserRoutinglanguagesBulk(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PatchUserRoutinglanguagesBulk: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**List<UserRoutingLanguagePost>**](UserRoutingLanguagePost.html)| Language |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserLanguageEntityListing**](UserLanguageEntityListing.html)
+
+<a name="patchuserroutingskillsbulk"></a>
+
+## [**UserSkillEntityListing**](UserSkillEntityListing.html) PatchUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body)
+
+
+
+Add bulk routing skills to user
+
+
+
+Requires ANY permissions: 
+
+* routing:skill:assign
+* admin
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchUserRoutingskillsBulkExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new RoutingApi();
+            
+            
+            var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
+            var body = new List<UserRoutingSkillPost>(); // List<UserRoutingSkillPost> | Skill
+            
+            
+
+            try
+            {
+                
+                // Add bulk routing skills to user
+                
+                UserSkillEntityListing result = apiInstance.PatchUserRoutingskillsBulk(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PatchUserRoutingskillsBulk: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**List<UserRoutingSkillPost>**](UserRoutingSkillPost.html)| Skill |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserSkillEntityListing**](UserSkillEntityListing.html)
 
 <a name="postanalyticsqueuesobservationsquery"></a>
 

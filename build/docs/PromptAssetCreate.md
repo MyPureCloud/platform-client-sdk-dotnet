@@ -13,6 +13,7 @@ title: PromptAssetCreate
 | **Language** | **string** | The prompt language. | |
 | **MediaUri** | **string** |  | [optional] |
 | **TtsString** | **string** |  | [optional] |
+| **Text** | **string** |  | [optional] |
 | **UploadStatus** | **string** |  | [optional] |
 | **UploadUri** | **string** |  | [optional] |
 | **LanguageDefault** | **bool?** |  | [optional] |

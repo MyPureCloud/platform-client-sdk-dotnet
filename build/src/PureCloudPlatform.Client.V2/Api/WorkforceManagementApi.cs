@@ -701,6 +701,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ManagementUnitListing> GetWorkforcemanagementManagementunitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null);
         
         /// <summary>
+        /// Get management units across divisions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
+        /// <returns>ManagementUnitListing</returns>
+        ManagementUnitListing GetWorkforcemanagementManagementunitsDivisionviews (List<string> divisionId = null);
+
+        /// <summary>
+        /// Get management units across divisions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
+        /// <returns>ApiResponse of ManagementUnitListing</returns>
+        ApiResponse<ManagementUnitListing> GetWorkforcemanagementManagementunitsDivisionviewsWithHttpInfo (List<string> divisionId = null);
+        
+        /// <summary>
         /// Get a time off request for the current user
         /// </summary>
         /// <remarks>
@@ -2173,6 +2195,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null);
+        
+        /// <summary>
+        /// Get management units across divisions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
+        /// <returns>Task of ManagementUnitListing</returns>
+        System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsDivisionviewsAsync (List<string> divisionId = null);
+
+        /// <summary>
+        /// Get management units across divisions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
+        /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsDivisionviewsAsyncWithHttpInfo (List<string> divisionId = null);
         
         /// <summary>
         /// Get a time off request for the current user
@@ -8797,6 +8841,192 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ManagementUnitListing>(localVarStatusCode,
+                localVarHeaders,
+                (ManagementUnitListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get management units across divisions 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
+        /// <returns>ManagementUnitListing</returns>
+        public ManagementUnitListing GetWorkforcemanagementManagementunitsDivisionviews (List<string> divisionId = null)
+        {
+             ApiResponse<ManagementUnitListing> localVarResponse = GetWorkforcemanagementManagementunitsDivisionviewsWithHttpInfo(divisionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get management units across divisions 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
+        /// <returns>ApiResponse of ManagementUnitListing</returns>
+        public ApiResponse< ManagementUnitListing > GetWorkforcemanagementManagementunitsDivisionviewsWithHttpInfo (List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ManagementUnitListing>(localVarStatusCode,
+                localVarHeaders,
+                (ManagementUnitListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get management units across divisions 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
+        /// <returns>Task of ManagementUnitListing</returns>
+        public async System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsDivisionviewsAsync (List<string> divisionId = null)
+        {
+             ApiResponse<ManagementUnitListing> localVarResponse = await GetWorkforcemanagementManagementunitsDivisionviewsAsyncWithHttpInfo(divisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get management units across divisions 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
+        /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsDivisionviewsAsyncWithHttpInfo (List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ManagementUnitListing>(localVarStatusCode,
                 localVarHeaders,

@@ -14,6 +14,7 @@ title: SystemPromptAsset
 | **DurationSeconds** | **double?** |  | [optional] |
 | **MediaUri** | **string** |  | [optional] |
 | **TtsString** | **string** |  | [optional] |
+| **Text** | **string** |  | [optional] |
 | **UploadUri** | **string** |  | [optional] |
 | **UploadStatus** | **string** |  | [optional] |
 | **HasDefault** | **bool?** |  | [optional] |

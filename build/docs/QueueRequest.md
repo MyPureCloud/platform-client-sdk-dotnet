@@ -8,7 +8,7 @@ title: QueueRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** |  | [optional] |
+| **Name** | **string** | The queue name | |
 | **Division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** | The queue description. | [optional] |
 | **Version** | **int?** | The current version of the queue. | [optional] |

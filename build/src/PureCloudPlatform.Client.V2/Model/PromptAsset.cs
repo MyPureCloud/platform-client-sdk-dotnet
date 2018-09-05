@@ -80,6 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PromptAsset" /> class.
@@ -89,18 +94,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Language">Language.</param>
         /// <param name="MediaUri">MediaUri.</param>
         /// <param name="TtsString">TtsString.</param>
+        /// <param name="Text">Text.</param>
         /// <param name="UploadStatus">UploadStatus.</param>
         /// <param name="UploadUri">UploadUri.</param>
         /// <param name="LanguageDefault">LanguageDefault.</param>
         /// <param name="Tags">Tags.</param>
         /// <param name="DurationSeconds">DurationSeconds.</param>
-        public PromptAsset(string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string UploadStatus = null, string UploadUri = null, bool? LanguageDefault = null, Dictionary<string, List<string>> Tags = null, double? DurationSeconds = null)
+        public PromptAsset(string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string Text = null, string UploadStatus = null, string UploadUri = null, bool? LanguageDefault = null, Dictionary<string, List<string>> Tags = null, double? DurationSeconds = null)
         {
             this.Name = Name;
             this.PromptId = PromptId;
             this.Language = Language;
             this.MediaUri = MediaUri;
             this.TtsString = TtsString;
+            this.Text = Text;
             this.UploadStatus = UploadStatus;
             this.UploadUri = UploadUri;
             this.LanguageDefault = LanguageDefault;
@@ -157,6 +164,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="ttsString", EmitDefaultValue=false)]
         public string TtsString { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Text
+        /// </summary>
+        [DataMember(Name="text", EmitDefaultValue=false)]
+        public string Text { get; set; }
         
         
         
@@ -223,6 +238,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
             sb.Append("  TtsString: ").Append(TtsString).Append("\n");
+            sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
             sb.Append("  UploadUri: ").Append(UploadUri).Append("\n");
             sb.Append("  LanguageDefault: ").Append(LanguageDefault).Append("\n");
@@ -296,6 +312,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TtsString.Equals(other.TtsString)
                 ) &&
                 (
+                    this.Text == other.Text ||
+                    this.Text != null &&
+                    this.Text.Equals(other.Text)
+                ) &&
+                (
                     this.UploadStatus == other.UploadStatus ||
                     this.UploadStatus != null &&
                     this.UploadStatus.Equals(other.UploadStatus)
@@ -356,6 +377,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TtsString != null)
                     hash = hash * 59 + this.TtsString.GetHashCode();
+                
+                if (this.Text != null)
+                    hash = hash * 59 + this.Text.GetHashCode();
                 
                 if (this.UploadStatus != null)
                     hash = hash * 59 + this.UploadStatus.GetHashCode();

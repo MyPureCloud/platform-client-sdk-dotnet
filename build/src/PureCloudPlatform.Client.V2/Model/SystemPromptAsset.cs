@@ -44,6 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets UploadStatus
         /// </summary>
@@ -109,6 +112,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets UploadStatus
         /// </summary>
@@ -140,12 +145,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DurationSeconds">DurationSeconds.</param>
         /// <param name="MediaUri">MediaUri.</param>
         /// <param name="TtsString">TtsString.</param>
+        /// <param name="Text">Text.</param>
         /// <param name="UploadUri">UploadUri.</param>
         /// <param name="UploadStatus">UploadStatus.</param>
         /// <param name="HasDefault">HasDefault.</param>
         /// <param name="LanguageDefault">LanguageDefault.</param>
         /// <param name="Tags">Tags.</param>
-        public SystemPromptAsset(string Name = null, string PromptId = null, string Language = null, double? DurationSeconds = null, string MediaUri = null, string TtsString = null, string UploadUri = null, UploadStatusEnum? UploadStatus = null, bool? HasDefault = null, bool? LanguageDefault = null, Dictionary<string, List<string>> Tags = null)
+        public SystemPromptAsset(string Name = null, string PromptId = null, string Language = null, double? DurationSeconds = null, string MediaUri = null, string TtsString = null, string Text = null, string UploadUri = null, UploadStatusEnum? UploadStatus = null, bool? HasDefault = null, bool? LanguageDefault = null, Dictionary<string, List<string>> Tags = null)
         {
             this.Name = Name;
             this.PromptId = PromptId;
@@ -153,6 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DurationSeconds = DurationSeconds;
             this.MediaUri = MediaUri;
             this.TtsString = TtsString;
+            this.Text = Text;
             this.UploadUri = UploadUri;
             this.UploadStatus = UploadStatus;
             this.HasDefault = HasDefault;
@@ -222,6 +229,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Text
+        /// </summary>
+        [DataMember(Name="text", EmitDefaultValue=false)]
+        public string Text { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets UploadUri
         /// </summary>
         [DataMember(Name="uploadUri", EmitDefaultValue=false)]
@@ -279,6 +294,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
             sb.Append("  TtsString: ").Append(TtsString).Append("\n");
+            sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  UploadUri: ").Append(UploadUri).Append("\n");
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
             sb.Append("  HasDefault: ").Append(HasDefault).Append("\n");
@@ -357,6 +373,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TtsString.Equals(other.TtsString)
                 ) &&
                 (
+                    this.Text == other.Text ||
+                    this.Text != null &&
+                    this.Text.Equals(other.Text)
+                ) &&
+                (
                     this.UploadUri == other.UploadUri ||
                     this.UploadUri != null &&
                     this.UploadUri.Equals(other.UploadUri)
@@ -420,6 +441,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TtsString != null)
                     hash = hash * 59 + this.TtsString.GetHashCode();
+                
+                if (this.Text != null)
+                    hash = hash * 59 + this.Text.GetHashCode();
                 
                 if (this.UploadUri != null)
                     hash = hash * 59 + this.UploadUri.GetHashCode();

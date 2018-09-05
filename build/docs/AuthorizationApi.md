@@ -7,25 +7,110 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteAuthorizationDivision**](AuthorizationApi.html#deleteauthorizationdivision) | **DELETE** /api/v2/authorization/divisions/{divisionId} | Delete a division. |
 | [**DeleteAuthorizationRole**](AuthorizationApi.html#deleteauthorizationrole) | **DELETE** /api/v2/authorization/roles/{roleId} | Delete an organization role. |
+| [**DeleteAuthorizationSubjectDivisionRole**](AuthorizationApi.html#deleteauthorizationsubjectdivisionrole) | **DELETE** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
 | [**DeleteUserRoles**](AuthorizationApi.html#deleteuserroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
+| [**GetAuthorizationDivision**](AuthorizationApi.html#getauthorizationdivision) | **GET** /api/v2/authorization/divisions/{divisionId} | Returns an authorization division. |
+| [**GetAuthorizationDivisions**](AuthorizationApi.html#getauthorizationdivisions) | **GET** /api/v2/authorization/divisions | Retrieve a list of all divisions defined for the organization |
+| [**GetAuthorizationDivisionsHome**](AuthorizationApi.html#getauthorizationdivisionshome) | **GET** /api/v2/authorization/divisions/home | Retrieve the home division for the organization. |
+| [**GetAuthorizationDivisionsLimit**](AuthorizationApi.html#getauthorizationdivisionslimit) | **GET** /api/v2/authorization/divisions/limit | Returns the maximum allowed number of divisions. |
+| [**GetAuthorizationDivisionspermittedMe**](AuthorizationApi.html#getauthorizationdivisionspermittedme) | **GET** /api/v2/authorization/divisionspermitted/me | Returns whether or not current user can perform the specified action(s). |
+| [**GetAuthorizationDivisionspermittedSubjectId**](AuthorizationApi.html#getauthorizationdivisionspermittedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/{subjectId} | Returns whether or not specified user can perform the specified action(s). |
 | [**GetAuthorizationPermissions**](AuthorizationApi.html#getauthorizationpermissions) | **GET** /api/v2/authorization/permissions | Get all permissions. |
 | [**GetAuthorizationProducts**](AuthorizationApi.html#getauthorizationproducts) | **GET** /api/v2/authorization/products | Get the list of enabled products |
 | [**GetAuthorizationRole**](AuthorizationApi.html#getauthorizationrole) | **GET** /api/v2/authorization/roles/{roleId} | Get a single organization role. |
 | [**GetAuthorizationRoleComparedefaultRightRoleId**](AuthorizationApi.html#getauthorizationrolecomparedefaultrightroleid) | **GET** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an org role to default role comparison comparison |
 | [**GetAuthorizationRoleSubjectgrants**](AuthorizationApi.html#getauthorizationrolesubjectgrants) | **GET** /api/v2/authorization/roles/{roleId}/subjectgrants | Get the subjects&#39; granted divisions in the specified role. |
+| [**GetAuthorizationRoleUsers**](AuthorizationApi.html#getauthorizationroleusers) | **GET** /api/v2/authorization/roles/{roleId}/users | Get a list of the users in a specified role. |
 | [**GetAuthorizationRoles**](AuthorizationApi.html#getauthorizationroles) | **GET** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
+| [**GetAuthorizationSubject**](AuthorizationApi.html#getauthorizationsubject) | **GET** /api/v2/authorization/subjects/{subjectId} | Returns a listing of roles and permissions for a user. |
+| [**GetAuthorizationSubjectsMe**](AuthorizationApi.html#getauthorizationsubjectsme) | **GET** /api/v2/authorization/subjects/me | Returns a listing of roles and permissions for the currently authenticated user. |
 | [**GetUserRoles**](AuthorizationApi.html#getuserroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
 | [**PatchAuthorizationRole**](AuthorizationApi.html#patchauthorizationrole) | **PATCH** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
+| [**PostAuthorizationDivisionObject**](AuthorizationApi.html#postauthorizationdivisionobject) | **POST** /api/v2/authorization/divisions/{divisionId}/objects/{objectType} | Assign a list of objects to a division |
+| [**PostAuthorizationDivisions**](AuthorizationApi.html#postauthorizationdivisions) | **POST** /api/v2/authorization/divisions | Create a division. |
+| [**PostAuthorizationRole**](AuthorizationApi.html#postauthorizationrole) | **POST** /api/v2/authorization/roles/{roleId} | Bulk-grant subjects and divisions with an organization role. |
 | [**PostAuthorizationRoleComparedefaultRightRoleId**](AuthorizationApi.html#postauthorizationrolecomparedefaultrightroleid) | **POST** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an unsaved org role to default role comparison |
 | [**PostAuthorizationRoles**](AuthorizationApi.html#postauthorizationroles) | **POST** /api/v2/authorization/roles | Create an organization role. |
 | [**PostAuthorizationRolesDefault**](AuthorizationApi.html#postauthorizationrolesdefault) | **POST** /api/v2/authorization/roles/default | Restores all default roles |
+| [**PostAuthorizationSubjectDivisionRole**](AuthorizationApi.html#postauthorizationsubjectdivisionrole) | **POST** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Make a grant of a role in a division |
+| [**PutAuthorizationDivision**](AuthorizationApi.html#putauthorizationdivision) | **PUT** /api/v2/authorization/divisions/{divisionId} | Update a division. |
 | [**PutAuthorizationRole**](AuthorizationApi.html#putauthorizationrole) | **PUT** /api/v2/authorization/roles/{roleId} | Update an organization role. |
 | [**PutAuthorizationRoleUsersAdd**](AuthorizationApi.html#putauthorizationroleusersadd) | **PUT** /api/v2/authorization/roles/{roleId}/users/add | Sets the users for the role |
 | [**PutAuthorizationRoleUsersRemove**](AuthorizationApi.html#putauthorizationroleusersremove) | **PUT** /api/v2/authorization/roles/{roleId}/users/remove | Removes the users from the role |
 | [**PutAuthorizationRolesDefault**](AuthorizationApi.html#putauthorizationrolesdefault) | **PUT** /api/v2/authorization/roles/default | Restore specified default roles |
 | [**PutUserRoles**](AuthorizationApi.html#putuserroles) | **PUT** /api/v2/users/{userId}/roles | Sets the user&#39;s roles |
 {: class="table table-striped"}
+
+<a name="deleteauthorizationdivision"></a>
+
+## void DeleteAuthorizationDivision (string divisionId)
+
+
+
+Delete a division.
+
+
+
+Requires ANY permissions: 
+
+* authorization:division:delete
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteAuthorizationDivisionExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            var divisionId = divisionId_example;  // string | Division ID
+            
+            
+            
+
+            try
+            {
+                
+                // Delete a division.
+                
+                apiInstance.DeleteAuthorizationDivision(divisionId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.DeleteAuthorizationDivision: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **divisionId** | **string**| Division ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deleteauthorizationrole"></a>
 
@@ -92,6 +177,87 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteauthorizationsubjectdivisionrole"></a>
+
+## void DeleteAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId)
+
+
+
+Delete a grant of a role in a division
+
+
+
+Requires ANY permissions: 
+
+* authorization:grant:delete
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteAuthorizationSubjectDivisionRoleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            
+            
+            
+            
+            var divisionId = divisionId_example;  // string | the id of the division of the grant
+            
+            
+            
+            
+            var roleId = roleId_example;  // string | the id of the role of the grant
+            
+            
+            
+
+            try
+            {
+                
+                // Delete a grant of a role in a division
+                
+                apiInstance.DeleteAuthorizationSubjectDivisionRole(subjectId, divisionId, roleId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.DeleteAuthorizationSubjectDivisionRole: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| Subject ID (user or group) |  |
+| **divisionId** | **string**| the id of the division of the grant |  |
+| **roleId** | **string**| the id of the role of the grant |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -168,6 +334,476 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="getauthorizationdivision"></a>
+
+## [**AuthzDivision**](AuthzDivision.html) GetAuthorizationDivision (string divisionId, bool? objectCount = null)
+
+
+
+Returns an authorization division.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            var divisionId = divisionId_example;  // string | Division ID
+            
+            
+            
+            
+            var objectCount = true;  // bool? | Get count of objects in this division, grouped by type (optional)  (default to false)
+            
+            
+            
+
+            try
+            {
+                
+                // Returns an authorization division.
+                
+                AuthzDivision result = apiInstance.GetAuthorizationDivision(divisionId, objectCount);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationDivision: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **divisionId** | **string**| Division ID |  |
+| **objectCount** | **bool?**| Get count of objects in this division, grouped by type | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**AuthzDivision**](AuthzDivision.html)
+
+<a name="getauthorizationdivisions"></a>
+
+## [**AuthzDivisionEntityListing**](AuthzDivisionEntityListing.html) GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
+
+
+
+Retrieve a list of all divisions defined for the organization
+
+Request specific divisions by id using a query param \"id\", e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&id=72e9fb25-c484-488d-9312-7acba82435b3
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            
+            
+            
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+            
+            var objectCount = true;  // bool? | Include the count of objects contained in the division (optional)  (default to false)
+            
+            
+            
+            
+            
+            var id = new List<string>(); // List<string> | Optionally request specific divisions by their IDs (optional) 
+            
+            
+            
+            var name = name_example;  // string | Search term to filter by division name (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Retrieve a list of all divisions defined for the organization
+                
+                AuthzDivisionEntityListing result = apiInstance.GetAuthorizationDivisions(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, id, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationDivisions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **string**| variable name requested to sort by | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **nextPage** | **string**| next page token | [optional]  |
+| **previousPage** | **string**| Previous page token | [optional]  |
+| **objectCount** | **bool?**| Include the count of objects contained in the division | [optional] [default to false] |
+| **id** | [**List<string>**](string.html)| Optionally request specific divisions by their IDs | [optional]  |
+| **name** | **string**| Search term to filter by division name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AuthzDivisionEntityListing**](AuthzDivisionEntityListing.html)
+
+<a name="getauthorizationdivisionshome"></a>
+
+## [**AuthzDivision**](AuthzDivision.html) GetAuthorizationDivisionsHome ()
+
+
+
+Retrieve the home division for the organization.
+
+Will not include object counts.
+
+Requires ANY permissions: 
+
+* authorization:division:view
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionsHomeExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+
+            try
+            {
+                
+                // Retrieve the home division for the organization.
+                
+                AuthzDivision result = apiInstance.GetAuthorizationDivisionsHome();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationDivisionsHome: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**AuthzDivision**](AuthzDivision.html)
+
+<a name="getauthorizationdivisionslimit"></a>
+
+## **int?** GetAuthorizationDivisionsLimit ()
+
+
+
+Returns the maximum allowed number of divisions.
+
+
+
+Requires ANY permissions: 
+
+* authorization:division:view
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionsLimitExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+
+            try
+            {
+                
+                // Returns the maximum allowed number of divisions.
+                
+                int? result = apiInstance.GetAuthorizationDivisionsLimit();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationDivisionsLimit: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+**int?**
+
+<a name="getauthorizationdivisionspermittedme"></a>
+
+## [**List&lt;AuthzDivision&gt;**](AuthzDivision.html) GetAuthorizationDivisionspermittedMe (string permission, string name = null)
+
+
+
+Returns whether or not current user can perform the specified action(s).
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionspermittedMeExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            var permission = permission_example;  // string | The permission string, including the object to access, e.g. routing:queue:view
+            
+            
+            
+            
+            var name = name_example;  // string | Search term to filter by division name (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Returns whether or not current user can perform the specified action(s).
+                
+                List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedMe(permission, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationDivisionspermittedMe: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
+| **name** | **string**| Search term to filter by division name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<AuthzDivision>**](AuthzDivision.html)
+
+<a name="getauthorizationdivisionspermittedsubjectid"></a>
+
+## [**List&lt;AuthzDivision&gt;**](AuthzDivision.html) GetAuthorizationDivisionspermittedSubjectId (string subjectId, string permission, string name = null)
+
+
+
+Returns whether or not specified user can perform the specified action(s).
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionspermittedSubjectIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            
+            
+            
+            
+            var permission = permission_example;  // string | The permission string, including the object to access, e.g. routing:queue:view
+            
+            
+            
+            
+            var name = name_example;  // string | Search term to filter by division name (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Returns whether or not specified user can perform the specified action(s).
+                
+                List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedSubjectId(subjectId, permission, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationDivisionspermittedSubjectId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| Subject ID (user or group) |  |
+| **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
+| **name** | **string**| Search term to filter by division name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<AuthzDivision>**](AuthzDivision.html)
 
 <a name="getauthorizationpermissions"></a>
 
@@ -556,6 +1192,87 @@ namespace Example
 
 [**SubjectDivisionGrantsEntityListing**](SubjectDivisionGrantsEntityListing.html)
 
+<a name="getauthorizationroleusers"></a>
+
+## [**UserEntityListing**](UserEntityListing.html) GetAuthorizationRoleUsers (string roleId, int? pageSize = null, int? pageNumber = null)
+
+
+
+Get a list of the users in a specified role.
+
+Get an array of the UUIDs of the users in the specified role.
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationRoleUsersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            var roleId = roleId_example;  // string | Role ID
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+
+            try
+            {
+                
+                // Get a list of the users in a specified role.
+                
+                UserEntityListing result = apiInstance.GetAuthorizationRoleUsers(roleId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationRoleUsers: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **roleId** | **string**| Role ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserEntityListing**](UserEntityListing.html)
+
 <a name="getauthorizationroles"></a>
 
 ## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null)
@@ -685,6 +1402,136 @@ namespace Example
 ### Return type
 
 [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html)
+
+<a name="getauthorizationsubject"></a>
+
+## [**AuthzSubject**](AuthzSubject.html) GetAuthorizationSubject (string subjectId)
+
+
+
+Returns a listing of roles and permissions for a user.
+
+
+
+Requires ANY permissions: 
+
+* authorization:grant:view
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationSubjectExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            
+            
+            
+
+            try
+            {
+                
+                // Returns a listing of roles and permissions for a user.
+                
+                AuthzSubject result = apiInstance.GetAuthorizationSubject(subjectId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationSubject: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| Subject ID (user or group) |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AuthzSubject**](AuthzSubject.html)
+
+<a name="getauthorizationsubjectsme"></a>
+
+## [**AuthzSubject**](AuthzSubject.html) GetAuthorizationSubjectsMe ()
+
+
+
+Returns a listing of roles and permissions for the currently authenticated user.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationSubjectsMeExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+
+            try
+            {
+                
+                // Returns a listing of roles and permissions for the currently authenticated user.
+                
+                AuthzSubject result = apiInstance.GetAuthorizationSubjectsMe();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationSubjectsMe: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**AuthzSubject**](AuthzSubject.html)
 
 <a name="getuserroles"></a>
 
@@ -833,6 +1680,232 @@ namespace Example
 ### Return type
 
 [**DomainOrganizationRole**](DomainOrganizationRole.html)
+
+<a name="postauthorizationdivisionobject"></a>
+
+## void PostAuthorizationDivisionObject (string divisionId, string objectType, List<string> body)
+
+
+
+Assign a list of objects to a division
+
+Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\"206ce31f-61ec-40ed-a8b1-be6f06303998\",\"250a754e-f5e4-4f51-800f-a92f09d3bf8c\"]
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuthorizationDivisionObjectExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            var divisionId = divisionId_example;  // string | Division ID
+            
+            
+            
+            
+            var objectType = objectType_example;  // string | The type of the objects. Must be one of the valid object types
+            
+            
+            
+            
+            var body = ;  // List<string> | Object Id List
+            
+            
+            
+
+            try
+            {
+                
+                // Assign a list of objects to a division
+                
+                apiInstance.PostAuthorizationDivisionObject(divisionId, objectType, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PostAuthorizationDivisionObject: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **divisionId** | **string**| Division ID |  |
+| **objectType** | **string**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, FLOW, USER |
+| **body** | **List<string>**| Object Id List |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postauthorizationdivisions"></a>
+
+## [**AuthzDivision**](AuthzDivision.html) PostAuthorizationDivisions (AuthzDivision body)
+
+
+
+Create a division.
+
+
+
+Requires ALL permissions: 
+
+* authorization:division:add
+* authorization:grant:add
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuthorizationDivisionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            
+            var body = new AuthzDivision(); // AuthzDivision | Division
+            
+            
+
+            try
+            {
+                
+                // Create a division.
+                
+                AuthzDivision result = apiInstance.PostAuthorizationDivisions(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PostAuthorizationDivisions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AuthzDivision**](AuthzDivision.html)| Division |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AuthzDivision**](AuthzDivision.html)
+
+<a name="postauthorizationrole"></a>
+
+## void PostAuthorizationRole (string roleId, SubjectDivisions body)
+
+
+
+Bulk-grant subjects and divisions with an organization role.
+
+
+
+Requires ANY permissions: 
+
+* authorization:grant:add
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuthorizationRoleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            var roleId = roleId_example;  // string | Role ID
+            
+            
+            
+            
+            
+            var body = new SubjectDivisions(); // SubjectDivisions | Subjects and Divisions
+            
+            
+
+            try
+            {
+                
+                // Bulk-grant subjects and divisions with an organization role.
+                
+                apiInstance.PostAuthorizationRole(roleId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PostAuthorizationRole: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **roleId** | **string**| Role ID |  |
+| **body** | [**SubjectDivisions**](SubjectDivisions.html)| Subjects and Divisions |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postauthorizationrolecomparedefaultrightroleid"></a>
 
@@ -1055,6 +2128,169 @@ namespace Example
 ### Return type
 
 [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html)
+
+<a name="postauthorizationsubjectdivisionrole"></a>
+
+## void PostAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId, string subjectType = null)
+
+
+
+Make a grant of a role in a division
+
+
+
+Requires ANY permissions: 
+
+* authorization:grant:add
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuthorizationSubjectDivisionRoleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            
+            
+            
+            
+            var divisionId = divisionId_example;  // string | the id of the division to which to make the grant
+            
+            
+            
+            
+            var roleId = roleId_example;  // string | the id of the role to grant
+            
+            
+            
+            
+            var subjectType = subjectType_example;  // string | what the type of the subject is, PC_GROUP or PC_USER (optional)  (default to PC_USER)
+            
+            
+            
+
+            try
+            {
+                
+                // Make a grant of a role in a division
+                
+                apiInstance.PostAuthorizationSubjectDivisionRole(subjectId, divisionId, roleId, subjectType);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PostAuthorizationSubjectDivisionRole: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| Subject ID (user or group) |  |
+| **divisionId** | **string**| the id of the division to which to make the grant |  |
+| **roleId** | **string**| the id of the role to grant |  |
+| **subjectType** | **string**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="putauthorizationdivision"></a>
+
+## [**AuthzDivision**](AuthzDivision.html) PutAuthorizationDivision (string divisionId, AuthzDivision body)
+
+
+
+Update a division.
+
+
+
+Requires ANY permissions: 
+
+* authorization:division:edit
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutAuthorizationDivisionExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+            
+            var divisionId = divisionId_example;  // string | Division ID
+            
+            
+            
+            
+            
+            var body = new AuthzDivision(); // AuthzDivision | Updated division data
+            
+            
+
+            try
+            {
+                
+                // Update a division.
+                
+                AuthzDivision result = apiInstance.PutAuthorizationDivision(divisionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PutAuthorizationDivision: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **divisionId** | **string**| Division ID |  |
+| **body** | [**AuthzDivision**](AuthzDivision.html)| Updated division data |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AuthzDivision**](AuthzDivision.html)
 
 <a name="putauthorizationrole"></a>
 
