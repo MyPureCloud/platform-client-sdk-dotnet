@@ -90,6 +90,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationType" /> class.
@@ -198,6 +203,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// URI of a page with terms and conditions for the integration type
+        /// </summary>
+        /// <value>URI of a page with terms and conditions for the integration type</value>
+        [DataMember(Name="termsOfServiceUri", EmitDefaultValue=false)]
+        public string TermsOfServiceUri { get; private set; }
+        
+        
+        
+        /// <summary>
         /// Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration.
         /// </summary>
         /// <value>Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration.</value>
@@ -259,6 +273,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConfigPropertiesSchemaUri: ").Append(ConfigPropertiesSchemaUri).Append("\n");
             sb.Append("  ConfigAdvancedSchemaUri: ").Append(ConfigAdvancedSchemaUri).Append("\n");
             sb.Append("  HelpUri: ").Append(HelpUri).Append("\n");
+            sb.Append("  TermsOfServiceUri: ").Append(TermsOfServiceUri).Append("\n");
             sb.Append("  Credentials: ").Append(Credentials).Append("\n");
             sb.Append("  NonInstallable: ").Append(NonInstallable).Append("\n");
             sb.Append("  MaxInstances: ").Append(MaxInstances).Append("\n");
@@ -346,6 +361,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HelpUri.Equals(other.HelpUri)
                 ) &&
                 (
+                    this.TermsOfServiceUri == other.TermsOfServiceUri ||
+                    this.TermsOfServiceUri != null &&
+                    this.TermsOfServiceUri.Equals(other.TermsOfServiceUri)
+                ) &&
+                (
                     this.Credentials == other.Credentials ||
                     this.Credentials != null &&
                     this.Credentials.SequenceEqual(other.Credentials)
@@ -410,6 +430,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.HelpUri != null)
                     hash = hash * 59 + this.HelpUri.GetHashCode();
+                
+                if (this.TermsOfServiceUri != null)
+                    hash = hash * 59 + this.TermsOfServiceUri.GetHashCode();
                 
                 if (this.Credentials != null)
                     hash = hash * 59 + this.Credentials.GetHashCode();

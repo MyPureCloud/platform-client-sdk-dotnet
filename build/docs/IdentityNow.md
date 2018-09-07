@@ -11,8 +11,8 @@ title: IdentityNow
 | **Name** | **string** |  | [optional] |
 | **RelyingPartyIdentifier** | **string** |  | [optional] |
 | **Certificate** | **string** |  | [optional] |
-| **SsoTargetURI** | **string** |  | [optional] |
 | **IssuerURI** | **string** |  | [optional] |
+| **SsoTargetURI** | **string** |  | [optional] |
 | **Disabled** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

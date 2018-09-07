@@ -1323,7 +1323,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             
             
             
@@ -1375,7 +1375,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
@@ -1493,7 +1493,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             
             
             
@@ -1545,7 +1545,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
@@ -1663,7 +1663,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             
             
             
@@ -1715,7 +1715,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
@@ -2183,7 +2183,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             
             
             
@@ -2235,7 +2235,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
@@ -2283,7 +2283,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             
             
             
@@ -2370,7 +2370,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
@@ -2495,7 +2495,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             
             
             
@@ -2552,7 +2552,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
@@ -2976,7 +2976,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             
             
             
@@ -3033,7 +3033,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
@@ -3092,7 +3092,7 @@ namespace Example
             
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             
             
             
@@ -3151,7 +3151,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **includeImportStatus** | **bool?**| Include import status | [optional] [default to false] |
 | **includeSize** | **bool?**| Include size | [optional] [default to false] |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
@@ -3439,7 +3439,7 @@ namespace Example
             
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             
             
             
@@ -3493,7 +3493,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **includeImportStatus** | **bool?**| Import status | [optional] [default to false] |
 | **includeSize** | **bool?**| Include size | [optional] [default to false] |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
@@ -3787,7 +3787,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             
             
             
@@ -3839,7 +3839,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
@@ -4219,7 +4219,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             
             
             
@@ -4271,7 +4271,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
