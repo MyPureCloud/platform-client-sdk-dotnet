@@ -788,8 +788,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        EvaluationFormEntityListing GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null);
+        EvaluationFormEntityListing GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -801,8 +802,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        ApiResponse<EvaluationFormEntityListing> GetQualityPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        ApiResponse<EvaluationFormEntityListing> GetQualityPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
         
         /// <summary>
         /// Get the most recent published version of an evaluation form.
@@ -836,8 +838,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        EvaluationFormEntityListing GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null);
+        EvaluationFormEntityListing GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -849,8 +852,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        ApiResponse<EvaluationFormEntityListing> GetQualityPublishedformsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        ApiResponse<EvaluationFormEntityListing> GetQualityPublishedformsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
         
         /// <summary>
         /// Get the most recent published version of a survey form.
@@ -884,8 +888,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestEnabledPerContext">onlyLatestEnabledPerContext (optional, default to false)</param>
         /// <returns>SurveyFormEntityListing</returns>
-        SurveyFormEntityListing GetQualityPublishedformsSurveys (int? pageSize = null, int? pageNumber = null, string name = null);
+        SurveyFormEntityListing GetQualityPublishedformsSurveys (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null);
 
         /// <summary>
         /// Get the published survey forms.
@@ -897,8 +902,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestEnabledPerContext">onlyLatestEnabledPerContext (optional, default to false)</param>
         /// <returns>ApiResponse of SurveyFormEntityListing</returns>
-        ApiResponse<SurveyFormEntityListing> GetQualityPublishedformsSurveysWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        ApiResponse<SurveyFormEntityListing> GetQualityPublishedformsSurveysWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null);
         
         /// <summary>
         /// Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
@@ -2120,8 +2126,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -2133,8 +2140,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
         
         /// <summary>
         /// Get the most recent published version of an evaluation form.
@@ -2168,8 +2176,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -2181,8 +2190,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
         
         /// <summary>
         /// Get the most recent published version of a survey form.
@@ -2216,8 +2226,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestEnabledPerContext">onlyLatestEnabledPerContext (optional, default to false)</param>
         /// <returns>Task of SurveyFormEntityListing</returns>
-        System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityPublishedformsSurveysAsync (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityPublishedformsSurveysAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null);
 
         /// <summary>
         /// Get the published survey forms.
@@ -2229,8 +2240,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestEnabledPerContext">onlyLatestEnabledPerContext (optional, default to false)</param>
         /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityPublishedformsSurveysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityPublishedformsSurveysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null);
         
         /// <summary>
         /// Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
@@ -8325,10 +8337,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        public EvaluationFormEntityListing GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null)
+        public EvaluationFormEntityListing GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityPublishedformsWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityPublishedformsWithHttpInfo(pageSize, pageNumber, name, onlyLatestPerContext);
              return localVarResponse.Data;
         }
 
@@ -8339,8 +8352,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        public ApiResponse< EvaluationFormEntityListing > GetQualityPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public ApiResponse< EvaluationFormEntityListing > GetQualityPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         { 
 
             var localVarPath = "/api/v2/quality/publishedforms";
@@ -8379,6 +8393,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (onlyLatestPerContext != null) localVarQueryParams.Add(new Tuple<string, string>("onlyLatestPerContext", this.Configuration.ApiClient.ParameterToString(onlyLatestPerContext)));
 
             // Header params
 
@@ -8423,10 +8438,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityPublishedformsAsyncWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityPublishedformsAsyncWithHttpInfo(pageSize, pageNumber, name, onlyLatestPerContext);
              return localVarResponse.Data;
 
         }
@@ -8438,8 +8454,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         { 
 
             var localVarPath = "/api/v2/quality/publishedforms";
@@ -8478,6 +8495,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (onlyLatestPerContext != null) localVarQueryParams.Add(new Tuple<string, string>("onlyLatestPerContext", this.Configuration.ApiClient.ParameterToString(onlyLatestPerContext)));
 
             // Header params
 
@@ -8716,10 +8734,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        public EvaluationFormEntityListing GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null)
+        public EvaluationFormEntityListing GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityPublishedformsEvaluationsWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityPublishedformsEvaluationsWithHttpInfo(pageSize, pageNumber, name, onlyLatestPerContext);
              return localVarResponse.Data;
         }
 
@@ -8730,8 +8749,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        public ApiResponse< EvaluationFormEntityListing > GetQualityPublishedformsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public ApiResponse< EvaluationFormEntityListing > GetQualityPublishedformsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         { 
 
             var localVarPath = "/api/v2/quality/publishedforms/evaluations";
@@ -8770,6 +8790,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (onlyLatestPerContext != null) localVarQueryParams.Add(new Tuple<string, string>("onlyLatestPerContext", this.Configuration.ApiClient.ParameterToString(onlyLatestPerContext)));
 
             // Header params
 
@@ -8814,10 +8835,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityPublishedformsEvaluationsAsyncWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityPublishedformsEvaluationsAsyncWithHttpInfo(pageSize, pageNumber, name, onlyLatestPerContext);
              return localVarResponse.Data;
 
         }
@@ -8829,8 +8851,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         { 
 
             var localVarPath = "/api/v2/quality/publishedforms/evaluations";
@@ -8869,6 +8892,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (onlyLatestPerContext != null) localVarQueryParams.Add(new Tuple<string, string>("onlyLatestPerContext", this.Configuration.ApiClient.ParameterToString(onlyLatestPerContext)));
 
             // Header params
 
@@ -9107,10 +9131,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestEnabledPerContext">onlyLatestEnabledPerContext (optional, default to false)</param>
         /// <returns>SurveyFormEntityListing</returns>
-        public SurveyFormEntityListing GetQualityPublishedformsSurveys (int? pageSize = null, int? pageNumber = null, string name = null)
+        public SurveyFormEntityListing GetQualityPublishedformsSurveys (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null)
         {
-             ApiResponse<SurveyFormEntityListing> localVarResponse = GetQualityPublishedformsSurveysWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<SurveyFormEntityListing> localVarResponse = GetQualityPublishedformsSurveysWithHttpInfo(pageSize, pageNumber, name, onlyLatestEnabledPerContext);
              return localVarResponse.Data;
         }
 
@@ -9121,8 +9146,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestEnabledPerContext">onlyLatestEnabledPerContext (optional, default to false)</param>
         /// <returns>ApiResponse of SurveyFormEntityListing</returns>
-        public ApiResponse< SurveyFormEntityListing > GetQualityPublishedformsSurveysWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public ApiResponse< SurveyFormEntityListing > GetQualityPublishedformsSurveysWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null)
         { 
 
             var localVarPath = "/api/v2/quality/publishedforms/surveys";
@@ -9161,6 +9187,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (onlyLatestEnabledPerContext != null) localVarQueryParams.Add(new Tuple<string, string>("onlyLatestEnabledPerContext", this.Configuration.ApiClient.ParameterToString(onlyLatestEnabledPerContext)));
 
             // Header params
 
@@ -9205,10 +9232,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestEnabledPerContext">onlyLatestEnabledPerContext (optional, default to false)</param>
         /// <returns>Task of SurveyFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityPublishedformsSurveysAsync (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityPublishedformsSurveysAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null)
         {
-             ApiResponse<SurveyFormEntityListing> localVarResponse = await GetQualityPublishedformsSurveysAsyncWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<SurveyFormEntityListing> localVarResponse = await GetQualityPublishedformsSurveysAsyncWithHttpInfo(pageSize, pageNumber, name, onlyLatestEnabledPerContext);
              return localVarResponse.Data;
 
         }
@@ -9220,8 +9248,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="onlyLatestEnabledPerContext">onlyLatestEnabledPerContext (optional, default to false)</param>
         /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityPublishedformsSurveysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityPublishedformsSurveysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null)
         { 
 
             var localVarPath = "/api/v2/quality/publishedforms/surveys";
@@ -9260,6 +9289,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (onlyLatestEnabledPerContext != null) localVarQueryParams.Add(new Tuple<string, string>("onlyLatestEnabledPerContext", this.Configuration.ApiClient.ParameterToString(onlyLatestEnabledPerContext)));
 
             // Header params
 

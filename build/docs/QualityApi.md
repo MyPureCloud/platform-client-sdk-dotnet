@@ -2433,7 +2433,7 @@ namespace Example
 
 <a name="getqualitypublishedforms"></a>
 
-## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null)
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -2481,13 +2481,18 @@ namespace Example
             
             
             
+            
+            var onlyLatestPerContext = true;  // bool? | onlyLatestPerContext (optional)  (default to false)
+            
+            
+            
 
             try
             {
                 
                 // Get the published evaluation forms.
                 
-                EvaluationFormEntityListing result = apiInstance.GetQualityPublishedforms(pageSize, pageNumber, name);
+                EvaluationFormEntityListing result = apiInstance.GetQualityPublishedforms(pageSize, pageNumber, name, onlyLatestPerContext);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2507,6 +2512,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **name** | **string**| Name | [optional]  |
+| **onlyLatestPerContext** | **bool?**| onlyLatestPerContext | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -2585,7 +2591,7 @@ namespace Example
 
 <a name="getqualitypublishedformsevaluations"></a>
 
-## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null)
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
 
 
 
@@ -2633,13 +2639,18 @@ namespace Example
             
             
             
+            
+            var onlyLatestPerContext = true;  // bool? | onlyLatestPerContext (optional)  (default to false)
+            
+            
+            
 
             try
             {
                 
                 // Get the published evaluation forms.
                 
-                EvaluationFormEntityListing result = apiInstance.GetQualityPublishedformsEvaluations(pageSize, pageNumber, name);
+                EvaluationFormEntityListing result = apiInstance.GetQualityPublishedformsEvaluations(pageSize, pageNumber, name, onlyLatestPerContext);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2659,6 +2670,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **name** | **string**| Name | [optional]  |
+| **onlyLatestPerContext** | **bool?**| onlyLatestPerContext | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -2737,7 +2749,7 @@ namespace Example
 
 <a name="getqualitypublishedformssurveys"></a>
 
-## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityPublishedformsSurveys (int? pageSize = null, int? pageNumber = null, string name = null)
+## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityPublishedformsSurveys (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null)
 
 
 
@@ -2785,13 +2797,18 @@ namespace Example
             
             
             
+            
+            var onlyLatestEnabledPerContext = true;  // bool? | onlyLatestEnabledPerContext (optional)  (default to false)
+            
+            
+            
 
             try
             {
                 
                 // Get the published survey forms.
                 
-                SurveyFormEntityListing result = apiInstance.GetQualityPublishedformsSurveys(pageSize, pageNumber, name);
+                SurveyFormEntityListing result = apiInstance.GetQualityPublishedformsSurveys(pageSize, pageNumber, name, onlyLatestEnabledPerContext);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2811,6 +2828,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **name** | **string**| Name | [optional]  |
+| **onlyLatestEnabledPerContext** | **bool?**| onlyLatestEnabledPerContext | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type

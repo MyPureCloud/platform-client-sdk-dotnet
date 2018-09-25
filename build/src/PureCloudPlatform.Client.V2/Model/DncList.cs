@@ -134,16 +134,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the DncList. (required).</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="ImportStatus">The status of the import process.</param>
-        /// <param name="DncSourceType">The type of the DncList. (required).</param>
         /// <param name="LoginId">A dnc.com loginId. Required if the dncSourceType is dnc.com..</param>
         /// <param name="DncCodes">The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com..</param>
         /// <param name="LicenseId">A gryphon license number. Required if the dncSourceType is gryphon..</param>
-        public DncList(string Name = null, int? Version = null, ImportStatus ImportStatus = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null)
+        public DncList(string Name = null, int? Version = null, ImportStatus ImportStatus = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.ImportStatus = ImportStatus;
-            this.DncSourceType = DncSourceType;
             this.LoginId = LoginId;
             this.DncCodes = DncCodes;
             this.LicenseId = LicenseId;

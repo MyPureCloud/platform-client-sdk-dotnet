@@ -37,12 +37,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundCampaignrule**](OutboundApi.html#getoutboundcampaignrule) | **GET** /api/v2/outbound/campaignrules/{campaignRuleId} | Get Campaign Rule |
 | [**GetOutboundCampaignrules**](OutboundApi.html#getoutboundcampaignrules) | **GET** /api/v2/outbound/campaignrules | Query Campaign Rule list |
 | [**GetOutboundCampaigns**](OutboundApi.html#getoutboundcampaigns) | **GET** /api/v2/outbound/campaigns | Query a list of dialer campaigns. |
-| [**GetOutboundCampaignsDivisionview**](OutboundApi.html#getoutboundcampaignsdivisionview) | **GET** /api/v2/outbound/campaigns/divisionviews/{campaignId} | Get a basic Campaign information object |
 | [**GetOutboundCampaignsDivisionviews**](OutboundApi.html#getoutboundcampaignsdivisionviews) | **GET** /api/v2/outbound/campaigns/divisionviews | Query a list of basic Campaign information objects |
 | [**GetOutboundContactlist**](OutboundApi.html#getoutboundcontactlist) | **GET** /api/v2/outbound/contactlists/{contactListId} | Get a dialer contact list. |
 | [**GetOutboundContactlistContact**](OutboundApi.html#getoutboundcontactlistcontact) | **GET** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get a contact. |
 | [**GetOutboundContactlistExport**](OutboundApi.html#getoutboundcontactlistexport) | **GET** /api/v2/outbound/contactlists/{contactListId}/export | Get the URI of a contact list export. |
 | [**GetOutboundContactlistImportstatus**](OutboundApi.html#getoutboundcontactlistimportstatus) | **GET** /api/v2/outbound/contactlists/{contactListId}/importstatus | Get dialer contactList import status. |
+| [**GetOutboundContactlistTimezonemappingpreview**](OutboundApi.html#getoutboundcontactlisttimezonemappingpreview) | **GET** /api/v2/outbound/contactlists/{contactListId}/timezonemappingpreview | Preview the result of applying Automatic Time Zone Mapping to a contact list |
 | [**GetOutboundContactlistfilter**](OutboundApi.html#getoutboundcontactlistfilter) | **GET** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Get Contact list filter |
 | [**GetOutboundContactlistfilters**](OutboundApi.html#getoutboundcontactlistfilters) | **GET** /api/v2/outbound/contactlistfilters | Query Contact list filters |
 | [**GetOutboundContactlists**](OutboundApi.html#getoutboundcontactlists) | **GET** /api/v2/outbound/contactlists | Query a list of contact lists. |
@@ -2389,76 +2389,6 @@ namespace Example
 
 [**CampaignEntityListing**](CampaignEntityListing.html)
 
-<a name="getoutboundcampaignsdivisionview"></a>
-
-## [**CampaignDivisionView**](CampaignDivisionView.html) GetOutboundCampaignsDivisionview (string campaignId)
-
-
-
-Get a basic Campaign information object
-
-This returns a simplified version of a Campaign, consisting of name and division.
-
-Requires ANY permissions: 
-
-* outbound:campaign:search
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetOutboundCampaignsDivisionviewExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
-
-            var apiInstance = new OutboundApi();
-            
-            
-            var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
-
-            try
-            {
-                
-                // Get a basic Campaign information object
-                
-                CampaignDivisionView result = apiInstance.GetOutboundCampaignsDivisionview(campaignId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.GetOutboundCampaignsDivisionview: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**CampaignDivisionView**](CampaignDivisionView.html)
-
 <a name="getoutboundcampaignsdivisionviews"></a>
 
 ## [**CampaignDivisionViewListing**](CampaignDivisionViewListing.html) GetOutboundCampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
@@ -2869,6 +2799,76 @@ namespace Example
 ### Return type
 
 [**ImportStatus**](ImportStatus.html)
+
+<a name="getoutboundcontactlisttimezonemappingpreview"></a>
+
+## [**TimeZoneMappingPreview**](TimeZoneMappingPreview.html) GetOutboundContactlistTimezonemappingpreview (string contactListId)
+
+
+
+Preview the result of applying Automatic Time Zone Mapping to a contact list
+
+
+
+Requires ANY permissions: 
+
+* outbound:contactList:view
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundContactlistTimezonemappingpreviewExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new OutboundApi();
+            
+            
+            var contactListId = contactListId_example;  // string | ContactList ID
+            
+            
+            
+
+            try
+            {
+                
+                // Preview the result of applying Automatic Time Zone Mapping to a contact list
+                
+                TimeZoneMappingPreview result = apiInstance.GetOutboundContactlistTimezonemappingpreview(contactListId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundContactlistTimezonemappingpreview: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| ContactList ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TimeZoneMappingPreview**](TimeZoneMappingPreview.html)
 
 <a name="getoutboundcontactlistfilter"></a>
 

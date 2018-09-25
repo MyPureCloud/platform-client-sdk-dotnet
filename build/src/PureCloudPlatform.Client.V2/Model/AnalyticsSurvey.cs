@@ -75,6 +75,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSurvey" /> class.
@@ -82,27 +87,29 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurveyId">Unique identifier for the survey.</param>
         /// <param name="SurveyFormId">Unique identifier for the survey form.</param>
         /// <param name="SurveyFormContextId">Unique identifier for the survey form, regardless of version.</param>
-        /// <param name="ParticipantId">Unique identifier of participant.</param>
-        /// <param name="ExternalContactId">External contact id.</param>
-        /// <param name="CustomerAddress">Customer address.</param>
         /// <param name="UserId">A unique identifier of the PureCloud user.</param>
         /// <param name="QueueId">Unique identifier for the queue the conversation was on.</param>
         /// <param name="Status">Survey status.</param>
-        /// <param name="CreatedDate">Creation date of survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="GetoSurveyTotalScore">The total score for the survey.</param>
-        public AnalyticsSurvey(string SurveyId = null, string SurveyFormId = null, string SurveyFormContextId = null, string ParticipantId = null, string ExternalContactId = null, string CustomerAddress = null, string UserId = null, string QueueId = null, string Status = null, DateTime? CreatedDate = null, long? GetoSurveyTotalScore = null)
+        /// <param name="GetoSurveyTotalScore">Creation date of survey.</param>
+        /// <param name="SurveyPromoterScore">NPS score of the survey.</param>
+        /// <param name="SurveyCompletedTime">Completion time of the survey, in ms since the epoch, 1970-01-01T00:00:00.000Z.</param>
+        /// <param name="MediaTypes">Media types associated with the conversation.</param>
+        /// <param name="LanguageIds">Language IDs associated with the conversation.</param>
+        /// <param name="SkillIds">Skill IDs associated with the conversation.</param>
+        public AnalyticsSurvey(string SurveyId = null, string SurveyFormId = null, string SurveyFormContextId = null, string UserId = null, string QueueId = null, string Status = null, long? GetoSurveyTotalScore = null, int? SurveyPromoterScore = null, long? SurveyCompletedTime = null, List<string> MediaTypes = null, List<string> LanguageIds = null, List<string> SkillIds = null)
         {
             this.SurveyId = SurveyId;
             this.SurveyFormId = SurveyFormId;
             this.SurveyFormContextId = SurveyFormContextId;
-            this.ParticipantId = ParticipantId;
-            this.ExternalContactId = ExternalContactId;
-            this.CustomerAddress = CustomerAddress;
             this.UserId = UserId;
             this.QueueId = QueueId;
             this.Status = Status;
-            this.CreatedDate = CreatedDate;
             this.GetoSurveyTotalScore = GetoSurveyTotalScore;
+            this.SurveyPromoterScore = SurveyPromoterScore;
+            this.SurveyCompletedTime = SurveyCompletedTime;
+            this.MediaTypes = MediaTypes;
+            this.LanguageIds = LanguageIds;
+            this.SkillIds = SkillIds;
             
         }
         
@@ -136,33 +143,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Unique identifier of participant
-        /// </summary>
-        /// <value>Unique identifier of participant</value>
-        [DataMember(Name="participantId", EmitDefaultValue=false)]
-        public string ParticipantId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// External contact id
-        /// </summary>
-        /// <value>External contact id</value>
-        [DataMember(Name="externalContactId", EmitDefaultValue=false)]
-        public string ExternalContactId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Customer address
-        /// </summary>
-        /// <value>Customer address</value>
-        [DataMember(Name="customerAddress", EmitDefaultValue=false)]
-        public string CustomerAddress { get; set; }
-        
-        
-        
-        /// <summary>
         /// A unique identifier of the PureCloud user
         /// </summary>
         /// <value>A unique identifier of the PureCloud user</value>
@@ -190,20 +170,56 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Creation date of survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Creation date of survey
         /// </summary>
-        /// <value>Creation date of survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        [DataMember(Name="createdDate", EmitDefaultValue=false)]
-        public DateTime? CreatedDate { get; set; }
+        /// <value>Creation date of survey</value>
+        [DataMember(Name="getoSurveyTotalScore", EmitDefaultValue=false)]
+        public long? GetoSurveyTotalScore { get; set; }
         
         
         
         /// <summary>
-        /// The total score for the survey
+        /// NPS score of the survey
         /// </summary>
-        /// <value>The total score for the survey</value>
-        [DataMember(Name="getoSurveyTotalScore", EmitDefaultValue=false)]
-        public long? GetoSurveyTotalScore { get; set; }
+        /// <value>NPS score of the survey</value>
+        [DataMember(Name="surveyPromoterScore", EmitDefaultValue=false)]
+        public int? SurveyPromoterScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Completion time of the survey, in ms since the epoch, 1970-01-01T00:00:00.000Z
+        /// </summary>
+        /// <value>Completion time of the survey, in ms since the epoch, 1970-01-01T00:00:00.000Z</value>
+        [DataMember(Name="surveyCompletedTime", EmitDefaultValue=false)]
+        public long? SurveyCompletedTime { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Media types associated with the conversation
+        /// </summary>
+        /// <value>Media types associated with the conversation</value>
+        [DataMember(Name="mediaTypes", EmitDefaultValue=false)]
+        public List<string> MediaTypes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Language IDs associated with the conversation
+        /// </summary>
+        /// <value>Language IDs associated with the conversation</value>
+        [DataMember(Name="languageIds", EmitDefaultValue=false)]
+        public List<string> LanguageIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Skill IDs associated with the conversation
+        /// </summary>
+        /// <value>Skill IDs associated with the conversation</value>
+        [DataMember(Name="skillIds", EmitDefaultValue=false)]
+        public List<string> SkillIds { get; set; }
         
         
         /// <summary>
@@ -218,14 +234,15 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SurveyId: ").Append(SurveyId).Append("\n");
             sb.Append("  SurveyFormId: ").Append(SurveyFormId).Append("\n");
             sb.Append("  SurveyFormContextId: ").Append(SurveyFormContextId).Append("\n");
-            sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
-            sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
-            sb.Append("  CustomerAddress: ").Append(CustomerAddress).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  GetoSurveyTotalScore: ").Append(GetoSurveyTotalScore).Append("\n");
+            sb.Append("  SurveyPromoterScore: ").Append(SurveyPromoterScore).Append("\n");
+            sb.Append("  SurveyCompletedTime: ").Append(SurveyCompletedTime).Append("\n");
+            sb.Append("  MediaTypes: ").Append(MediaTypes).Append("\n");
+            sb.Append("  LanguageIds: ").Append(LanguageIds).Append("\n");
+            sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -278,21 +295,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SurveyFormContextId.Equals(other.SurveyFormContextId)
                 ) &&
                 (
-                    this.ParticipantId == other.ParticipantId ||
-                    this.ParticipantId != null &&
-                    this.ParticipantId.Equals(other.ParticipantId)
-                ) &&
-                (
-                    this.ExternalContactId == other.ExternalContactId ||
-                    this.ExternalContactId != null &&
-                    this.ExternalContactId.Equals(other.ExternalContactId)
-                ) &&
-                (
-                    this.CustomerAddress == other.CustomerAddress ||
-                    this.CustomerAddress != null &&
-                    this.CustomerAddress.Equals(other.CustomerAddress)
-                ) &&
-                (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
@@ -308,14 +310,34 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Status.Equals(other.Status)
                 ) &&
                 (
-                    this.CreatedDate == other.CreatedDate ||
-                    this.CreatedDate != null &&
-                    this.CreatedDate.Equals(other.CreatedDate)
-                ) &&
-                (
                     this.GetoSurveyTotalScore == other.GetoSurveyTotalScore ||
                     this.GetoSurveyTotalScore != null &&
                     this.GetoSurveyTotalScore.Equals(other.GetoSurveyTotalScore)
+                ) &&
+                (
+                    this.SurveyPromoterScore == other.SurveyPromoterScore ||
+                    this.SurveyPromoterScore != null &&
+                    this.SurveyPromoterScore.Equals(other.SurveyPromoterScore)
+                ) &&
+                (
+                    this.SurveyCompletedTime == other.SurveyCompletedTime ||
+                    this.SurveyCompletedTime != null &&
+                    this.SurveyCompletedTime.Equals(other.SurveyCompletedTime)
+                ) &&
+                (
+                    this.MediaTypes == other.MediaTypes ||
+                    this.MediaTypes != null &&
+                    this.MediaTypes.SequenceEqual(other.MediaTypes)
+                ) &&
+                (
+                    this.LanguageIds == other.LanguageIds ||
+                    this.LanguageIds != null &&
+                    this.LanguageIds.SequenceEqual(other.LanguageIds)
+                ) &&
+                (
+                    this.SkillIds == other.SkillIds ||
+                    this.SkillIds != null &&
+                    this.SkillIds.SequenceEqual(other.SkillIds)
                 );
         }
 
@@ -340,15 +362,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SurveyFormContextId != null)
                     hash = hash * 59 + this.SurveyFormContextId.GetHashCode();
                 
-                if (this.ParticipantId != null)
-                    hash = hash * 59 + this.ParticipantId.GetHashCode();
-                
-                if (this.ExternalContactId != null)
-                    hash = hash * 59 + this.ExternalContactId.GetHashCode();
-                
-                if (this.CustomerAddress != null)
-                    hash = hash * 59 + this.CustomerAddress.GetHashCode();
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
                 
@@ -358,11 +371,23 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
                 
-                if (this.CreatedDate != null)
-                    hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
                 if (this.GetoSurveyTotalScore != null)
                     hash = hash * 59 + this.GetoSurveyTotalScore.GetHashCode();
+                
+                if (this.SurveyPromoterScore != null)
+                    hash = hash * 59 + this.SurveyPromoterScore.GetHashCode();
+                
+                if (this.SurveyCompletedTime != null)
+                    hash = hash * 59 + this.SurveyCompletedTime.GetHashCode();
+                
+                if (this.MediaTypes != null)
+                    hash = hash * 59 + this.MediaTypes.GetHashCode();
+                
+                if (this.LanguageIds != null)
+                    hash = hash * 59 + this.LanguageIds.GetHashCode();
+                
+                if (this.SkillIds != null)
+                    hash = hash * 59 + this.SkillIds.GetHashCode();
                 
                 return hash;
             }

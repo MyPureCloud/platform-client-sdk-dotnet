@@ -188,6 +188,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets MessageTypes
         /// </summary>
@@ -300,6 +306,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewFilter" /> class.
@@ -313,6 +323,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Directions">The directions are used to filter the view.</param>
         /// <param name="WrapUpCodes">The wrap up codes are used to filter the view.</param>
         /// <param name="DnisList">The dnis list is used to filter the view.</param>
+        /// <param name="FilterQueuesByUserIds">The user ids are used to fetch associated queues for the view.</param>
+        /// <param name="FilterUsersByQueueIds">The queue ids are used to fetch associated users for the view.</param>
         /// <param name="UserIds">The user ids are used to filter the view.</param>
         /// <param name="AddressTos">The address To values are used to filter the view.</param>
         /// <param name="AddressFroms">The address from values are used to filter the view.</param>
@@ -333,7 +345,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurveyFormIds">The survey form ids used to filter the view.</param>
         /// <param name="SurveyTotalScore">The survey total score used to filter the view.</param>
         /// <param name="SurveyNpsScore">The survey NPS score used to filter the view.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null)
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -344,6 +356,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Directions = Directions;
             this.WrapUpCodes = WrapUpCodes;
             this.DnisList = DnisList;
+            this.FilterQueuesByUserIds = FilterQueuesByUserIds;
+            this.FilterUsersByQueueIds = FilterUsersByQueueIds;
             this.UserIds = UserIds;
             this.AddressTos = AddressTos;
             this.AddressFroms = AddressFroms;
@@ -447,6 +461,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The dnis list is used to filter the view</value>
         [DataMember(Name="dnisList", EmitDefaultValue=false)]
         public List<string> DnisList { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The user ids are used to fetch associated queues for the view
+        /// </summary>
+        /// <value>The user ids are used to fetch associated queues for the view</value>
+        [DataMember(Name="filterQueuesByUserIds", EmitDefaultValue=false)]
+        public List<string> FilterQueuesByUserIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The queue ids are used to fetch associated users for the view
+        /// </summary>
+        /// <value>The queue ids are used to fetch associated users for the view</value>
+        [DataMember(Name="filterUsersByQueueIds", EmitDefaultValue=false)]
+        public List<string> FilterUsersByQueueIds { get; set; }
         
         
         
@@ -647,6 +679,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Directions: ").Append(Directions).Append("\n");
             sb.Append("  WrapUpCodes: ").Append(WrapUpCodes).Append("\n");
             sb.Append("  DnisList: ").Append(DnisList).Append("\n");
+            sb.Append("  FilterQueuesByUserIds: ").Append(FilterQueuesByUserIds).Append("\n");
+            sb.Append("  FilterUsersByQueueIds: ").Append(FilterUsersByQueueIds).Append("\n");
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
             sb.Append("  AddressTos: ").Append(AddressTos).Append("\n");
             sb.Append("  AddressFroms: ").Append(AddressFroms).Append("\n");
@@ -747,6 +781,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DnisList == other.DnisList ||
                     this.DnisList != null &&
                     this.DnisList.SequenceEqual(other.DnisList)
+                ) &&
+                (
+                    this.FilterQueuesByUserIds == other.FilterQueuesByUserIds ||
+                    this.FilterQueuesByUserIds != null &&
+                    this.FilterQueuesByUserIds.SequenceEqual(other.FilterQueuesByUserIds)
+                ) &&
+                (
+                    this.FilterUsersByQueueIds == other.FilterUsersByQueueIds ||
+                    this.FilterUsersByQueueIds != null &&
+                    this.FilterUsersByQueueIds.SequenceEqual(other.FilterUsersByQueueIds)
                 ) &&
                 (
                     this.UserIds == other.UserIds ||
@@ -888,6 +932,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DnisList != null)
                     hash = hash * 59 + this.DnisList.GetHashCode();
+                
+                if (this.FilterQueuesByUserIds != null)
+                    hash = hash * 59 + this.FilterQueuesByUserIds.GetHashCode();
+                
+                if (this.FilterUsersByQueueIds != null)
+                    hash = hash * 59 + this.FilterUsersByQueueIds.GetHashCode();
                 
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();

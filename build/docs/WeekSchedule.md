@@ -15,7 +15,7 @@ title: WeekSchedule
 | **ShortTermForecast** | [**ShortTermForecastReference**](ShortTermForecastReference.html) | Short term forecast associated with this schedule | [optional] |
 | **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for this work plan | [optional] |
 | **UserSchedules** | [**Dictionary&lt;string, UserSchedule&gt;**](UserSchedule.html) | User schedules in the week | [optional] |
-| **HeadcountForecast** | [**HeadcountForecastResponse**](HeadcountForecastResponse.html) | Headcount information for the week schedule | [optional] |
+| **HeadcountForecast** | [**HeadcountForecast**](HeadcountForecast.html) | Headcount information for the week schedule | [optional] |
 | **AgentSchedulesVersion** | **int?** | Version of agent schedules in the week schedule | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

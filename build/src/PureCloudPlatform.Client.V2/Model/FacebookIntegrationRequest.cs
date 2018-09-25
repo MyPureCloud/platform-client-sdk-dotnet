@@ -71,9 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="FacebookIntegrationRequest" /> class.
         /// </summary>
         /// <param name="Name">The name of the Facebook Integration (required).</param>
-        /// <param name="PageAccessToken">The Page Access Token of a facebook page.</param>
-        /// <param name="UserAccessToken">The User Access Token of the facebook user logged into the facebook app.</param>
-        /// <param name="PageId">The page Id of a facebook page.</param>
+        /// <param name="PageAccessToken">The long-lived Page Access Token of a facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When a pageAccessToken is provided, pageId and userAccessToken are not required..</param>
+        /// <param name="UserAccessToken">The short-lived User Access Token of the facebook user logged into the facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When userAccessToken is provided, pageId is mandatory.  When userAccessToken/pageId combination is provided, pageAccessToken is not required..</param>
+        /// <param name="PageId">The page Id of a facebook page. The pageId is required when userAccessToken is provided..</param>
         /// <param name="AppId">The app Id of a facebook app (required).</param>
         /// <param name="AppSecret">The app Secret of a facebook app.</param>
         public FacebookIntegrationRequest(string Name = null, string PageAccessToken = null, string UserAccessToken = null, string PageId = null, string AppId = null, string AppSecret = null)
@@ -108,27 +108,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The Page Access Token of a facebook page
+        /// The long-lived Page Access Token of a facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When a pageAccessToken is provided, pageId and userAccessToken are not required.
         /// </summary>
-        /// <value>The Page Access Token of a facebook page</value>
+        /// <value>The long-lived Page Access Token of a facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When a pageAccessToken is provided, pageId and userAccessToken are not required.</value>
         [DataMember(Name="pageAccessToken", EmitDefaultValue=false)]
         public string PageAccessToken { get; set; }
         
         
         
         /// <summary>
-        /// The User Access Token of the facebook user logged into the facebook app
+        /// The short-lived User Access Token of the facebook user logged into the facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When userAccessToken is provided, pageId is mandatory.  When userAccessToken/pageId combination is provided, pageAccessToken is not required.
         /// </summary>
-        /// <value>The User Access Token of the facebook user logged into the facebook app</value>
+        /// <value>The short-lived User Access Token of the facebook user logged into the facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When userAccessToken is provided, pageId is mandatory.  When userAccessToken/pageId combination is provided, pageAccessToken is not required.</value>
         [DataMember(Name="userAccessToken", EmitDefaultValue=false)]
         public string UserAccessToken { get; set; }
         
         
         
         /// <summary>
-        /// The page Id of a facebook page
+        /// The page Id of a facebook page. The pageId is required when userAccessToken is provided.
         /// </summary>
-        /// <value>The page Id of a facebook page</value>
+        /// <value>The page Id of a facebook page. The pageId is required when userAccessToken is provided.</value>
         [DataMember(Name="pageId", EmitDefaultValue=false)]
         public string PageId { get; set; }
         

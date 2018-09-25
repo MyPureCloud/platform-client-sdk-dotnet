@@ -13,6 +13,7 @@ title: CreateUser
 | **Addresses** | [**List&lt;Contact&gt;**](Contact.html) | Email addresses and phone numbers for this user | [optional] |
 | **Title** | **string** |  | [optional] |
 | **Password** | **string** | User&#39;s password | |
+| **DivisionId** | **string** | The division to which this user will belong | [optional] |
 {: class="table table-striped"}
 
 

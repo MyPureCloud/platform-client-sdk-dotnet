@@ -38,10 +38,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
-        /// The condition to notify agents about schedule updates. Applicable to only published schedule
+        /// For a published schedule, this determines whether a notification will be shown to agents in the default PureCloud user interface.  The CPC notification will always be sent and the value specified here affects what data is returned in the 'updates' property.  In the default PureCloud UI, \"None\" means that agents will not be notified, \"ShiftTimesOnly\" means agents will only be notified for changes to shift start and end times,  and \"All\" means that agents will be notified for any change to a shift or activity (except for full day off activities).  When building a custom client, use this property to specify the level of detail you need. Defaults to \"ShiftTimesOnly\".
         /// </summary>
-        /// <value>The condition to notify agents about schedule updates. Applicable to only published schedule</value>
+        /// <value>For a published schedule, this determines whether a notification will be shown to agents in the default PureCloud user interface.  The CPC notification will always be sent and the value specified here affects what data is returned in the 'updates' property.  In the default PureCloud UI, \"None\" means that agents will not be notified, \"ShiftTimesOnly\" means agents will only be notified for changes to shift start and end times,  and \"All\" means that agents will be notified for any change to a shift or activity (except for full day off activities).  When building a custom client, use this property to specify the level of detail you need. Defaults to \"ShiftTimesOnly\".</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum AgentUpdateFilterEnum
         {
@@ -88,10 +94,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
         /// <summary>
-        /// The condition to notify agents about schedule updates. Applicable to only published schedule
+        /// For a published schedule, this determines whether a notification will be shown to agents in the default PureCloud user interface.  The CPC notification will always be sent and the value specified here affects what data is returned in the 'updates' property.  In the default PureCloud UI, \"None\" means that agents will not be notified, \"ShiftTimesOnly\" means agents will only be notified for changes to shift start and end times,  and \"All\" means that agents will be notified for any change to a shift or activity (except for full day off activities).  When building a custom client, use this property to specify the level of detail you need. Defaults to \"ShiftTimesOnly\".
         /// </summary>
-        /// <value>The condition to notify agents about schedule updates. Applicable to only published schedule</value>
+        /// <value>For a published schedule, this determines whether a notification will be shown to agents in the default PureCloud user interface.  The CPC notification will always be sent and the value specified here affects what data is returned in the 'updates' property.  In the default PureCloud UI, \"None\" means that agents will not be notified, \"ShiftTimesOnly\" means agents will only be notified for changes to shift start and end times,  and \"All\" means that agents will be notified for any change to a shift or activity (except for full day off activities).  When building a custom client, use this property to specify the level of detail you need. Defaults to \"ShiftTimesOnly\".</value>
         [DataMember(Name="agentUpdateFilter", EmitDefaultValue=false)]
         public AgentUpdateFilterEnum? AgentUpdateFilter { get; set; }
         
@@ -112,8 +122,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PartialUploadIds">IDs of partial uploads to include in this imported schedule. It is applicable only for large schedules where activity count in schedule is greater than 17500.</param>
         /// <param name="Metadata">Version metadata for this work plan (required).</param>
         /// <param name="AgentSchedulesVersion">Version of agent schedules in the week schedule (required).</param>
-        /// <param name="AgentUpdateFilter">The condition to notify agents about schedule updates. Applicable to only published schedule.</param>
-        public UpdateWeekScheduleRequest(string Description = null, bool? Published = null, Dictionary<string, UserSchedule> UserSchedules = null, List<string> PartialUploadIds = null, WfmVersionedEntityMetadata Metadata = null, int? AgentSchedulesVersion = null, AgentUpdateFilterEnum? AgentUpdateFilter = null)
+        /// <param name="ShortTermForecast">Reference to optionally point the schedule at a new short term forecast.</param>
+        /// <param name="HeadcountForecast">The headcount forecast associated with the schedule.  If not null, existing values will be irrecoverably replaced.</param>
+        /// <param name="AgentUpdateFilter">For a published schedule, this determines whether a notification will be shown to agents in the default PureCloud user interface.  The CPC notification will always be sent and the value specified here affects what data is returned in the &#39;updates&#39; property.  In the default PureCloud UI, \&quot;None\&quot; means that agents will not be notified, \&quot;ShiftTimesOnly\&quot; means agents will only be notified for changes to shift start and end times,  and \&quot;All\&quot; means that agents will be notified for any change to a shift or activity (except for full day off activities).  When building a custom client, use this property to specify the level of detail you need. Defaults to \&quot;ShiftTimesOnly\&quot;..</param>
+        public UpdateWeekScheduleRequest(string Description = null, bool? Published = null, Dictionary<string, UserSchedule> UserSchedules = null, List<string> PartialUploadIds = null, WfmVersionedEntityMetadata Metadata = null, int? AgentSchedulesVersion = null, ShortTermForecastReference ShortTermForecast = null, HeadcountForecast HeadcountForecast = null, AgentUpdateFilterEnum? AgentUpdateFilter = null)
         {
             this.Description = Description;
             this.Published = Published;
@@ -121,6 +133,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PartialUploadIds = PartialUploadIds;
             this.Metadata = Metadata;
             this.AgentSchedulesVersion = AgentSchedulesVersion;
+            this.ShortTermForecast = ShortTermForecast;
+            this.HeadcountForecast = HeadcountForecast;
             this.AgentUpdateFilter = AgentUpdateFilter;
             
         }
@@ -181,6 +195,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Reference to optionally point the schedule at a new short term forecast
+        /// </summary>
+        /// <value>Reference to optionally point the schedule at a new short term forecast</value>
+        [DataMember(Name="shortTermForecast", EmitDefaultValue=false)]
+        public ShortTermForecastReference ShortTermForecast { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The headcount forecast associated with the schedule.  If not null, existing values will be irrecoverably replaced
+        /// </summary>
+        /// <value>The headcount forecast associated with the schedule.  If not null, existing values will be irrecoverably replaced</value>
+        [DataMember(Name="headcountForecast", EmitDefaultValue=false)]
+        public HeadcountForecast HeadcountForecast { get; set; }
+        
+        
+        
         
         /// <summary>
         /// Returns the string presentation of the object
@@ -197,6 +229,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PartialUploadIds: ").Append(PartialUploadIds).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  AgentSchedulesVersion: ").Append(AgentSchedulesVersion).Append("\n");
+            sb.Append("  ShortTermForecast: ").Append(ShortTermForecast).Append("\n");
+            sb.Append("  HeadcountForecast: ").Append(HeadcountForecast).Append("\n");
             sb.Append("  AgentUpdateFilter: ").Append(AgentUpdateFilter).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -265,6 +299,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentSchedulesVersion.Equals(other.AgentSchedulesVersion)
                 ) &&
                 (
+                    this.ShortTermForecast == other.ShortTermForecast ||
+                    this.ShortTermForecast != null &&
+                    this.ShortTermForecast.Equals(other.ShortTermForecast)
+                ) &&
+                (
+                    this.HeadcountForecast == other.HeadcountForecast ||
+                    this.HeadcountForecast != null &&
+                    this.HeadcountForecast.Equals(other.HeadcountForecast)
+                ) &&
+                (
                     this.AgentUpdateFilter == other.AgentUpdateFilter ||
                     this.AgentUpdateFilter != null &&
                     this.AgentUpdateFilter.Equals(other.AgentUpdateFilter)
@@ -300,6 +344,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AgentSchedulesVersion != null)
                     hash = hash * 59 + this.AgentSchedulesVersion.GetHashCode();
+                
+                if (this.ShortTermForecast != null)
+                    hash = hash * 59 + this.ShortTermForecast.GetHashCode();
+                
+                if (this.HeadcountForecast != null)
+                    hash = hash * 59 + this.HeadcountForecast.GetHashCode();
                 
                 if (this.AgentUpdateFilter != null)
                     hash = hash * 59 + this.AgentUpdateFilter.GetHashCode();

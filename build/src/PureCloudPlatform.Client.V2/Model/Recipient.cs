@@ -41,6 +41,63 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The messenger type for this recipient
+        /// </summary>
+        /// <value>The messenger type for this recipient</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MessengerTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sms for "sms"
+            /// </summary>
+            [EnumMember(Value = "sms")]
+            Sms,
+            
+            /// <summary>
+            /// Enum Facebook for "facebook"
+            /// </summary>
+            [EnumMember(Value = "facebook")]
+            Facebook,
+            
+            /// <summary>
+            /// Enum Twitter for "twitter"
+            /// </summary>
+            [EnumMember(Value = "twitter")]
+            Twitter,
+            
+            /// <summary>
+            /// Enum Line for "line"
+            /// </summary>
+            [EnumMember(Value = "line")]
+            Line,
+            
+            /// <summary>
+            /// Enum Whatsapp for "whatsapp"
+            /// </summary>
+            [EnumMember(Value = "whatsapp")]
+            Whatsapp,
+            
+            /// <summary>
+            /// Enum Telegram for "telegram"
+            /// </summary>
+            [EnumMember(Value = "telegram")]
+            Telegram,
+            
+            /// <summary>
+            /// Enum Kakao for "kakao"
+            /// </summary>
+            [EnumMember(Value = "kakao")]
+            Kakao
+        }
         
         
         
@@ -56,6 +113,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The messenger type for this recipient
+        /// </summary>
+        /// <value>The messenger type for this recipient</value>
+        [DataMember(Name="messengerType", EmitDefaultValue=false)]
+        public MessengerTypeEnum? MessengerType { get; set; }
         
         
         
@@ -70,7 +140,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">Date this recipient was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreatedBy">User that created this recipient.</param>
         /// <param name="ModifiedBy">User that modified this recipient.</param>
-        public Recipient(string Name = null, Flow Flow = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null)
+        /// <param name="MessengerType">The messenger type for this recipient.</param>
+        public Recipient(string Name = null, Flow Flow = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, MessengerTypeEnum? MessengerType = null)
         {
             this.Name = Name;
             this.Flow = Flow;
@@ -78,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateModified = DateModified;
             this.CreatedBy = CreatedBy;
             this.ModifiedBy = ModifiedBy;
+            this.MessengerType = MessengerType;
             
         }
         
@@ -145,6 +217,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -169,6 +243,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            sb.Append("  MessengerType: ").Append(MessengerType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -242,6 +317,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedBy.Equals(other.ModifiedBy)
                 ) &&
                 (
+                    this.MessengerType == other.MessengerType ||
+                    this.MessengerType != null &&
+                    this.MessengerType.Equals(other.MessengerType)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -280,6 +360,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
+                
+                if (this.MessengerType != null)
+                    hash = hash * 59 + this.MessengerType.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

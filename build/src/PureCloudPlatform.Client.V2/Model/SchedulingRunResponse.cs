@@ -23,6 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Status of the schedule run
         /// </summary>
@@ -105,6 +111,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Status of the schedule run
         /// </summary>
@@ -129,23 +151,39 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulingRunResponse" /> class.
         /// </summary>
         /// <param name="RunId">ID of the schedule run.</param>
+        /// <param name="SchedulerRunId">The runId from scheduler service.  Useful for debugging schedule errors.</param>
+        /// <param name="IntradayRescheduling">Whether this is the result of a rescheduling request.</param>
         /// <param name="State">Status of the schedule run.</param>
         /// <param name="PercentComplete">Completion percentage of the schedule run.</param>
         /// <param name="TargetWeek">The start date of the week for which the scheduling is done in yyyy-MM-dd format.</param>
-        /// <param name="ScheduleId">ID of the schedule.</param>
-        /// <param name="ScheduleDescription">Description of the schedule run.</param>
+        /// <param name="ScheduleId">ID of the schedule. Does not apply to reschedule, see reschedulingOptions.existingScheduleId.</param>
+        /// <param name="ScheduleDescription">Description of the schedule.</param>
         /// <param name="SchedulingStartTime">Start time of the schedule run. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="SchedulingStartedBy">User that started the schedule run.</param>
         /// <param name="SchedulingCanceledBy">User that canceled the schedule run.</param>
         /// <param name="SchedulingCompletedTime">Time at which the scheduling run was completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public SchedulingRunResponse(string RunId = null, StateEnum? State = null, double? PercentComplete = null, string TargetWeek = null, string ScheduleId = null, string ScheduleDescription = null, DateTime? SchedulingStartTime = null, UserReference SchedulingStartedBy = null, UserReference SchedulingCanceledBy = null, DateTime? SchedulingCompletedTime = null)
+        /// <param name="ReschedulingOptions">The selected options for the reschedule request. Will always be null if intradayRescheduling is false.</param>
+        /// <param name="ReschedulingResultExpiration">When the rescheduling result data will expire. Results are kept temporarily as they should be applied as soon as possible after the run finishes.  Will always be null if intradayRescheduling is false. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Applied">Whether the rescheduling run has been marked applied.</param>
+        /// <param name="UnscheduledAgents">Agents that were not scheduled in the rescheduling operation. Will always be null if intradayRescheduling is false.</param>
+        public SchedulingRunResponse(string RunId = null, string SchedulerRunId = null, bool? IntradayRescheduling = null, StateEnum? State = null, double? PercentComplete = null, string TargetWeek = null, string ScheduleId = null, string ScheduleDescription = null, DateTime? SchedulingStartTime = null, UserReference SchedulingStartedBy = null, UserReference SchedulingCanceledBy = null, DateTime? SchedulingCompletedTime = null, ReschedulingOptionsResponse ReschedulingOptions = null, DateTime? ReschedulingResultExpiration = null, bool? Applied = null, List<UnscheduledAgentWarning> UnscheduledAgents = null)
         {
             this.RunId = RunId;
+            this.SchedulerRunId = SchedulerRunId;
+            this.IntradayRescheduling = IntradayRescheduling;
             this.State = State;
             this.PercentComplete = PercentComplete;
             this.TargetWeek = TargetWeek;
@@ -155,6 +193,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SchedulingStartedBy = SchedulingStartedBy;
             this.SchedulingCanceledBy = SchedulingCanceledBy;
             this.SchedulingCompletedTime = SchedulingCompletedTime;
+            this.ReschedulingOptions = ReschedulingOptions;
+            this.ReschedulingResultExpiration = ReschedulingResultExpiration;
+            this.Applied = Applied;
+            this.UnscheduledAgents = UnscheduledAgents;
             
         }
         
@@ -166,6 +208,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>ID of the schedule run</value>
         [DataMember(Name="runId", EmitDefaultValue=false)]
         public string RunId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The runId from scheduler service.  Useful for debugging schedule errors
+        /// </summary>
+        /// <value>The runId from scheduler service.  Useful for debugging schedule errors</value>
+        [DataMember(Name="schedulerRunId", EmitDefaultValue=false)]
+        public string SchedulerRunId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether this is the result of a rescheduling request
+        /// </summary>
+        /// <value>Whether this is the result of a rescheduling request</value>
+        [DataMember(Name="intradayRescheduling", EmitDefaultValue=false)]
+        public bool? IntradayRescheduling { get; set; }
         
         
         
@@ -190,18 +250,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// ID of the schedule
+        /// ID of the schedule. Does not apply to reschedule, see reschedulingOptions.existingScheduleId
         /// </summary>
-        /// <value>ID of the schedule</value>
+        /// <value>ID of the schedule. Does not apply to reschedule, see reschedulingOptions.existingScheduleId</value>
         [DataMember(Name="scheduleId", EmitDefaultValue=false)]
         public string ScheduleId { get; set; }
         
         
         
         /// <summary>
-        /// Description of the schedule run
+        /// Description of the schedule
         /// </summary>
-        /// <value>Description of the schedule run</value>
+        /// <value>Description of the schedule</value>
         [DataMember(Name="scheduleDescription", EmitDefaultValue=false)]
         public string ScheduleDescription { get; set; }
         
@@ -242,6 +302,42 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? SchedulingCompletedTime { get; set; }
         
         
+        
+        /// <summary>
+        /// The selected options for the reschedule request. Will always be null if intradayRescheduling is false
+        /// </summary>
+        /// <value>The selected options for the reschedule request. Will always be null if intradayRescheduling is false</value>
+        [DataMember(Name="reschedulingOptions", EmitDefaultValue=false)]
+        public ReschedulingOptionsResponse ReschedulingOptions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// When the rescheduling result data will expire. Results are kept temporarily as they should be applied as soon as possible after the run finishes.  Will always be null if intradayRescheduling is false. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>When the rescheduling result data will expire. Results are kept temporarily as they should be applied as soon as possible after the run finishes.  Will always be null if intradayRescheduling is false. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="reschedulingResultExpiration", EmitDefaultValue=false)]
+        public DateTime? ReschedulingResultExpiration { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether the rescheduling run has been marked applied
+        /// </summary>
+        /// <value>Whether the rescheduling run has been marked applied</value>
+        [DataMember(Name="applied", EmitDefaultValue=false)]
+        public bool? Applied { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Agents that were not scheduled in the rescheduling operation. Will always be null if intradayRescheduling is false
+        /// </summary>
+        /// <value>Agents that were not scheduled in the rescheduling operation. Will always be null if intradayRescheduling is false</value>
+        [DataMember(Name="unscheduledAgents", EmitDefaultValue=false)]
+        public List<UnscheduledAgentWarning> UnscheduledAgents { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -252,6 +348,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class SchedulingRunResponse {\n");
             
             sb.Append("  RunId: ").Append(RunId).Append("\n");
+            sb.Append("  SchedulerRunId: ").Append(SchedulerRunId).Append("\n");
+            sb.Append("  IntradayRescheduling: ").Append(IntradayRescheduling).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  PercentComplete: ").Append(PercentComplete).Append("\n");
             sb.Append("  TargetWeek: ").Append(TargetWeek).Append("\n");
@@ -261,6 +359,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SchedulingStartedBy: ").Append(SchedulingStartedBy).Append("\n");
             sb.Append("  SchedulingCanceledBy: ").Append(SchedulingCanceledBy).Append("\n");
             sb.Append("  SchedulingCompletedTime: ").Append(SchedulingCompletedTime).Append("\n");
+            sb.Append("  ReschedulingOptions: ").Append(ReschedulingOptions).Append("\n");
+            sb.Append("  ReschedulingResultExpiration: ").Append(ReschedulingResultExpiration).Append("\n");
+            sb.Append("  Applied: ").Append(Applied).Append("\n");
+            sb.Append("  UnscheduledAgents: ").Append(UnscheduledAgents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -301,6 +403,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RunId == other.RunId ||
                     this.RunId != null &&
                     this.RunId.Equals(other.RunId)
+                ) &&
+                (
+                    this.SchedulerRunId == other.SchedulerRunId ||
+                    this.SchedulerRunId != null &&
+                    this.SchedulerRunId.Equals(other.SchedulerRunId)
+                ) &&
+                (
+                    this.IntradayRescheduling == other.IntradayRescheduling ||
+                    this.IntradayRescheduling != null &&
+                    this.IntradayRescheduling.Equals(other.IntradayRescheduling)
                 ) &&
                 (
                     this.State == other.State ||
@@ -346,6 +458,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SchedulingCompletedTime == other.SchedulingCompletedTime ||
                     this.SchedulingCompletedTime != null &&
                     this.SchedulingCompletedTime.Equals(other.SchedulingCompletedTime)
+                ) &&
+                (
+                    this.ReschedulingOptions == other.ReschedulingOptions ||
+                    this.ReschedulingOptions != null &&
+                    this.ReschedulingOptions.Equals(other.ReschedulingOptions)
+                ) &&
+                (
+                    this.ReschedulingResultExpiration == other.ReschedulingResultExpiration ||
+                    this.ReschedulingResultExpiration != null &&
+                    this.ReschedulingResultExpiration.Equals(other.ReschedulingResultExpiration)
+                ) &&
+                (
+                    this.Applied == other.Applied ||
+                    this.Applied != null &&
+                    this.Applied.Equals(other.Applied)
+                ) &&
+                (
+                    this.UnscheduledAgents == other.UnscheduledAgents ||
+                    this.UnscheduledAgents != null &&
+                    this.UnscheduledAgents.SequenceEqual(other.UnscheduledAgents)
                 );
         }
 
@@ -363,6 +495,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RunId != null)
                     hash = hash * 59 + this.RunId.GetHashCode();
+                
+                if (this.SchedulerRunId != null)
+                    hash = hash * 59 + this.SchedulerRunId.GetHashCode();
+                
+                if (this.IntradayRescheduling != null)
+                    hash = hash * 59 + this.IntradayRescheduling.GetHashCode();
                 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
@@ -390,6 +528,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SchedulingCompletedTime != null)
                     hash = hash * 59 + this.SchedulingCompletedTime.GetHashCode();
+                
+                if (this.ReschedulingOptions != null)
+                    hash = hash * 59 + this.ReschedulingOptions.GetHashCode();
+                
+                if (this.ReschedulingResultExpiration != null)
+                    hash = hash * 59 + this.ReschedulingResultExpiration.GetHashCode();
+                
+                if (this.Applied != null)
+                    hash = hash * 59 + this.Applied.GetHashCode();
+                
+                if (this.UnscheduledAgents != null)
+                    hash = hash * 59 + this.UnscheduledAgents.GetHashCode();
                 
                 return hash;
             }

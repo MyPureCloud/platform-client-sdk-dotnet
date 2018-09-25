@@ -185,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates if the queue is active, inactive, or deleted.
         /// </summary>
@@ -210,6 +213,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The skill evaluation method to use when routing conversations.</value>
         [DataMember(Name="skillEvaluationMethod", EmitDefaultValue=false)]
         public SkillEvaluationMethodEnum? SkillEvaluationMethod { get; set; }
+        
+        
         
         
         
@@ -263,10 +268,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
         /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
         /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
+        /// <param name="OutboundMessagingAddresses">The messaging addresses for the queue..</param>
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="SourceQueueId">The id of an existing queue to copy the settings from when creating a new queue..</param>
         /// <param name="MemberCount">MemberCount.</param>
-        public CreateQueueRequest(string Name = null, WritableDivision Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference WhisperPrompt = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, string SourceQueueId = null, int? MemberCount = null)
+        public CreateQueueRequest(string Name = null, WritableDivision Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference WhisperPrompt = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string SourceQueueId = null, int? MemberCount = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -289,6 +295,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CallingPartyName = CallingPartyName;
             this.CallingPartyNumber = CallingPartyNumber;
             this.DefaultScripts = DefaultScripts;
+            this.OutboundMessagingAddresses = OutboundMessagingAddresses;
             this.OutboundEmailAddress = OutboundEmailAddress;
             this.SourceQueueId = SourceQueueId;
             this.MemberCount = MemberCount;
@@ -482,6 +489,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The messaging addresses for the queue.
+        /// </summary>
+        /// <value>The messaging addresses for the queue.</value>
+        [DataMember(Name="outboundMessagingAddresses", EmitDefaultValue=false)]
+        public QueueMessagingAddresses OutboundMessagingAddresses { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets OutboundEmailAddress
         /// </summary>
         [DataMember(Name="outboundEmailAddress", EmitDefaultValue=false)]
@@ -545,6 +561,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CallingPartyName: ").Append(CallingPartyName).Append("\n");
             sb.Append("  CallingPartyNumber: ").Append(CallingPartyNumber).Append("\n");
             sb.Append("  DefaultScripts: ").Append(DefaultScripts).Append("\n");
+            sb.Append("  OutboundMessagingAddresses: ").Append(OutboundMessagingAddresses).Append("\n");
             sb.Append("  OutboundEmailAddress: ").Append(OutboundEmailAddress).Append("\n");
             sb.Append("  SourceQueueId: ").Append(SourceQueueId).Append("\n");
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
@@ -696,6 +713,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DefaultScripts.SequenceEqual(other.DefaultScripts)
                 ) &&
                 (
+                    this.OutboundMessagingAddresses == other.OutboundMessagingAddresses ||
+                    this.OutboundMessagingAddresses != null &&
+                    this.OutboundMessagingAddresses.Equals(other.OutboundMessagingAddresses)
+                ) &&
+                (
                     this.OutboundEmailAddress == other.OutboundEmailAddress ||
                     this.OutboundEmailAddress != null &&
                     this.OutboundEmailAddress.Equals(other.OutboundEmailAddress)
@@ -794,6 +816,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DefaultScripts != null)
                     hash = hash * 59 + this.DefaultScripts.GetHashCode();
+                
+                if (this.OutboundMessagingAddresses != null)
+                    hash = hash * 59 + this.OutboundMessagingAddresses.GetHashCode();
                 
                 if (this.OutboundEmailAddress != null)
                     hash = hash * 59 + this.OutboundEmailAddress.GetHashCode();

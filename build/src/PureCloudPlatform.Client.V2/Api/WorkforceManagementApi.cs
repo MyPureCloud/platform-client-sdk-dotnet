@@ -327,6 +327,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WfmIntradayQueueListing> GetWorkforcemanagementManagementunitIntradayQueuesWithHttpInfo (string muId, string date);
         
         /// <summary>
+        /// Gets the status for a specific scheduling run
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>SchedulingRunResponse</returns>
+        SchedulingRunResponse GetWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId);
+
+        /// <summary>
+        /// Gets the status for a specific scheduling run
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>ApiResponse of SchedulingRunResponse</returns>
+        ApiResponse<SchedulingRunResponse> GetWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId);
+        
+        /// <summary>
+        /// Gets the result of a specific scheduling run
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>RescheduleResult</returns>
+        RescheduleResult GetWorkforcemanagementManagementunitSchedulingRunResult (string managementUnitId, string runId);
+
+        /// <summary>
+        /// Gets the result of a specific scheduling run
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>ApiResponse of RescheduleResult</returns>
+        ApiResponse<RescheduleResult> GetWorkforcemanagementManagementunitSchedulingRunResultWithHttpInfo (string managementUnitId, string runId);
+        
+        /// <summary>
         /// Get the status of all the ongoing schedule runs
         /// </summary>
         /// <remarks>
@@ -793,6 +841,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ActivityCode> PatchWorkforcemanagementManagementunitActivitycodeWithHttpInfo (string muId, string acId, UpdateActivityCodeRequest body = null);
         
         /// <summary>
+        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>RescheduleResult</returns>
+        RescheduleResult PatchWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null);
+
+        /// <summary>
+        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of RescheduleResult</returns>
+        ApiResponse<RescheduleResult> PatchWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null);
+        
+        /// <summary>
         /// Update a service goal group
         /// </summary>
         /// <remarks>
@@ -1197,6 +1271,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of AsyncWeekScheduleResponse</returns>
         ApiResponse<AsyncWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekScheduleCopyWithHttpInfo (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, CopyWeekScheduleRequest body = null);
+        
+        /// <summary>
+        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>AsyncWeekScheduleResponse</returns>
+        AsyncWeekScheduleResponse PostWorkforcemanagementManagementunitWeekScheduleReschedule (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null);
+
+        /// <summary>
+        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of AsyncWeekScheduleResponse</returns>
+        ApiResponse<AsyncWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekScheduleRescheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null);
         
         /// <summary>
         /// Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
@@ -1823,6 +1925,54 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WfmIntradayQueueListing>> GetWorkforcemanagementManagementunitIntradayQueuesAsyncWithHttpInfo (string muId, string date);
         
         /// <summary>
+        /// Gets the status for a specific scheduling run
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>Task of SchedulingRunResponse</returns>
+        System.Threading.Tasks.Task<SchedulingRunResponse> GetWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId);
+
+        /// <summary>
+        /// Gets the status for a specific scheduling run
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>Task of ApiResponse (SchedulingRunResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SchedulingRunResponse>> GetWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId);
+        
+        /// <summary>
+        /// Gets the result of a specific scheduling run
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>Task of RescheduleResult</returns>
+        System.Threading.Tasks.Task<RescheduleResult> GetWorkforcemanagementManagementunitSchedulingRunResultAsync (string managementUnitId, string runId);
+
+        /// <summary>
+        /// Gets the result of a specific scheduling run
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>Task of ApiResponse (RescheduleResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RescheduleResult>> GetWorkforcemanagementManagementunitSchedulingRunResultAsyncWithHttpInfo (string managementUnitId, string runId);
+        
+        /// <summary>
         /// Get the status of all the ongoing schedule runs
         /// </summary>
         /// <remarks>
@@ -2289,6 +2439,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ActivityCode>> PatchWorkforcemanagementManagementunitActivitycodeAsyncWithHttpInfo (string muId, string acId, UpdateActivityCodeRequest body = null);
         
         /// <summary>
+        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of RescheduleResult</returns>
+        System.Threading.Tasks.Task<RescheduleResult> PatchWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null);
+
+        /// <summary>
+        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (RescheduleResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RescheduleResult>> PatchWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null);
+        
+        /// <summary>
         /// Update a service goal group
         /// </summary>
         /// <remarks>
@@ -2693,6 +2869,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (AsyncWeekScheduleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AsyncWeekScheduleResponse>> PostWorkforcemanagementManagementunitWeekScheduleCopyAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, CopyWeekScheduleRequest body = null);
+        
+        /// <summary>
+        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of AsyncWeekScheduleResponse</returns>
+        System.Threading.Tasks.Task<AsyncWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsync (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null);
+
+        /// <summary>
+        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (AsyncWeekScheduleResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AsyncWeekScheduleResponse>> PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null);
         
         /// <summary>
         /// Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
@@ -5734,6 +5938,418 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WfmIntradayQueueListing>(localVarStatusCode,
                 localVarHeaders,
                 (WfmIntradayQueueListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmIntradayQueueListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Gets the status for a specific scheduling run 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>SchedulingRunResponse</returns>
+        public SchedulingRunResponse GetWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId)
+        {
+             ApiResponse<SchedulingRunResponse> localVarResponse = GetWorkforcemanagementManagementunitSchedulingRunWithHttpInfo(managementUnitId, runId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets the status for a specific scheduling run 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>ApiResponse of SchedulingRunResponse</returns>
+        public ApiResponse< SchedulingRunResponse > GetWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitSchedulingRun");
+            // verify the required parameter 'runId' is set
+            if (runId == null)
+                throw new ApiException(400, "Missing required parameter 'runId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitSchedulingRun");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (runId != null) localVarPathParams.Add("runId", this.Configuration.ApiClient.ParameterToString(runId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRun: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRun: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SchedulingRunResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SchedulingRunResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SchedulingRunResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Gets the status for a specific scheduling run 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>Task of SchedulingRunResponse</returns>
+        public async System.Threading.Tasks.Task<SchedulingRunResponse> GetWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId)
+        {
+             ApiResponse<SchedulingRunResponse> localVarResponse = await GetWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo(managementUnitId, runId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets the status for a specific scheduling run 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>Task of ApiResponse (SchedulingRunResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SchedulingRunResponse>> GetWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitSchedulingRun");
+            
+            // verify the required parameter 'runId' is set
+            if (runId == null)
+                throw new ApiException(400, "Missing required parameter 'runId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitSchedulingRun");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (runId != null) localVarPathParams.Add("runId", this.Configuration.ApiClient.ParameterToString(runId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRun: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRun: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SchedulingRunResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SchedulingRunResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SchedulingRunResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Gets the result of a specific scheduling run 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>RescheduleResult</returns>
+        public RescheduleResult GetWorkforcemanagementManagementunitSchedulingRunResult (string managementUnitId, string runId)
+        {
+             ApiResponse<RescheduleResult> localVarResponse = GetWorkforcemanagementManagementunitSchedulingRunResultWithHttpInfo(managementUnitId, runId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets the result of a specific scheduling run 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>ApiResponse of RescheduleResult</returns>
+        public ApiResponse< RescheduleResult > GetWorkforcemanagementManagementunitSchedulingRunResultWithHttpInfo (string managementUnitId, string runId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitSchedulingRunResult");
+            // verify the required parameter 'runId' is set
+            if (runId == null)
+                throw new ApiException(400, "Missing required parameter 'runId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitSchedulingRunResult");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}/result";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (runId != null) localVarPathParams.Add("runId", this.Configuration.ApiClient.ParameterToString(runId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRunResult: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRunResult: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RescheduleResult>(localVarStatusCode,
+                localVarHeaders,
+                (RescheduleResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RescheduleResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Gets the result of a specific scheduling run 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>Task of RescheduleResult</returns>
+        public async System.Threading.Tasks.Task<RescheduleResult> GetWorkforcemanagementManagementunitSchedulingRunResultAsync (string managementUnitId, string runId)
+        {
+             ApiResponse<RescheduleResult> localVarResponse = await GetWorkforcemanagementManagementunitSchedulingRunResultAsyncWithHttpInfo(managementUnitId, runId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets the result of a specific scheduling run 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <returns>Task of ApiResponse (RescheduleResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RescheduleResult>> GetWorkforcemanagementManagementunitSchedulingRunResultAsyncWithHttpInfo (string managementUnitId, string runId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitSchedulingRunResult");
+            
+            // verify the required parameter 'runId' is set
+            if (runId == null)
+                throw new ApiException(400, "Missing required parameter 'runId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitSchedulingRunResult");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}/result";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (runId != null) localVarPathParams.Add("runId", this.Configuration.ApiClient.ParameterToString(runId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRunResult: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSchedulingRunResult: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RescheduleResult>(localVarStatusCode,
+                localVarHeaders,
+                (RescheduleResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RescheduleResult)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -9637,6 +10253,226 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>RescheduleResult</returns>
+        public RescheduleResult PatchWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
+        {
+             ApiResponse<RescheduleResult> localVarResponse = PatchWorkforcemanagementManagementunitSchedulingRunWithHttpInfo(managementUnitId, runId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of RescheduleResult</returns>
+        public ApiResponse< RescheduleResult > PatchWorkforcemanagementManagementunitSchedulingRunWithHttpInfo (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitSchedulingRun");
+            // verify the required parameter 'runId' is set
+            if (runId == null)
+                throw new ApiException(400, "Missing required parameter 'runId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitSchedulingRun");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (runId != null) localVarPathParams.Add("runId", this.Configuration.ApiClient.ParameterToString(runId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSchedulingRun: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSchedulingRun: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RescheduleResult>(localVarStatusCode,
+                localVarHeaders,
+                (RescheduleResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RescheduleResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of RescheduleResult</returns>
+        public async System.Threading.Tasks.Task<RescheduleResult> PatchWorkforcemanagementManagementunitSchedulingRunAsync (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
+        {
+             ApiResponse<RescheduleResult> localVarResponse = await PatchWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo(managementUnitId, runId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit.</param>
+        /// <param name="runId">The ID of the schedule run</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (RescheduleResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RescheduleResult>> PatchWorkforcemanagementManagementunitSchedulingRunAsyncWithHttpInfo (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitSchedulingRun");
+            
+            // verify the required parameter 'runId' is set
+            if (runId == null)
+                throw new ApiException(400, "Missing required parameter 'runId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitSchedulingRun");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (runId != null) localVarPathParams.Add("runId", this.Configuration.ApiClient.ParameterToString(runId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSchedulingRun: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSchedulingRun: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RescheduleResult>(localVarStatusCode,
+                localVarHeaders,
+                (RescheduleResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RescheduleResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Update a service goal group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13053,6 +13889,239 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekScheduleCopy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekScheduleCopy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncWeekScheduleResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncWeekScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncWeekScheduleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>AsyncWeekScheduleResponse</returns>
+        public AsyncWeekScheduleResponse PostWorkforcemanagementManagementunitWeekScheduleReschedule (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null)
+        {
+             ApiResponse<AsyncWeekScheduleResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekScheduleRescheduleWithHttpInfo(managementUnitId, weekId, scheduleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of AsyncWeekScheduleResponse</returns>
+        public ApiResponse< AsyncWeekScheduleResponse > PostWorkforcemanagementManagementunitWeekScheduleRescheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekScheduleReschedule");
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekScheduleReschedule");
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekScheduleReschedule");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekScheduleReschedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekScheduleReschedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncWeekScheduleResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncWeekScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncWeekScheduleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of AsyncWeekScheduleResponse</returns>
+        public async System.Threading.Tasks.Task<AsyncWeekScheduleResponse> PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsync (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null)
+        {
+             ApiResponse<AsyncWeekScheduleResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsyncWithHttpInfo(managementUnitId, weekId, scheduleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="scheduleId">The ID of the schedule to re-optimize</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (AsyncWeekScheduleResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AsyncWeekScheduleResponse>> PostWorkforcemanagementManagementunitWeekScheduleRescheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekScheduleReschedule");
+            
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekScheduleReschedule");
+            
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekScheduleReschedule");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekScheduleReschedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekScheduleReschedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AsyncWeekScheduleResponse>(localVarStatusCode,
                 localVarHeaders,

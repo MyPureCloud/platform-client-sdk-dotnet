@@ -1373,7 +1373,7 @@ namespace Example
 
 <a name="getroutingmessagerecipients"></a>
 
-## [**RecipientListing**](RecipientListing.html) GetRoutingMessageRecipients (int? pageSize = null, int? pageNumber = null)
+## [**RecipientListing**](RecipientListing.html) GetRoutingMessageRecipients (string messengerType = null, int? pageSize = null, int? pageNumber = null)
 
 
 
@@ -1407,6 +1407,11 @@ namespace Example
             var apiInstance = new RoutingApi();
             
             
+            var messengerType = messengerType_example;  // string | Messenger Type (optional) 
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             
             
@@ -1422,7 +1427,7 @@ namespace Example
                 
                 // Get recipients
                 
-                RecipientListing result = apiInstance.GetRoutingMessageRecipients(pageSize, pageNumber);
+                RecipientListing result = apiInstance.GetRoutingMessageRecipients(messengerType, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1439,6 +1444,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **messengerType** | **string**| Messenger Type | [optional] <br />**Values**: sms, facebook, twitter, line, whatsapp, telegram, kakao |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}

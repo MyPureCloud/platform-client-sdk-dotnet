@@ -224,6 +224,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Systemprompt,
             
             /// <summary>
+            /// Enum Ttsengine for "TTSENGINE"
+            /// </summary>
+            [EnumMember(Value = "TTSENGINE")]
+            Ttsengine,
+            
+            /// <summary>
+            /// Enum Ttsvoice for "TTSVOICE"
+            /// </summary>
+            [EnumMember(Value = "TTSVOICE")]
+            Ttsvoice,
+            
+            /// <summary>
             /// Enum User for "USER"
             /// </summary>
             [EnumMember(Value = "USER")]

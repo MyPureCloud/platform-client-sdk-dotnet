@@ -1,7 +1,7 @@
 ---
-title: JsonNode
+title: ArrayNode
 ---
-## ININ.PureCloudApi.Model.JsonNode
+## ININ.PureCloudApi.Model.ArrayNode
 
 ## Properties
 

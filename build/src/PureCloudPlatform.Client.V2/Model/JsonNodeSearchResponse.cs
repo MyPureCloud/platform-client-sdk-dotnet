@@ -90,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Types">Resource types the search was performed against (required).</param>
         /// <param name="Results">Search results (required).</param>
         /// <param name="Aggregations">Aggregations.</param>
-        public JsonNodeSearchResponse(long? Total = null, int? PageCount = null, int? PageSize = null, int? PageNumber = null, string PreviousPage = null, string CurrentPage = null, string NextPage = null, List<string> Types = null, JsonNode Results = null, JsonNode Aggregations = null)
+        public JsonNodeSearchResponse(long? Total = null, int? PageCount = null, int? PageSize = null, int? PageNumber = null, string PreviousPage = null, string CurrentPage = null, string NextPage = null, List<string> Types = null, ArrayNode Results = null, ArrayNode Aggregations = null)
         {
             this.Total = Total;
             this.PageCount = PageCount;
@@ -184,7 +184,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Search results</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
-        public JsonNode Results { get; set; }
+        public ArrayNode Results { get; set; }
         
         
         
@@ -192,7 +192,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Aggregations
         /// </summary>
         [DataMember(Name="aggregations", EmitDefaultValue=false)]
-        public JsonNode Aggregations { get; set; }
+        public ArrayNode Aggregations { get; set; }
         
         
         /// <summary>

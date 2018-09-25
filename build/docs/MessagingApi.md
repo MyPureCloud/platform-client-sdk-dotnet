@@ -19,7 +19,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetMessagingSticker**](MessagingApi.html#getmessagingsticker) | **GET** /api/v2/messaging/stickers/{messengerType} | Get a list of Messaging Stickers |
 | [**PostMessagingIntegrationsFacebook**](MessagingApi.html#postmessagingintegrationsfacebook) | **POST** /api/v2/messaging/integrations/facebook | Create a Facebook Integration |
 | [**PostMessagingIntegrationsLine**](MessagingApi.html#postmessagingintegrationsline) | **POST** /api/v2/messaging/integrations/line | Create a LINE messenger Integration |
-| [**PostMessagingIntegrationsLineWebhookIntegrationId**](MessagingApi.html#postmessagingintegrationslinewebhookintegrationid) | **POST** /api/v2/messaging/integrations/line/webhook/{integrationId} | Webhook redirect for LINE messenger Integration |
 | [**PostMessagingIntegrationsTwitter**](MessagingApi.html#postmessagingintegrationstwitter) | **POST** /api/v2/messaging/integrations/twitter | Create a Twitter Integration |
 | [**PutMessagingIntegrationsLineIntegrationId**](MessagingApi.html#putmessagingintegrationslineintegrationid) | **PUT** /api/v2/messaging/integrations/line/{integrationId} | Update a LINE messenger integration |
 {: class="table table-striped"}
@@ -890,74 +889,6 @@ namespace Example
 ### Return type
 
 [**LineIntegration**](LineIntegration.html)
-
-<a name="postmessagingintegrationslinewebhookintegrationid"></a>
-
-## void PostMessagingIntegrationsLineWebhookIntegrationId (string integrationId)
-
-
-
-Webhook redirect for LINE messenger Integration
-
-
-
-Requires NO permissions: 
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostMessagingIntegrationsLineWebhookIntegrationIdExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
-
-            var apiInstance = new MessagingApi();
-            
-            
-            var integrationId = integrationId_example;  // string | Integration ID
-            
-            
-            
-
-            try
-            {
-                
-                // Webhook redirect for LINE messenger Integration
-                
-                apiInstance.PostMessagingIntegrationsLineWebhookIntegrationId(integrationId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MessagingApi.PostMessagingIntegrationsLineWebhookIntegrationId: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **integrationId** | **string**| Integration ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
 
 <a name="postmessagingintegrationstwitter"></a>
 

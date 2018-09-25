@@ -439,10 +439,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messengerType">Messenger Type (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>RecipientListing</returns>
-        RecipientListing GetRoutingMessageRecipients (int? pageSize = null, int? pageNumber = null);
+        RecipientListing GetRoutingMessageRecipients (string messengerType = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get recipients
@@ -451,10 +452,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messengerType">Messenger Type (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of RecipientListing</returns>
-        ApiResponse<RecipientListing> GetRoutingMessageRecipientsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<RecipientListing> GetRoutingMessageRecipientsWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get details about this queue.
@@ -1937,10 +1939,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messengerType">Messenger Type (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of RecipientListing</returns>
-        System.Threading.Tasks.Task<RecipientListing> GetRoutingMessageRecipientsAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<RecipientListing> GetRoutingMessageRecipientsAsync (string messengerType = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get recipients
@@ -1949,10 +1952,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messengerType">Messenger Type (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (RecipientListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RecipientListing>> GetRoutingMessageRecipientsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<RecipientListing>> GetRoutingMessageRecipientsAsyncWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get details about this queue.
@@ -6630,12 +6634,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get recipients 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messengerType">Messenger Type (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>RecipientListing</returns>
-        public RecipientListing GetRoutingMessageRecipients (int? pageSize = null, int? pageNumber = null)
+        public RecipientListing GetRoutingMessageRecipients (string messengerType = null, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<RecipientListing> localVarResponse = GetRoutingMessageRecipientsWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<RecipientListing> localVarResponse = GetRoutingMessageRecipientsWithHttpInfo(messengerType, pageSize, pageNumber);
              return localVarResponse.Data;
         }
 
@@ -6643,10 +6648,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get recipients 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messengerType">Messenger Type (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of RecipientListing</returns>
-        public ApiResponse< RecipientListing > GetRoutingMessageRecipientsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< RecipientListing > GetRoutingMessageRecipientsWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null)
         { 
 
             var localVarPath = "/api/v2/routing/message/recipients";
@@ -6682,6 +6688,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (messengerType != null) localVarQueryParams.Add(new Tuple<string, string>("messengerType", this.Configuration.ApiClient.ParameterToString(messengerType)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
 
@@ -6725,12 +6732,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get recipients 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messengerType">Messenger Type (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of RecipientListing</returns>
-        public async System.Threading.Tasks.Task<RecipientListing> GetRoutingMessageRecipientsAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<RecipientListing> GetRoutingMessageRecipientsAsync (string messengerType = null, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<RecipientListing> localVarResponse = await GetRoutingMessageRecipientsAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<RecipientListing> localVarResponse = await GetRoutingMessageRecipientsAsyncWithHttpInfo(messengerType, pageSize, pageNumber);
              return localVarResponse.Data;
 
         }
@@ -6739,10 +6747,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get recipients 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messengerType">Messenger Type (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (RecipientListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RecipientListing>> GetRoutingMessageRecipientsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RecipientListing>> GetRoutingMessageRecipientsAsyncWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null)
         { 
 
             var localVarPath = "/api/v2/routing/message/recipients";
@@ -6778,6 +6787,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (messengerType != null) localVarQueryParams.Add(new Tuple<string, string>("messengerType", this.Configuration.ApiClient.ParameterToString(messengerType)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
 

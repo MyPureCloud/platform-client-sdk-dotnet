@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// JsonNode
+    /// ArrayNode
     /// </summary>
     [DataContract]
-    public partial class JsonNode :  IEquatable<JsonNode>
+    public partial class ArrayNode :  IEquatable<ArrayNode>
     {
         
         
@@ -202,7 +202,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="JsonNode" /> class.
+        /// Initializes a new instance of the <see cref="ArrayNode" /> class.
         /// </summary>
         /// <param name="NodeType">NodeType.</param>
         /// <param name="_Object">_Object.</param>
@@ -225,7 +225,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Binary">Binary.</param>
         /// <param name="Array">Array.</param>
         /// <param name="_Null">_Null.</param>
-        public JsonNode(NodeTypeEnum? NodeType = null, bool? _Object = null, bool? Boolean = null, bool? Number = null, bool? _Float = null, bool? FloatingPointNumber = null, bool? ValueNode = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null, bool? Array = null, bool? _Null = null)
+        public ArrayNode(NodeTypeEnum? NodeType = null, bool? _Object = null, bool? Boolean = null, bool? Number = null, bool? _Float = null, bool? FloatingPointNumber = null, bool? ValueNode = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null, bool? Array = null, bool? _Null = null)
         {
             this.NodeType = NodeType;
             this._Object = _Object;
@@ -421,7 +421,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class JsonNode {\n");
+            sb.Append("class ArrayNode {\n");
             
             sb.Append("  NodeType: ").Append(NodeType).Append("\n");
             sb.Append("  _Object: ").Append(_Object).Append("\n");
@@ -465,15 +465,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as JsonNode);
+            return this.Equals(obj as ArrayNode);
         }
 
         /// <summary>
-        /// Returns true if JsonNode instances are equal
+        /// Returns true if ArrayNode instances are equal
         /// </summary>
-        /// <param name="other">Instance of JsonNode to be compared</param>
+        /// <param name="other">Instance of ArrayNode to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(JsonNode other)
+        public bool Equals(ArrayNode other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

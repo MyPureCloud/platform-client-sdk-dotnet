@@ -13,16 +13,11 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Headcount interval information for schedule
+    /// UpdateSchedulingRunRequest
     /// </summary>
     [DataContract]
-    public partial class HeadcountIntervalResponse :  IEquatable<HeadcountIntervalResponse>
+    public partial class UpdateSchedulingRunRequest :  IEquatable<UpdateSchedulingRunRequest>
     {
-        
-        
-        
-        
-        
         
         
         
@@ -32,34 +27,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="HeadcountIntervalResponse" /> class.
+        /// Initializes a new instance of the <see cref="UpdateSchedulingRunRequest" /> class.
         /// </summary>
-        /// <param name="Interval">The start date-time for this headcount interval in ISO-8601 format..</param>
-        /// <param name="Value">Headcount value for this interval.</param>
-        public HeadcountIntervalResponse(DateTime? Interval = null, double? Value = null)
+        /// <param name="Applied">Mark the run as applied.  Request will be rejected if the value != true. Note: To discard a run without applying, you still need to mark it as applied so that other reschedule runs can be done.</param>
+        public UpdateSchedulingRunRequest(bool? Applied = null)
         {
-            this.Interval = Interval;
-            this.Value = Value;
+            this.Applied = Applied;
             
         }
         
         
         
         /// <summary>
-        /// The start date-time for this headcount interval in ISO-8601 format.
+        /// Mark the run as applied.  Request will be rejected if the value != true. Note: To discard a run without applying, you still need to mark it as applied so that other reschedule runs can be done
         /// </summary>
-        /// <value>The start date-time for this headcount interval in ISO-8601 format.</value>
-        [DataMember(Name="interval", EmitDefaultValue=false)]
-        public DateTime? Interval { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Headcount value for this interval
-        /// </summary>
-        /// <value>Headcount value for this interval</value>
-        [DataMember(Name="value", EmitDefaultValue=false)]
-        public double? Value { get; set; }
+        /// <value>Mark the run as applied.  Request will be rejected if the value != true. Note: To discard a run without applying, you still need to mark it as applied so that other reschedule runs can be done</value>
+        [DataMember(Name="applied", EmitDefaultValue=false)]
+        public bool? Applied { get; set; }
         
         
         /// <summary>
@@ -69,10 +53,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class HeadcountIntervalResponse {\n");
+            sb.Append("class UpdateSchedulingRunRequest {\n");
             
-            sb.Append("  Interval: ").Append(Interval).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Applied: ").Append(Applied).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,15 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as HeadcountIntervalResponse);
+            return this.Equals(obj as UpdateSchedulingRunRequest);
         }
 
         /// <summary>
-        /// Returns true if HeadcountIntervalResponse instances are equal
+        /// Returns true if UpdateSchedulingRunRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of HeadcountIntervalResponse to be compared</param>
+        /// <param name="other">Instance of UpdateSchedulingRunRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(HeadcountIntervalResponse other)
+        public bool Equals(UpdateSchedulingRunRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -110,14 +93,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Interval == other.Interval ||
-                    this.Interval != null &&
-                    this.Interval.Equals(other.Interval)
-                ) &&
-                (
-                    this.Value == other.Value ||
-                    this.Value != null &&
-                    this.Value.Equals(other.Value)
+                    this.Applied == other.Applied ||
+                    this.Applied != null &&
+                    this.Applied.Equals(other.Applied)
                 );
         }
 
@@ -133,11 +111,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Interval != null)
-                    hash = hash * 59 + this.Interval.GetHashCode();
-                
-                if (this.Value != null)
-                    hash = hash * 59 + this.Value.GetHashCode();
+                if (this.Applied != null)
+                    hash = hash * 59 + this.Applied.GetHashCode();
                 
                 return hash;
             }

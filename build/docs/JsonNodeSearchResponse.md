@@ -15,8 +15,8 @@ title: JsonNodeSearchResponse
 | **CurrentPage** | **string** | Q64 value for the current page of results | [optional] |
 | **NextPage** | **string** | Q64 value for the next page of results | [optional] |
 | **Types** | **List&lt;string&gt;** | Resource types the search was performed against | |
-| **Results** | [**JsonNode**](JsonNode.html) | Search results | |
-| **Aggregations** | [**JsonNode**](JsonNode.html) |  | [optional] |
+| **Results** | [**ArrayNode**](ArrayNode.html) | Search results | |
+| **Aggregations** | [**ArrayNode**](ArrayNode.html) |  | [optional] |
 {: class="table table-striped"}
 
 

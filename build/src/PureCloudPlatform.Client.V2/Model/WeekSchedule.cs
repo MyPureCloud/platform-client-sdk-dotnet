@@ -88,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserSchedules">User schedules in the week.</param>
         /// <param name="HeadcountForecast">Headcount information for the week schedule.</param>
         /// <param name="AgentSchedulesVersion">Version of agent schedules in the week schedule.</param>
-        public WeekSchedule(string WeekDate = null, string Description = null, bool? Published = null, WeekScheduleGenerationResult GenerationResults = null, ShortTermForecastReference ShortTermForecast = null, WfmVersionedEntityMetadata Metadata = null, Dictionary<string, UserSchedule> UserSchedules = null, HeadcountForecastResponse HeadcountForecast = null, int? AgentSchedulesVersion = null)
+        public WeekSchedule(string WeekDate = null, string Description = null, bool? Published = null, WeekScheduleGenerationResult GenerationResults = null, ShortTermForecastReference ShortTermForecast = null, WfmVersionedEntityMetadata Metadata = null, Dictionary<string, UserSchedule> UserSchedules = null, HeadcountForecast HeadcountForecast = null, int? AgentSchedulesVersion = null)
         {
             this.WeekDate = WeekDate;
             this.Description = Description;
@@ -181,7 +181,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Headcount information for the week schedule</value>
         [DataMember(Name="headcountForecast", EmitDefaultValue=false)]
-        public HeadcountForecastResponse HeadcountForecast { get; set; }
+        public HeadcountForecast HeadcountForecast { get; set; }
         
         
         

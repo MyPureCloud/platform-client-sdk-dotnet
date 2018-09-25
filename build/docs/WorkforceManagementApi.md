@@ -20,6 +20,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitactivitycodes) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes | Get activity codes |
 | [**GetWorkforcemanagementManagementunitAgent**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitagent) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId} | Get data for agent in the management unit |
 | [**GetWorkforcemanagementManagementunitIntradayQueues**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitintradayqueues) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/intraday/queues | Get intraday queues for the given date |
+| [**GetWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitschedulingrun) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId} | Gets the status for a specific scheduling run |
+| [**GetWorkforcemanagementManagementunitSchedulingRunResult**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitschedulingrunresult) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}/result | Gets the result of a specific scheduling run |
 | [**GetWorkforcemanagementManagementunitSchedulingRuns**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitschedulingruns) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs | Get the status of all the ongoing schedule runs |
 | [**GetWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitservicegoalgroup) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId} | Get a service goal group |
 | [**GetWorkforcemanagementManagementunitServicegoalgroups**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitservicegoalgroups) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups | Get service goal groups |
@@ -39,6 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementTimeoffrequest**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequest) | **GET** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Get a time off request for the current user |
 | [**GetWorkforcemanagementTimeoffrequests**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequests) | **GET** /api/v2/workforcemanagement/timeoffrequests | Get a list of time off requests for the current user |
 | [**PatchWorkforcemanagementManagementunitActivitycode**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitactivitycode) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId} | Update an activity code |
+| [**PatchWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitschedulingrun) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId} | Marks a specific scheduling run as applied, allowing a new rescheduling run to be started |
 | [**PatchWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitservicegoalgroup) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId} | Update a service goal group |
 | [**PatchWorkforcemanagementManagementunitSettings**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitsettings) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/settings | Patch the settings for the requested management unit |
 | [**PatchWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitusertimeoffrequest) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId} | Update a time off request |
@@ -55,6 +58,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequestsfetchdetails) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests/fetchdetails | Gets a list of time off requests from lookup ids |
 | [**PostWorkforcemanagementManagementunitTimeoffrequestsQuery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequestsquery) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests/query | Gets the lookup ids to fetch the specified set of requests |
 | [**PostWorkforcemanagementManagementunitWeekScheduleCopy**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulecopy) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy | Copy a week schedule |
+| [**PostWorkforcemanagementManagementunitWeekScheduleReschedule**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulereschedule) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule | Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied |
 | [**PostWorkforcemanagementManagementunitWeekSchedules**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedules) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules | Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500 |
 | [**PostWorkforcemanagementManagementunitWeekSchedulesGenerate**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulesgenerate) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/generate | Generate a week schedule |
 | [**PostWorkforcemanagementManagementunitWeekSchedulesPartialupload**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulespartialupload) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/partialupload | Partial upload of user schedules where activity count is greater than 17500 |
@@ -1137,6 +1141,158 @@ namespace Example
 ### Return type
 
 [**WfmIntradayQueueListing**](WfmIntradayQueueListing.html)
+
+<a name="getworkforcemanagementmanagementunitschedulingrun"></a>
+
+## [**SchedulingRunResponse**](SchedulingRunResponse.html) GetWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId)
+
+
+
+Gets the status for a specific scheduling run
+
+
+
+Requires ANY permissions: 
+
+* wfm:schedule:generate
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementManagementunitSchedulingRunExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new WorkforceManagementApi();
+            
+            
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
+            
+            
+            
+            
+            var runId = runId_example;  // string | The ID of the schedule run
+            
+            
+            
+
+            try
+            {
+                
+                // Gets the status for a specific scheduling run
+                
+                SchedulingRunResponse result = apiInstance.GetWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementManagementunitSchedulingRun: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit. |  |
+| **runId** | **string**| The ID of the schedule run |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SchedulingRunResponse**](SchedulingRunResponse.html)
+
+<a name="getworkforcemanagementmanagementunitschedulingrunresult"></a>
+
+## [**RescheduleResult**](RescheduleResult.html) GetWorkforcemanagementManagementunitSchedulingRunResult (string managementUnitId, string runId)
+
+
+
+Gets the result of a specific scheduling run
+
+
+
+Requires ANY permissions: 
+
+* wfm:schedule:generate
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementManagementunitSchedulingRunResultExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new WorkforceManagementApi();
+            
+            
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
+            
+            
+            
+            
+            var runId = runId_example;  // string | The ID of the schedule run
+            
+            
+            
+
+            try
+            {
+                
+                // Gets the result of a specific scheduling run
+                
+                RescheduleResult result = apiInstance.GetWorkforcemanagementManagementunitSchedulingRunResult(managementUnitId, runId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementManagementunitSchedulingRunResult: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit. |  |
+| **runId** | **string**| The ID of the schedule run |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RescheduleResult**](RescheduleResult.html)
 
 <a name="getworkforcemanagementmanagementunitschedulingruns"></a>
 
@@ -2649,6 +2805,88 @@ namespace Example
 
 [**ActivityCode**](ActivityCode.html)
 
+<a name="patchworkforcemanagementmanagementunitschedulingrun"></a>
+
+## [**RescheduleResult**](RescheduleResult.html) PatchWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
+
+
+
+Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+
+
+
+Requires ANY permissions: 
+
+* wfm:schedule:generate
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementManagementunitSchedulingRunExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new WorkforceManagementApi();
+            
+            
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
+            
+            
+            
+            
+            var runId = runId_example;  // string | The ID of the schedule run
+            
+            
+            
+            
+            
+            var body = new UpdateSchedulingRunRequest(); // UpdateSchedulingRunRequest | body (optional) 
+            
+            
+
+            try
+            {
+                
+                // Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+                
+                RescheduleResult result = apiInstance.PatchWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementManagementunitSchedulingRun: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit. |  |
+| **runId** | **string**| The ID of the schedule run |  |
+| **body** | [**UpdateSchedulingRunRequest**](UpdateSchedulingRunRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RescheduleResult**](RescheduleResult.html)
+
 <a name="patchworkforcemanagementmanagementunitservicegoalgroup"></a>
 
 ## [**ServiceGoalGroup**](ServiceGoalGroup.html) PatchWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId, ServiceGoalGroup body = null)
@@ -3938,6 +4176,95 @@ namespace Example
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
 | **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
 | **body** | [**CopyWeekScheduleRequest**](CopyWeekScheduleRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html)
+
+<a name="postworkforcemanagementmanagementunitweekschedulereschedule"></a>
+
+## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) PostWorkforcemanagementManagementunitWeekScheduleReschedule (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null)
+
+
+
+Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+
+
+
+Requires ANY permissions: 
+
+* wfm:schedule:administer
+* wfm:schedule:edit
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementManagementunitWeekScheduleRescheduleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new WorkforceManagementApi();
+            
+            
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            
+            
+            
+            
+            var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
+            
+            
+            
+            
+            var scheduleId = scheduleId_example;  // string | The ID of the schedule to re-optimize
+            
+            
+            
+            
+            
+            var body = new RescheduleRequest(); // RescheduleRequest | body (optional) 
+            
+            
+
+            try
+            {
+                
+                // Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+                
+                AsyncWeekScheduleResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekScheduleReschedule(managementUnitId, weekId, scheduleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitWeekScheduleReschedule: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **weekId** | **string**| First day of schedule week in yyyy-MM-dd format. |  |
+| **scheduleId** | **string**| The ID of the schedule to re-optimize |  |
+| **body** | [**RescheduleRequest**](RescheduleRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

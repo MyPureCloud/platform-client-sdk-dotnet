@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateUser" /> class.
@@ -66,7 +71,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
         /// <param name="Title">Title.</param>
         /// <param name="Password">User&#39;s password (required).</param>
-        public CreateUser(string Name = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Password = null)
+        /// <param name="DivisionId">The division to which this user will belong.</param>
+        public CreateUser(string Name = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Password = null, string DivisionId = null)
         {
             this.Name = Name;
             this.Department = Department;
@@ -74,6 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Addresses = Addresses;
             this.Title = Title;
             this.Password = Password;
+            this.DivisionId = DivisionId;
             
         }
         
@@ -130,6 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Password { get; set; }
         
         
+        
+        /// <summary>
+        /// The division to which this user will belong
+        /// </summary>
+        /// <value>The division to which this user will belong</value>
+        [DataMember(Name="divisionId", EmitDefaultValue=false)]
+        public string DivisionId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -145,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
+            sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -210,6 +227,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Password == other.Password ||
                     this.Password != null &&
                     this.Password.Equals(other.Password)
+                ) &&
+                (
+                    this.DivisionId == other.DivisionId ||
+                    this.DivisionId != null &&
+                    this.DivisionId.Equals(other.DivisionId)
                 );
         }
 
@@ -242,6 +264,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Password != null)
                     hash = hash * 59 + this.Password.GetHashCode();
+                
+                if (this.DivisionId != null)
+                    hash = hash * 59 + this.DivisionId.GetHashCode();
                 
                 return hash;
             }

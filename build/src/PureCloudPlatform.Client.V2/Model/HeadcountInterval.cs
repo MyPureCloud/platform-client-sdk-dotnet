@@ -16,7 +16,7 @@ namespace PureCloudPlatform.Client.V2.Model
     /// Headcount interval information for schedule
     /// </summary>
     [DataContract]
-    public partial class HeadcountForecastResponse :  IEquatable<HeadcountForecastResponse>
+    public partial class HeadcountInterval :  IEquatable<HeadcountInterval>
     {
         
         
@@ -32,34 +32,40 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="HeadcountForecastResponse" /> class.
+        /// Initializes a new instance of the <see cref="HeadcountInterval" /> class.
         /// </summary>
-        /// <param name="Required">Headcount information with shrinkage.</param>
-        /// <param name="RequiredWithoutShrinkage">Headcount information without shrinkage.</param>
-        public HeadcountForecastResponse(List<HeadcountIntervalResponse> Required = null, List<HeadcountIntervalResponse> RequiredWithoutShrinkage = null)
+        [JsonConstructorAttribute]
+        protected HeadcountInterval() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="HeadcountInterval" /> class.
+        /// </summary>
+        /// <param name="Interval">The start date-time for this headcount interval in ISO-8601 format, must be within the 8 day schedule (required).</param>
+        /// <param name="Value">Headcount value for this interval (required).</param>
+        public HeadcountInterval(DateTime? Interval = null, double? Value = null)
         {
-            this.Required = Required;
-            this.RequiredWithoutShrinkage = RequiredWithoutShrinkage;
+            this.Interval = Interval;
+            this.Value = Value;
             
         }
         
         
         
         /// <summary>
-        /// Headcount information with shrinkage
+        /// The start date-time for this headcount interval in ISO-8601 format, must be within the 8 day schedule
         /// </summary>
-        /// <value>Headcount information with shrinkage</value>
-        [DataMember(Name="required", EmitDefaultValue=false)]
-        public List<HeadcountIntervalResponse> Required { get; set; }
+        /// <value>The start date-time for this headcount interval in ISO-8601 format, must be within the 8 day schedule</value>
+        [DataMember(Name="interval", EmitDefaultValue=false)]
+        public DateTime? Interval { get; set; }
         
         
         
         /// <summary>
-        /// Headcount information without shrinkage
+        /// Headcount value for this interval
         /// </summary>
-        /// <value>Headcount information without shrinkage</value>
-        [DataMember(Name="requiredWithoutShrinkage", EmitDefaultValue=false)]
-        public List<HeadcountIntervalResponse> RequiredWithoutShrinkage { get; set; }
+        /// <value>Headcount value for this interval</value>
+        [DataMember(Name="value", EmitDefaultValue=false)]
+        public double? Value { get; set; }
         
         
         /// <summary>
@@ -69,10 +75,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class HeadcountForecastResponse {\n");
+            sb.Append("class HeadcountInterval {\n");
             
-            sb.Append("  Required: ").Append(Required).Append("\n");
-            sb.Append("  RequiredWithoutShrinkage: ").Append(RequiredWithoutShrinkage).Append("\n");
+            sb.Append("  Interval: ").Append(Interval).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,15 +100,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as HeadcountForecastResponse);
+            return this.Equals(obj as HeadcountInterval);
         }
 
         /// <summary>
-        /// Returns true if HeadcountForecastResponse instances are equal
+        /// Returns true if HeadcountInterval instances are equal
         /// </summary>
-        /// <param name="other">Instance of HeadcountForecastResponse to be compared</param>
+        /// <param name="other">Instance of HeadcountInterval to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(HeadcountForecastResponse other)
+        public bool Equals(HeadcountInterval other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -110,14 +116,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Required == other.Required ||
-                    this.Required != null &&
-                    this.Required.SequenceEqual(other.Required)
+                    this.Interval == other.Interval ||
+                    this.Interval != null &&
+                    this.Interval.Equals(other.Interval)
                 ) &&
                 (
-                    this.RequiredWithoutShrinkage == other.RequiredWithoutShrinkage ||
-                    this.RequiredWithoutShrinkage != null &&
-                    this.RequiredWithoutShrinkage.SequenceEqual(other.RequiredWithoutShrinkage)
+                    this.Value == other.Value ||
+                    this.Value != null &&
+                    this.Value.Equals(other.Value)
                 );
         }
 
@@ -133,11 +139,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Required != null)
-                    hash = hash * 59 + this.Required.GetHashCode();
+                if (this.Interval != null)
+                    hash = hash * 59 + this.Interval.GetHashCode();
                 
-                if (this.RequiredWithoutShrinkage != null)
-                    hash = hash * 59 + this.RequiredWithoutShrinkage.GetHashCode();
+                if (this.Value != null)
+                    hash = hash * 59 + this.Value.GetHashCode();
                 
                 return hash;
             }
