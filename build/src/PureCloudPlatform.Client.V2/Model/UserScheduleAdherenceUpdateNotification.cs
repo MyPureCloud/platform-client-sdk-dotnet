@@ -204,7 +204,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Impact">Impact.</param>
         /// <param name="AdherenceChangeTime">AdherenceChangeTime.</param>
         /// <param name="PresenceUpdateTime">PresenceUpdateTime.</param>
-        public UserScheduleAdherenceUpdateNotification(DocumentDataV2NotificationWorkspace User = null, string ManagementUnitId = null, string ScheduledActivityCategory = null, string SystemPresence = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, IntradayDataUpdateNotificationStartDate AdherenceChangeTime = null, UserScheduleAdherenceUpdateNotificationDateTime PresenceUpdateTime = null)
+        public UserScheduleAdherenceUpdateNotification(DocumentDataV2NotificationWorkspace User = null, string ManagementUnitId = null, string ScheduledActivityCategory = null, string SystemPresence = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, DateTime? AdherenceChangeTime = null, DateTime? PresenceUpdateTime = null)
         {
             this.User = User;
             this.ManagementUnitId = ManagementUnitId;
@@ -286,7 +286,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AdherenceChangeTime
         /// </summary>
         [DataMember(Name="adherenceChangeTime", EmitDefaultValue=false)]
-        public IntradayDataUpdateNotificationStartDate AdherenceChangeTime { get; set; }
+        public DateTime? AdherenceChangeTime { get; set; }
         
         
         
@@ -294,7 +294,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PresenceUpdateTime
         /// </summary>
         [DataMember(Name="presenceUpdateTime", EmitDefaultValue=false)]
-        public UserScheduleAdherenceUpdateNotificationDateTime PresenceUpdateTime { get; set; }
+        public DateTime? PresenceUpdateTime { get; set; }
         
         
         /// <summary>

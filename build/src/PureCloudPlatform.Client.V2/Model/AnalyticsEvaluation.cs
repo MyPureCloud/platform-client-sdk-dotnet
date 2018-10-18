@@ -77,14 +77,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EvaluationId">Unique identifier for the evaluation.</param>
         /// <param name="EvaluatorId">A unique identifier of the PureCloud user who evaluated the interaction.</param>
         /// <param name="UserId">Unique identifier for the user being evaluated.</param>
-        /// <param name="EventTime">Specifies when an evaluation occurred.</param>
+        /// <param name="EventTime">Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="QueueId">Unique identifier for the queue the conversation was on.</param>
         /// <param name="FormId">Unique identifier for the form used to evaluate the conversation/agent.</param>
         /// <param name="ContextId">A unique identifier for an evaluation form, regardless of version.</param>
         /// <param name="FormName">Name of the evaluation form.</param>
         /// <param name="GetoTotalScore">The total evaluation for interactions.</param>
         /// <param name="GetoTotalCriticalScore">The score for critical evaluation questions.</param>
-        public AnalyticsEvaluation(string EvaluationId = null, string EvaluatorId = null, string UserId = null, string EventTime = null, string QueueId = null, string FormId = null, string ContextId = null, string FormName = null, long? GetoTotalScore = null, long? GetoTotalCriticalScore = null)
+        public AnalyticsEvaluation(string EvaluationId = null, string EvaluatorId = null, string UserId = null, DateTime? EventTime = null, string QueueId = null, string FormId = null, string ContextId = null, string FormName = null, long? GetoTotalScore = null, long? GetoTotalCriticalScore = null)
         {
             this.EvaluationId = EvaluationId;
             this.EvaluatorId = EvaluatorId;
@@ -129,11 +129,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Specifies when an evaluation occurred
+        /// Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Specifies when an evaluation occurred</value>
+        /// <value>Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
-        public string EventTime { get; set; }
+        public DateTime? EventTime { get; set; }
         
         
         

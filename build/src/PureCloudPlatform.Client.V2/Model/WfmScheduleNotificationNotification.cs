@@ -62,6 +62,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets EventType
         /// </summary>
@@ -98,7 +101,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Generate for "Generate"
             /// </summary>
             [EnumMember(Value = "Generate")]
-            Generate
+            Generate,
+            
+            /// <summary>
+            /// Enum Reschedule for "Reschedule"
+            /// </summary>
+            [EnumMember(Value = "Reschedule")]
+            Reschedule
         }
         
         
@@ -110,6 +119,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        
+        
         
         
         
@@ -131,12 +142,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">Status.</param>
         /// <param name="OperationId">OperationId.</param>
         /// <param name="DownloadUrl">DownloadUrl.</param>
+        /// <param name="PercentComplete">PercentComplete.</param>
         /// <param name="EventType">EventType.</param>
-        public WfmScheduleNotificationNotification(StatusEnum? Status = null, string OperationId = null, string DownloadUrl = null, EventTypeEnum? EventType = null)
+        public WfmScheduleNotificationNotification(StatusEnum? Status = null, string OperationId = null, string DownloadUrl = null, int? PercentComplete = null, EventTypeEnum? EventType = null)
         {
             this.Status = Status;
             this.OperationId = OperationId;
             this.DownloadUrl = DownloadUrl;
+            this.PercentComplete = PercentComplete;
             this.EventType = EventType;
             
         }
@@ -161,6 +174,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets PercentComplete
+        /// </summary>
+        [DataMember(Name="percentComplete", EmitDefaultValue=false)]
+        public int? PercentComplete { get; set; }
+        
+        
+        
         
         /// <summary>
         /// Returns the string presentation of the object
@@ -174,6 +195,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  OperationId: ").Append(OperationId).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
+            sb.Append("  PercentComplete: ").Append(PercentComplete).Append("\n");
             sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -227,6 +249,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DownloadUrl.Equals(other.DownloadUrl)
                 ) &&
                 (
+                    this.PercentComplete == other.PercentComplete ||
+                    this.PercentComplete != null &&
+                    this.PercentComplete.Equals(other.PercentComplete)
+                ) &&
+                (
                     this.EventType == other.EventType ||
                     this.EventType != null &&
                     this.EventType.Equals(other.EventType)
@@ -253,6 +280,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
+                
+                if (this.PercentComplete != null)
+                    hash = hash * 59 + this.PercentComplete.GetHashCode();
                 
                 if (this.EventType != null)
                     hash = hash * 59 + this.EventType.GetHashCode();

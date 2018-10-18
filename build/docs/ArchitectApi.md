@@ -240,8 +240,7 @@ Delete specified user prompt
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:userPrompt:delete
 
 ### Example
 ~~~csharp
@@ -316,8 +315,7 @@ Delete specified user prompt resource
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:userPrompt:edit
 
 ### Example
 ~~~csharp
@@ -392,8 +390,7 @@ Multiple IDs can be specified, in which case all specified prompts will be delet
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:userPrompt:delete
 
 ### Example
 ~~~csharp
@@ -601,8 +598,7 @@ Delete a system prompt resource override.
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:systemPrompt:edit
 
 ### Example
 ~~~csharp
@@ -677,8 +673,7 @@ Delete flow
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:flow:delete
 
 ### Example
 ~~~csharp
@@ -747,8 +742,7 @@ Multiple IDs can be specified, in which case all specified flows will be deleted
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:flow:delete
 
 ### Example
 ~~~csharp
@@ -968,9 +962,7 @@ Get Dependency Tracking objects that have a given display name
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:dependencyTracking:view
 
 ### Example
 ~~~csharp
@@ -1082,9 +1074,7 @@ Get Dependency Tracking build status for an organization
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:dependencyTracking:view
 
 ### Example
 ~~~csharp
@@ -1145,9 +1135,7 @@ Get resources that are consumed by a given Dependency Tracking object
 
 Requires ANY permissions: 
 
-* admin
-* editor
-* readonly
+* architect:dependencyTracking:view
 
 ### Example
 ~~~csharp
@@ -1235,9 +1223,7 @@ Get resources that consume a given Dependency Tracking object
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:dependencyTracking:view
 
 ### Example
 ~~~csharp
@@ -1319,9 +1305,7 @@ Get Dependency Tracking objects that consume deleted resources
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:dependencyTracking:view
 
 ### Example
 ~~~csharp
@@ -1427,9 +1411,7 @@ Get a Dependency Tracking object
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:dependencyTracking:view
 
 ### Example
 ~~~csharp
@@ -1535,9 +1517,7 @@ Get a Dependency Tracking type.
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:dependencyTracking:view
 
 ### Example
 ~~~csharp
@@ -1607,9 +1587,7 @@ Get Dependency Tracking types.
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:dependencyTracking:view
 
 ### Example
 ~~~csharp
@@ -1685,9 +1663,7 @@ Get Dependency Tracking objects that depend on updated resources
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:dependencyTracking:view
 
 ### Example
 ~~~csharp
@@ -2115,9 +2091,7 @@ Get specified user prompt
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:userPrompt:view
 
 ### Example
 ~~~csharp
@@ -2187,9 +2161,7 @@ Get generated prompt history
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:userPrompt:view
 
 ### Example
 ~~~csharp
@@ -2295,9 +2267,7 @@ Get specified user prompt resource
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:userPrompt:view
 
 ### Example
 ~~~csharp
@@ -2373,9 +2343,7 @@ The returned list is pageable, and query parameters can be used for filtering.
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:userPrompt:view
 
 ### Example
 ~~~csharp
@@ -2457,9 +2425,7 @@ The returned list is pageable, and query parameters can be used for filtering.  
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:userPrompt:view
 
 ### Example
 ~~~csharp
@@ -2893,9 +2859,7 @@ Get a system prompt
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:systemPrompt:view
 
 ### Example
 ~~~csharp
@@ -2965,9 +2929,7 @@ Get generated prompt history
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:systemPrompt:view
 
 ### Example
 ~~~csharp
@@ -3073,9 +3035,7 @@ Get a system prompt resource.
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:systemPrompt:view
 
 ### Example
 ~~~csharp
@@ -3151,9 +3111,7 @@ Get system prompt resources.
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:systemPrompt:view
 
 ### Example
 ~~~csharp
@@ -3247,9 +3205,7 @@ Get System Prompts
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:systemPrompt:view
 
 ### Example
 ~~~csharp
@@ -3355,9 +3311,7 @@ Get flow
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:flow:view
 
 ### Example
 ~~~csharp
@@ -3433,9 +3387,7 @@ Get generated flow history
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:flow:view
 
 ### Example
 ~~~csharp
@@ -3541,9 +3493,7 @@ Get the latest configuration for flow
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:flow:view
 
 ### Example
 ~~~csharp
@@ -3619,9 +3569,7 @@ Get flow version
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:flow:view
 
 ### Example
 ~~~csharp
@@ -3703,9 +3651,7 @@ Create flow version configuration
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:flow:view
 
 ### Example
 ~~~csharp
@@ -3787,9 +3733,7 @@ Get flow version list
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:flow:view
 
 ### Example
 ~~~csharp
@@ -3877,9 +3821,7 @@ Multiple IDs can be specified, in which case all matching flows will be returned
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:flow:view
 
 ### Example
 ~~~csharp
@@ -4521,7 +4463,7 @@ Asynchronous.  Notification topic: v2.architect.dependencytracking.build
 
 Requires ANY permissions: 
 
-* architect:user:admin
+* architect:dependencyTracking:rebuild
 
 ### Example
 ~~~csharp
@@ -4721,9 +4663,7 @@ Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:userPrompt:view
 
 ### Example
 ~~~csharp
@@ -4793,8 +4733,7 @@ Create a new user prompt resource
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:userPrompt:edit
 
 ### Example
 ~~~csharp
@@ -4870,8 +4809,7 @@ Create a new user prompt
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:userPrompt:add
 
 ### Example
 ~~~csharp
@@ -5081,9 +5019,7 @@ Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:systemPrompt:edit
 
 ### Example
 ~~~csharp
@@ -5153,8 +5089,7 @@ Create system prompt resource override.
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:systemPrompt:edit
 
 ### Example
 ~~~csharp
@@ -5230,8 +5165,7 @@ Create flow version
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:flow:edit
 
 ### Example
 ~~~csharp
@@ -5307,9 +5241,7 @@ Create flow
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
-* architect:user:readonly
+* architect:flow:add
 
 ### Example
 ~~~csharp
@@ -5379,8 +5311,8 @@ Asynchronous.  Notification topic: v2.flows.{flowId}
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:flow:edit
+* architect:flow:unlock
 
 ### Example
 ~~~csharp
@@ -5450,8 +5382,7 @@ Check-out flow
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:flow:edit
 
 ### Example
 ~~~csharp
@@ -5521,8 +5452,7 @@ Deactivate flow
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:flow:publish
 
 ### Example
 ~~~csharp
@@ -5592,8 +5522,8 @@ Asynchronous.  Notification topic: v2.flows.{flowId}
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:flow:unlock
+* architect:flow:publish
 
 ### Example
 ~~~csharp
@@ -5669,8 +5599,7 @@ Revert flow
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:flow:edit
 
 ### Example
 ~~~csharp
@@ -5740,7 +5669,7 @@ Allows for unlocking a flow in the case where there is no flow configuration ava
 
 Requires ANY permissions: 
 
-* architect:user:admin
+* architect:flow:unlock
 
 ### Example
 ~~~csharp
@@ -6108,8 +6037,7 @@ Update specified user prompt
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:userPrompt:edit
 
 ### Example
 ~~~csharp
@@ -6185,8 +6113,7 @@ Update specified user prompt resource
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:userPrompt:edit
 
 ### Example
 ~~~csharp
@@ -6420,8 +6347,7 @@ Updates a system prompt resource override.
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:systemPrompt:edit
 
 ### Example
 ~~~csharp
@@ -6503,8 +6429,7 @@ Update flow
 
 Requires ANY permissions: 
 
-* architect:user:admin
-* architect:user:editor
+* architect:flow:edit
 
 ### Example
 ~~~csharp

@@ -10,6 +10,7 @@ title: WfmScheduleNotificationNotification
 | **Status** | **string** |  | [optional] |
 | **OperationId** | **string** |  | [optional] |
 | **DownloadUrl** | **string** |  | [optional] |
+| **PercentComplete** | **int?** |  | [optional] |
 | **EventType** | **string** |  | [optional] |
 {: class="table table-striped"}
 

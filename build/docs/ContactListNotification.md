@@ -21,6 +21,7 @@ title: ContactListNotification
 | **AttemptLimits** | [**DocumentDataV2NotificationCreatedBy**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
 | **AutomaticTimeZoneMapping** | **bool?** |  | [optional] |
 | **ZipCodeColumnName** | **string** |  | [optional] |
+| **Division** | [**ContactListNotificationUriReference**](ContactListNotificationUriReference.html) |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

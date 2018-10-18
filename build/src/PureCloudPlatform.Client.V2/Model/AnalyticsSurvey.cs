@@ -80,6 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSurvey" /> class.
@@ -87,26 +92,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurveyId">Unique identifier for the survey.</param>
         /// <param name="SurveyFormId">Unique identifier for the survey form.</param>
         /// <param name="SurveyFormContextId">Unique identifier for the survey form, regardless of version.</param>
+        /// <param name="EventTime">Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="UserId">A unique identifier of the PureCloud user.</param>
         /// <param name="QueueId">Unique identifier for the queue the conversation was on.</param>
         /// <param name="Status">Survey status.</param>
         /// <param name="GetoSurveyTotalScore">Creation date of survey.</param>
         /// <param name="SurveyPromoterScore">NPS score of the survey.</param>
-        /// <param name="SurveyCompletedTime">Completion time of the survey, in ms since the epoch, 1970-01-01T00:00:00.000Z.</param>
+        /// <param name="GetsurveyCompletedDate">Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="MediaTypes">Media types associated with the conversation.</param>
         /// <param name="LanguageIds">Language IDs associated with the conversation.</param>
         /// <param name="SkillIds">Skill IDs associated with the conversation.</param>
-        public AnalyticsSurvey(string SurveyId = null, string SurveyFormId = null, string SurveyFormContextId = null, string UserId = null, string QueueId = null, string Status = null, long? GetoSurveyTotalScore = null, int? SurveyPromoterScore = null, long? SurveyCompletedTime = null, List<string> MediaTypes = null, List<string> LanguageIds = null, List<string> SkillIds = null)
+        public AnalyticsSurvey(string SurveyId = null, string SurveyFormId = null, string SurveyFormContextId = null, DateTime? EventTime = null, string UserId = null, string QueueId = null, string Status = null, long? GetoSurveyTotalScore = null, int? SurveyPromoterScore = null, DateTime? GetsurveyCompletedDate = null, List<string> MediaTypes = null, List<string> LanguageIds = null, List<string> SkillIds = null)
         {
             this.SurveyId = SurveyId;
             this.SurveyFormId = SurveyFormId;
             this.SurveyFormContextId = SurveyFormContextId;
+            this.EventTime = EventTime;
             this.UserId = UserId;
             this.QueueId = QueueId;
             this.Status = Status;
             this.GetoSurveyTotalScore = GetoSurveyTotalScore;
             this.SurveyPromoterScore = SurveyPromoterScore;
-            this.SurveyCompletedTime = SurveyCompletedTime;
+            this.GetsurveyCompletedDate = GetsurveyCompletedDate;
             this.MediaTypes = MediaTypes;
             this.LanguageIds = LanguageIds;
             this.SkillIds = SkillIds;
@@ -139,6 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Unique identifier for the survey form, regardless of version</value>
         [DataMember(Name="surveyFormContextId", EmitDefaultValue=false)]
         public string SurveyFormContextId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="eventTime", EmitDefaultValue=false)]
+        public DateTime? EventTime { get; set; }
         
         
         
@@ -188,11 +204,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Completion time of the survey, in ms since the epoch, 1970-01-01T00:00:00.000Z
+        /// Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Completion time of the survey, in ms since the epoch, 1970-01-01T00:00:00.000Z</value>
-        [DataMember(Name="surveyCompletedTime", EmitDefaultValue=false)]
-        public long? SurveyCompletedTime { get; set; }
+        /// <value>Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="getsurveyCompletedDate", EmitDefaultValue=false)]
+        public DateTime? GetsurveyCompletedDate { get; set; }
         
         
         
@@ -234,12 +250,13 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SurveyId: ").Append(SurveyId).Append("\n");
             sb.Append("  SurveyFormId: ").Append(SurveyFormId).Append("\n");
             sb.Append("  SurveyFormContextId: ").Append(SurveyFormContextId).Append("\n");
+            sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  GetoSurveyTotalScore: ").Append(GetoSurveyTotalScore).Append("\n");
             sb.Append("  SurveyPromoterScore: ").Append(SurveyPromoterScore).Append("\n");
-            sb.Append("  SurveyCompletedTime: ").Append(SurveyCompletedTime).Append("\n");
+            sb.Append("  GetsurveyCompletedDate: ").Append(GetsurveyCompletedDate).Append("\n");
             sb.Append("  MediaTypes: ").Append(MediaTypes).Append("\n");
             sb.Append("  LanguageIds: ").Append(LanguageIds).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
@@ -295,6 +312,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SurveyFormContextId.Equals(other.SurveyFormContextId)
                 ) &&
                 (
+                    this.EventTime == other.EventTime ||
+                    this.EventTime != null &&
+                    this.EventTime.Equals(other.EventTime)
+                ) &&
+                (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
@@ -320,9 +342,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SurveyPromoterScore.Equals(other.SurveyPromoterScore)
                 ) &&
                 (
-                    this.SurveyCompletedTime == other.SurveyCompletedTime ||
-                    this.SurveyCompletedTime != null &&
-                    this.SurveyCompletedTime.Equals(other.SurveyCompletedTime)
+                    this.GetsurveyCompletedDate == other.GetsurveyCompletedDate ||
+                    this.GetsurveyCompletedDate != null &&
+                    this.GetsurveyCompletedDate.Equals(other.GetsurveyCompletedDate)
                 ) &&
                 (
                     this.MediaTypes == other.MediaTypes ||
@@ -362,6 +384,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SurveyFormContextId != null)
                     hash = hash * 59 + this.SurveyFormContextId.GetHashCode();
                 
+                if (this.EventTime != null)
+                    hash = hash * 59 + this.EventTime.GetHashCode();
+                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
                 
@@ -377,8 +402,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SurveyPromoterScore != null)
                     hash = hash * 59 + this.SurveyPromoterScore.GetHashCode();
                 
-                if (this.SurveyCompletedTime != null)
-                    hash = hash * 59 + this.SurveyCompletedTime.GetHashCode();
+                if (this.GetsurveyCompletedDate != null)
+                    hash = hash * 59 + this.GetsurveyCompletedDate.GetHashCode();
                 
                 if (this.MediaTypes != null)
                     hash = hash * 59 + this.MediaTypes.GetHashCode();

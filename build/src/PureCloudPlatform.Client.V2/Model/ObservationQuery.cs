@@ -214,6 +214,24 @@ namespace PureCloudPlatform.Client.V2.Model
             Ntransferred,
             
             /// <summary>
+            /// Enum Nblindtransferred for "nBlindTransferred"
+            /// </summary>
+            [EnumMember(Value = "nBlindTransferred")]
+            Nblindtransferred,
+            
+            /// <summary>
+            /// Enum Nconsulttransferred for "nConsultTransferred"
+            /// </summary>
+            [EnumMember(Value = "nConsultTransferred")]
+            Nconsulttransferred,
+            
+            /// <summary>
+            /// Enum Nconsult for "nConsult"
+            /// </summary>
+            [EnumMember(Value = "nConsult")]
+            Nconsult,
+            
+            /// <summary>
             /// Enum Talert for "tAlert"
             /// </summary>
             [EnumMember(Value = "tAlert")]

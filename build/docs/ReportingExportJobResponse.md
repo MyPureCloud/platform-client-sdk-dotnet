@@ -22,6 +22,7 @@ title: ReportingExportJobResponse
 | **CreatedDateTime** | **DateTime?** | The created date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | |
 | **ModifiedDateTime** | **DateTime?** | The last modified date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | |
 | **Locale** | **string** | The locale use for localization of the exported data, i.e. en-us, es-mx   | |
+| **PercentageComplete** | **double?** | The percentage of the job that has completed processing | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

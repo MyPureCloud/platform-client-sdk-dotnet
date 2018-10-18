@@ -695,6 +695,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SurveyFormEntityListing> GetQualityFormsSurveysWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
         
         /// <summary>
+        /// Retrieve a list of survey forms by their ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <returns>SurveyFormEntityListing</returns>
+        SurveyFormEntityListing GetQualityFormsSurveysBulk (List<string> ids);
+
+        /// <summary>
+        /// Retrieve a list of survey forms by their ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <returns>ApiResponse of SurveyFormEntityListing</returns>
+        ApiResponse<SurveyFormEntityListing> GetQualityFormsSurveysBulkWithHttpInfo (List<string> ids);
+        
+        /// <summary>
         /// Get a keywordSet by id.
         /// </summary>
         /// <remarks>
@@ -2031,6 +2053,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
+        
+        /// <summary>
+        /// Retrieve a list of survey forms by their ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <returns>Task of SurveyFormEntityListing</returns>
+        System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysBulkAsync (List<string> ids);
+
+        /// <summary>
+        /// Retrieve a list of survey forms by their ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysBulkAsyncWithHttpInfo (List<string> ids);
         
         /// <summary>
         /// Get a keywordSet by id.
@@ -7694,6 +7738,199 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveys: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SurveyFormEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SurveyFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyFormEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve a list of survey forms by their ids 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <returns>SurveyFormEntityListing</returns>
+        public SurveyFormEntityListing GetQualityFormsSurveysBulk (List<string> ids)
+        {
+             ApiResponse<SurveyFormEntityListing> localVarResponse = GetQualityFormsSurveysBulkWithHttpInfo(ids);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a list of survey forms by their ids 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <returns>ApiResponse of SurveyFormEntityListing</returns>
+        public ApiResponse< SurveyFormEntityListing > GetQualityFormsSurveysBulkWithHttpInfo (List<string> ids)
+        { 
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling QualityApi->GetQualityFormsSurveysBulk");
+
+            var localVarPath = "/api/v2/quality/forms/surveys/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveysBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveysBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SurveyFormEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SurveyFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyFormEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve a list of survey forms by their ids 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <returns>Task of SurveyFormEntityListing</returns>
+        public async System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysBulkAsync (List<string> ids)
+        {
+             ApiResponse<SurveyFormEntityListing> localVarResponse = await GetQualityFormsSurveysBulkAsyncWithHttpInfo(ids);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a list of survey forms by their ids 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysBulkAsyncWithHttpInfo (List<string> ids)
+        { 
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling QualityApi->GetQualityFormsSurveysBulk");
+            
+
+            var localVarPath = "/api/v2/quality/forms/surveys/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveysBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveysBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<SurveyFormEntityListing>(localVarStatusCode,
                 localVarHeaders,

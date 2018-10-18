@@ -704,7 +704,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>WorkPlanListResponse</returns>
-        WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, string expand = null);
+        WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null);
 
         /// <summary>
         /// Get work plans
@@ -716,7 +716,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of WorkPlanListResponse</returns>
-        ApiResponse<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, string expand = null);
+        ApiResponse<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, List<string> expand = null);
         
         /// <summary>
         /// Get management units
@@ -2302,7 +2302,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of WorkPlanListResponse</returns>
-        System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, string expand = null);
+        System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, List<string> expand = null);
 
         /// <summary>
         /// Get work plans
@@ -2314,7 +2314,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, List<string> expand = null);
         
         /// <summary>
         /// Get management units
@@ -9065,7 +9065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>WorkPlanListResponse</returns>
-        public WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, string expand = null)
+        public WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null)
         {
              ApiResponse<WorkPlanListResponse> localVarResponse = GetWorkforcemanagementManagementunitWorkplansWithHttpInfo(managementUnitId, expand);
              return localVarResponse.Data;
@@ -9078,7 +9078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of WorkPlanListResponse</returns>
-        public ApiResponse< WorkPlanListResponse > GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, string expand = null)
+        public ApiResponse< WorkPlanListResponse > GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, List<string> expand = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -9118,7 +9118,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
-            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -9163,7 +9163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of WorkPlanListResponse</returns>
-        public async System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, string expand = null)
+        public async System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, List<string> expand = null)
         {
              ApiResponse<WorkPlanListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo(managementUnitId, expand);
              return localVarResponse.Data;
@@ -9177,7 +9177,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, List<string> expand = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -9218,7 +9218,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
-            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

@@ -463,6 +463,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Surveyquestiongroupid,
             
             /// <summary>
+            /// Enum Surveypromoterscore for "surveyPromoterScore"
+            /// </summary>
+            [EnumMember(Value = "surveyPromoterScore")]
+            Surveypromoterscore,
+            
+            /// <summary>
+            /// Enum Surveycompleteddate for "surveyCompletedDate"
+            /// </summary>
+            [EnumMember(Value = "surveyCompletedDate")]
+            Surveycompleteddate,
+            
+            /// <summary>
             /// Enum Systempresence for "systemPresence"
             /// </summary>
             [EnumMember(Value = "systemPresence")]
@@ -814,6 +826,24 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "nTransferred")]
             Ntransferred,
+            
+            /// <summary>
+            /// Enum Nblindtransferred for "nBlindTransferred"
+            /// </summary>
+            [EnumMember(Value = "nBlindTransferred")]
+            Nblindtransferred,
+            
+            /// <summary>
+            /// Enum Nconsulttransferred for "nConsultTransferred"
+            /// </summary>
+            [EnumMember(Value = "nConsultTransferred")]
+            Nconsulttransferred,
+            
+            /// <summary>
+            /// Enum Nconsult for "nConsult"
+            /// </summary>
+            [EnumMember(Value = "nConsult")]
+            Nconsult,
             
             /// <summary>
             /// Enum Talert for "tAlert"

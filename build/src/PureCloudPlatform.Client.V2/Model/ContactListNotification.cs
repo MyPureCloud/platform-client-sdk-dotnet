@@ -95,6 +95,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListNotification" /> class.
@@ -113,8 +118,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AttemptLimits">AttemptLimits.</param>
         /// <param name="AutomaticTimeZoneMapping">AutomaticTimeZoneMapping.</param>
         /// <param name="ZipCodeColumnName">ZipCodeColumnName.</param>
+        /// <param name="Division">Division.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ContactListNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<ContactListNotificationPhoneColumns> PhoneColumns = null, ContactListNotificationImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, int? Size = null, DocumentDataV2NotificationCreatedBy AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, Object AdditionalProperties = null)
+        public ContactListNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<ContactListNotificationPhoneColumns> PhoneColumns = null, ContactListNotificationImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, int? Size = null, DocumentDataV2NotificationCreatedBy AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, ContactListNotificationUriReference Division = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -130,6 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AttemptLimits = AttemptLimits;
             this.AutomaticTimeZoneMapping = AutomaticTimeZoneMapping;
             this.ZipCodeColumnName = ZipCodeColumnName;
+            this.Division = Division;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -249,6 +256,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Division
+        /// </summary>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public ContactListNotificationUriReference Division { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -278,6 +293,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AttemptLimits: ").Append(AttemptLimits).Append("\n");
             sb.Append("  AutomaticTimeZoneMapping: ").Append(AutomaticTimeZoneMapping).Append("\n");
             sb.Append("  ZipCodeColumnName: ").Append(ZipCodeColumnName).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -386,6 +402,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ZipCodeColumnName.Equals(other.ZipCodeColumnName)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -445,6 +466,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ZipCodeColumnName != null)
                     hash = hash * 59 + this.ZipCodeColumnName.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

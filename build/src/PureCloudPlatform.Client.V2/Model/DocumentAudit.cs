@@ -101,7 +101,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Failure for "FAILURE"
             /// </summary>
             [EnumMember(Value = "FAILURE")]
-            Failure
+            Failure,
+            
+            /// <summary>
+            /// Enum Warning for "WARNING"
+            /// </summary>
+            [EnumMember(Value = "WARNING")]
+            Warning
         }
         
         

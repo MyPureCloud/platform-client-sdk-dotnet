@@ -105,6 +105,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlan" /> class.
@@ -122,6 +132,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WeeklyExactPaidMinutes">Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false.</param>
         /// <param name="WeeklyMinimumPaidMinutes">Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true.</param>
         /// <param name="WeeklyMaximumPaidMinutes">Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true.</param>
+        /// <param name="ConstrainPaidTimeGranularity">Whether paid time granularity is constrained for this workplan.</param>
+        /// <param name="PaidTimeGranularityMinutes">Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity == true.</param>
         /// <param name="ConstrainMinimumTimeBetweenShifts">Whether the minimum time between shifts constraint is enabled for this work plan.</param>
         /// <param name="MinimumTimeBetweenShiftsMinutes">Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts == true.</param>
         /// <param name="MaximumDays">Maximum number days in a week allowed to be scheduled for this work plan.</param>
@@ -130,7 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Shifts">Shifts in this work plan.</param>
         /// <param name="Agents">Agents in this work plan.</param>
         /// <param name="Metadata">Version metadata for this work plan (required).</param>
-        public WorkPlan(string Name = null, bool? Enabled = null, bool? ConstrainWeeklyPaidTime = null, bool? FlexibleWeeklyPaidTime = null, int? WeeklyExactPaidMinutes = null, int? WeeklyMinimumPaidMinutes = null, int? WeeklyMaximumPaidMinutes = null, bool? ConstrainMinimumTimeBetweenShifts = null, int? MinimumTimeBetweenShiftsMinutes = null, int? MaximumDays = null, SetWrapperDayOfWeek OptionalDays = null, ListWrapperShiftStartVariance ShiftStartVariances = null, List<WorkPlanShift> Shifts = null, List<DeletableUserReference> Agents = null, WfmVersionedEntityMetadata Metadata = null)
+        public WorkPlan(string Name = null, bool? Enabled = null, bool? ConstrainWeeklyPaidTime = null, bool? FlexibleWeeklyPaidTime = null, int? WeeklyExactPaidMinutes = null, int? WeeklyMinimumPaidMinutes = null, int? WeeklyMaximumPaidMinutes = null, bool? ConstrainPaidTimeGranularity = null, int? PaidTimeGranularityMinutes = null, bool? ConstrainMinimumTimeBetweenShifts = null, int? MinimumTimeBetweenShiftsMinutes = null, int? MaximumDays = null, SetWrapperDayOfWeek OptionalDays = null, ListWrapperShiftStartVariance ShiftStartVariances = null, List<WorkPlanShift> Shifts = null, List<DeletableUserReference> Agents = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Name = Name;
             this.Enabled = Enabled;
@@ -139,6 +151,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WeeklyExactPaidMinutes = WeeklyExactPaidMinutes;
             this.WeeklyMinimumPaidMinutes = WeeklyMinimumPaidMinutes;
             this.WeeklyMaximumPaidMinutes = WeeklyMaximumPaidMinutes;
+            this.ConstrainPaidTimeGranularity = ConstrainPaidTimeGranularity;
+            this.PaidTimeGranularityMinutes = PaidTimeGranularityMinutes;
             this.ConstrainMinimumTimeBetweenShifts = ConstrainMinimumTimeBetweenShifts;
             this.MinimumTimeBetweenShiftsMinutes = MinimumTimeBetweenShiftsMinutes;
             this.MaximumDays = MaximumDays;
@@ -220,6 +234,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true</value>
         [DataMember(Name="weeklyMaximumPaidMinutes", EmitDefaultValue=false)]
         public int? WeeklyMaximumPaidMinutes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether paid time granularity is constrained for this workplan
+        /// </summary>
+        /// <value>Whether paid time granularity is constrained for this workplan</value>
+        [DataMember(Name="constrainPaidTimeGranularity", EmitDefaultValue=false)]
+        public bool? ConstrainPaidTimeGranularity { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity == true
+        /// </summary>
+        /// <value>Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity == true</value>
+        [DataMember(Name="paidTimeGranularityMinutes", EmitDefaultValue=false)]
+        public int? PaidTimeGranularityMinutes { get; set; }
         
         
         
@@ -320,6 +352,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WeeklyExactPaidMinutes: ").Append(WeeklyExactPaidMinutes).Append("\n");
             sb.Append("  WeeklyMinimumPaidMinutes: ").Append(WeeklyMinimumPaidMinutes).Append("\n");
             sb.Append("  WeeklyMaximumPaidMinutes: ").Append(WeeklyMaximumPaidMinutes).Append("\n");
+            sb.Append("  ConstrainPaidTimeGranularity: ").Append(ConstrainPaidTimeGranularity).Append("\n");
+            sb.Append("  PaidTimeGranularityMinutes: ").Append(PaidTimeGranularityMinutes).Append("\n");
             sb.Append("  ConstrainMinimumTimeBetweenShifts: ").Append(ConstrainMinimumTimeBetweenShifts).Append("\n");
             sb.Append("  MinimumTimeBetweenShiftsMinutes: ").Append(MinimumTimeBetweenShiftsMinutes).Append("\n");
             sb.Append("  MaximumDays: ").Append(MaximumDays).Append("\n");
@@ -406,6 +440,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WeeklyMaximumPaidMinutes.Equals(other.WeeklyMaximumPaidMinutes)
                 ) &&
                 (
+                    this.ConstrainPaidTimeGranularity == other.ConstrainPaidTimeGranularity ||
+                    this.ConstrainPaidTimeGranularity != null &&
+                    this.ConstrainPaidTimeGranularity.Equals(other.ConstrainPaidTimeGranularity)
+                ) &&
+                (
+                    this.PaidTimeGranularityMinutes == other.PaidTimeGranularityMinutes ||
+                    this.PaidTimeGranularityMinutes != null &&
+                    this.PaidTimeGranularityMinutes.Equals(other.PaidTimeGranularityMinutes)
+                ) &&
+                (
                     this.ConstrainMinimumTimeBetweenShifts == other.ConstrainMinimumTimeBetweenShifts ||
                     this.ConstrainMinimumTimeBetweenShifts != null &&
                     this.ConstrainMinimumTimeBetweenShifts.Equals(other.ConstrainMinimumTimeBetweenShifts)
@@ -487,6 +531,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WeeklyMaximumPaidMinutes != null)
                     hash = hash * 59 + this.WeeklyMaximumPaidMinutes.GetHashCode();
+                
+                if (this.ConstrainPaidTimeGranularity != null)
+                    hash = hash * 59 + this.ConstrainPaidTimeGranularity.GetHashCode();
+                
+                if (this.PaidTimeGranularityMinutes != null)
+                    hash = hash * 59 + this.PaidTimeGranularityMinutes.GetHashCode();
                 
                 if (this.ConstrainMinimumTimeBetweenShifts != null)
                     hash = hash * 59 + this.ConstrainMinimumTimeBetweenShifts.GetHashCode();

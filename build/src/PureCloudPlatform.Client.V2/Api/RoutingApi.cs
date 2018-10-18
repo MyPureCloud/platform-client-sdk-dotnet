@@ -661,6 +661,36 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<QueueEntityListing> GetRoutingQueuesDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
         
         /// <summary>
+        /// Get a paged listing of queues the user is a member of.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="joined">Joined (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <returns>UserQueueEntityListing</returns>
+        UserQueueEntityListing GetRoutingQueuesMe (bool? joined = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get a paged listing of queues the user is a member of.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="joined">Joined (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <returns>ApiResponse of UserQueueEntityListing</returns>
+        ApiResponse<UserQueueEntityListing> GetRoutingQueuesMeWithHttpInfo (bool? joined = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        
+        /// <summary>
         /// Get Routing Skill
         /// </summary>
         /// <remarks>
@@ -2159,6 +2189,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
+        
+        /// <summary>
+        /// Get a paged listing of queues the user is a member of.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="joined">Joined (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <returns>Task of UserQueueEntityListing</returns>
+        System.Threading.Tasks.Task<UserQueueEntityListing> GetRoutingQueuesMeAsync (bool? joined = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get a paged listing of queues the user is a member of.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="joined">Joined (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetRoutingQueuesMeAsyncWithHttpInfo (bool? joined = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Get Routing Skill
@@ -8310,6 +8370,216 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<QueueEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (QueueEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a paged listing of queues the user is a member of. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="joined">Joined (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <returns>UserQueueEntityListing</returns>
+        public UserQueueEntityListing GetRoutingQueuesMe (bool? joined = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<UserQueueEntityListing> localVarResponse = GetRoutingQueuesMeWithHttpInfo(joined, pageSize, pageNumber, sortBy, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a paged listing of queues the user is a member of. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="joined">Joined (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <returns>ApiResponse of UserQueueEntityListing</returns>
+        public ApiResponse< UserQueueEntityListing > GetRoutingQueuesMeWithHttpInfo (bool? joined = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/queues/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (joined != null) localVarQueryParams.Add(new Tuple<string, string>("joined", this.Configuration.ApiClient.ParameterToString(joined)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueuesMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueuesMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserQueueEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserQueueEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserQueueEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a paged listing of queues the user is a member of. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="joined">Joined (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <returns>Task of UserQueueEntityListing</returns>
+        public async System.Threading.Tasks.Task<UserQueueEntityListing> GetRoutingQueuesMeAsync (bool? joined = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<UserQueueEntityListing> localVarResponse = await GetRoutingQueuesMeAsyncWithHttpInfo(joined, pageSize, pageNumber, sortBy, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a paged listing of queues the user is a member of. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="joined">Joined (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetRoutingQueuesMeAsyncWithHttpInfo (bool? joined = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/queues/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (joined != null) localVarQueryParams.Add(new Tuple<string, string>("joined", this.Configuration.ApiClient.ParameterToString(joined)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueuesMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueuesMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserQueueEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserQueueEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserQueueEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

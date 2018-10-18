@@ -104,11 +104,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets DncSourceType
         /// </summary>
         [DataMember(Name="dncSourceType", EmitDefaultValue=false)]
         public DncSourceTypeEnum? DncSourceType { get; set; }
+        
+        
         
         
         
@@ -134,8 +139,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LoginId">LoginId.</param>
         /// <param name="DncCodes">DncCodes.</param>
         /// <param name="LicenseId">LicenseId.</param>
+        /// <param name="Division">Division.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DncListNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, ContactListNotificationImportStatus ImportStatus = null, int? Size = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, Object AdditionalProperties = null)
+        public DncListNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, ContactListNotificationImportStatus ImportStatus = null, int? Size = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, DocumentDataV2NotificationCreatedBy Division = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -148,6 +154,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LoginId = LoginId;
             this.DncCodes = DncCodes;
             this.LicenseId = LicenseId;
+            this.Division = Division;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -237,6 +244,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Division
+        /// </summary>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public DocumentDataV2NotificationCreatedBy Division { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -263,6 +278,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LoginId: ").Append(LoginId).Append("\n");
             sb.Append("  DncCodes: ").Append(DncCodes).Append("\n");
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -356,6 +372,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LicenseId.Equals(other.LicenseId)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -406,6 +427,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LicenseId != null)
                     hash = hash * 59 + this.LicenseId.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

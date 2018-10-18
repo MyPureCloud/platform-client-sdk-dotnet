@@ -53,6 +53,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Running,
             
             /// <summary>
+            /// Enum Cancelling for "CANCELLING"
+            /// </summary>
+            [EnumMember(Value = "CANCELLING")]
+            Cancelling,
+            
+            /// <summary>
+            /// Enum Cancelled for "CANCELLED"
+            /// </summary>
+            [EnumMember(Value = "CANCELLED")]
+            Cancelled,
+            
+            /// <summary>
             /// Enum Completed for "COMPLETED"
             /// </summary>
             [EnumMember(Value = "COMPLETED")]
@@ -397,6 +409,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -436,6 +451,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DataExportNotificationNotification" /> class.
@@ -450,7 +467,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Read">Read.</param>
         /// <param name="CreatedDateTime">CreatedDateTime.</param>
         /// <param name="ModifiedDateTime">ModifiedDateTime.</param>
-        public DataExportNotificationNotification(string Id = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null)
+        /// <param name="PercentageComplete">PercentageComplete.</param>
+        public DataExportNotificationNotification(string Id = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, double? PercentageComplete = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -462,6 +480,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Read = Read;
             this.CreatedDateTime = CreatedDateTime;
             this.ModifiedDateTime = ModifiedDateTime;
+            this.PercentageComplete = PercentageComplete;
             
         }
         
@@ -522,6 +541,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? ModifiedDateTime { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets PercentageComplete
+        /// </summary>
+        [DataMember(Name="percentageComplete", EmitDefaultValue=false)]
+        public double? PercentageComplete { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -541,6 +568,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Read: ").Append(Read).Append("\n");
             sb.Append("  CreatedDateTime: ").Append(CreatedDateTime).Append("\n");
             sb.Append("  ModifiedDateTime: ").Append(ModifiedDateTime).Append("\n");
+            sb.Append("  PercentageComplete: ").Append(PercentageComplete).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -626,6 +654,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedDateTime == other.ModifiedDateTime ||
                     this.ModifiedDateTime != null &&
                     this.ModifiedDateTime.Equals(other.ModifiedDateTime)
+                ) &&
+                (
+                    this.PercentageComplete == other.PercentageComplete ||
+                    this.PercentageComplete != null &&
+                    this.PercentageComplete.Equals(other.PercentageComplete)
                 );
         }
 
@@ -670,6 +703,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ModifiedDateTime != null)
                     hash = hash * 59 + this.ModifiedDateTime.GetHashCode();
+                
+                if (this.PercentageComplete != null)
+                    hash = hash * 59 + this.PercentageComplete.GetHashCode();
                 
                 return hash;
             }

@@ -33,6 +33,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingQueueWrapupcodes**](RoutingApi.html#getroutingqueuewrapupcodes) | **GET** /api/v2/routing/queues/{queueId}/wrapupcodes | Get the wrap-up codes for a queue |
 | [**GetRoutingQueues**](RoutingApi.html#getroutingqueues) | **GET** /api/v2/routing/queues | Get list of queues. |
 | [**GetRoutingQueuesDivisionviews**](RoutingApi.html#getroutingqueuesdivisionviews) | **GET** /api/v2/routing/queues/divisionviews | Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s). |
+| [**GetRoutingQueuesMe**](RoutingApi.html#getroutingqueuesme) | **GET** /api/v2/routing/queues/me | Get a paged listing of queues the user is a member of. |
 | [**GetRoutingSkill**](RoutingApi.html#getroutingskill) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
 | [**GetRoutingSkills**](RoutingApi.html#getroutingskills) | **GET** /api/v2/routing/skills | Get the list of routing skills. |
 | [**GetRoutingSmsAvailablephonenumbers**](RoutingApi.html#getroutingsmsavailablephonenumbers) | **GET** /api/v2/routing/sms/availablephonenumbers | Get a list of available phone numbers for SMS provisioning. |
@@ -2086,6 +2087,99 @@ namespace Example
 ### Return type
 
 [**QueueEntityListing**](QueueEntityListing.html)
+
+<a name="getroutingqueuesme"></a>
+
+## [**UserQueueEntityListing**](UserQueueEntityListing.html) GetRoutingQueuesMe (bool? joined = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+
+
+
+Get a paged listing of queues the user is a member of.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingQueuesMeExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new RoutingApi();
+            
+            
+            var joined = true;  // bool? | Joined (optional) 
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            
+            
+            
+
+            try
+            {
+                
+                // Get a paged listing of queues the user is a member of.
+                
+                UserQueueEntityListing result = apiInstance.GetRoutingQueuesMe(joined, pageSize, pageNumber, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingQueuesMe: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **joined** | **bool?**| Joined | [optional]  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **sortOrder** | **string**| Sort order | [optional] [default to asc] |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserQueueEntityListing**](UserQueueEntityListing.html)
 
 <a name="getroutingskill"></a>
 

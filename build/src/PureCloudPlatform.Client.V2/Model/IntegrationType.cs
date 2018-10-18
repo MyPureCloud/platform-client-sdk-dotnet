@@ -95,6 +95,46 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationType" /> class.
@@ -108,13 +148,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The ID of the integration type. (required).</param>
         /// <param name="Name">Name.</param>
         /// <param name="Images">Collection of logos..</param>
+        /// <param name="HelpLinks">List of links to additional help resources.</param>
         /// <param name="Credentials">Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration..</param>
         /// <param name="UserPermissions">List of permissions required to permit user access to the integration type..</param>
-        public IntegrationType(string Id = null, string Name = null, List<UserImage> Images = null, Dictionary<string, CredentialSpecification> Credentials = null, List<string> UserPermissions = null)
+        public IntegrationType(string Id = null, string Name = null, List<UserImage> Images = null, List<HelpLink> HelpLinks = null, Dictionary<string, CredentialSpecification> Credentials = null, List<string> UserPermissions = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Images = Images;
+            this.HelpLinks = HelpLinks;
             this.Credentials = Credentials;
             this.UserPermissions = UserPermissions;
             
@@ -212,6 +254,78 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Name of the vendor of this integration type
+        /// </summary>
+        /// <value>Name of the vendor of this integration type</value>
+        [DataMember(Name="vendorName", EmitDefaultValue=false)]
+        public string VendorName { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// URI of the vendor&#39;s website
+        /// </summary>
+        /// <value>URI of the vendor&#39;s website</value>
+        [DataMember(Name="vendorWebsiteUri", EmitDefaultValue=false)]
+        public string VendorWebsiteUri { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// URI of the marketplace listing for this integration type
+        /// </summary>
+        /// <value>URI of the marketplace listing for this integration type</value>
+        [DataMember(Name="marketplaceUri", EmitDefaultValue=false)]
+        public string MarketplaceUri { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// URI of frequently asked questions about the integration type
+        /// </summary>
+        /// <value>URI of frequently asked questions about the integration type</value>
+        [DataMember(Name="faqUri", EmitDefaultValue=false)]
+        public string FaqUri { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// URI of a privacy policy for users of the integration type
+        /// </summary>
+        /// <value>URI of a privacy policy for users of the integration type</value>
+        [DataMember(Name="privacyPolicyUri", EmitDefaultValue=false)]
+        public string PrivacyPolicyUri { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// URI for vendor support
+        /// </summary>
+        /// <value>URI for vendor support</value>
+        [DataMember(Name="supportContactUri", EmitDefaultValue=false)]
+        public string SupportContactUri { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// URI for vendor sales information
+        /// </summary>
+        /// <value>URI for vendor sales information</value>
+        [DataMember(Name="salesContactUri", EmitDefaultValue=false)]
+        public string SalesContactUri { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// List of links to additional help resources
+        /// </summary>
+        /// <value>List of links to additional help resources</value>
+        [DataMember(Name="helpLinks", EmitDefaultValue=false)]
+        public List<HelpLink> HelpLinks { get; set; }
+        
+        
+        
+        /// <summary>
         /// Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration.
         /// </summary>
         /// <value>Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration.</value>
@@ -274,6 +388,14 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConfigAdvancedSchemaUri: ").Append(ConfigAdvancedSchemaUri).Append("\n");
             sb.Append("  HelpUri: ").Append(HelpUri).Append("\n");
             sb.Append("  TermsOfServiceUri: ").Append(TermsOfServiceUri).Append("\n");
+            sb.Append("  VendorName: ").Append(VendorName).Append("\n");
+            sb.Append("  VendorWebsiteUri: ").Append(VendorWebsiteUri).Append("\n");
+            sb.Append("  MarketplaceUri: ").Append(MarketplaceUri).Append("\n");
+            sb.Append("  FaqUri: ").Append(FaqUri).Append("\n");
+            sb.Append("  PrivacyPolicyUri: ").Append(PrivacyPolicyUri).Append("\n");
+            sb.Append("  SupportContactUri: ").Append(SupportContactUri).Append("\n");
+            sb.Append("  SalesContactUri: ").Append(SalesContactUri).Append("\n");
+            sb.Append("  HelpLinks: ").Append(HelpLinks).Append("\n");
             sb.Append("  Credentials: ").Append(Credentials).Append("\n");
             sb.Append("  NonInstallable: ").Append(NonInstallable).Append("\n");
             sb.Append("  MaxInstances: ").Append(MaxInstances).Append("\n");
@@ -366,6 +488,46 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TermsOfServiceUri.Equals(other.TermsOfServiceUri)
                 ) &&
                 (
+                    this.VendorName == other.VendorName ||
+                    this.VendorName != null &&
+                    this.VendorName.Equals(other.VendorName)
+                ) &&
+                (
+                    this.VendorWebsiteUri == other.VendorWebsiteUri ||
+                    this.VendorWebsiteUri != null &&
+                    this.VendorWebsiteUri.Equals(other.VendorWebsiteUri)
+                ) &&
+                (
+                    this.MarketplaceUri == other.MarketplaceUri ||
+                    this.MarketplaceUri != null &&
+                    this.MarketplaceUri.Equals(other.MarketplaceUri)
+                ) &&
+                (
+                    this.FaqUri == other.FaqUri ||
+                    this.FaqUri != null &&
+                    this.FaqUri.Equals(other.FaqUri)
+                ) &&
+                (
+                    this.PrivacyPolicyUri == other.PrivacyPolicyUri ||
+                    this.PrivacyPolicyUri != null &&
+                    this.PrivacyPolicyUri.Equals(other.PrivacyPolicyUri)
+                ) &&
+                (
+                    this.SupportContactUri == other.SupportContactUri ||
+                    this.SupportContactUri != null &&
+                    this.SupportContactUri.Equals(other.SupportContactUri)
+                ) &&
+                (
+                    this.SalesContactUri == other.SalesContactUri ||
+                    this.SalesContactUri != null &&
+                    this.SalesContactUri.Equals(other.SalesContactUri)
+                ) &&
+                (
+                    this.HelpLinks == other.HelpLinks ||
+                    this.HelpLinks != null &&
+                    this.HelpLinks.SequenceEqual(other.HelpLinks)
+                ) &&
+                (
                     this.Credentials == other.Credentials ||
                     this.Credentials != null &&
                     this.Credentials.SequenceEqual(other.Credentials)
@@ -433,6 +595,30 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TermsOfServiceUri != null)
                     hash = hash * 59 + this.TermsOfServiceUri.GetHashCode();
+                
+                if (this.VendorName != null)
+                    hash = hash * 59 + this.VendorName.GetHashCode();
+                
+                if (this.VendorWebsiteUri != null)
+                    hash = hash * 59 + this.VendorWebsiteUri.GetHashCode();
+                
+                if (this.MarketplaceUri != null)
+                    hash = hash * 59 + this.MarketplaceUri.GetHashCode();
+                
+                if (this.FaqUri != null)
+                    hash = hash * 59 + this.FaqUri.GetHashCode();
+                
+                if (this.PrivacyPolicyUri != null)
+                    hash = hash * 59 + this.PrivacyPolicyUri.GetHashCode();
+                
+                if (this.SupportContactUri != null)
+                    hash = hash * 59 + this.SupportContactUri.GetHashCode();
+                
+                if (this.SalesContactUri != null)
+                    hash = hash * 59 + this.SalesContactUri.GetHashCode();
+                
+                if (this.HelpLinks != null)
+                    hash = hash * 59 + this.HelpLinks.GetHashCode();
                 
                 if (this.Credentials != null)
                     hash = hash * 59 + this.Credentials.GetHashCode();

@@ -30,6 +30,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetQualityFormsSurvey**](QualityApi.html#getqualityformssurvey) | **GET** /api/v2/quality/forms/surveys/{formId} | Get a survey form |
 | [**GetQualityFormsSurveyVersions**](QualityApi.html#getqualityformssurveyversions) | **GET** /api/v2/quality/forms/surveys/{formId}/versions | Gets all the revisions for a specific survey. |
 | [**GetQualityFormsSurveys**](QualityApi.html#getqualityformssurveys) | **GET** /api/v2/quality/forms/surveys | Get the list of survey forms |
+| [**GetQualityFormsSurveysBulk**](QualityApi.html#getqualityformssurveysbulk) | **GET** /api/v2/quality/forms/surveys/bulk | Retrieve a list of survey forms by their ids |
 | [**GetQualityKeywordset**](QualityApi.html#getqualitykeywordset) | **GET** /api/v2/quality/keywordsets/{keywordSetId} | Get a keywordSet by id. |
 | [**GetQualityKeywordsets**](QualityApi.html#getqualitykeywordsets) | **GET** /api/v2/quality/keywordsets | Get the list of keyword sets |
 | [**GetQualityPublishedform**](QualityApi.html#getqualitypublishedform) | **GET** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
@@ -2163,6 +2164,76 @@ namespace Example
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **expand** | **string**| Expand | [optional]  |
 | **name** | **string**| Name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+
+<a name="getqualityformssurveysbulk"></a>
+
+## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveysBulk (List<string> ids)
+
+
+
+Retrieve a list of survey forms by their ids
+
+
+
+Requires ANY permissions: 
+
+* quality:surveyForm:view
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityFormsSurveysBulkExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            
+            var ids = new List<string>(); // List<string> | A comma-delimited list of valid survey form ids
+            
+            
+
+            try
+            {
+                
+                // Retrieve a list of survey forms by their ids
+                
+                SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveysBulk(ids);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityFormsSurveysBulk: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ids** | [**List<string>**](string.html)| A comma-delimited list of valid survey form ids |  |
 {: class="table table-striped"}
 
 ### Return type

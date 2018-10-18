@@ -2337,7 +2337,7 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunitworkplans"></a>
 
-## [**WorkPlanListResponse**](WorkPlanListResponse.html) GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, string expand = null)
+## [**WorkPlanListResponse**](WorkPlanListResponse.html) GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null)
 
 
 
@@ -2382,8 +2382,8 @@ namespace Example
             
             
             
-            var expand = expand_example;  // string |  (optional) 
             
+            var expand = new List<string>(); // List<string> |  (optional) 
             
             
 
@@ -2410,7 +2410,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **expand** | **string**|  | [optional] <br />**Values**: agentCount |
+| **expand** | [**List<string>**](string.html)|  | [optional] <br />**Values**: agentCount, details |
 {: class="table table-striped"}
 
 ### Return type

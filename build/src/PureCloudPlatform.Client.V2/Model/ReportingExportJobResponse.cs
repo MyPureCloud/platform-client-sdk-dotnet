@@ -54,6 +54,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Running,
             
             /// <summary>
+            /// Enum Cancelling for "CANCELLING"
+            /// </summary>
+            [EnumMember(Value = "CANCELLING")]
+            Cancelling,
+            
+            /// <summary>
+            /// Enum Cancelled for "CANCELLED"
+            /// </summary>
+            [EnumMember(Value = "CANCELLED")]
+            Cancelled,
+            
+            /// <summary>
             /// Enum Completed for "COMPLETED"
             /// </summary>
             [EnumMember(Value = "COMPLETED")]
@@ -425,6 +437,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current status of the export request
         /// </summary>
@@ -480,6 +495,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobResponse" /> class.
@@ -504,7 +521,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedDateTime">The created date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
         /// <param name="ModifiedDateTime">The last modified date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
         /// <param name="Locale">The locale use for localization of the exported data, i.e. en-us, es-mx   (required).</param>
-        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null)
+        /// <param name="PercentageComplete">The percentage of the job that has completed processing (required).</param>
+        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null)
         {
             this.Name = Name;
             this.Status = Status;
@@ -520,6 +538,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedDateTime = CreatedDateTime;
             this.ModifiedDateTime = ModifiedDateTime;
             this.Locale = Locale;
+            this.PercentageComplete = PercentageComplete;
             
         }
         
@@ -632,6 +651,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The percentage of the job that has completed processing
+        /// </summary>
+        /// <value>The percentage of the job that has completed processing</value>
+        [DataMember(Name="percentageComplete", EmitDefaultValue=false)]
+        public double? PercentageComplete { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -663,6 +691,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedDateTime: ").Append(CreatedDateTime).Append("\n");
             sb.Append("  ModifiedDateTime: ").Append(ModifiedDateTime).Append("\n");
             sb.Append("  Locale: ").Append(Locale).Append("\n");
+            sb.Append("  PercentageComplete: ").Append(PercentageComplete).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -776,6 +805,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Locale.Equals(other.Locale)
                 ) &&
                 (
+                    this.PercentageComplete == other.PercentageComplete ||
+                    this.PercentageComplete != null &&
+                    this.PercentageComplete.Equals(other.PercentageComplete)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -838,6 +872,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Locale != null)
                     hash = hash * 59 + this.Locale.GetHashCode();
+                
+                if (this.PercentageComplete != null)
+                    hash = hash * 59 + this.PercentageComplete.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
