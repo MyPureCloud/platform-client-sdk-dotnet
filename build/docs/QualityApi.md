@@ -31,6 +31,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetQualityFormsSurveyVersions**](QualityApi.html#getqualityformssurveyversions) | **GET** /api/v2/quality/forms/surveys/{formId}/versions | Gets all the revisions for a specific survey. |
 | [**GetQualityFormsSurveys**](QualityApi.html#getqualityformssurveys) | **GET** /api/v2/quality/forms/surveys | Get the list of survey forms |
 | [**GetQualityFormsSurveysBulk**](QualityApi.html#getqualityformssurveysbulk) | **GET** /api/v2/quality/forms/surveys/bulk | Retrieve a list of survey forms by their ids |
+| [**GetQualityFormsSurveysBulkContexts**](QualityApi.html#getqualityformssurveysbulkcontexts) | **GET** /api/v2/quality/forms/surveys/bulk/contexts | Retrieve a list of the latest form versions by context ids |
 | [**GetQualityKeywordset**](QualityApi.html#getqualitykeywordset) | **GET** /api/v2/quality/keywordsets/{keywordSetId} | Get a keywordSet by id. |
 | [**GetQualityKeywordsets**](QualityApi.html#getqualitykeywordsets) | **GET** /api/v2/quality/keywordsets | Get the list of keyword sets |
 | [**GetQualityPublishedform**](QualityApi.html#getqualitypublishedform) | **GET** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
@@ -1550,7 +1551,7 @@ namespace Example
 
 <a name="getqualityforms"></a>
 
-## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1618,13 +1619,18 @@ namespace Example
             
             
             
+            
+            var sortOrder = sortOrder_example;  // string | Order to sort results, either asc or desc (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get the list of evaluation forms
                 
-                EvaluationFormEntityListing result = apiInstance.GetQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
+                EvaluationFormEntityListing result = apiInstance.GetQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1648,6 +1654,7 @@ namespace Example
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **expand** | **string**| Expand | [optional]  |
 | **name** | **string**| Name | [optional]  |
+| **sortOrder** | **string**| Order to sort results, either asc or desc | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1808,7 +1815,7 @@ namespace Example
 
 <a name="getqualityformsevaluations"></a>
 
-## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
 
 
 
@@ -1876,13 +1883,18 @@ namespace Example
             
             
             
+            
+            var sortOrder = sortOrder_example;  // string | Order to sort results, either asc or desc (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get the list of evaluation forms
                 
-                EvaluationFormEntityListing result = apiInstance.GetQualityFormsEvaluations(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
+                EvaluationFormEntityListing result = apiInstance.GetQualityFormsEvaluations(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1906,6 +1918,7 @@ namespace Example
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **expand** | **string**| Expand | [optional]  |
 | **name** | **string**| Name | [optional]  |
+| **sortOrder** | **string**| Order to sort results, either asc or desc | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2066,7 +2079,7 @@ namespace Example
 
 <a name="getqualityformssurveys"></a>
 
-## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveys (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveys (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
 
 
 
@@ -2134,13 +2147,18 @@ namespace Example
             
             
             
+            
+            var sortOrder = sortOrder_example;  // string | Order to sort results, either asc or desc (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get the list of survey forms
                 
-                SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveys(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
+                SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveys(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2164,6 +2182,7 @@ namespace Example
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **expand** | **string**| Expand | [optional]  |
 | **name** | **string**| Name | [optional]  |
+| **sortOrder** | **string**| Order to sort results, either asc or desc | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2172,7 +2191,7 @@ namespace Example
 
 <a name="getqualityformssurveysbulk"></a>
 
-## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveysBulk (List<string> ids)
+## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveysBulk (List<string> id)
 
 
 
@@ -2207,7 +2226,7 @@ namespace Example
             
             
             
-            var ids = new List<string>(); // List<string> | A comma-delimited list of valid survey form ids
+            var id = new List<string>(); // List<string> | A comma-delimited list of valid survey form ids
             
             
 
@@ -2216,7 +2235,7 @@ namespace Example
                 
                 // Retrieve a list of survey forms by their ids
                 
-                SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveysBulk(ids);
+                SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveysBulk(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2233,7 +2252,83 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ids** | [**List<string>**](string.html)| A comma-delimited list of valid survey form ids |  |
+| **id** | [**List<string>**](string.html)| A comma-delimited list of valid survey form ids |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+
+<a name="getqualityformssurveysbulkcontexts"></a>
+
+## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveysBulkContexts (List<string> contextId, bool? published = null)
+
+
+
+Retrieve a list of the latest form versions by context ids
+
+
+
+Requires ANY permissions: 
+
+* quality:surveyForm:view
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityFormsSurveysBulkContextsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            
+            var contextId = new List<string>(); // List<string> | A comma-delimited list of valid survey form context ids
+            
+            
+            
+            var published = true;  // bool? | If true, the latest published version will be included. If false, only the unpublished version will be included. (optional)  (default to true)
+            
+            
+            
+
+            try
+            {
+                
+                // Retrieve a list of the latest form versions by context ids
+                
+                SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveysBulkContexts(contextId, published);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityFormsSurveysBulkContexts: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contextId** | [**List<string>**](string.html)| A comma-delimited list of valid survey form context ids |  |
+| **published** | **bool?**| If true, the latest published version will be included. If false, only the unpublished version will be included. | [optional] [default to true] |
 {: class="table table-striped"}
 
 ### Return type

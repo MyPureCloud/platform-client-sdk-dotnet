@@ -46,11 +46,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundContactlistfilter**](OutboundApi.html#getoutboundcontactlistfilter) | **GET** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Get Contact list filter |
 | [**GetOutboundContactlistfilters**](OutboundApi.html#getoutboundcontactlistfilters) | **GET** /api/v2/outbound/contactlistfilters | Query Contact list filters |
 | [**GetOutboundContactlists**](OutboundApi.html#getoutboundcontactlists) | **GET** /api/v2/outbound/contactlists | Query a list of contact lists. |
+| [**GetOutboundContactlistsDivisionview**](OutboundApi.html#getoutboundcontactlistsdivisionview) | **GET** /api/v2/outbound/contactlists/divisionviews/{contactListId} | Get a basic ContactList information object |
 | [**GetOutboundContactlistsDivisionviews**](OutboundApi.html#getoutboundcontactlistsdivisionviews) | **GET** /api/v2/outbound/contactlists/divisionviews | Query a list of simplified contact list objects. |
 | [**GetOutboundDnclist**](OutboundApi.html#getoutbounddnclist) | **GET** /api/v2/outbound/dnclists/{dncListId} | Get dialer DNC list |
 | [**GetOutboundDnclistExport**](OutboundApi.html#getoutbounddnclistexport) | **GET** /api/v2/outbound/dnclists/{dncListId}/export | Get the URI of a DNC list export. |
 | [**GetOutboundDnclistImportstatus**](OutboundApi.html#getoutbounddnclistimportstatus) | **GET** /api/v2/outbound/dnclists/{dncListId}/importstatus | Get dialer dncList import status. |
 | [**GetOutboundDnclists**](OutboundApi.html#getoutbounddnclists) | **GET** /api/v2/outbound/dnclists | Query dialer DNC lists |
+| [**GetOutboundDnclistsDivisionview**](OutboundApi.html#getoutbounddnclistsdivisionview) | **GET** /api/v2/outbound/dnclists/divisionviews/{dncListId} | Get a basic DncList information object |
+| [**GetOutboundDnclistsDivisionviews**](OutboundApi.html#getoutbounddnclistsdivisionviews) | **GET** /api/v2/outbound/dnclists/divisionviews | Query a list of simplified dnc list objects. |
 | [**GetOutboundEvent**](OutboundApi.html#getoutboundevent) | **GET** /api/v2/outbound/events/{eventId} | Get Dialer Event |
 | [**GetOutboundEvents**](OutboundApi.html#getoutboundevents) | **GET** /api/v2/outbound/events | Query Event Logs |
 | [**GetOutboundRuleset**](OutboundApi.html#getoutboundruleset) | **GET** /api/v2/outbound/rulesets/{ruleSetId} | Get a Rule Set by ID. |
@@ -72,7 +75,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundCampaignrules**](OutboundApi.html#postoutboundcampaignrules) | **POST** /api/v2/outbound/campaignrules | Create Campaign Rule |
 | [**PostOutboundCampaigns**](OutboundApi.html#postoutboundcampaigns) | **POST** /api/v2/outbound/campaigns | Create a campaign. |
 | [**PostOutboundCampaignsProgress**](OutboundApi.html#postoutboundcampaignsprogress) | **POST** /api/v2/outbound/campaigns/progress | Get progress for a list of campaigns |
-| [**PostOutboundContactlistClear**](OutboundApi.html#postoutboundcontactlistclear) | **POST** /api/v2/outbound/contactlists/{contactListId}/clear | Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. |
 | [**PostOutboundContactlistContacts**](OutboundApi.html#postoutboundcontactlistcontacts) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts | Add contacts to a contact list. |
 | [**PostOutboundContactlistContactsBulk**](OutboundApi.html#postoutboundcontactlistcontactsbulk) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts/bulk | Get contacts from a contact list. |
 | [**PostOutboundContactlistExport**](OutboundApi.html#postoutboundcontactlistexport) | **POST** /api/v2/outbound/contactlists/{contactListId}/export | Initiate the export of a contact list. |
@@ -3166,6 +3168,88 @@ namespace Example
 
 [**ContactListEntityListing**](ContactListEntityListing.html)
 
+<a name="getoutboundcontactlistsdivisionview"></a>
+
+## [**ContactListDivisionView**](ContactListDivisionView.html) GetOutboundContactlistsDivisionview (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
+
+
+
+Get a basic ContactList information object
+
+This returns a simplified version of a ContactList, consisting of the name, division, column names, phone columns, import status, and size.
+
+Requires ANY permissions: 
+
+* outbound:contactList:search
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundContactlistsDivisionviewExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new OutboundApi();
+            
+            
+            var contactListId = contactListId_example;  // string | Contactlist ID
+            
+            
+            
+            
+            var includeImportStatus = true;  // bool? | Include import status (optional)  (default to false)
+            
+            
+            
+            
+            var includeSize = true;  // bool? | Include size (optional)  (default to false)
+            
+            
+            
+
+            try
+            {
+                
+                // Get a basic ContactList information object
+                
+                ContactListDivisionView result = apiInstance.GetOutboundContactlistsDivisionview(contactListId, includeImportStatus, includeSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundContactlistsDivisionview: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| Contactlist ID |  |
+| **includeImportStatus** | **bool?**| Include import status | [optional] [default to false] |
+| **includeSize** | **bool?**| Include size | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactListDivisionView**](ContactListDivisionView.html)
+
 <a name="getoutboundcontactlistsdivisionviews"></a>
 
 ## [**ContactListDivisionViewListing**](ContactListDivisionViewListing.html) GetOutboundContactlistsDivisionviews (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
@@ -3174,7 +3258,7 @@ namespace Example
 
 Query a list of simplified contact list objects.
 
-This return a simplified version of contact lists, consisting of the name, divisions, columns, and phone columns.
+This return a simplified version of contact lists, consisting of the name, division, column names, phone columns, import status, and size.
 
 Requires ANY permissions: 
 
@@ -3636,6 +3720,206 @@ namespace Example
 ### Return type
 
 [**DncListEntityListing**](DncListEntityListing.html)
+
+<a name="getoutbounddnclistsdivisionview"></a>
+
+## [**DncListDivisionView**](DncListDivisionView.html) GetOutboundDnclistsDivisionview (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
+
+
+
+Get a basic DncList information object
+
+This returns a simplified version of a DncList, consisting of the name, division, import status, and size.
+
+Requires ANY permissions: 
+
+* outbound:dncList:search
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundDnclistsDivisionviewExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new OutboundApi();
+            
+            
+            var dncListId = dncListId_example;  // string | Dnclist ID
+            
+            
+            
+            
+            var includeImportStatus = true;  // bool? | Include import status (optional)  (default to false)
+            
+            
+            
+            
+            var includeSize = true;  // bool? | Include size (optional)  (default to false)
+            
+            
+            
+
+            try
+            {
+                
+                // Get a basic DncList information object
+                
+                DncListDivisionView result = apiInstance.GetOutboundDnclistsDivisionview(dncListId, includeImportStatus, includeSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundDnclistsDivisionview: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dncListId** | **string**| Dnclist ID |  |
+| **includeImportStatus** | **bool?**| Include import status | [optional] [default to false] |
+| **includeSize** | **bool?**| Include size | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DncListDivisionView**](DncListDivisionView.html)
+
+<a name="getoutbounddnclistsdivisionviews"></a>
+
+## [**DncListDivisionViewListing**](DncListDivisionViewListing.html) GetOutboundDnclistsDivisionviews (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
+
+
+
+Query a list of simplified dnc list objects.
+
+This return a simplified version of dnc lists, consisting of the name, division, import status, and size.
+
+Requires ANY permissions: 
+
+* outbound:dncList:search
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundDnclistsDivisionviewsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new OutboundApi();
+            
+            
+            var includeImportStatus = true;  // bool? | Include import status (optional)  (default to false)
+            
+            
+            
+            
+            var includeSize = true;  // bool? | Include size (optional)  (default to false)
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
+            
+            
+            
+            
+            var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
+            
+            var id = new List<string>(); // List<string> | id (optional) 
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional) 
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
+            
+            
+            
+
+            try
+            {
+                
+                // Query a list of simplified dnc list objects.
+                
+                DncListDivisionViewListing result = apiInstance.GetOutboundDnclistsDivisionviews(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundDnclistsDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **includeImportStatus** | **bool?**| Include import status | [optional] [default to false] |
+| **includeSize** | **bool?**| Include size | [optional] [default to false] |
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+| **name** | **string**| Name | [optional]  |
+| **id** | [**List<string>**](string.html)| id | [optional]  |
+| **sortBy** | **string**| Sort by | [optional]  |
+| **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
+{: class="table table-striped"}
+
+### Return type
+
+[**DncListDivisionViewListing**](DncListDivisionViewListing.html)
 
 <a name="getoutboundevent"></a>
 
@@ -5200,75 +5484,6 @@ namespace Example
 ### Return type
 
 [**List<CampaignProgress>**](CampaignProgress.html)
-
-<a name="postoutboundcontactlistclear"></a>
-
-## void PostOutboundContactlistClear (string contactListId)
-
-
-
-Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
-
-
-
-Requires ANY permissions: 
-
-* outbound:contact:delete
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostOutboundContactlistClearExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
-
-            var apiInstance = new OutboundApi();
-            
-            
-            var contactListId = contactListId_example;  // string | Contact List ID
-            
-            
-            
-
-            try
-            {
-                
-                // Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
-                
-                apiInstance.PostOutboundContactlistClear(contactListId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlistClear: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **contactListId** | **string**| Contact List ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
 
 <a name="postoutboundcontactlistcontacts"></a>
 

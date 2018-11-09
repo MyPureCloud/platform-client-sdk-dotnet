@@ -251,6 +251,95 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Provides the agent duration sort order
+        /// </summary>
+        /// <value>Provides the agent duration sort order</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AgentDurationSortOrderEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Ascending for "ascending"
+            /// </summary>
+            [EnumMember(Value = "ascending")]
+            Ascending,
+            
+            /// <summary>
+            /// Enum Descending for "descending"
+            /// </summary>
+            [EnumMember(Value = "descending")]
+            Descending
+        }
+        
+        
+        
+        
+        /// <summary>
+        /// Provides the waiting duration sort order
+        /// </summary>
+        /// <value>Provides the waiting duration sort order</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum WaitingDurationSortOrderEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Ascending for "ascending"
+            /// </summary>
+            [EnumMember(Value = "ascending")]
+            Ascending,
+            
+            /// <summary>
+            /// Enum Descending for "descending"
+            /// </summary>
+            [EnumMember(Value = "descending")]
+            Descending
+        }
+        
+        
+        
+        
+        /// <summary>
+        /// Provides the interacting duration sort order
+        /// </summary>
+        /// <value>Provides the interacting duration sort order</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InteractingDurationSortOrderEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Ascending for "ascending"
+            /// </summary>
+            [EnumMember(Value = "ascending")]
+            Ascending,
+            
+            /// <summary>
+            /// Enum Descending for "descending"
+            /// </summary>
+            [EnumMember(Value = "descending")]
+            Descending
+        }
         
         
         
@@ -302,6 +391,57 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Provides the agent duration sort order
+        /// </summary>
+        /// <value>Provides the agent duration sort order</value>
+        [DataMember(Name="agentDurationSortOrder", EmitDefaultValue=false)]
+        public AgentDurationSortOrderEnum? AgentDurationSortOrder { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Provides the waiting duration sort order
+        /// </summary>
+        /// <value>Provides the waiting duration sort order</value>
+        [DataMember(Name="waitingDurationSortOrder", EmitDefaultValue=false)]
+        public WaitingDurationSortOrderEnum? WaitingDurationSortOrder { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Provides the interacting duration sort order
+        /// </summary>
+        /// <value>Provides the interacting duration sort order</value>
+        [DataMember(Name="interactingDurationSortOrder", EmitDefaultValue=false)]
+        public InteractingDurationSortOrderEnum? InteractingDurationSortOrder { get; set; }
         
         
         
@@ -345,7 +485,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurveyFormIds">The survey form ids used to filter the view.</param>
         /// <param name="SurveyTotalScore">The survey total score used to filter the view.</param>
         /// <param name="SurveyNpsScore">The survey NPS score used to filter the view.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null)
+        /// <param name="ShowSecondaryStatus">Indicates if the Secondary Status should be shown.</param>
+        /// <param name="AgentDurationSortOrder">Provides the agent duration sort order.</param>
+        /// <param name="WaitingDurationSortOrder">Provides the waiting duration sort order.</param>
+        /// <param name="InteractingDurationSortOrder">Provides the interacting duration sort order.</param>
+        /// <param name="AgentName">Displays the Agent name as provided by the user.</param>
+        /// <param name="SkillsList">The list of skill strings as free form text.</param>
+        /// <param name="LanguageList">The list of language strings as free form text.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -378,6 +525,13 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SurveyFormIds = SurveyFormIds;
             this.SurveyTotalScore = SurveyTotalScore;
             this.SurveyNpsScore = SurveyNpsScore;
+            this.ShowSecondaryStatus = ShowSecondaryStatus;
+            this.AgentDurationSortOrder = AgentDurationSortOrder;
+            this.WaitingDurationSortOrder = WaitingDurationSortOrder;
+            this.InteractingDurationSortOrder = InteractingDurationSortOrder;
+            this.AgentName = AgentName;
+            this.SkillsList = SkillsList;
+            this.LanguageList = LanguageList;
             
         }
         
@@ -661,6 +815,48 @@ namespace PureCloudPlatform.Client.V2.Model
         public NumericRange SurveyNpsScore { get; set; }
         
         
+        
+        /// <summary>
+        /// Indicates if the Secondary Status should be shown
+        /// </summary>
+        /// <value>Indicates if the Secondary Status should be shown</value>
+        [DataMember(Name="showSecondaryStatus", EmitDefaultValue=false)]
+        public bool? ShowSecondaryStatus { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Displays the Agent name as provided by the user
+        /// </summary>
+        /// <value>Displays the Agent name as provided by the user</value>
+        [DataMember(Name="agentName", EmitDefaultValue=false)]
+        public string AgentName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of skill strings as free form text
+        /// </summary>
+        /// <value>The list of skill strings as free form text</value>
+        [DataMember(Name="skillsList", EmitDefaultValue=false)]
+        public List<string> SkillsList { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of language strings as free form text
+        /// </summary>
+        /// <value>The list of language strings as free form text</value>
+        [DataMember(Name="languageList", EmitDefaultValue=false)]
+        public List<string> LanguageList { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -701,6 +897,13 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SurveyFormIds: ").Append(SurveyFormIds).Append("\n");
             sb.Append("  SurveyTotalScore: ").Append(SurveyTotalScore).Append("\n");
             sb.Append("  SurveyNpsScore: ").Append(SurveyNpsScore).Append("\n");
+            sb.Append("  ShowSecondaryStatus: ").Append(ShowSecondaryStatus).Append("\n");
+            sb.Append("  AgentDurationSortOrder: ").Append(AgentDurationSortOrder).Append("\n");
+            sb.Append("  WaitingDurationSortOrder: ").Append(WaitingDurationSortOrder).Append("\n");
+            sb.Append("  InteractingDurationSortOrder: ").Append(InteractingDurationSortOrder).Append("\n");
+            sb.Append("  AgentName: ").Append(AgentName).Append("\n");
+            sb.Append("  SkillsList: ").Append(SkillsList).Append("\n");
+            sb.Append("  LanguageList: ").Append(LanguageList).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -891,6 +1094,41 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SurveyNpsScore == other.SurveyNpsScore ||
                     this.SurveyNpsScore != null &&
                     this.SurveyNpsScore.Equals(other.SurveyNpsScore)
+                ) &&
+                (
+                    this.ShowSecondaryStatus == other.ShowSecondaryStatus ||
+                    this.ShowSecondaryStatus != null &&
+                    this.ShowSecondaryStatus.Equals(other.ShowSecondaryStatus)
+                ) &&
+                (
+                    this.AgentDurationSortOrder == other.AgentDurationSortOrder ||
+                    this.AgentDurationSortOrder != null &&
+                    this.AgentDurationSortOrder.Equals(other.AgentDurationSortOrder)
+                ) &&
+                (
+                    this.WaitingDurationSortOrder == other.WaitingDurationSortOrder ||
+                    this.WaitingDurationSortOrder != null &&
+                    this.WaitingDurationSortOrder.Equals(other.WaitingDurationSortOrder)
+                ) &&
+                (
+                    this.InteractingDurationSortOrder == other.InteractingDurationSortOrder ||
+                    this.InteractingDurationSortOrder != null &&
+                    this.InteractingDurationSortOrder.Equals(other.InteractingDurationSortOrder)
+                ) &&
+                (
+                    this.AgentName == other.AgentName ||
+                    this.AgentName != null &&
+                    this.AgentName.Equals(other.AgentName)
+                ) &&
+                (
+                    this.SkillsList == other.SkillsList ||
+                    this.SkillsList != null &&
+                    this.SkillsList.SequenceEqual(other.SkillsList)
+                ) &&
+                (
+                    this.LanguageList == other.LanguageList ||
+                    this.LanguageList != null &&
+                    this.LanguageList.SequenceEqual(other.LanguageList)
                 );
         }
 
@@ -998,6 +1236,27 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SurveyNpsScore != null)
                     hash = hash * 59 + this.SurveyNpsScore.GetHashCode();
+                
+                if (this.ShowSecondaryStatus != null)
+                    hash = hash * 59 + this.ShowSecondaryStatus.GetHashCode();
+                
+                if (this.AgentDurationSortOrder != null)
+                    hash = hash * 59 + this.AgentDurationSortOrder.GetHashCode();
+                
+                if (this.WaitingDurationSortOrder != null)
+                    hash = hash * 59 + this.WaitingDurationSortOrder.GetHashCode();
+                
+                if (this.InteractingDurationSortOrder != null)
+                    hash = hash * 59 + this.InteractingDurationSortOrder.GetHashCode();
+                
+                if (this.AgentName != null)
+                    hash = hash * 59 + this.AgentName.GetHashCode();
+                
+                if (this.SkillsList != null)
+                    hash = hash * 59 + this.SkillsList.GetHashCode();
+                
+                if (this.LanguageList != null)
+                    hash = hash * 59 + this.LanguageList.GetHashCode();
                 
                 return hash;
             }

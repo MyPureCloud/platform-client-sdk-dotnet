@@ -53,6 +53,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Complete,
             
             /// <summary>
+            /// Enum Canceled for "Canceled"
+            /// </summary>
+            [EnumMember(Value = "Canceled")]
+            Canceled,
+            
+            /// <summary>
             /// Enum Error for "Error"
             /// </summary>
             [EnumMember(Value = "Error")]

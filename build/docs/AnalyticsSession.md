@@ -45,6 +45,7 @@ title: AnalyticsSession
 | **Segments** | [**List&lt;AnalyticsConversationSegment&gt;**](AnalyticsConversationSegment.html) | List of segments for this session | [optional] |
 | **Metrics** | [**List&lt;AnalyticsSessionMetric&gt;**](AnalyticsSessionMetric.html) | List of metrics for this session | [optional] |
 | **Flow** | [**AnalyticsFlow**](AnalyticsFlow.html) | IVR flow execution associated with this session | [optional] |
+| **Recording** | **bool?** | Flag determining if an audio recording was started or not | [optional] |
 {: class="table table-striped"}
 
 

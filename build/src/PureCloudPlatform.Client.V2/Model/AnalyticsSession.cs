@@ -267,6 +267,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The session media type
         /// </summary>
@@ -303,6 +306,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Direction</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
         
         
         
@@ -405,7 +410,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Segments">List of segments for this session.</param>
         /// <param name="Metrics">List of metrics for this session.</param>
         /// <param name="Flow">IVR flow execution associated with this session.</param>
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null)
+        /// <param name="Recording">Flag determining if an audio recording was started or not.</param>
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, bool? Recording = null)
         {
             this.MediaType = MediaType;
             this.SessionId = SessionId;
@@ -445,6 +451,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Segments = Segments;
             this.Metrics = Metrics;
             this.Flow = Flow;
+            this.Recording = Recording;
             
         }
         
@@ -763,6 +770,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public AnalyticsFlow Flow { get; set; }
         
         
+        
+        /// <summary>
+        /// Flag determining if an audio recording was started or not
+        /// </summary>
+        /// <value>Flag determining if an audio recording was started or not</value>
+        [DataMember(Name="recording", EmitDefaultValue=false)]
+        public bool? Recording { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -810,6 +826,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
             sb.Append("  Flow: ").Append(Flow).Append("\n");
+            sb.Append("  Recording: ").Append(Recording).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1035,6 +1052,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Flow == other.Flow ||
                     this.Flow != null &&
                     this.Flow.Equals(other.Flow)
+                ) &&
+                (
+                    this.Recording == other.Recording ||
+                    this.Recording != null &&
+                    this.Recording.Equals(other.Recording)
                 );
         }
 
@@ -1163,6 +1185,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Flow != null)
                     hash = hash * 59 + this.Flow.GetHashCode();
+                
+                if (this.Recording != null)
+                    hash = hash * 59 + this.Recording.GetHashCode();
                 
                 return hash;
             }

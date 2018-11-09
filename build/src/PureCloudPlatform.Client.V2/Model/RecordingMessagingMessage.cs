@@ -55,6 +55,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingMessagingMessage" /> class.
@@ -66,7 +76,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Id">Id.</param>
         /// <param name="MessageText">MessageText.</param>
-        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string MessageText = null)
+        /// <param name="MessageMediaAttachments">MessageMediaAttachments.</param>
+        /// <param name="MessageStickerAttachments">MessageStickerAttachments.</param>
+        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null)
         {
             this.From = From;
             this.FromUser = FromUser;
@@ -75,6 +87,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Timestamp = Timestamp;
             this.Id = Id;
             this.MessageText = MessageText;
+            this.MessageMediaAttachments = MessageMediaAttachments;
+            this.MessageStickerAttachments = MessageStickerAttachments;
             
         }
         
@@ -136,6 +150,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public string MessageText { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets MessageMediaAttachments
+        /// </summary>
+        [DataMember(Name="messageMediaAttachments", EmitDefaultValue=false)]
+        public List<MessageMediaAttachment> MessageMediaAttachments { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets MessageStickerAttachments
+        /// </summary>
+        [DataMember(Name="messageStickerAttachments", EmitDefaultValue=false)]
+        public List<MessageStickerAttachment> MessageStickerAttachments { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,6 +182,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  MessageText: ").Append(MessageText).Append("\n");
+            sb.Append("  MessageMediaAttachments: ").Append(MessageMediaAttachments).Append("\n");
+            sb.Append("  MessageStickerAttachments: ").Append(MessageStickerAttachments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -222,6 +254,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessageText == other.MessageText ||
                     this.MessageText != null &&
                     this.MessageText.Equals(other.MessageText)
+                ) &&
+                (
+                    this.MessageMediaAttachments == other.MessageMediaAttachments ||
+                    this.MessageMediaAttachments != null &&
+                    this.MessageMediaAttachments.SequenceEqual(other.MessageMediaAttachments)
+                ) &&
+                (
+                    this.MessageStickerAttachments == other.MessageStickerAttachments ||
+                    this.MessageStickerAttachments != null &&
+                    this.MessageStickerAttachments.SequenceEqual(other.MessageStickerAttachments)
                 );
         }
 
@@ -257,6 +299,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MessageText != null)
                     hash = hash * 59 + this.MessageText.GetHashCode();
+                
+                if (this.MessageMediaAttachments != null)
+                    hash = hash * 59 + this.MessageMediaAttachments.GetHashCode();
+                
+                if (this.MessageStickerAttachments != null)
+                    hash = hash * 59 + this.MessageStickerAttachments.GetHashCode();
                 
                 return hash;
             }

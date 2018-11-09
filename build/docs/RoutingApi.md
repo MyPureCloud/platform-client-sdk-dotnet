@@ -1217,7 +1217,7 @@ This endpoint does require any parameters.
 
 <a name="getroutinglanguages"></a>
 
-## [**LanguageEntityListing**](LanguageEntityListing.html) GetRoutingLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+## [**LanguageEntityListing**](LanguageEntityListing.html) GetRoutingLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null)
 
 
 
@@ -1269,13 +1269,18 @@ namespace Example
             
             
             
+            
+            
+            var id = new List<string>(); // List<string> | id (optional) 
+            
+            
 
             try
             {
                 
                 // Get the list of supported languages.
                 
-                LanguageEntityListing result = apiInstance.GetRoutingLanguages(pageSize, pageNumber, sortOrder, name);
+                LanguageEntityListing result = apiInstance.GetRoutingLanguages(pageSize, pageNumber, sortOrder, name, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1296,6 +1301,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 | **name** | **string**| Name | [optional]  |
+| **id** | [**List<string>**](string.html)| id | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2252,7 +2258,7 @@ namespace Example
 
 <a name="getroutingskills"></a>
 
-## [**SkillEntityListing**](SkillEntityListing.html) GetRoutingSkills (int? pageSize = null, int? pageNumber = null, string name = null)
+## [**SkillEntityListing**](SkillEntityListing.html) GetRoutingSkills (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null)
 
 
 
@@ -2299,13 +2305,18 @@ namespace Example
             
             
             
+            
+            
+            var id = new List<string>(); // List<string> | id (optional) 
+            
+            
 
             try
             {
                 
                 // Get the list of routing skills.
                 
-                SkillEntityListing result = apiInstance.GetRoutingSkills(pageSize, pageNumber, name);
+                SkillEntityListing result = apiInstance.GetRoutingSkills(pageSize, pageNumber, name, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2325,6 +2336,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **name** | **string**| Filter for results that start with this value | [optional]  |
+| **id** | [**List<string>**](string.html)| id | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

@@ -75,6 +75,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallRequest" /> class.
@@ -90,7 +95,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoutingSkillsIds">The skill ID&#39;s to use for routing this call (if calling a queue)..</param>
         /// <param name="ConversationIds">The list of existing call conversations to merge into a new ad-hoc conference..</param>
         /// <param name="Participants">The list of participants to call to create a new ad-hoc conference..</param>
-        public CreateCallRequest(string PhoneNumber = null, string CallerId = null, string CallerIdName = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, string LanguageId = null, List<string> RoutingSkillsIds = null, List<string> ConversationIds = null, List<Destination> Participants = null)
+        /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
+        public CreateCallRequest(string PhoneNumber = null, string CallerId = null, string CallerIdName = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, string LanguageId = null, List<string> RoutingSkillsIds = null, List<string> ConversationIds = null, List<Destination> Participants = null, string UuiData = null)
         {
             this.PhoneNumber = PhoneNumber;
             this.CallerId = CallerId;
@@ -103,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RoutingSkillsIds = RoutingSkillsIds;
             this.ConversationIds = ConversationIds;
             this.Participants = Participants;
+            this.UuiData = UuiData;
             
         }
         
@@ -206,6 +213,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<Destination> Participants { get; set; }
         
         
+        
+        /// <summary>
+        /// User to User Information (UUI) data managed by SIP session application.
+        /// </summary>
+        /// <value>User to User Information (UUI) data managed by SIP session application.</value>
+        [DataMember(Name="uuiData", EmitDefaultValue=false)]
+        public string UuiData { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -226,6 +242,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RoutingSkillsIds: ").Append(RoutingSkillsIds).Append("\n");
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
+            sb.Append("  UuiData: ").Append(UuiData).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -316,6 +333,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Participants == other.Participants ||
                     this.Participants != null &&
                     this.Participants.SequenceEqual(other.Participants)
+                ) &&
+                (
+                    this.UuiData == other.UuiData ||
+                    this.UuiData != null &&
+                    this.UuiData.Equals(other.UuiData)
                 );
         }
 
@@ -363,6 +385,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
+                
+                if (this.UuiData != null)
+                    hash = hash * 59 + this.UuiData.GetHashCode();
                 
                 return hash;
             }

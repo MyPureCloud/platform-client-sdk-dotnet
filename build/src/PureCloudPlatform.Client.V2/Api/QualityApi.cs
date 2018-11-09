@@ -510,8 +510,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        EvaluationFormEntityListing GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
+        EvaluationFormEntityListing GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -527,8 +528,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        ApiResponse<EvaluationFormEntityListing> GetQualityFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
+        ApiResponse<EvaluationFormEntityListing> GetQualityFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
         
         /// <summary>
         /// Get an evaluation form
@@ -592,8 +594,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        EvaluationFormEntityListing GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
+        EvaluationFormEntityListing GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -609,8 +612,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        ApiResponse<EvaluationFormEntityListing> GetQualityFormsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
+        ApiResponse<EvaluationFormEntityListing> GetQualityFormsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
         
         /// <summary>
         /// Get a survey form
@@ -674,8 +678,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>SurveyFormEntityListing</returns>
-        SurveyFormEntityListing GetQualityFormsSurveys (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
+        SurveyFormEntityListing GetQualityFormsSurveys (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of survey forms
@@ -691,8 +696,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>ApiResponse of SurveyFormEntityListing</returns>
-        ApiResponse<SurveyFormEntityListing> GetQualityFormsSurveysWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
+        ApiResponse<SurveyFormEntityListing> GetQualityFormsSurveysWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
         
         /// <summary>
         /// Retrieve a list of survey forms by their ids
@@ -701,9 +707,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <param name="id">A comma-delimited list of valid survey form ids</param>
         /// <returns>SurveyFormEntityListing</returns>
-        SurveyFormEntityListing GetQualityFormsSurveysBulk (List<string> ids);
+        SurveyFormEntityListing GetQualityFormsSurveysBulk (List<string> id);
 
         /// <summary>
         /// Retrieve a list of survey forms by their ids
@@ -712,9 +718,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <param name="id">A comma-delimited list of valid survey form ids</param>
         /// <returns>ApiResponse of SurveyFormEntityListing</returns>
-        ApiResponse<SurveyFormEntityListing> GetQualityFormsSurveysBulkWithHttpInfo (List<string> ids);
+        ApiResponse<SurveyFormEntityListing> GetQualityFormsSurveysBulkWithHttpInfo (List<string> id);
+        
+        /// <summary>
+        /// Retrieve a list of the latest form versions by context ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
+        /// <returns>SurveyFormEntityListing</returns>
+        SurveyFormEntityListing GetQualityFormsSurveysBulkContexts (List<string> contextId, bool? published = null);
+
+        /// <summary>
+        /// Retrieve a list of the latest form versions by context ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
+        /// <returns>ApiResponse of SurveyFormEntityListing</returns>
+        ApiResponse<SurveyFormEntityListing> GetQualityFormsSurveysBulkContextsWithHttpInfo (List<string> contextId, bool? published = null);
         
         /// <summary>
         /// Get a keywordSet by id.
@@ -1870,8 +1900,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
+        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -1887,8 +1918,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
         
         /// <summary>
         /// Get an evaluation form
@@ -1952,8 +1984,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
+        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -1969,8 +2002,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
         
         /// <summary>
         /// Get a survey form
@@ -2034,8 +2068,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of SurveyFormEntityListing</returns>
-        System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
+        System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of survey forms
@@ -2051,8 +2086,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
         
         /// <summary>
         /// Retrieve a list of survey forms by their ids
@@ -2061,9 +2097,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <param name="id">A comma-delimited list of valid survey form ids</param>
         /// <returns>Task of SurveyFormEntityListing</returns>
-        System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysBulkAsync (List<string> ids);
+        System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysBulkAsync (List<string> id);
 
         /// <summary>
         /// Retrieve a list of survey forms by their ids
@@ -2072,9 +2108,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <param name="id">A comma-delimited list of valid survey form ids</param>
         /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysBulkAsyncWithHttpInfo (List<string> ids);
+        System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysBulkAsyncWithHttpInfo (List<string> id);
+        
+        /// <summary>
+        /// Retrieve a list of the latest form versions by context ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
+        /// <returns>Task of SurveyFormEntityListing</returns>
+        System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysBulkContextsAsync (List<string> contextId, bool? published = null);
+
+        /// <summary>
+        /// Retrieve a list of the latest form versions by context ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
+        /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysBulkContextsAsyncWithHttpInfo (List<string> contextId, bool? published = null);
         
         /// <summary>
         /// Get a keywordSet by id.
@@ -6297,10 +6357,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        public EvaluationFormEntityListing GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+        public EvaluationFormEntityListing GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityFormsWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
+             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityFormsWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -6315,8 +6376,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        public ApiResponse< EvaluationFormEntityListing > GetQualityFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+        public ApiResponse< EvaluationFormEntityListing > GetQualityFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/forms";
@@ -6359,6 +6421,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -6407,10 +6470,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityFormsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
+             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityFormsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -6426,8 +6490,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/forms";
@@ -6470,6 +6535,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -6917,10 +6983,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        public EvaluationFormEntityListing GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+        public EvaluationFormEntityListing GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityFormsEvaluationsWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
+             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityFormsEvaluationsWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -6935,8 +7002,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        public ApiResponse< EvaluationFormEntityListing > GetQualityFormsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+        public ApiResponse< EvaluationFormEntityListing > GetQualityFormsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/forms/evaluations";
@@ -6979,6 +7047,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -7027,10 +7096,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityFormsEvaluationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
+             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityFormsEvaluationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -7046,8 +7116,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/forms/evaluations";
@@ -7090,6 +7161,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -7537,10 +7609,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>SurveyFormEntityListing</returns>
-        public SurveyFormEntityListing GetQualityFormsSurveys (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+        public SurveyFormEntityListing GetQualityFormsSurveys (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         {
-             ApiResponse<SurveyFormEntityListing> localVarResponse = GetQualityFormsSurveysWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
+             ApiResponse<SurveyFormEntityListing> localVarResponse = GetQualityFormsSurveysWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -7555,8 +7628,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>ApiResponse of SurveyFormEntityListing</returns>
-        public ApiResponse< SurveyFormEntityListing > GetQualityFormsSurveysWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+        public ApiResponse< SurveyFormEntityListing > GetQualityFormsSurveysWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/forms/surveys";
@@ -7599,6 +7673,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -7647,10 +7722,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of SurveyFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+        public async System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         {
-             ApiResponse<SurveyFormEntityListing> localVarResponse = await GetQualityFormsSurveysAsyncWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
+             ApiResponse<SurveyFormEntityListing> localVarResponse = await GetQualityFormsSurveysAsyncWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -7666,8 +7742,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="expand">Expand (optional)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/forms/surveys";
@@ -7710,6 +7787,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -7752,11 +7830,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of survey forms by their ids 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <param name="id">A comma-delimited list of valid survey form ids</param>
         /// <returns>SurveyFormEntityListing</returns>
-        public SurveyFormEntityListing GetQualityFormsSurveysBulk (List<string> ids)
+        public SurveyFormEntityListing GetQualityFormsSurveysBulk (List<string> id)
         {
-             ApiResponse<SurveyFormEntityListing> localVarResponse = GetQualityFormsSurveysBulkWithHttpInfo(ids);
+             ApiResponse<SurveyFormEntityListing> localVarResponse = GetQualityFormsSurveysBulkWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -7764,13 +7842,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of survey forms by their ids 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <param name="id">A comma-delimited list of valid survey form ids</param>
         /// <returns>ApiResponse of SurveyFormEntityListing</returns>
-        public ApiResponse< SurveyFormEntityListing > GetQualityFormsSurveysBulkWithHttpInfo (List<string> ids)
+        public ApiResponse< SurveyFormEntityListing > GetQualityFormsSurveysBulkWithHttpInfo (List<string> id)
         { 
-            // verify the required parameter 'ids' is set
-            if (ids == null)
-                throw new ApiException(400, "Missing required parameter 'ids' when calling QualityApi->GetQualityFormsSurveysBulk");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling QualityApi->GetQualityFormsSurveysBulk");
 
             var localVarPath = "/api/v2/quality/forms/surveys/bulk";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7805,7 +7883,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -7847,11 +7925,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of survey forms by their ids 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <param name="id">A comma-delimited list of valid survey form ids</param>
         /// <returns>Task of SurveyFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysBulkAsync (List<string> ids)
+        public async System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysBulkAsync (List<string> id)
         {
-             ApiResponse<SurveyFormEntityListing> localVarResponse = await GetQualityFormsSurveysBulkAsyncWithHttpInfo(ids);
+             ApiResponse<SurveyFormEntityListing> localVarResponse = await GetQualityFormsSurveysBulkAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -7860,13 +7938,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of survey forms by their ids 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ids">A comma-delimited list of valid survey form ids</param>
+        /// <param name="id">A comma-delimited list of valid survey form ids</param>
         /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysBulkAsyncWithHttpInfo (List<string> ids)
+        public async System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysBulkAsyncWithHttpInfo (List<string> id)
         { 
-            // verify the required parameter 'ids' is set
-            if (ids == null)
-                throw new ApiException(400, "Missing required parameter 'ids' when calling QualityApi->GetQualityFormsSurveysBulk");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling QualityApi->GetQualityFormsSurveysBulk");
             
 
             var localVarPath = "/api/v2/quality/forms/surveys/bulk";
@@ -7902,7 +7980,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -7931,6 +8009,205 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveysBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveysBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SurveyFormEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SurveyFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyFormEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve a list of the latest form versions by context ids 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
+        /// <returns>SurveyFormEntityListing</returns>
+        public SurveyFormEntityListing GetQualityFormsSurveysBulkContexts (List<string> contextId, bool? published = null)
+        {
+             ApiResponse<SurveyFormEntityListing> localVarResponse = GetQualityFormsSurveysBulkContextsWithHttpInfo(contextId, published);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a list of the latest form versions by context ids 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
+        /// <returns>ApiResponse of SurveyFormEntityListing</returns>
+        public ApiResponse< SurveyFormEntityListing > GetQualityFormsSurveysBulkContextsWithHttpInfo (List<string> contextId, bool? published = null)
+        { 
+            // verify the required parameter 'contextId' is set
+            if (contextId == null)
+                throw new ApiException(400, "Missing required parameter 'contextId' when calling QualityApi->GetQualityFormsSurveysBulkContexts");
+
+            var localVarPath = "/api/v2/quality/forms/surveys/bulk/contexts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (contextId != null) contextId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("contextId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (published != null) localVarQueryParams.Add(new Tuple<string, string>("published", this.Configuration.ApiClient.ParameterToString(published)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveysBulkContexts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveysBulkContexts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SurveyFormEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SurveyFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyFormEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Retrieve a list of the latest form versions by context ids 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
+        /// <returns>Task of SurveyFormEntityListing</returns>
+        public async System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysBulkContextsAsync (List<string> contextId, bool? published = null)
+        {
+             ApiResponse<SurveyFormEntityListing> localVarResponse = await GetQualityFormsSurveysBulkContextsAsyncWithHttpInfo(contextId, published);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a list of the latest form versions by context ids 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contextId">A comma-delimited list of valid survey form context ids</param>
+        /// <param name="published">If true, the latest published version will be included. If false, only the unpublished version will be included. (optional, default to true)</param>
+        /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysBulkContextsAsyncWithHttpInfo (List<string> contextId, bool? published = null)
+        { 
+            // verify the required parameter 'contextId' is set
+            if (contextId == null)
+                throw new ApiException(400, "Missing required parameter 'contextId' when calling QualityApi->GetQualityFormsSurveysBulkContexts");
+            
+
+            var localVarPath = "/api/v2/quality/forms/surveys/bulk/contexts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (contextId != null) contextId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("contextId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (published != null) localVarQueryParams.Add(new Tuple<string, string>("published", this.Configuration.ApiClient.ParameterToString(published)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveysBulkContexts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsSurveysBulkContexts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<SurveyFormEntityListing>(localVarStatusCode,
                 localVarHeaders,

@@ -393,8 +393,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>LanguageEntityListing</returns>
-        LanguageEntityListing GetRoutingLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+        LanguageEntityListing GetRoutingLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null);
 
         /// <summary>
         /// Get the list of supported languages.
@@ -407,8 +408,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of LanguageEntityListing</returns>
-        ApiResponse<LanguageEntityListing> GetRoutingLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+        ApiResponse<LanguageEntityListing> GetRoutingLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null);
         
         /// <summary>
         /// Get a recipient
@@ -722,8 +724,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Filter for results that start with this value (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>SkillEntityListing</returns>
-        SkillEntityListing GetRoutingSkills (int? pageSize = null, int? pageNumber = null, string name = null);
+        SkillEntityListing GetRoutingSkills (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null);
 
         /// <summary>
         /// Get the list of routing skills.
@@ -735,8 +738,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Filter for results that start with this value (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of SkillEntityListing</returns>
-        ApiResponse<SkillEntityListing> GetRoutingSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        ApiResponse<SkillEntityListing> GetRoutingSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null);
         
         /// <summary>
         /// Get a list of available phone numbers for SMS provisioning.
@@ -1923,8 +1927,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>Task of LanguageEntityListing</returns>
-        System.Threading.Tasks.Task<LanguageEntityListing> GetRoutingLanguagesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+        System.Threading.Tasks.Task<LanguageEntityListing> GetRoutingLanguagesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null);
 
         /// <summary>
         /// Get the list of supported languages.
@@ -1937,8 +1942,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (LanguageEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetRoutingLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetRoutingLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null);
         
         /// <summary>
         /// Get a recipient
@@ -2252,8 +2258,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Filter for results that start with this value (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>Task of SkillEntityListing</returns>
-        System.Threading.Tasks.Task<SkillEntityListing> GetRoutingSkillsAsync (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<SkillEntityListing> GetRoutingSkillsAsync (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null);
 
         /// <summary>
         /// Get the list of routing skills.
@@ -2265,8 +2272,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Filter for results that start with this value (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (SkillEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetRoutingSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetRoutingSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null);
         
         /// <summary>
         /// Get a list of available phone numbers for SMS provisioning.
@@ -6301,10 +6309,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>LanguageEntityListing</returns>
-        public LanguageEntityListing GetRoutingLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        public LanguageEntityListing GetRoutingLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null)
         {
-             ApiResponse<LanguageEntityListing> localVarResponse = GetRoutingLanguagesWithHttpInfo(pageSize, pageNumber, sortOrder, name);
+             ApiResponse<LanguageEntityListing> localVarResponse = GetRoutingLanguagesWithHttpInfo(pageSize, pageNumber, sortOrder, name, id);
              return localVarResponse.Data;
         }
 
@@ -6316,8 +6325,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of LanguageEntityListing</returns>
-        public ApiResponse< LanguageEntityListing > GetRoutingLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        public ApiResponse< LanguageEntityListing > GetRoutingLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null)
         { 
 
             var localVarPath = "/api/v2/routing/languages";
@@ -6357,6 +6367,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -6402,10 +6413,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>Task of LanguageEntityListing</returns>
-        public async System.Threading.Tasks.Task<LanguageEntityListing> GetRoutingLanguagesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        public async System.Threading.Tasks.Task<LanguageEntityListing> GetRoutingLanguagesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null)
         {
-             ApiResponse<LanguageEntityListing> localVarResponse = await GetRoutingLanguagesAsyncWithHttpInfo(pageSize, pageNumber, sortOrder, name);
+             ApiResponse<LanguageEntityListing> localVarResponse = await GetRoutingLanguagesAsyncWithHttpInfo(pageSize, pageNumber, sortOrder, name, id);
              return localVarResponse.Data;
 
         }
@@ -6418,8 +6430,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (LanguageEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetRoutingLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetRoutingLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null)
         { 
 
             var localVarPath = "/api/v2/routing/languages";
@@ -6459,6 +6472,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -8786,10 +8800,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Filter for results that start with this value (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>SkillEntityListing</returns>
-        public SkillEntityListing GetRoutingSkills (int? pageSize = null, int? pageNumber = null, string name = null)
+        public SkillEntityListing GetRoutingSkills (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null)
         {
-             ApiResponse<SkillEntityListing> localVarResponse = GetRoutingSkillsWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<SkillEntityListing> localVarResponse = GetRoutingSkillsWithHttpInfo(pageSize, pageNumber, name, id);
              return localVarResponse.Data;
         }
 
@@ -8800,8 +8815,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Filter for results that start with this value (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of SkillEntityListing</returns>
-        public ApiResponse< SkillEntityListing > GetRoutingSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public ApiResponse< SkillEntityListing > GetRoutingSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null)
         { 
 
             var localVarPath = "/api/v2/routing/skills";
@@ -8840,6 +8856,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -8884,10 +8901,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Filter for results that start with this value (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>Task of SkillEntityListing</returns>
-        public async System.Threading.Tasks.Task<SkillEntityListing> GetRoutingSkillsAsync (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<SkillEntityListing> GetRoutingSkillsAsync (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null)
         {
-             ApiResponse<SkillEntityListing> localVarResponse = await GetRoutingSkillsAsyncWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<SkillEntityListing> localVarResponse = await GetRoutingSkillsAsyncWithHttpInfo(pageSize, pageNumber, name, id);
              return localVarResponse.Data;
 
         }
@@ -8899,8 +8917,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Filter for results that start with this value (optional)</param>
+        /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (SkillEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetRoutingSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetRoutingSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null)
         { 
 
             var localVarPath = "/api/v2/routing/skills";
@@ -8939,6 +8958,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

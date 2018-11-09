@@ -14,6 +14,8 @@ title: RecordingMessagingMessage
 | **Timestamp** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Id** | **string** |  | [optional] |
 | **MessageText** | **string** |  | [optional] |
+| **MessageMediaAttachments** | [**List&lt;MessageMediaAttachment&gt;**](MessageMediaAttachment.html) |  | [optional] |
+| **MessageStickerAttachments** | [**List&lt;MessageStickerAttachment&gt;**](MessageStickerAttachment.html) |  | [optional] |
 {: class="table table-striped"}
 
 

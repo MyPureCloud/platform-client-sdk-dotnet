@@ -62,7 +62,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Received for "RECEIVED"
             /// </summary>
             [EnumMember(Value = "RECEIVED")]
-            Received
+            Received,
+            
+            /// <summary>
+            /// Enum DeliverySuccess for "DELIVERY_SUCCESS"
+            /// </summary>
+            [EnumMember(Value = "DELIVERY_SUCCESS")]
+            DeliverySuccess,
+            
+            /// <summary>
+            /// Enum DeliveryFailed for "DELIVERY_FAILED"
+            /// </summary>
+            [EnumMember(Value = "DELIVERY_FAILED")]
+            DeliveryFailed,
+            
+            /// <summary>
+            /// Enum Read for "READ"
+            /// </summary>
+            [EnumMember(Value = "READ")]
+            Read
         }
         
         
