@@ -30,6 +30,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceGoalGroupGoals" /> class.
@@ -42,10 +47,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ServiceLevel">Service level targets for this service goal group (required).</param>
         /// <param name="AverageSpeedOfAnswer">Average speed of answer targets for this service goal group (required).</param>
-        public ServiceGoalGroupGoals(WfmServiceLevel ServiceLevel = null, WfmAverageSpeedOfAnswer AverageSpeedOfAnswer = null)
+        /// <param name="AbandonRate">Abandon rate targets for this service goal group.</param>
+        public ServiceGoalGroupGoals(WfmServiceLevel ServiceLevel = null, WfmAverageSpeedOfAnswer AverageSpeedOfAnswer = null, WfmAbandonRate AbandonRate = null)
         {
             this.ServiceLevel = ServiceLevel;
             this.AverageSpeedOfAnswer = AverageSpeedOfAnswer;
+            this.AbandonRate = AbandonRate;
             
         }
         
@@ -68,6 +75,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public WfmAverageSpeedOfAnswer AverageSpeedOfAnswer { get; set; }
         
         
+        
+        /// <summary>
+        /// Abandon rate targets for this service goal group
+        /// </summary>
+        /// <value>Abandon rate targets for this service goal group</value>
+        [DataMember(Name="abandonRate", EmitDefaultValue=false)]
+        public WfmAbandonRate AbandonRate { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -79,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
             sb.Append("  AverageSpeedOfAnswer: ").Append(AverageSpeedOfAnswer).Append("\n");
+            sb.Append("  AbandonRate: ").Append(AbandonRate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,6 +141,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AverageSpeedOfAnswer == other.AverageSpeedOfAnswer ||
                     this.AverageSpeedOfAnswer != null &&
                     this.AverageSpeedOfAnswer.Equals(other.AverageSpeedOfAnswer)
+                ) &&
+                (
+                    this.AbandonRate == other.AbandonRate ||
+                    this.AbandonRate != null &&
+                    this.AbandonRate.Equals(other.AbandonRate)
                 );
         }
 
@@ -144,6 +166,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AverageSpeedOfAnswer != null)
                     hash = hash * 59 + this.AverageSpeedOfAnswer.GetHashCode();
+                
+                if (this.AbandonRate != null)
+                    hash = hash * 59 + this.AbandonRate.GetHashCode();
                 
                 return hash;
             }
