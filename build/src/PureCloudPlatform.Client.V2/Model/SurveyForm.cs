@@ -108,7 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Footer">Markdown text for the bottom of the form..</param>
         /// <param name="QuestionGroups">A list of question groups (required).</param>
         /// <param name="PublishedVersions">List of published version of this form.</param>
-        public SurveyForm(string Name = null, bool? Disabled = null, string Language = null, string HeaderImageId = null, string Header = null, string Footer = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingSurveyForm PublishedVersions = null)
+        public SurveyForm(string Name = null, bool? Disabled = null, string Language = null, string HeaderImageId = null, string Header = null, string Footer = null, List<SurveyQuestionGroup> QuestionGroups = null, DomainEntityListingSurveyForm PublishedVersions = null)
         {
             this.Name = Name;
             this.Disabled = Disabled;
@@ -227,7 +227,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A list of question groups</value>
         [DataMember(Name="questionGroups", EmitDefaultValue=false)]
-        public List<QuestionGroup> QuestionGroups { get; set; }
+        public List<SurveyQuestionGroup> QuestionGroups { get; set; }
         
         
         

@@ -1,0 +1,145 @@
+using System;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using PureCloudPlatform.Client.V2.Client;
+
+namespace PureCloudPlatform.Client.V2.Model
+{
+    /// <summary>
+    /// GroupGreetingEventGreetingAudioFile
+    /// </summary>
+    [DataContract]
+    public partial class GroupGreetingEventGreetingAudioFile :  IEquatable<GroupGreetingEventGreetingAudioFile>
+    {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GroupGreetingEventGreetingAudioFile" /> class.
+        /// </summary>
+        /// <param name="DurationMilliseconds">DurationMilliseconds.</param>
+        /// <param name="SizeBytes">SizeBytes.</param>
+        public GroupGreetingEventGreetingAudioFile(int? DurationMilliseconds = null, int? SizeBytes = null)
+        {
+            this.DurationMilliseconds = DurationMilliseconds;
+            this.SizeBytes = SizeBytes;
+            
+        }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets DurationMilliseconds
+        /// </summary>
+        [DataMember(Name="durationMilliseconds", EmitDefaultValue=false)]
+        public int? DurationMilliseconds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets SizeBytes
+        /// </summary>
+        [DataMember(Name="sizeBytes", EmitDefaultValue=false)]
+        public int? SizeBytes { get; set; }
+        
+        
+        /// <summary>
+        /// Returns the string presentation of the object
+        /// </summary>
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.Append("class GroupGreetingEventGreetingAudioFile {\n");
+            
+            sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
+            sb.Append("  SizeBytes: ").Append(SizeBytes).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
+        }
+  
+        /// <summary>
+        /// Returns the JSON string presentation of the object
+        /// </summary>
+        /// <returns>JSON string presentation of the object</returns>
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this, Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="obj">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object obj)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            return this.Equals(obj as GroupGreetingEventGreetingAudioFile);
+        }
+
+        /// <summary>
+        /// Returns true if GroupGreetingEventGreetingAudioFile instances are equal
+        /// </summary>
+        /// <param name="other">Instance of GroupGreetingEventGreetingAudioFile to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(GroupGreetingEventGreetingAudioFile other)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            if (other == null)
+                return false;
+
+            return true &&
+                (
+                    this.DurationMilliseconds == other.DurationMilliseconds ||
+                    this.DurationMilliseconds != null &&
+                    this.DurationMilliseconds.Equals(other.DurationMilliseconds)
+                ) &&
+                (
+                    this.SizeBytes == other.SizeBytes ||
+                    this.SizeBytes != null &&
+                    this.SizeBytes.Equals(other.SizeBytes)
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            // credit: http://stackoverflow.com/a/263416/677735
+            unchecked // Overflow is fine, just wrap
+            {
+                int hash = 41;
+                // Suitable nullity checks etc, of course :)
+                
+                if (this.DurationMilliseconds != null)
+                    hash = hash * 59 + this.DurationMilliseconds.GetHashCode();
+                
+                if (this.SizeBytes != null)
+                    hash = hash * 59 + this.SizeBytes.GetHashCode();
+                
+                return hash;
+            }
+        }
+    }
+
+}

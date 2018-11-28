@@ -40,6 +40,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of BillingUsageReport</returns>
         ApiResponse<BillingUsageReport> GetBillingReportsBillableusageWithHttpInfo (DateTime? startDate, DateTime? endDate);
         
+        /// <summary>
+        /// Get the billing overview for an organization that is managed by a partner.
+        /// </summary>
+        /// <remarks>
+        /// Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
+        /// <param name="billingPeriodIndex">Billing Period Index (optional, default to 0)</param>
+        /// <returns>TrusteeBillingOverview</returns>
+        TrusteeBillingOverview GetBillingTrusteebillingoverviewTrustorOrgId (string trustorOrgId, int? billingPeriodIndex = null);
+
+        /// <summary>
+        /// Get the billing overview for an organization that is managed by a partner.
+        /// </summary>
+        /// <remarks>
+        /// Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
+        /// <param name="billingPeriodIndex">Billing Period Index (optional, default to 0)</param>
+        /// <returns>ApiResponse of TrusteeBillingOverview</returns>
+        ApiResponse<TrusteeBillingOverview> GetBillingTrusteebillingoverviewTrustorOrgIdWithHttpInfo (string trustorOrgId, int? billingPeriodIndex = null);
+        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
@@ -67,6 +91,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endDate">The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <returns>Task of ApiResponse (BillingUsageReport)</returns>
         System.Threading.Tasks.Task<ApiResponse<BillingUsageReport>> GetBillingReportsBillableusageAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate);
+        
+        /// <summary>
+        /// Get the billing overview for an organization that is managed by a partner.
+        /// </summary>
+        /// <remarks>
+        /// Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
+        /// <param name="billingPeriodIndex">Billing Period Index (optional, default to 0)</param>
+        /// <returns>Task of TrusteeBillingOverview</returns>
+        System.Threading.Tasks.Task<TrusteeBillingOverview> GetBillingTrusteebillingoverviewTrustorOrgIdAsync (string trustorOrgId, int? billingPeriodIndex = null);
+
+        /// <summary>
+        /// Get the billing overview for an organization that is managed by a partner.
+        /// </summary>
+        /// <remarks>
+        /// Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
+        /// <param name="billingPeriodIndex">Billing Period Index (optional, default to 0)</param>
+        /// <returns>Task of ApiResponse (TrusteeBillingOverview)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TrusteeBillingOverview>> GetBillingTrusteebillingoverviewTrustorOrgIdAsyncWithHttpInfo (string trustorOrgId, int? billingPeriodIndex = null);
         
         #endregion Asynchronous Operations
         
@@ -360,6 +408,205 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<BillingUsageReport>(localVarStatusCode,
                 localVarHeaders,
                 (BillingUsageReport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BillingUsageReport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the billing overview for an organization that is managed by a partner. Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
+        /// <param name="billingPeriodIndex">Billing Period Index (optional, default to 0)</param>
+        /// <returns>TrusteeBillingOverview</returns>
+        public TrusteeBillingOverview GetBillingTrusteebillingoverviewTrustorOrgId (string trustorOrgId, int? billingPeriodIndex = null)
+        {
+             ApiResponse<TrusteeBillingOverview> localVarResponse = GetBillingTrusteebillingoverviewTrustorOrgIdWithHttpInfo(trustorOrgId, billingPeriodIndex);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the billing overview for an organization that is managed by a partner. Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
+        /// <param name="billingPeriodIndex">Billing Period Index (optional, default to 0)</param>
+        /// <returns>ApiResponse of TrusteeBillingOverview</returns>
+        public ApiResponse< TrusteeBillingOverview > GetBillingTrusteebillingoverviewTrustorOrgIdWithHttpInfo (string trustorOrgId, int? billingPeriodIndex = null)
+        { 
+            // verify the required parameter 'trustorOrgId' is set
+            if (trustorOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling BillingApi->GetBillingTrusteebillingoverviewTrustorOrgId");
+
+            var localVarPath = "/api/v2/billing/trusteebillingoverview/{trustorOrgId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trustorOrgId != null) localVarPathParams.Add("trustorOrgId", this.Configuration.ApiClient.ParameterToString(trustorOrgId));
+
+            // Query params
+            if (billingPeriodIndex != null) localVarQueryParams.Add(new Tuple<string, string>("billingPeriodIndex", this.Configuration.ApiClient.ParameterToString(billingPeriodIndex)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBillingTrusteebillingoverviewTrustorOrgId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBillingTrusteebillingoverviewTrustorOrgId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrusteeBillingOverview>(localVarStatusCode,
+                localVarHeaders,
+                (TrusteeBillingOverview) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrusteeBillingOverview)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the billing overview for an organization that is managed by a partner. Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
+        /// <param name="billingPeriodIndex">Billing Period Index (optional, default to 0)</param>
+        /// <returns>Task of TrusteeBillingOverview</returns>
+        public async System.Threading.Tasks.Task<TrusteeBillingOverview> GetBillingTrusteebillingoverviewTrustorOrgIdAsync (string trustorOrgId, int? billingPeriodIndex = null)
+        {
+             ApiResponse<TrusteeBillingOverview> localVarResponse = await GetBillingTrusteebillingoverviewTrustorOrgIdAsyncWithHttpInfo(trustorOrgId, billingPeriodIndex);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the billing overview for an organization that is managed by a partner. Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
+        /// <param name="billingPeriodIndex">Billing Period Index (optional, default to 0)</param>
+        /// <returns>Task of ApiResponse (TrusteeBillingOverview)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TrusteeBillingOverview>> GetBillingTrusteebillingoverviewTrustorOrgIdAsyncWithHttpInfo (string trustorOrgId, int? billingPeriodIndex = null)
+        { 
+            // verify the required parameter 'trustorOrgId' is set
+            if (trustorOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling BillingApi->GetBillingTrusteebillingoverviewTrustorOrgId");
+            
+
+            var localVarPath = "/api/v2/billing/trusteebillingoverview/{trustorOrgId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trustorOrgId != null) localVarPathParams.Add("trustorOrgId", this.Configuration.ApiClient.ParameterToString(trustorOrgId));
+
+            // Query params
+            if (billingPeriodIndex != null) localVarQueryParams.Add(new Tuple<string, string>("billingPeriodIndex", this.Configuration.ApiClient.ParameterToString(billingPeriodIndex)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBillingTrusteebillingoverviewTrustorOrgId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBillingTrusteebillingoverviewTrustorOrgId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrusteeBillingOverview>(localVarStatusCode,
+                localVarHeaders,
+                (TrusteeBillingOverview) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrusteeBillingOverview)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

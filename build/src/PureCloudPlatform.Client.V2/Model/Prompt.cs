@@ -60,12 +60,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Prompt" /> class.
         /// </summary>
+        /// <param name="Id">The prompt identifier.</param>
         /// <param name="Name">The prompt name. (required).</param>
         /// <param name="Description">Description.</param>
         /// <param name="Resources">Resources.</param>
         /// <param name="CurrentOperation">CurrentOperation.</param>
-        public Prompt(string Name = null, string Description = null, List<PromptAsset> Resources = null, Operation CurrentOperation = null)
+        public Prompt(string Id = null, string Name = null, string Description = null, List<PromptAsset> Resources = null, Operation CurrentOperation = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Description = Description;
             this.Resources = Resources;
@@ -76,11 +78,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The prompt identifier
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The prompt identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         

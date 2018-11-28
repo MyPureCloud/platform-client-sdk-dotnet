@@ -1,0 +1,16 @@
+---
+title: ConversationEmailEventTopicEmailConversation
+---
+## ININ.PureCloudApi.Model.ConversationEmailEventTopicEmailConversation
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Id** | **string** |  | [optional] |
+| **Name** | **string** |  | [optional] |
+| **Participants** | [**List&lt;ConversationEmailEventTopicEmailMediaParticipant&gt;**](ConversationEmailEventTopicEmailMediaParticipant.html) |  | [optional] |
+| **OtherMediaUris** | **List&lt;string&gt;** |  | [optional] |
+{: class="table table-striped"}
+
+

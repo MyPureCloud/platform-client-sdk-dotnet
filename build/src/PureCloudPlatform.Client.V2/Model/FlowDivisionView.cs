@@ -130,11 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowDivisionView" /> class.
         /// </summary>
+        /// <param name="Id">The flow identifier.</param>
         /// <param name="Name">The flow name (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Type">Type.</param>
-        public FlowDivisionView(string Name = null, Division Division = null, TypeEnum? Type = null)
+        public FlowDivisionView(string Id = null, string Name = null, Division Division = null, TypeEnum? Type = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Division = Division;
             this.Type = Type;
@@ -144,11 +146,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The flow identifier
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The flow identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         

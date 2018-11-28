@@ -75,6 +75,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundCampaignrules**](OutboundApi.html#postoutboundcampaignrules) | **POST** /api/v2/outbound/campaignrules | Create Campaign Rule |
 | [**PostOutboundCampaigns**](OutboundApi.html#postoutboundcampaigns) | **POST** /api/v2/outbound/campaigns | Create a campaign. |
 | [**PostOutboundCampaignsProgress**](OutboundApi.html#postoutboundcampaignsprogress) | **POST** /api/v2/outbound/campaigns/progress | Get progress for a list of campaigns |
+| [**PostOutboundContactlistClear**](OutboundApi.html#postoutboundcontactlistclear) | **POST** /api/v2/outbound/contactlists/{contactListId}/clear | Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. |
 | [**PostOutboundContactlistContacts**](OutboundApi.html#postoutboundcontactlistcontacts) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts | Add contacts to a contact list. |
 | [**PostOutboundContactlistContactsBulk**](OutboundApi.html#postoutboundcontactlistcontactsbulk) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts/bulk | Get contacts from a contact list. |
 | [**PostOutboundContactlistExport**](OutboundApi.html#postoutboundcontactlistexport) | **POST** /api/v2/outbound/contactlists/{contactListId}/export | Initiate the export of a contact list. |
@@ -3052,7 +3053,7 @@ namespace Example
 
 <a name="getoutboundcontactlists"></a>
 
-## [**ContactListEntityListing**](ContactListEntityListing.html) GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
+## [**ContactListEntityListing**](ContactListEntityListing.html) GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -3121,6 +3122,11 @@ namespace Example
             
             
             
+            
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             
             
@@ -3136,7 +3142,7 @@ namespace Example
                 
                 // Query a list of contact lists.
                 
-                ContactListEntityListing result = apiInstance.GetOutboundContactlists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);
+                ContactListEntityListing result = apiInstance.GetOutboundContactlists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, divisionId, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3160,6 +3166,7 @@ namespace Example
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
 | **id** | [**List<string>**](string.html)| id | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
@@ -5484,6 +5491,75 @@ namespace Example
 ### Return type
 
 [**List<CampaignProgress>**](CampaignProgress.html)
+
+<a name="postoutboundcontactlistclear"></a>
+
+## void PostOutboundContactlistClear (string contactListId)
+
+
+
+Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
+
+
+
+Requires ANY permissions: 
+
+* outbound:contact:delete
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundContactlistClearExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new OutboundApi();
+            
+            
+            var contactListId = contactListId_example;  // string | Contact List ID
+            
+            
+            
+
+            try
+            {
+                
+                // Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
+                
+                apiInstance.PostOutboundContactlistClear(contactListId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlistClear: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| Contact List ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postoutboundcontactlistcontacts"></a>
 

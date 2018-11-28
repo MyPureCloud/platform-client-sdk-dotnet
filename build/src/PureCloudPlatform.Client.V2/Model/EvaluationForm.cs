@@ -76,7 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContextId">ContextId.</param>
         /// <param name="QuestionGroups">A list of question groups (required).</param>
         /// <param name="PublishedVersions">PublishedVersions.</param>
-        public EvaluationForm(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null)
+        public EvaluationForm(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null)
         {
             this.Name = Name;
             this.ModifiedDate = ModifiedDate;
@@ -137,7 +137,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A list of question groups</value>
         [DataMember(Name="questionGroups", EmitDefaultValue=false)]
-        public List<QuestionGroup> QuestionGroups { get; set; }
+        public List<EvaluationQuestionGroup> QuestionGroups { get; set; }
         
         
         

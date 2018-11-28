@@ -377,10 +377,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Nsurveysexpired,
             
             /// <summary>
-            /// Enum Nsurveysbounced for "nSurveysBounced"
+            /// Enum Nsurveyerrors for "nSurveyErrors"
             /// </summary>
-            [EnumMember(Value = "nSurveysBounced")]
-            Nsurveysbounced,
+            [EnumMember(Value = "nSurveyErrors")]
+            Nsurveyerrors,
             
             /// <summary>
             /// Enum Nsurveyresponses for "nSurveyResponses"
@@ -476,7 +476,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nflowoutcome for "nFlowOutcome"
             /// </summary>
             [EnumMember(Value = "nFlowOutcome")]
-            Nflowoutcome
+            Nflowoutcome,
+            
+            /// <summary>
+            /// Enum Nflowoutcomefailed for "nFlowOutcomeFailed"
+            /// </summary>
+            [EnumMember(Value = "nFlowOutcomeFailed")]
+            Nflowoutcomefailed
         }
         
         

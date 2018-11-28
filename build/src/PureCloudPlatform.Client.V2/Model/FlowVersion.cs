@@ -123,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowVersion" /> class.
         /// </summary>
+        /// <param name="Id">The flow version identifier.</param>
         /// <param name="Name">Name.</param>
         /// <param name="CommitVersion">CommitVersion.</param>
         /// <param name="ConfigurationVersion">ConfigurationVersion.</param>
@@ -133,8 +134,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="GenerationId">GenerationId.</param>
         /// <param name="PublishResultUri">PublishResultUri.</param>
-        public FlowVersion(string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, User CreatedBy = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null)
+        public FlowVersion(string Id = null, string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, User CreatedBy = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.CommitVersion = CommitVersion;
             this.ConfigurationVersion = ConfigurationVersion;
@@ -151,11 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The flow version identifier
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The flow version identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         

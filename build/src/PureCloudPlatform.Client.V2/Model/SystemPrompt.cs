@@ -49,11 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemPrompt" /> class.
         /// </summary>
+        /// <param name="Id">The system prompt identifier.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Resources">Resources.</param>
-        public SystemPrompt(string Name = null, string Description = null, List<SystemPromptAsset> Resources = null)
+        public SystemPrompt(string Id = null, string Name = null, string Description = null, List<SystemPromptAsset> Resources = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Description = Description;
             this.Resources = Resources;
@@ -63,11 +65,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The system prompt identifier
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The system prompt identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         

@@ -418,6 +418,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Provides the agent duration sort order
         /// </summary>
@@ -442,6 +451,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Provides the interacting duration sort order</value>
         [DataMember(Name="interactingDurationSortOrder", EmitDefaultValue=false)]
         public InteractingDurationSortOrderEnum? InteractingDurationSortOrder { get; set; }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -492,7 +507,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentName">Displays the Agent name as provided by the user.</param>
         /// <param name="SkillsList">The list of skill strings as free form text.</param>
         /// <param name="LanguageList">The list of language strings as free form text.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null)
+        /// <param name="Mos">The desired range for mos values.</param>
+        /// <param name="SurveyQuestionGroupScore">The survey question group score used to filter the view.</param>
+        /// <param name="SurveyPromoterScore">The survey promoter score used to filter the view.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -532,6 +550,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AgentName = AgentName;
             this.SkillsList = SkillsList;
             this.LanguageList = LanguageList;
+            this.Mos = Mos;
+            this.SurveyQuestionGroupScore = SurveyQuestionGroupScore;
+            this.SurveyPromoterScore = SurveyPromoterScore;
             
         }
         
@@ -857,6 +878,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> LanguageList { get; set; }
         
         
+        
+        /// <summary>
+        /// The desired range for mos values
+        /// </summary>
+        /// <value>The desired range for mos values</value>
+        [DataMember(Name="mos", EmitDefaultValue=false)]
+        public NumericRange Mos { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The survey question group score used to filter the view
+        /// </summary>
+        /// <value>The survey question group score used to filter the view</value>
+        [DataMember(Name="surveyQuestionGroupScore", EmitDefaultValue=false)]
+        public NumericRange SurveyQuestionGroupScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The survey promoter score used to filter the view
+        /// </summary>
+        /// <value>The survey promoter score used to filter the view</value>
+        [DataMember(Name="surveyPromoterScore", EmitDefaultValue=false)]
+        public NumericRange SurveyPromoterScore { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -904,6 +952,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AgentName: ").Append(AgentName).Append("\n");
             sb.Append("  SkillsList: ").Append(SkillsList).Append("\n");
             sb.Append("  LanguageList: ").Append(LanguageList).Append("\n");
+            sb.Append("  Mos: ").Append(Mos).Append("\n");
+            sb.Append("  SurveyQuestionGroupScore: ").Append(SurveyQuestionGroupScore).Append("\n");
+            sb.Append("  SurveyPromoterScore: ").Append(SurveyPromoterScore).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1129,6 +1180,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LanguageList == other.LanguageList ||
                     this.LanguageList != null &&
                     this.LanguageList.SequenceEqual(other.LanguageList)
+                ) &&
+                (
+                    this.Mos == other.Mos ||
+                    this.Mos != null &&
+                    this.Mos.Equals(other.Mos)
+                ) &&
+                (
+                    this.SurveyQuestionGroupScore == other.SurveyQuestionGroupScore ||
+                    this.SurveyQuestionGroupScore != null &&
+                    this.SurveyQuestionGroupScore.Equals(other.SurveyQuestionGroupScore)
+                ) &&
+                (
+                    this.SurveyPromoterScore == other.SurveyPromoterScore ||
+                    this.SurveyPromoterScore != null &&
+                    this.SurveyPromoterScore.Equals(other.SurveyPromoterScore)
                 );
         }
 
@@ -1257,6 +1323,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LanguageList != null)
                     hash = hash * 59 + this.LanguageList.GetHashCode();
+                
+                if (this.Mos != null)
+                    hash = hash * 59 + this.Mos.GetHashCode();
+                
+                if (this.SurveyQuestionGroupScore != null)
+                    hash = hash * 59 + this.SurveyQuestionGroupScore.GetHashCode();
+                
+                if (this.SurveyPromoterScore != null)
+                    hash = hash * 59 + this.SurveyPromoterScore.GetHashCode();
                 
                 return hash;
             }

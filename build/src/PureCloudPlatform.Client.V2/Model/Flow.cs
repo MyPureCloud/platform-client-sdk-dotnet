@@ -190,6 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Flow" /> class.
         /// </summary>
+        /// <param name="Id">The flow identifier.</param>
         /// <param name="Name">The flow name (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Description">Description.</param>
@@ -205,8 +206,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CheckedInVersion">CheckedInVersion.</param>
         /// <param name="PublishedBy">PublishedBy.</param>
         /// <param name="CurrentOperation">CurrentOperation.</param>
-        public Flow(string Name = null, Division Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
+        public Flow(string Id = null, string Name = null, Division Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Division = Division;
             this.Description = Description;
@@ -228,11 +230,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The flow identifier
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The flow identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         

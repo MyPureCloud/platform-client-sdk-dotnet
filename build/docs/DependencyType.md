@@ -7,7 +7,7 @@ title: DependencyType
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Id** | **string** | The dependency type identifier | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Versioned** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

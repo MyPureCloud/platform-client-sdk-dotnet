@@ -82,9 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FormId">Unique identifier for the form used to evaluate the conversation/agent.</param>
         /// <param name="ContextId">A unique identifier for an evaluation form, regardless of version.</param>
         /// <param name="FormName">Name of the evaluation form.</param>
-        /// <param name="GetoTotalScore">The total evaluation for interactions.</param>
-        /// <param name="GetoTotalCriticalScore">The score for critical evaluation questions.</param>
-        public AnalyticsEvaluation(string EvaluationId = null, string EvaluatorId = null, string UserId = null, DateTime? EventTime = null, string QueueId = null, string FormId = null, string ContextId = null, string FormName = null, long? GetoTotalScore = null, long? GetoTotalCriticalScore = null)
+        /// <param name="OTotalScore">OTotalScore.</param>
+        /// <param name="OTotalCriticalScore">OTotalCriticalScore.</param>
+        public AnalyticsEvaluation(string EvaluationId = null, string EvaluatorId = null, string UserId = null, DateTime? EventTime = null, string QueueId = null, string FormId = null, string ContextId = null, string FormName = null, long? OTotalScore = null, long? OTotalCriticalScore = null)
         {
             this.EvaluationId = EvaluationId;
             this.EvaluatorId = EvaluatorId;
@@ -94,8 +94,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FormId = FormId;
             this.ContextId = ContextId;
             this.FormName = FormName;
-            this.GetoTotalScore = GetoTotalScore;
-            this.GetoTotalCriticalScore = GetoTotalCriticalScore;
+            this.OTotalScore = OTotalScore;
+            this.OTotalCriticalScore = OTotalCriticalScore;
             
         }
         
@@ -174,20 +174,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The total evaluation for interactions
+        /// Gets or Sets OTotalScore
         /// </summary>
-        /// <value>The total evaluation for interactions</value>
-        [DataMember(Name="getoTotalScore", EmitDefaultValue=false)]
-        public long? GetoTotalScore { get; set; }
+        [DataMember(Name="oTotalScore", EmitDefaultValue=false)]
+        public long? OTotalScore { get; set; }
         
         
         
         /// <summary>
-        /// The score for critical evaluation questions
+        /// Gets or Sets OTotalCriticalScore
         /// </summary>
-        /// <value>The score for critical evaluation questions</value>
-        [DataMember(Name="getoTotalCriticalScore", EmitDefaultValue=false)]
-        public long? GetoTotalCriticalScore { get; set; }
+        [DataMember(Name="oTotalCriticalScore", EmitDefaultValue=false)]
+        public long? OTotalCriticalScore { get; set; }
         
         
         /// <summary>
@@ -207,8 +205,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FormId: ").Append(FormId).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  FormName: ").Append(FormName).Append("\n");
-            sb.Append("  GetoTotalScore: ").Append(GetoTotalScore).Append("\n");
-            sb.Append("  GetoTotalCriticalScore: ").Append(GetoTotalCriticalScore).Append("\n");
+            sb.Append("  OTotalScore: ").Append(OTotalScore).Append("\n");
+            sb.Append("  OTotalCriticalScore: ").Append(OTotalCriticalScore).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -286,14 +284,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FormName.Equals(other.FormName)
                 ) &&
                 (
-                    this.GetoTotalScore == other.GetoTotalScore ||
-                    this.GetoTotalScore != null &&
-                    this.GetoTotalScore.Equals(other.GetoTotalScore)
+                    this.OTotalScore == other.OTotalScore ||
+                    this.OTotalScore != null &&
+                    this.OTotalScore.Equals(other.OTotalScore)
                 ) &&
                 (
-                    this.GetoTotalCriticalScore == other.GetoTotalCriticalScore ||
-                    this.GetoTotalCriticalScore != null &&
-                    this.GetoTotalCriticalScore.Equals(other.GetoTotalCriticalScore)
+                    this.OTotalCriticalScore == other.OTotalCriticalScore ||
+                    this.OTotalCriticalScore != null &&
+                    this.OTotalCriticalScore.Equals(other.OTotalCriticalScore)
                 );
         }
 
@@ -333,11 +331,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.FormName != null)
                     hash = hash * 59 + this.FormName.GetHashCode();
                 
-                if (this.GetoTotalScore != null)
-                    hash = hash * 59 + this.GetoTotalScore.GetHashCode();
+                if (this.OTotalScore != null)
+                    hash = hash * 59 + this.OTotalScore.GetHashCode();
                 
-                if (this.GetoTotalCriticalScore != null)
-                    hash = hash * 59 + this.GetoTotalCriticalScore.GetHashCode();
+                if (this.OTotalCriticalScore != null)
+                    hash = hash * 59 + this.OTotalCriticalScore.GetHashCode();
                 
                 return hash;
             }

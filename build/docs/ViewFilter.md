@@ -45,6 +45,9 @@ title: ViewFilter
 | **AgentName** | **string** | Displays the Agent name as provided by the user | [optional] |
 | **SkillsList** | **List&lt;string&gt;** | The list of skill strings as free form text | [optional] |
 | **LanguageList** | **List&lt;string&gt;** | The list of language strings as free form text | [optional] |
+| **Mos** | [**NumericRange**](NumericRange.html) | The desired range for mos values | [optional] |
+| **SurveyQuestionGroupScore** | [**NumericRange**](NumericRange.html) | The survey question group score used to filter the view | [optional] |
+| **SurveyPromoterScore** | [**NumericRange**](NumericRange.html) | The survey promoter score used to filter the view | [optional] |
 {: class="table table-striped"}
 
 

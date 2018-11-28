@@ -418,6 +418,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Surveyformid,
             
             /// <summary>
+            /// Enum Surveyformname for "surveyFormName"
+            /// </summary>
+            [EnumMember(Value = "surveyFormName")]
+            Surveyformname,
+            
+            /// <summary>
             /// Enum Surveyanswerid for "surveyAnswerId"
             /// </summary>
             [EnumMember(Value = "surveyAnswerId")]
@@ -446,6 +452,24 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "surveyCompletedDate")]
             Surveycompleteddate,
+            
+            /// <summary>
+            /// Enum Surveyerrorreason for "surveyErrorReason"
+            /// </summary>
+            [EnumMember(Value = "surveyErrorReason")]
+            Surveyerrorreason,
+            
+            /// <summary>
+            /// Enum Surveypreviousstatus for "surveyPreviousStatus"
+            /// </summary>
+            [EnumMember(Value = "surveyPreviousStatus")]
+            Surveypreviousstatus,
+            
+            /// <summary>
+            /// Enum Surveystatus for "surveyStatus"
+            /// </summary>
+            [EnumMember(Value = "surveyStatus")]
+            Surveystatus,
             
             /// <summary>
             /// Enum Systempresence for "systemPresence"
@@ -547,7 +571,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Flowoutcome for "flowOutcome"
             /// </summary>
             [EnumMember(Value = "flowOutcome")]
-            Flowoutcome
+            Flowoutcome,
+            
+            /// <summary>
+            /// Enum Minmos for "minMos"
+            /// </summary>
+            [EnumMember(Value = "minMos")]
+            Minmos,
+            
+            /// <summary>
+            /// Enum Mediastatsminconversationmos for "mediaStatsMinConversationMos"
+            /// </summary>
+            [EnumMember(Value = "mediaStatsMinConversationMos")]
+            Mediastatsminconversationmos,
+            
+            /// <summary>
+            /// Enum Minrfactor for "minRFactor"
+            /// </summary>
+            [EnumMember(Value = "minRFactor")]
+            Minrfactor,
+            
+            /// <summary>
+            /// Enum Mediastatsminconversationrfactor for "mediaStatsMinConversationRFactor"
+            /// </summary>
+            [EnumMember(Value = "mediaStatsMinConversationRFactor")]
+            Mediastatsminconversationrfactor
         }
         
         
@@ -915,10 +963,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Nsurveysexpired,
             
             /// <summary>
-            /// Enum Nsurveysbounced for "nSurveysBounced"
+            /// Enum Nsurveyerrors for "nSurveyErrors"
             /// </summary>
-            [EnumMember(Value = "nSurveysBounced")]
-            Nsurveysbounced,
+            [EnumMember(Value = "nSurveyErrors")]
+            Nsurveyerrors,
             
             /// <summary>
             /// Enum Nsurveyresponses for "nSurveyResponses"
@@ -1014,7 +1062,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nflowoutcome for "nFlowOutcome"
             /// </summary>
             [EnumMember(Value = "nFlowOutcome")]
-            Nflowoutcome
+            Nflowoutcome,
+            
+            /// <summary>
+            /// Enum Nflowoutcomefailed for "nFlowOutcomeFailed"
+            /// </summary>
+            [EnumMember(Value = "nFlowOutcomeFailed")]
+            Nflowoutcomefailed
         }
         
         

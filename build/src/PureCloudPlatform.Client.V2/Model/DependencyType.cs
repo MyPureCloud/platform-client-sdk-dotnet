@@ -44,10 +44,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DependencyType" /> class.
         /// </summary>
+        /// <param name="Id">The dependency type identifier.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Versioned">Versioned.</param>
-        public DependencyType(string Name = null, bool? Versioned = null)
+        public DependencyType(string Id = null, string Name = null, bool? Versioned = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Versioned = Versioned;
             
@@ -56,11 +58,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The dependency type identifier
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The dependency type identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         

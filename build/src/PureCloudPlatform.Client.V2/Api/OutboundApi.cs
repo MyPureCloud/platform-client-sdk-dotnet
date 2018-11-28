@@ -966,10 +966,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ContactListEntityListing</returns>
-        ContactListEntityListing GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
+        ContactListEntityListing GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Query a list of contact lists.
@@ -985,10 +986,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of ContactListEntityListing</returns>
-        ApiResponse<ContactListEntityListing> GetOutboundContactlistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<ContactListEntityListing> GetOutboundContactlistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Get a basic ContactList information object
@@ -1727,6 +1729,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Campaign IDs</param>
         /// <returns>ApiResponse of List&lt;CampaignProgress&gt;</returns>
         ApiResponse<List<CampaignProgress>> PostOutboundCampaignsProgressWithHttpInfo (List<string> body);
+        
+        /// <summary>
+        /// Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns></returns>
+        void PostOutboundContactlistClear (string contactListId);
+
+        /// <summary>
+        /// Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostOutboundContactlistClearWithHttpInfo (string contactListId);
         
         /// <summary>
         /// Add contacts to a contact list.
@@ -3320,10 +3344,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ContactListEntityListing</returns>
-        System.Threading.Tasks.Task<ContactListEntityListing> GetOutboundContactlistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ContactListEntityListing> GetOutboundContactlistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Query a list of contact lists.
@@ -3339,10 +3364,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (ContactListEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetOutboundContactlistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetOutboundContactlistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Get a basic ContactList information object
@@ -4081,6 +4107,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Campaign IDs</param>
         /// <returns>Task of ApiResponse (List&lt;CampaignProgress&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostOutboundCampaignsProgressAsyncWithHttpInfo (List<string> body);
+        
+        /// <summary>
+        /// Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostOutboundContactlistClearAsync (string contactListId);
+
+        /// <summary>
+        /// Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundContactlistClearAsyncWithHttpInfo (string contactListId);
         
         /// <summary>
         /// Add contacts to a contact list.
@@ -12399,12 +12447,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ContactListEntityListing</returns>
-        public ContactListEntityListing GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
+        public ContactListEntityListing GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<ContactListEntityListing> localVarResponse = GetOutboundContactlistsWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);
+             ApiResponse<ContactListEntityListing> localVarResponse = GetOutboundContactlistsWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, divisionId, sortBy, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -12419,10 +12468,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of ContactListEntityListing</returns>
-        public ApiResponse< ContactListEntityListing > GetOutboundContactlistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< ContactListEntityListing > GetOutboundContactlistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/outbound/contactlists";
@@ -12465,6 +12515,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
@@ -12515,12 +12566,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ContactListEntityListing</returns>
-        public async System.Threading.Tasks.Task<ContactListEntityListing> GetOutboundContactlistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ContactListEntityListing> GetOutboundContactlistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<ContactListEntityListing> localVarResponse = await GetOutboundContactlistsAsyncWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);
+             ApiResponse<ContactListEntityListing> localVarResponse = await GetOutboundContactlistsAsyncWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, divisionId, sortBy, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -12536,10 +12588,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (ContactListEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetOutboundContactlistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetOutboundContactlistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/outbound/contactlists";
@@ -12582,6 +12635,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
@@ -18520,6 +18574,197 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<List<CampaignProgress>>(localVarStatusCode,
                 localVarHeaders,
                 (List<CampaignProgress>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CampaignProgress>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns></returns>
+        public void PostOutboundContactlistClear (string contactListId)
+        {
+             PostOutboundContactlistClearWithHttpInfo(contactListId);
+        }
+
+        /// <summary>
+        /// Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostOutboundContactlistClearWithHttpInfo (string contactListId)
+        { 
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostOutboundContactlistClear");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/clear";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactListId != null) localVarPathParams.Add("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistClear: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistClear: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostOutboundContactlistClearAsync (string contactListId)
+        {
+             await PostOutboundContactlistClearAsyncWithHttpInfo(contactListId);
+
+        }
+
+        /// <summary>
+        /// Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundContactlistClearAsyncWithHttpInfo (string contactListId)
+        { 
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostOutboundContactlistClear");
+            
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/clear";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactListId != null) localVarPathParams.Add("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistClear: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistClear: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

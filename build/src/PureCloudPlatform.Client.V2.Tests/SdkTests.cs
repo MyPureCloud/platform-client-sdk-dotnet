@@ -126,9 +126,9 @@ namespace PureCloudPlatform.Client.V2.Tests
                 {
                     try
                     {
-                        if (data.GetType() == typeof(NotificationData<UserPresenceNotification>))
+                        if (data.GetType() == typeof(NotificationData<PresenceEventUserPresence>))
                         {
-                            var presence = (NotificationData<UserPresenceNotification>)data;
+                            var presence = (NotificationData<PresenceEventUserPresence>)data;
 
                             // Check to see what we got
                             if (presence.EventBody.PresenceDefinition.Id == availablePresenceId) availableReceived = true;
@@ -151,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Tests
             });
 
             // Register topic
-            handler.AddSubscription($"v2.users.{userId}.presence", typeof(UserPresenceNotification));
+            handler.AddSubscription($"v2.users.{userId}.presence", typeof(PresenceEventUserPresence));
 
             // Change presences
             presenceApi.PatchUserPresence(userId, "PURECLOUD", new UserPresence() { PresenceDefinition = new PresenceDefinition(busyPresenceId) });

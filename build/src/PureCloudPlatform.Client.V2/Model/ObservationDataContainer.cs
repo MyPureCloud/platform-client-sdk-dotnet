@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Group">A mapping from dimension to value.</param>
         /// <param name="Data">Data.</param>
-        public ObservationDataContainer(Dictionary<string, string> Group = null, List<AggregateMetricData> Data = null)
+        public ObservationDataContainer(Dictionary<string, string> Group = null, List<ObservationMetricData> Data = null)
         {
             this.Group = Group;
             this.Data = Data;
@@ -58,7 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public List<AggregateMetricData> Data { get; set; }
+        public List<ObservationMetricData> Data { get; set; }
         
         
         /// <summary>
