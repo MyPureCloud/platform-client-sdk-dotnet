@@ -155,12 +155,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -497,6 +502,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// preferred language by the user
+        /// </summary>
+        /// <value>preferred language by the user</value>
+        [DataMember(Name="languagePreference", EmitDefaultValue=false)]
+        public string LanguagePreference { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -540,6 +554,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Skills: ").Append(Skills).Append("\n");
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
+            sb.Append("  LanguagePreference: ").Append(LanguagePreference).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -713,6 +728,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AcdAutoAnswer.Equals(other.AcdAutoAnswer)
                 ) &&
                 (
+                    this.LanguagePreference == other.LanguagePreference ||
+                    this.LanguagePreference != null &&
+                    this.LanguagePreference.Equals(other.LanguagePreference)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -811,6 +831,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AcdAutoAnswer != null)
                     hash = hash * 59 + this.AcdAutoAnswer.GetHashCode();
+                
+                if (this.LanguagePreference != null)
+                    hash = hash * 59 + this.LanguagePreference.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

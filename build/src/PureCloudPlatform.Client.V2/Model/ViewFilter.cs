@@ -427,6 +427,45 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Provides the agent duration sort order
         /// </summary>
@@ -451,6 +490,32 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Provides the interacting duration sort order</value>
         [DataMember(Name="interactingDurationSortOrder", EmitDefaultValue=false)]
         public InteractingDurationSortOrderEnum? InteractingDurationSortOrder { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -510,7 +575,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Mos">The desired range for mos values.</param>
         /// <param name="SurveyQuestionGroupScore">The survey question group score used to filter the view.</param>
         /// <param name="SurveyPromoterScore">The survey promoter score used to filter the view.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null)
+        /// <param name="SurveyFormContextIds">The list of survey form context ids used to filter the view.</param>
+        /// <param name="ConversationIds">The list of conversation ids used to filter the view.</param>
+        /// <param name="IsEnded">Indicates filtering for ended.</param>
+        /// <param name="IsSurveyed">Indicates filtering for survey.</param>
+        /// <param name="SurveyScores">The list of survey score ranges used to filter the view.</param>
+        /// <param name="PromoterScores">The list of promoter score ranges used to filter the view.</param>
+        /// <param name="IsCampaign">Indicates filtering for campaign.</param>
+        /// <param name="SurveyStatuses">The list of survey statuses used to filter the view.</param>
+        /// <param name="ConversationProperties">A grouping of conversation level filters.</param>
+        /// <param name="IsBlindTransferred">Indicates filtering for blind transferred.</param>
+        /// <param name="IsConsulted">Indicates filtering for consulted.</param>
+        /// <param name="IsConsultTransferred">Indicates filtering for consult transferred.</param>
+        /// <param name="RemoteParticipants">The list of remote participants used to filter the view.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -553,6 +631,19 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Mos = Mos;
             this.SurveyQuestionGroupScore = SurveyQuestionGroupScore;
             this.SurveyPromoterScore = SurveyPromoterScore;
+            this.SurveyFormContextIds = SurveyFormContextIds;
+            this.ConversationIds = ConversationIds;
+            this.IsEnded = IsEnded;
+            this.IsSurveyed = IsSurveyed;
+            this.SurveyScores = SurveyScores;
+            this.PromoterScores = PromoterScores;
+            this.IsCampaign = IsCampaign;
+            this.SurveyStatuses = SurveyStatuses;
+            this.ConversationProperties = ConversationProperties;
+            this.IsBlindTransferred = IsBlindTransferred;
+            this.IsConsulted = IsConsulted;
+            this.IsConsultTransferred = IsConsultTransferred;
+            this.RemoteParticipants = RemoteParticipants;
             
         }
         
@@ -905,6 +996,123 @@ namespace PureCloudPlatform.Client.V2.Model
         public NumericRange SurveyPromoterScore { get; set; }
         
         
+        
+        /// <summary>
+        /// The list of survey form context ids used to filter the view
+        /// </summary>
+        /// <value>The list of survey form context ids used to filter the view</value>
+        [DataMember(Name="surveyFormContextIds", EmitDefaultValue=false)]
+        public List<string> SurveyFormContextIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of conversation ids used to filter the view
+        /// </summary>
+        /// <value>The list of conversation ids used to filter the view</value>
+        [DataMember(Name="conversationIds", EmitDefaultValue=false)]
+        public List<string> ConversationIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for ended
+        /// </summary>
+        /// <value>Indicates filtering for ended</value>
+        [DataMember(Name="isEnded", EmitDefaultValue=false)]
+        public bool? IsEnded { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for survey
+        /// </summary>
+        /// <value>Indicates filtering for survey</value>
+        [DataMember(Name="isSurveyed", EmitDefaultValue=false)]
+        public bool? IsSurveyed { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of survey score ranges used to filter the view
+        /// </summary>
+        /// <value>The list of survey score ranges used to filter the view</value>
+        [DataMember(Name="surveyScores", EmitDefaultValue=false)]
+        public List<NumericRange> SurveyScores { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of promoter score ranges used to filter the view
+        /// </summary>
+        /// <value>The list of promoter score ranges used to filter the view</value>
+        [DataMember(Name="promoterScores", EmitDefaultValue=false)]
+        public List<NumericRange> PromoterScores { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for campaign
+        /// </summary>
+        /// <value>Indicates filtering for campaign</value>
+        [DataMember(Name="isCampaign", EmitDefaultValue=false)]
+        public bool? IsCampaign { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of survey statuses used to filter the view
+        /// </summary>
+        /// <value>The list of survey statuses used to filter the view</value>
+        [DataMember(Name="surveyStatuses", EmitDefaultValue=false)]
+        public List<string> SurveyStatuses { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A grouping of conversation level filters
+        /// </summary>
+        /// <value>A grouping of conversation level filters</value>
+        [DataMember(Name="conversationProperties", EmitDefaultValue=false)]
+        public ConversationProperties ConversationProperties { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for blind transferred
+        /// </summary>
+        /// <value>Indicates filtering for blind transferred</value>
+        [DataMember(Name="isBlindTransferred", EmitDefaultValue=false)]
+        public bool? IsBlindTransferred { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for consulted
+        /// </summary>
+        /// <value>Indicates filtering for consulted</value>
+        [DataMember(Name="isConsulted", EmitDefaultValue=false)]
+        public bool? IsConsulted { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for consult transferred
+        /// </summary>
+        /// <value>Indicates filtering for consult transferred</value>
+        [DataMember(Name="isConsultTransferred", EmitDefaultValue=false)]
+        public bool? IsConsultTransferred { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of remote participants used to filter the view
+        /// </summary>
+        /// <value>The list of remote participants used to filter the view</value>
+        [DataMember(Name="remoteParticipants", EmitDefaultValue=false)]
+        public List<string> RemoteParticipants { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -955,6 +1163,19 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Mos: ").Append(Mos).Append("\n");
             sb.Append("  SurveyQuestionGroupScore: ").Append(SurveyQuestionGroupScore).Append("\n");
             sb.Append("  SurveyPromoterScore: ").Append(SurveyPromoterScore).Append("\n");
+            sb.Append("  SurveyFormContextIds: ").Append(SurveyFormContextIds).Append("\n");
+            sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
+            sb.Append("  IsEnded: ").Append(IsEnded).Append("\n");
+            sb.Append("  IsSurveyed: ").Append(IsSurveyed).Append("\n");
+            sb.Append("  SurveyScores: ").Append(SurveyScores).Append("\n");
+            sb.Append("  PromoterScores: ").Append(PromoterScores).Append("\n");
+            sb.Append("  IsCampaign: ").Append(IsCampaign).Append("\n");
+            sb.Append("  SurveyStatuses: ").Append(SurveyStatuses).Append("\n");
+            sb.Append("  ConversationProperties: ").Append(ConversationProperties).Append("\n");
+            sb.Append("  IsBlindTransferred: ").Append(IsBlindTransferred).Append("\n");
+            sb.Append("  IsConsulted: ").Append(IsConsulted).Append("\n");
+            sb.Append("  IsConsultTransferred: ").Append(IsConsultTransferred).Append("\n");
+            sb.Append("  RemoteParticipants: ").Append(RemoteParticipants).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1195,6 +1416,71 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SurveyPromoterScore == other.SurveyPromoterScore ||
                     this.SurveyPromoterScore != null &&
                     this.SurveyPromoterScore.Equals(other.SurveyPromoterScore)
+                ) &&
+                (
+                    this.SurveyFormContextIds == other.SurveyFormContextIds ||
+                    this.SurveyFormContextIds != null &&
+                    this.SurveyFormContextIds.SequenceEqual(other.SurveyFormContextIds)
+                ) &&
+                (
+                    this.ConversationIds == other.ConversationIds ||
+                    this.ConversationIds != null &&
+                    this.ConversationIds.SequenceEqual(other.ConversationIds)
+                ) &&
+                (
+                    this.IsEnded == other.IsEnded ||
+                    this.IsEnded != null &&
+                    this.IsEnded.Equals(other.IsEnded)
+                ) &&
+                (
+                    this.IsSurveyed == other.IsSurveyed ||
+                    this.IsSurveyed != null &&
+                    this.IsSurveyed.Equals(other.IsSurveyed)
+                ) &&
+                (
+                    this.SurveyScores == other.SurveyScores ||
+                    this.SurveyScores != null &&
+                    this.SurveyScores.SequenceEqual(other.SurveyScores)
+                ) &&
+                (
+                    this.PromoterScores == other.PromoterScores ||
+                    this.PromoterScores != null &&
+                    this.PromoterScores.SequenceEqual(other.PromoterScores)
+                ) &&
+                (
+                    this.IsCampaign == other.IsCampaign ||
+                    this.IsCampaign != null &&
+                    this.IsCampaign.Equals(other.IsCampaign)
+                ) &&
+                (
+                    this.SurveyStatuses == other.SurveyStatuses ||
+                    this.SurveyStatuses != null &&
+                    this.SurveyStatuses.SequenceEqual(other.SurveyStatuses)
+                ) &&
+                (
+                    this.ConversationProperties == other.ConversationProperties ||
+                    this.ConversationProperties != null &&
+                    this.ConversationProperties.Equals(other.ConversationProperties)
+                ) &&
+                (
+                    this.IsBlindTransferred == other.IsBlindTransferred ||
+                    this.IsBlindTransferred != null &&
+                    this.IsBlindTransferred.Equals(other.IsBlindTransferred)
+                ) &&
+                (
+                    this.IsConsulted == other.IsConsulted ||
+                    this.IsConsulted != null &&
+                    this.IsConsulted.Equals(other.IsConsulted)
+                ) &&
+                (
+                    this.IsConsultTransferred == other.IsConsultTransferred ||
+                    this.IsConsultTransferred != null &&
+                    this.IsConsultTransferred.Equals(other.IsConsultTransferred)
+                ) &&
+                (
+                    this.RemoteParticipants == other.RemoteParticipants ||
+                    this.RemoteParticipants != null &&
+                    this.RemoteParticipants.SequenceEqual(other.RemoteParticipants)
                 );
         }
 
@@ -1332,6 +1618,45 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SurveyPromoterScore != null)
                     hash = hash * 59 + this.SurveyPromoterScore.GetHashCode();
+                
+                if (this.SurveyFormContextIds != null)
+                    hash = hash * 59 + this.SurveyFormContextIds.GetHashCode();
+                
+                if (this.ConversationIds != null)
+                    hash = hash * 59 + this.ConversationIds.GetHashCode();
+                
+                if (this.IsEnded != null)
+                    hash = hash * 59 + this.IsEnded.GetHashCode();
+                
+                if (this.IsSurveyed != null)
+                    hash = hash * 59 + this.IsSurveyed.GetHashCode();
+                
+                if (this.SurveyScores != null)
+                    hash = hash * 59 + this.SurveyScores.GetHashCode();
+                
+                if (this.PromoterScores != null)
+                    hash = hash * 59 + this.PromoterScores.GetHashCode();
+                
+                if (this.IsCampaign != null)
+                    hash = hash * 59 + this.IsCampaign.GetHashCode();
+                
+                if (this.SurveyStatuses != null)
+                    hash = hash * 59 + this.SurveyStatuses.GetHashCode();
+                
+                if (this.ConversationProperties != null)
+                    hash = hash * 59 + this.ConversationProperties.GetHashCode();
+                
+                if (this.IsBlindTransferred != null)
+                    hash = hash * 59 + this.IsBlindTransferred.GetHashCode();
+                
+                if (this.IsConsulted != null)
+                    hash = hash * 59 + this.IsConsulted.GetHashCode();
+                
+                if (this.IsConsultTransferred != null)
+                    hash = hash * 59 + this.IsConsultTransferred.GetHashCode();
+                
+                if (this.RemoteParticipants != null)
+                    hash = hash * 59 + this.RemoteParticipants.GetHashCode();
                 
                 return hash;
             }

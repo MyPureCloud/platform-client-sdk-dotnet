@@ -53,9 +53,6 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
 
             var apiInstance = new SearchApi();
             
@@ -121,9 +118,6 @@ namespace Example
     {
         public void main()
         {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
             var apiInstance = new SearchApi();
@@ -191,7 +185,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -266,7 +260,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -341,7 +335,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -386,7 +380,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, languagePreference, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
 | **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -422,7 +416,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -467,7 +461,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, languagePreference, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
 | **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -503,7 +497,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -578,7 +572,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -653,9 +647,6 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
 
             var apiInstance = new SearchApi();
             
@@ -721,9 +712,6 @@ namespace Example
     {
         public void main()
         {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
             var apiInstance = new SearchApi();
@@ -791,7 +779,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -860,7 +848,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -929,7 +917,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1004,7 +992,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1079,7 +1067,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1148,7 +1136,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 

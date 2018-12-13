@@ -42,7 +42,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -112,7 +112,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -188,7 +188,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -264,7 +264,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 

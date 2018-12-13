@@ -200,12 +200,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -602,6 +607,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// preferred language by the user
+        /// </summary>
+        /// <value>preferred language by the user</value>
+        [DataMember(Name="languagePreference", EmitDefaultValue=false)]
+        public string LanguagePreference { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The PureCloud system date time.
         /// </summary>
         /// <value>The PureCloud system date time.</value>
@@ -780,6 +794,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Skills: ").Append(Skills).Append("\n");
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
+            sb.Append("  LanguagePreference: ").Append(LanguagePreference).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
             sb.Append("  GeolocationSettings: ").Append(GeolocationSettings).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
@@ -968,6 +983,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AcdAutoAnswer.Equals(other.AcdAutoAnswer)
                 ) &&
                 (
+                    this.LanguagePreference == other.LanguagePreference ||
+                    this.LanguagePreference != null &&
+                    this.LanguagePreference.Equals(other.LanguagePreference)
+                ) &&
+                (
                     this.Date == other.Date ||
                     this.Date != null &&
                     this.Date.Equals(other.Date)
@@ -1141,6 +1161,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AcdAutoAnswer != null)
                     hash = hash * 59 + this.AcdAutoAnswer.GetHashCode();
+                
+                if (this.LanguagePreference != null)
+                    hash = hash * 59 + this.LanguagePreference.GetHashCode();
                 
                 if (this.Date != null)
                     hash = hash * 59 + this.Date.GetHashCode();

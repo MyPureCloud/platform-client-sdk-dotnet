@@ -34,6 +34,7 @@ title: OrgUser
 | **Skills** | [**List&lt;UserRoutingSkill&gt;**](UserRoutingSkill.html) | Routing (ACD) skills possessed by the user | [optional] |
 | **Languages** | [**List&lt;UserRoutingLanguage&gt;**](UserRoutingLanguage.html) | Routing (ACD) languages possessed by the user | [optional] |
 | **AcdAutoAnswer** | **bool?** | acd auto answer | [optional] |
+| **LanguagePreference** | **string** | preferred language by the user | [optional] |
 | **Organization** | [**Organization**](Organization.html) |  | [optional] |
 {: class="table table-striped"}
 

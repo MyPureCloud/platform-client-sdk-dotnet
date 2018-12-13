@@ -1116,10 +1116,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Nflow,
             
             /// <summary>
-            /// Enum Tflowhangup for "tFlowHangUp"
+            /// Enum Tflowdisconnect for "tFlowDisconnect"
             /// </summary>
-            [EnumMember(Value = "tFlowHangUp")]
-            Tflowhangup,
+            [EnumMember(Value = "tFlowDisconnect")]
+            Tflowdisconnect,
             
             /// <summary>
             /// Enum Tflowexit for "tFlowExit"

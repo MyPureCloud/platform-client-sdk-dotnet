@@ -32,7 +32,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingQueueUsers**](RoutingApi.html#getroutingqueueusers) | **GET** /api/v2/routing/queues/{queueId}/users | Get the members of this queue |
 | [**GetRoutingQueueWrapupcodes**](RoutingApi.html#getroutingqueuewrapupcodes) | **GET** /api/v2/routing/queues/{queueId}/wrapupcodes | Get the wrap-up codes for a queue |
 | [**GetRoutingQueues**](RoutingApi.html#getroutingqueues) | **GET** /api/v2/routing/queues | Get list of queues. |
-| [**GetRoutingQueuesDivisionviews**](RoutingApi.html#getroutingqueuesdivisionviews) | **GET** /api/v2/routing/queues/divisionviews | Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s). |
+| [**GetRoutingQueuesDivisionviews**](RoutingApi.html#getroutingqueuesdivisionviews) | **GET** /api/v2/routing/queues/divisionviews | Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s). |
+| [**GetRoutingQueuesDivisionviewsAll**](RoutingApi.html#getroutingqueuesdivisionviewsall) | **GET** /api/v2/routing/queues/divisionviews/all | Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization. |
 | [**GetRoutingQueuesMe**](RoutingApi.html#getroutingqueuesme) | **GET** /api/v2/routing/queues/me | Get a paged listing of queues the user is a member of. |
 | [**GetRoutingSkill**](RoutingApi.html#getroutingskill) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
 | [**GetRoutingSkills**](RoutingApi.html#getroutingskills) | **GET** /api/v2/routing/skills | Get the list of routing skills. |
@@ -44,7 +45,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingWrapupcodes**](RoutingApi.html#getroutingwrapupcodes) | **GET** /api/v2/routing/wrapupcodes | Get list of wrapup codes. |
 | [**GetUserRoutinglanguages**](RoutingApi.html#getuserroutinglanguages) | **GET** /api/v2/users/{userId}/routinglanguages | List routing language for user |
 | [**GetUserRoutingskills**](RoutingApi.html#getuserroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
-| [**PatchRoutingQueueUser**](RoutingApi.html#patchroutingqueueuser) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | Update the ring number of joined status for a User in a Queue |
+| [**PatchRoutingQueueUser**](RoutingApi.html#patchroutingqueueuser) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | Update the ring number or joined status for a User in a Queue |
 | [**PatchRoutingQueueUsers**](RoutingApi.html#patchroutingqueueusers) | **PATCH** /api/v2/routing/queues/{queueId}/users | Join or unjoin a set of users for a queue |
 | [**PatchUserRoutinglanguage**](RoutingApi.html#patchuserroutinglanguage) | **PATCH** /api/v2/users/{userId}/routinglanguages/{languageId} | Update routing language proficiency or state. |
 | [**PatchUserRoutinglanguagesBulk**](RoutingApi.html#patchuserroutinglanguagesbulk) | **PATCH** /api/v2/users/{userId}/routinglanguages/bulk | Add bulk routing language to user. Max limit 50 languages |
@@ -100,7 +101,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -169,7 +170,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -244,7 +245,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -319,7 +320,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -394,7 +395,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -469,7 +470,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -538,7 +539,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -607,7 +608,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -667,7 +668,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -737,7 +738,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -813,7 +814,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -888,7 +889,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -958,7 +959,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1034,7 +1035,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1122,7 +1123,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1183,7 +1184,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1243,7 +1244,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1337,7 +1338,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1407,7 +1408,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1489,7 +1490,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1559,7 +1560,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1635,7 +1636,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1711,7 +1712,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1804,7 +1805,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, languagePreference |
 | **joined** | **bool?**| Filter by joined status | [optional]  |
 | **name** | **string**| Filter by queue member name | [optional]  |
 | **profileSkills** | [**List<string>**](string.html)| Filter by profile skill | [optional]  |
@@ -1847,7 +1848,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1917,7 +1918,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1994,7 +1995,7 @@ namespace Example
 
 
 
-Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
+Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
 
 
 
@@ -2017,19 +2018,19 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
             var apiInstance = new RoutingApi();
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size [max value is 100] (optional)  (default to 25)
             
             
             
             
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageNumber = 56;  // int? | Page number [max value is 5] (optional)  (default to 1)
             
             
             
@@ -2062,7 +2063,7 @@ namespace Example
             try
             {
                 
-                // Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
+                // Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
                 
                 QueueEntityListing result = apiInstance.GetRoutingQueuesDivisionviews(pageSize, pageNumber, sortBy, sortOrder, name, id, divisionId);
                 Debug.WriteLine(result);
@@ -2081,13 +2082,101 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **pageSize** | **int?**| Page size [max value is 100] | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number [max value is 5] | [optional] [default to 1] |
+| **sortBy** | **string**| Sort by | [optional] [default to name]<br />**Values**: name, id, divisionId |
 | **sortOrder** | **string**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc, score |
 | **name** | **string**| Name | [optional]  |
 | **id** | [**List<string>**](string.html)| Queue ID(s) | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**QueueEntityListing**](QueueEntityListing.html)
+
+<a name="getroutingqueuesdivisionviewsall"></a>
+
+## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueuesDivisionviewsAll (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+
+
+
+Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
+
+
+
+Requires ANY permissions: 
+
+* routing:queue:search
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingQueuesDivisionviewsAllExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new RoutingApi();
+            
+            
+            var pageSize = 56;  // int? | Page size [max value is 500] (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            
+            
+            
+
+            try
+            {
+                
+                // Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
+                
+                QueueEntityListing result = apiInstance.GetRoutingQueuesDivisionviewsAll(pageSize, pageNumber, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingQueuesDivisionviewsAll: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size [max value is 500] | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortBy** | **string**| Sort by | [optional] [default to name]<br />**Values**: name, id, divisionId |
+| **sortOrder** | **string**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc, score |
 {: class="table table-striped"}
 
 ### Return type
@@ -2122,7 +2211,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2215,7 +2304,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2284,7 +2373,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2372,7 +2461,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2478,7 +2567,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2548,7 +2637,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2643,7 +2732,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2704,7 +2793,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2774,7 +2863,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2861,7 +2950,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2948,7 +3037,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3013,7 +3102,7 @@ namespace Example
 
 
 
-Update the ring number of joined status for a User in a Queue
+Update the ring number or joined status for a User in a Queue
 
 
 
@@ -3036,7 +3125,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3061,7 +3150,7 @@ namespace Example
             try
             {
                 
-                // Update the ring number of joined status for a User in a Queue
+                // Update the ring number or joined status for a User in a Queue
                 
                 QueueMember result = apiInstance.PatchRoutingQueueUser(queueId, memberId, body);
                 Debug.WriteLine(result);
@@ -3118,7 +3207,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3195,7 +3284,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3278,7 +3367,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3355,7 +3444,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3431,7 +3520,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3501,7 +3590,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3577,7 +3666,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3647,7 +3736,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3717,7 +3806,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3799,7 +3888,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3875,7 +3964,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3945,7 +4034,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4015,7 +4104,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4085,7 +4174,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4155,7 +4244,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4226,7 +4315,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4303,7 +4392,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4379,7 +4468,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4461,7 +4550,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4537,7 +4626,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4613,7 +4702,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4689,7 +4778,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4759,7 +4848,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4836,7 +4925,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 

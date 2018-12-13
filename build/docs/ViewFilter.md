@@ -48,6 +48,19 @@ title: ViewFilter
 | **Mos** | [**NumericRange**](NumericRange.html) | The desired range for mos values | [optional] |
 | **SurveyQuestionGroupScore** | [**NumericRange**](NumericRange.html) | The survey question group score used to filter the view | [optional] |
 | **SurveyPromoterScore** | [**NumericRange**](NumericRange.html) | The survey promoter score used to filter the view | [optional] |
+| **SurveyFormContextIds** | **List&lt;string&gt;** | The list of survey form context ids used to filter the view | [optional] |
+| **ConversationIds** | **List&lt;string&gt;** | The list of conversation ids used to filter the view | [optional] |
+| **IsEnded** | **bool?** | Indicates filtering for ended | [optional] |
+| **IsSurveyed** | **bool?** | Indicates filtering for survey | [optional] |
+| **SurveyScores** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The list of survey score ranges used to filter the view | [optional] |
+| **PromoterScores** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The list of promoter score ranges used to filter the view | [optional] |
+| **IsCampaign** | **bool?** | Indicates filtering for campaign | [optional] |
+| **SurveyStatuses** | **List&lt;string&gt;** | The list of survey statuses used to filter the view | [optional] |
+| **ConversationProperties** | [**ConversationProperties**](ConversationProperties.html) | A grouping of conversation level filters | [optional] |
+| **IsBlindTransferred** | **bool?** | Indicates filtering for blind transferred | [optional] |
+| **IsConsulted** | **bool?** | Indicates filtering for consulted | [optional] |
+| **IsConsultTransferred** | **bool?** | Indicates filtering for consult transferred | [optional] |
+| **RemoteParticipants** | **List&lt;string&gt;** | The list of remote participants used to filter the view | [optional] |
 {: class="table table-striped"}
 
 

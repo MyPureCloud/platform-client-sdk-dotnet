@@ -922,12 +922,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1019,12 +1013,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1115,12 +1103,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1212,12 +1194,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1311,7 +1287,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -1411,7 +1387,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -1510,7 +1486,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -1610,7 +1586,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -1712,7 +1688,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -1815,7 +1791,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -1917,7 +1893,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2020,7 +1996,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2119,7 +2095,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2219,7 +2195,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2318,7 +2294,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2418,7 +2394,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2518,12 +2494,6 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -2619,12 +2589,6 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2719,12 +2683,6 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -2820,12 +2778,6 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2920,7 +2872,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3021,7 +2973,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3121,7 +3073,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3222,7 +3174,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3325,7 +3277,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3429,7 +3381,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3532,7 +3484,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3636,7 +3588,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3736,7 +3688,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3837,7 +3789,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3937,7 +3889,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4038,7 +3990,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {

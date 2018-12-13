@@ -226,7 +226,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -327,7 +327,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {

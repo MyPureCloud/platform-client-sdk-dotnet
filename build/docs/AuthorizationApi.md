@@ -20,7 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuthorizationPermissions**](AuthorizationApi.html#getauthorizationpermissions) | **GET** /api/v2/authorization/permissions | Get all permissions. |
 | [**GetAuthorizationProducts**](AuthorizationApi.html#getauthorizationproducts) | **GET** /api/v2/authorization/products | Get the list of enabled products |
 | [**GetAuthorizationRole**](AuthorizationApi.html#getauthorizationrole) | **GET** /api/v2/authorization/roles/{roleId} | Get a single organization role. |
-| [**GetAuthorizationRoleComparedefaultRightRoleId**](AuthorizationApi.html#getauthorizationrolecomparedefaultrightroleid) | **GET** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an org role to default role comparison comparison |
+| [**GetAuthorizationRoleComparedefaultRightRoleId**](AuthorizationApi.html#getauthorizationrolecomparedefaultrightroleid) | **GET** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an org role to default role comparison |
 | [**GetAuthorizationRoleSubjectgrants**](AuthorizationApi.html#getauthorizationrolesubjectgrants) | **GET** /api/v2/authorization/roles/{roleId}/subjectgrants | Get the subjects&#39; granted divisions in the specified role. |
 | [**GetAuthorizationRoleUsers**](AuthorizationApi.html#getauthorizationroleusers) | **GET** /api/v2/authorization/roles/{roleId}/users | Get a list of the users in a specified role. |
 | [**GetAuthorizationRoles**](AuthorizationApi.html#getauthorizationroles) | **GET** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
@@ -72,7 +72,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -143,7 +143,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -212,7 +212,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -295,7 +295,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -363,7 +363,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -438,7 +438,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -555,7 +555,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -616,7 +616,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -676,7 +676,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -751,7 +751,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -832,7 +832,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -907,7 +907,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -968,7 +968,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1015,7 +1015,7 @@ namespace Example
 
 
 
-Get an org role to default role comparison comparison
+Get an org role to default role comparison
 
 Compares any organization role to a default role id and show differences
 
@@ -1038,7 +1038,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1058,7 +1058,7 @@ namespace Example
             try
             {
                 
-                // Get an org role to default role comparison comparison
+                // Get an org role to default role comparison
                 
                 DomainOrgRoleDifference result = apiInstance.GetAuthorizationRoleComparedefaultRightRoleId(leftRoleId, rightRoleId);
                 Debug.WriteLine(result);
@@ -1114,7 +1114,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1219,7 +1219,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1301,7 +1301,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1431,7 +1431,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1500,7 +1500,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1561,7 +1561,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1633,7 +1633,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1708,7 +1708,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1790,7 +1790,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1833,7 +1833,7 @@ namespace Example
 
 <a name="postauthorizationrole"></a>
 
-## void PostAuthorizationRole (string roleId, SubjectDivisions body)
+## void PostAuthorizationRole (string roleId, SubjectDivisions body, string subjectType = null)
 
 
 
@@ -1860,7 +1860,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1876,13 +1876,18 @@ namespace Example
             var body = new SubjectDivisions(); // SubjectDivisions | Subjects and Divisions
             
             
+            
+            var subjectType = subjectType_example;  // string | what the type of the subject is, PC_GROUP or PC_USER (optional)  (default to PC_USER)
+            
+            
+            
 
             try
             {
                 
                 // Bulk-grant subjects and divisions with an organization role.
                 
-                apiInstance.PostAuthorizationRole(roleId, body);
+                apiInstance.PostAuthorizationRole(roleId, body, subjectType);
             }
             catch (Exception e)
             {
@@ -1900,6 +1905,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
 | **body** | [**SubjectDivisions**](SubjectDivisions.html)| Subjects and Divisions |  |
+| **subjectType** | **string**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
 {: class="table table-striped"}
 
 ### Return type
@@ -1935,7 +1941,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2017,7 +2023,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2087,7 +2093,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2157,7 +2163,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2244,7 +2250,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2322,7 +2328,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2398,7 +2404,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2474,7 +2480,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2550,7 +2556,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2622,7 +2628,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 

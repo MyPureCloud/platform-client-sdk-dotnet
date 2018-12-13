@@ -19,6 +19,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetQualityCalibrations**](QualityApi.html#getqualitycalibrations) | **GET** /api/v2/quality/calibrations | Get the list of calibrations |
 | [**GetQualityConversationAudits**](QualityApi.html#getqualityconversationaudits) | **GET** /api/v2/quality/conversations/{conversationId}/audits | Get audits for conversation or recording |
 | [**GetQualityConversationEvaluation**](QualityApi.html#getqualityconversationevaluation) | **GET** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Get an evaluation |
+| [**GetQualityConversationSurveys**](QualityApi.html#getqualityconversationsurveys) | **GET** /api/v2/quality/conversations/{conversationId}/surveys | Get the surveys for a conversation |
 | [**GetQualityEvaluationsQuery**](QualityApi.html#getqualityevaluationsquery) | **GET** /api/v2/quality/evaluations/query | Queries Evaluations and returns a paged list |
 | [**GetQualityEvaluatorsActivity**](QualityApi.html#getqualityevaluatorsactivity) | **GET** /api/v2/quality/evaluators/activity | Get an evaluator activity |
 | [**GetQualityForm**](QualityApi.html#getqualityform) | **GET** /api/v2/quality/forms/{formId} | Get an evaluation form |
@@ -40,8 +41,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetQualityPublishedformsEvaluations**](QualityApi.html#getqualitypublishedformsevaluations) | **GET** /api/v2/quality/publishedforms/evaluations | Get the published evaluation forms. |
 | [**GetQualityPublishedformsSurvey**](QualityApi.html#getqualitypublishedformssurvey) | **GET** /api/v2/quality/publishedforms/surveys/{formId} | Get the most recent published version of a survey form. |
 | [**GetQualityPublishedformsSurveys**](QualityApi.html#getqualitypublishedformssurveys) | **GET** /api/v2/quality/publishedforms/surveys | Get the published survey forms. |
+| [**GetQualitySurvey**](QualityApi.html#getqualitysurvey) | **GET** /api/v2/quality/surveys/{surveyId} | Get a survey for a conversation |
+| [**GetQualitySurveysScorable**](QualityApi.html#getqualitysurveysscorable) | **GET** /api/v2/quality/surveys/scorable | Get a survey as an end-customer, for the purposes of scoring it. |
 | [**PatchQualityFormsSurvey**](QualityApi.html#patchqualityformssurvey) | **PATCH** /api/v2/quality/forms/surveys/{formId} | Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form. |
 | [**PostAnalyticsEvaluationsAggregatesQuery**](QualityApi.html#postanalyticsevaluationsaggregatesquery) | **POST** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
+| [**PostAnalyticsSurveysAggregatesQuery**](QualityApi.html#postanalyticssurveysaggregatesquery) | **POST** /api/v2/analytics/surveys/aggregates/query | Query for survey aggregates |
 | [**PostQualityCalibrations**](QualityApi.html#postqualitycalibrations) | **POST** /api/v2/quality/calibrations | Create a calibration |
 | [**PostQualityConversationEvaluations**](QualityApi.html#postqualityconversationevaluations) | **POST** /api/v2/quality/conversations/{conversationId}/evaluations | Create an evaluation |
 | [**PostQualityEvaluationsScoring**](QualityApi.html#postqualityevaluationsscoring) | **POST** /api/v2/quality/evaluations/scoring | Score evaluation |
@@ -53,12 +57,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostQualityPublishedformsEvaluations**](QualityApi.html#postqualitypublishedformsevaluations) | **POST** /api/v2/quality/publishedforms/evaluations | Publish an evaluation form. |
 | [**PostQualityPublishedformsSurveys**](QualityApi.html#postqualitypublishedformssurveys) | **POST** /api/v2/quality/publishedforms/surveys | Publish a survey form. |
 | [**PostQualitySpotability**](QualityApi.html#postqualityspotability) | **POST** /api/v2/quality/spotability | Retrieve the spotability statistic |
+| [**PostQualitySurveysScoring**](QualityApi.html#postqualitysurveysscoring) | **POST** /api/v2/quality/surveys/scoring | Score survey |
 | [**PutQualityCalibration**](QualityApi.html#putqualitycalibration) | **PUT** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
 | [**PutQualityConversationEvaluation**](QualityApi.html#putqualityconversationevaluation) | **PUT** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
 | [**PutQualityForm**](QualityApi.html#putqualityform) | **PUT** /api/v2/quality/forms/{formId} | Update an evaluation form. |
 | [**PutQualityFormsEvaluation**](QualityApi.html#putqualityformsevaluation) | **PUT** /api/v2/quality/forms/evaluations/{formId} | Update an evaluation form. |
 | [**PutQualityFormsSurvey**](QualityApi.html#putqualityformssurvey) | **PUT** /api/v2/quality/forms/surveys/{formId} | Update a survey form. |
 | [**PutQualityKeywordset**](QualityApi.html#putqualitykeywordset) | **PUT** /api/v2/quality/keywordsets/{keywordSetId} | Update a keywordSet to the specified keywordSet via PUT. |
+| [**PutQualitySurveysScorable**](QualityApi.html#putqualitysurveysscorable) | **PUT** /api/v2/quality/surveys/scorable | Update a survey as an end-customer, for the purposes of scoring it. |
 {: class="table table-striped"}
 
 <a name="deletequalitycalibration"></a>
@@ -89,7 +95,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -164,7 +170,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -246,7 +252,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -315,7 +321,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -384,7 +390,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -452,7 +458,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -520,7 +526,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -588,7 +594,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -723,7 +729,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -804,7 +810,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -927,7 +933,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1044,7 +1050,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1097,6 +1103,75 @@ namespace Example
 
 [**Evaluation**](Evaluation.html)
 
+<a name="getqualityconversationsurveys"></a>
+
+## [**List&lt;Survey&gt;**](Survey.html) GetQualityConversationSurveys (string conversationId)
+
+
+
+Get the surveys for a conversation
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityConversationSurveysExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+
+            try
+            {
+                
+                // Get the surveys for a conversation
+                
+                List&lt;Survey&gt; result = apiInstance.GetQualityConversationSurveys(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityConversationSurveys: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<Survey>**](Survey.html)
+
 <a name="getqualityevaluationsquery"></a>
 
 ## [**EvaluationEntityListing**](EvaluationEntityListing.html) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
@@ -1125,7 +1200,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1296,7 +1371,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1426,7 +1501,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1496,7 +1571,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1578,7 +1653,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1690,7 +1765,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1760,7 +1835,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1842,7 +1917,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -1954,7 +2029,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2024,7 +2099,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2106,7 +2181,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2218,7 +2293,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2288,7 +2363,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2363,7 +2438,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2432,7 +2507,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2556,7 +2631,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2626,7 +2701,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2714,7 +2789,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2784,7 +2859,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2872,7 +2947,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -2942,7 +3017,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3001,6 +3076,141 @@ namespace Example
 
 [**SurveyFormEntityListing**](SurveyFormEntityListing.html)
 
+<a name="getqualitysurvey"></a>
+
+## [**Survey**](Survey.html) GetQualitySurvey (string surveyId)
+
+
+
+Get a survey for a conversation
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualitySurveyExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var surveyId = surveyId_example;  // string | surveyId
+            
+            
+            
+
+            try
+            {
+                
+                // Get a survey for a conversation
+                
+                Survey result = apiInstance.GetQualitySurvey(surveyId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualitySurvey: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **surveyId** | **string**| surveyId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Survey**](Survey.html)
+
+<a name="getqualitysurveysscorable"></a>
+
+## [**ScorableSurvey**](ScorableSurvey.html) GetQualitySurveysScorable (string customerSurveyUrl = null)
+
+
+
+Get a survey as an end-customer, for the purposes of scoring it.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualitySurveysScorableExample
+    {
+        public void main()
+        {
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var customerSurveyUrl = customerSurveyUrl_example;  // string | customerSurveyUrl (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Get a survey as an end-customer, for the purposes of scoring it.
+                
+                ScorableSurvey result = apiInstance.GetQualitySurveysScorable(customerSurveyUrl);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualitySurveysScorable: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **customerSurveyUrl** | **string**| customerSurveyUrl | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScorableSurvey**](ScorableSurvey.html)
+
 <a name="patchqualityformssurvey"></a>
 
 ## [**SurveyForm**](SurveyForm.html) PatchQualityFormsSurvey (string formId, SurveyForm body)
@@ -3030,7 +3240,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3106,7 +3316,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3129,6 +3339,76 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling QualityApi.PostAnalyticsEvaluationsAggregatesQuery: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AggregateQueryResponse**](AggregateQueryResponse.html)
+
+<a name="postanalyticssurveysaggregatesquery"></a>
+
+## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostAnalyticsSurveysAggregatesQuery (AggregationQuery body)
+
+
+
+Query for survey aggregates
+
+
+
+Requires ANY permissions: 
+
+* analytics:surveyAggregate:view
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsSurveysAggregatesQueryExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            
+            var body = new AggregationQuery(); // AggregationQuery | query
+            
+            
+
+            try
+            {
+                
+                // Query for survey aggregates
+                
+                AggregateQueryResponse result = apiInstance.PostAnalyticsSurveysAggregatesQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PostAnalyticsSurveysAggregatesQuery: " + e.Message );
             }
         }
     }
@@ -3175,7 +3455,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3250,7 +3530,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3331,7 +3611,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3401,7 +3681,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3471,7 +3751,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3541,7 +3821,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3610,7 +3890,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3686,7 +3966,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3756,7 +4036,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3826,7 +4106,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3895,7 +4175,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -3936,6 +4216,75 @@ namespace Example
 
 [**KeywordSet**](KeywordSet.html)
 
+<a name="postqualitysurveysscoring"></a>
+
+## [**SurveyScoringSet**](SurveyScoringSet.html) PostQualitySurveysScoring (SurveyFormAndScoringSet body)
+
+
+
+Score survey
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostQualitySurveysScoringExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            
+            var body = new SurveyFormAndScoringSet(); // SurveyFormAndScoringSet | surveyAndScoringSet
+            
+            
+
+            try
+            {
+                
+                // Score survey
+                
+                SurveyScoringSet result = apiInstance.PostQualitySurveysScoring(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PostQualitySurveysScoring: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SurveyFormAndScoringSet**](SurveyFormAndScoringSet.html)| surveyAndScoringSet |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SurveyScoringSet**](SurveyScoringSet.html)
+
 <a name="putqualitycalibration"></a>
 
 ## [**Calibration**](Calibration.html) PutQualityCalibration (string calibrationId, Calibration body)
@@ -3964,7 +4313,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4039,7 +4388,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4127,7 +4476,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4203,7 +4552,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4279,7 +4628,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4354,7 +4703,7 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: PureCloud Auth
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
             
 
@@ -4400,4 +4749,76 @@ namespace Example
 ### Return type
 
 [**KeywordSet**](KeywordSet.html)
+
+<a name="putqualitysurveysscorable"></a>
+
+## [**ScorableSurvey**](ScorableSurvey.html) PutQualitySurveysScorable (ScorableSurvey body, string customerSurveyUrl = null)
+
+
+
+Update a survey as an end-customer, for the purposes of scoring it.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutQualitySurveysScorableExample
+    {
+        public void main()
+        {
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            
+            var body = new ScorableSurvey(); // ScorableSurvey | survey
+            
+            
+            
+            var customerSurveyUrl = customerSurveyUrl_example;  // string | customerSurveyUrl (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Update a survey as an end-customer, for the purposes of scoring it.
+                
+                ScorableSurvey result = apiInstance.PutQualitySurveysScorable(body, customerSurveyUrl);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PutQualitySurveysScorable: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ScorableSurvey**](ScorableSurvey.html)| survey |  |
+| **customerSurveyUrl** | **string**| customerSurveyUrl | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScorableSurvey**](ScorableSurvey.html)
 

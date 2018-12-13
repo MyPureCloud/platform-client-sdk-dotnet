@@ -327,7 +327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DomainOrganizationRole> GetAuthorizationRoleWithHttpInfo (string roleId);
         
         /// <summary>
-        /// Get an org role to default role comparison comparison
+        /// Get an org role to default role comparison
         /// </summary>
         /// <remarks>
         /// Compares any organization role to a default role id and show differences
@@ -339,7 +339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         DomainOrgRoleDifference GetAuthorizationRoleComparedefaultRightRoleId (string leftRoleId, string rightRoleId);
 
         /// <summary>
-        /// Get an org role to default role comparison comparison
+        /// Get an org role to default role comparison
         /// </summary>
         /// <remarks>
         /// Compares any organization role to a default role id and show differences
@@ -597,8 +597,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
         /// <returns></returns>
-        void PostAuthorizationRole (string roleId, SubjectDivisions body);
+        void PostAuthorizationRole (string roleId, SubjectDivisions body, string subjectType = null);
 
         /// <summary>
         /// Bulk-grant subjects and divisions with an organization role.
@@ -609,8 +610,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostAuthorizationRoleWithHttpInfo (string roleId, SubjectDivisions body);
+        ApiResponse<Object> PostAuthorizationRoleWithHttpInfo (string roleId, SubjectDivisions body, string subjectType = null);
         
         /// <summary>
         /// Get an unsaved org role to default role comparison
@@ -1167,7 +1169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> GetAuthorizationRoleAsyncWithHttpInfo (string roleId);
         
         /// <summary>
-        /// Get an org role to default role comparison comparison
+        /// Get an org role to default role comparison
         /// </summary>
         /// <remarks>
         /// Compares any organization role to a default role id and show differences
@@ -1179,7 +1181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DomainOrgRoleDifference> GetAuthorizationRoleComparedefaultRightRoleIdAsync (string leftRoleId, string rightRoleId);
 
         /// <summary>
-        /// Get an org role to default role comparison comparison
+        /// Get an org role to default role comparison
         /// </summary>
         /// <remarks>
         /// Compares any organization role to a default role id and show differences
@@ -1437,8 +1439,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostAuthorizationRoleAsync (string roleId, SubjectDivisions body);
+        System.Threading.Tasks.Task PostAuthorizationRoleAsync (string roleId, SubjectDivisions body, string subjectType = null);
 
         /// <summary>
         /// Bulk-grant subjects and divisions with an organization role.
@@ -1449,8 +1452,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationRoleAsyncWithHttpInfo (string roleId, SubjectDivisions body);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationRoleAsyncWithHttpInfo (string roleId, SubjectDivisions body, string subjectType = null);
         
         /// <summary>
         /// Get an unsaved org role to default role comparison
@@ -1849,7 +1853,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -1945,7 +1949,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2040,7 +2044,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2136,7 +2140,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2243,7 +2247,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2353,7 +2357,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2448,7 +2452,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2544,7 +2548,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2643,7 +2647,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2743,7 +2747,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2860,7 +2864,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2977,7 +2981,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3067,7 +3071,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3157,7 +3161,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3247,7 +3251,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3337,7 +3341,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3436,7 +3440,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3536,7 +3540,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3641,7 +3645,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3748,7 +3752,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3844,7 +3848,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3940,7 +3944,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4030,7 +4034,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4120,7 +4124,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4216,7 +4220,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4313,7 +4317,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4344,7 +4348,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get an org role to default role comparison comparison Compares any organization role to a default role id and show differences
+        /// Get an org role to default role comparison Compares any organization role to a default role id and show differences
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="leftRoleId">Left Role ID</param>
@@ -4357,7 +4361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an org role to default role comparison comparison Compares any organization role to a default role id and show differences
+        /// Get an org role to default role comparison Compares any organization role to a default role id and show differences
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="leftRoleId">Left Role ID</param>
@@ -4415,7 +4419,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4445,7 +4449,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get an org role to default role comparison comparison Compares any organization role to a default role id and show differences
+        /// Get an org role to default role comparison Compares any organization role to a default role id and show differences
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="leftRoleId">Left Role ID</param>
@@ -4459,7 +4463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an org role to default role comparison comparison Compares any organization role to a default role id and show differences
+        /// Get an org role to default role comparison Compares any organization role to a default role id and show differences
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="leftRoleId">Left Role ID</param>
@@ -4519,7 +4523,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4633,7 +4637,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4748,7 +4752,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4850,7 +4854,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4953,7 +4957,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5076,7 +5080,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5199,7 +5203,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5295,7 +5299,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5392,7 +5396,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5482,7 +5486,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5572,7 +5576,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5668,7 +5672,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5765,7 +5769,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5871,7 +5875,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5979,7 +5983,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6090,7 +6094,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6204,7 +6208,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6304,7 +6308,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6405,7 +6409,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6441,10 +6445,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
         /// <returns></returns>
-        public void PostAuthorizationRole (string roleId, SubjectDivisions body)
+        public void PostAuthorizationRole (string roleId, SubjectDivisions body, string subjectType = null)
         {
-             PostAuthorizationRoleWithHttpInfo(roleId, body);
+             PostAuthorizationRoleWithHttpInfo(roleId, body, subjectType);
         }
 
         /// <summary>
@@ -6453,8 +6458,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostAuthorizationRoleWithHttpInfo (string roleId, SubjectDivisions body)
+        public ApiResponse<Object> PostAuthorizationRoleWithHttpInfo (string roleId, SubjectDivisions body, string subjectType = null)
         { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -6497,6 +6503,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (roleId != null) localVarPathParams.Add("roleId", this.Configuration.ApiClient.ParameterToString(roleId));
 
             // Query params
+            if (subjectType != null) localVarQueryParams.Add(new Tuple<string, string>("subjectType", this.Configuration.ApiClient.ParameterToString(subjectType)));
 
             // Header params
 
@@ -6510,7 +6517,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6545,10 +6552,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostAuthorizationRoleAsync (string roleId, SubjectDivisions body)
+        public async System.Threading.Tasks.Task PostAuthorizationRoleAsync (string roleId, SubjectDivisions body, string subjectType = null)
         {
-             await PostAuthorizationRoleAsyncWithHttpInfo(roleId, body);
+             await PostAuthorizationRoleAsyncWithHttpInfo(roleId, body, subjectType);
 
         }
 
@@ -6558,8 +6566,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
+        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationRoleAsyncWithHttpInfo (string roleId, SubjectDivisions body)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationRoleAsyncWithHttpInfo (string roleId, SubjectDivisions body, string subjectType = null)
         { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -6604,6 +6613,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (roleId != null) localVarPathParams.Add("roleId", this.Configuration.ApiClient.ParameterToString(roleId));
 
             // Query params
+            if (subjectType != null) localVarQueryParams.Add(new Tuple<string, string>("subjectType", this.Configuration.ApiClient.ParameterToString(subjectType)));
 
             // Header params
 
@@ -6617,7 +6627,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6729,7 +6739,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6844,7 +6854,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6944,7 +6954,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7045,7 +7055,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7138,7 +7148,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7231,7 +7241,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7341,7 +7351,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7454,7 +7464,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7560,7 +7570,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7668,7 +7678,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7774,7 +7784,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7882,7 +7892,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7988,7 +7998,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8096,7 +8106,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8202,7 +8212,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8310,7 +8320,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8410,7 +8420,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8511,7 +8521,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8617,7 +8627,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8725,7 +8735,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {

@@ -351,6 +351,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Evaluation> GetQualityConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, string expand = null);
         
         /// <summary>
+        /// Get the surveys for a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>List&lt;Survey&gt;</returns>
+        List<Survey> GetQualityConversationSurveys (string conversationId);
+
+        /// <summary>
+        /// Get the surveys for a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>ApiResponse of List&lt;Survey&gt;</returns>
+        ApiResponse<List<Survey>> GetQualityConversationSurveysWithHttpInfo (string conversationId);
+        
+        /// <summary>
         /// Queries Evaluations and returns a paged list
         /// </summary>
         /// <remarks>
@@ -959,6 +981,50 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SurveyFormEntityListing> GetQualityPublishedformsSurveysWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null);
         
         /// <summary>
+        /// Get a survey for a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyId">surveyId</param>
+        /// <returns>Survey</returns>
+        Survey GetQualitySurvey (string surveyId);
+
+        /// <summary>
+        /// Get a survey for a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyId">surveyId</param>
+        /// <returns>ApiResponse of Survey</returns>
+        ApiResponse<Survey> GetQualitySurveyWithHttpInfo (string surveyId);
+        
+        /// <summary>
+        /// Get a survey as an end-customer, for the purposes of scoring it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>ScorableSurvey</returns>
+        ScorableSurvey GetQualitySurveysScorable (string customerSurveyUrl = null);
+
+        /// <summary>
+        /// Get a survey as an end-customer, for the purposes of scoring it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>ApiResponse of ScorableSurvey</returns>
+        ApiResponse<ScorableSurvey> GetQualitySurveysScorableWithHttpInfo (string customerSurveyUrl = null);
+        
+        /// <summary>
         /// Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
         /// </summary>
         /// <remarks>
@@ -1003,6 +1069,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AggregateQueryResponse</returns>
         ApiResponse<AggregateQueryResponse> PostAnalyticsEvaluationsAggregatesQueryWithHttpInfo (AggregationQuery body);
+        
+        /// <summary>
+        /// Query for survey aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AggregateQueryResponse</returns>
+        AggregateQueryResponse PostAnalyticsSurveysAggregatesQuery (AggregationQuery body);
+
+        /// <summary>
+        /// Query for survey aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AggregateQueryResponse</returns>
+        ApiResponse<AggregateQueryResponse> PostAnalyticsSurveysAggregatesQueryWithHttpInfo (AggregationQuery body);
         
         /// <summary>
         /// Create a calibration
@@ -1255,6 +1343,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<KeywordSet> PostQualitySpotabilityWithHttpInfo (KeywordSet body = null);
         
         /// <summary>
+        /// Score survey
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">surveyAndScoringSet</param>
+        /// <returns>SurveyScoringSet</returns>
+        SurveyScoringSet PostQualitySurveysScoring (SurveyFormAndScoringSet body);
+
+        /// <summary>
+        /// Score survey
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">surveyAndScoringSet</param>
+        /// <returns>ApiResponse of SurveyScoringSet</returns>
+        ApiResponse<SurveyScoringSet> PostQualitySurveysScoringWithHttpInfo (SurveyFormAndScoringSet body);
+        
+        /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
         /// </summary>
         /// <remarks>
@@ -1401,6 +1511,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">keywordSet</param>
         /// <returns>ApiResponse of KeywordSet</returns>
         ApiResponse<KeywordSet> PutQualityKeywordsetWithHttpInfo (string keywordSetId, KeywordSet body);
+        
+        /// <summary>
+        /// Update a survey as an end-customer, for the purposes of scoring it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">survey</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>ScorableSurvey</returns>
+        ScorableSurvey PutQualitySurveysScorable (ScorableSurvey body, string customerSurveyUrl = null);
+
+        /// <summary>
+        /// Update a survey as an end-customer, for the purposes of scoring it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">survey</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>ApiResponse of ScorableSurvey</returns>
+        ApiResponse<ScorableSurvey> PutQualitySurveysScorableWithHttpInfo (ScorableSurvey body, string customerSurveyUrl = null);
         
         #endregion Synchronous Operations
         
@@ -1739,6 +1873,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Evaluation>> GetQualityConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
+        
+        /// <summary>
+        /// Get the surveys for a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of List&lt;Survey&gt;</returns>
+        System.Threading.Tasks.Task<List<Survey>> GetQualityConversationSurveysAsync (string conversationId);
+
+        /// <summary>
+        /// Get the surveys for a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ApiResponse (List&lt;Survey&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<Survey>>> GetQualityConversationSurveysAsyncWithHttpInfo (string conversationId);
         
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -2349,6 +2505,50 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityPublishedformsSurveysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null);
         
         /// <summary>
+        /// Get a survey for a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyId">surveyId</param>
+        /// <returns>Task of Survey</returns>
+        System.Threading.Tasks.Task<Survey> GetQualitySurveyAsync (string surveyId);
+
+        /// <summary>
+        /// Get a survey for a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyId">surveyId</param>
+        /// <returns>Task of ApiResponse (Survey)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Survey>> GetQualitySurveyAsyncWithHttpInfo (string surveyId);
+        
+        /// <summary>
+        /// Get a survey as an end-customer, for the purposes of scoring it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>Task of ScorableSurvey</returns>
+        System.Threading.Tasks.Task<ScorableSurvey> GetQualitySurveysScorableAsync (string customerSurveyUrl = null);
+
+        /// <summary>
+        /// Get a survey as an end-customer, for the purposes of scoring it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>Task of ApiResponse (ScorableSurvey)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ScorableSurvey>> GetQualitySurveysScorableAsyncWithHttpInfo (string customerSurveyUrl = null);
+        
+        /// <summary>
         /// Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
         /// </summary>
         /// <remarks>
@@ -2393,6 +2593,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsEvaluationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
+        
+        /// <summary>
+        /// Query for survey aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AggregateQueryResponse</returns>
+        System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsSurveysAggregatesQueryAsync (AggregationQuery body);
+
+        /// <summary>
+        /// Query for survey aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsSurveysAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
         
         /// <summary>
         /// Create a calibration
@@ -2645,6 +2867,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PostQualitySpotabilityAsyncWithHttpInfo (KeywordSet body = null);
         
         /// <summary>
+        /// Score survey
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">surveyAndScoringSet</param>
+        /// <returns>Task of SurveyScoringSet</returns>
+        System.Threading.Tasks.Task<SurveyScoringSet> PostQualitySurveysScoringAsync (SurveyFormAndScoringSet body);
+
+        /// <summary>
+        /// Score survey
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">surveyAndScoringSet</param>
+        /// <returns>Task of ApiResponse (SurveyScoringSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SurveyScoringSet>> PostQualitySurveysScoringAsyncWithHttpInfo (SurveyFormAndScoringSet body);
+        
+        /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
         /// </summary>
         /// <remarks>
@@ -2791,6 +3035,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">keywordSet</param>
         /// <returns>Task of ApiResponse (KeywordSet)</returns>
         System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PutQualityKeywordsetAsyncWithHttpInfo (string keywordSetId, KeywordSet body);
+        
+        /// <summary>
+        /// Update a survey as an end-customer, for the purposes of scoring it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">survey</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>Task of ScorableSurvey</returns>
+        System.Threading.Tasks.Task<ScorableSurvey> PutQualitySurveysScorableAsync (ScorableSurvey body, string customerSurveyUrl = null);
+
+        /// <summary>
+        /// Update a survey as an end-customer, for the purposes of scoring it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">survey</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>Task of ApiResponse (ScorableSurvey)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ScorableSurvey>> PutQualitySurveysScorableAsyncWithHttpInfo (ScorableSurvey body, string customerSurveyUrl = null);
         
         #endregion Asynchronous Operations
         
@@ -2956,7 +3224,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3060,7 +3328,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3165,7 +3433,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3272,7 +3540,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3367,7 +3635,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3463,7 +3731,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3558,7 +3826,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3654,7 +3922,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3749,7 +4017,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3845,7 +4113,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3940,7 +4208,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4036,7 +4304,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4131,7 +4399,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4227,7 +4495,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4353,7 +4621,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4479,7 +4747,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4581,7 +4849,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4684,7 +4952,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4807,7 +5075,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4931,7 +5199,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5051,7 +5319,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5172,7 +5440,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5277,7 +5545,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5384,7 +5652,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5408,6 +5676,199 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Evaluation>(localVarStatusCode,
                 localVarHeaders,
                 (Evaluation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Evaluation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the surveys for a conversation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>List&lt;Survey&gt;</returns>
+        public List<Survey> GetQualityConversationSurveys (string conversationId)
+        {
+             ApiResponse<List<Survey>> localVarResponse = GetQualityConversationSurveysWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the surveys for a conversation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>ApiResponse of List&lt;Survey&gt;</returns>
+        public ApiResponse< List<Survey> > GetQualityConversationSurveysWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetQualityConversationSurveys");
+
+            var localVarPath = "/api/v2/quality/conversations/{conversationId}/surveys";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityConversationSurveys: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityConversationSurveys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Survey>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Survey>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Survey>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the surveys for a conversation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of List&lt;Survey&gt;</returns>
+        public async System.Threading.Tasks.Task<List<Survey>> GetQualityConversationSurveysAsync (string conversationId)
+        {
+             ApiResponse<List<Survey>> localVarResponse = await GetQualityConversationSurveysAsyncWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the surveys for a conversation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ApiResponse (List&lt;Survey&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<Survey>>> GetQualityConversationSurveysAsyncWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetQualityConversationSurveys");
+            
+
+            var localVarPath = "/api/v2/quality/conversations/{conversationId}/surveys";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityConversationSurveys: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityConversationSurveys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Survey>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Survey>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Survey>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5528,7 +5989,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5672,7 +6133,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5795,7 +6256,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5918,7 +6379,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6014,7 +6475,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6111,7 +6572,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6213,7 +6674,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6316,7 +6777,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6430,7 +6891,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6544,7 +7005,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6640,7 +7101,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6737,7 +7198,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6839,7 +7300,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6942,7 +7403,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7056,7 +7517,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7170,7 +7631,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7266,7 +7727,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7363,7 +7824,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7465,7 +7926,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7568,7 +8029,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7682,7 +8143,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7796,7 +8257,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7892,7 +8353,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -7989,7 +8450,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8088,7 +8549,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8188,7 +8649,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8284,7 +8745,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8381,7 +8842,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8501,7 +8962,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8621,7 +9082,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8717,7 +9178,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8814,7 +9275,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -8916,7 +9377,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -9018,7 +9479,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -9114,7 +9575,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -9211,7 +9672,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -9313,7 +9774,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -9415,7 +9876,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -9511,7 +9972,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -9608,7 +10069,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -9710,7 +10171,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -9812,7 +10273,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -9836,6 +10297,373 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<SurveyFormEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (SurveyFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyFormEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a survey for a conversation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyId">surveyId</param>
+        /// <returns>Survey</returns>
+        public Survey GetQualitySurvey (string surveyId)
+        {
+             ApiResponse<Survey> localVarResponse = GetQualitySurveyWithHttpInfo(surveyId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a survey for a conversation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyId">surveyId</param>
+        /// <returns>ApiResponse of Survey</returns>
+        public ApiResponse< Survey > GetQualitySurveyWithHttpInfo (string surveyId)
+        { 
+            // verify the required parameter 'surveyId' is set
+            if (surveyId == null)
+                throw new ApiException(400, "Missing required parameter 'surveyId' when calling QualityApi->GetQualitySurvey");
+
+            var localVarPath = "/api/v2/quality/surveys/{surveyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (surveyId != null) localVarPathParams.Add("surveyId", this.Configuration.ApiClient.ParameterToString(surveyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualitySurvey: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualitySurvey: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Survey>(localVarStatusCode,
+                localVarHeaders,
+                (Survey) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Survey)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a survey for a conversation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyId">surveyId</param>
+        /// <returns>Task of Survey</returns>
+        public async System.Threading.Tasks.Task<Survey> GetQualitySurveyAsync (string surveyId)
+        {
+             ApiResponse<Survey> localVarResponse = await GetQualitySurveyAsyncWithHttpInfo(surveyId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a survey for a conversation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyId">surveyId</param>
+        /// <returns>Task of ApiResponse (Survey)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Survey>> GetQualitySurveyAsyncWithHttpInfo (string surveyId)
+        { 
+            // verify the required parameter 'surveyId' is set
+            if (surveyId == null)
+                throw new ApiException(400, "Missing required parameter 'surveyId' when calling QualityApi->GetQualitySurvey");
+            
+
+            var localVarPath = "/api/v2/quality/surveys/{surveyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (surveyId != null) localVarPathParams.Add("surveyId", this.Configuration.ApiClient.ParameterToString(surveyId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualitySurvey: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualitySurvey: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Survey>(localVarStatusCode,
+                localVarHeaders,
+                (Survey) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Survey)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a survey as an end-customer, for the purposes of scoring it. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>ScorableSurvey</returns>
+        public ScorableSurvey GetQualitySurveysScorable (string customerSurveyUrl = null)
+        {
+             ApiResponse<ScorableSurvey> localVarResponse = GetQualitySurveysScorableWithHttpInfo(customerSurveyUrl);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a survey as an end-customer, for the purposes of scoring it. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>ApiResponse of ScorableSurvey</returns>
+        public ApiResponse< ScorableSurvey > GetQualitySurveysScorableWithHttpInfo (string customerSurveyUrl = null)
+        { 
+
+            var localVarPath = "/api/v2/quality/surveys/scorable";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (customerSurveyUrl != null) localVarQueryParams.Add(new Tuple<string, string>("customerSurveyUrl", this.Configuration.ApiClient.ParameterToString(customerSurveyUrl)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualitySurveysScorable: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualitySurveysScorable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScorableSurvey>(localVarStatusCode,
+                localVarHeaders,
+                (ScorableSurvey) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScorableSurvey)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a survey as an end-customer, for the purposes of scoring it. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>Task of ScorableSurvey</returns>
+        public async System.Threading.Tasks.Task<ScorableSurvey> GetQualitySurveysScorableAsync (string customerSurveyUrl = null)
+        {
+             ApiResponse<ScorableSurvey> localVarResponse = await GetQualitySurveysScorableAsyncWithHttpInfo(customerSurveyUrl);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a survey as an end-customer, for the purposes of scoring it. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>Task of ApiResponse (ScorableSurvey)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ScorableSurvey>> GetQualitySurveysScorableAsyncWithHttpInfo (string customerSurveyUrl = null)
+        { 
+
+            var localVarPath = "/api/v2/quality/surveys/scorable";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (customerSurveyUrl != null) localVarQueryParams.Add(new Tuple<string, string>("customerSurveyUrl", this.Configuration.ApiClient.ParameterToString(customerSurveyUrl)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualitySurveysScorable: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualitySurveysScorable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScorableSurvey>(localVarStatusCode,
+                localVarHeaders,
+                (ScorableSurvey) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScorableSurvey)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -9918,7 +10746,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -10026,7 +10854,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -10126,7 +10954,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -10227,7 +11055,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -10247,6 +11075,207 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsEvaluationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsEvaluationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Query for survey aggregates 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AggregateQueryResponse</returns>
+        public AggregateQueryResponse PostAnalyticsSurveysAggregatesQuery (AggregationQuery body)
+        {
+             ApiResponse<AggregateQueryResponse> localVarResponse = PostAnalyticsSurveysAggregatesQueryWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for survey aggregates 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AggregateQueryResponse</returns>
+        public ApiResponse< AggregateQueryResponse > PostAnalyticsSurveysAggregatesQueryWithHttpInfo (AggregationQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostAnalyticsSurveysAggregatesQuery");
+
+            var localVarPath = "/api/v2/analytics/surveys/aggregates/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsSurveysAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsSurveysAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Query for survey aggregates 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AggregateQueryResponse</returns>
+        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsSurveysAggregatesQueryAsync (AggregationQuery body)
+        {
+             ApiResponse<AggregateQueryResponse> localVarResponse = await PostAnalyticsSurveysAggregatesQueryAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for survey aggregates 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsSurveysAggregatesQueryAsyncWithHttpInfo (AggregationQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostAnalyticsSurveysAggregatesQuery");
+            
+
+            var localVarPath = "/api/v2/analytics/surveys/aggregates/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsSurveysAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsSurveysAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
@@ -10330,7 +11359,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -10434,7 +11463,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -10543,7 +11572,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -10654,7 +11683,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -10754,7 +11783,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -10855,7 +11884,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -10955,7 +11984,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -11056,7 +12085,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -11156,7 +12185,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -11257,7 +12286,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -11357,7 +12386,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -11458,7 +12487,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -11561,7 +12590,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -11665,7 +12694,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -11765,7 +12794,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -11866,7 +12895,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -11966,7 +12995,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -12067,7 +13096,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -12167,7 +13196,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -12268,7 +13297,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -12365,7 +13394,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -12462,7 +13491,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -12486,6 +13515,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<KeywordSet>(localVarStatusCode,
                 localVarHeaders,
                 (KeywordSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Score survey 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">surveyAndScoringSet</param>
+        /// <returns>SurveyScoringSet</returns>
+        public SurveyScoringSet PostQualitySurveysScoring (SurveyFormAndScoringSet body)
+        {
+             ApiResponse<SurveyScoringSet> localVarResponse = PostQualitySurveysScoringWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Score survey 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">surveyAndScoringSet</param>
+        /// <returns>ApiResponse of SurveyScoringSet</returns>
+        public ApiResponse< SurveyScoringSet > PostQualitySurveysScoringWithHttpInfo (SurveyFormAndScoringSet body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualitySurveysScoring");
+
+            var localVarPath = "/api/v2/quality/surveys/scoring";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualitySurveysScoring: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualitySurveysScoring: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SurveyScoringSet>(localVarStatusCode,
+                localVarHeaders,
+                (SurveyScoringSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyScoringSet)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Score survey 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">surveyAndScoringSet</param>
+        /// <returns>Task of SurveyScoringSet</returns>
+        public async System.Threading.Tasks.Task<SurveyScoringSet> PostQualitySurveysScoringAsync (SurveyFormAndScoringSet body)
+        {
+             ApiResponse<SurveyScoringSet> localVarResponse = await PostQualitySurveysScoringAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Score survey 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">surveyAndScoringSet</param>
+        /// <returns>Task of ApiResponse (SurveyScoringSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SurveyScoringSet>> PostQualitySurveysScoringAsyncWithHttpInfo (SurveyFormAndScoringSet body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualitySurveysScoring");
+            
+
+            var localVarPath = "/api/v2/quality/surveys/scoring";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualitySurveysScoring: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualitySurveysScoring: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SurveyScoringSet>(localVarStatusCode,
+                localVarHeaders,
+                (SurveyScoringSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyScoringSet)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -12568,7 +13798,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -12676,7 +13906,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -12791,7 +14021,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -12909,7 +14139,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -13015,7 +14245,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -13123,7 +14353,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -13229,7 +14459,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -13337,7 +14567,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -13443,7 +14673,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -13551,7 +14781,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -13657,7 +14887,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -13765,7 +14995,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -13789,6 +15019,201 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<KeywordSet>(localVarStatusCode,
                 localVarHeaders,
                 (KeywordSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update a survey as an end-customer, for the purposes of scoring it. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">survey</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>ScorableSurvey</returns>
+        public ScorableSurvey PutQualitySurveysScorable (ScorableSurvey body, string customerSurveyUrl = null)
+        {
+             ApiResponse<ScorableSurvey> localVarResponse = PutQualitySurveysScorableWithHttpInfo(body, customerSurveyUrl);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a survey as an end-customer, for the purposes of scoring it. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">survey</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>ApiResponse of ScorableSurvey</returns>
+        public ApiResponse< ScorableSurvey > PutQualitySurveysScorableWithHttpInfo (ScorableSurvey body, string customerSurveyUrl = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualitySurveysScorable");
+
+            var localVarPath = "/api/v2/quality/surveys/scorable";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (customerSurveyUrl != null) localVarQueryParams.Add(new Tuple<string, string>("customerSurveyUrl", this.Configuration.ApiClient.ParameterToString(customerSurveyUrl)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutQualitySurveysScorable: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutQualitySurveysScorable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScorableSurvey>(localVarStatusCode,
+                localVarHeaders,
+                (ScorableSurvey) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScorableSurvey)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update a survey as an end-customer, for the purposes of scoring it. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">survey</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>Task of ScorableSurvey</returns>
+        public async System.Threading.Tasks.Task<ScorableSurvey> PutQualitySurveysScorableAsync (ScorableSurvey body, string customerSurveyUrl = null)
+        {
+             ApiResponse<ScorableSurvey> localVarResponse = await PutQualitySurveysScorableAsyncWithHttpInfo(body, customerSurveyUrl);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a survey as an end-customer, for the purposes of scoring it. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">survey</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <returns>Task of ApiResponse (ScorableSurvey)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ScorableSurvey>> PutQualitySurveysScorableAsyncWithHttpInfo (ScorableSurvey body, string customerSurveyUrl = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualitySurveysScorable");
+            
+
+            var localVarPath = "/api/v2/quality/surveys/scorable";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (customerSurveyUrl != null) localVarQueryParams.Add(new Tuple<string, string>("customerSurveyUrl", this.Configuration.ApiClient.ParameterToString(customerSurveyUrl)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutQualitySurveysScorable: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutQualitySurveysScorable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScorableSurvey>(localVarStatusCode,
+                localVarHeaders,
+                (ScorableSurvey) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScorableSurvey)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

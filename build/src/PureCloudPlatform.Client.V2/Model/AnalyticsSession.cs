@@ -400,7 +400,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackUserName">The name of the user requesting a call back.</param>
         /// <param name="CallbackNumbers">List of numbers to callback.</param>
         /// <param name="CallbackScheduledTime">Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ScriptId">Scheduled callback date/time, Date time is represented as an ISO-8601 string. .</param>
+        /// <param name="ScriptId">A unique identifier for a script.</param>
         /// <param name="PeerId">A unique identifier for a peer.</param>
         /// <param name="SkipEnabled">(Dialer) Whether the agent can skip the dialer contact.</param>
         /// <param name="TimeoutSeconds">The number of seconds before PureCloud begins the call for a call back. 0 disables automatic calling.</param>
@@ -645,9 +645,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Scheduled callback date/time, Date time is represented as an ISO-8601 string. 
+        /// A unique identifier for a script
         /// </summary>
-        /// <value>Scheduled callback date/time, Date time is represented as an ISO-8601 string. </value>
+        /// <value>A unique identifier for a script</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
         

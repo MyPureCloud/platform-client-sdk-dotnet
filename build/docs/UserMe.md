@@ -34,6 +34,7 @@ title: UserMe
 | **Skills** | [**List&lt;UserRoutingSkill&gt;**](UserRoutingSkill.html) | Routing (ACD) skills possessed by the user | [optional] |
 | **Languages** | [**List&lt;UserRoutingLanguage&gt;**](UserRoutingLanguage.html) | Routing (ACD) languages possessed by the user | [optional] |
 | **AcdAutoAnswer** | **bool?** | acd auto answer | [optional] |
+| **LanguagePreference** | **string** | preferred language by the user | [optional] |
 | **Date** | [**ServerDate**](ServerDate.html) | The PureCloud system date time. | [optional] |
 | **GeolocationSettings** | [**GeolocationSettings**](GeolocationSettings.html) | Geolocation settings for user&#39;s organization. | [optional] |
 | **Organization** | [**Organization**](Organization.html) | Organization details for this user. | [optional] |

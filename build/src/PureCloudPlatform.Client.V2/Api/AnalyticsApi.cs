@@ -511,6 +511,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ReportSchedule> PostAnalyticsReportingSchedulesWithHttpInfo (ReportSchedule body);
         
         /// <summary>
+        /// Query for survey aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AggregateQueryResponse</returns>
+        AggregateQueryResponse PostAnalyticsSurveysAggregatesQuery (AggregationQuery body);
+
+        /// <summary>
+        /// Query for survey aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AggregateQueryResponse</returns>
+        ApiResponse<AggregateQueryResponse> PostAnalyticsSurveysAggregatesQueryWithHttpInfo (AggregationQuery body);
+        
+        /// <summary>
         /// Query for user aggregates
         /// </summary>
         /// <remarks>
@@ -1099,6 +1121,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PostAnalyticsReportingSchedulesAsyncWithHttpInfo (ReportSchedule body);
         
         /// <summary>
+        /// Query for survey aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AggregateQueryResponse</returns>
+        System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsSurveysAggregatesQueryAsync (AggregationQuery body);
+
+        /// <summary>
+        /// Query for survey aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsSurveysAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
+        
+        /// <summary>
         /// Query for user aggregates
         /// </summary>
         /// <remarks>
@@ -1345,7 +1389,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -1441,7 +1485,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -1537,7 +1581,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -1634,7 +1678,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -1727,7 +1771,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -1820,7 +1864,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -1910,7 +1954,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2000,7 +2044,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2099,7 +2143,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2198,7 +2242,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2297,7 +2341,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2397,7 +2441,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2487,7 +2531,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2577,7 +2621,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2673,7 +2717,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2770,7 +2814,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2872,7 +2916,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -2975,7 +3019,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3071,7 +3115,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3168,7 +3212,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3270,7 +3314,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3374,7 +3418,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3470,7 +3514,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3566,7 +3610,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3656,7 +3700,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3746,7 +3790,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3852,7 +3896,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -3960,7 +4004,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4060,7 +4104,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4161,7 +4205,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4261,7 +4305,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4362,7 +4406,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4462,7 +4506,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4563,7 +4607,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4663,7 +4707,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4764,7 +4808,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4864,7 +4908,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -4965,7 +5009,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5065,7 +5109,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5166,7 +5210,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5262,7 +5306,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5359,7 +5403,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Body param
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5459,7 +5503,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5560,7 +5604,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5584,6 +5628,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ReportSchedule>(localVarStatusCode,
                 localVarHeaders,
                 (ReportSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Query for survey aggregates 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AggregateQueryResponse</returns>
+        public AggregateQueryResponse PostAnalyticsSurveysAggregatesQuery (AggregationQuery body)
+        {
+             ApiResponse<AggregateQueryResponse> localVarResponse = PostAnalyticsSurveysAggregatesQueryWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for survey aggregates 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AggregateQueryResponse</returns>
+        public ApiResponse< AggregateQueryResponse > PostAnalyticsSurveysAggregatesQueryWithHttpInfo (AggregationQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsSurveysAggregatesQuery");
+
+            var localVarPath = "/api/v2/analytics/surveys/aggregates/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsSurveysAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsSurveysAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Query for survey aggregates 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AggregateQueryResponse</returns>
+        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsSurveysAggregatesQueryAsync (AggregationQuery body)
+        {
+             ApiResponse<AggregateQueryResponse> localVarResponse = await PostAnalyticsSurveysAggregatesQueryAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for survey aggregates 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsSurveysAggregatesQueryAsyncWithHttpInfo (AggregationQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsSurveysAggregatesQuery");
+            
+
+            var localVarPath = "/api/v2/analytics/surveys/aggregates/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsSurveysAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsSurveysAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5660,7 +5905,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5761,7 +6006,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5861,7 +6106,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -5962,7 +6207,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6062,7 +6307,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6163,7 +6408,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6269,7 +6514,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
@@ -6377,7 +6622,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
 
             
-            // authentication (PureCloud Auth) required
+            // authentication (PureCloud OAuth) required
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {

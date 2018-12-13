@@ -34,6 +34,7 @@ title: User
 | **Skills** | [**List&lt;UserRoutingSkill&gt;**](UserRoutingSkill.html) | Routing (ACD) skills possessed by the user | [optional] |
 | **Languages** | [**List&lt;UserRoutingLanguage&gt;**](UserRoutingLanguage.html) | Routing (ACD) languages possessed by the user | [optional] |
 | **AcdAutoAnswer** | **bool?** | acd auto answer | [optional] |
+| **LanguagePreference** | **string** | preferred language by the user | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 
