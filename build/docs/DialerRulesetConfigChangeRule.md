@@ -11,8 +11,8 @@ title: DialerRulesetConfigChangeRule
 | **Name** | **string** |  | [optional] |
 | **Order** | **int?** |  | [optional] |
 | **Category** | **string** |  | [optional] |
-| **Conditions** | [**List&lt;DialerRulesetConfigChangeCondition&gt;**](DialerRulesetConfigChangeCondition.html) |  | [optional] |
 | **Actions** | [**List&lt;DialerRulesetConfigChangeAction&gt;**](DialerRulesetConfigChangeAction.html) |  | [optional] |
+| **Conditions** | [**List&lt;DialerRulesetConfigChangeCondition&gt;**](DialerRulesetConfigChangeCondition.html) |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

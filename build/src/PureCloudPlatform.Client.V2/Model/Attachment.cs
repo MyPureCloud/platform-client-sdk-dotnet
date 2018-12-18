@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Attachment" /> class.
@@ -54,13 +59,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContentUri">The content uri of the attachment. If set, this is commonly a public api download location..</param>
         /// <param name="ContentType">The type of file the attachment is..</param>
         /// <param name="ContentLength">The length of the attachment file..</param>
-        public Attachment(string AttachmentId = null, string Name = null, string ContentUri = null, string ContentType = null, int? ContentLength = null)
+        /// <param name="InlineImage">Whether or not the attachment was attached inline.,.</param>
+        public Attachment(string AttachmentId = null, string Name = null, string ContentUri = null, string ContentType = null, int? ContentLength = null, bool? InlineImage = null)
         {
             this.AttachmentId = AttachmentId;
             this.Name = Name;
             this.ContentUri = ContentUri;
             this.ContentType = ContentType;
             this.ContentLength = ContentLength;
+            this.InlineImage = InlineImage;
             
         }
         
@@ -110,6 +117,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? ContentLength { get; set; }
         
         
+        
+        /// <summary>
+        /// Whether or not the attachment was attached inline.,
+        /// </summary>
+        /// <value>Whether or not the attachment was attached inline.,</value>
+        [DataMember(Name="inlineImage", EmitDefaultValue=false)]
+        public bool? InlineImage { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,6 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContentUri: ").Append(ContentUri).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
+            sb.Append("  InlineImage: ").Append(InlineImage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -184,6 +201,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContentLength == other.ContentLength ||
                     this.ContentLength != null &&
                     this.ContentLength.Equals(other.ContentLength)
+                ) &&
+                (
+                    this.InlineImage == other.InlineImage ||
+                    this.InlineImage != null &&
+                    this.InlineImage.Equals(other.InlineImage)
                 );
         }
 
@@ -213,6 +235,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ContentLength != null)
                     hash = hash * 59 + this.ContentLength.GetHashCode();
+                
+                if (this.InlineImage != null)
+                    hash = hash * 59 + this.InlineImage.GetHashCode();
                 
                 return hash;
             }

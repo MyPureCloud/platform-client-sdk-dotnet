@@ -212,6 +212,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ValueType
         /// </summary>
@@ -241,6 +259,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRulesetConfigChangeCondition" /> class.
@@ -254,8 +284,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Codes">Codes.</param>
         /// <param name="PropertyType">PropertyType.</param>
         /// <param name="Property">Property.</param>
+        /// <param name="ContactIdField">ContactIdField.</param>
+        /// <param name="CallAnalysisResultField">CallAnalysisResultField.</param>
+        /// <param name="AgentWrapupField">AgentWrapupField.</param>
+        /// <param name="ContactColumnToDataActionFieldMappings">ContactColumnToDataActionFieldMappings.</param>
+        /// <param name="Predicates">Predicates.</param>
+        /// <param name="DataAction">DataAction.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerRulesetConfigChangeCondition(string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null, PropertyTypeEnum? PropertyType = null, string Property = null, Object AdditionalProperties = null)
+        public DialerRulesetConfigChangeCondition(string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null, PropertyTypeEnum? PropertyType = null, string Property = null, string ContactIdField = null, string CallAnalysisResultField = null, string AgentWrapupField = null, List<DialerRulesetConfigChangeContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings = null, List<DialerRulesetConfigChangeDataActionConditionPredicate> Predicates = null, DialerRulesetConfigChangeUriReference DataAction = null, Object AdditionalProperties = null)
         {
             this.Type = Type;
             this.Inverted = Inverted;
@@ -266,6 +302,12 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Codes = Codes;
             this.PropertyType = PropertyType;
             this.Property = Property;
+            this.ContactIdField = ContactIdField;
+            this.CallAnalysisResultField = CallAnalysisResultField;
+            this.AgentWrapupField = AgentWrapupField;
+            this.ContactColumnToDataActionFieldMappings = ContactColumnToDataActionFieldMappings;
+            this.Predicates = Predicates;
+            this.DataAction = DataAction;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -327,6 +369,54 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets ContactIdField
+        /// </summary>
+        [DataMember(Name="contactIdField", EmitDefaultValue=false)]
+        public string ContactIdField { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets CallAnalysisResultField
+        /// </summary>
+        [DataMember(Name="callAnalysisResultField", EmitDefaultValue=false)]
+        public string CallAnalysisResultField { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets AgentWrapupField
+        /// </summary>
+        [DataMember(Name="agentWrapupField", EmitDefaultValue=false)]
+        public string AgentWrapupField { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets ContactColumnToDataActionFieldMappings
+        /// </summary>
+        [DataMember(Name="contactColumnToDataActionFieldMappings", EmitDefaultValue=false)]
+        public List<DialerRulesetConfigChangeContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Predicates
+        /// </summary>
+        [DataMember(Name="predicates", EmitDefaultValue=false)]
+        public List<DialerRulesetConfigChangeDataActionConditionPredicate> Predicates { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets DataAction
+        /// </summary>
+        [DataMember(Name="dataAction", EmitDefaultValue=false)]
+        public DialerRulesetConfigChangeUriReference DataAction { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -351,6 +441,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Codes: ").Append(Codes).Append("\n");
             sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
             sb.Append("  Property: ").Append(Property).Append("\n");
+            sb.Append("  ContactIdField: ").Append(ContactIdField).Append("\n");
+            sb.Append("  CallAnalysisResultField: ").Append(CallAnalysisResultField).Append("\n");
+            sb.Append("  AgentWrapupField: ").Append(AgentWrapupField).Append("\n");
+            sb.Append("  ContactColumnToDataActionFieldMappings: ").Append(ContactColumnToDataActionFieldMappings).Append("\n");
+            sb.Append("  Predicates: ").Append(Predicates).Append("\n");
+            sb.Append("  DataAction: ").Append(DataAction).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -434,6 +530,36 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Property.Equals(other.Property)
                 ) &&
                 (
+                    this.ContactIdField == other.ContactIdField ||
+                    this.ContactIdField != null &&
+                    this.ContactIdField.Equals(other.ContactIdField)
+                ) &&
+                (
+                    this.CallAnalysisResultField == other.CallAnalysisResultField ||
+                    this.CallAnalysisResultField != null &&
+                    this.CallAnalysisResultField.Equals(other.CallAnalysisResultField)
+                ) &&
+                (
+                    this.AgentWrapupField == other.AgentWrapupField ||
+                    this.AgentWrapupField != null &&
+                    this.AgentWrapupField.Equals(other.AgentWrapupField)
+                ) &&
+                (
+                    this.ContactColumnToDataActionFieldMappings == other.ContactColumnToDataActionFieldMappings ||
+                    this.ContactColumnToDataActionFieldMappings != null &&
+                    this.ContactColumnToDataActionFieldMappings.SequenceEqual(other.ContactColumnToDataActionFieldMappings)
+                ) &&
+                (
+                    this.Predicates == other.Predicates ||
+                    this.Predicates != null &&
+                    this.Predicates.SequenceEqual(other.Predicates)
+                ) &&
+                (
+                    this.DataAction == other.DataAction ||
+                    this.DataAction != null &&
+                    this.DataAction.Equals(other.DataAction)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -478,6 +604,24 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Property != null)
                     hash = hash * 59 + this.Property.GetHashCode();
+                
+                if (this.ContactIdField != null)
+                    hash = hash * 59 + this.ContactIdField.GetHashCode();
+                
+                if (this.CallAnalysisResultField != null)
+                    hash = hash * 59 + this.CallAnalysisResultField.GetHashCode();
+                
+                if (this.AgentWrapupField != null)
+                    hash = hash * 59 + this.AgentWrapupField.GetHashCode();
+                
+                if (this.ContactColumnToDataActionFieldMappings != null)
+                    hash = hash * 59 + this.ContactColumnToDataActionFieldMappings.GetHashCode();
+                
+                if (this.Predicates != null)
+                    hash = hash * 59 + this.Predicates.GetHashCode();
+                
+                if (this.DataAction != null)
+                    hash = hash * 59 + this.DataAction.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

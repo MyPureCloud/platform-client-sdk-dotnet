@@ -96,17 +96,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Order">Order.</param>
         /// <param name="Category">Category.</param>
-        /// <param name="Conditions">Conditions.</param>
         /// <param name="Actions">Actions.</param>
+        /// <param name="Conditions">Conditions.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerRulesetConfigChangeRule(string Id = null, string Name = null, int? Order = null, CategoryEnum? Category = null, List<DialerRulesetConfigChangeCondition> Conditions = null, List<DialerRulesetConfigChangeAction> Actions = null, Object AdditionalProperties = null)
+        public DialerRulesetConfigChangeRule(string Id = null, string Name = null, int? Order = null, CategoryEnum? Category = null, List<DialerRulesetConfigChangeAction> Actions = null, List<DialerRulesetConfigChangeCondition> Conditions = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Order = Order;
             this.Category = Category;
-            this.Conditions = Conditions;
             this.Actions = Actions;
+            this.Conditions = Conditions;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -140,18 +140,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Conditions
-        /// </summary>
-        [DataMember(Name="conditions", EmitDefaultValue=false)]
-        public List<DialerRulesetConfigChangeCondition> Conditions { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets Actions
         /// </summary>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public List<DialerRulesetConfigChangeAction> Actions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Conditions
+        /// </summary>
+        [DataMember(Name="conditions", EmitDefaultValue=false)]
+        public List<DialerRulesetConfigChangeCondition> Conditions { get; set; }
         
         
         
@@ -175,8 +175,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  Category: ").Append(Category).Append("\n");
-            sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
+            sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -235,14 +235,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Category.Equals(other.Category)
                 ) &&
                 (
-                    this.Conditions == other.Conditions ||
-                    this.Conditions != null &&
-                    this.Conditions.SequenceEqual(other.Conditions)
-                ) &&
-                (
                     this.Actions == other.Actions ||
                     this.Actions != null &&
                     this.Actions.SequenceEqual(other.Actions)
+                ) &&
+                (
+                    this.Conditions == other.Conditions ||
+                    this.Conditions != null &&
+                    this.Conditions.SequenceEqual(other.Conditions)
                 ) &&
                 (
                     this.AdditionalProperties == other.AdditionalProperties ||
@@ -275,11 +275,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
                 
-                if (this.Conditions != null)
-                    hash = hash * 59 + this.Conditions.GetHashCode();
-                
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
+                
+                if (this.Conditions != null)
+                    hash = hash * 59 + this.Conditions.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
