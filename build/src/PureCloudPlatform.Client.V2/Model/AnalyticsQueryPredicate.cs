@@ -121,6 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Direction,
             
             /// <summary>
+            /// Enum Originatingdirection for "originatingDirection"
+            /// </summary>
+            [EnumMember(Value = "originatingDirection")]
+            Originatingdirection,
+            
+            /// <summary>
             /// Enum Wrapupcode for "wrapUpCode"
             /// </summary>
             [EnumMember(Value = "wrapUpCode")]
@@ -257,6 +263,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ani")]
             Ani,
+            
+            /// <summary>
+            /// Enum Sessiondnis for "sessionDnis"
+            /// </summary>
+            [EnumMember(Value = "sessionDnis")]
+            Sessiondnis,
             
             /// <summary>
             /// Enum Outboundcampaignid for "outboundCampaignId"

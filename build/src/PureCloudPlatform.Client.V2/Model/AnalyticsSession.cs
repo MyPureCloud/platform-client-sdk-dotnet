@@ -273,6 +273,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The session media type
         /// </summary>
@@ -373,6 +376,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSession" /> class.
@@ -386,7 +391,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageType">Message type for messaging services such as sms.</param>
         /// <param name="Ani">Automatic Number Identification (caller&#39;s number).</param>
         /// <param name="Direction">Direction.</param>
-        /// <param name="Dnis">Automatic Number Identification (caller&#39;s number).</param>
+        /// <param name="Dnis">Dialed number identification service (number dialed by the calling party).</param>
+        /// <param name="SessionDnis">Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred.</param>
         /// <param name="OutboundCampaignId">(Dialer) Unique identifier of the outbound campaign.</param>
         /// <param name="OutboundContactId">(Dialer) Unique identifier of the contact.</param>
         /// <param name="OutboundContactListId">(Dialer) Unique identifier of the contact list that this contact belongs to.</param>
@@ -417,7 +423,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Flow">IVR flow execution associated with this session.</param>
         /// <param name="MediaEndpointStats">Media endpoint stats associated with this session.</param>
         /// <param name="Recording">Flag determining if an audio recording was started or not.</param>
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null)
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null)
         {
             this.MediaType = MediaType;
             this.SessionId = SessionId;
@@ -429,6 +435,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Ani = Ani;
             this.Direction = Direction;
             this.Dnis = Dnis;
+            this.SessionDnis = SessionDnis;
             this.OutboundCampaignId = OutboundCampaignId;
             this.OutboundContactId = OutboundContactId;
             this.OutboundContactListId = OutboundContactListId;
@@ -521,11 +528,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Automatic Number Identification (caller&#39;s number)
+        /// Dialed number identification service (number dialed by the calling party)
         /// </summary>
-        /// <value>Automatic Number Identification (caller&#39;s number)</value>
+        /// <value>Dialed number identification service (number dialed by the calling party)</value>
         [DataMember(Name="dnis", EmitDefaultValue=false)]
         public string Dnis { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred
+        /// </summary>
+        /// <value>Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred</value>
+        [DataMember(Name="sessionDnis", EmitDefaultValue=false)]
+        public string SessionDnis { get; set; }
         
         
         
@@ -814,6 +830,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Ani: ").Append(Ani).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
+            sb.Append("  SessionDnis: ").Append(SessionDnis).Append("\n");
             sb.Append("  OutboundCampaignId: ").Append(OutboundCampaignId).Append("\n");
             sb.Append("  OutboundContactId: ").Append(OutboundContactId).Append("\n");
             sb.Append("  OutboundContactListId: ").Append(OutboundContactListId).Append("\n");
@@ -929,6 +946,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Dnis == other.Dnis ||
                     this.Dnis != null &&
                     this.Dnis.Equals(other.Dnis)
+                ) &&
+                (
+                    this.SessionDnis == other.SessionDnis ||
+                    this.SessionDnis != null &&
+                    this.SessionDnis.Equals(other.SessionDnis)
                 ) &&
                 (
                     this.OutboundCampaignId == other.OutboundCampaignId ||
@@ -1123,6 +1145,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Dnis != null)
                     hash = hash * 59 + this.Dnis.GetHashCode();
+                
+                if (this.SessionDnis != null)
+                    hash = hash * 59 + this.SessionDnis.GetHashCode();
                 
                 if (this.OutboundCampaignId != null)
                     hash = hash * 59 + this.OutboundCampaignId.GetHashCode();

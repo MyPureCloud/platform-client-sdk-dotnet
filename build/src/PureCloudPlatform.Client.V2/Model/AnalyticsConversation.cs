@@ -35,6 +35,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The original direction of the conversation
+        /// </summary>
+        /// <value>The original direction of the conversation</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum OriginatingDirectionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Inbound for "inbound"
+            /// </summary>
+            [EnumMember(Value = "inbound")]
+            Inbound,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound
+        }
         
         
         
@@ -55,6 +82,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The original direction of the conversation
+        /// </summary>
+        /// <value>The original direction of the conversation</value>
+        [DataMember(Name="originatingDirection", EmitDefaultValue=false)]
+        public OriginatingDirectionEnum? OriginatingDirection { get; set; }
         
         
         
@@ -74,17 +114,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationEnd">Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="MediaStatsMinConversationMos">The lowest estimated average MOS among all the audio streams belonging to this conversation.</param>
         /// <param name="MediaStatsMinConversationRFactor">The lowest R-factor value among all of the audio streams belonging to this conversation.</param>
+        /// <param name="OriginatingDirection">The original direction of the conversation.</param>
         /// <param name="Participants">Participants in the conversation.</param>
         /// <param name="Evaluations">Evaluations tied to this conversation.</param>
         /// <param name="Surveys">Surveys tied to this conversation.</param>
         /// <param name="DivisionIds">Identifiers of divisions associated with this conversation.</param>
-        public AnalyticsConversation(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, List<AnalyticsParticipant> Participants = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<string> DivisionIds = null)
+        public AnalyticsConversation(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, List<AnalyticsParticipant> Participants = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<string> DivisionIds = null)
         {
             this.ConversationId = ConversationId;
             this.ConversationStart = ConversationStart;
             this.ConversationEnd = ConversationEnd;
             this.MediaStatsMinConversationMos = MediaStatsMinConversationMos;
             this.MediaStatsMinConversationRFactor = MediaStatsMinConversationRFactor;
+            this.OriginatingDirection = OriginatingDirection;
             this.Participants = Participants;
             this.Evaluations = Evaluations;
             this.Surveys = Surveys;
@@ -139,6 +181,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Participants in the conversation
         /// </summary>
@@ -188,6 +232,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationEnd: ").Append(ConversationEnd).Append("\n");
             sb.Append("  MediaStatsMinConversationMos: ").Append(MediaStatsMinConversationMos).Append("\n");
             sb.Append("  MediaStatsMinConversationRFactor: ").Append(MediaStatsMinConversationRFactor).Append("\n");
+            sb.Append("  OriginatingDirection: ").Append(OriginatingDirection).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
             sb.Append("  Surveys: ").Append(Surveys).Append("\n");
@@ -254,6 +299,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaStatsMinConversationRFactor.Equals(other.MediaStatsMinConversationRFactor)
                 ) &&
                 (
+                    this.OriginatingDirection == other.OriginatingDirection ||
+                    this.OriginatingDirection != null &&
+                    this.OriginatingDirection.Equals(other.OriginatingDirection)
+                ) &&
+                (
                     this.Participants == other.Participants ||
                     this.Participants != null &&
                     this.Participants.SequenceEqual(other.Participants)
@@ -301,6 +351,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MediaStatsMinConversationRFactor != null)
                     hash = hash * 59 + this.MediaStatsMinConversationRFactor.GetHashCode();
+                
+                if (this.OriginatingDirection != null)
+                    hash = hash * 59 + this.OriginatingDirection.GetHashCode();
                 
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();

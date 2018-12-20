@@ -61,6 +61,7 @@ title: ViewFilter
 | **IsConsulted** | **bool?** | Indicates filtering for consulted | [optional] |
 | **IsConsultTransferred** | **bool?** | Indicates filtering for consult transferred | [optional] |
 | **RemoteParticipants** | **List&lt;string&gt;** | The list of remote participants used to filter the view | [optional] |
+| **StatusList** | **List&lt;string&gt;** | A list of status for the configuration view | [optional] |
 {: class="table table-striped"}
 
 

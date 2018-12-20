@@ -466,6 +466,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Provides the agent duration sort order
         /// </summary>
@@ -490,6 +493,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Provides the interacting duration sort order</value>
         [DataMember(Name="interactingDurationSortOrder", EmitDefaultValue=false)]
         public InteractingDurationSortOrderEnum? InteractingDurationSortOrder { get; set; }
+        
+        
         
         
         
@@ -588,7 +593,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsConsulted">Indicates filtering for consulted.</param>
         /// <param name="IsConsultTransferred">Indicates filtering for consult transferred.</param>
         /// <param name="RemoteParticipants">The list of remote participants used to filter the view.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null)
+        /// <param name="StatusList">A list of status for the configuration view.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> StatusList = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -644,6 +650,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IsConsulted = IsConsulted;
             this.IsConsultTransferred = IsConsultTransferred;
             this.RemoteParticipants = RemoteParticipants;
+            this.StatusList = StatusList;
             
         }
         
@@ -1113,6 +1120,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> RemoteParticipants { get; set; }
         
         
+        
+        /// <summary>
+        /// A list of status for the configuration view
+        /// </summary>
+        /// <value>A list of status for the configuration view</value>
+        [DataMember(Name="statusList", EmitDefaultValue=false)]
+        public List<string> StatusList { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1176,6 +1192,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsConsulted: ").Append(IsConsulted).Append("\n");
             sb.Append("  IsConsultTransferred: ").Append(IsConsultTransferred).Append("\n");
             sb.Append("  RemoteParticipants: ").Append(RemoteParticipants).Append("\n");
+            sb.Append("  StatusList: ").Append(StatusList).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1481,6 +1498,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RemoteParticipants == other.RemoteParticipants ||
                     this.RemoteParticipants != null &&
                     this.RemoteParticipants.SequenceEqual(other.RemoteParticipants)
+                ) &&
+                (
+                    this.StatusList == other.StatusList ||
+                    this.StatusList != null &&
+                    this.StatusList.SequenceEqual(other.StatusList)
                 );
         }
 
@@ -1657,6 +1679,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RemoteParticipants != null)
                     hash = hash * 59 + this.RemoteParticipants.GetHashCode();
+                
+                if (this.StatusList != null)
+                    hash = hash * 59 + this.StatusList.GetHashCode();
                 
                 return hash;
             }

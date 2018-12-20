@@ -9,8 +9,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**GetFieldconfig**](OrganizationApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
 | [**GetOrganizationsMe**](OrganizationApi.html#getorganizationsme) | **GET** /api/v2/organizations/me | Get organization. |
+| [**GetOrganizationsWhitelist**](OrganizationApi.html#getorganizationswhitelist) | **GET** /api/v2/organizations/whitelist | Get organization whitelist settings |
 | [**PatchOrganizationsFeature**](OrganizationApi.html#patchorganizationsfeature) | **PATCH** /api/v2/organizations/features/{featureName} | Update organization |
 | [**PutOrganizationsMe**](OrganizationApi.html#putorganizationsme) | **PUT** /api/v2/organizations/me | Update organization. |
+| [**PutOrganizationsWhitelist**](OrganizationApi.html#putorganizationswhitelist) | **PUT** /api/v2/organizations/whitelist | Update organization whitelist settings |
 {: class="table table-striped"}
 
 <a name="getfieldconfig"></a>
@@ -141,6 +143,66 @@ This endpoint does require any parameters.
 ### Return type
 
 [**Organization**](Organization.html)
+
+<a name="getorganizationswhitelist"></a>
+
+## [**OrgWhitelistSettings**](OrgWhitelistSettings.html) GetOrganizationsWhitelist ()
+
+
+
+Get organization whitelist settings
+
+
+
+Requires NO permissions: 
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrganizationsWhitelistExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new OrganizationApi();
+            
+
+            try
+            {
+                
+                // Get organization whitelist settings
+                
+                OrgWhitelistSettings result = apiInstance.GetOrganizationsWhitelist();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.GetOrganizationsWhitelist: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**OrgWhitelistSettings**](OrgWhitelistSettings.html)
 
 <a name="patchorganizationsfeature"></a>
 
@@ -287,4 +349,74 @@ namespace Example
 ### Return type
 
 [**Organization**](Organization.html)
+
+<a name="putorganizationswhitelist"></a>
+
+## [**OrgWhitelistSettings**](OrgWhitelistSettings.html) PutOrganizationsWhitelist (OrgWhitelistSettings body)
+
+
+
+Update organization whitelist settings
+
+
+
+Requires ANY permissions: 
+
+* admin
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOrganizationsWhitelistExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new OrganizationApi();
+            
+            
+            
+            var body = new OrgWhitelistSettings(); // OrgWhitelistSettings | Whitelist settings
+            
+            
+
+            try
+            {
+                
+                // Update organization whitelist settings
+                
+                OrgWhitelistSettings result = apiInstance.PutOrganizationsWhitelist(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.PutOrganizationsWhitelist: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OrgWhitelistSettings**](OrgWhitelistSettings.html)| Whitelist settings |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OrgWhitelistSettings**](OrgWhitelistSettings.html)
 
