@@ -108,6 +108,58 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The entry type for this flow
+        /// </summary>
+        /// <value>The entry type for this flow</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum EntryTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Dnis for "dnis"
+            /// </summary>
+            [EnumMember(Value = "dnis")]
+            Dnis,
+            
+            /// <summary>
+            /// Enum Direct for "direct"
+            /// </summary>
+            [EnumMember(Value = "direct")]
+            Direct,
+            
+            /// <summary>
+            /// Enum Flow for "flow"
+            /// </summary>
+            [EnumMember(Value = "flow")]
+            Flow,
+            
+            /// <summary>
+            /// Enum Agent for "agent"
+            /// </summary>
+            [EnumMember(Value = "agent")]
+            Agent,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound
+        }
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -146,6 +198,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The entry type for this flow
+        /// </summary>
+        /// <value>The entry type for this flow</value>
+        [DataMember(Name="entryType", EmitDefaultValue=false)]
+        public EntryTypeEnum? EntryType { get; set; }
+        
+        
+        
+        
+        
         
         
         
@@ -166,6 +229,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlowVersion">The version of this flow.</param>
         /// <param name="FlowType">The type of this flow.</param>
         /// <param name="ExitReason">The exit reason for this flow, e.g. DISCONNECT.</param>
+        /// <param name="EntryReason">The particular entry reason for this flow, e.g. an address, userId, or flowId.</param>
+        /// <param name="EntryType">The entry type for this flow.</param>
         /// <param name="TransferType">The type of transfer for flows that ended with a transfer.</param>
         /// <param name="TransferTargetName">The name of a transfer target.</param>
         /// <param name="TransferTargetAddress">The address of a transfer target.</param>
@@ -173,13 +238,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartingLanguage">Flow starting language, e.g. en-us.</param>
         /// <param name="EndingLanguage">Flow ending language, e.g. en-us.</param>
         /// <param name="Outcomes">Flow outcomes.</param>
-        public AnalyticsFlow(string FlowId = null, string FlowName = null, string FlowVersion = null, FlowTypeEnum? FlowType = null, string ExitReason = null, string TransferType = null, string TransferTargetName = null, string TransferTargetAddress = null, bool? IssuedCallback = null, string StartingLanguage = null, string EndingLanguage = null, List<AnalyticsFlowOutcome> Outcomes = null)
+        public AnalyticsFlow(string FlowId = null, string FlowName = null, string FlowVersion = null, FlowTypeEnum? FlowType = null, string ExitReason = null, string EntryReason = null, EntryTypeEnum? EntryType = null, string TransferType = null, string TransferTargetName = null, string TransferTargetAddress = null, bool? IssuedCallback = null, string StartingLanguage = null, string EndingLanguage = null, List<AnalyticsFlowOutcome> Outcomes = null)
         {
             this.FlowId = FlowId;
             this.FlowName = FlowName;
             this.FlowVersion = FlowVersion;
             this.FlowType = FlowType;
             this.ExitReason = ExitReason;
+            this.EntryReason = EntryReason;
+            this.EntryType = EntryType;
             this.TransferType = TransferType;
             this.TransferTargetName = TransferTargetName;
             this.TransferTargetAddress = TransferTargetAddress;
@@ -227,6 +294,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The exit reason for this flow, e.g. DISCONNECT</value>
         [DataMember(Name="exitReason", EmitDefaultValue=false)]
         public string ExitReason { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The particular entry reason for this flow, e.g. an address, userId, or flowId
+        /// </summary>
+        /// <value>The particular entry reason for this flow, e.g. an address, userId, or flowId</value>
+        [DataMember(Name="entryReason", EmitDefaultValue=false)]
+        public string EntryReason { get; set; }
+        
+        
         
         
         
@@ -306,6 +384,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FlowVersion: ").Append(FlowVersion).Append("\n");
             sb.Append("  FlowType: ").Append(FlowType).Append("\n");
             sb.Append("  ExitReason: ").Append(ExitReason).Append("\n");
+            sb.Append("  EntryReason: ").Append(EntryReason).Append("\n");
+            sb.Append("  EntryType: ").Append(EntryType).Append("\n");
             sb.Append("  TransferType: ").Append(TransferType).Append("\n");
             sb.Append("  TransferTargetName: ").Append(TransferTargetName).Append("\n");
             sb.Append("  TransferTargetAddress: ").Append(TransferTargetAddress).Append("\n");
@@ -375,6 +455,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExitReason.Equals(other.ExitReason)
                 ) &&
                 (
+                    this.EntryReason == other.EntryReason ||
+                    this.EntryReason != null &&
+                    this.EntryReason.Equals(other.EntryReason)
+                ) &&
+                (
+                    this.EntryType == other.EntryType ||
+                    this.EntryType != null &&
+                    this.EntryType.Equals(other.EntryType)
+                ) &&
+                (
                     this.TransferType == other.TransferType ||
                     this.TransferType != null &&
                     this.TransferType.Equals(other.TransferType)
@@ -437,6 +527,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ExitReason != null)
                     hash = hash * 59 + this.ExitReason.GetHashCode();
+                
+                if (this.EntryReason != null)
+                    hash = hash * 59 + this.EntryReason.GetHashCode();
+                
+                if (this.EntryType != null)
+                    hash = hash * 59 + this.EntryType.GetHashCode();
                 
                 if (this.TransferType != null)
                     hash = hash * 59 + this.TransferType.GetHashCode();

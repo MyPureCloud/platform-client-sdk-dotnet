@@ -12,6 +12,8 @@ title: AnalyticsFlow
 | **FlowVersion** | **string** | The version of this flow | [optional] |
 | **FlowType** | **string** | The type of this flow | [optional] |
 | **ExitReason** | **string** | The exit reason for this flow, e.g. DISCONNECT | [optional] |
+| **EntryReason** | **string** | The particular entry reason for this flow, e.g. an address, userId, or flowId | [optional] |
+| **EntryType** | **string** | The entry type for this flow | [optional] |
 | **TransferType** | **string** | The type of transfer for flows that ended with a transfer | [optional] |
 | **TransferTargetName** | **string** | The name of a transfer target | [optional] |
 | **TransferTargetAddress** | **string** | The address of a transfer target | [optional] |

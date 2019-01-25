@@ -559,6 +559,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Exitreason,
             
             /// <summary>
+            /// Enum Entryreason for "entryReason"
+            /// </summary>
+            [EnumMember(Value = "entryReason")]
+            Entryreason,
+            
+            /// <summary>
+            /// Enum Entrytype for "entryType"
+            /// </summary>
+            [EnumMember(Value = "entryType")]
+            Entrytype,
+            
+            /// <summary>
             /// Enum Transfertype for "transferType"
             /// </summary>
             [EnumMember(Value = "transferType")]
@@ -611,6 +623,48 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "flowOutcome")]
             Flowoutcome,
+            
+            /// <summary>
+            /// Enum Journeycustomerid for "journeyCustomerId"
+            /// </summary>
+            [EnumMember(Value = "journeyCustomerId")]
+            Journeycustomerid,
+            
+            /// <summary>
+            /// Enum Journeycustomeridtype for "journeyCustomerIdType"
+            /// </summary>
+            [EnumMember(Value = "journeyCustomerIdType")]
+            Journeycustomeridtype,
+            
+            /// <summary>
+            /// Enum Journeycustomersessionid for "journeyCustomerSessionId"
+            /// </summary>
+            [EnumMember(Value = "journeyCustomerSessionId")]
+            Journeycustomersessionid,
+            
+            /// <summary>
+            /// Enum Journeycustomersessionidtype for "journeyCustomerSessionIdType"
+            /// </summary>
+            [EnumMember(Value = "journeyCustomerSessionIdType")]
+            Journeycustomersessionidtype,
+            
+            /// <summary>
+            /// Enum Journeyactionid for "journeyActionId"
+            /// </summary>
+            [EnumMember(Value = "journeyActionId")]
+            Journeyactionid,
+            
+            /// <summary>
+            /// Enum Journeyactionmapid for "journeyActionMapId"
+            /// </summary>
+            [EnumMember(Value = "journeyActionMapId")]
+            Journeyactionmapid,
+            
+            /// <summary>
+            /// Enum Journeyactionmapversion for "journeyActionMapVersion"
+            /// </summary>
+            [EnumMember(Value = "journeyActionMapVersion")]
+            Journeyactionmapversion,
             
             /// <summary>
             /// Enum Minmos for "minMos"

@@ -274,7 +274,37 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AgentWrapUpPerformanceIntervalDetailView for "AGENT_WRAP_UP_PERFORMANCE_INTERVAL_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "AGENT_WRAP_UP_PERFORMANCE_INTERVAL_DETAIL_VIEW")]
-            AgentWrapUpPerformanceIntervalDetailView
+            AgentWrapUpPerformanceIntervalDetailView,
+            
+            /// <summary>
+            /// Enum FlowOutcomeSummaryView for "FLOW_OUTCOME_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "FLOW_OUTCOME_SUMMARY_VIEW")]
+            FlowOutcomeSummaryView,
+            
+            /// <summary>
+            /// Enum FlowOutcomePerformanceDetailView for "FLOW_OUTCOME_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "FLOW_OUTCOME_PERFORMANCE_DETAIL_VIEW")]
+            FlowOutcomePerformanceDetailView,
+            
+            /// <summary>
+            /// Enum FlowOutcomePerformanceIntervalDetailView for "FLOW_OUTCOME_PERFORMANCE_INTERVAL_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "FLOW_OUTCOME_PERFORMANCE_INTERVAL_DETAIL_VIEW")]
+            FlowOutcomePerformanceIntervalDetailView,
+            
+            /// <summary>
+            /// Enum FlowDestinationSummaryView for "FLOW_DESTINATION_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "FLOW_DESTINATION_SUMMARY_VIEW")]
+            FlowDestinationSummaryView,
+            
+            /// <summary>
+            /// Enum FlowDestinationDetailView for "FLOW_DESTINATION_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "FLOW_DESTINATION_DETAIL_VIEW")]
+            FlowDestinationDetailView
         }
         
         

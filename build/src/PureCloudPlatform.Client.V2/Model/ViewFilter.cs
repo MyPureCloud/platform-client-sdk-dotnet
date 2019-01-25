@@ -412,6 +412,280 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets FlowOutcomeValues
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlowOutcomeValuesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Success for "SUCCESS"
+            /// </summary>
+            [EnumMember(Value = "SUCCESS")]
+            Success,
+            
+            /// <summary>
+            /// Enum Failure for "FAILURE"
+            /// </summary>
+            [EnumMember(Value = "FAILURE")]
+            Failure
+        }
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets FlowDestinationTypes
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlowDestinationTypesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Acd for "ACD"
+            /// </summary>
+            [EnumMember(Value = "ACD")]
+            Acd,
+            
+            /// <summary>
+            /// Enum User for "USER"
+            /// </summary>
+            [EnumMember(Value = "USER")]
+            User,
+            
+            /// <summary>
+            /// Enum Group for "GROUP"
+            /// </summary>
+            [EnumMember(Value = "GROUP")]
+            Group,
+            
+            /// <summary>
+            /// Enum Number for "NUMBER"
+            /// </summary>
+            [EnumMember(Value = "NUMBER")]
+            Number,
+            
+            /// <summary>
+            /// Enum Flow for "FLOW"
+            /// </summary>
+            [EnumMember(Value = "FLOW")]
+            Flow,
+            
+            /// <summary>
+            /// Enum SecureFlow for "SECURE_FLOW"
+            /// </summary>
+            [EnumMember(Value = "SECURE_FLOW")]
+            SecureFlow,
+            
+            /// <summary>
+            /// Enum AcdVoicemail for "ACD_VOICEMAIL"
+            /// </summary>
+            [EnumMember(Value = "ACD_VOICEMAIL")]
+            AcdVoicemail,
+            
+            /// <summary>
+            /// Enum UserVoicemail for "USER_VOICEMAIL"
+            /// </summary>
+            [EnumMember(Value = "USER_VOICEMAIL")]
+            UserVoicemail,
+            
+            /// <summary>
+            /// Enum GroupVoicemail for "GROUP_VOICEMAIL"
+            /// </summary>
+            [EnumMember(Value = "GROUP_VOICEMAIL")]
+            GroupVoicemail
+        }
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets FlowDisconnectReasons
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlowDisconnectReasonsEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum FlowDisconnect for "FLOW_DISCONNECT"
+            /// </summary>
+            [EnumMember(Value = "FLOW_DISCONNECT")]
+            FlowDisconnect,
+            
+            /// <summary>
+            /// Enum FlowErrorDisconnect for "FLOW_ERROR_DISCONNECT"
+            /// </summary>
+            [EnumMember(Value = "FLOW_ERROR_DISCONNECT")]
+            FlowErrorDisconnect,
+            
+            /// <summary>
+            /// Enum Disconnect for "DISCONNECT"
+            /// </summary>
+            [EnumMember(Value = "DISCONNECT")]
+            Disconnect
+        }
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets FlowTypes
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlowTypesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Inboundcall for "inboundcall"
+            /// </summary>
+            [EnumMember(Value = "inboundcall")]
+            Inboundcall,
+            
+            /// <summary>
+            /// Enum Inboundemail for "inboundemail"
+            /// </summary>
+            [EnumMember(Value = "inboundemail")]
+            Inboundemail,
+            
+            /// <summary>
+            /// Enum Inboundshortmessage for "inboundshortmessage"
+            /// </summary>
+            [EnumMember(Value = "inboundshortmessage")]
+            Inboundshortmessage,
+            
+            /// <summary>
+            /// Enum Inqueuecall for "inqueuecall"
+            /// </summary>
+            [EnumMember(Value = "inqueuecall")]
+            Inqueuecall,
+            
+            /// <summary>
+            /// Enum Outboundcall for "outboundcall"
+            /// </summary>
+            [EnumMember(Value = "outboundcall")]
+            Outboundcall,
+            
+            /// <summary>
+            /// Enum Securecall for "securecall"
+            /// </summary>
+            [EnumMember(Value = "securecall")]
+            Securecall,
+            
+            /// <summary>
+            /// Enum Surveyinvite for "surveyinvite"
+            /// </summary>
+            [EnumMember(Value = "surveyinvite")]
+            Surveyinvite,
+            
+            /// <summary>
+            /// Enum Workflow for "workflow"
+            /// </summary>
+            [EnumMember(Value = "workflow")]
+            Workflow
+        }
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets FlowEntryTypes
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlowEntryTypesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Dnis for "dnis"
+            /// </summary>
+            [EnumMember(Value = "dnis")]
+            Dnis,
+            
+            /// <summary>
+            /// Enum Direct for "direct"
+            /// </summary>
+            [EnumMember(Value = "direct")]
+            Direct,
+            
+            /// <summary>
+            /// Enum Flow for "flow"
+            /// </summary>
+            [EnumMember(Value = "flow")]
+            Flow,
+            
+            /// <summary>
+            /// Enum Agent for "agent"
+            /// </summary>
+            [EnumMember(Value = "agent")]
+            Agent,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -535,6 +809,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewFilter" /> class.
@@ -594,7 +886,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsConsultTransferred">Indicates filtering for consult transferred.</param>
         /// <param name="RemoteParticipants">The list of remote participants used to filter the view.</param>
         /// <param name="StatusList">A list of status for the configuration view.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> StatusList = null)
+        /// <param name="FlowIds">The list of flow Ids.</param>
+        /// <param name="FlowOutcomeIds">A list of outcome ids of the flow.</param>
+        /// <param name="FlowOutcomeValues">A list of outcome values of the flow.</param>
+        /// <param name="FlowDestinationTypes">The list of destination types of the flow.</param>
+        /// <param name="FlowDisconnectReasons">The list of reasons for the flow to disconnect.</param>
+        /// <param name="FlowTypes">A list of types of the flow.</param>
+        /// <param name="FlowEntryTypes">A list of types of the flow entry.</param>
+        /// <param name="FlowEntryReasons">A list of reasons of flow entry.</param>
+        /// <param name="GroupIds">A list of directory group ids.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> StatusList = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> GroupIds = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -651,6 +952,15 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IsConsultTransferred = IsConsultTransferred;
             this.RemoteParticipants = RemoteParticipants;
             this.StatusList = StatusList;
+            this.FlowIds = FlowIds;
+            this.FlowOutcomeIds = FlowOutcomeIds;
+            this.FlowOutcomeValues = FlowOutcomeValues;
+            this.FlowDestinationTypes = FlowDestinationTypes;
+            this.FlowDisconnectReasons = FlowDisconnectReasons;
+            this.FlowTypes = FlowTypes;
+            this.FlowEntryTypes = FlowEntryTypes;
+            this.FlowEntryReasons = FlowEntryReasons;
+            this.GroupIds = GroupIds;
             
         }
         
@@ -1129,6 +1439,87 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> StatusList { get; set; }
         
         
+        
+        /// <summary>
+        /// The list of flow Ids
+        /// </summary>
+        /// <value>The list of flow Ids</value>
+        [DataMember(Name="flowIds", EmitDefaultValue=false)]
+        public List<string> FlowIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of outcome ids of the flow
+        /// </summary>
+        /// <value>A list of outcome ids of the flow</value>
+        [DataMember(Name="flowOutcomeIds", EmitDefaultValue=false)]
+        public List<string> FlowOutcomeIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of outcome values of the flow
+        /// </summary>
+        /// <value>A list of outcome values of the flow</value>
+        [DataMember(Name="flowOutcomeValues", EmitDefaultValue=false)]
+        public List<FlowOutcomeValuesEnum> FlowOutcomeValues { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of destination types of the flow
+        /// </summary>
+        /// <value>The list of destination types of the flow</value>
+        [DataMember(Name="flowDestinationTypes", EmitDefaultValue=false)]
+        public List<FlowDestinationTypesEnum> FlowDestinationTypes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of reasons for the flow to disconnect
+        /// </summary>
+        /// <value>The list of reasons for the flow to disconnect</value>
+        [DataMember(Name="flowDisconnectReasons", EmitDefaultValue=false)]
+        public List<FlowDisconnectReasonsEnum> FlowDisconnectReasons { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of types of the flow
+        /// </summary>
+        /// <value>A list of types of the flow</value>
+        [DataMember(Name="flowTypes", EmitDefaultValue=false)]
+        public List<FlowTypesEnum> FlowTypes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of types of the flow entry
+        /// </summary>
+        /// <value>A list of types of the flow entry</value>
+        [DataMember(Name="flowEntryTypes", EmitDefaultValue=false)]
+        public List<FlowEntryTypesEnum> FlowEntryTypes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of reasons of flow entry
+        /// </summary>
+        /// <value>A list of reasons of flow entry</value>
+        [DataMember(Name="flowEntryReasons", EmitDefaultValue=false)]
+        public List<string> FlowEntryReasons { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of directory group ids
+        /// </summary>
+        /// <value>A list of directory group ids</value>
+        [DataMember(Name="groupIds", EmitDefaultValue=false)]
+        public List<string> GroupIds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1193,6 +1584,15 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsConsultTransferred: ").Append(IsConsultTransferred).Append("\n");
             sb.Append("  RemoteParticipants: ").Append(RemoteParticipants).Append("\n");
             sb.Append("  StatusList: ").Append(StatusList).Append("\n");
+            sb.Append("  FlowIds: ").Append(FlowIds).Append("\n");
+            sb.Append("  FlowOutcomeIds: ").Append(FlowOutcomeIds).Append("\n");
+            sb.Append("  FlowOutcomeValues: ").Append(FlowOutcomeValues).Append("\n");
+            sb.Append("  FlowDestinationTypes: ").Append(FlowDestinationTypes).Append("\n");
+            sb.Append("  FlowDisconnectReasons: ").Append(FlowDisconnectReasons).Append("\n");
+            sb.Append("  FlowTypes: ").Append(FlowTypes).Append("\n");
+            sb.Append("  FlowEntryTypes: ").Append(FlowEntryTypes).Append("\n");
+            sb.Append("  FlowEntryReasons: ").Append(FlowEntryReasons).Append("\n");
+            sb.Append("  GroupIds: ").Append(GroupIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1503,6 +1903,51 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StatusList == other.StatusList ||
                     this.StatusList != null &&
                     this.StatusList.SequenceEqual(other.StatusList)
+                ) &&
+                (
+                    this.FlowIds == other.FlowIds ||
+                    this.FlowIds != null &&
+                    this.FlowIds.SequenceEqual(other.FlowIds)
+                ) &&
+                (
+                    this.FlowOutcomeIds == other.FlowOutcomeIds ||
+                    this.FlowOutcomeIds != null &&
+                    this.FlowOutcomeIds.SequenceEqual(other.FlowOutcomeIds)
+                ) &&
+                (
+                    this.FlowOutcomeValues == other.FlowOutcomeValues ||
+                    this.FlowOutcomeValues != null &&
+                    this.FlowOutcomeValues.SequenceEqual(other.FlowOutcomeValues)
+                ) &&
+                (
+                    this.FlowDestinationTypes == other.FlowDestinationTypes ||
+                    this.FlowDestinationTypes != null &&
+                    this.FlowDestinationTypes.SequenceEqual(other.FlowDestinationTypes)
+                ) &&
+                (
+                    this.FlowDisconnectReasons == other.FlowDisconnectReasons ||
+                    this.FlowDisconnectReasons != null &&
+                    this.FlowDisconnectReasons.SequenceEqual(other.FlowDisconnectReasons)
+                ) &&
+                (
+                    this.FlowTypes == other.FlowTypes ||
+                    this.FlowTypes != null &&
+                    this.FlowTypes.SequenceEqual(other.FlowTypes)
+                ) &&
+                (
+                    this.FlowEntryTypes == other.FlowEntryTypes ||
+                    this.FlowEntryTypes != null &&
+                    this.FlowEntryTypes.SequenceEqual(other.FlowEntryTypes)
+                ) &&
+                (
+                    this.FlowEntryReasons == other.FlowEntryReasons ||
+                    this.FlowEntryReasons != null &&
+                    this.FlowEntryReasons.SequenceEqual(other.FlowEntryReasons)
+                ) &&
+                (
+                    this.GroupIds == other.GroupIds ||
+                    this.GroupIds != null &&
+                    this.GroupIds.SequenceEqual(other.GroupIds)
                 );
         }
 
@@ -1682,6 +2127,33 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.StatusList != null)
                     hash = hash * 59 + this.StatusList.GetHashCode();
+                
+                if (this.FlowIds != null)
+                    hash = hash * 59 + this.FlowIds.GetHashCode();
+                
+                if (this.FlowOutcomeIds != null)
+                    hash = hash * 59 + this.FlowOutcomeIds.GetHashCode();
+                
+                if (this.FlowOutcomeValues != null)
+                    hash = hash * 59 + this.FlowOutcomeValues.GetHashCode();
+                
+                if (this.FlowDestinationTypes != null)
+                    hash = hash * 59 + this.FlowDestinationTypes.GetHashCode();
+                
+                if (this.FlowDisconnectReasons != null)
+                    hash = hash * 59 + this.FlowDisconnectReasons.GetHashCode();
+                
+                if (this.FlowTypes != null)
+                    hash = hash * 59 + this.FlowTypes.GetHashCode();
+                
+                if (this.FlowEntryTypes != null)
+                    hash = hash * 59 + this.FlowEntryTypes.GetHashCode();
+                
+                if (this.FlowEntryReasons != null)
+                    hash = hash * 59 + this.FlowEntryReasons.GetHashCode();
+                
+                if (this.GroupIds != null)
+                    hash = hash * 59 + this.GroupIds.GetHashCode();
                 
                 return hash;
             }

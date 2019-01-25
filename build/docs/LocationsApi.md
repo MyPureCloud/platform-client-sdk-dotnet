@@ -7,11 +7,83 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteLocation**](LocationsApi.html#deletelocation) | **DELETE** /api/v2/locations/{locationId} | Delete a location |
 | [**GetLocation**](LocationsApi.html#getlocation) | **GET** /api/v2/locations/{locationId} | Get Location by ID. |
 | [**GetLocations**](LocationsApi.html#getlocations) | **GET** /api/v2/locations | Get a list of all locations. |
 | [**GetLocationsSearch**](LocationsApi.html#getlocationssearch) | **GET** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
+| [**PatchLocation**](LocationsApi.html#patchlocation) | **PATCH** /api/v2/locations/{locationId} | Update a location |
+| [**PostLocations**](LocationsApi.html#postlocations) | **POST** /api/v2/locations | Create a location |
 | [**PostLocationsSearch**](LocationsApi.html#postlocationssearch) | **POST** /api/v2/locations/search | Search locations |
 {: class="table table-striped"}
+
+<a name="deletelocation"></a>
+
+## void DeleteLocation (string locationId)
+
+
+
+Delete a location
+
+
+
+Requires ANY permissions: 
+
+* directory:location:delete
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteLocationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new LocationsApi();
+            
+            
+            var locationId = locationId_example;  // string | Location ID
+            
+            
+            
+
+            try
+            {
+                
+                // Delete a location
+                
+                apiInstance.DeleteLocation(locationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LocationsApi.DeleteLocation: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **locationId** | **string**| Location ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="getlocation"></a>
 
@@ -85,7 +157,7 @@ namespace Example
 
 <a name="getlocations"></a>
 
-## [**LocationEntityListing**](LocationEntityListing.html) GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+## [**LocationEntityListing**](LocationEntityListing.html) GetLocations (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
 
 
 
@@ -128,6 +200,11 @@ namespace Example
             
             
             
+            
+            var id = new List<string>(); // List<string> | id (optional) 
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
             
             
@@ -138,7 +215,7 @@ namespace Example
                 
                 // Get a list of all locations.
                 
-                LocationEntityListing result = apiInstance.GetLocations(pageSize, pageNumber, sortOrder);
+                LocationEntityListing result = apiInstance.GetLocations(pageSize, pageNumber, id, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -157,6 +234,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **id** | [**List<string>**](string.html)| id | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] <br />**Values**: asc, desc |
 {: class="table table-striped"}
 
@@ -238,6 +316,152 @@ namespace Example
 ### Return type
 
 [**LocationsSearchResponse**](LocationsSearchResponse.html)
+
+<a name="patchlocation"></a>
+
+## [**LocationDefinition**](LocationDefinition.html) PatchLocation (string locationId, LocationUpdateDefinition body)
+
+
+
+Update a location
+
+
+
+Requires ANY permissions: 
+
+* directory:location:edit
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchLocationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new LocationsApi();
+            
+            
+            var locationId = locationId_example;  // string | Location ID
+            
+            
+            
+            
+            
+            var body = new LocationUpdateDefinition(); // LocationUpdateDefinition | Location
+            
+            
+
+            try
+            {
+                
+                // Update a location
+                
+                LocationDefinition result = apiInstance.PatchLocation(locationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LocationsApi.PatchLocation: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **locationId** | **string**| Location ID |  |
+| **body** | [**LocationUpdateDefinition**](LocationUpdateDefinition.html)| Location |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LocationDefinition**](LocationDefinition.html)
+
+<a name="postlocations"></a>
+
+## [**LocationDefinition**](LocationDefinition.html) PostLocations (LocationDefinition body)
+
+
+
+Create a location
+
+
+
+Requires ANY permissions: 
+
+* directory:location:add
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLocationsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new LocationsApi();
+            
+            
+            
+            var body = new LocationDefinition(); // LocationDefinition | Location
+            
+            
+
+            try
+            {
+                
+                // Create a location
+                
+                LocationDefinition result = apiInstance.PostLocations(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LocationsApi.PostLocations: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**LocationDefinition**](LocationDefinition.html)| Location |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LocationDefinition**](LocationDefinition.html)
 
 <a name="postlocationssearch"></a>
 

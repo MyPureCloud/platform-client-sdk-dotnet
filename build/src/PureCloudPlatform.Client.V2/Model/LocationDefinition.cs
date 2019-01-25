@@ -104,7 +104,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationDefinition" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        [JsonConstructorAttribute]
+        protected LocationDefinition() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LocationDefinition" /> class.
+        /// </summary>
+        /// <param name="Name">The name of the Location. (required).</param>
         /// <param name="Address">Address.</param>
         /// <param name="AddressVerified">AddressVerified.</param>
         /// <param name="EmergencyNumber">EmergencyNumber.</param>
@@ -135,8 +141,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the Location.
         /// </summary>
+        /// <value>The name of the Location.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         

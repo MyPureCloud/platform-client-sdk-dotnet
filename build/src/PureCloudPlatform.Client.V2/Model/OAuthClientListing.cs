@@ -85,6 +85,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthClientListing" /> class.
@@ -106,7 +111,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedBy">User that created this client.</param>
         /// <param name="ModifiedBy">User that last modified this client.</param>
         /// <param name="Scope">The scope requested by this client (required).</param>
-        public OAuthClientListing(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, List<string> Scope = null)
+        /// <param name="RoleDivisions">Set of roles and their corresponding divisions associated with this client.</param>
+        public OAuthClientListing(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, List<string> Scope = null, List<RoleDivision> RoleDivisions = null)
         {
             this.Name = Name;
             this.AccessTokenValiditySeconds = AccessTokenValiditySeconds;
@@ -119,6 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedBy = CreatedBy;
             this.ModifiedBy = ModifiedBy;
             this.Scope = Scope;
+            this.RoleDivisions = RoleDivisions;
             
         }
         
@@ -232,6 +239,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Set of roles and their corresponding divisions associated with this client
+        /// </summary>
+        /// <value>Set of roles and their corresponding divisions associated with this client</value>
+        [DataMember(Name="roleDivisions", EmitDefaultValue=false)]
+        public List<RoleDivision> RoleDivisions { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -260,6 +276,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  Scope: ").Append(Scope).Append("\n");
+            sb.Append("  RoleDivisions: ").Append(RoleDivisions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -358,6 +375,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Scope.SequenceEqual(other.Scope)
                 ) &&
                 (
+                    this.RoleDivisions == other.RoleDivisions ||
+                    this.RoleDivisions != null &&
+                    this.RoleDivisions.SequenceEqual(other.RoleDivisions)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -411,6 +433,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Scope != null)
                     hash = hash * 59 + this.Scope.GetHashCode();
+                
+                if (this.RoleDivisions != null)
+                    hash = hash * 59 + this.RoleDivisions.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

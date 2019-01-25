@@ -131,12 +131,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. 
         /// </summary>
         /// <value>The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. </value>
         [DataMember(Name="authorizedGrantType", EmitDefaultValue=false)]
         public AuthorizedGrantTypeEnum? AuthorizedGrantType { get; set; }
+        
+        
         
         
         
@@ -165,7 +170,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">User that last modified this client.</param>
         /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client.  (required).</param>
         /// <param name="Scope">The scope requested by this client (required).</param>
-        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, List<string> Scope = null)
+        /// <param name="RoleDivisions">Set of roles and their corresponding divisions associated with this client.</param>
+        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, List<string> Scope = null, List<RoleDivision> RoleDivisions = null)
         {
             this.Name = Name;
             this.AccessTokenValiditySeconds = AccessTokenValiditySeconds;
@@ -179,6 +185,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ModifiedBy = ModifiedBy;
             this.AuthorizedGrantType = AuthorizedGrantType;
             this.Scope = Scope;
+            this.RoleDivisions = RoleDivisions;
             
         }
         
@@ -294,6 +301,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Set of roles and their corresponding divisions associated with this client
+        /// </summary>
+        /// <value>Set of roles and their corresponding divisions associated with this client</value>
+        [DataMember(Name="roleDivisions", EmitDefaultValue=false)]
+        public List<RoleDivision> RoleDivisions { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -323,6 +339,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  AuthorizedGrantType: ").Append(AuthorizedGrantType).Append("\n");
             sb.Append("  Scope: ").Append(Scope).Append("\n");
+            sb.Append("  RoleDivisions: ").Append(RoleDivisions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -426,6 +443,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Scope.SequenceEqual(other.Scope)
                 ) &&
                 (
+                    this.RoleDivisions == other.RoleDivisions ||
+                    this.RoleDivisions != null &&
+                    this.RoleDivisions.SequenceEqual(other.RoleDivisions)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -482,6 +504,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Scope != null)
                     hash = hash * 59 + this.Scope.GetHashCode();
+                
+                if (this.RoleDivisions != null)
+                    hash = hash * 59 + this.RoleDivisions.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

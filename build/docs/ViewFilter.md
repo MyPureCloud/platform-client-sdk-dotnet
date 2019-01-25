@@ -62,6 +62,15 @@ title: ViewFilter
 | **IsConsultTransferred** | **bool?** | Indicates filtering for consult transferred | [optional] |
 | **RemoteParticipants** | **List&lt;string&gt;** | The list of remote participants used to filter the view | [optional] |
 | **StatusList** | **List&lt;string&gt;** | A list of status for the configuration view | [optional] |
+| **FlowIds** | **List&lt;string&gt;** | The list of flow Ids | [optional] |
+| **FlowOutcomeIds** | **List&lt;string&gt;** | A list of outcome ids of the flow | [optional] |
+| **FlowOutcomeValues** | **List&lt;string&gt;** | A list of outcome values of the flow | [optional] |
+| **FlowDestinationTypes** | **List&lt;string&gt;** | The list of destination types of the flow | [optional] |
+| **FlowDisconnectReasons** | **List&lt;string&gt;** | The list of reasons for the flow to disconnect | [optional] |
+| **FlowTypes** | **List&lt;string&gt;** | A list of types of the flow | [optional] |
+| **FlowEntryTypes** | **List&lt;string&gt;** | A list of types of the flow entry | [optional] |
+| **FlowEntryReasons** | **List&lt;string&gt;** | A list of reasons of flow entry | [optional] |
+| **GroupIds** | **List&lt;string&gt;** | A list of directory group ids | [optional] |
 {: class="table table-striped"}
 
 

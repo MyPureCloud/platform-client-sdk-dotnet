@@ -60,6 +60,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatDeployment" /> class.
@@ -70,7 +75,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AuthenticationUrl">URL for third party service authenticating web chat clients. See https://github.com/MyPureCloud/authenticated-web-chat-server-examples.</param>
         /// <param name="Disabled">Disabled.</param>
         /// <param name="WebChatConfig">WebChatConfig.</param>
-        public WebChatDeployment(string Name = null, string Description = null, bool? AuthenticationRequired = null, string AuthenticationUrl = null, bool? Disabled = null, WebChatConfig WebChatConfig = null)
+        /// <param name="AllowedDomains">AllowedDomains.</param>
+        public WebChatDeployment(string Name = null, string Description = null, bool? AuthenticationRequired = null, string AuthenticationUrl = null, bool? Disabled = null, WebChatConfig WebChatConfig = null, List<string> AllowedDomains = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -78,6 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AuthenticationUrl = AuthenticationUrl;
             this.Disabled = Disabled;
             this.WebChatConfig = WebChatConfig;
+            this.AllowedDomains = AllowedDomains;
             
         }
         
@@ -142,6 +149,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets AllowedDomains
+        /// </summary>
+        [DataMember(Name="allowedDomains", EmitDefaultValue=false)]
+        public List<string> AllowedDomains { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -165,6 +180,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AuthenticationUrl: ").Append(AuthenticationUrl).Append("\n");
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
             sb.Append("  WebChatConfig: ").Append(WebChatConfig).Append("\n");
+            sb.Append("  AllowedDomains: ").Append(AllowedDomains).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -238,6 +254,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WebChatConfig.Equals(other.WebChatConfig)
                 ) &&
                 (
+                    this.AllowedDomains == other.AllowedDomains ||
+                    this.AllowedDomains != null &&
+                    this.AllowedDomains.SequenceEqual(other.AllowedDomains)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -276,6 +297,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.WebChatConfig != null)
                     hash = hash * 59 + this.WebChatConfig.GetHashCode();
+                
+                if (this.AllowedDomains != null)
+                    hash = hash * 59 + this.AllowedDomains.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -56,6 +56,12 @@ namespace PureCloudPlatform.Client.V2.Model
             PcGroup,
             
             /// <summary>
+            /// Enum PcOauthClient for "PC_OAUTH_CLIENT"
+            /// </summary>
+            [EnumMember(Value = "PC_OAUTH_CLIENT")]
+            PcOauthClient,
+            
+            /// <summary>
             /// Enum Unknown for "UNKNOWN"
             /// </summary>
             [EnumMember(Value = "UNKNOWN")]

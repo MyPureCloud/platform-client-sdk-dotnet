@@ -140,6 +140,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalContact" /> class.
@@ -165,6 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Address">Address.</param>
         /// <param name="TwitterId">TwitterId.</param>
         /// <param name="LineId">LineId.</param>
+        /// <param name="WhatsAppId">WhatsAppId.</param>
         /// <param name="FacebookId">FacebookId.</param>
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -172,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurveyOptOut">SurveyOptOut.</param>
         /// <param name="ExternalSystemUrl">A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace..</param>
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, LineId LineId = null, FacebookId FacebookId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, List<ExternalDataSource> ExternalDataSources = null)
+        public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, LineId LineId = null, WhatsAppId WhatsAppId = null, FacebookId FacebookId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             this.FirstName = FirstName;
             this.MiddleName = MiddleName;
@@ -189,6 +195,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Address = Address;
             this.TwitterId = TwitterId;
             this.LineId = LineId;
+            this.WhatsAppId = WhatsAppId;
             this.FacebookId = FacebookId;
             this.ModifyDate = ModifyDate;
             this.CreateDate = CreateDate;
@@ -333,6 +340,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets WhatsAppId
+        /// </summary>
+        [DataMember(Name="whatsAppId", EmitDefaultValue=false)]
+        public WhatsAppId WhatsAppId { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets FacebookId
         /// </summary>
         [DataMember(Name="facebookId", EmitDefaultValue=false)]
@@ -425,6 +440,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  TwitterId: ").Append(TwitterId).Append("\n");
             sb.Append("  LineId: ").Append(LineId).Append("\n");
+            sb.Append("  WhatsAppId: ").Append(WhatsAppId).Append("\n");
             sb.Append("  FacebookId: ").Append(FacebookId).Append("\n");
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
@@ -550,6 +566,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LineId.Equals(other.LineId)
                 ) &&
                 (
+                    this.WhatsAppId == other.WhatsAppId ||
+                    this.WhatsAppId != null &&
+                    this.WhatsAppId.Equals(other.WhatsAppId)
+                ) &&
+                (
                     this.FacebookId == other.FacebookId ||
                     this.FacebookId != null &&
                     this.FacebookId.Equals(other.FacebookId)
@@ -650,6 +671,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LineId != null)
                     hash = hash * 59 + this.LineId.GetHashCode();
+                
+                if (this.WhatsAppId != null)
+                    hash = hash * 59 + this.WhatsAppId.GetHashCode();
                 
                 if (this.FacebookId != null)
                     hash = hash * 59 + this.FacebookId.GetHashCode();

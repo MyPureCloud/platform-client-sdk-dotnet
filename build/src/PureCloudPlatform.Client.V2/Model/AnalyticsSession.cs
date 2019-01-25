@@ -276,6 +276,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The session media type
         /// </summary>
@@ -312,6 +333,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Direction</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -423,7 +458,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Flow">IVR flow execution associated with this session.</param>
         /// <param name="MediaEndpointStats">Media endpoint stats associated with this session.</param>
         /// <param name="Recording">Flag determining if an audio recording was started or not.</param>
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null)
+        /// <param name="JourneyCustomerId">ID of the journey customer.</param>
+        /// <param name="JourneyCustomerIdType">Type of the journey customer ID.</param>
+        /// <param name="JourneyCustomerSessionId">ID of the journey customer session.</param>
+        /// <param name="JourneyCustomerSessionIdType">Type of the journey customer session ID.</param>
+        /// <param name="JourneyActionId">Journey action ID.</param>
+        /// <param name="JourneyActionMapId">Journey action map ID.</param>
+        /// <param name="JourneyActionMapVersion">Journey action map version.</param>
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null)
         {
             this.MediaType = MediaType;
             this.SessionId = SessionId;
@@ -466,6 +508,13 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Flow = Flow;
             this.MediaEndpointStats = MediaEndpointStats;
             this.Recording = Recording;
+            this.JourneyCustomerId = JourneyCustomerId;
+            this.JourneyCustomerIdType = JourneyCustomerIdType;
+            this.JourneyCustomerSessionId = JourneyCustomerSessionId;
+            this.JourneyCustomerSessionIdType = JourneyCustomerSessionIdType;
+            this.JourneyActionId = JourneyActionId;
+            this.JourneyActionMapId = JourneyActionMapId;
+            this.JourneyActionMapVersion = JourneyActionMapVersion;
             
         }
         
@@ -811,6 +860,69 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Recording { get; set; }
         
         
+        
+        /// <summary>
+        /// ID of the journey customer
+        /// </summary>
+        /// <value>ID of the journey customer</value>
+        [DataMember(Name="journeyCustomerId", EmitDefaultValue=false)]
+        public string JourneyCustomerId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Type of the journey customer ID
+        /// </summary>
+        /// <value>Type of the journey customer ID</value>
+        [DataMember(Name="journeyCustomerIdType", EmitDefaultValue=false)]
+        public string JourneyCustomerIdType { get; set; }
+        
+        
+        
+        /// <summary>
+        /// ID of the journey customer session
+        /// </summary>
+        /// <value>ID of the journey customer session</value>
+        [DataMember(Name="journeyCustomerSessionId", EmitDefaultValue=false)]
+        public string JourneyCustomerSessionId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Type of the journey customer session ID
+        /// </summary>
+        /// <value>Type of the journey customer session ID</value>
+        [DataMember(Name="journeyCustomerSessionIdType", EmitDefaultValue=false)]
+        public string JourneyCustomerSessionIdType { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Journey action ID
+        /// </summary>
+        /// <value>Journey action ID</value>
+        [DataMember(Name="journeyActionId", EmitDefaultValue=false)]
+        public string JourneyActionId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Journey action map ID
+        /// </summary>
+        /// <value>Journey action map ID</value>
+        [DataMember(Name="journeyActionMapId", EmitDefaultValue=false)]
+        public string JourneyActionMapId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Journey action map version
+        /// </summary>
+        /// <value>Journey action map version</value>
+        [DataMember(Name="journeyActionMapVersion", EmitDefaultValue=false)]
+        public string JourneyActionMapVersion { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -861,6 +973,13 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  MediaEndpointStats: ").Append(MediaEndpointStats).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
+            sb.Append("  JourneyCustomerId: ").Append(JourneyCustomerId).Append("\n");
+            sb.Append("  JourneyCustomerIdType: ").Append(JourneyCustomerIdType).Append("\n");
+            sb.Append("  JourneyCustomerSessionId: ").Append(JourneyCustomerSessionId).Append("\n");
+            sb.Append("  JourneyCustomerSessionIdType: ").Append(JourneyCustomerSessionIdType).Append("\n");
+            sb.Append("  JourneyActionId: ").Append(JourneyActionId).Append("\n");
+            sb.Append("  JourneyActionMapId: ").Append(JourneyActionMapId).Append("\n");
+            sb.Append("  JourneyActionMapVersion: ").Append(JourneyActionMapVersion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1101,6 +1220,41 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Recording == other.Recording ||
                     this.Recording != null &&
                     this.Recording.Equals(other.Recording)
+                ) &&
+                (
+                    this.JourneyCustomerId == other.JourneyCustomerId ||
+                    this.JourneyCustomerId != null &&
+                    this.JourneyCustomerId.Equals(other.JourneyCustomerId)
+                ) &&
+                (
+                    this.JourneyCustomerIdType == other.JourneyCustomerIdType ||
+                    this.JourneyCustomerIdType != null &&
+                    this.JourneyCustomerIdType.Equals(other.JourneyCustomerIdType)
+                ) &&
+                (
+                    this.JourneyCustomerSessionId == other.JourneyCustomerSessionId ||
+                    this.JourneyCustomerSessionId != null &&
+                    this.JourneyCustomerSessionId.Equals(other.JourneyCustomerSessionId)
+                ) &&
+                (
+                    this.JourneyCustomerSessionIdType == other.JourneyCustomerSessionIdType ||
+                    this.JourneyCustomerSessionIdType != null &&
+                    this.JourneyCustomerSessionIdType.Equals(other.JourneyCustomerSessionIdType)
+                ) &&
+                (
+                    this.JourneyActionId == other.JourneyActionId ||
+                    this.JourneyActionId != null &&
+                    this.JourneyActionId.Equals(other.JourneyActionId)
+                ) &&
+                (
+                    this.JourneyActionMapId == other.JourneyActionMapId ||
+                    this.JourneyActionMapId != null &&
+                    this.JourneyActionMapId.Equals(other.JourneyActionMapId)
+                ) &&
+                (
+                    this.JourneyActionMapVersion == other.JourneyActionMapVersion ||
+                    this.JourneyActionMapVersion != null &&
+                    this.JourneyActionMapVersion.Equals(other.JourneyActionMapVersion)
                 );
         }
 
@@ -1238,6 +1392,27 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
+                
+                if (this.JourneyCustomerId != null)
+                    hash = hash * 59 + this.JourneyCustomerId.GetHashCode();
+                
+                if (this.JourneyCustomerIdType != null)
+                    hash = hash * 59 + this.JourneyCustomerIdType.GetHashCode();
+                
+                if (this.JourneyCustomerSessionId != null)
+                    hash = hash * 59 + this.JourneyCustomerSessionId.GetHashCode();
+                
+                if (this.JourneyCustomerSessionIdType != null)
+                    hash = hash * 59 + this.JourneyCustomerSessionIdType.GetHashCode();
+                
+                if (this.JourneyActionId != null)
+                    hash = hash * 59 + this.JourneyActionId.GetHashCode();
+                
+                if (this.JourneyActionMapId != null)
+                    hash = hash * 59 + this.JourneyActionMapId.GetHashCode();
+                
+                if (this.JourneyActionMapVersion != null)
+                    hash = hash * 59 + this.JourneyActionMapVersion.GetHashCode();
                 
                 return hash;
             }
