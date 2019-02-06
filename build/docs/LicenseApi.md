@@ -34,7 +34,7 @@ Requires ANY permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -46,25 +46,16 @@ namespace Example
     public class GetLicenseDefinitionExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LicenseApi();
-            
-            
             var licenseId = licenseId_example;  // string | ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get PureCloud license definition.
-                
                 LicenseDefinition result = apiInstance.GetLicenseDefinition(licenseId);
                 Debug.WriteLine(result);
             }
@@ -75,7 +66,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -106,7 +97,7 @@ Requires ANY permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -118,20 +109,15 @@ namespace Example
     public class GetLicenseDefinitionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LicenseApi();
-            
 
             try
-            {
-                
+            { 
                 // Get all PureCloud license definitions available for the organization.
-                
                 List&lt;LicenseDefinition&gt; result = apiInstance.GetLicenseDefinitions();
                 Debug.WriteLine(result);
             }
@@ -142,7 +128,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -169,7 +155,7 @@ Requires ANY permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -181,20 +167,15 @@ namespace Example
     public class GetLicenseOrganizationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LicenseApi();
-            
 
             try
-            {
-                
+            { 
                 // Get license assignments for the organization.
-                
                 LicenseOrganization result = apiInstance.GetLicenseOrganization();
                 Debug.WriteLine(result);
             }
@@ -205,7 +186,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -232,7 +213,7 @@ Requires ANY permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -244,25 +225,16 @@ namespace Example
     public class GetLicenseToggleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LicenseApi();
-            
-            
             var featureName = featureName_example;  // string | featureName
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get PureCloud license feature toggle value.
-                
                 LicenseOrgToggle result = apiInstance.GetLicenseToggle(featureName);
                 Debug.WriteLine(result);
             }
@@ -273,7 +245,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -304,7 +276,7 @@ Requires ANY permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -316,25 +288,16 @@ namespace Example
     public class GetLicenseUserExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LicenseApi();
-            
-            
             var userId = userId_example;  // string | ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get licenses for specified user.
-                
                 LicenseUser result = apiInstance.GetLicenseUser(userId);
                 Debug.WriteLine(result);
             }
@@ -345,7 +308,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -376,7 +339,7 @@ Requires ANY permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -388,25 +351,16 @@ namespace Example
     public class PostLicenseOrganizationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LicenseApi();
-            
-            
-            
             var body = new LicenseBatchAssignmentRequest(); // LicenseBatchAssignmentRequest | The license assignments to update. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update the organization's license assignments in a batch.
-                
                 List&lt;LicenseUpdateStatus&gt; result = apiInstance.PostLicenseOrganization(body);
                 Debug.WriteLine(result);
             }
@@ -417,7 +371,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -448,7 +402,7 @@ Requires ANY permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -460,25 +414,16 @@ namespace Example
     public class PostLicenseToggleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LicenseApi();
-            
-            
             var featureName = featureName_example;  // string | featureName
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Switch PureCloud license feature toggle value.
-                
                 LicenseOrgToggle result = apiInstance.PostLicenseToggle(featureName);
                 Debug.WriteLine(result);
             }
@@ -489,7 +434,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -517,7 +462,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -529,25 +474,16 @@ namespace Example
     public class PostLicenseUsersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LicenseApi();
-            
-            
             var body = ;  // List<string> | The user IDs to fetch. (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Fetch user licenses in a batch.
-                
                 Dictionary&lt;string, Object&gt; result = apiInstance.PostLicenseUsers(body);
                 Debug.WriteLine(result);
             }
@@ -558,7 +494,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

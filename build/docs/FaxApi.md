@@ -29,7 +29,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -41,25 +41,16 @@ namespace Example
     public class DeleteFaxDocumentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new FaxApi();
-            
-            
             var documentId = documentId_example;  // string | Document ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a fax document.
-                
                 apiInstance.DeleteFaxDocument(documentId);
             }
             catch (Exception e)
@@ -69,7 +60,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -97,7 +88,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -109,25 +100,16 @@ namespace Example
     public class GetFaxDocumentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new FaxApi();
-            
-            
             var documentId = documentId_example;  // string | Document ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a document.
-                
                 FaxDocument result = apiInstance.GetFaxDocument(documentId);
                 Debug.WriteLine(result);
             }
@@ -138,7 +120,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -166,7 +148,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -178,25 +160,16 @@ namespace Example
     public class GetFaxDocumentContentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new FaxApi();
-            
-            
             var documentId = documentId_example;  // string | Document ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Download a fax document.
-                
                 DownloadResponse result = apiInstance.GetFaxDocumentContent(documentId);
                 Debug.WriteLine(result);
             }
@@ -207,7 +180,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -235,7 +208,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -247,30 +220,17 @@ namespace Example
     public class GetFaxDocumentsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new FaxApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of fax documents.
-                
                 FaxDocumentEntityListing result = apiInstance.GetFaxDocuments(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -281,7 +241,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -310,7 +270,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -322,20 +282,15 @@ namespace Example
     public class GetFaxSummaryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new FaxApi();
-            
 
             try
-            {
-                
+            { 
                 // Get fax summary
-                
                 FaxSummary result = apiInstance.GetFaxSummary();
                 Debug.WriteLine(result);
             }
@@ -346,7 +301,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -370,7 +325,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -382,30 +337,17 @@ namespace Example
     public class PutFaxDocumentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new FaxApi();
-            
-            
             var documentId = documentId_example;  // string | Document ID
-            
-            
-            
-            
-            
             var body = new FaxDocument(); // FaxDocument | Document
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a fax document.
-                
                 FaxDocument result = apiInstance.PutFaxDocument(documentId, body);
                 Debug.WriteLine(result);
             }
@@ -416,7 +358,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

@@ -54,7 +54,7 @@ Requires ANY permissions:
 * externalContacts:contact:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -66,25 +66,16 @@ namespace Example
     public class DeleteExternalcontactsContactExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var contactId = contactId_example;  // string | ExternalContact ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete an external contact
-                
                 apiInstance.DeleteExternalcontactsContact(contactId);
             }
             catch (Exception e)
@@ -94,7 +85,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -123,7 +114,7 @@ Requires ANY permissions:
 * externalContacts:contact:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -135,30 +126,17 @@ namespace Example
     public class DeleteExternalcontactsContactNoteExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var contactId = contactId_example;  // string | ExternalContact Id
-            
-            
-            
-            
             var noteId = noteId_example;  // string | Note Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a note for an external contact
-                
                 apiInstance.DeleteExternalcontactsContactNote(contactId, noteId);
             }
             catch (Exception e)
@@ -168,7 +146,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -198,7 +176,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -210,25 +188,16 @@ namespace Example
     public class DeleteExternalcontactsOrganizationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete an external organization
-                
                 apiInstance.DeleteExternalcontactsOrganization(externalOrganizationId);
             }
             catch (Exception e)
@@ -238,7 +207,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -267,7 +236,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -279,30 +248,17 @@ namespace Example
     public class DeleteExternalcontactsOrganizationNoteExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization Id
-            
-            
-            
-            
             var noteId = noteId_example;  // string | Note Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a note for an external organization
-                
                 apiInstance.DeleteExternalcontactsOrganizationNote(externalOrganizationId, noteId);
             }
             catch (Exception e)
@@ -312,7 +268,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -342,7 +298,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -354,25 +310,16 @@ namespace Example
     public class DeleteExternalcontactsOrganizationTrustorExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Unlink the Trustor for this External Organization
-                
                 apiInstance.DeleteExternalcontactsOrganizationTrustor(externalOrganizationId);
             }
             catch (Exception e)
@@ -382,7 +329,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -411,7 +358,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -423,25 +370,16 @@ namespace Example
     public class DeleteExternalcontactsRelationshipExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var relationshipId = relationshipId_example;  // string | Relationship Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a relationship
-                
                 apiInstance.DeleteExternalcontactsRelationship(relationshipId);
             }
             catch (Exception e)
@@ -451,7 +389,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -480,7 +418,7 @@ Requires ANY permissions:
 * externalContacts:contact:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -492,30 +430,17 @@ namespace Example
     public class GetExternalcontactsContactExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var contactId = contactId_example;  // string | ExternalContact ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | which fields, if any, to expand (externalOrganization,externalDataSources) (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Fetch an external contact
-                
                 ExternalContact result = apiInstance.GetExternalcontactsContact(contactId, expand);
                 Debug.WriteLine(result);
             }
@@ -526,7 +451,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -556,7 +481,7 @@ Requires ANY permissions:
 * externalContacts:contact:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -568,35 +493,18 @@ namespace Example
     public class GetExternalcontactsContactNoteExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var contactId = contactId_example;  // string | ExternalContact Id
-            
-            
-            
-            
             var noteId = noteId_example;  // string | Note Id
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Fetch a note for an external contact
-                
                 Note result = apiInstance.GetExternalcontactsContactNote(contactId, noteId, expand);
                 Debug.WriteLine(result);
             }
@@ -607,7 +515,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -638,7 +546,7 @@ Requires ANY permissions:
 * externalContacts:contact:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -650,45 +558,20 @@ namespace Example
     public class GetExternalcontactsContactNotesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var contactId = contactId_example;  // string | ExternalContact Id
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 20)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // List notes for an external contact
-                
                 NoteListing result = apiInstance.GetExternalcontactsContactNotes(contactId, pageSize, pageNumber, sortOrder, expand);
                 Debug.WriteLine(result);
             }
@@ -699,7 +582,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -732,7 +615,7 @@ Requires ANY permissions:
 * externalContacts:contact:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -744,45 +627,20 @@ namespace Example
     public class GetExternalcontactsContactsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var pageSize = 56;  // int? | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 20)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
-            
-            
-            
-            
             var q = q_example;  // string | User supplied search keywords (no special syntax is currently supported) (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Search for external contacts
-                
                 ContactListing result = apiInstance.GetExternalcontactsContacts(pageSize, pageNumber, q, sortOrder, expand);
                 Debug.WriteLine(result);
             }
@@ -793,7 +651,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -826,7 +684,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -838,35 +696,18 @@ namespace Example
     public class GetExternalcontactsOrganizationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization ID
-            
-            
-            
-            
             var expand = expand_example;  // string | which fields, if any, to expand (externalDataSources) (optional) 
-            
-            
-            
-            
             var includeTrustors = true;  // bool? | (true or false) whether or not to include trustor information embedded in the externalOrganization (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Fetch an external organization
-                
                 ExternalOrganization result = apiInstance.GetExternalcontactsOrganization(externalOrganizationId, expand, includeTrustors);
                 Debug.WriteLine(result);
             }
@@ -877,7 +718,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -908,7 +749,7 @@ Requires ANY permissions:
 * externalContacts:contact:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -920,50 +761,21 @@ namespace Example
     public class GetExternalcontactsOrganizationContactsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 20)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
-            
-            
-            
-            
             var q = q_example;  // string | User supplied search keywords (no special syntax is currently supported) (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Search for external contacts in an external organization
-                
                 ContactListing result = apiInstance.GetExternalcontactsOrganizationContacts(externalOrganizationId, pageSize, pageNumber, q, sortOrder, expand);
                 Debug.WriteLine(result);
             }
@@ -974,7 +786,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1008,7 +820,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1020,35 +832,18 @@ namespace Example
     public class GetExternalcontactsOrganizationNoteExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization Id
-            
-            
-            
-            
             var noteId = noteId_example;  // string | Note Id
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Fetch a note for an external organization
-                
                 Note result = apiInstance.GetExternalcontactsOrganizationNote(externalOrganizationId, noteId, expand);
                 Debug.WriteLine(result);
             }
@@ -1059,7 +854,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1090,7 +885,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1102,45 +897,20 @@ namespace Example
     public class GetExternalcontactsOrganizationNotesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization Id
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 20)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // List notes for an external organization
-                
                 NoteListing result = apiInstance.GetExternalcontactsOrganizationNotes(externalOrganizationId, pageSize, pageNumber, sortOrder, expand);
                 Debug.WriteLine(result);
             }
@@ -1151,7 +921,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1184,7 +954,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1196,45 +966,20 @@ namespace Example
     public class GetExternalcontactsOrganizationRelationshipsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 20)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
-            
-            
-            
-            
             var expand = expand_example;  // string | which fields, if any, to expand (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Fetch a relationship for an external organization
-                
                 RelationshipListing result = apiInstance.GetExternalcontactsOrganizationRelationships(externalOrganizationId, pageSize, pageNumber, expand, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1245,7 +990,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1278,7 +1023,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1290,55 +1035,22 @@ namespace Example
     public class GetExternalcontactsOrganizationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var pageSize = 56;  // int? | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 20)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
-            
-            
-            
-            
             var q = q_example;  // string | Search query (optional) 
-            
-            
-            
-            
-            
             var trustorId = new List<string>(); // List<string> | Search for external organizations by trustorIds (limit 25). If supplied, the 'q' parameters is ignored. Items are returned in the order requested (optional) 
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
-            
-            
-            
             var includeTrustors = true;  // bool? | (true or false) whether or not to include trustor information embedded in the externalOrganization (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Search for external organizations
-                
                 ExternalOrganizationListing result = apiInstance.GetExternalcontactsOrganizations(pageSize, pageNumber, q, trustorId, sortOrder, expand, includeTrustors);
                 Debug.WriteLine(result);
             }
@@ -1349,7 +1061,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1384,7 +1096,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1396,30 +1108,17 @@ namespace Example
     public class GetExternalcontactsRelationshipExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var relationshipId = relationshipId_example;  // string | Relationship Id
-            
-            
-            
-            
             var expand = expand_example;  // string | which fields, if any, to expand (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Fetch a relationship
-                
                 Relationship result = apiInstance.GetExternalcontactsRelationship(relationshipId, expand);
                 Debug.WriteLine(result);
             }
@@ -1430,7 +1129,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1460,7 +1159,7 @@ Requires ANY permissions:
 * externalContacts:contact:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1472,30 +1171,17 @@ namespace Example
     public class GetExternalcontactsReversewhitepageslookupExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var lookupVal = lookupVal_example;  // string | User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | which field, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
-                
                 ReverseWhitepagesLookupResult result = apiInstance.GetExternalcontactsReversewhitepageslookup(lookupVal, expand);
                 Debug.WriteLine(result);
             }
@@ -1506,7 +1192,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1536,7 +1222,7 @@ Requires ANY permissions:
 * externalContacts:contact:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1548,30 +1234,17 @@ namespace Example
     public class PostExternalcontactsContactNotesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var contactId = contactId_example;  // string | ExternalContact Id
-            
-            
-            
-            
-            
             var body = new Note(); // Note | ExternalContact
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a note for an external contact
-                
                 Note result = apiInstance.PostExternalcontactsContactNotes(contactId, body);
                 Debug.WriteLine(result);
             }
@@ -1582,7 +1255,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1612,7 +1285,7 @@ Requires ANY permissions:
 * externalContacts:contact:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1624,25 +1297,16 @@ namespace Example
     public class PostExternalcontactsContactsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
-            
             var body = new ExternalContact(); // ExternalContact | ExternalContact
-            
-            
 
             try
-            {
-                
+            { 
                 // Create an external contact
-                
                 ExternalContact result = apiInstance.PostExternalcontactsContacts(body);
                 Debug.WriteLine(result);
             }
@@ -1653,7 +1317,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1682,7 +1346,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1694,30 +1358,17 @@ namespace Example
     public class PostExternalcontactsOrganizationNotesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization Id
-            
-            
-            
-            
-            
             var body = new Note(); // Note | ExternalContact
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a note for an external organization
-                
                 Note result = apiInstance.PostExternalcontactsOrganizationNotes(externalOrganizationId, body);
                 Debug.WriteLine(result);
             }
@@ -1728,7 +1379,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1758,7 +1409,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1770,25 +1421,16 @@ namespace Example
     public class PostExternalcontactsOrganizationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
-            
             var body = new ExternalOrganization(); // ExternalOrganization | ExternalOrganization
-            
-            
 
             try
-            {
-                
+            { 
                 // Create an external organization
-                
                 ExternalOrganization result = apiInstance.PostExternalcontactsOrganizations(body);
                 Debug.WriteLine(result);
             }
@@ -1799,7 +1441,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1828,7 +1470,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1840,25 +1482,16 @@ namespace Example
     public class PostExternalcontactsRelationshipsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
-            
             var body = new Relationship(); // Relationship | Relationship
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a relationship
-                
                 Relationship result = apiInstance.PostExternalcontactsRelationships(body);
                 Debug.WriteLine(result);
             }
@@ -1869,7 +1502,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1898,7 +1531,7 @@ Requires ANY permissions:
 * externalContacts:contact:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1910,30 +1543,17 @@ namespace Example
     public class PutExternalcontactsContactExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var contactId = contactId_example;  // string | ExternalContact ID
-            
-            
-            
-            
-            
             var body = new ExternalContact(); // ExternalContact | ExternalContact
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an external contact
-                
                 ExternalContact result = apiInstance.PutExternalcontactsContact(contactId, body);
                 Debug.WriteLine(result);
             }
@@ -1944,7 +1564,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1974,7 +1594,7 @@ Requires ANY permissions:
 * externalContacts:contact:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1986,35 +1606,18 @@ namespace Example
     public class PutExternalcontactsContactNoteExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var contactId = contactId_example;  // string | ExternalContact Id
-            
-            
-            
-            
             var noteId = noteId_example;  // string | Note Id
-            
-            
-            
-            
-            
             var body = new Note(); // Note | Note
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a note for an external contact
-                
                 Note result = apiInstance.PutExternalcontactsContactNote(contactId, noteId, body);
                 Debug.WriteLine(result);
             }
@@ -2025,7 +1628,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2056,7 +1659,7 @@ Requires ANY permissions:
 * externalContacts:conversation:associate
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2068,30 +1671,17 @@ namespace Example
     public class PutExternalcontactsConversationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var conversationId = conversationId_example;  // string | Conversation ID
-            
-            
-            
-            
-            
             var body = new ConversationAssociation(); // ConversationAssociation | ConversationAssociation
-            
-            
 
             try
-            {
-                
+            { 
                 // Associate an external contact with a conversation
-                
                 apiInstance.PutExternalcontactsConversation(conversationId, body);
             }
             catch (Exception e)
@@ -2101,7 +1691,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2131,7 +1721,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2143,30 +1733,17 @@ namespace Example
     public class PutExternalcontactsOrganizationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization ID
-            
-            
-            
-            
-            
             var body = new ExternalOrganization(); // ExternalOrganization | ExternalOrganization
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an external organization
-                
                 ExternalOrganization result = apiInstance.PutExternalcontactsOrganization(externalOrganizationId, body);
                 Debug.WriteLine(result);
             }
@@ -2177,7 +1754,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2207,7 +1784,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2219,35 +1796,18 @@ namespace Example
     public class PutExternalcontactsOrganizationNoteExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization Id
-            
-            
-            
-            
             var noteId = noteId_example;  // string | Note Id
-            
-            
-            
-            
-            
             var body = new Note(); // Note | Note
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a note for an external organization
-                
                 Note result = apiInstance.PutExternalcontactsOrganizationNote(externalOrganizationId, noteId, body);
                 Debug.WriteLine(result);
             }
@@ -2258,7 +1818,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2289,7 +1849,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2301,30 +1861,17 @@ namespace Example
     public class PutExternalcontactsOrganizationTrustorTrustorIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization ID
-            
-            
-            
-            
             var trustorId = trustorId_example;  // string | Trustor ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Links a Trustor with an External Organization
-                
                 ExternalOrganization result = apiInstance.PutExternalcontactsOrganizationTrustorTrustorId(externalOrganizationId, trustorId);
                 Debug.WriteLine(result);
             }
@@ -2335,7 +1882,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2365,7 +1912,7 @@ Requires ANY permissions:
 * externalContacts:externalOrganization:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2377,30 +1924,17 @@ namespace Example
     public class PutExternalcontactsRelationshipExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ExternalContactsApi();
-            
-            
             var relationshipId = relationshipId_example;  // string | Relationship Id
-            
-            
-            
-            
-            
             var body = new Relationship(); // Relationship | Relationship
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a relationship
-                
                 Relationship result = apiInstance.PutExternalcontactsRelationship(relationshipId, body);
                 Debug.WriteLine(result);
             }
@@ -2411,7 +1945,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

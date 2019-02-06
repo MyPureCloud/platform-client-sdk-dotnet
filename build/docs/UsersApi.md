@@ -85,7 +85,7 @@ Requires ANY permissions:
 * authorization:grant:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -97,35 +97,18 @@ namespace Example
     public class DeleteAuthorizationSubjectDivisionRoleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
-            
-            
-            
-            
             var divisionId = divisionId_example;  // string | the id of the division of the grant
-            
-            
-            
-            
             var roleId = roleId_example;  // string | the id of the role of the grant
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a grant of a role in a division
-                
                 apiInstance.DeleteAuthorizationSubjectDivisionRole(subjectId, divisionId, roleId);
             }
             catch (Exception e)
@@ -135,7 +118,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -168,7 +151,7 @@ Requires ANY permissions:
 * user_administration
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -180,25 +163,16 @@ namespace Example
     public class DeleteUserExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete user
-                
                 Empty result = apiInstance.DeleteUser(userId);
                 Debug.WriteLine(result);
             }
@@ -209,7 +183,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -240,7 +214,7 @@ Requires ANY permissions:
 * authorization:grant:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -252,25 +226,16 @@ namespace Example
     public class DeleteUserRolesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Removes all the roles from the user.
-                
                 apiInstance.DeleteUserRoles(userId);
             }
             catch (Exception e)
@@ -280,7 +245,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -310,7 +275,7 @@ Requires ANY permissions:
 * admin
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -322,30 +287,17 @@ namespace Example
     public class DeleteUserRoutinglanguageExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var languageId = languageId_example;  // string | languageId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Remove routing language from user
-                
                 apiInstance.DeleteUserRoutinglanguage(userId, languageId);
             }
             catch (Exception e)
@@ -355,7 +307,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -386,7 +338,7 @@ Requires ANY permissions:
 * admin
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -398,30 +350,17 @@ namespace Example
     public class DeleteUserRoutingskillExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var skillId = skillId_example;  // string | skillId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Remove routing skill from user
-                
                 apiInstance.DeleteUserRoutingskill(userId, skillId);
             }
             catch (Exception e)
@@ -431,7 +370,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -460,7 +399,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -472,25 +411,16 @@ namespace Example
     public class DeleteUserStationAssociatedstationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Clear associated station
-                
                 apiInstance.DeleteUserStationAssociatedstation(userId);
             }
             catch (Exception e)
@@ -500,7 +430,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -530,7 +460,7 @@ Requires ANY permissions:
 * telephony:phone:assign
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -542,25 +472,16 @@ namespace Example
     public class DeleteUserStationDefaultstationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Clear default station
-                
                 apiInstance.DeleteUserStationDefaultstation(userId);
             }
             catch (Exception e)
@@ -570,7 +491,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -598,7 +519,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -610,30 +531,17 @@ namespace Example
     public class GetAuthorizationDivisionspermittedMeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var permission = permission_example;  // string | The permission string, including the object to access, e.g. routing:queue:view
-            
-            
-            
-            
             var name = name_example;  // string | Search term to filter by division name (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Returns whether or not current user can perform the specified action(s).
-                
                 List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedMe(permission, name);
                 Debug.WriteLine(result);
             }
@@ -644,7 +552,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -673,7 +581,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -685,35 +593,18 @@ namespace Example
     public class GetAuthorizationDivisionspermittedSubjectIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
-            
-            
-            
-            
             var permission = permission_example;  // string | The permission string, including the object to access, e.g. routing:queue:view
-            
-            
-            
-            
             var name = name_example;  // string | Search term to filter by division name (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Returns whether or not specified user can perform the specified action(s).
-                
                 List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedSubjectId(subjectId, permission, name);
                 Debug.WriteLine(result);
             }
@@ -724,7 +615,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -755,7 +646,7 @@ Requires ANY permissions:
 * authorization:grant:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -767,25 +658,16 @@ namespace Example
     public class GetAuthorizationSubjectExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Returns a listing of roles and permissions for a user.
-                
                 AuthzSubject result = apiInstance.GetAuthorizationSubject(subjectId);
                 Debug.WriteLine(result);
             }
@@ -796,7 +678,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -824,7 +706,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -836,20 +718,15 @@ namespace Example
     public class GetAuthorizationSubjectsMeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
 
             try
-            {
-                
+            { 
                 // Returns a listing of roles and permissions for the currently authenticated user.
-                
                 AuthzSubject result = apiInstance.GetAuthorizationSubjectsMe();
                 Debug.WriteLine(result);
             }
@@ -860,7 +737,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -884,7 +761,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -896,25 +773,16 @@ namespace Example
     public class GetFieldconfigExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var type = type_example;  // string | Field type
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Fetch field config for an entity type
-                
                 FieldConfig result = apiInstance.GetFieldconfig(type);
                 Debug.WriteLine(result);
             }
@@ -925,7 +793,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -953,7 +821,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -965,55 +833,22 @@ namespace Example
     public class GetProfilesUsersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | id (optional) 
-            
-            
-            
-            
             var jid = new List<string>(); // List<string> | jid (optional) 
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
-            
             var state = state_example;  // string | Only list users of this state (optional)  (default to active)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a user profile listing
-                
                 UserProfileEntityListing result = apiInstance.GetProfilesUsers(pageSize, pageNumber, id, jid, sortOrder, expand, state);
                 Debug.WriteLine(result);
             }
@@ -1024,7 +859,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1058,7 +893,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1070,35 +905,18 @@ namespace Example
     public class GetUserExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
-            
             var state = state_example;  // string | Search for a user with this state (optional)  (default to active)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get user.
-                
                 User result = apiInstance.GetUser(userId, expand, state);
                 Debug.WriteLine(result);
             }
@@ -1109,7 +927,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1139,7 +957,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1151,30 +969,17 @@ namespace Example
     public class GetUserAdjacentsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get adjacents
-                
                 Adjacents result = apiInstance.GetUserAdjacents(userId, expand);
                 Debug.WriteLine(result);
             }
@@ -1185,7 +990,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1214,7 +1019,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1226,25 +1031,16 @@ namespace Example
     public class GetUserCallforwardingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a user's CallForwarding
-                
                 CallForwarding result = apiInstance.GetUserCallforwarding(userId);
                 Debug.WriteLine(result);
             }
@@ -1255,7 +1051,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1283,7 +1079,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1295,30 +1091,17 @@ namespace Example
     public class GetUserDirectreportsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get direct reports
-                
                 List&lt;User&gt; result = apiInstance.GetUserDirectreports(userId, expand);
                 Debug.WriteLine(result);
             }
@@ -1329,7 +1112,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1358,7 +1141,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1370,45 +1153,20 @@ namespace Example
     public class GetUserFavoritesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get favorites
-                
                 UserEntityListing result = apiInstance.GetUserFavorites(userId, pageSize, pageNumber, sortOrder, expand);
                 Debug.WriteLine(result);
             }
@@ -1419,7 +1177,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1451,7 +1209,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1463,30 +1221,17 @@ namespace Example
     public class GetUserGeolocationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | user Id
-            
-            
-            
-            
             var clientId = clientId_example;  // string | client Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a user's Geolocation
-                
                 Geolocation result = apiInstance.GetUserGeolocation(userId, clientId);
                 Debug.WriteLine(result);
             }
@@ -1497,7 +1242,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1526,7 +1271,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1538,25 +1283,16 @@ namespace Example
     public class GetUserOutofofficeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a OutOfOffice
-                
                 OutOfOffice result = apiInstance.GetUserOutofoffice(userId);
                 Debug.WriteLine(result);
             }
@@ -1567,7 +1303,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1595,7 +1331,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1607,30 +1343,17 @@ namespace Example
     public class GetUserProfileExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | userId
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get user profile
-                
                 UserProfile result = apiInstance.GetUserProfile(userId, expand);
                 Debug.WriteLine(result);
             }
@@ -1641,7 +1364,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1671,7 +1394,7 @@ Requires ANY permissions:
 * directory:userProfile:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1683,25 +1406,16 @@ namespace Example
     public class GetUserProfileskillsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // List profile skills for a user
-                
                 List&lt;string&gt; result = apiInstance.GetUserProfileskills(userId);
                 Debug.WriteLine(result);
             }
@@ -1712,7 +1426,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1741,7 +1455,7 @@ Requires ANY permissions:
 * routing:queue:join
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1753,45 +1467,20 @@ namespace Example
     public class GetUserQueuesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var joined = true;  // bool? | Is joined to the queue (optional)  (default to true)
-            
-            
-            
-            
-            
             var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get queues for user
-                
                 UserQueueEntityListing result = apiInstance.GetUserQueues(userId, pageSize, pageNumber, joined, divisionId);
                 Debug.WriteLine(result);
             }
@@ -1802,7 +1491,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1835,7 +1524,7 @@ Requires ANY permissions:
 * authorization:grant:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1847,25 +1536,16 @@ namespace Example
     public class GetUserRolesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Returns a listing of roles and permissions for a user.
-                
                 UserAuthorization result = apiInstance.GetUserRoles(userId);
                 Debug.WriteLine(result);
             }
@@ -1876,7 +1556,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1904,7 +1584,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1916,40 +1596,19 @@ namespace Example
     public class GetUserRoutinglanguagesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // List routing language for user
-                
                 UserLanguageEntityListing result = apiInstance.GetUserRoutinglanguages(userId, pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1960,7 +1619,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1991,7 +1650,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2003,40 +1662,19 @@ namespace Example
     public class GetUserRoutingskillsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // List routing skills for user
-                
                 UserSkillEntityListing result = apiInstance.GetUserRoutingskills(userId, pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -2047,7 +1685,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2078,7 +1716,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2090,25 +1728,16 @@ namespace Example
     public class GetUserRoutingstatusExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Fetch the routing status of a user
-                
                 RoutingStatus result = apiInstance.GetUserRoutingstatus(userId);
                 Debug.WriteLine(result);
             }
@@ -2119,7 +1748,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2147,7 +1776,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2159,25 +1788,16 @@ namespace Example
     public class GetUserStationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get station information for user
-                
                 UserStations result = apiInstance.GetUserStation(userId);
                 Debug.WriteLine(result);
             }
@@ -2188,7 +1808,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2216,7 +1836,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2228,30 +1848,17 @@ namespace Example
     public class GetUserSuperiorsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get superiors
-                
                 List&lt;User&gt; result = apiInstance.GetUserSuperiors(userId, expand);
                 Debug.WriteLine(result);
             }
@@ -2262,7 +1869,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2292,7 +1899,7 @@ Requires ANY permissions:
 * authorization:orgTrustor:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2304,35 +1911,18 @@ namespace Example
     public class GetUserTrustorsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // List the organizations that have authorized/trusted the user.
-                
                 TrustorEntityListing result = apiInstance.GetUserTrustors(userId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -2343,7 +1933,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2373,7 +1963,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2385,50 +1975,21 @@ namespace Example
     public class GetUsersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | id (optional) 
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
-            
             var state = state_example;  // string | Only list users of this state (optional)  (default to active)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the list of available users.
-                
                 UserEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, sortOrder, expand, state);
                 Debug.WriteLine(result);
             }
@@ -2439,7 +2000,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2472,7 +2033,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2484,25 +2045,16 @@ namespace Example
     public class GetUsersMeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get current user details.
-                
                 UserMe result = apiInstance.GetUsersMe(expand);
                 Debug.WriteLine(result);
             }
@@ -2513,7 +2065,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2541,7 +2093,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2553,30 +2105,17 @@ namespace Example
     public class GetUsersSearchExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var q64 = q64_example;  // string | q64
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Search users using the q64 value returned from a previous search
-                
                 UsersSearchResponse result = apiInstance.GetUsersSearch(q64, expand);
                 Debug.WriteLine(result);
             }
@@ -2587,7 +2126,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2619,7 +2158,7 @@ Requires ANY permissions:
 * user_administration
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2631,30 +2170,17 @@ namespace Example
     public class PatchUserExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new UpdateUser(); // UpdateUser | User
-            
-            
 
             try
-            {
-                
+            { 
                 // Update user
-                
                 User result = apiInstance.PatchUser(userId, body);
                 Debug.WriteLine(result);
             }
@@ -2665,7 +2191,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2694,7 +2220,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2706,30 +2232,17 @@ namespace Example
     public class PatchUserCallforwardingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new CallForwarding(); // CallForwarding | Call forwarding
-            
-            
 
             try
-            {
-                
+            { 
                 // Patch a user's CallForwarding
-                
                 CallForwarding result = apiInstance.PatchUserCallforwarding(userId, body);
                 Debug.WriteLine(result);
             }
@@ -2740,7 +2253,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2769,7 +2282,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2781,35 +2294,18 @@ namespace Example
     public class PatchUserGeolocationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | user Id
-            
-            
-            
-            
             var clientId = clientId_example;  // string | client Id
-            
-            
-            
-            
-            
             var body = new Geolocation(); // Geolocation | Geolocation
-            
-            
 
             try
-            {
-                
+            { 
                 // Patch a user's Geolocation
-                
                 Geolocation result = apiInstance.PatchUserGeolocation(userId, clientId, body);
                 Debug.WriteLine(result);
             }
@@ -2820,7 +2316,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2851,7 +2347,7 @@ Requires ANY permissions:
 * routing:queue:join
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2863,35 +2359,18 @@ namespace Example
     public class PatchUserQueueExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var queueId = queueId_example;  // string | Queue ID
-            
-            
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new UserQueue(); // UserQueue | Queue Member
-            
-            
 
             try
-            {
-                
+            { 
                 // Join or unjoin a queue for a user
-                
                 UserQueue result = apiInstance.PatchUserQueue(queueId, userId, body);
                 Debug.WriteLine(result);
             }
@@ -2902,7 +2381,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2933,7 +2412,7 @@ Requires ANY permissions:
 * routing:queue:join
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2945,35 +2424,18 @@ namespace Example
     public class PatchUserQueuesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new List<UserQueue>(); // List<UserQueue> | User Queues
-            
-            
-            
-            
             var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Join or unjoin a set of queues for a user
-                
                 UserQueueEntityListing result = apiInstance.PatchUserQueues(userId, body, divisionId);
                 Debug.WriteLine(result);
             }
@@ -2984,7 +2446,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3016,7 +2478,7 @@ Requires ANY permissions:
 * admin
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3028,35 +2490,18 @@ namespace Example
     public class PatchUserRoutinglanguageExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var languageId = languageId_example;  // string | languageId
-            
-            
-            
-            
-            
             var body = new UserRoutingLanguage(); // UserRoutingLanguage | Language
-            
-            
 
             try
-            {
-                
+            { 
                 // Update routing language proficiency or state.
-                
                 UserRoutingLanguage result = apiInstance.PatchUserRoutinglanguage(userId, languageId, body);
                 Debug.WriteLine(result);
             }
@@ -3067,7 +2512,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3099,7 +2544,7 @@ Requires ANY permissions:
 * admin
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3111,30 +2556,17 @@ namespace Example
     public class PatchUserRoutinglanguagesBulkExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new List<UserRoutingLanguagePost>(); // List<UserRoutingLanguagePost> | Language
-            
-            
 
             try
-            {
-                
+            { 
                 // Add bulk routing language to user. Max limit 50 languages
-                
                 UserLanguageEntityListing result = apiInstance.PatchUserRoutinglanguagesBulk(userId, body);
                 Debug.WriteLine(result);
             }
@@ -3145,7 +2577,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3176,7 +2608,7 @@ Requires ANY permissions:
 * admin
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3188,30 +2620,17 @@ namespace Example
     public class PatchUserRoutingskillsBulkExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new List<UserRoutingSkillPost>(); // List<UserRoutingSkillPost> | Skill
-            
-            
 
             try
-            {
-                
+            { 
                 // Add bulk routing skills to user
-                
                 UserSkillEntityListing result = apiInstance.PatchUserRoutingskillsBulk(userId, body);
                 Debug.WriteLine(result);
             }
@@ -3222,7 +2641,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3255,7 +2674,7 @@ Requires ANY permissions:
 * directory:user:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3267,25 +2686,16 @@ namespace Example
     public class PatchUsersBulkExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
-            
             var body = new List<PatchUser>(); // List<PatchUser> | Users
-            
-            
 
             try
-            {
-                
+            { 
                 // Update bulk acd autoanswer on users
-                
                 UserEntityListing result = apiInstance.PatchUsersBulk(body);
                 Debug.WriteLine(result);
             }
@@ -3296,7 +2706,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3325,7 +2735,7 @@ Requires ANY permissions:
 * analytics:userAggregate:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3337,25 +2747,16 @@ namespace Example
     public class PostAnalyticsUsersAggregatesQueryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
-            
             var body = new AggregationQuery(); // AggregationQuery | query
-            
-            
 
             try
-            {
-                
+            { 
                 // Query for user aggregates
-                
                 PresenceQueryResponse result = apiInstance.PostAnalyticsUsersAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
@@ -3366,7 +2767,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3395,7 +2796,7 @@ Requires ANY permissions:
 * analytics:userObservation:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3407,25 +2808,16 @@ namespace Example
     public class PostAnalyticsUsersDetailsQueryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
-            
             var body = new UserDetailsQuery(); // UserDetailsQuery | query
-            
-            
 
             try
-            {
-                
+            { 
                 // Query for user details
-                
                 AnalyticsUserDetailsQueryResponse result = apiInstance.PostAnalyticsUsersDetailsQuery(body);
                 Debug.WriteLine(result);
             }
@@ -3436,7 +2828,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3465,7 +2857,7 @@ Requires ANY permissions:
 * analytics:userObservation:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3477,25 +2869,16 @@ namespace Example
     public class PostAnalyticsUsersObservationsQueryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
-            
             var body = new ObservationQuery(); // ObservationQuery | query
-            
-            
 
             try
-            {
-                
+            { 
                 // Query for user observations
-                
                 ObservationQueryResponse result = apiInstance.PostAnalyticsUsersObservationsQuery(body);
                 Debug.WriteLine(result);
             }
@@ -3506,7 +2889,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3535,7 +2918,7 @@ Requires ANY permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3547,40 +2930,19 @@ namespace Example
     public class PostAuthorizationSubjectDivisionRoleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
-            
-            
-            
-            
             var divisionId = divisionId_example;  // string | the id of the division to which to make the grant
-            
-            
-            
-            
             var roleId = roleId_example;  // string | the id of the role to grant
-            
-            
-            
-            
             var subjectType = subjectType_example;  // string | what the type of the subject is, PC_GROUP or PC_USER (optional)  (default to PC_USER)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Make a grant of a role in a division
-                
                 apiInstance.PostAuthorizationSubjectDivisionRole(subjectId, divisionId, roleId, subjectType);
             }
             catch (Exception e)
@@ -3590,7 +2952,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3624,7 +2986,7 @@ Requires ANY permissions:
 * user_administration
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3636,30 +2998,17 @@ namespace Example
     public class PostUserInviteExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var force = true;  // bool? | Resend the invitation even if one is already outstanding (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Send an activation email to the user
-                
                 apiInstance.PostUserInvite(userId, force);
             }
             catch (Exception e)
@@ -3669,7 +3018,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3700,7 +3049,7 @@ Requires ANY permissions:
 * directory:userPassword:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3712,30 +3061,17 @@ namespace Example
     public class PostUserPasswordExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new ChangePasswordRequest(); // ChangePasswordRequest | Password
-            
-            
 
             try
-            {
-                
+            { 
                 // Change a users password
-                
                 apiInstance.PostUserPassword(userId, body);
             }
             catch (Exception e)
@@ -3745,7 +3081,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3776,7 +3112,7 @@ Requires ANY permissions:
 * admin
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3788,30 +3124,17 @@ namespace Example
     public class PostUserRoutinglanguagesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new UserRoutingLanguagePost(); // UserRoutingLanguagePost | Language
-            
-            
 
             try
-            {
-                
+            { 
                 // Add routing language to user
-                
                 UserRoutingLanguage result = apiInstance.PostUserRoutinglanguages(userId, body);
                 Debug.WriteLine(result);
             }
@@ -3822,7 +3145,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3853,7 +3176,7 @@ Requires ANY permissions:
 * admin
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3865,30 +3188,17 @@ namespace Example
     public class PostUserRoutingskillsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new UserRoutingSkillPost(); // UserRoutingSkillPost | Skill
-            
-            
 
             try
-            {
-                
+            { 
                 // Add routing skill to user
-                
                 UserRoutingSkill result = apiInstance.PostUserRoutingskills(userId, body);
                 Debug.WriteLine(result);
             }
@@ -3899,7 +3209,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3929,7 +3239,7 @@ Requires ANY permissions:
 * directory:user:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3941,25 +3251,16 @@ namespace Example
     public class PostUsersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
-            
             var body = new CreateUser(); // CreateUser | User
-            
-            
 
             try
-            {
-                
+            { 
                 // Create user
-                
                 User result = apiInstance.PostUsers(body);
                 Debug.WriteLine(result);
             }
@@ -3970,7 +3271,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3998,7 +3299,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4010,25 +3311,16 @@ namespace Example
     public class PostUsersMePasswordExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
-            
             var body = new ChangeMyPasswordRequest(); // ChangeMyPasswordRequest | Password
-            
-            
 
             try
-            {
-                
+            { 
                 // Change your password
-                
                 apiInstance.PostUsersMePassword(body);
             }
             catch (Exception e)
@@ -4038,7 +3330,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4066,7 +3358,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4078,25 +3370,16 @@ namespace Example
     public class PostUsersSearchExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
-            
             var body = new UserSearchRequest(); // UserSearchRequest | Search request options
-            
-            
 
             try
-            {
-                
+            { 
                 // Search users
-                
                 UsersSearchResponse result = apiInstance.PostUsersSearch(body);
                 Debug.WriteLine(result);
             }
@@ -4107,7 +3390,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4135,7 +3418,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4147,30 +3430,17 @@ namespace Example
     public class PutUserCallforwardingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new CallForwarding(); // CallForwarding | Call forwarding
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a user's CallForwarding
-                
                 CallForwarding result = apiInstance.PutUserCallforwarding(userId, body);
                 Debug.WriteLine(result);
             }
@@ -4181,7 +3451,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4210,7 +3480,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4222,30 +3492,17 @@ namespace Example
     public class PutUserOutofofficeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new OutOfOffice(); // OutOfOffice | The updated OutOffOffice
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an OutOfOffice
-                
                 OutOfOffice result = apiInstance.PutUserOutofoffice(userId, body);
                 Debug.WriteLine(result);
             }
@@ -4256,7 +3513,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4289,7 +3546,7 @@ Requires ANY permissions:
 * user_administration
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4301,30 +3558,17 @@ namespace Example
     public class PutUserProfileskillsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var body = ;  // List<string> | Skills
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Update profile skills for a user
-                
                 List&lt;string&gt; result = apiInstance.PutUserProfileskills(userId, body);
                 Debug.WriteLine(result);
             }
@@ -4335,7 +3579,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4367,7 +3611,7 @@ Requires ANY permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4379,30 +3623,17 @@ namespace Example
     public class PutUserRolesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var body = ;  // List<string> | List of roles
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Sets the user's roles
-                
                 UserAuthorization result = apiInstance.PutUserRoles(userId, body);
                 Debug.WriteLine(result);
             }
@@ -4413,7 +3644,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4444,7 +3675,7 @@ Requires ANY permissions:
 * admin
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4456,35 +3687,18 @@ namespace Example
     public class PutUserRoutingskillExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var skillId = skillId_example;  // string | skillId
-            
-            
-            
-            
-            
             var body = new UserRoutingSkill(); // UserRoutingSkill | Skill
-            
-            
 
             try
-            {
-                
+            { 
                 // Update routing skill proficiency or state.
-                
                 UserRoutingSkill result = apiInstance.PutUserRoutingskill(userId, skillId, body);
                 Debug.WriteLine(result);
             }
@@ -4495,7 +3709,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4525,7 +3739,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4537,30 +3751,17 @@ namespace Example
     public class PutUserRoutingstatusExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new RoutingStatus(); // RoutingStatus | Routing Status
-            
-            
 
             try
-            {
-                
+            { 
                 // Update the routing status of a user
-                
                 RoutingStatus result = apiInstance.PutUserRoutingstatus(userId, body);
                 Debug.WriteLine(result);
             }
@@ -4571,7 +3772,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4600,7 +3801,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4612,30 +3813,17 @@ namespace Example
     public class PutUserStationAssociatedstationStationIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var stationId = stationId_example;  // string | stationId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Set associated station
-                
                 apiInstance.PutUserStationAssociatedstationStationId(userId, stationId);
             }
             catch (Exception e)
@@ -4645,7 +3833,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4676,7 +3864,7 @@ Requires ANY permissions:
 * telephony:phone:assign
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4688,30 +3876,17 @@ namespace Example
     public class PutUserStationDefaultstationStationIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var stationId = stationId_example;  // string | stationId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Set default station
-                
                 apiInstance.PutUserStationDefaultstationStationId(userId, stationId);
             }
             catch (Exception e)
@@ -4721,7 +3896,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

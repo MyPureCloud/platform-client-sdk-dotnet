@@ -39,7 +39,7 @@ Requires ANY permissions:
 * admin
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -51,25 +51,16 @@ namespace Example
     public class DeleteGroupExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete group
-                
                 apiInstance.DeleteGroup(groupId);
             }
             catch (Exception e)
@@ -79,7 +70,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -107,7 +98,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -119,30 +110,17 @@ namespace Example
     public class DeleteGroupMembersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
-            
             var ids = ids_example;  // string | Comma separated list of userIds to remove
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Remove members
-                
                 Empty result = apiInstance.DeleteGroupMembers(groupId, ids);
                 Debug.WriteLine(result);
             }
@@ -153,7 +131,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -182,7 +160,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -194,25 +172,16 @@ namespace Example
     public class GetFieldconfigExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
             var type = type_example;  // string | Field type
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Fetch field config for an entity type
-                
                 FieldConfig result = apiInstance.GetFieldconfig(type);
                 Debug.WriteLine(result);
             }
@@ -223,7 +192,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -251,7 +220,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -263,25 +232,16 @@ namespace Example
     public class GetGroupExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get group
-                
                 Group result = apiInstance.GetGroup(groupId);
                 Debug.WriteLine(result);
             }
@@ -292,7 +252,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -320,7 +280,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -332,25 +292,16 @@ namespace Example
     public class GetGroupIndividualsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get all individuals associated with the group
-                
                 UserEntityListing result = apiInstance.GetGroupIndividuals(groupId);
                 Debug.WriteLine(result);
             }
@@ -361,7 +312,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -389,7 +340,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -401,45 +352,20 @@ namespace Example
     public class GetGroupMembersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get group members, includes individuals, owners, and dynamically included people
-                
                 UserEntityListing result = apiInstance.GetGroupMembers(groupId, pageSize, pageNumber, sortOrder, expand);
                 Debug.WriteLine(result);
             }
@@ -450,7 +376,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -482,7 +408,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -494,30 +420,17 @@ namespace Example
     public class GetGroupProfileExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
             var groupId = groupId_example;  // string | groupId
-            
-            
-            
-            
             var fields = fields_example;  // string | Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get group profile
-                
                 GroupProfile result = apiInstance.GetGroupProfile(groupId, fields);
                 Debug.WriteLine(result);
             }
@@ -528,7 +441,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -557,7 +470,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -569,40 +482,19 @@ namespace Example
     public class GetGroupsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | id (optional) 
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a group list
-                
                 GroupEntityListing result = apiInstance.GetGroups(pageSize, pageNumber, id, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -613,7 +505,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -644,7 +536,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -656,30 +548,17 @@ namespace Example
     public class GetGroupsSearchExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
             var q64 = q64_example;  // string | q64
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Search groups using the q64 value returned from a previous search
-                
                 GroupsSearchResponse result = apiInstance.GetGroupsSearch(q64, expand);
                 Debug.WriteLine(result);
             }
@@ -690,7 +569,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -719,7 +598,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -731,40 +610,19 @@ namespace Example
     public class GetProfilesGroupsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | id (optional) 
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get group profile listing
-                
                 GroupProfileEntityListing result = apiInstance.GetProfilesGroups(pageSize, pageNumber, id, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -775,7 +633,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -806,7 +664,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -818,30 +676,17 @@ namespace Example
     public class PostGroupMembersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
-            
-            
             var body = new GroupMembersUpdate(); // GroupMembersUpdate | Add members
-            
-            
 
             try
-            {
-                
+            { 
                 // Add members
-                
                 Empty result = apiInstance.PostGroupMembers(groupId, body);
                 Debug.WriteLine(result);
             }
@@ -852,7 +697,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -883,7 +728,7 @@ Requires ANY permissions:
 * group_creation
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -895,25 +740,16 @@ namespace Example
     public class PostGroupsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
-            
             var body = new GroupCreate(); // GroupCreate | Group
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a group
-                
                 Group result = apiInstance.PostGroups(body);
                 Debug.WriteLine(result);
             }
@@ -924,7 +760,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -952,7 +788,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -964,25 +800,16 @@ namespace Example
     public class PostGroupsSearchExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
-            
             var body = new GroupSearchRequest(); // GroupSearchRequest | Search request options
-            
-            
 
             try
-            {
-                
+            { 
                 // Search groups
-                
                 GroupsSearchResponse result = apiInstance.PostGroupsSearch(body);
                 Debug.WriteLine(result);
             }
@@ -993,7 +820,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1023,7 +850,7 @@ Requires ANY permissions:
 * admin
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1035,30 +862,17 @@ namespace Example
     public class PutGroupExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GroupsApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
-            
-            
             var body = new GroupUpdate(); // GroupUpdate | Group (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update group
-                
                 Group result = apiInstance.PutGroup(groupId, body);
                 Debug.WriteLine(result);
             }
@@ -1069,7 +883,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

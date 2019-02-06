@@ -60,7 +60,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -72,35 +72,18 @@ namespace Example
     public class DeleteConversationRecordingAnnotationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var conversationId = conversationId_example;  // string | Conversation ID
-            
-            
-            
-            
             var recordingId = recordingId_example;  // string | Recording ID
-            
-            
-            
-            
             var annotationId = annotationId_example;  // string | Annotation ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete annotation
-                
                 apiInstance.DeleteConversationRecordingAnnotation(conversationId, recordingId, annotationId);
             }
             catch (Exception e)
@@ -110,7 +93,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -141,7 +124,7 @@ Requires ANY permissions:
 * recording:orphan:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -153,25 +136,16 @@ namespace Example
     public class DeleteOrphanrecordingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var orphanId = orphanId_example;  // string | Orphan ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Deletes a single orphan recording
-                
                 OrphanRecording result = apiInstance.DeleteOrphanrecording(orphanId);
                 Debug.WriteLine(result);
             }
@@ -182,7 +156,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -211,7 +185,7 @@ Requires ANY permissions:
 * recording:retentionPolicy:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -223,25 +197,16 @@ namespace Example
     public class DeleteRecordingMediaretentionpoliciesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var ids = ids_example;  // string | 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete media retention policies
-                
                 apiInstance.DeleteRecordingMediaretentionpolicies(ids);
             }
             catch (Exception e)
@@ -251,7 +216,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -280,7 +245,7 @@ Requires ANY permissions:
 * recording:retentionPolicy:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -292,25 +257,16 @@ namespace Example
     public class DeleteRecordingMediaretentionpolicyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var policyId = policyId_example;  // string | Policy ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a media retention policy
-                
                 apiInstance.DeleteRecordingMediaretentionpolicy(policyId);
             }
             catch (Exception e)
@@ -320,7 +276,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -348,7 +304,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -360,45 +316,20 @@ namespace Example
     public class GetConversationRecordingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var conversationId = conversationId_example;  // string | Conversation ID
-            
-            
-            
-            
             var recordingId = recordingId_example;  // string | Recording ID
-            
-            
-            
-            
             var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
-            
-            
-            
-            
             var download = true;  // bool? | requesting a download format of the recording (optional)  (default to false)
-            
-            
-            
-            
             var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets a specific recording.
-                
                 Recording result = apiInstance.GetConversationRecording(conversationId, recordingId, formatId, download, fileName);
                 Debug.WriteLine(result);
             }
@@ -409,7 +340,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -441,7 +372,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -453,35 +384,18 @@ namespace Example
     public class GetConversationRecordingAnnotationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var conversationId = conversationId_example;  // string | Conversation ID
-            
-            
-            
-            
             var recordingId = recordingId_example;  // string | Recording ID
-            
-            
-            
-            
             var annotationId = annotationId_example;  // string | Annotation ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get annotation
-                
                 Annotation result = apiInstance.GetConversationRecordingAnnotation(conversationId, recordingId, annotationId);
                 Debug.WriteLine(result);
             }
@@ -492,7 +406,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -522,7 +436,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -534,30 +448,17 @@ namespace Example
     public class GetConversationRecordingAnnotationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var conversationId = conversationId_example;  // string | Conversation ID
-            
-            
-            
-            
             var recordingId = recordingId_example;  // string | Recording ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get annotations for recording
-                
                 List&lt;Annotation&gt; result = apiInstance.GetConversationRecordingAnnotations(conversationId, recordingId);
                 Debug.WriteLine(result);
             }
@@ -568,7 +469,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -597,7 +498,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -609,25 +510,16 @@ namespace Example
     public class GetConversationRecordingmetadataExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var conversationId = conversationId_example;  // string | Conversation ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get recording metadata for a conversation. Does not return playable media.
-                
                 List&lt;Recording&gt; result = apiInstance.GetConversationRecordingmetadata(conversationId);
                 Debug.WriteLine(result);
             }
@@ -638,7 +530,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -666,7 +558,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -678,30 +570,17 @@ namespace Example
     public class GetConversationRecordingmetadataRecordingIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var conversationId = conversationId_example;  // string | Conversation ID
-            
-            
-            
-            
             var recordingId = recordingId_example;  // string | Recording ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get metadata for a specific recording. Does not return playable media.
-                
                 Recording result = apiInstance.GetConversationRecordingmetadataRecordingId(conversationId, recordingId);
                 Debug.WriteLine(result);
             }
@@ -712,7 +591,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -741,7 +620,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -753,35 +632,18 @@ namespace Example
     public class GetConversationRecordingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var conversationId = conversationId_example;  // string | Conversation ID
-            
-            
-            
-            
             var maxWaitMs = 56;  // int? | The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional)  (default to 5000)
-            
-            
-            
-            
             var formatId = formatId_example;  // string | The desired media format. Possible values: NONE, MP3, WAV, or WEBM (optional)  (default to WEBM)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get all of a Conversation's Recordings.
-                
                 List&lt;Recording&gt; result = apiInstance.GetConversationRecordings(conversationId, maxWaitMs, formatId);
                 Debug.WriteLine(result);
             }
@@ -792,7 +654,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -823,7 +685,7 @@ Requires ANY permissions:
 * recording:orphan:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -835,25 +697,16 @@ namespace Example
     public class GetOrphanrecordingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var orphanId = orphanId_example;  // string | Orphan ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets a single orphan recording
-                
                 OrphanRecording result = apiInstance.GetOrphanrecording(orphanId);
                 Debug.WriteLine(result);
             }
@@ -864,7 +717,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -892,7 +745,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -904,40 +757,19 @@ namespace Example
     public class GetOrphanrecordingMediaExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var orphanId = orphanId_example;  // string | Orphan ID
-            
-            
-            
-            
             var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
-            
-            
-            
-            
             var download = true;  // bool? | requesting a download format of the recording (optional)  (default to false)
-            
-            
-            
-            
             var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets the media of a single orphan recording
-                
                 Recording result = apiInstance.GetOrphanrecordingMedia(orphanId, formatId, download, fileName);
                 Debug.WriteLine(result);
             }
@@ -948,7 +780,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -980,7 +812,7 @@ Requires ANY permissions:
 * recording:orphan:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -992,60 +824,23 @@ namespace Example
     public class GetOrphanrecordingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var hasConversation = true;  // bool? | Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional)  (default to false)
-            
-            
-            
-            
             var media = media_example;  // string | Filter resulting orphans based on their media type (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets all orphan recordings
-                
                 OrphanRecordingListing result = apiInstance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation, media);
                 Debug.WriteLine(result);
             }
@@ -1056,7 +851,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1091,7 +886,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1103,25 +898,16 @@ namespace Example
     public class GetRecordingBatchrequestExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var jobId = jobId_example;  // string | jobId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the status and results for a batch request job, only the user that submitted the job may retrieve results
-                
                 BatchDownloadJobStatusResult result = apiInstance.GetRecordingBatchrequest(jobId);
                 Debug.WriteLine(result);
             }
@@ -1132,7 +918,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1161,7 +947,7 @@ Requires ANY permissions:
 * recording:encryptionKey:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1173,25 +959,16 @@ namespace Example
     public class GetRecordingLocalkeysSettingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var settingsId = settingsId_example;  // string | Settings Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the local encryption settings
-                
                 LocalEncryptionConfiguration result = apiInstance.GetRecordingLocalkeysSetting(settingsId);
                 Debug.WriteLine(result);
             }
@@ -1202,7 +979,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1231,7 +1008,7 @@ Requires ANY permissions:
 * recording:encryptionKey:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1243,20 +1020,15 @@ namespace Example
     public class GetRecordingLocalkeysSettingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
 
             try
-            {
-                
+            { 
                 // gets a list local key settings data
-                
                 LocalEncryptionConfigurationListing result = apiInstance.GetRecordingLocalkeysSettings();
                 Debug.WriteLine(result);
             }
@@ -1267,7 +1039,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -1292,7 +1064,7 @@ Requires ANY permissions:
 * recording:retentionPolicy:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1304,70 +1076,25 @@ namespace Example
     public class GetRecordingMediaretentionpoliciesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var name = name_example;  // string | the policy name - used for filtering results in searches. (optional) 
-            
-            
-            
-            
             var enabled = true;  // bool? | checks to see if policy is enabled - use enabled = true or enabled = false (optional) 
-            
-            
-            
-            
             var summary = true;  // bool? | provides a less verbose response of policy lists. (optional)  (default to false)
-            
-            
-            
-            
             var hasErrors = true;  // bool? | provides a way to fetch all policies with errors or policies that do not have errors (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets media retention policy list with query options to filter on name and enabled.
-                
                 PolicyEntityListing result = apiInstance.GetRecordingMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
                 Debug.WriteLine(result);
             }
@@ -1378,7 +1105,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1416,7 +1143,7 @@ Requires ANY permissions:
 * recording:retentionPolicy:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1428,25 +1155,16 @@ namespace Example
     public class GetRecordingMediaretentionpolicyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var policyId = policyId_example;  // string | Policy ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a media retention policy
-                
                 Policy result = apiInstance.GetRecordingMediaretentionpolicy(policyId);
                 Debug.WriteLine(result);
             }
@@ -1457,7 +1175,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1486,7 +1204,7 @@ Requires ANY permissions:
 * recording:encryptionKey:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1498,30 +1216,17 @@ namespace Example
     public class GetRecordingRecordingkeysExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get encryption key list
-                
                 EncryptionKeyEntityListing result = apiInstance.GetRecordingRecordingkeys(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -1532,7 +1237,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1562,7 +1267,7 @@ Requires ANY permissions:
 * recording:encryptionKey:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1574,20 +1279,15 @@ namespace Example
     public class GetRecordingRecordingkeysRotationscheduleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
 
             try
-            {
-                
+            { 
                 // Get key rotation schedule
-                
                 KeyRotationSchedule result = apiInstance.GetRecordingRecordingkeysRotationschedule();
                 Debug.WriteLine(result);
             }
@@ -1598,7 +1298,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -1622,7 +1322,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1634,25 +1334,16 @@ namespace Example
     public class GetRecordingSettingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var createDefault = true;  // bool? | If no settings are found, a new one is created with default values (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the Recording Settings for the Organization
-                
                 RecordingSettings result = apiInstance.GetRecordingSettings(createDefault);
                 Debug.WriteLine(result);
             }
@@ -1663,7 +1354,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1691,7 +1382,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1703,30 +1394,17 @@ namespace Example
     public class GetRecordingsScreensessionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieves a paged listing of screen recording sessions
-                
                 ScreenRecordingSessionListing result = apiInstance.GetRecordingsScreensessions(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -1737,7 +1415,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1767,7 +1445,7 @@ Requires ANY permissions:
 * recording:retentionPolicy:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1779,30 +1457,17 @@ namespace Example
     public class PatchRecordingMediaretentionpolicyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var policyId = policyId_example;  // string | Policy ID
-            
-            
-            
-            
-            
             var body = new Policy(); // Policy | Policy
-            
-            
 
             try
-            {
-                
+            { 
                 // Patch a media retention policy
-                
                 Policy result = apiInstance.PatchRecordingMediaretentionpolicy(policyId, body);
                 Debug.WriteLine(result);
             }
@@ -1813,7 +1478,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1842,7 +1507,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1854,30 +1519,17 @@ namespace Example
     public class PatchRecordingsScreensessionExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var recordingSessionId = recordingSessionId_example;  // string | Screen recording session ID
-            
-            
-            
-            
-            
             var body = new ScreenRecordingSessionRequest(); // ScreenRecordingSessionRequest |  (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a screen recording session
-                
                 apiInstance.PatchRecordingsScreensession(recordingSessionId, body);
             }
             catch (Exception e)
@@ -1887,7 +1539,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1916,7 +1568,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1928,35 +1580,18 @@ namespace Example
     public class PostConversationRecordingAnnotationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var conversationId = conversationId_example;  // string | Conversation ID
-            
-            
-            
-            
             var recordingId = recordingId_example;  // string | Recording ID
-            
-            
-            
-            
-            
             var body = new Annotation(); // Annotation | annotation
-            
-            
 
             try
-            {
-                
+            { 
                 // Create annotation
-                
                 Annotation result = apiInstance.PostConversationRecordingAnnotations(conversationId, recordingId, body);
                 Debug.WriteLine(result);
             }
@@ -1967,7 +1602,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1997,7 +1632,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2009,25 +1644,16 @@ namespace Example
     public class PostRecordingBatchrequestsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
-            
             var body = new BatchDownloadJobSubmission(); // BatchDownloadJobSubmission | Job submission criteria
-            
-            
 
             try
-            {
-                
+            { 
                 // Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
-                
                 BatchDownloadJobSubmissionResult result = apiInstance.PostRecordingBatchrequests(body);
                 Debug.WriteLine(result);
             }
@@ -2038,7 +1664,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2067,7 +1693,7 @@ Requires ANY permissions:
 * recording:encryptionKey:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2079,25 +1705,16 @@ namespace Example
     public class PostRecordingLocalkeysExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
-            
             var body = new LocalEncryptionKeyRequest(); // LocalEncryptionKeyRequest | Local Encryption body
-            
-            
 
             try
-            {
-                
+            { 
                 // create a local recording key
-                
                 EncryptionKey result = apiInstance.PostRecordingLocalkeys(body);
                 Debug.WriteLine(result);
             }
@@ -2108,7 +1725,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2137,7 +1754,7 @@ Requires ANY permissions:
 * recording:encryptionKey:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2149,25 +1766,16 @@ namespace Example
     public class PostRecordingLocalkeysSettingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
-            
             var body = new LocalEncryptionConfiguration(); // LocalEncryptionConfiguration | Local Encryption Configuration
-            
-            
 
             try
-            {
-                
+            { 
                 // create settings for local key creation
-                
                 LocalEncryptionConfiguration result = apiInstance.PostRecordingLocalkeysSettings(body);
                 Debug.WriteLine(result);
             }
@@ -2178,7 +1786,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2207,7 +1815,7 @@ Requires ANY permissions:
 * recording:retentionPolicy:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2219,25 +1827,16 @@ namespace Example
     public class PostRecordingMediaretentionpoliciesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
-            
             var body = new PolicyCreate(); // PolicyCreate | Policy
-            
-            
 
             try
-            {
-                
+            { 
                 // Create media retention policy
-                
                 Policy result = apiInstance.PostRecordingMediaretentionpolicies(body);
                 Debug.WriteLine(result);
             }
@@ -2248,7 +1847,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2277,7 +1876,7 @@ Requires ANY permissions:
 * recording:encryptionKey:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2289,20 +1888,15 @@ namespace Example
     public class PostRecordingRecordingkeysExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
 
             try
-            {
-                
+            { 
                 // Create encryption key
-                
                 EncryptionKey result = apiInstance.PostRecordingRecordingkeys();
                 Debug.WriteLine(result);
             }
@@ -2313,7 +1907,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -2337,7 +1931,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2349,35 +1943,18 @@ namespace Example
     public class PutConversationRecordingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var conversationId = conversationId_example;  // string | Conversation ID
-            
-            
-            
-            
             var recordingId = recordingId_example;  // string | Recording ID
-            
-            
-            
-            
-            
             var body = new Recording(); // Recording | recording
-            
-            
 
             try
-            {
-                
+            { 
                 // Updates the retention records on a recording.
-                
                 Recording result = apiInstance.PutConversationRecording(conversationId, recordingId, body);
                 Debug.WriteLine(result);
             }
@@ -2388,7 +1965,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2418,7 +1995,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2430,40 +2007,19 @@ namespace Example
     public class PutConversationRecordingAnnotationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var conversationId = conversationId_example;  // string | Conversation ID
-            
-            
-            
-            
             var recordingId = recordingId_example;  // string | Recording ID
-            
-            
-            
-            
             var annotationId = annotationId_example;  // string | Annotation ID
-            
-            
-            
-            
-            
             var body = new Annotation(); // Annotation | annotation
-            
-            
 
             try
-            {
-                
+            { 
                 // Update annotation
-                
                 Annotation result = apiInstance.PutConversationRecordingAnnotation(conversationId, recordingId, annotationId, body);
                 Debug.WriteLine(result);
             }
@@ -2474,7 +2030,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2506,7 +2062,7 @@ Requires ANY permissions:
 * recording:orphan:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2518,30 +2074,17 @@ namespace Example
     public class PutOrphanrecordingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var orphanId = orphanId_example;  // string | Orphan ID
-            
-            
-            
-            
-            
             var body = new OrphanUpdateRequest(); // OrphanUpdateRequest |  (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Updates an orphan recording to a regular recording with retention values
-                
                 Recording result = apiInstance.PutOrphanrecording(orphanId, body);
                 Debug.WriteLine(result);
             }
@@ -2552,7 +2095,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2582,7 +2125,7 @@ Requires ANY permissions:
 * recording:encryptionKey:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2594,30 +2137,17 @@ namespace Example
     public class PutRecordingLocalkeysSettingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var settingsId = settingsId_example;  // string | Settings Id
-            
-            
-            
-            
-            
             var body = new LocalEncryptionConfiguration(); // LocalEncryptionConfiguration | Local Encryption metadata
-            
-            
 
             try
-            {
-                
+            { 
                 // Update the local encryption settings
-                
                 LocalEncryptionConfiguration result = apiInstance.PutRecordingLocalkeysSetting(settingsId, body);
                 Debug.WriteLine(result);
             }
@@ -2628,7 +2158,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2658,7 +2188,7 @@ Requires ANY permissions:
 * recording:retentionPolicy:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2670,30 +2200,17 @@ namespace Example
     public class PutRecordingMediaretentionpolicyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
             var policyId = policyId_example;  // string | Policy ID
-            
-            
-            
-            
-            
             var body = new Policy(); // Policy | Policy
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a media retention policy
-                
                 Policy result = apiInstance.PutRecordingMediaretentionpolicy(policyId, body);
                 Debug.WriteLine(result);
             }
@@ -2704,7 +2221,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2734,7 +2251,7 @@ Requires ANY permissions:
 * recording:encryptionKey:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2746,25 +2263,16 @@ namespace Example
     public class PutRecordingRecordingkeysRotationscheduleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
-            
             var body = new KeyRotationSchedule(); // KeyRotationSchedule | KeyRotationSchedule
-            
-            
 
             try
-            {
-                
+            { 
                 // Update key rotation schedule
-                
                 KeyRotationSchedule result = apiInstance.PutRecordingRecordingkeysRotationschedule(body);
                 Debug.WriteLine(result);
             }
@@ -2775,7 +2283,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2803,7 +2311,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2815,25 +2323,16 @@ namespace Example
     public class PutRecordingSettingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RecordingApi();
-            
-            
-            
             var body = new RecordingSettings(); // RecordingSettings | Recording settings
-            
-            
 
             try
-            {
-                
+            { 
                 // Update the Recording Settings for the Organization
-                
                 RecordingSettings result = apiInstance.PutRecordingSettings(body);
                 Debug.WriteLine(result);
             }
@@ -2844,7 +2343,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

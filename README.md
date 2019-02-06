@@ -8,9 +8,9 @@ Documentation can be found at [https://developer.mypurecloud.com/api/rest/client
 
 ## Install Using nuget
 
-~~~ csharp
+```{"language":"csharp"}
 install-package PureCloudPlatform.Client.V2
-~~~
+```
 
 Package info can be found at [https://www.nuget.org/packages/PureCloudPlatform.Client.V2/](https://www.nuget.org/packages/PureCloudPlatform.Client.V2/)
 
@@ -60,21 +60,21 @@ In addition to the process in the tutorial above, swap out the POST to "https://
 
 Use the following namespaces:
 
-~~~ csharp
+```{"language":"csharp"}
 using PureCloudPlatform.Client.V2.Api;
 using PureCloudPlatform.Client.V2.Client;
 using PureCloudPlatform.Client.V2.Extensions;
-~~~
+```
 
 Then call the _PostToken_ extension method of _ApiClient_, including the redirect URI and auth code:
 
-~~~ csharp
+```{"language":"csharp"}
 var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
   "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
   "http://redirecturi.com/",
   "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
-~~~
+```
 
 #### Client Credentials Grant
 
@@ -86,19 +86,19 @@ For headless and non-user applications, the [Client Credentials Grant](http://de
 
 First, use the following namespaces:
 
-~~~ csharp
+```{"language":"csharp"}
 using PureCloudPlatform.Client.V2.Api;
 using PureCloudPlatform.Client.V2.Client;
 using PureCloudPlatform.Client.V2.Extensions;
-~~~
+```
 
 Then call the _PostToken_ extension method of _ApiClient_, leaving the redirect URI and auth code blank:
 
-~~~ csharp
+```{"language":"csharp"}
 var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
   "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo");
 Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
-~~~
+```
 
 ### Making Requests
 
@@ -106,17 +106,17 @@ Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
 
 If connecting to a PureCloud environment other than mypurecloud.com (e.g. mypurecloud.ie), set the new base path before constructing any API classes. The new base path should be the base path to the Platform API for your environment.
 
-~~~ csharp
+```{"language":"csharp"}
 Configuration.Default.ApiClient.RestClient.BaseUrl = new Uri("https://api.mypurecloud.ie");
-~~~
+```
 
 #### Setting the Access Token
 
 Once an access token has been obtained from one of the OAuth methods, it must be set in the SDK's configuration.
 
-~~~ csharp
+```{"language":"csharp"}
 PureCloudPlatform.Client.V2.Client.Configuration.Default.AccessToken = "BL4Cb3EQIQFlqIItaj-zf5eIhAiP96zk3333QImd24P99ojbFHtpgUTJdRIkuUYfXMy0afEnZcWnEQ";
-~~~
+```
 
 #### Invoking the API
 
@@ -127,14 +127,14 @@ There are two steps to making requests:
 
 Example of getting the authenticated user's information:
 
-~~~ csharp
+```{"language":"csharp"}
 // Instantiate instance of the Users API
 var usersApi = new UsersApi();
 
 // Get the logged in user
 var me = usersApi.GetMe();
 Console.WriteLine($"Hello, {me.DisplayName}");
-~~~
+```
 
 ## NotificationHandler Helper Class
 
@@ -148,13 +148,13 @@ The helper uses [WebSocketSharp](https://www.nuget.org/packages/WebSocketSharp)'
 
 Create a new instance:
 
-~~~ csharp
+```{"language":"csharp"}
 var handler = new NotificationHandler();
-~~~
+```
 
 Add a subscription:
 
-~~~ csharp
+```{"language":"csharp"}
 // Single
 handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(UserPresenceNotification));
 
@@ -163,17 +163,17 @@ var subscriptions = new List<Tuple<string, Type>>();
 subscriptions.Add(new Tuple($"v2.users.{_me.Id}.presence", typeof(UserPresenceNotification)));
 subscriptions.Add(new Tuple($"v2.users.{_me.Id}.routingStatus", typeof(UserRoutingStatusNotification)));
 handler.AddSubscriptions(subscriptions);
-~~~
+```
 
 Remove a subscription:
 
-~~~ csharp
+```{"language":"csharp"}
 handler.RemoveSubscription($"v2.users.{_me.Id}.conversations");
-~~~
+```
 
 Handle incoming notification:
 
-~~~ csharp
+```{"language":"csharp"}
 handler.NotificationReceived += (data) =>
 {
     Console.WriteLine(JsonConvert.SerializeObject(data, Formatting.Indented));
@@ -184,11 +184,11 @@ handler.NotificationReceived += (data) =>
         Console.WriteLine($"New presence: {presence.EventBody.PresenceDefinition.SystemPresence}");
     }
 };
-~~~
+```
 
 Full example:
 
-~~~ csharp
+```{"language":"csharp"}
 var handler = new NotificationHandler();
 handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(UserPresenceNotification));
 handler.AddSubscription($"v2.users.{_me.Id}.conversations", typeof(ConversationNotification));
@@ -216,7 +216,7 @@ handler.RemoveSubscription($"v2.users.{_me.Id}.conversations");
 
 Console.WriteLine("Conversations subscription removed, awaiting messages...");
 Console.ReadKey(true);
-~~~
+```
 
 ### Notification Topics and Classes for Deserialization
 

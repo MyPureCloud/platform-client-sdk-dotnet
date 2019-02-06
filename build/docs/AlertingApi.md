@@ -35,7 +35,7 @@ Requires ANY permissions:
 * alerting:alert:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -47,25 +47,16 @@ namespace Example
     public class DeleteAlertingInteractionstatsAlertExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AlertingApi();
-            
-            
             var alertId = alertId_example;  // string | Alert ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete an interaction stats alert
-                
                 apiInstance.DeleteAlertingInteractionstatsAlert(alertId);
             }
             catch (Exception e)
@@ -75,7 +66,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -104,7 +95,7 @@ Requires ANY permissions:
 * alerting:rule:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -116,25 +107,16 @@ namespace Example
     public class DeleteAlertingInteractionstatsRuleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AlertingApi();
-            
-            
             var ruleId = ruleId_example;  // string | Rule ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete an interaction stats rule.
-                
                 apiInstance.DeleteAlertingInteractionstatsRule(ruleId);
             }
             catch (Exception e)
@@ -144,7 +126,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -172,7 +154,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -184,20 +166,15 @@ namespace Example
     public class GetAlertingAlertsActiveExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AlertingApi();
-            
 
             try
-            {
-                
+            { 
                 // Gets active alert count for a user.
-                
                 ActiveAlertCount result = apiInstance.GetAlertingAlertsActive();
                 Debug.WriteLine(result);
             }
@@ -208,7 +185,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -233,7 +210,7 @@ Requires ANY permissions:
 * alerting:alert:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -245,30 +222,17 @@ namespace Example
     public class GetAlertingInteractionstatsAlertExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AlertingApi();
-            
-            
             var alertId = alertId_example;  // string | Alert ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get an interaction stats alert
-                
                 InteractionStatsAlert result = apiInstance.GetAlertingInteractionstatsAlert(alertId, expand);
                 Debug.WriteLine(result);
             }
@@ -279,7 +243,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -309,7 +273,7 @@ Requires ANY permissions:
 * alerting:alert:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -321,25 +285,16 @@ namespace Example
     public class GetAlertingInteractionstatsAlertsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AlertingApi();
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get interaction stats alert list.
-                
                 InteractionStatsAlertContainer result = apiInstance.GetAlertingInteractionstatsAlerts(expand);
                 Debug.WriteLine(result);
             }
@@ -350,7 +305,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -378,7 +333,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -390,20 +345,15 @@ namespace Example
     public class GetAlertingInteractionstatsAlertsUnreadExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AlertingApi();
-            
 
             try
-            {
-                
+            { 
                 // Gets user unread count of interaction stats alerts.
-                
                 UnreadMetric result = apiInstance.GetAlertingInteractionstatsAlertsUnread();
                 Debug.WriteLine(result);
             }
@@ -414,7 +364,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -439,7 +389,7 @@ Requires ANY permissions:
 * alerting:rule:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -451,30 +401,17 @@ namespace Example
     public class GetAlertingInteractionstatsRuleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AlertingApi();
-            
-            
             var ruleId = ruleId_example;  // string | Rule ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get an interaction stats rule.
-                
                 InteractionStatsRule result = apiInstance.GetAlertingInteractionstatsRule(ruleId, expand);
                 Debug.WriteLine(result);
             }
@@ -485,7 +422,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -515,7 +452,7 @@ Requires ANY permissions:
 * alerting:rule:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -527,25 +464,16 @@ namespace Example
     public class GetAlertingInteractionstatsRulesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AlertingApi();
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get an interaction stats rule list.
-                
                 InteractionStatsRuleContainer result = apiInstance.GetAlertingInteractionstatsRules(expand);
                 Debug.WriteLine(result);
             }
@@ -556,7 +484,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -585,7 +513,7 @@ Requires ANY permissions:
 * alerting:rule:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -597,30 +525,17 @@ namespace Example
     public class PostAlertingInteractionstatsRulesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AlertingApi();
-            
-            
-            
             var body = new InteractionStatsRule(); // InteractionStatsRule | AlertingRule
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create an interaction stats rule.
-                
                 InteractionStatsRule result = apiInstance.PostAlertingInteractionstatsRules(body, expand);
                 Debug.WriteLine(result);
             }
@@ -631,7 +546,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -661,7 +576,7 @@ Requires ANY permissions:
 * alerting:alert:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -673,35 +588,18 @@ namespace Example
     public class PutAlertingInteractionstatsAlertExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AlertingApi();
-            
-            
             var alertId = alertId_example;  // string | Alert ID
-            
-            
-            
-            
-            
             var body = new UnreadStatus(); // UnreadStatus | InteractionStatsAlert
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an interaction stats alert read status
-                
                 UnreadStatus result = apiInstance.PutAlertingInteractionstatsAlert(alertId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -712,7 +610,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -743,7 +641,7 @@ Requires ANY permissions:
 * alerting:rule:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -755,35 +653,18 @@ namespace Example
     public class PutAlertingInteractionstatsRuleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AlertingApi();
-            
-            
             var ruleId = ruleId_example;  // string | Rule ID
-            
-            
-            
-            
-            
             var body = new InteractionStatsRule(); // InteractionStatsRule | AlertingRule
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an interaction stats rule
-                
                 InteractionStatsRule result = apiInstance.PutAlertingInteractionstatsRule(ruleId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -794,7 +675,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

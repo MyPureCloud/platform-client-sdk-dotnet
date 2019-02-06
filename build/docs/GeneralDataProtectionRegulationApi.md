@@ -28,7 +28,7 @@ Requires ANY permissions:
 * gdpr:request:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -40,25 +40,16 @@ namespace Example
     public class GetGdprRequestExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GeneralDataProtectionRegulationApi();
-            
-            
             var requestId = requestId_example;  // string | Request id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get an existing GDPR request
-                
                 GDPRRequest result = apiInstance.GetGdprRequest(requestId);
                 Debug.WriteLine(result);
             }
@@ -69,7 +60,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -98,7 +89,7 @@ Requires ANY permissions:
 * gdpr:request:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -110,30 +101,17 @@ namespace Example
     public class GetGdprRequestsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GeneralDataProtectionRegulationApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get all GDPR requests
-                
                 GDPRRequestEntityListing result = apiInstance.GetGdprRequests(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -144,7 +122,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -174,7 +152,7 @@ Requires ANY permissions:
 * gdpr:subject:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -186,30 +164,17 @@ namespace Example
     public class GetGdprSubjectsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GeneralDataProtectionRegulationApi();
-            
-            
             var searchType = searchType_example;  // string | Search Type
-            
-            
-            
-            
             var searchValue = searchValue_example;  // string | Search Value
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get GDPR subjects
-                
                 GDPRSubjectEntityListing result = apiInstance.GetGdprSubjects(searchType, searchValue);
                 Debug.WriteLine(result);
             }
@@ -220,7 +185,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -250,7 +215,7 @@ Requires ANY permissions:
 * gdpr:request:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -262,30 +227,17 @@ namespace Example
     public class PostGdprRequestsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GeneralDataProtectionRegulationApi();
-            
-            
-            
             var body = new GDPRRequest(); // GDPRRequest | GDPR request
-            
-            
-            
             var deleteConfirmed = true;  // bool? | Confirm delete (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Submit a new GDPR request
-                
                 GDPRRequest result = apiInstance.PostGdprRequests(body, deleteConfirmed);
                 Debug.WriteLine(result);
             }
@@ -296,7 +248,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

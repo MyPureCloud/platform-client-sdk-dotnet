@@ -29,7 +29,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -41,25 +41,16 @@ namespace Example
     public class GetFieldconfigExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationApi();
-            
-            
             var type = type_example;  // string | Field type
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Fetch field config for an entity type
-                
                 FieldConfig result = apiInstance.GetFieldconfig(type);
                 Debug.WriteLine(result);
             }
@@ -70,7 +61,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -98,7 +89,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -110,20 +101,15 @@ namespace Example
     public class GetOrganizationsMeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationApi();
-            
 
             try
-            {
-                
+            { 
                 // Get organization.
-                
                 Organization result = apiInstance.GetOrganizationsMe();
                 Debug.WriteLine(result);
             }
@@ -134,7 +120,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -158,7 +144,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -170,20 +156,15 @@ namespace Example
     public class GetOrganizationsWhitelistExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationApi();
-            
 
             try
-            {
-                
+            { 
                 // Get organization whitelist settings
-                
                 OrgWhitelistSettings result = apiInstance.GetOrganizationsWhitelist();
                 Debug.WriteLine(result);
             }
@@ -194,7 +175,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -219,7 +200,7 @@ Requires ANY permissions:
 * admin
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -231,30 +212,17 @@ namespace Example
     public class PatchOrganizationsFeatureExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationApi();
-            
-            
             var featureName = featureName_example;  // string | Organization feature
-            
-            
-            
-            
-            
             var enabled = new FeatureState(); // FeatureState | New state of feature
-            
-            
 
             try
-            {
-                
+            { 
                 // Update organization
-                
                 OrganizationFeatures result = apiInstance.PatchOrganizationsFeature(featureName, enabled);
                 Debug.WriteLine(result);
             }
@@ -265,7 +233,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -295,7 +263,7 @@ Requires ANY permissions:
 * admin
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -307,25 +275,16 @@ namespace Example
     public class PutOrganizationsMeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationApi();
-            
-            
-            
             var body = new Organization(); // Organization | Organization (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update organization.
-                
                 Organization result = apiInstance.PutOrganizationsMe(body);
                 Debug.WriteLine(result);
             }
@@ -336,7 +295,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -365,7 +324,7 @@ Requires ANY permissions:
 * admin
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -377,25 +336,16 @@ namespace Example
     public class PutOrganizationsWhitelistExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationApi();
-            
-            
-            
             var body = new OrgWhitelistSettings(); // OrgWhitelistSettings | Whitelist settings
-            
-            
 
             try
-            {
-                
+            { 
                 // Update organization whitelist settings
-                
                 OrgWhitelistSettings result = apiInstance.PutOrganizationsWhitelist(body);
                 Debug.WriteLine(result);
             }
@@ -406,7 +356,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

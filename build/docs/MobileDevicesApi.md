@@ -28,7 +28,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -40,25 +40,16 @@ namespace Example
     public class DeleteMobiledeviceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MobileDevicesApi();
-            
-            
             var deviceId = deviceId_example;  // string | Device ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete device
-                
                 apiInstance.DeleteMobiledevice(deviceId);
             }
             catch (Exception e)
@@ -68,7 +59,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -96,7 +87,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -108,25 +99,16 @@ namespace Example
     public class GetMobiledeviceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MobileDevicesApi();
-            
-            
             var deviceId = deviceId_example;  // string | Device ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get device
-                
                 UserDevice result = apiInstance.GetMobiledevice(deviceId);
                 Debug.WriteLine(result);
             }
@@ -137,7 +119,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -165,7 +147,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -177,35 +159,18 @@ namespace Example
     public class GetMobiledevicesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MobileDevicesApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ascending)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of all devices.
-                
                 DirectoryUserDevicesListing result = apiInstance.GetMobiledevices(pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -216,7 +181,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -246,7 +211,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -258,25 +223,16 @@ namespace Example
     public class PostMobiledevicesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MobileDevicesApi();
-            
-            
-            
             var body = new UserDevice(); // UserDevice | Device
-            
-            
 
             try
-            {
-                
+            { 
                 // Create User device
-                
                 UserDevice result = apiInstance.PostMobiledevices(body);
                 Debug.WriteLine(result);
             }
@@ -287,7 +243,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -315,7 +271,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -327,30 +283,17 @@ namespace Example
     public class PutMobiledeviceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MobileDevicesApi();
-            
-            
             var deviceId = deviceId_example;  // string | Device ID
-            
-            
-            
-            
-            
             var body = new UserDevice(); // UserDevice | Device (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update device
-                
                 UserDevice result = apiInstance.PutMobiledevice(deviceId, body);
                 Debug.WriteLine(result);
             }
@@ -361,7 +304,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

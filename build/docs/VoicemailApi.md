@@ -47,7 +47,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -59,25 +59,16 @@ namespace Example
     public class DeleteVoicemailMessageExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var messageId = messageId_example;  // string | Message ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a voicemail message.
-                
                 apiInstance.DeleteVoicemailMessage(messageId);
             }
             catch (Exception e)
@@ -87,7 +78,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -115,7 +106,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -127,20 +118,15 @@ namespace Example
     public class DeleteVoicemailMessagesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
 
             try
-            {
-                
+            { 
                 // Delete all voicemail messages
-                
                 apiInstance.DeleteVoicemailMessages();
             }
             catch (Exception e)
@@ -150,7 +136,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -174,7 +160,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -186,25 +172,16 @@ namespace Example
     public class GetVoicemailGroupMailboxExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var groupId = groupId_example;  // string | groupId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the group's mailbox information
-                
                 VoicemailMailboxInfo result = apiInstance.GetVoicemailGroupMailbox(groupId);
                 Debug.WriteLine(result);
             }
@@ -215,7 +192,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -243,7 +220,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -255,35 +232,18 @@ namespace Example
     public class GetVoicemailGroupMessagesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // List voicemail messages
-                
                 VoicemailMessageEntityListing result = apiInstance.GetVoicemailGroupMessages(groupId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -294,7 +254,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -328,7 +288,7 @@ Requires ANY permissions:
 * group_creation
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -340,25 +300,16 @@ namespace Example
     public class GetVoicemailGroupPolicyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a group's voicemail policy
-                
                 VoicemailGroupPolicy result = apiInstance.GetVoicemailGroupPolicy(groupId);
                 Debug.WriteLine(result);
             }
@@ -369,7 +320,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -397,7 +348,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -409,20 +360,15 @@ namespace Example
     public class GetVoicemailMailboxExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
 
             try
-            {
-                
+            { 
                 // Get the current user's mailbox information
-                
                 VoicemailMailboxInfo result = apiInstance.GetVoicemailMailbox();
                 Debug.WriteLine(result);
             }
@@ -433,7 +379,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -457,7 +403,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -469,20 +415,15 @@ namespace Example
     public class GetVoicemailMeMailboxExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
 
             try
-            {
-                
+            { 
                 // Get the current user's mailbox information
-                
                 VoicemailMailboxInfo result = apiInstance.GetVoicemailMeMailbox();
                 Debug.WriteLine(result);
             }
@@ -493,7 +434,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -517,7 +458,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -529,30 +470,17 @@ namespace Example
     public class GetVoicemailMeMessagesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // List voicemail messages
-                
                 VoicemailMessageEntityListing result = apiInstance.GetVoicemailMeMessages(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -563,7 +491,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -592,7 +520,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -604,20 +532,15 @@ namespace Example
     public class GetVoicemailMePolicyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
 
             try
-            {
-                
+            { 
                 // Get the current user's voicemail policy
-                
                 VoicemailUserPolicy result = apiInstance.GetVoicemailMePolicy();
                 Debug.WriteLine(result);
             }
@@ -628,7 +551,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -652,7 +575,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -664,30 +587,17 @@ namespace Example
     public class GetVoicemailMessageExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var messageId = messageId_example;  // string | Message ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | If the caller is a known user, which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a voicemail message
-                
                 VoicemailMessage result = apiInstance.GetVoicemailMessage(messageId, expand);
                 Debug.WriteLine(result);
             }
@@ -698,7 +608,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -727,7 +637,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -739,30 +649,17 @@ namespace Example
     public class GetVoicemailMessageMediaExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var messageId = messageId_example;  // string | Message ID
-            
-            
-            
-            
             var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get media playback URI for this voicemail message
-                
                 VoicemailMediaInfo result = apiInstance.GetVoicemailMessageMedia(messageId, formatId);
                 Debug.WriteLine(result);
             }
@@ -773,7 +670,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -802,7 +699,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -814,30 +711,17 @@ namespace Example
     public class GetVoicemailMessagesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var ids = ids_example;  // string | An optional comma separated list of VoicemailMessage ids (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | If the caller is a known user, which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // List voicemail messages
-                
                 VoicemailMessageEntityListing result = apiInstance.GetVoicemailMessages(ids, expand);
                 Debug.WriteLine(result);
             }
@@ -848,7 +732,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -878,7 +762,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -890,20 +774,15 @@ namespace Example
     public class GetVoicemailPolicyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
 
             try
-            {
-                
+            { 
                 // Get a policy
-                
                 VoicemailOrganizationPolicy result = apiInstance.GetVoicemailPolicy();
                 Debug.WriteLine(result);
             }
@@ -914,7 +793,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -939,7 +818,7 @@ Requires ANY permissions:
 * voicemail:acdVoicemail:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -951,35 +830,18 @@ namespace Example
     public class GetVoicemailQueueMessagesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var queueId = queueId_example;  // string | Queue ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // List voicemail messages
-                
                 VoicemailMessageEntityListing result = apiInstance.GetVoicemailQueueMessages(queueId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -990,7 +852,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1020,7 +882,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1032,30 +894,17 @@ namespace Example
     public class GetVoicemailSearchExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var q64 = q64_example;  // string | q64
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Search voicemails using the q64 value returned from a previous search
-                
                 VoicemailsSearchResponse result = apiInstance.GetVoicemailSearch(q64, expand);
                 Debug.WriteLine(result);
             }
@@ -1066,7 +915,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1095,7 +944,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1107,25 +956,16 @@ namespace Example
     public class GetVoicemailUserpolicyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a user's voicemail policy
-                
                 VoicemailUserPolicy result = apiInstance.GetVoicemailUserpolicy(userId);
                 Debug.WriteLine(result);
             }
@@ -1136,7 +976,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1168,7 +1008,7 @@ Requires ANY permissions:
 * group_creation
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1180,30 +1020,17 @@ namespace Example
     public class PatchVoicemailGroupPolicyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
-            
-            
             var body = new VoicemailGroupPolicy(); // VoicemailGroupPolicy | The group's voicemail policy
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a group's voicemail policy
-                
                 VoicemailGroupPolicy result = apiInstance.PatchVoicemailGroupPolicy(groupId, body);
                 Debug.WriteLine(result);
             }
@@ -1214,7 +1041,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1243,7 +1070,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1255,25 +1082,16 @@ namespace Example
     public class PatchVoicemailMePolicyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
-            
             var body = new VoicemailUserPolicy(); // VoicemailUserPolicy | The user's voicemail policy
-            
-            
 
             try
-            {
-                
+            { 
                 // Update the current user's voicemail policy
-                
                 VoicemailUserPolicy result = apiInstance.PatchVoicemailMePolicy(body);
                 Debug.WriteLine(result);
             }
@@ -1284,7 +1102,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1312,7 +1130,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1324,30 +1142,17 @@ namespace Example
     public class PatchVoicemailMessageExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var messageId = messageId_example;  // string | Message ID
-            
-            
-            
-            
-            
             var body = new VoicemailMessage(); // VoicemailMessage | VoicemailMessage
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a voicemail message
-                
                 VoicemailMessage result = apiInstance.PatchVoicemailMessage(messageId, body);
                 Debug.WriteLine(result);
             }
@@ -1358,7 +1163,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1387,7 +1192,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1399,30 +1204,17 @@ namespace Example
     public class PatchVoicemailUserpolicyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new VoicemailUserPolicy(); // VoicemailUserPolicy | The user's voicemail policy
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a user's voicemail policy
-                
                 VoicemailUserPolicy result = apiInstance.PatchVoicemailUserpolicy(userId, body);
                 Debug.WriteLine(result);
             }
@@ -1433,7 +1225,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1462,7 +1254,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1474,25 +1266,16 @@ namespace Example
     public class PostVoicemailMessagesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
-            
             var body = new CopyVoicemailMessage(); // CopyVoicemailMessage |  (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Copy a voicemail message to a user or group
-                
                 VoicemailMessage result = apiInstance.PostVoicemailMessages(body);
                 Debug.WriteLine(result);
             }
@@ -1503,7 +1286,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1531,7 +1314,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1543,25 +1326,16 @@ namespace Example
     public class PostVoicemailSearchExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
-            
             var body = new VoicemailSearchRequest(); // VoicemailSearchRequest | Search request options
-            
-            
 
             try
-            {
-                
+            { 
                 // Search voicemails
-                
                 VoicemailsSearchResponse result = apiInstance.PostVoicemailSearch(body);
                 Debug.WriteLine(result);
             }
@@ -1572,7 +1346,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1600,7 +1374,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1612,30 +1386,17 @@ namespace Example
     public class PutVoicemailMessageExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
             var messageId = messageId_example;  // string | Message ID
-            
-            
-            
-            
-            
             var body = new VoicemailMessage(); // VoicemailMessage | VoicemailMessage
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a voicemail message
-                
                 VoicemailMessage result = apiInstance.PutVoicemailMessage(messageId, body);
                 Debug.WriteLine(result);
             }
@@ -1646,7 +1407,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1676,7 +1437,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1688,25 +1449,16 @@ namespace Example
     public class PutVoicemailPolicyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VoicemailApi();
-            
-            
-            
             var body = new VoicemailOrganizationPolicy(); // VoicemailOrganizationPolicy | Policy
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a policy
-                
                 VoicemailOrganizationPolicy result = apiInstance.PutVoicemailPolicy(body);
                 Debug.WriteLine(result);
             }
@@ -1717,7 +1469,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

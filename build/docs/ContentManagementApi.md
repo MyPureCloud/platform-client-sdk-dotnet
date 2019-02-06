@@ -61,7 +61,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -73,30 +73,17 @@ namespace Example
     public class DeleteContentmanagementDocumentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var documentId = documentId_example;  // string | Document ID
-            
-            
-            
-            
             var _override = true;  // bool? | Override any lock on the document (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a document.
-                
                 apiInstance.DeleteContentmanagementDocument(documentId, _override);
             }
             catch (Exception e)
@@ -106,7 +93,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -135,7 +122,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -147,25 +134,16 @@ namespace Example
     public class DeleteContentmanagementShareExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var shareId = shareId_example;  // string | Share ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Deletes an existing share.
-                
                 apiInstance.DeleteContentmanagementShare(shareId);
             }
             catch (Exception e)
@@ -175,7 +153,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -203,7 +181,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -215,25 +193,16 @@ namespace Example
     public class DeleteContentmanagementStatusStatusIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var statusId = statusId_example;  // string | Status ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Cancel the command for this status
-                
                 apiInstance.DeleteContentmanagementStatusStatusId(statusId);
             }
             catch (Exception e)
@@ -243,7 +212,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -271,7 +240,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -283,30 +252,17 @@ namespace Example
     public class DeleteContentmanagementWorkspaceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
             var moveChildrenToWorkspaceId = moveChildrenToWorkspaceId_example;  // string | New location for objects in deleted workspace. (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a workspace
-                
                 apiInstance.DeleteContentmanagementWorkspace(workspaceId, moveChildrenToWorkspaceId);
             }
             catch (Exception e)
@@ -316,7 +272,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -345,7 +301,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -357,30 +313,17 @@ namespace Example
     public class DeleteContentmanagementWorkspaceMemberExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
             var memberId = memberId_example;  // string | Member ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a member from a workspace
-                
                 apiInstance.DeleteContentmanagementWorkspaceMember(workspaceId, memberId);
             }
             catch (Exception e)
@@ -390,7 +333,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -419,7 +362,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -431,30 +374,17 @@ namespace Example
     public class DeleteContentmanagementWorkspaceTagvalueExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
             var tagId = tagId_example;  // string | Tag ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete workspace tag
-                
                 apiInstance.DeleteContentmanagementWorkspaceTagvalue(workspaceId, tagId);
             }
             catch (Exception e)
@@ -464,7 +394,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -493,7 +423,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -505,30 +435,17 @@ namespace Example
     public class GetContentmanagementDocumentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var documentId = documentId_example;  // string | Document ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a document.
-                
                 Document result = apiInstance.GetContentmanagementDocument(documentId, expand);
                 Debug.WriteLine(result);
             }
@@ -539,7 +456,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -568,7 +485,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -580,55 +497,22 @@ namespace Example
     public class GetContentmanagementDocumentAuditsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var documentId = documentId_example;  // string | Document ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var transactionFilter = transactionFilter_example;  // string | Transaction filter (optional) 
-            
-            
-            
-            
             var level = level_example;  // string | level (optional)  (default to USER)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of audits for a document.
-                
                 DocumentAuditEntityListing result = apiInstance.GetContentmanagementDocumentAudits(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -639,7 +523,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -673,7 +557,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -685,35 +569,18 @@ namespace Example
     public class GetContentmanagementDocumentContentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var documentId = documentId_example;  // string | Document ID
-            
-            
-            
-            
             var disposition = disposition_example;  // string | Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional) 
-            
-            
-            
-            
             var contentType = contentType_example;  // string | The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Download a document.
-                
                 DownloadResponse result = apiInstance.GetContentmanagementDocumentContent(documentId, disposition, contentType);
                 Debug.WriteLine(result);
             }
@@ -724,7 +591,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -754,7 +621,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -766,55 +633,22 @@ namespace Example
     public class GetContentmanagementDocumentsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | name or dateCreated (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | ascending or descending (optional)  (default to ascending)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of documents.
-                
                 DocumentEntityListing result = apiInstance.GetContentmanagementDocuments(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -825,7 +659,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -859,7 +693,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -871,50 +705,21 @@ namespace Example
     public class GetContentmanagementQueryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var queryPhrase = queryPhrase_example;  // string | Phrase tokens are ANDed together over all searchable fields
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | name or dateCreated (optional)  (default to name)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | ascending or descending (optional)  (default to ascending)
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Query content
-                
                 QueryResults result = apiInstance.GetContentmanagementQuery(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
                 Debug.WriteLine(result);
             }
@@ -925,7 +730,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -958,7 +763,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -970,25 +775,16 @@ namespace Example
     public class GetContentmanagementSecurityprofileExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var securityProfileId = securityProfileId_example;  // string | Security Profile Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a Security Profile
-                
                 SecurityProfile result = apiInstance.GetContentmanagementSecurityprofile(securityProfileId);
                 Debug.WriteLine(result);
             }
@@ -999,7 +795,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1027,7 +823,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1039,20 +835,15 @@ namespace Example
     public class GetContentmanagementSecurityprofilesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
 
             try
-            {
-                
+            { 
                 // Get a List of Security Profiles
-                
                 SecurityProfileEntityListing result = apiInstance.GetContentmanagementSecurityprofiles();
                 Debug.WriteLine(result);
             }
@@ -1063,7 +854,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -1087,7 +878,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1099,30 +890,17 @@ namespace Example
     public class GetContentmanagementShareExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var shareId = shareId_example;  // string | Share ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieve details about an existing share.
-                
                 Share result = apiInstance.GetContentmanagementShare(shareId, expand);
                 Debug.WriteLine(result);
             }
@@ -1133,7 +911,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1162,7 +940,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1174,45 +952,20 @@ namespace Example
     public class GetContentmanagementSharedSharedIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var sharedId = sharedId_example;  // string | Shared ID
-            
-            
-            
-            
             var redirect = true;  // bool? | Turn on or off redirect (optional)  (default to true)
-            
-            
-            
-            
             var disposition = disposition_example;  // string | Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional)  (default to attachment)
-            
-            
-            
-            
             var contentType = contentType_example;  // string | The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav (optional) 
-            
-            
-            
-            
             var expand = expand_example;  // string | Expand some document fields (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get shared documents. Securely download a shared document.
-                
                 SharedResponse result = apiInstance.GetContentmanagementSharedSharedId(sharedId, redirect, disposition, contentType, expand);
                 Debug.WriteLine(result);
             }
@@ -1223,7 +976,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1255,7 +1008,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1267,40 +1020,19 @@ namespace Example
     public class GetContentmanagementSharesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var entityId = entityId_example;  // string | Filters the shares returned to only the entity specified by the value of this parameter. (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets a list of shares.  You must specify at least one filter (e.g. entityId).
-                
                 ShareEntityListing result = apiInstance.GetContentmanagementShares(entityId, expand, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -1311,7 +1043,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1342,7 +1074,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1354,30 +1086,17 @@ namespace Example
     public class GetContentmanagementStatusExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of statuses for pending operations
-                
                 CommandStatusEntityListing result = apiInstance.GetContentmanagementStatus(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -1388,7 +1107,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1417,7 +1136,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1429,25 +1148,16 @@ namespace Example
     public class GetContentmanagementStatusStatusIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var statusId = statusId_example;  // string | Status ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a status.
-                
                 CommandStatus result = apiInstance.GetContentmanagementStatusStatusId(statusId);
                 Debug.WriteLine(result);
             }
@@ -1458,7 +1168,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1486,7 +1196,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1498,20 +1208,15 @@ namespace Example
     public class GetContentmanagementUsageExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
 
             try
-            {
-                
+            { 
                 // Get usage details.
-                
                 Usage result = apiInstance.GetContentmanagementUsage();
                 Debug.WriteLine(result);
             }
@@ -1522,7 +1227,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -1546,7 +1251,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1558,30 +1263,17 @@ namespace Example
     public class GetContentmanagementWorkspaceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a workspace.
-                
                 Workspace result = apiInstance.GetContentmanagementWorkspace(workspaceId, expand);
                 Debug.WriteLine(result);
             }
@@ -1592,7 +1284,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1621,7 +1313,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1633,50 +1325,21 @@ namespace Example
     public class GetContentmanagementWorkspaceDocumentsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | name or dateCreated (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | ascending or descending (optional)  (default to ascending)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of documents.
-                
                 DocumentEntityListing result = apiInstance.GetContentmanagementWorkspaceDocuments(workspaceId, expand, pageSize, pageNumber, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1687,7 +1350,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1720,7 +1383,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1732,35 +1395,18 @@ namespace Example
     public class GetContentmanagementWorkspaceMemberExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
             var memberId = memberId_example;  // string | Member ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a workspace member
-                
                 WorkspaceMember result = apiInstance.GetContentmanagementWorkspaceMember(workspaceId, memberId, expand);
                 Debug.WriteLine(result);
             }
@@ -1771,7 +1417,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1801,7 +1447,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1813,40 +1459,19 @@ namespace Example
     public class GetContentmanagementWorkspaceMembersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list workspace members
-                
                 WorkspaceMemberEntityListing result = apiInstance.GetContentmanagementWorkspaceMembers(workspaceId, pageSize, pageNumber, expand);
                 Debug.WriteLine(result);
             }
@@ -1857,7 +1482,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1888,7 +1513,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1900,35 +1525,18 @@ namespace Example
     public class GetContentmanagementWorkspaceTagvalueExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
             var tagId = tagId_example;  // string | Tag ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a workspace tag
-                
                 TagValue result = apiInstance.GetContentmanagementWorkspaceTagvalue(workspaceId, tagId, expand);
                 Debug.WriteLine(result);
             }
@@ -1939,7 +1547,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1969,7 +1577,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1981,45 +1589,20 @@ namespace Example
     public class GetContentmanagementWorkspaceTagvaluesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
             var value = value_example;  // string | filter the list of tags returned (optional) 
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of workspace tags
-                
                 TagValueEntityListing result = apiInstance.GetContentmanagementWorkspaceTagvalues(workspaceId, value, pageSize, pageNumber, expand);
                 Debug.WriteLine(result);
             }
@@ -2030,7 +1613,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2062,7 +1645,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2074,40 +1657,19 @@ namespace Example
     public class GetContentmanagementWorkspacesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
-            
             var access = new List<string>(); // List<string> | Requested access level. (optional) 
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of workspaces.
-                
                 WorkspaceEntityListing result = apiInstance.GetContentmanagementWorkspaces(pageSize, pageNumber, access, expand);
                 Debug.WriteLine(result);
             }
@@ -2118,7 +1680,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2149,7 +1711,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2161,25 +1723,16 @@ namespace Example
     public class PostContentmanagementAuditqueryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
-            
             var body = new ContentQueryRequest(); // ContentQueryRequest | Allows for a filtered query returning facet information
-            
-            
 
             try
-            {
-                
+            { 
                 // Query audits
-                
                 QueryResults result = apiInstance.PostContentmanagementAuditquery(body);
                 Debug.WriteLine(result);
             }
@@ -2190,7 +1743,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2218,7 +1771,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2230,40 +1783,19 @@ namespace Example
     public class PostContentmanagementDocumentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var documentId = documentId_example;  // string | Document ID
-            
-            
-            
-            
-            
             var body = new DocumentUpdate(); // DocumentUpdate | Document
-            
-            
-            
             var expand = expand_example;  // string | Expand some document fields (optional) 
-            
-            
-            
-            
             var _override = true;  // bool? | Override any lock on the document (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a document.
-                
                 Document result = apiInstance.PostContentmanagementDocument(documentId, body, expand, _override);
                 Debug.WriteLine(result);
             }
@@ -2274,7 +1806,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2305,7 +1837,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2317,35 +1849,18 @@ namespace Example
     public class PostContentmanagementDocumentContentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var documentId = documentId_example;  // string | Document ID
-            
-            
-            
-            
-            
             var body = new ReplaceRequest(); // ReplaceRequest | Replace Request
-            
-            
-            
             var _override = true;  // bool? | Override any lock on the document (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Replace the contents of a document.
-                
                 ReplaceResponse result = apiInstance.PostContentmanagementDocumentContent(documentId, body, _override);
                 Debug.WriteLine(result);
             }
@@ -2356,7 +1871,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2386,7 +1901,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2398,40 +1913,19 @@ namespace Example
     public class PostContentmanagementDocumentsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
-            
             var body = new DocumentUpload(); // DocumentUpload | Document
-            
-            
-            
             var copySource = copySource_example;  // string | Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional) 
-            
-            
-            
-            
             var moveSource = moveSource_example;  // string | Move a document to a new workspace. Provide a document ID as the move source. (optional) 
-            
-            
-            
-            
             var _override = true;  // bool? | Override any lock on the source document (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Add a document.
-                
                 Document result = apiInstance.PostContentmanagementDocuments(body, copySource, moveSource, _override);
                 Debug.WriteLine(result);
             }
@@ -2442,7 +1936,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2473,7 +1967,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2485,30 +1979,17 @@ namespace Example
     public class PostContentmanagementQueryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
-            
             var body = new QueryRequest(); // QueryRequest | Allows for a filtered query returning facet information
-            
-            
-            
             var expand = expand_example;  // string | Expand some document fields (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query content
-                
                 QueryResults result = apiInstance.PostContentmanagementQuery(body, expand);
                 Debug.WriteLine(result);
             }
@@ -2519,7 +2000,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2548,7 +2029,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2560,25 +2041,16 @@ namespace Example
     public class PostContentmanagementSharesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
-            
             var body = new CreateShareRequest(); // CreateShareRequest | CreateShareRequest - entity id and type and a single member or list of members are required
-            
-            
 
             try
-            {
-                
+            { 
                 // Creates a new share or updates an existing share if the entity has already been shared
-                
                 CreateShareResponse result = apiInstance.PostContentmanagementShares(body);
                 Debug.WriteLine(result);
             }
@@ -2589,7 +2061,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2617,7 +2089,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2629,30 +2101,17 @@ namespace Example
     public class PostContentmanagementWorkspaceTagvaluesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
-            
             var body = new TagValue(); // TagValue | tag
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a workspace tag
-                
                 TagValue result = apiInstance.PostContentmanagementWorkspaceTagvalues(workspaceId, body);
                 Debug.WriteLine(result);
             }
@@ -2663,7 +2122,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2692,7 +2151,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2704,35 +2163,18 @@ namespace Example
     public class PostContentmanagementWorkspaceTagvaluesQueryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
-            
             var body = new TagQueryRequest(); // TagQueryRequest | query
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Perform a prefix query on tags in the workspace
-                
                 TagValueEntityListing result = apiInstance.PostContentmanagementWorkspaceTagvaluesQuery(workspaceId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -2743,7 +2185,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2773,7 +2215,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2785,25 +2227,16 @@ namespace Example
     public class PostContentmanagementWorkspacesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
-            
             var body = new WorkspaceCreate(); // WorkspaceCreate | Workspace
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a group workspace
-                
                 Workspace result = apiInstance.PostContentmanagementWorkspaces(body);
                 Debug.WriteLine(result);
             }
@@ -2814,7 +2247,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2842,7 +2275,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2854,30 +2287,17 @@ namespace Example
     public class PutContentmanagementWorkspaceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
-            
             var body = new Workspace(); // Workspace | Workspace
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a workspace
-                
                 Workspace result = apiInstance.PutContentmanagementWorkspace(workspaceId, body);
                 Debug.WriteLine(result);
             }
@@ -2888,7 +2308,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2917,7 +2337,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2929,35 +2349,18 @@ namespace Example
     public class PutContentmanagementWorkspaceMemberExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
             var memberId = memberId_example;  // string | Member ID
-            
-            
-            
-            
-            
             var body = new WorkspaceMember(); // WorkspaceMember | Workspace Member
-            
-            
 
             try
-            {
-                
+            { 
                 // Add a member to a workspace
-                
                 WorkspaceMember result = apiInstance.PutContentmanagementWorkspaceMember(workspaceId, memberId, body);
                 Debug.WriteLine(result);
             }
@@ -2968,7 +2371,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2998,7 +2401,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3010,35 +2413,18 @@ namespace Example
     public class PutContentmanagementWorkspaceTagvalueExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ContentManagementApi();
-            
-            
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            
-            
-            
-            
             var tagId = tagId_example;  // string | Tag ID
-            
-            
-            
-            
-            
             var body = new TagValue(); // TagValue | Workspace
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a workspace tag. Will update all documents with the new tag value.
-                
                 TagValue result = apiInstance.PutContentmanagementWorkspaceTagvalue(workspaceId, tagId, body);
                 Debug.WriteLine(result);
             }
@@ -3049,7 +2435,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

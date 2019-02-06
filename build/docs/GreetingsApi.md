@@ -39,7 +39,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -51,25 +51,16 @@ namespace Example
     public class DeleteGreetingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
             var greetingId = greetingId_example;  // string | Greeting ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Deletes a Greeting with the given GreetingId
-                
                 apiInstance.DeleteGreeting(greetingId);
             }
             catch (Exception e)
@@ -79,7 +70,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -107,7 +98,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -119,25 +110,16 @@ namespace Example
     public class GetGreetingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
             var greetingId = greetingId_example;  // string | Greeting ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a Greeting with the given GreetingId
-                
                 Greeting result = apiInstance.GetGreeting(greetingId);
                 Debug.WriteLine(result);
             }
@@ -148,7 +130,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -176,7 +158,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -188,30 +170,17 @@ namespace Example
     public class GetGreetingMediaExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
             var greetingId = greetingId_example;  // string | Greeting ID
-            
-            
-            
-            
             var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WAV)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get media playback URI for this greeting
-                
                 GreetingMediaInfo result = apiInstance.GetGreetingMedia(greetingId, formatId);
                 Debug.WriteLine(result);
             }
@@ -222,7 +191,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -251,7 +220,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -263,30 +232,17 @@ namespace Example
     public class GetGreetingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets an Organization's Greetings
-                
                 DomainEntityListing result = apiInstance.GetGreetings(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -297,7 +253,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -326,7 +282,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -338,20 +294,15 @@ namespace Example
     public class GetGreetingsDefaultsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
 
             try
-            {
-                
+            { 
                 // Get an Organization's DefaultGreetingList
-                
                 DefaultGreetingList result = apiInstance.GetGreetingsDefaults();
                 Debug.WriteLine(result);
             }
@@ -362,7 +313,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -386,7 +337,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -398,35 +349,18 @@ namespace Example
     public class GetGroupGreetingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of the Group's Greetings
-                
                 GreetingListing result = apiInstance.GetGroupGreetings(groupId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -437,7 +371,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -467,7 +401,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -479,25 +413,16 @@ namespace Example
     public class GetGroupGreetingsDefaultsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Grabs the list of Default Greetings given a Group's ID
-                
                 DefaultGreetingList result = apiInstance.GetGroupGreetingsDefaults(groupId);
                 Debug.WriteLine(result);
             }
@@ -508,7 +433,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -536,7 +461,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -548,35 +473,18 @@ namespace Example
     public class GetUserGreetingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of the User's Greetings
-                
                 DomainEntityListing result = apiInstance.GetUserGreetings(userId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -587,7 +495,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -617,7 +525,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -629,25 +537,16 @@ namespace Example
     public class GetUserGreetingsDefaultsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Grabs the list of Default Greetings given a User's ID
-                
                 DefaultGreetingList result = apiInstance.GetUserGreetingsDefaults(userId);
                 Debug.WriteLine(result);
             }
@@ -658,7 +557,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -686,7 +585,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -698,25 +597,16 @@ namespace Example
     public class PostGreetingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
-            
             var body = new Greeting(); // Greeting | The Greeting to create
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a Greeting for an Organization
-                
                 Greeting result = apiInstance.PostGreetings(body);
                 Debug.WriteLine(result);
             }
@@ -727,7 +617,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -755,7 +645,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -767,30 +657,17 @@ namespace Example
     public class PostGroupGreetingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
-            
-            
             var body = new Greeting(); // Greeting | The Greeting to create
-            
-            
 
             try
-            {
-                
+            { 
                 // Creates a Greeting for a Group
-                
                 Greeting result = apiInstance.PostGroupGreetings(groupId, body);
                 Debug.WriteLine(result);
             }
@@ -801,7 +678,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -830,7 +707,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -842,30 +719,17 @@ namespace Example
     public class PostUserGreetingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new Greeting(); // Greeting | The Greeting to create
-            
-            
 
             try
-            {
-                
+            { 
                 // Creates a Greeting for a User
-                
                 Greeting result = apiInstance.PostUserGreetings(userId, body);
                 Debug.WriteLine(result);
             }
@@ -876,7 +740,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -905,7 +769,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -917,30 +781,17 @@ namespace Example
     public class PutGreetingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
             var greetingId = greetingId_example;  // string | Greeting ID
-            
-            
-            
-            
-            
             var body = new Greeting(); // Greeting | The updated Greeting
-            
-            
 
             try
-            {
-                
+            { 
                 // Updates the Greeting with the given GreetingId
-                
                 Greeting result = apiInstance.PutGreeting(greetingId, body);
                 Debug.WriteLine(result);
             }
@@ -951,7 +802,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -980,7 +831,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -992,25 +843,16 @@ namespace Example
     public class PutGreetingsDefaultsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
-            
             var body = new DefaultGreetingList(); // DefaultGreetingList | The updated defaultGreetingList
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an Organization's DefaultGreetingList
-                
                 DefaultGreetingList result = apiInstance.PutGreetingsDefaults(body);
                 Debug.WriteLine(result);
             }
@@ -1021,7 +863,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1049,7 +891,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1061,30 +903,17 @@ namespace Example
     public class PutGroupGreetingsDefaultsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
             var groupId = groupId_example;  // string | Group ID
-            
-            
-            
-            
-            
             var body = new DefaultGreetingList(); // DefaultGreetingList | The updated defaultGreetingList
-            
-            
 
             try
-            {
-                
+            { 
                 // Updates the DefaultGreetingList of the specified Group
-                
                 DefaultGreetingList result = apiInstance.PutGroupGreetingsDefaults(groupId, body);
                 Debug.WriteLine(result);
             }
@@ -1095,7 +924,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1124,7 +953,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1136,30 +965,17 @@ namespace Example
     public class PutUserGreetingsDefaultsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new GreetingsApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
-            
             var body = new DefaultGreetingList(); // DefaultGreetingList | The updated defaultGreetingList
-            
-            
 
             try
-            {
-                
+            { 
                 // Updates the DefaultGreetingList of the specified User
-                
                 DefaultGreetingList result = apiInstance.PutUserGreetingsDefaults(userId, body);
                 Debug.WriteLine(result);
             }
@@ -1170,7 +986,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

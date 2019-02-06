@@ -32,7 +32,7 @@ Requires ANY permissions:
 * webchat:deployment:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -44,25 +44,16 @@ namespace Example
     public class DeleteWebchatDeploymentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebChatApi();
-            
-            
             var deploymentId = deploymentId_example;  // string | Deployment Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a WebChat deployment
-                
                 apiInstance.DeleteWebchatDeployment(deploymentId);
             }
             catch (Exception e)
@@ -72,7 +63,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -101,7 +92,7 @@ Requires ANY permissions:
 * webchat:deployment:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -113,20 +104,15 @@ namespace Example
     public class DeleteWebchatSettingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebChatApi();
-            
 
             try
-            {
-                
+            { 
                 // Remove WebChat deployment settings
-                
                 apiInstance.DeleteWebchatSettings();
             }
             catch (Exception e)
@@ -136,7 +122,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -161,7 +147,7 @@ Requires ANY permissions:
 * webchat:deployment:read
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -173,25 +159,16 @@ namespace Example
     public class GetWebchatDeploymentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebChatApi();
-            
-            
             var deploymentId = deploymentId_example;  // string | Deployment Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a WebChat deployment
-                
                 WebChatDeployment result = apiInstance.GetWebchatDeployment(deploymentId);
                 Debug.WriteLine(result);
             }
@@ -202,7 +179,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -231,7 +208,7 @@ Requires ANY permissions:
 * webchat:deployment:read
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -243,20 +220,15 @@ namespace Example
     public class GetWebchatDeploymentsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebChatApi();
-            
 
             try
-            {
-                
+            { 
                 // List WebChat deployments
-                
                 WebChatDeploymentEntityListing result = apiInstance.GetWebchatDeployments();
                 Debug.WriteLine(result);
             }
@@ -267,7 +239,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -292,7 +264,7 @@ Requires ANY permissions:
 * webchat:deployment:read
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -304,20 +276,15 @@ namespace Example
     public class GetWebchatSettingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebChatApi();
-            
 
             try
-            {
-                
+            { 
                 // Get WebChat deployment settings
-                
                 WebChatSettings result = apiInstance.GetWebchatSettings();
                 Debug.WriteLine(result);
             }
@@ -328,7 +295,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -353,7 +320,7 @@ Requires ANY permissions:
 * webchat:deployment:create
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -365,25 +332,16 @@ namespace Example
     public class PostWebchatDeploymentsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebChatApi();
-            
-            
-            
             var body = new WebChatDeployment(); // WebChatDeployment | Deployment
-            
-            
 
             try
-            {
-                
+            { 
                 // Create WebChat deployment
-                
                 WebChatDeployment result = apiInstance.PostWebchatDeployments(body);
                 Debug.WriteLine(result);
             }
@@ -394,7 +352,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -423,7 +381,7 @@ Requires ANY permissions:
 * webchat:deployment:update
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -435,30 +393,17 @@ namespace Example
     public class PutWebchatDeploymentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebChatApi();
-            
-            
             var deploymentId = deploymentId_example;  // string | Deployment Id
-            
-            
-            
-            
-            
             var body = new WebChatDeployment(); // WebChatDeployment | Deployment
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a WebChat deployment
-                
                 WebChatDeployment result = apiInstance.PutWebchatDeployment(deploymentId, body);
                 Debug.WriteLine(result);
             }
@@ -469,7 +414,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -499,7 +444,7 @@ Requires ANY permissions:
 * webchat:deployment:update
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -511,25 +456,16 @@ namespace Example
     public class PutWebchatSettingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WebChatApi();
-            
-            
-            
             var body = new WebChatSettings(); // WebChatSettings | webChatSettings
-            
-            
 
             try
-            {
-                
+            { 
                 // Update WebChat deployment settings
-                
                 WebChatSettings result = apiInstance.PutWebchatSettings(body);
                 Debug.WriteLine(result);
             }
@@ -540,7 +476,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

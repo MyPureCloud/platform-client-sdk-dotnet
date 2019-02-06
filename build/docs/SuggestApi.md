@@ -27,7 +27,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -39,35 +39,18 @@ namespace Example
     public class GetSearchExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SuggestApi();
-            
-            
             var q64 = q64_example;  // string | q64
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
-            
             var profile = true;  // bool? | profile (optional)  (default to true)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Search using the q64 value returned from a previous search.
-                
                 JsonNodeSearchResponse result = apiInstance.GetSearch(q64, expand, profile);
                 Debug.WriteLine(result);
             }
@@ -78,7 +61,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -108,7 +91,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -120,35 +103,18 @@ namespace Example
     public class GetSearchSuggestExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SuggestApi();
-            
-            
             var q64 = q64_example;  // string | q64
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
-            
             var profile = true;  // bool? | profile (optional)  (default to true)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Suggest resources using the q64 value returned from a previous suggest query.
-                
                 JsonNodeSearchResponse result = apiInstance.GetSearchSuggest(q64, expand, profile);
                 Debug.WriteLine(result);
             }
@@ -159,7 +125,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -189,7 +155,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -201,30 +167,17 @@ namespace Example
     public class PostSearchExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SuggestApi();
-            
-            
-            
             var body = new SearchRequest(); // SearchRequest | Search request options
-            
-            
-            
             var profile = true;  // bool? | profile (optional)  (default to true)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Search resources.
-                
                 JsonNodeSearchResponse result = apiInstance.PostSearch(body, profile);
                 Debug.WriteLine(result);
             }
@@ -235,7 +188,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -264,7 +217,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -276,30 +229,17 @@ namespace Example
     public class PostSearchSuggestExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SuggestApi();
-            
-            
-            
             var body = new SuggestSearchRequest(); // SuggestSearchRequest | Search request options
-            
-            
-            
             var profile = true;  // bool? | profile (optional)  (default to true)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Suggest resources.
-                
                 JsonNodeSearchResponse result = apiInstance.PostSearchSuggest(body, profile);
                 Debug.WriteLine(result);
             }
@@ -310,7 +250,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

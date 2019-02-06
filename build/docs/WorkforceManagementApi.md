@@ -89,7 +89,7 @@ Requires ANY permissions:
 * wfm:managementUnit:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -101,25 +101,16 @@ namespace Example
     public class DeleteWorkforcemanagementManagementunitExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete management unit
-                
                 apiInstance.DeleteWorkforcemanagementManagementunit(muId);
             }
             catch (Exception e)
@@ -129,7 +120,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -159,7 +150,7 @@ Requires ANY permissions:
 * wfm:activityCode:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -171,30 +162,17 @@ namespace Example
     public class DeleteWorkforcemanagementManagementunitActivitycodeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var acId = acId_example;  // string | The ID of the activity code to delete
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Deletes an activity code
-                
                 apiInstance.DeleteWorkforcemanagementManagementunitActivitycode(muId, acId);
             }
             catch (Exception e)
@@ -204,7 +182,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -234,7 +212,7 @@ Requires ANY permissions:
 * wfm:schedule:generate
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -246,30 +224,17 @@ namespace Example
     public class DeleteWorkforcemanagementManagementunitSchedulingRunExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
-            
-            
-            
-            
             var runId = runId_example;  // string | The ID of the schedule run
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Cancel a schedule run
-                
                 apiInstance.DeleteWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId);
             }
             catch (Exception e)
@@ -279,7 +244,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -310,7 +275,7 @@ Requires ANY permissions:
 * wfm:serviceGoalGroup:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -322,30 +287,17 @@ namespace Example
     public class DeleteWorkforcemanagementManagementunitServicegoalgroupExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var serviceGoalGroupId = serviceGoalGroupId_example;  // string | The ID of the service goal group to delete
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a service goal group
-                
                 apiInstance.DeleteWorkforcemanagementManagementunitServicegoalgroup(managementUnitId, serviceGoalGroupId);
             }
             catch (Exception e)
@@ -355,7 +307,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -386,7 +338,7 @@ Requires ANY permissions:
 * wfm:schedule:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -398,35 +350,18 @@ namespace Example
     public class DeleteWorkforcemanagementManagementunitWeekScheduleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            
-            
-            
-            
             var scheduleId = scheduleId_example;  // string | The ID of theschedule to delete
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a schedule
-                
                 apiInstance.DeleteWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId);
             }
             catch (Exception e)
@@ -436,7 +371,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -468,7 +403,7 @@ Requires ANY permissions:
 * wfm:shortTermForecast:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -480,35 +415,18 @@ namespace Example
     public class DeleteWorkforcemanagementManagementunitWeekShorttermforecastExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            
-            
-            
-            
             var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
-            
-            
-            
-            
             var forecastId = forecastId_example;  // string | The ID of the forecast
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a short term forecast
-                
                 apiInstance.DeleteWorkforcemanagementManagementunitWeekShorttermforecast(managementUnitId, weekDateId, forecastId);
             }
             catch (Exception e)
@@ -518,7 +436,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -550,7 +468,7 @@ Requires ANY permissions:
 * wfm:workPlan:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -562,30 +480,17 @@ namespace Example
     public class DeleteWorkforcemanagementManagementunitWorkplanExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var workPlanId = workPlanId_example;  // string | The ID of the work plan to delete
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a work plan
-                
                 apiInstance.DeleteWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId);
             }
             catch (Exception e)
@@ -595,7 +500,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -625,7 +530,7 @@ Requires ANY permissions:
 * wfm:realtimeAdherence:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -637,25 +542,16 @@ namespace Example
     public class GetWorkforcemanagementAdherenceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
-            
             var userId = new List<string>(); // List<string> | User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of UserScheduleAdherence records for the requested users
-                
                 List&lt;UserScheduleAdherence&gt; result = apiInstance.GetWorkforcemanagementAdherence(userId);
                 Debug.WriteLine(result);
             }
@@ -666,7 +562,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -738,7 +634,7 @@ Requires ANY permissions:
 * wfm:workPlan:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -750,30 +646,17 @@ namespace Example
     public class GetWorkforcemanagementManagementunitExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var expand = expand_example;  // string |  (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get management unit
-                
                 ManagementUnit result = apiInstance.GetWorkforcemanagementManagementunit(muId, expand);
                 Debug.WriteLine(result);
             }
@@ -784,7 +667,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -815,7 +698,7 @@ Requires ANY permissions:
 * wfm:activityCode:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -827,30 +710,17 @@ namespace Example
     public class GetWorkforcemanagementManagementunitActivitycodeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var acId = acId_example;  // string | The ID of the activity code to fetch
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get an activity code
-                
                 ActivityCode result = apiInstance.GetWorkforcemanagementManagementunitActivitycode(muId, acId);
                 Debug.WriteLine(result);
             }
@@ -861,7 +731,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -934,7 +804,7 @@ Requires ANY permissions:
 * wfm:workPlan:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -946,25 +816,16 @@ namespace Example
     public class GetWorkforcemanagementManagementunitActivitycodesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get activity codes
-                
                 ActivityCodeContainer result = apiInstance.GetWorkforcemanagementManagementunitActivitycodes(muId);
                 Debug.WriteLine(result);
             }
@@ -975,7 +836,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1005,7 +866,7 @@ Requires ANY permissions:
 * wfm:agent:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1017,30 +878,17 @@ namespace Example
     public class GetWorkforcemanagementManagementunitAgentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The id of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var agentId = agentId_example;  // string | The agent id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get data for agent in the management unit
-                
                 WfmAgent result = apiInstance.GetWorkforcemanagementManagementunitAgent(managementUnitId, agentId);
                 Debug.WriteLine(result);
             }
@@ -1051,7 +899,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1081,7 +929,7 @@ Requires ANY permissions:
 * wfm:intraday:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1093,30 +941,17 @@ namespace Example
     public class GetWorkforcemanagementManagementunitIntradayQueuesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The management unit ID of the management unit
-            
-            
-            
-            
             var date = date_example;  // string | yyyy-MM-dd date string interpreted in the configured management unit time zone
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get intraday queues for the given date
-                
                 WfmIntradayQueueListing result = apiInstance.GetWorkforcemanagementManagementunitIntradayQueues(muId, date);
                 Debug.WriteLine(result);
             }
@@ -1127,7 +962,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1157,7 +992,7 @@ Requires ANY permissions:
 * wfm:schedule:generate
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1169,30 +1004,17 @@ namespace Example
     public class GetWorkforcemanagementManagementunitSchedulingRunExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
-            
-            
-            
-            
             var runId = runId_example;  // string | The ID of the schedule run
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets the status for a specific scheduling run
-                
                 SchedulingRunResponse result = apiInstance.GetWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId);
                 Debug.WriteLine(result);
             }
@@ -1203,7 +1025,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1233,7 +1055,7 @@ Requires ANY permissions:
 * wfm:schedule:generate
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1245,30 +1067,17 @@ namespace Example
     public class GetWorkforcemanagementManagementunitSchedulingRunResultExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
-            
-            
-            
-            
             var runId = runId_example;  // string | The ID of the schedule run
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets the result of a specific scheduling run
-                
                 RescheduleResult result = apiInstance.GetWorkforcemanagementManagementunitSchedulingRunResult(managementUnitId, runId);
                 Debug.WriteLine(result);
             }
@@ -1279,7 +1088,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1309,7 +1118,7 @@ Requires ANY permissions:
 * wfm:schedule:generate
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1321,25 +1130,16 @@ namespace Example
     public class GetWorkforcemanagementManagementunitSchedulingRunsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the status of all the ongoing schedule runs
-                
                 SchedulingRunListResponse result = apiInstance.GetWorkforcemanagementManagementunitSchedulingRuns(managementUnitId);
                 Debug.WriteLine(result);
             }
@@ -1350,7 +1150,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1380,7 +1180,7 @@ Requires ANY permissions:
 * wfm:serviceGoalGroup:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1392,30 +1192,17 @@ namespace Example
     public class GetWorkforcemanagementManagementunitServicegoalgroupExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var serviceGoalGroupId = serviceGoalGroupId_example;  // string | The ID of the service goal group to fetch
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a service goal group
-                
                 ServiceGoalGroup result = apiInstance.GetWorkforcemanagementManagementunitServicegoalgroup(managementUnitId, serviceGoalGroupId);
                 Debug.WriteLine(result);
             }
@@ -1426,7 +1213,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1459,7 +1246,7 @@ Requires ANY permissions:
 * wfm:shortTermForecast:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1471,25 +1258,16 @@ namespace Example
     public class GetWorkforcemanagementManagementunitServicegoalgroupsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get service goal groups
-                
                 ServiceGoalGroupList result = apiInstance.GetWorkforcemanagementManagementunitServicegoalgroups(managementUnitId);
                 Debug.WriteLine(result);
             }
@@ -1500,7 +1278,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1530,7 +1308,7 @@ Requires ANY permissions:
 * wfm:managementUnit:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1542,25 +1320,16 @@ namespace Example
     public class GetWorkforcemanagementManagementunitSettingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the settings for the requested management unit
-                
                 ManagementUnitSettings result = apiInstance.GetWorkforcemanagementManagementunitSettings(muId);
                 Debug.WriteLine(result);
             }
@@ -1571,7 +1340,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1601,7 +1370,7 @@ Requires ANY permissions:
 * wfm:timeOffRequest:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1613,35 +1382,18 @@ namespace Example
     public class GetWorkforcemanagementManagementunitUserTimeoffrequestExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var userId = userId_example;  // string | The userId to whom the Time Off Request applies.
-            
-            
-            
-            
             var timeOffRequestId = timeOffRequestId_example;  // string | Time Off Request Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a time off request
-                
                 TimeOffRequestResponse result = apiInstance.GetWorkforcemanagementManagementunitUserTimeoffrequest(muId, userId, timeOffRequestId);
                 Debug.WriteLine(result);
             }
@@ -1652,7 +1404,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1684,7 +1436,7 @@ Requires ANY permissions:
 * wfm:timeOffRequest:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1696,35 +1448,18 @@ namespace Example
     public class GetWorkforcemanagementManagementunitUserTimeoffrequestsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var userId = userId_example;  // string | The userId to whom the Time Off Request applies.
-            
-            
-            
-            
             var recentlyReviewed = true;  // bool? | Limit results to requests that have been reviewed within the preceding 30 days (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of time off requests for a given user
-                
                 TimeOffRequestList result = apiInstance.GetWorkforcemanagementManagementunitUserTimeoffrequests(muId, userId, recentlyReviewed);
                 Debug.WriteLine(result);
             }
@@ -1735,7 +1470,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1776,7 +1511,7 @@ Requires ANY permissions:
 * wfm:workPlan:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1788,25 +1523,16 @@ namespace Example
     public class GetWorkforcemanagementManagementunitUsersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get users in the management unit
-                
                 WfmUserEntityListing result = apiInstance.GetWorkforcemanagementManagementunitUsers(muId);
                 Debug.WriteLine(result);
             }
@@ -1817,7 +1543,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1848,7 +1574,7 @@ Requires ANY permissions:
 * wfm:schedule:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1860,45 +1586,20 @@ namespace Example
     public class GetWorkforcemanagementManagementunitWeekScheduleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            
-            
-            
-            
             var scheduleId = scheduleId_example;  // string | The ID of the schedule to fetch
-            
-            
-            
-            
             var expand = expand_example;  // string | Which fields, if any, to expand (optional) 
-            
-            
-            
-            
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a week schedule
-                
                 WeekScheduleResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId, expand, forceDownloadService);
                 Debug.WriteLine(result);
             }
@@ -1909,7 +1610,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1944,7 +1645,7 @@ Requires ANY permissions:
 * wfm:schedule:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1956,35 +1657,18 @@ namespace Example
     public class GetWorkforcemanagementManagementunitWeekScheduleGenerationresultsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            
-            
-            
-            
             var scheduleId = scheduleId_example;  // string | The ID of the schedule to fetch generation results
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get week schedule generation results
-                
                 WeekScheduleGenerationResult result = apiInstance.GetWorkforcemanagementManagementunitWeekScheduleGenerationresults(managementUnitId, weekId, scheduleId);
                 Debug.WriteLine(result);
             }
@@ -1995,7 +1679,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2028,7 +1712,7 @@ Requires ANY permissions:
 * wfm:schedule:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2040,30 +1724,17 @@ namespace Example
     public class GetWorkforcemanagementManagementunitWeekSchedulesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the list of schedules in a week in management unit
-                
                 WeekScheduleListResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId);
                 Debug.WriteLine(result);
             }
@@ -2074,7 +1745,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2105,7 +1776,7 @@ Requires ANY permissions:
 * wfm:shortTermForecast:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2117,40 +1788,19 @@ namespace Example
     public class GetWorkforcemanagementManagementunitWeekShorttermforecastFinalExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            
-            
-            
-            
             var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
-            
-            
-            
-            
             var forecastId = forecastId_example;  // string | The ID of the forecast
-            
-            
-            
-            
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the final result of a short term forecast calculation with modifications applied
-                
                 ForecastResultResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekShorttermforecastFinal(managementUnitId, weekDateId, forecastId, forceDownloadService);
                 Debug.WriteLine(result);
             }
@@ -2161,7 +1811,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2195,7 +1845,7 @@ Requires ANY permissions:
 * wfm:shortTermForecast:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2207,30 +1857,17 @@ namespace Example
     public class GetWorkforcemanagementManagementunitWeekShorttermforecastsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            
-            
-            
-            
             var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get short term forecasts
-                
                 ShortTermForecastListResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId, weekDateId);
                 Debug.WriteLine(result);
             }
@@ -2241,7 +1878,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2274,7 +1911,7 @@ Requires ANY permissions:
 * wfm:schedule:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2286,30 +1923,17 @@ namespace Example
     public class GetWorkforcemanagementManagementunitWorkplanExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var workPlanId = workPlanId_example;  // string | The ID of the work plan to fetch
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a work plan
-                
                 WorkPlan result = apiInstance.GetWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId);
                 Debug.WriteLine(result);
             }
@@ -2320,7 +1944,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2356,7 +1980,7 @@ Requires ANY permissions:
 * wfm:workPlan:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2368,30 +1992,17 @@ namespace Example
     public class GetWorkforcemanagementManagementunitWorkplansExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> |  (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get work plans
-                
                 WorkPlanListResponse result = apiInstance.GetWorkforcemanagementManagementunitWorkplans(managementUnitId, expand);
                 Debug.WriteLine(result);
             }
@@ -2402,7 +2013,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2431,7 +2042,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2443,45 +2054,20 @@ namespace Example
     public class GetWorkforcemanagementManagementunitsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var pageSize = 56;  // int? |  (optional) 
-            
-            
-            
-            
             var pageNumber = 56;  // int? |  (optional) 
-            
-            
-            
-            
             var expand = expand_example;  // string |  (optional) 
-            
-            
-            
-            
             var feature = feature_example;  // string |  (optional) 
-            
-            
-            
-            
             var divisionId = divisionId_example;  // string |  (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get management units
-                
                 ManagementUnitListing result = apiInstance.GetWorkforcemanagementManagementunits(pageSize, pageNumber, expand, feature, divisionId);
                 Debug.WriteLine(result);
             }
@@ -2492,7 +2078,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2525,7 +2111,7 @@ Requires ANY permissions:
 * wfm:managementUnit:search
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2537,25 +2123,16 @@ namespace Example
     public class GetWorkforcemanagementManagementunitsDivisionviewsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
-            
             var divisionId = new List<string>(); // List<string> | The divisionIds to filter by. If omitted, will return all divisions (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get management units across divisions
-                
                 ManagementUnitListing result = apiInstance.GetWorkforcemanagementManagementunitsDivisionviews(divisionId);
                 Debug.WriteLine(result);
             }
@@ -2566,7 +2143,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2596,7 +2173,7 @@ Requires ANY permissions:
 * wfm:agentTimeOffRequest:submit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2608,25 +2185,16 @@ namespace Example
     public class GetWorkforcemanagementTimeoffrequestExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var timeOffRequestId = timeOffRequestId_example;  // string | Time Off Request Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a time off request for the current user
-                
                 TimeOffRequestResponse result = apiInstance.GetWorkforcemanagementTimeoffrequest(timeOffRequestId);
                 Debug.WriteLine(result);
             }
@@ -2637,7 +2205,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2667,7 +2235,7 @@ Requires ANY permissions:
 * wfm:agentTimeOffRequest:submit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2679,25 +2247,16 @@ namespace Example
     public class GetWorkforcemanagementTimeoffrequestsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var recentlyReviewed = true;  // bool? | Limit results to requests that have been reviewed within the preceding 30 days (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of time off requests for the current user
-                
                 TimeOffRequestList result = apiInstance.GetWorkforcemanagementTimeoffrequests(recentlyReviewed);
                 Debug.WriteLine(result);
             }
@@ -2708,7 +2267,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2738,7 +2297,7 @@ Requires ANY permissions:
 * wfm:activityCode:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2750,35 +2309,18 @@ namespace Example
     public class PatchWorkforcemanagementManagementunitActivitycodeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var acId = acId_example;  // string | The ID of the activity code to update
-            
-            
-            
-            
-            
             var body = new UpdateActivityCodeRequest(); // UpdateActivityCodeRequest | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an activity code
-                
                 ActivityCode result = apiInstance.PatchWorkforcemanagementManagementunitActivitycode(muId, acId, body);
                 Debug.WriteLine(result);
             }
@@ -2789,7 +2331,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2820,7 +2362,7 @@ Requires ANY permissions:
 * wfm:schedule:generate
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2832,35 +2374,18 @@ namespace Example
     public class PatchWorkforcemanagementManagementunitSchedulingRunExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
-            
-            
-            
-            
             var runId = runId_example;  // string | The ID of the schedule run
-            
-            
-            
-            
-            
             var body = new UpdateSchedulingRunRequest(); // UpdateSchedulingRunRequest | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
-                
                 RescheduleResult result = apiInstance.PatchWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId, body);
                 Debug.WriteLine(result);
             }
@@ -2871,7 +2396,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2903,7 +2428,7 @@ Requires ANY permissions:
 * wfm:serviceGoalGroup:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2915,35 +2440,18 @@ namespace Example
     public class PatchWorkforcemanagementManagementunitServicegoalgroupExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var serviceGoalGroupId = serviceGoalGroupId_example;  // string | The ID of the service goal group to update
-            
-            
-            
-            
-            
             var body = new ServiceGoalGroup(); // ServiceGoalGroup | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a service goal group
-                
                 ServiceGoalGroup result = apiInstance.PatchWorkforcemanagementManagementunitServicegoalgroup(managementUnitId, serviceGoalGroupId, body);
                 Debug.WriteLine(result);
             }
@@ -2954,7 +2462,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2986,7 +2494,7 @@ Requires ANY permissions:
 * wfm:managementUnit:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2998,30 +2506,17 @@ namespace Example
     public class PatchWorkforcemanagementManagementunitSettingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
-            
             var body = new ManagementUnitSettings(); // ManagementUnitSettings | config (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Patch the settings for the requested management unit
-                
                 ManagementUnitSettings result = apiInstance.PatchWorkforcemanagementManagementunitSettings(muId, body);
                 Debug.WriteLine(result);
             }
@@ -3032,7 +2527,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3063,7 +2558,7 @@ Requires ANY permissions:
 * wfm:timeOffRequest:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3075,40 +2570,19 @@ namespace Example
     public class PatchWorkforcemanagementManagementunitUserTimeoffrequestExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var userId = userId_example;  // string | The id of the user the requested time off request belongs to
-            
-            
-            
-            
             var timeOffRequestId = timeOffRequestId_example;  // string | The id of the time off request to update
-            
-            
-            
-            
-            
             var body = new AdminTimeOffRequestPatch(); // AdminTimeOffRequestPatch | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a time off request
-                
                 TimeOffRequestResponse result = apiInstance.PatchWorkforcemanagementManagementunitUserTimeoffrequest(muId, userId, timeOffRequestId, body);
                 Debug.WriteLine(result);
             }
@@ -3119,7 +2593,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3152,7 +2626,7 @@ Requires ANY permissions:
 * wfm:schedule:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3164,50 +2638,21 @@ namespace Example
     public class PatchWorkforcemanagementManagementunitWeekScheduleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            
-            
-            
-            
             var scheduleId = scheduleId_example;  // string | The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500
-            
-            
-            
-            
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
-            
-            
-            
-            
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
-            
-            
-            
-            
-            
             var body = new UpdateWeekScheduleRequest(); // UpdateWeekScheduleRequest | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a week schedule
-                
                 AsyncWeekScheduleResponse result = apiInstance.PatchWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId, forceAsync, forceDownloadService, body);
                 Debug.WriteLine(result);
             }
@@ -3218,7 +2663,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3253,7 +2698,7 @@ Requires ANY permissions:
 * wfm:workPlan:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3265,35 +2710,18 @@ namespace Example
     public class PatchWorkforcemanagementManagementunitWorkplanExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var workPlanId = workPlanId_example;  // string | The ID of the work plan to update
-            
-            
-            
-            
-            
             var body = new WorkPlan(); // WorkPlan | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a work plan
-                
                 WorkPlan result = apiInstance.PatchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, body);
                 Debug.WriteLine(result);
             }
@@ -3304,7 +2732,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3335,7 +2763,7 @@ Requires ANY permissions:
 * wfm:agentTimeOffRequest:submit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3347,30 +2775,17 @@ namespace Example
     public class PatchWorkforcemanagementTimeoffrequestExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var timeOffRequestId = timeOffRequestId_example;  // string | Time Off Request Id
-            
-            
-            
-            
-            
             var body = new AgentTimeOffRequestPatch(); // AgentTimeOffRequestPatch | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a time off request for the current user
-                
                 TimeOffRequestResponse result = apiInstance.PatchWorkforcemanagementTimeoffrequest(timeOffRequestId, body);
                 Debug.WriteLine(result);
             }
@@ -3381,7 +2796,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3411,7 +2826,7 @@ Requires ANY permissions:
 * wfm:historicalAdherence:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3423,25 +2838,16 @@ namespace Example
     public class PostWorkforcemanagementAdherenceHistoricalExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
-            
             var body = new WfmHistoricalAdherenceQueryForUsers(); // WfmHistoricalAdherenceQueryForUsers | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Request a historical adherence report for users across management units
-                
                 WfmHistoricalAdherenceResponse result = apiInstance.PostWorkforcemanagementAdherenceHistorical(body);
                 Debug.WriteLine(result);
             }
@@ -3452,7 +2858,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3482,7 +2888,7 @@ Requires ANY permissions:
 * wfm:activityCode:administer
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3494,30 +2900,17 @@ namespace Example
     public class PostWorkforcemanagementManagementunitActivitycodesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
-            
             var body = new CreateActivityCodeRequest(); // CreateActivityCodeRequest | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new activity code
-                
                 ActivityCode result = apiInstance.PostWorkforcemanagementManagementunitActivitycodes(muId, body);
                 Debug.WriteLine(result);
             }
@@ -3528,7 +2921,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3558,7 +2951,7 @@ Requires ANY permissions:
 * wfm:historicalAdherence:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3570,30 +2963,17 @@ namespace Example
     public class PostWorkforcemanagementManagementunitHistoricaladherencequeryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The management unit ID of the management unit
-            
-            
-            
-            
-            
             var body = new WfmHistoricalAdherenceQuery(); // WfmHistoricalAdherenceQuery | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Request a historical adherence report
-                
                 WfmHistoricalAdherenceResponse result = apiInstance.PostWorkforcemanagementManagementunitHistoricaladherencequery(muId, body);
                 Debug.WriteLine(result);
             }
@@ -3604,7 +2984,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3634,7 +3014,7 @@ Requires ANY permissions:
 * wfm:intraday:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3646,30 +3026,17 @@ namespace Example
     public class PostWorkforcemanagementManagementunitIntradayExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The management unit ID of the management unit
-            
-            
-            
-            
-            
             var body = new IntradayQueryDataCommand(); // IntradayQueryDataCommand | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get intraday data for the given date for the requested queueIds
-                
                 IntradayResponse result = apiInstance.PostWorkforcemanagementManagementunitIntraday(muId, body);
                 Debug.WriteLine(result);
             }
@@ -3680,7 +3047,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3712,7 +3079,7 @@ Requires ANY permissions:
 * wfm:schedule:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3724,30 +3091,17 @@ namespace Example
     public class PostWorkforcemanagementManagementunitSchedulesSearchExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
-            
             var body = new UserListScheduleRequestBody(); // UserListScheduleRequestBody | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Query published schedules for given given time range for set of users
-                
                 UserScheduleContainer result = apiInstance.PostWorkforcemanagementManagementunitSchedulesSearch(muId, body);
                 Debug.WriteLine(result);
             }
@@ -3758,7 +3112,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3789,7 +3143,7 @@ Requires ANY permissions:
 * wfm:serviceGoalGroup:administer
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3801,30 +3155,17 @@ namespace Example
     public class PostWorkforcemanagementManagementunitServicegoalgroupsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
-            
             var body = new CreateServiceGoalGroupRequest(); // CreateServiceGoalGroupRequest | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new service goal group
-                
                 ServiceGoalGroup result = apiInstance.PostWorkforcemanagementManagementunitServicegoalgroups(managementUnitId, body);
                 Debug.WriteLine(result);
             }
@@ -3835,7 +3176,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3866,7 +3207,7 @@ Requires ANY permissions:
 * wfm:timeOffRequest:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3878,30 +3219,17 @@ namespace Example
     public class PostWorkforcemanagementManagementunitTimeoffrequestsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
-            
             var body = new CreateAdminTimeOffRequest(); // CreateAdminTimeOffRequest | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new time off request
-                
                 TimeOffRequestList result = apiInstance.PostWorkforcemanagementManagementunitTimeoffrequests(muId, body);
                 Debug.WriteLine(result);
             }
@@ -3912,7 +3240,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3943,7 +3271,7 @@ Requires ANY permissions:
 * wfm:timeOffRequest:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3955,30 +3283,17 @@ namespace Example
     public class PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetailsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
-            
             var body = new TimeOffRequestLookupList(); // TimeOffRequestLookupList | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets a list of time off requests from lookup ids
-                
                 TimeOffRequestEntityList result = apiInstance.PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails(muId, body);
                 Debug.WriteLine(result);
             }
@@ -3989,7 +3304,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4020,7 +3335,7 @@ Requires ANY permissions:
 * wfm:timeOffRequest:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4032,30 +3347,17 @@ namespace Example
     public class PostWorkforcemanagementManagementunitTimeoffrequestsQueryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
-            
             var body = new TimeOffRequestQueryBody(); // TimeOffRequestQueryBody | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets the lookup ids to fetch the specified set of requests
-                
                 TimeOffRequestLookupList result = apiInstance.PostWorkforcemanagementManagementunitTimeoffrequestsQuery(muId, body);
                 Debug.WriteLine(result);
             }
@@ -4066,7 +3368,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4097,7 +3399,7 @@ Requires ANY permissions:
 * wfm:schedule:administer
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4109,50 +3411,21 @@ namespace Example
     public class PostWorkforcemanagementManagementunitWeekScheduleCopyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            
-            
-            
-            
             var scheduleId = scheduleId_example;  // string | The ID of the schedule to copy from
-            
-            
-            
-            
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
-            
-            
-            
-            
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
-            
-            
-            
-            
-            
             var body = new CopyWeekScheduleRequest(); // CopyWeekScheduleRequest | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Copy a week schedule
-                
                 AsyncWeekScheduleResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekScheduleCopy(managementUnitId, weekId, scheduleId, forceAsync, forceDownloadService, body);
                 Debug.WriteLine(result);
             }
@@ -4163,7 +3436,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4198,7 +3471,7 @@ Requires ANY permissions:
 * wfm:schedule:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4210,40 +3483,19 @@ namespace Example
     public class PostWorkforcemanagementManagementunitWeekScheduleRescheduleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            
-            
-            
-            
             var scheduleId = scheduleId_example;  // string | The ID of the schedule to re-optimize
-            
-            
-            
-            
-            
             var body = new RescheduleRequest(); // RescheduleRequest | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
-                
                 AsyncWeekScheduleResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekScheduleReschedule(managementUnitId, weekId, scheduleId, body);
                 Debug.WriteLine(result);
             }
@@ -4254,7 +3506,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4287,7 +3539,7 @@ Requires ANY permissions:
 * wfm:schedule:administer
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4299,45 +3551,20 @@ namespace Example
     public class PostWorkforcemanagementManagementunitWeekSchedulesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            
-            
-            
-            
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
-            
-            
-            
-            
             var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
-            
-            
-            
-            
-            
             var body = new ImportWeekScheduleRequest(); // ImportWeekScheduleRequest | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
-                
                 AsyncWeekScheduleResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId, forceAsync, forceDownloadService, body);
                 Debug.WriteLine(result);
             }
@@ -4348,7 +3575,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4381,7 +3608,7 @@ Requires ANY permissions:
 * wfm:schedule:generate
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4393,35 +3620,18 @@ namespace Example
     public class PostWorkforcemanagementManagementunitWeekSchedulesGenerateExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            
-            
-            
-            
-            
             var body = new GenerateWeekScheduleRequest(); // GenerateWeekScheduleRequest | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Generate a week schedule
-                
                 GenerateWeekScheduleResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekSchedulesGenerate(managementUnitId, weekId, body);
                 Debug.WriteLine(result);
             }
@@ -4432,7 +3642,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4465,7 +3675,7 @@ Requires ANY permissions:
 * wfm:schedule:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4477,35 +3687,18 @@ namespace Example
     public class PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
-            
-            
-            
-            
-            
             var body = new UserSchedulesPartialUploadRequest(); // UserSchedulesPartialUploadRequest | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Partial upload of user schedules where activity count is greater than 17500
-                
                 PartialUploadResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekSchedulesPartialupload(managementUnitId, weekId, body);
                 Debug.WriteLine(result);
             }
@@ -4516,7 +3709,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4548,7 +3741,7 @@ Requires ANY permissions:
 * wfm:shortTermForecast:administer
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4560,45 +3753,20 @@ namespace Example
     public class PostWorkforcemanagementManagementunitWeekShorttermforecastCopyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            
-            
-            
-            
             var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
-            
-            
-            
-            
             var forecastId = forecastId_example;  // string | The ID of the forecast to copy
-            
-            
-            
-            
-            
             var body = new CopyShortTermForecastRequest(); // CopyShortTermForecastRequest | body
-            
-            
-            
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Copy a short term forecast
-                
                 ShortTermForecastResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShorttermforecastCopy(managementUnitId, weekDateId, forecastId, body, forceAsync);
                 Debug.WriteLine(result);
             }
@@ -4609,7 +3777,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4643,7 +3811,7 @@ Requires ANY permissions:
 * wfm:shortTermForecast:administer
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4655,40 +3823,19 @@ namespace Example
     public class PostWorkforcemanagementManagementunitWeekShorttermforecastsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            
-            
-            
-            
             var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
-            
-            
-            
-            
-            
             var body = new ImportShortTermForecastRequest(); // ImportShortTermForecastRequest | body
-            
-            
-            
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Import a short term forecast
-                
                 ShortTermForecastResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId, weekDateId, body, forceAsync);
                 Debug.WriteLine(result);
             }
@@ -4699,7 +3846,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4732,7 +3879,7 @@ Requires ANY permissions:
 * wfm:shortTermForecast:administer
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4744,40 +3891,19 @@ namespace Example
     public class PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerateExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            
-            
-            
-            
             var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
-            
-            
-            
-            
-            
             var body = new GenerateShortTermForecastRequest(); // GenerateShortTermForecastRequest | 
-            
-            
-            
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Generate a short term forecast
-                
                 GenerateShortTermForecastResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate(managementUnitId, weekDateId, body, forceAsync);
                 Debug.WriteLine(result);
             }
@@ -4788,7 +3914,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4821,7 +3947,7 @@ Requires ANY permissions:
 * wfm:shortTermForecast:administer
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4833,35 +3959,18 @@ namespace Example
     public class PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialuploadExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit to which the forecast belongs
-            
-            
-            
-            
             var weekDateId = weekDateId_example;  // string | The week start date of the forecast in yyyy-MM-dd format
-            
-            
-            
-            
-            
             var body = new RouteGroupList(); // RouteGroupList | body
-            
-            
 
             try
-            {
-                
+            { 
                 // Import a short term forecast
-                
                 PartialUploadResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload(managementUnitId, weekDateId, body);
                 Debug.WriteLine(result);
             }
@@ -4872,7 +3981,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4904,7 +4013,7 @@ Requires ANY permissions:
 * wfm:workPlan:administer
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4916,35 +4025,18 @@ namespace Example
     public class PostWorkforcemanagementManagementunitWorkplanCopyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
             var workPlanId = workPlanId_example;  // string | The ID of the work plan to create a copy
-            
-            
-            
-            
-            
             var body = new CopyWorkPlan(); // CopyWorkPlan | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a copy of work plan
-                
                 WorkPlan result = apiInstance.PostWorkforcemanagementManagementunitWorkplanCopy(managementUnitId, workPlanId, body);
                 Debug.WriteLine(result);
             }
@@ -4955,7 +4047,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4987,7 +4079,7 @@ Requires ANY permissions:
 * wfm:workPlan:administer
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4999,30 +4091,17 @@ namespace Example
     public class PostWorkforcemanagementManagementunitWorkplansExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            
-            
-            
-            
-            
             var body = new CreateWorkPlan(); // CreateWorkPlan | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new work plan
-                
                 WorkPlan result = apiInstance.PostWorkforcemanagementManagementunitWorkplans(managementUnitId, body);
                 Debug.WriteLine(result);
             }
@@ -5033,7 +4112,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5064,7 +4143,7 @@ Requires ANY permissions:
 * wfm:managementUnit:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5076,25 +4155,16 @@ namespace Example
     public class PostWorkforcemanagementManagementunitsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
-            
             var body = new CreateManagementUnitApiRequest(); // CreateManagementUnitApiRequest | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Add a management unit
-                
                 ManagementUnit result = apiInstance.PostWorkforcemanagementManagementunits(body);
                 Debug.WriteLine(result);
             }
@@ -5105,7 +4175,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5136,7 +4206,7 @@ Requires ANY permissions:
 * wfm:schedule:administer
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5148,25 +4218,16 @@ namespace Example
     public class PostWorkforcemanagementSchedulesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
-            
             var body = new CurrentUserScheduleRequestBody(); // CurrentUserScheduleRequestBody | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get published schedule for the current user
-                
                 UserScheduleContainer result = apiInstance.PostWorkforcemanagementSchedules(body);
                 Debug.WriteLine(result);
             }
@@ -5177,7 +4238,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5206,7 +4267,7 @@ Requires ANY permissions:
 * wfm:agentTimeOffRequest:submit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5218,25 +4279,16 @@ namespace Example
     public class PostWorkforcemanagementTimeoffrequestsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            
-            
-            
             var body = new CreateAgentTimeOffRequest(); // CreateAgentTimeOffRequest | body (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a time off request for the current user
-                
                 TimeOffRequestResponse result = apiInstance.PostWorkforcemanagementTimeoffrequests(body);
                 Debug.WriteLine(result);
             }
@@ -5247,7 +4299,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

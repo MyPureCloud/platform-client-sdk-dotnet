@@ -120,7 +120,7 @@ Requires ANY permissions:
 * outbound:attemptLimits:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -132,25 +132,16 @@ namespace Example
     public class DeleteOutboundAttemptlimitExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var attemptLimitsId = attemptLimitsId_example;  // string | Attempt limits ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete attempt limits
-                
                 apiInstance.DeleteOutboundAttemptlimit(attemptLimitsId);
             }
             catch (Exception e)
@@ -160,7 +151,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -189,7 +180,7 @@ Requires ANY permissions:
 * outbound:callableTimeSet:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -201,25 +192,16 @@ namespace Example
     public class DeleteOutboundCallabletimesetExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var callableTimeSetId = callableTimeSetId_example;  // string | Callable Time Set ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete callable time set
-                
                 apiInstance.DeleteOutboundCallabletimeset(callableTimeSetId);
             }
             catch (Exception e)
@@ -229,7 +211,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -258,7 +240,7 @@ Requires ANY permissions:
 * outbound:responseSet:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -270,25 +252,16 @@ namespace Example
     public class DeleteOutboundCallanalysisresponsesetExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var callAnalysisSetId = callAnalysisSetId_example;  // string | Call Analysis Response Set ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a dialer call analysis response set.
-                
                 apiInstance.DeleteOutboundCallanalysisresponseset(callAnalysisSetId);
             }
             catch (Exception e)
@@ -298,7 +271,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -327,7 +300,7 @@ Requires ANY permissions:
 * outbound:campaign:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -339,25 +312,16 @@ namespace Example
     public class DeleteOutboundCampaignExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a campaign.
-                
                 Campaign result = apiInstance.DeleteOutboundCampaign(campaignId);
                 Debug.WriteLine(result);
             }
@@ -368,7 +332,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -397,7 +361,7 @@ Requires ANY permissions:
 * outbound:campaign:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -409,25 +373,16 @@ namespace Example
     public class DeleteOutboundCampaignProgressExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Reset campaign progress and recycle the campaign
-                
                 apiInstance.DeleteOutboundCampaignProgress(campaignId);
             }
             catch (Exception e)
@@ -437,7 +392,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -466,7 +421,7 @@ Requires ANY permissions:
 * outbound:campaignRule:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -478,25 +433,16 @@ namespace Example
     public class DeleteOutboundCampaignruleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignRuleId = campaignRuleId_example;  // string | Campaign Rule ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete Campaign Rule
-                
                 apiInstance.DeleteOutboundCampaignrule(campaignRuleId);
             }
             catch (Exception e)
@@ -506,7 +452,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -535,7 +481,7 @@ Requires ANY permissions:
 * outbound:contactList:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -547,25 +493,16 @@ namespace Example
     public class DeleteOutboundContactlistExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | ContactList ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a contact list.
-                
                 apiInstance.DeleteOutboundContactlist(contactListId);
             }
             catch (Exception e)
@@ -575,7 +512,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -604,7 +541,7 @@ Requires ANY permissions:
 * outbound:contact:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -616,30 +553,17 @@ namespace Example
     public class DeleteOutboundContactlistContactExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | Contact List ID
-            
-            
-            
-            
             var contactId = contactId_example;  // string | Contact ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a contact.
-                
                 apiInstance.DeleteOutboundContactlistContact(contactListId, contactId);
             }
             catch (Exception e)
@@ -649,7 +573,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -679,7 +603,7 @@ Requires ANY permissions:
 * outbound:contact:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -691,30 +615,17 @@ namespace Example
     public class DeleteOutboundContactlistContactsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | Contact List ID
-            
-            
-            
-            
-            
             var contactIds = new List<string>(); // List<string> | ContactIds to delete.
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete contacts from a contact list.
-                
                 apiInstance.DeleteOutboundContactlistContacts(contactListId, contactIds);
             }
             catch (Exception e)
@@ -724,7 +635,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -754,7 +665,7 @@ Requires ANY permissions:
 * outbound:contactListFilter:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -766,25 +677,16 @@ namespace Example
     public class DeleteOutboundContactlistfilterExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListFilterId = contactListFilterId_example;  // string | Contact List Filter ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete Contact List Filter
-                
                 apiInstance.DeleteOutboundContactlistfilter(contactListFilterId);
             }
             catch (Exception e)
@@ -794,7 +696,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -823,7 +725,7 @@ Requires ANY permissions:
 * outbound:contactList:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -835,25 +737,16 @@ namespace Example
     public class DeleteOutboundContactlistsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var id = new List<string>(); // List<string> | contact list id(s) to delete
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete multiple contact lists.
-                
                 apiInstance.DeleteOutboundContactlists(id);
             }
             catch (Exception e)
@@ -863,7 +756,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -892,7 +785,7 @@ Requires ANY permissions:
 * outbound:dncList:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -904,25 +797,16 @@ namespace Example
     public class DeleteOutboundDnclistExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var dncListId = dncListId_example;  // string | DncList ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete dialer DNC list
-                
                 apiInstance.DeleteOutboundDnclist(dncListId);
             }
             catch (Exception e)
@@ -932,7 +816,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -961,7 +845,7 @@ Requires ANY permissions:
 * outbound:ruleSet:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -973,25 +857,16 @@ namespace Example
     public class DeleteOutboundRulesetExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var ruleSetId = ruleSetId_example;  // string | Rule Set ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a Rule set.
-                
                 apiInstance.DeleteOutboundRuleset(ruleSetId);
             }
             catch (Exception e)
@@ -1001,7 +876,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1030,7 +905,7 @@ Requires ANY permissions:
 * outbound:schedule:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1042,25 +917,16 @@ namespace Example
     public class DeleteOutboundSchedulesCampaignExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a dialer campaign schedule.
-                
                 apiInstance.DeleteOutboundSchedulesCampaign(campaignId);
             }
             catch (Exception e)
@@ -1070,7 +936,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1099,7 +965,7 @@ Requires ANY permissions:
 * outbound:schedule:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1111,25 +977,16 @@ namespace Example
     public class DeleteOutboundSchedulesSequenceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var sequenceId = sequenceId_example;  // string | Sequence ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a dialer sequence schedule.
-                
                 apiInstance.DeleteOutboundSchedulesSequence(sequenceId);
             }
             catch (Exception e)
@@ -1139,7 +996,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1168,7 +1025,7 @@ Requires ANY permissions:
 * outbound:campaignSequence:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1180,25 +1037,16 @@ namespace Example
     public class DeleteOutboundSequenceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var sequenceId = sequenceId_example;  // string | Campaign Sequence ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a dialer campaign sequence.
-                
                 apiInstance.DeleteOutboundSequence(sequenceId);
             }
             catch (Exception e)
@@ -1208,7 +1056,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1237,7 +1085,7 @@ Requires ANY permissions:
 * outbound:attemptLimits:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1249,25 +1097,16 @@ namespace Example
     public class GetOutboundAttemptlimitExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var attemptLimitsId = attemptLimitsId_example;  // string | Attempt limits ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get attempt limits
-                
                 AttemptLimits result = apiInstance.GetOutboundAttemptlimit(attemptLimitsId);
                 Debug.WriteLine(result);
             }
@@ -1278,7 +1117,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1307,7 +1146,7 @@ Requires ANY permissions:
 * outbound:attemptLimits:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1319,50 +1158,21 @@ namespace Example
     public class GetOutboundAttemptlimitsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query attempt limits list
-                
                 AttemptLimitsEntityListing result = apiInstance.GetOutboundAttemptlimits(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1373,7 +1183,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1407,7 +1217,7 @@ Requires ANY permissions:
 * outbound:callableTimeSet:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1419,25 +1229,16 @@ namespace Example
     public class GetOutboundCallabletimesetExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var callableTimeSetId = callableTimeSetId_example;  // string | Callable Time Set ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get callable time set
-                
                 CallableTimeSet result = apiInstance.GetOutboundCallabletimeset(callableTimeSetId);
                 Debug.WriteLine(result);
             }
@@ -1448,7 +1249,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1477,7 +1278,7 @@ Requires ANY permissions:
 * outbound:callableTimeSet:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1489,50 +1290,21 @@ namespace Example
     public class GetOutboundCallabletimesetsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query callable time set list
-                
                 CallableTimeSetEntityListing result = apiInstance.GetOutboundCallabletimesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1543,7 +1315,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1577,7 +1349,7 @@ Requires ANY permissions:
 * outbound:responseSet:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1589,25 +1361,16 @@ namespace Example
     public class GetOutboundCallanalysisresponsesetExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var callAnalysisSetId = callAnalysisSetId_example;  // string | Call Analysis Response Set ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a dialer call analysis response set.
-                
                 ResponseSet result = apiInstance.GetOutboundCallanalysisresponseset(callAnalysisSetId);
                 Debug.WriteLine(result);
             }
@@ -1618,7 +1381,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1647,7 +1410,7 @@ Requires ANY permissions:
 * outbound:responseSet:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1659,50 +1422,21 @@ namespace Example
     public class GetOutboundCallanalysisresponsesetsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query a list of dialer call analysis response sets.
-                
                 ResponseSetEntityListing result = apiInstance.GetOutboundCallanalysisresponsesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1713,7 +1447,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1747,7 +1481,7 @@ Requires ANY permissions:
 * outbound:campaign:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1759,25 +1493,16 @@ namespace Example
     public class GetOutboundCampaignExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get dialer campaign.
-                
                 Campaign result = apiInstance.GetOutboundCampaign(campaignId);
                 Debug.WriteLine(result);
             }
@@ -1788,7 +1513,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1817,7 +1542,7 @@ Requires ANY permissions:
 * outbound:campaign:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1829,25 +1554,16 @@ namespace Example
     public class GetOutboundCampaignDiagnosticsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get campaign diagnostics
-                
                 CampaignDiagnostics result = apiInstance.GetOutboundCampaignDiagnostics(campaignId);
                 Debug.WriteLine(result);
             }
@@ -1858,7 +1574,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1887,7 +1603,7 @@ Requires ANY permissions:
 * outbound:campaign:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1899,25 +1615,16 @@ namespace Example
     public class GetOutboundCampaignInteractionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get dialer campaign interactions.
-                
                 CampaignInteractions result = apiInstance.GetOutboundCampaignInteractions(campaignId);
                 Debug.WriteLine(result);
             }
@@ -1928,7 +1635,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1957,7 +1664,7 @@ Requires ANY permissions:
 * outbound:campaign:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1969,25 +1676,16 @@ namespace Example
     public class GetOutboundCampaignProgressExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get campaign progress
-                
                 CampaignProgress result = apiInstance.GetOutboundCampaignProgress(campaignId);
                 Debug.WriteLine(result);
             }
@@ -1998,7 +1696,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2027,7 +1725,7 @@ Requires ANY permissions:
 * outbound:campaign:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2039,25 +1737,16 @@ namespace Example
     public class GetOutboundCampaignStatsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get statistics about a Dialer Campaign
-                
                 CampaignStats result = apiInstance.GetOutboundCampaignStats(campaignId);
                 Debug.WriteLine(result);
             }
@@ -2068,7 +1757,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2097,7 +1786,7 @@ Requires ANY permissions:
 * outbound:campaignRule:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2109,25 +1798,16 @@ namespace Example
     public class GetOutboundCampaignruleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignRuleId = campaignRuleId_example;  // string | Campaign Rule ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Campaign Rule
-                
                 CampaignRule result = apiInstance.GetOutboundCampaignrule(campaignRuleId);
                 Debug.WriteLine(result);
             }
@@ -2138,7 +1818,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2167,7 +1847,7 @@ Requires ANY permissions:
 * outbound:campaignRule:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2179,50 +1859,21 @@ namespace Example
     public class GetOutboundCampaignrulesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query Campaign Rule list
-                
                 CampaignRuleEntityListing result = apiInstance.GetOutboundCampaignrules(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -2233,7 +1884,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2267,7 +1918,7 @@ Requires ANY permissions:
 * outbound:campaign:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2279,85 +1930,28 @@ namespace Example
     public class GetOutboundCampaignsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | id (optional) 
-            
-            
-            
             var contactListId = contactListId_example;  // string | Contact List ID (optional) 
-            
-            
-            
-            
             var dncListIds = dncListIds_example;  // string | DNC list ID (optional) 
-            
-            
-            
-            
             var distributionQueueId = distributionQueueId_example;  // string | Distribution queue ID (optional) 
-            
-            
-            
-            
             var edgeGroupId = edgeGroupId_example;  // string | Edge group ID (optional) 
-            
-            
-            
-            
             var callAnalysisResponseSetId = callAnalysisResponseSetId_example;  // string | Call analysis response set ID (optional) 
-            
-            
-            
-            
-            
             var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query a list of dialer campaigns.
-                
                 CampaignEntityListing result = apiInstance.GetOutboundCampaigns(pageSize, pageNumber, filterType, name, id, contactListId, dncListIds, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, divisionId, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -2368,7 +1962,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2409,7 +2003,7 @@ Requires ANY permissions:
 * outbound:campaign:search
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2421,55 +2015,22 @@ namespace Example
     public class GetOutboundCampaignsDivisionviewsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | id (optional) 
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query a list of basic Campaign information objects
-                
                 CampaignDivisionViewListing result = apiInstance.GetOutboundCampaignsDivisionviews(pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -2480,7 +2041,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2515,7 +2076,7 @@ Requires ANY permissions:
 * outbound:contactList:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2527,35 +2088,18 @@ namespace Example
     public class GetOutboundContactlistExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | ContactList ID
-            
-            
-            
-            
             var includeImportStatus = true;  // bool? | Import status (optional)  (default to false)
-            
-            
-            
-            
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a dialer contact list.
-                
                 ContactList result = apiInstance.GetOutboundContactlist(contactListId, includeImportStatus, includeSize);
                 Debug.WriteLine(result);
             }
@@ -2566,7 +2110,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2597,7 +2141,7 @@ Requires ANY permissions:
 * outbound:contact:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2609,30 +2153,17 @@ namespace Example
     public class GetOutboundContactlistContactExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | Contact List ID
-            
-            
-            
-            
             var contactId = contactId_example;  // string | Contact ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a contact.
-                
                 DialerContact result = apiInstance.GetOutboundContactlistContact(contactListId, contactId);
                 Debug.WriteLine(result);
             }
@@ -2643,7 +2174,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2674,7 +2205,7 @@ Requires ALL permissions:
 * outbound:contactList:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2686,30 +2217,17 @@ namespace Example
     public class GetOutboundContactlistExportExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | ContactList ID
-            
-            
-            
-            
             var download = download_example;  // string | Redirect to download uri (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the URI of a contact list export.
-                
                 ExportUri result = apiInstance.GetOutboundContactlistExport(contactListId, download);
                 Debug.WriteLine(result);
             }
@@ -2720,7 +2238,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2750,7 +2268,7 @@ Requires ANY permissions:
 * outbound:contactList:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2762,25 +2280,16 @@ namespace Example
     public class GetOutboundContactlistImportstatusExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | ContactList ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get dialer contactList import status.
-                
                 ImportStatus result = apiInstance.GetOutboundContactlistImportstatus(contactListId);
                 Debug.WriteLine(result);
             }
@@ -2791,7 +2300,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2820,7 +2329,7 @@ Requires ANY permissions:
 * outbound:contactList:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2832,25 +2341,16 @@ namespace Example
     public class GetOutboundContactlistTimezonemappingpreviewExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | ContactList ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Preview the result of applying Automatic Time Zone Mapping to a contact list
-                
                 TimeZoneMappingPreview result = apiInstance.GetOutboundContactlistTimezonemappingpreview(contactListId);
                 Debug.WriteLine(result);
             }
@@ -2861,7 +2361,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2890,7 +2390,7 @@ Requires ANY permissions:
 * outbound:contactListFilter:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2902,25 +2402,16 @@ namespace Example
     public class GetOutboundContactlistfilterExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListFilterId = contactListFilterId_example;  // string | Contact List Filter ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Contact list filter
-                
                 ContactListFilter result = apiInstance.GetOutboundContactlistfilter(contactListFilterId);
                 Debug.WriteLine(result);
             }
@@ -2931,7 +2422,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2960,7 +2451,7 @@ Requires ANY permissions:
 * outbound:contactListFilter:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2972,55 +2463,22 @@ namespace Example
     public class GetOutboundContactlistfiltersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
-            
-            
-            
-            
             var contactListId = contactListId_example;  // string | Contact List ID (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query Contact list filters
-                
                 ContactListFilterEntityListing result = apiInstance.GetOutboundContactlistfilters(pageSize, pageNumber, filterType, name, sortBy, sortOrder, contactListId);
                 Debug.WriteLine(result);
             }
@@ -3031,7 +2489,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3066,7 +2524,7 @@ Requires ANY permissions:
 * outbound:contactList:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3078,70 +2536,25 @@ namespace Example
     public class GetOutboundContactlistsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var includeImportStatus = true;  // bool? | Include import status (optional)  (default to false)
-            
-            
-            
-            
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | id (optional) 
-            
-            
-            
-            
             var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query a list of contact lists.
-                
                 ContactListEntityListing result = apiInstance.GetOutboundContactlists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, divisionId, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -3152,7 +2565,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3190,7 +2603,7 @@ Requires ANY permissions:
 * outbound:contactList:search
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3202,35 +2615,18 @@ namespace Example
     public class GetOutboundContactlistsDivisionviewExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | Contactlist ID
-            
-            
-            
-            
             var includeImportStatus = true;  // bool? | Include import status (optional)  (default to false)
-            
-            
-            
-            
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a basic ContactList information object
-                
                 ContactListDivisionView result = apiInstance.GetOutboundContactlistsDivisionview(contactListId, includeImportStatus, includeSize);
                 Debug.WriteLine(result);
             }
@@ -3241,7 +2637,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3272,7 +2668,7 @@ Requires ANY permissions:
 * outbound:contactList:search
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3284,65 +2680,24 @@ namespace Example
     public class GetOutboundContactlistsDivisionviewsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var includeImportStatus = true;  // bool? | Include import status (optional)  (default to false)
-            
-            
-            
-            
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | id (optional) 
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query a list of simplified contact list objects.
-                
                 ContactListDivisionViewListing result = apiInstance.GetOutboundContactlistsDivisionviews(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -3353,7 +2708,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3390,7 +2745,7 @@ Requires ANY permissions:
 * outbound:dncList:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3402,35 +2757,18 @@ namespace Example
     public class GetOutboundDnclistExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var dncListId = dncListId_example;  // string | DncList ID
-            
-            
-            
-            
             var includeImportStatus = true;  // bool? | Import status (optional)  (default to false)
-            
-            
-            
-            
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get dialer DNC list
-                
                 DncList result = apiInstance.GetOutboundDnclist(dncListId, includeImportStatus, includeSize);
                 Debug.WriteLine(result);
             }
@@ -3441,7 +2779,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3473,7 +2811,7 @@ Requires ALL permissions:
 * outbound:dncList:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3485,30 +2823,17 @@ namespace Example
     public class GetOutboundDnclistExportExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var dncListId = dncListId_example;  // string | DncList ID
-            
-            
-            
-            
             var download = download_example;  // string | Redirect to download uri (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the URI of a DNC list export.
-                
                 ExportUri result = apiInstance.GetOutboundDnclistExport(dncListId, download);
                 Debug.WriteLine(result);
             }
@@ -3519,7 +2844,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3549,7 +2874,7 @@ Requires ANY permissions:
 * outbound:dncList:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3561,25 +2886,16 @@ namespace Example
     public class GetOutboundDnclistImportstatusExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var dncListId = dncListId_example;  // string | DncList ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get dialer dncList import status.
-                
                 ImportStatus result = apiInstance.GetOutboundDnclistImportstatus(dncListId);
                 Debug.WriteLine(result);
             }
@@ -3590,7 +2906,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3619,7 +2935,7 @@ Requires ANY permissions:
 * outbound:dncList:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3631,70 +2947,25 @@ namespace Example
     public class GetOutboundDnclistsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var includeImportStatus = true;  // bool? | Import status (optional)  (default to false)
-            
-            
-            
-            
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var dncSourceType = dncSourceType_example;  // string | DncSourceType (optional) 
-            
-            
-            
-            
-            
             var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query dialer DNC lists
-                
                 DncListEntityListing result = apiInstance.GetOutboundDnclists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, dncSourceType, divisionId, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -3705,7 +2976,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3743,7 +3014,7 @@ Requires ANY permissions:
 * outbound:dncList:search
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3755,35 +3026,18 @@ namespace Example
     public class GetOutboundDnclistsDivisionviewExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var dncListId = dncListId_example;  // string | Dnclist ID
-            
-            
-            
-            
             var includeImportStatus = true;  // bool? | Include import status (optional)  (default to false)
-            
-            
-            
-            
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a basic DncList information object
-                
                 DncListDivisionView result = apiInstance.GetOutboundDnclistsDivisionview(dncListId, includeImportStatus, includeSize);
                 Debug.WriteLine(result);
             }
@@ -3794,7 +3048,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3825,7 +3079,7 @@ Requires ANY permissions:
 * outbound:dncList:search
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3837,65 +3091,24 @@ namespace Example
     public class GetOutboundDnclistsDivisionviewsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var includeImportStatus = true;  // bool? | Include import status (optional)  (default to false)
-            
-            
-            
-            
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | id (optional) 
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query a list of simplified dnc list objects.
-                
                 DncListDivisionViewListing result = apiInstance.GetOutboundDnclistsDivisionviews(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -3906,7 +3119,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3943,7 +3156,7 @@ Requires ANY permissions:
 * outbound:eventLog:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3955,25 +3168,16 @@ namespace Example
     public class GetOutboundEventExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var eventId = eventId_example;  // string | Event Log ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Dialer Event
-                
                 EventLog result = apiInstance.GetOutboundEvent(eventId);
                 Debug.WriteLine(result);
             }
@@ -3984,7 +3188,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4013,7 +3217,7 @@ Requires ANY permissions:
 * outbound:eventLog:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4025,55 +3229,22 @@ namespace Example
     public class GetOutboundEventsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var category = category_example;  // string | Category (optional) 
-            
-            
-            
-            
             var level = level_example;  // string | Level (optional) 
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query Event Logs
-                
                 DialerEventEntityListing result = apiInstance.GetOutboundEvents(pageSize, pageNumber, filterType, category, level, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -4084,7 +3255,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4119,7 +3290,7 @@ Requires ANY permissions:
 * outbound:ruleSet:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4131,25 +3302,16 @@ namespace Example
     public class GetOutboundRulesetExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var ruleSetId = ruleSetId_example;  // string | Rule Set ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a Rule Set by ID.
-                
                 RuleSet result = apiInstance.GetOutboundRuleset(ruleSetId);
                 Debug.WriteLine(result);
             }
@@ -4160,7 +3322,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4189,7 +3351,7 @@ Requires ANY permissions:
 * outbound:ruleSet:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4201,50 +3363,21 @@ namespace Example
     public class GetOutboundRulesetsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query a list of Rule Sets.
-                
                 RuleSetEntityListing result = apiInstance.GetOutboundRulesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -4255,7 +3388,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4289,7 +3422,7 @@ Requires ANY permissions:
 * outbound:schedule:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4301,25 +3434,16 @@ namespace Example
     public class GetOutboundSchedulesCampaignExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a dialer campaign schedule.
-                
                 CampaignSchedule result = apiInstance.GetOutboundSchedulesCampaign(campaignId);
                 Debug.WriteLine(result);
             }
@@ -4330,7 +3454,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4359,7 +3483,7 @@ Requires ANY permissions:
 * outbound:schedule:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4371,20 +3495,15 @@ namespace Example
     public class GetOutboundSchedulesCampaignsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
 
             try
-            {
-                
+            { 
                 // Query for a list of dialer campaign schedules.
-                
                 List&lt;CampaignSchedule&gt; result = apiInstance.GetOutboundSchedulesCampaigns();
                 Debug.WriteLine(result);
             }
@@ -4395,7 +3514,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -4420,7 +3539,7 @@ Requires ANY permissions:
 * outbound:schedule:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4432,25 +3551,16 @@ namespace Example
     public class GetOutboundSchedulesSequenceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var sequenceId = sequenceId_example;  // string | Sequence ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a dialer sequence schedule.
-                
                 SequenceSchedule result = apiInstance.GetOutboundSchedulesSequence(sequenceId);
                 Debug.WriteLine(result);
             }
@@ -4461,7 +3571,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4490,7 +3600,7 @@ Requires ANY permissions:
 * outbound:schedule:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4502,20 +3612,15 @@ namespace Example
     public class GetOutboundSchedulesSequencesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
 
             try
-            {
-                
+            { 
                 // Query for a list of dialer sequence schedules.
-                
                 List&lt;SequenceSchedule&gt; result = apiInstance.GetOutboundSchedulesSequences();
                 Debug.WriteLine(result);
             }
@@ -4526,7 +3631,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -4551,7 +3656,7 @@ Requires ANY permissions:
 * outbound:campaignSequence:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4563,25 +3668,16 @@ namespace Example
     public class GetOutboundSequenceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var sequenceId = sequenceId_example;  // string | Campaign Sequence ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a dialer campaign sequence.
-                
                 CampaignSequence result = apiInstance.GetOutboundSequence(sequenceId);
                 Debug.WriteLine(result);
             }
@@ -4592,7 +3688,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4621,7 +3717,7 @@ Requires ANY permissions:
 * outbound:campaignSequence:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4633,50 +3729,21 @@ namespace Example
     public class GetOutboundSequencesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Query a list of dialer campaign sequences.
-                
                 CampaignSequenceEntityListing result = apiInstance.GetOutboundSequences(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -4687,7 +3754,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4721,7 +3788,7 @@ Requires ANY permissions:
 * outbound:settings:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4733,20 +3800,15 @@ namespace Example
     public class GetOutboundSettingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
 
             try
-            {
-                
+            { 
                 // Get the outbound settings for this organization
-                
                 OutboundSettings result = apiInstance.GetOutboundSettings();
                 Debug.WriteLine(result);
             }
@@ -4757,7 +3819,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -4782,7 +3844,7 @@ Requires ANY permissions:
 * outbound:wrapUpCodeMapping:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4794,20 +3856,15 @@ namespace Example
     public class GetOutboundWrapupcodemappingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
 
             try
-            {
-                
+            { 
                 // Get the Dialer wrap up code mapping.
-                
                 WrapUpCodeMapping result = apiInstance.GetOutboundWrapupcodemappings();
                 Debug.WriteLine(result);
             }
@@ -4818,7 +3875,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -4843,7 +3900,7 @@ Requires ANY permissions:
 * outbound:settings:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4855,25 +3912,16 @@ namespace Example
     public class PatchOutboundSettingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new OutboundSettings(); // OutboundSettings | outboundSettings
-            
-            
 
             try
-            {
-                
+            { 
                 // Update the outbound settings for this organization
-                
                 apiInstance.PatchOutboundSettings(body);
             }
             catch (Exception e)
@@ -4883,7 +3931,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4912,7 +3960,7 @@ Requires ANY permissions:
 * outbound:attemptLimits:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4924,25 +3972,16 @@ namespace Example
     public class PostOutboundAttemptlimitsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new AttemptLimits(); // AttemptLimits | AttemptLimits
-            
-            
 
             try
-            {
-                
+            { 
                 // Create attempt limits
-                
                 AttemptLimits result = apiInstance.PostOutboundAttemptlimits(body);
                 Debug.WriteLine(result);
             }
@@ -4953,7 +3992,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4982,7 +4021,7 @@ Requires ANY permissions:
 * outbound:audit:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4994,50 +4033,21 @@ namespace Example
     public class PostOutboundAuditsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new DialerAuditRequest(); // DialerAuditRequest | AuditSearch
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to entity.name)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
-            
-            
-            
-            
             var facetsOnly = true;  // bool? | Facets only (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieves audits for dialer.
-                
                 AuditSearchResult result = apiInstance.PostOutboundAudits(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
                 Debug.WriteLine(result);
             }
@@ -5048,7 +4058,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5082,7 +4092,7 @@ Requires ANY permissions:
 * outbound:callableTimeSet:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5094,25 +4104,16 @@ namespace Example
     public class PostOutboundCallabletimesetsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new CallableTimeSet(); // CallableTimeSet | DialerCallableTimeSet
-            
-            
 
             try
-            {
-                
+            { 
                 // Create callable time set
-                
                 CallableTimeSet result = apiInstance.PostOutboundCallabletimesets(body);
                 Debug.WriteLine(result);
             }
@@ -5123,7 +4124,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5152,7 +4153,7 @@ Requires ANY permissions:
 * outbound:responseSet:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5164,25 +4165,16 @@ namespace Example
     public class PostOutboundCallanalysisresponsesetsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new ResponseSet(); // ResponseSet | ResponseSet
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a dialer call analysis response set.
-                
                 ResponseSet result = apiInstance.PostOutboundCallanalysisresponsesets(body);
                 Debug.WriteLine(result);
             }
@@ -5193,7 +4185,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5221,7 +4213,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5233,30 +4225,17 @@ namespace Example
     public class PostOutboundCampaignCallbackScheduleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
-            
-            
             var body = new ContactCallbackRequest(); // ContactCallbackRequest | ContactCallbackRequest
-            
-            
 
             try
-            {
-                
+            { 
                 // Schedule a Callback for a Dialer Campaign (Deprecated)
-                
                 ContactCallbackRequest result = apiInstance.PostOutboundCampaignCallbackSchedule(campaignId, body);
                 Debug.WriteLine(result);
             }
@@ -5267,7 +4246,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5297,7 +4276,7 @@ Requires ANY permissions:
 * outbound:campaignRule:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5309,25 +4288,16 @@ namespace Example
     public class PostOutboundCampaignrulesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new CampaignRule(); // CampaignRule | CampaignRule
-            
-            
 
             try
-            {
-                
+            { 
                 // Create Campaign Rule
-                
                 CampaignRule result = apiInstance.PostOutboundCampaignrules(body);
                 Debug.WriteLine(result);
             }
@@ -5338,7 +4308,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5367,7 +4337,7 @@ Requires ANY permissions:
 * outbound:campaign:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5379,25 +4349,16 @@ namespace Example
     public class PostOutboundCampaignsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new Campaign(); // Campaign | Campaign
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a campaign.
-                
                 Campaign result = apiInstance.PostOutboundCampaigns(body);
                 Debug.WriteLine(result);
             }
@@ -5408,7 +4369,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5437,7 +4398,7 @@ Requires ANY permissions:
 * outbound:campaign:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5449,25 +4410,16 @@ namespace Example
     public class PostOutboundCampaignsProgressExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var body = ;  // List<string> | Campaign IDs
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get progress for a list of campaigns
-                
                 List&lt;CampaignProgress&gt; result = apiInstance.PostOutboundCampaignsProgress(body);
                 Debug.WriteLine(result);
             }
@@ -5478,7 +4430,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5507,7 +4459,7 @@ Requires ANY permissions:
 * outbound:contact:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5519,25 +4471,16 @@ namespace Example
     public class PostOutboundContactlistClearExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | Contact List ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
-                
                 apiInstance.PostOutboundContactlistClear(contactListId);
             }
             catch (Exception e)
@@ -5547,7 +4490,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5576,7 +4519,7 @@ Requires ANY permissions:
 * outbound:contact:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5588,45 +4531,20 @@ namespace Example
     public class PostOutboundContactlistContactsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | Contact List ID
-            
-            
-            
-            
-            
             var body = new List<WritableDialerContact>(); // List<WritableDialerContact> | Contact
-            
-            
-            
             var priority = true;  // bool? | Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional) 
-            
-            
-            
-            
             var clearSystemData = true;  // bool? | Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won't. (optional) 
-            
-            
-            
-            
             var doNotQueue = true;  // bool? | Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts they will not be called until a campaign recycle; False means that updated contacts will be re-queued, according to the 'priority' parameter. (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Add contacts to a contact list.
-                
                 List&lt;DialerContact&gt; result = apiInstance.PostOutboundContactlistContacts(contactListId, body, priority, clearSystemData, doNotQueue);
                 Debug.WriteLine(result);
             }
@@ -5637,7 +4555,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5670,7 +4588,7 @@ Requires ANY permissions:
 * outbound:contact:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5682,30 +4600,17 @@ namespace Example
     public class PostOutboundContactlistContactsBulkExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | Contact List ID
-            
-            
-            
-            
             var body = ;  // List<string> | ContactIds to get.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get contacts from a contact list.
-                
                 List&lt;DialerContact&gt; result = apiInstance.PostOutboundContactlistContactsBulk(contactListId, body);
                 Debug.WriteLine(result);
             }
@@ -5716,7 +4621,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5747,7 +4652,7 @@ Requires ALL permissions:
 * outbound:contactList:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5759,25 +4664,16 @@ namespace Example
     public class PostOutboundContactlistExportExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | ContactList ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Initiate the export of a contact list.
-                
                 UriReference result = apiInstance.PostOutboundContactlistExport(contactListId);
                 Debug.WriteLine(result);
             }
@@ -5788,7 +4684,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5817,7 +4713,7 @@ Requires ANY permissions:
 * outbound:contactListFilter:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5829,25 +4725,16 @@ namespace Example
     public class PostOutboundContactlistfiltersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new ContactListFilter(); // ContactListFilter | ContactListFilter
-            
-            
 
             try
-            {
-                
+            { 
                 // Create Contact List Filter
-                
                 ContactListFilter result = apiInstance.PostOutboundContactlistfilters(body);
                 Debug.WriteLine(result);
             }
@@ -5858,7 +4745,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5887,7 +4774,7 @@ Requires ANY permissions:
 * outbound:contact:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5899,25 +4786,16 @@ namespace Example
     public class PostOutboundContactlistfiltersPreviewExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new ContactListFilter(); // ContactListFilter | ContactListFilter
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a preview of the output of a contact list filter
-                
                 FilterPreviewResponse result = apiInstance.PostOutboundContactlistfiltersPreview(body);
                 Debug.WriteLine(result);
             }
@@ -5928,7 +4806,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5957,7 +4835,7 @@ Requires ANY permissions:
 * outbound:contactList:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5969,25 +4847,16 @@ namespace Example
     public class PostOutboundContactlistsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new ContactList(); // ContactList | ContactList
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a contact List.
-                
                 ContactList result = apiInstance.PostOutboundContactlists(body);
                 Debug.WriteLine(result);
             }
@@ -5998,7 +4867,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6027,7 +4896,7 @@ Requires ANY permissions:
 * outbound:dnc:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6039,25 +4908,16 @@ namespace Example
     public class PostOutboundConversationDncExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var conversationId = conversationId_example;  // string | Conversation ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Add phone numbers to a Dialer DNC list.
-                
                 apiInstance.PostOutboundConversationDnc(conversationId);
             }
             catch (Exception e)
@@ -6067,7 +4927,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6097,7 +4957,7 @@ Requires ALL permissions:
 * outbound:dncList:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6109,25 +4969,16 @@ namespace Example
     public class PostOutboundDnclistExportExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var dncListId = dncListId_example;  // string | DncList ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Initiate the export of a dnc list.
-                
                 UriReference result = apiInstance.PostOutboundDnclistExport(dncListId);
                 Debug.WriteLine(result);
             }
@@ -6138,7 +4989,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6167,7 +5018,7 @@ Requires ANY permissions:
 * outbound:dnc:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6179,30 +5030,17 @@ namespace Example
     public class PostOutboundDnclistPhonenumbersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var dncListId = dncListId_example;  // string | DncList ID
-            
-            
-            
-            
             var body = ;  // List<string> | DNC Phone Numbers
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Add phone numbers to a Dialer DNC list.
-                
                 apiInstance.PostOutboundDnclistPhonenumbers(dncListId, body);
             }
             catch (Exception e)
@@ -6212,7 +5050,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6242,7 +5080,7 @@ Requires ANY permissions:
 * outbound:dncList:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6254,25 +5092,16 @@ namespace Example
     public class PostOutboundDnclistsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new DncListCreate(); // DncListCreate | DncList
-            
-            
 
             try
-            {
-                
+            { 
                 // Create dialer DNC list
-                
                 DncList result = apiInstance.PostOutboundDnclists(body);
                 Debug.WriteLine(result);
             }
@@ -6283,7 +5112,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6312,7 +5141,7 @@ Requires ANY permissions:
 * outbound:ruleSet:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6324,25 +5153,16 @@ namespace Example
     public class PostOutboundRulesetsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new RuleSet(); // RuleSet | RuleSet
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a Dialer Call Analysis Response Set.
-                
                 RuleSet result = apiInstance.PostOutboundRulesets(body);
                 Debug.WriteLine(result);
             }
@@ -6353,7 +5173,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6382,7 +5202,7 @@ Requires ANY permissions:
 * outbound:campaignSequence:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6394,25 +5214,16 @@ namespace Example
     public class PostOutboundSequencesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new CampaignSequence(); // CampaignSequence | Organization
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new campaign sequence.
-                
                 CampaignSequence result = apiInstance.PostOutboundSequences(body);
                 Debug.WriteLine(result);
             }
@@ -6423,7 +5234,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6452,7 +5263,7 @@ Requires ANY permissions:
 * outbound:attemptLimits:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6464,30 +5275,17 @@ namespace Example
     public class PutOutboundAttemptlimitExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var attemptLimitsId = attemptLimitsId_example;  // string | Attempt limits ID
-            
-            
-            
-            
-            
             var body = new AttemptLimits(); // AttemptLimits | AttemptLimits
-            
-            
 
             try
-            {
-                
+            { 
                 // Update attempt limits
-                
                 AttemptLimits result = apiInstance.PutOutboundAttemptlimit(attemptLimitsId, body);
                 Debug.WriteLine(result);
             }
@@ -6498,7 +5296,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6528,7 +5326,7 @@ Requires ANY permissions:
 * outbound:callableTimeSet:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6540,30 +5338,17 @@ namespace Example
     public class PutOutboundCallabletimesetExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var callableTimeSetId = callableTimeSetId_example;  // string | Callable Time Set ID
-            
-            
-            
-            
-            
             var body = new CallableTimeSet(); // CallableTimeSet | DialerCallableTimeSet
-            
-            
 
             try
-            {
-                
+            { 
                 // Update callable time set
-                
                 CallableTimeSet result = apiInstance.PutOutboundCallabletimeset(callableTimeSetId, body);
                 Debug.WriteLine(result);
             }
@@ -6574,7 +5359,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6604,7 +5389,7 @@ Requires ANY permissions:
 * outbound:responseSet:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6616,30 +5401,17 @@ namespace Example
     public class PutOutboundCallanalysisresponsesetExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var callAnalysisSetId = callAnalysisSetId_example;  // string | Call Analysis Response Set ID
-            
-            
-            
-            
-            
             var body = new ResponseSet(); // ResponseSet | ResponseSet
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a dialer call analysis response set.
-                
                 ResponseSet result = apiInstance.PutOutboundCallanalysisresponseset(callAnalysisSetId, body);
                 Debug.WriteLine(result);
             }
@@ -6650,7 +5422,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6680,7 +5452,7 @@ Requires ANY permissions:
 * outbound:campaign:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6692,30 +5464,17 @@ namespace Example
     public class PutOutboundCampaignExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
-            
-            
             var body = new Campaign(); // Campaign | Campaign
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a campaign.
-                
                 Campaign result = apiInstance.PutOutboundCampaign(campaignId, body);
                 Debug.WriteLine(result);
             }
@@ -6726,7 +5485,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6755,7 +5514,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6767,35 +5526,18 @@ namespace Example
     public class PutOutboundCampaignAgentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
-            
             var userId = userId_example;  // string | Agent's user ID
-            
-            
-            
-            
-            
             var body = new Agent(); // Agent | agent
-            
-            
 
             try
-            {
-                
+            { 
                 // Send notification that an agent's state changed 
-                
                 string result = apiInstance.PutOutboundCampaignAgent(campaignId, userId, body);
                 Debug.WriteLine(result);
             }
@@ -6806,7 +5548,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6837,7 +5579,7 @@ Requires ANY permissions:
 * outbound:campaignRule:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6849,30 +5591,17 @@ namespace Example
     public class PutOutboundCampaignruleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignRuleId = campaignRuleId_example;  // string | Campaign Rule ID
-            
-            
-            
-            
-            
             var body = new CampaignRule(); // CampaignRule | CampaignRule
-            
-            
 
             try
-            {
-                
+            { 
                 // Update Campaign Rule
-                
                 CampaignRule result = apiInstance.PutOutboundCampaignrule(campaignRuleId, body);
                 Debug.WriteLine(result);
             }
@@ -6883,7 +5612,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6913,7 +5642,7 @@ Requires ANY permissions:
 * outbound:contactList:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6925,30 +5654,17 @@ namespace Example
     public class PutOutboundContactlistExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | ContactList ID
-            
-            
-            
-            
-            
             var body = new ContactList(); // ContactList | ContactList
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a contact list.
-                
                 ContactList result = apiInstance.PutOutboundContactlist(contactListId, body);
                 Debug.WriteLine(result);
             }
@@ -6959,7 +5675,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6989,7 +5705,7 @@ Requires ANY permissions:
 * outbound:contact:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -7001,35 +5717,18 @@ namespace Example
     public class PutOutboundContactlistContactExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListId = contactListId_example;  // string | Contact List ID
-            
-            
-            
-            
             var contactId = contactId_example;  // string | Contact ID
-            
-            
-            
-            
-            
             var body = new DialerContact(); // DialerContact | Contact
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a contact.
-                
                 DialerContact result = apiInstance.PutOutboundContactlistContact(contactListId, contactId, body);
                 Debug.WriteLine(result);
             }
@@ -7040,7 +5739,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -7071,7 +5770,7 @@ Requires ANY permissions:
 * outbound:contactListFilter:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -7083,30 +5782,17 @@ namespace Example
     public class PutOutboundContactlistfilterExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var contactListFilterId = contactListFilterId_example;  // string | Contact List Filter ID
-            
-            
-            
-            
-            
             var body = new ContactListFilter(); // ContactListFilter | ContactListFilter
-            
-            
 
             try
-            {
-                
+            { 
                 // Update Contact List Filter
-                
                 ContactListFilter result = apiInstance.PutOutboundContactlistfilter(contactListFilterId, body);
                 Debug.WriteLine(result);
             }
@@ -7117,7 +5803,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -7147,7 +5833,7 @@ Requires ANY permissions:
 * outbound:dncList:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -7159,30 +5845,17 @@ namespace Example
     public class PutOutboundDnclistExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var dncListId = dncListId_example;  // string | DncList ID
-            
-            
-            
-            
-            
             var body = new DncList(); // DncList | DncList
-            
-            
 
             try
-            {
-                
+            { 
                 // Update dialer DNC list
-                
                 DncList result = apiInstance.PutOutboundDnclist(dncListId, body);
                 Debug.WriteLine(result);
             }
@@ -7193,7 +5866,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -7223,7 +5896,7 @@ Requires ANY permissions:
 * outbound:ruleSet:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -7235,30 +5908,17 @@ namespace Example
     public class PutOutboundRulesetExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var ruleSetId = ruleSetId_example;  // string | Rule Set ID
-            
-            
-            
-            
-            
             var body = new RuleSet(); // RuleSet | RuleSet
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a RuleSet.
-                
                 RuleSet result = apiInstance.PutOutboundRuleset(ruleSetId, body);
                 Debug.WriteLine(result);
             }
@@ -7269,7 +5929,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -7299,7 +5959,7 @@ Requires ANY permissions:
 * outbound:schedule:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -7311,30 +5971,17 @@ namespace Example
     public class PutOutboundSchedulesCampaignExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var campaignId = campaignId_example;  // string | Campaign ID
-            
-            
-            
-            
-            
             var body = new CampaignSchedule(); // CampaignSchedule | CampaignSchedule
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a new campaign schedule.
-                
                 CampaignSchedule result = apiInstance.PutOutboundSchedulesCampaign(campaignId, body);
                 Debug.WriteLine(result);
             }
@@ -7345,7 +5992,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -7375,7 +6022,7 @@ Requires ANY permissions:
 * outbound:schedule:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -7387,30 +6034,17 @@ namespace Example
     public class PutOutboundSchedulesSequenceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var sequenceId = sequenceId_example;  // string | Sequence ID
-            
-            
-            
-            
-            
             var body = new SequenceSchedule(); // SequenceSchedule | SequenceSchedule
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a new sequence schedule.
-                
                 SequenceSchedule result = apiInstance.PutOutboundSchedulesSequence(sequenceId, body);
                 Debug.WriteLine(result);
             }
@@ -7421,7 +6055,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -7451,7 +6085,7 @@ Requires ANY permissions:
 * outbound:campaignSequence:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -7463,30 +6097,17 @@ namespace Example
     public class PutOutboundSequenceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
             var sequenceId = sequenceId_example;  // string | Campaign Sequence ID
-            
-            
-            
-            
-            
             var body = new CampaignSequence(); // CampaignSequence | Organization
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a new campaign sequence.
-                
                 CampaignSequence result = apiInstance.PutOutboundSequence(sequenceId, body);
                 Debug.WriteLine(result);
             }
@@ -7497,7 +6118,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -7527,7 +6148,7 @@ Requires ANY permissions:
 * outbound:wrapUpCodeMapping:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -7539,25 +6160,16 @@ namespace Example
     public class PutOutboundWrapupcodemappingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OutboundApi();
-            
-            
-            
             var body = new WrapUpCodeMapping(); // WrapUpCodeMapping | wrapUpCodeMapping
-            
-            
 
             try
-            {
-                
+            { 
                 // Update the Dialer wrap up code mapping.
-                
                 WrapUpCodeMapping result = apiInstance.PutOutboundWrapupcodemappings(body);
                 Debug.WriteLine(result);
             }
@@ -7568,7 +6180,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

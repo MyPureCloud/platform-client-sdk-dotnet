@@ -105,7 +105,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -117,25 +117,16 @@ namespace Example
     public class DeleteArchitectEmergencygroupExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var emergencyGroupId = emergencyGroupId_example;  // string | Emergency group ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Deletes a emergency group by ID
-                
                 apiInstance.DeleteArchitectEmergencygroup(emergencyGroupId);
             }
             catch (Exception e)
@@ -145,7 +136,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -174,7 +165,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -186,25 +177,16 @@ namespace Example
     public class DeleteArchitectIvrExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var ivrId = ivrId_example;  // string | IVR id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete an IVR Config.
-                
                 apiInstance.DeleteArchitectIvr(ivrId);
             }
             catch (Exception e)
@@ -214,7 +196,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -243,7 +225,7 @@ Requires ANY permissions:
 * architect:userPrompt:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -255,30 +237,17 @@ namespace Example
     public class DeleteArchitectPromptExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
-            
             var allResources = true;  // bool? | Whether or not to delete all the prompt resources (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete specified user prompt
-                
                 apiInstance.DeleteArchitectPrompt(promptId, allResources);
             }
             catch (Exception e)
@@ -288,7 +257,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -318,7 +287,7 @@ Requires ANY permissions:
 * architect:userPrompt:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -330,30 +299,17 @@ namespace Example
     public class DeleteArchitectPromptResourceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
-            
             var languageCode = languageCode_example;  // string | Language
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete specified user prompt resource
-                
                 apiInstance.DeleteArchitectPromptResource(promptId, languageCode);
             }
             catch (Exception e)
@@ -363,7 +319,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -393,7 +349,7 @@ Requires ANY permissions:
 * architect:userPrompt:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -405,25 +361,16 @@ namespace Example
     public class DeleteArchitectPromptsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
-            
             var id = new List<string>(); // List<string> | List of Prompt IDs
-            
-            
 
             try
-            {
-                
+            { 
                 // Batch-delete a list of prompts
-                
                 Operation result = apiInstance.DeleteArchitectPrompts(id);
                 Debug.WriteLine(result);
             }
@@ -434,7 +381,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -463,7 +410,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -475,25 +422,16 @@ namespace Example
     public class DeleteArchitectScheduleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var scheduleId = scheduleId_example;  // string | Schedule ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a schedule by id
-                
                 apiInstance.DeleteArchitectSchedule(scheduleId);
             }
             catch (Exception e)
@@ -503,7 +441,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -532,7 +470,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -544,25 +482,16 @@ namespace Example
     public class DeleteArchitectSchedulegroupExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var scheduleGroupId = scheduleGroupId_example;  // string | Schedule group ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Deletes a schedule group by ID
-                
                 apiInstance.DeleteArchitectSchedulegroup(scheduleGroupId);
             }
             catch (Exception e)
@@ -572,7 +501,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -601,7 +530,7 @@ Requires ANY permissions:
 * architect:systemPrompt:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -613,30 +542,17 @@ namespace Example
     public class DeleteArchitectSystempromptResourceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
-            
             var languageCode = languageCode_example;  // string | Language
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a system prompt resource override.
-                
                 apiInstance.DeleteArchitectSystempromptResource(promptId, languageCode);
             }
             catch (Exception e)
@@ -646,7 +562,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -676,7 +592,7 @@ Requires ANY permissions:
 * architect:flow:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -688,25 +604,16 @@ namespace Example
     public class DeleteFlowExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flowId = flowId_example;  // string | Flow ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete flow
-                
                 apiInstance.DeleteFlow(flowId);
             }
             catch (Exception e)
@@ -716,7 +623,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -745,7 +652,7 @@ Requires ANY permissions:
 * architect:flow:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -757,25 +664,16 @@ namespace Example
     public class DeleteFlowsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
-            
             var id = new List<string>(); // List<string> | List of Flow IDs
-            
-            
 
             try
-            {
-                
+            { 
                 // Batch-delete a list of flows
-                
                 Operation result = apiInstance.DeleteFlows(id);
                 Debug.WriteLine(result);
             }
@@ -786,7 +684,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -815,7 +713,7 @@ Requires ANY permissions:
 * architect:datatable:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -827,30 +725,17 @@ namespace Example
     public class DeleteFlowsDatatableExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var datatableId = datatableId_example;  // string | id of datatable
-            
-            
-            
-            
             var force = true;  // bool? | force delete, even if in use (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // deletes a specific datatable by id
-                
                 apiInstance.DeleteFlowsDatatable(datatableId, force);
             }
             catch (Exception e)
@@ -860,7 +745,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -890,7 +775,7 @@ Requires ANY permissions:
 * architect:datatable:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -902,30 +787,17 @@ namespace Example
     public class DeleteFlowsDatatableRowExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var datatableId = datatableId_example;  // string | id of datatable
-            
-            
-            
-            
             var rowId = rowId_example;  // string | the key for the row
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a row entry
-                
                 apiInstance.DeleteFlowsDatatableRow(datatableId, rowId);
             }
             catch (Exception e)
@@ -935,7 +807,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -965,7 +837,7 @@ Requires ANY permissions:
 * architect:dependencyTracking:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -977,60 +849,23 @@ namespace Example
     public class GetArchitectDependencytrackingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var name = name_example;  // string | Object name to search for
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
-            
             var objectType = new List<string>(); // List<string> | Object type(s) to search for (optional) 
-            
-            
-            
             var consumedResources = true;  // bool? | Include resources each result item consumes (optional) 
-            
-            
-            
-            
             var consumingResources = true;  // bool? | Include resources that consume each result item (optional) 
-            
-            
-            
-            
-            
             var consumedResourceType = new List<string>(); // List<string> | Types of consumed resources to return, if consumed resources are requested (optional) 
-            
-            
-            
-            
             var consumingResourceType = new List<string>(); // List<string> | Types of consuming resources to return, if consuming resources are requested (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Dependency Tracking objects that have a given display name
-                
                 DependencyObjectEntityListing result = apiInstance.GetArchitectDependencytracking(name, pageNumber, pageSize, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType);
                 Debug.WriteLine(result);
             }
@@ -1041,7 +876,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1077,7 +912,7 @@ Requires ANY permissions:
 * architect:dependencyTracking:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1089,20 +924,15 @@ namespace Example
     public class GetArchitectDependencytrackingBuildExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
 
             try
-            {
-                
+            { 
                 // Get Dependency Tracking build status for an organization
-                
                 DependencyStatus result = apiInstance.GetArchitectDependencytrackingBuild();
                 Debug.WriteLine(result);
             }
@@ -1113,7 +943,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -1138,7 +968,7 @@ Requires ANY permissions:
 * architect:dependencyTracking:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1150,40 +980,19 @@ namespace Example
     public class GetArchitectDependencytrackingConsumedresourcesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var id = id_example;  // string | Consuming object ID
-            
-            
-            
-            
             var version = version_example;  // string | Consuming object version
-            
-            
-            
-            
             var objectType = objectType_example;  // string | Consuming object type.  Only versioned types are allowed here.
-            
-            
-            
-            
-            
             var resourceType = new List<string>(); // List<string> | Types of consumed resources to show (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get resources that are consumed by a given Dependency Tracking object
-                
                 ConsumedResourcesEntityListing result = apiInstance.GetArchitectDependencytrackingConsumedresources(id, version, objectType, resourceType);
                 Debug.WriteLine(result);
             }
@@ -1194,7 +1003,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1226,7 +1035,7 @@ Requires ANY permissions:
 * architect:dependencyTracking:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1238,35 +1047,18 @@ namespace Example
     public class GetArchitectDependencytrackingConsumingresourcesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var id = id_example;  // string | Consumed object ID
-            
-            
-            
-            
             var objectType = objectType_example;  // string | Consumed object type
-            
-            
-            
-            
-            
             var resourceType = new List<string>(); // List<string> | Types of consuming resources to show.  Only versioned types are allowed here. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get resources that consume a given Dependency Tracking object
-                
                 ConsumingResourcesEntityListing result = apiInstance.GetArchitectDependencytrackingConsumingresources(id, objectType, resourceType);
                 Debug.WriteLine(result);
             }
@@ -1277,7 +1069,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1308,7 +1100,7 @@ Requires ANY permissions:
 * architect:dependencyTracking:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1320,55 +1112,22 @@ namespace Example
     public class GetArchitectDependencytrackingDeletedresourceconsumersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var name = name_example;  // string | Name to search for (optional) 
-            
-            
-            
-            
-            
             var objectType = new List<string>(); // List<string> | Object type(s) to search for (optional) 
-            
-            
-            
             var flowFilter = flowFilter_example;  // string | Show only checkedIn or published flows (optional) 
-            
-            
-            
-            
             var consumedResources = true;  // bool? | Return consumed resources? (optional)  (default to false)
-            
-            
-            
-            
-            
             var consumedResourceType = new List<string>(); // List<string> | Resource type(s) to return (optional) 
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Dependency Tracking objects that consume deleted resources
-                
                 DependencyObjectEntityListing result = apiInstance.GetArchitectDependencytrackingDeletedresourceconsumers(name, objectType, flowFilter, consumedResources, consumedResourceType, pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -1379,7 +1138,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1414,7 +1173,7 @@ Requires ANY permissions:
 * architect:dependencyTracking:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1426,55 +1185,22 @@ namespace Example
     public class GetArchitectDependencytrackingObjectExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var id = id_example;  // string | Object ID
-            
-            
-            
-            
             var version = version_example;  // string | Object version (optional) 
-            
-            
-            
-            
             var objectType = objectType_example;  // string | Object type (optional) 
-            
-            
-            
-            
             var consumedResources = true;  // bool? | Include resources this item consumes (optional) 
-            
-            
-            
-            
             var consumingResources = true;  // bool? | Include resources that consume this item (optional) 
-            
-            
-            
-            
-            
             var consumedResourceType = new List<string>(); // List<string> | Types of consumed resources to return, if consumed resources are requested (optional) 
-            
-            
-            
-            
             var consumingResourceType = new List<string>(); // List<string> | Types of consuming resources to return, if consuming resources are requested (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a Dependency Tracking object
-                
                 DependencyObject result = apiInstance.GetArchitectDependencytrackingObject(id, version, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType);
                 Debug.WriteLine(result);
             }
@@ -1485,7 +1211,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1520,7 +1246,7 @@ Requires ANY permissions:
 * architect:dependencyTracking:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1532,25 +1258,16 @@ namespace Example
     public class GetArchitectDependencytrackingTypeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var typeId = typeId_example;  // string | Type ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a Dependency Tracking type.
-                
                 DependencyType result = apiInstance.GetArchitectDependencytrackingType(typeId);
                 Debug.WriteLine(result);
             }
@@ -1561,7 +1278,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1590,7 +1307,7 @@ Requires ANY permissions:
 * architect:dependencyTracking:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1602,30 +1319,17 @@ namespace Example
     public class GetArchitectDependencytrackingTypesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Dependency Tracking types.
-                
                 DependencyTypeEntityListing result = apiInstance.GetArchitectDependencytrackingTypes(pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -1636,7 +1340,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1666,7 +1370,7 @@ Requires ANY permissions:
 * architect:dependencyTracking:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1678,50 +1382,21 @@ namespace Example
     public class GetArchitectDependencytrackingUpdatedresourceconsumersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var name = name_example;  // string | Name to search for (optional) 
-            
-            
-            
-            
-            
             var objectType = new List<string>(); // List<string> | Object type(s) to search for (optional) 
-            
-            
-            
             var consumedResources = true;  // bool? | Return consumed resources? (optional)  (default to false)
-            
-            
-            
-            
-            
             var consumedResourceType = new List<string>(); // List<string> | Resource type(s) to return (optional) 
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Dependency Tracking objects that depend on updated resources
-                
                 DependencyObjectEntityListing result = apiInstance.GetArchitectDependencytrackingUpdatedresourceconsumers(name, objectType, consumedResources, consumedResourceType, pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -1732,7 +1407,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1766,7 +1441,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1778,25 +1453,16 @@ namespace Example
     public class GetArchitectEmergencygroupExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var emergencyGroupId = emergencyGroupId_example;  // string | Emergency group ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets a emergency group by ID
-                
                 EmergencyGroup result = apiInstance.GetArchitectEmergencygroup(emergencyGroupId);
                 Debug.WriteLine(result);
             }
@@ -1807,7 +1473,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1836,7 +1502,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1848,45 +1514,20 @@ namespace Example
     public class GetArchitectEmergencygroupsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
-            
-            
-            
-            
             var name = name_example;  // string | Name of the Emergency Group to filter by. (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of emergency groups.
-                
                 EmergencyGroupListing result = apiInstance.GetArchitectEmergencygroups(pageNumber, pageSize, sortBy, sortOrder, name);
                 Debug.WriteLine(result);
             }
@@ -1897,7 +1538,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1930,7 +1571,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1942,25 +1583,16 @@ namespace Example
     public class GetArchitectIvrExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var ivrId = ivrId_example;  // string | IVR id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get an IVR config.
-                
                 IVR result = apiInstance.GetArchitectIvr(ivrId);
                 Debug.WriteLine(result);
             }
@@ -1971,7 +1603,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2000,7 +1632,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2012,45 +1644,20 @@ namespace Example
     public class GetArchitectIvrsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
-            
-            
-            
-            
             var name = name_example;  // string | Name of the IVR to filter by. (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get IVR configs.
-                
                 IVREntityListing result = apiInstance.GetArchitectIvrs(pageNumber, pageSize, sortBy, sortOrder, name);
                 Debug.WriteLine(result);
             }
@@ -2061,7 +1668,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2094,7 +1701,7 @@ Requires ANY permissions:
 * architect:userPrompt:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2106,25 +1713,16 @@ namespace Example
     public class GetArchitectPromptExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get specified user prompt
-                
                 Prompt result = apiInstance.GetArchitectPrompt(promptId);
                 Debug.WriteLine(result);
             }
@@ -2135,7 +1733,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2164,7 +1762,7 @@ Requires ANY permissions:
 * architect:userPrompt:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2176,55 +1774,22 @@ namespace Example
     public class GetArchitectPromptHistoryHistoryIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
-            
             var historyId = historyId_example;  // string | History request ID
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to desc)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
-            
-            
-            
-            
-            
             var action = new List<string>(); // List<string> | Flow actions to include (omit to include all) (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get generated prompt history
-                
                 HistoryListing result = apiInstance.GetArchitectPromptHistoryHistoryId(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
                 Debug.WriteLine(result);
             }
@@ -2235,7 +1800,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2270,7 +1835,7 @@ Requires ANY permissions:
 * architect:userPrompt:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2282,30 +1847,17 @@ namespace Example
     public class GetArchitectPromptResourceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
-            
             var languageCode = languageCode_example;  // string | Language
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get specified user prompt resource
-                
                 PromptAsset result = apiInstance.GetArchitectPromptResource(promptId, languageCode);
                 Debug.WriteLine(result);
             }
@@ -2316,7 +1868,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2346,7 +1898,7 @@ Requires ANY permissions:
 * architect:userPrompt:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2358,35 +1910,18 @@ namespace Example
     public class GetArchitectPromptResourcesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a pageable list of user prompt resources
-                
                 PromptAssetEntityListing result = apiInstance.GetArchitectPromptResources(promptId, pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -2397,7 +1932,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2428,7 +1963,7 @@ Requires ANY permissions:
 * architect:userPrompt:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2440,55 +1975,22 @@ namespace Example
     public class GetArchitectPromptsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var description = description_example;  // string | Description (optional) 
-            
-            
-            
-            
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a pageable list of user prompts
-                
                 PromptEntityListing result = apiInstance.GetArchitectPrompts(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -2499,7 +2001,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2534,7 +2036,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2546,25 +2048,16 @@ namespace Example
     public class GetArchitectScheduleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var scheduleId = scheduleId_example;  // string | Schedule ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a schedule by ID
-                
                 Schedule result = apiInstance.GetArchitectSchedule(scheduleId);
                 Debug.WriteLine(result);
             }
@@ -2575,7 +2068,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2604,7 +2097,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2616,25 +2109,16 @@ namespace Example
     public class GetArchitectSchedulegroupExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var scheduleGroupId = scheduleGroupId_example;  // string | Schedule group ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets a schedule group by ID
-                
                 ScheduleGroup result = apiInstance.GetArchitectSchedulegroup(scheduleGroupId);
                 Debug.WriteLine(result);
             }
@@ -2645,7 +2129,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2674,7 +2158,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2686,45 +2170,20 @@ namespace Example
     public class GetArchitectSchedulegroupsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
-            
-            
-            
-            
             var name = name_example;  // string | Name of the Schedule Group to filter by. (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of schedule groups.
-                
                 ScheduleGroupEntityListing result = apiInstance.GetArchitectSchedulegroups(pageNumber, pageSize, sortBy, sortOrder, name);
                 Debug.WriteLine(result);
             }
@@ -2735,7 +2194,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2768,7 +2227,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2780,45 +2239,20 @@ namespace Example
     public class GetArchitectSchedulesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
-            
-            
-            
-            
             var name = name_example;  // string | Name of the Schedule to filter by. (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of schedules.
-                
                 ScheduleEntityListing result = apiInstance.GetArchitectSchedules(pageNumber, pageSize, sortBy, sortOrder, name);
                 Debug.WriteLine(result);
             }
@@ -2829,7 +2263,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2862,7 +2296,7 @@ Requires ANY permissions:
 * architect:systemPrompt:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2874,25 +2308,16 @@ namespace Example
     public class GetArchitectSystempromptExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | promptId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a system prompt
-                
                 SystemPrompt result = apiInstance.GetArchitectSystemprompt(promptId);
                 Debug.WriteLine(result);
             }
@@ -2903,7 +2328,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2932,7 +2357,7 @@ Requires ANY permissions:
 * architect:systemPrompt:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2944,55 +2369,22 @@ namespace Example
     public class GetArchitectSystempromptHistoryHistoryIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | promptId
-            
-            
-            
-            
             var historyId = historyId_example;  // string | History request ID
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to desc)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
-            
-            
-            
-            
-            
             var action = new List<string>(); // List<string> | Flow actions to include (omit to include all) (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get generated prompt history
-                
                 HistoryListing result = apiInstance.GetArchitectSystempromptHistoryHistoryId(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
                 Debug.WriteLine(result);
             }
@@ -3003,7 +2395,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3038,7 +2430,7 @@ Requires ANY permissions:
 * architect:systemPrompt:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3050,30 +2442,17 @@ namespace Example
     public class GetArchitectSystempromptResourceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
-            
             var languageCode = languageCode_example;  // string | Language
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a system prompt resource.
-                
                 SystemPromptAsset result = apiInstance.GetArchitectSystempromptResource(promptId, languageCode);
                 Debug.WriteLine(result);
             }
@@ -3084,7 +2463,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3114,7 +2493,7 @@ Requires ANY permissions:
 * architect:systemPrompt:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3126,45 +2505,20 @@ namespace Example
     public class GetArchitectSystempromptResourcesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get system prompt resources.
-                
                 SystemPromptAssetEntityListing result = apiInstance.GetArchitectSystempromptResources(promptId, pageNumber, pageSize, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -3175,7 +2529,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3208,7 +2562,7 @@ Requires ANY permissions:
 * architect:systemPrompt:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3220,55 +2574,22 @@ namespace Example
     public class GetArchitectSystempromptsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var description = description_example;  // string | Description (optional) 
-            
-            
-            
-            
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get System Prompts
-                
                 SystemPromptEntityListing result = apiInstance.GetArchitectSystemprompts(pageNumber, pageSize, sortBy, sortOrder, name, description, nameOrDescription);
                 Debug.WriteLine(result);
             }
@@ -3279,7 +2600,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3314,7 +2635,7 @@ Requires ANY permissions:
 * architect:flow:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3326,30 +2647,17 @@ namespace Example
     public class GetFlowExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flowId = flowId_example;  // string | Flow ID
-            
-            
-            
-            
             var deleted = true;  // bool? | Include deleted flows (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get flow
-                
                 Flow result = apiInstance.GetFlow(flowId, deleted);
                 Debug.WriteLine(result);
             }
@@ -3360,7 +2668,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3390,7 +2698,7 @@ Requires ANY permissions:
 * architect:flow:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3402,55 +2710,22 @@ namespace Example
     public class GetFlowHistoryHistoryIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flowId = flowId_example;  // string | Flow ID
-            
-            
-            
-            
             var historyId = historyId_example;  // string | History request ID
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to desc)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
-            
-            
-            
-            
-            
             var action = new List<string>(); // List<string> | Flow actions to include (omit to include all) (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get generated flow history
-                
                 HistoryListing result = apiInstance.GetFlowHistoryHistoryId(flowId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
                 Debug.WriteLine(result);
             }
@@ -3461,7 +2736,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3496,7 +2771,7 @@ Requires ANY permissions:
 * architect:flow:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3508,30 +2783,17 @@ namespace Example
     public class GetFlowLatestconfigurationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flowId = flowId_example;  // string | Flow ID
-            
-            
-            
-            
             var deleted = true;  // bool? | Include deleted flows (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the latest configuration for flow
-                
                 Object result = apiInstance.GetFlowLatestconfiguration(flowId, deleted);
                 Debug.WriteLine(result);
             }
@@ -3542,7 +2804,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3572,7 +2834,7 @@ Requires ANY permissions:
 * architect:flow:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3584,35 +2846,18 @@ namespace Example
     public class GetFlowVersionExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flowId = flowId_example;  // string | Flow ID
-            
-            
-            
-            
             var versionId = versionId_example;  // string | Version ID
-            
-            
-            
-            
             var deleted = deleted_example;  // string | Include deleted flows (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get flow version
-                
                 FlowVersion result = apiInstance.GetFlowVersion(flowId, versionId, deleted);
                 Debug.WriteLine(result);
             }
@@ -3623,7 +2868,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3654,7 +2899,7 @@ Requires ANY permissions:
 * architect:flow:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3666,35 +2911,18 @@ namespace Example
     public class GetFlowVersionConfigurationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flowId = flowId_example;  // string | Flow ID
-            
-            
-            
-            
             var versionId = versionId_example;  // string | Version ID
-            
-            
-            
-            
             var deleted = deleted_example;  // string | Include deleted flows (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Create flow version configuration
-                
                 Object result = apiInstance.GetFlowVersionConfiguration(flowId, versionId, deleted);
                 Debug.WriteLine(result);
             }
@@ -3705,7 +2933,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3736,7 +2964,7 @@ Requires ANY permissions:
 * architect:flow:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3748,40 +2976,19 @@ namespace Example
     public class GetFlowVersionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flowId = flowId_example;  // string | Flow ID
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var deleted = true;  // bool? | Include deleted flows (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get flow version list
-                
                 FlowVersionEntityListing result = apiInstance.GetFlowVersions(flowId, pageNumber, pageSize, deleted);
                 Debug.WriteLine(result);
             }
@@ -3792,7 +2999,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3824,7 +3031,7 @@ Requires ANY permissions:
 * architect:flow:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3836,110 +3043,33 @@ namespace Example
     public class GetFlowsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
-            
             var type = new List<string>(); // List<string> | Type (optional) 
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | ID (optional) 
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var description = description_example;  // string | Description (optional) 
-            
-            
-            
-            
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
-            
-            
-            
-            
             var publishVersionId = publishVersionId_example;  // string | Publish version ID (optional) 
-            
-            
-            
-            
             var editableBy = editableBy_example;  // string | Editable by (optional) 
-            
-            
-            
-            
             var lockedBy = lockedBy_example;  // string | Locked by (optional) 
-            
-            
-            
-            
             var secure = secure_example;  // string | Secure (optional) 
-            
-            
-            
-            
             var deleted = true;  // bool? | Include deleted (optional)  (default to false)
-            
-            
-            
-            
             var includeSchemas = true;  // bool? | Include variable schemas (optional)  (default to false)
-            
-            
-            
-            
             var publishedAfter = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01;  // string | Published after (optional) 
-            
-            
-            
-            
             var publishedBefore = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01;  // string | Published before (optional) 
-            
-            
-            
-            
-            
             var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a pageable list of flows, filtered by query parameters
-                
                 FlowEntityListing result = apiInstance.GetFlows(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, secure, deleted, includeSchemas, publishedAfter, publishedBefore, divisionId);
                 Debug.WriteLine(result);
             }
@@ -3950,7 +3080,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3996,7 +3126,7 @@ Requires ANY permissions:
 * architect:datatable:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4008,30 +3138,17 @@ namespace Example
     public class GetFlowsDatatableExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var datatableId = datatableId_example;  // string | id of datatable
-            
-            
-            
-            
             var expand = expand_example;  // string | Expand instructions for the result (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Returns a specific datatable by id
-                
                 DataTable result = apiInstance.GetFlowsDatatable(datatableId, expand);
                 Debug.WriteLine(result);
             }
@@ -4042,7 +3159,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4072,7 +3189,7 @@ Requires ANY permissions:
 * architect:datatable:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4084,35 +3201,18 @@ namespace Example
     public class GetFlowsDatatableRowExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var datatableId = datatableId_example;  // string | id of datatable
-            
-            
-            
-            
             var rowId = rowId_example;  // string | The key for the row
-            
-            
-            
-            
             var showbrief = true;  // bool? | if true returns just the key field for the row (optional)  (default to true)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Returns a specific row for the datatable
-                
                 Dictionary&lt;string, Object&gt; result = apiInstance.GetFlowsDatatableRow(datatableId, rowId, showbrief);
                 Debug.WriteLine(result);
             }
@@ -4123,7 +3223,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4154,7 +3254,7 @@ Requires ANY permissions:
 * architect:datatable:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4166,40 +3266,19 @@ namespace Example
     public class GetFlowsDatatableRowsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var datatableId = datatableId_example;  // string | id of datatable
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var showbrief = true;  // bool? | If true returns just the key value of the row (optional)  (default to true)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Returns the rows for the datatable
-                
                 DataTableRowEntityListing result = apiInstance.GetFlowsDatatableRows(datatableId, pageNumber, pageSize, showbrief);
                 Debug.WriteLine(result);
             }
@@ -4210,7 +3289,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4242,7 +3321,7 @@ Requires ANY permissions:
 * architect:datatable:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4254,45 +3333,20 @@ namespace Example
     public class GetFlowsDatatablesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var expand = expand_example;  // string | Expand instructions for the result (optional) 
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieve a list of datatables for the org
-                
                 DataTablesDomainEntityListing result = apiInstance.GetFlowsDatatables(expand, pageNumber, pageSize, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -4303,7 +3357,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4336,7 +3390,7 @@ Requires ANY permissions:
 * architect:flow:search
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4348,75 +3402,26 @@ namespace Example
     public class GetFlowsDivisionviewsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
-            
             var type = new List<string>(); // List<string> | Type (optional) 
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | ID (optional) 
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var publishVersionId = publishVersionId_example;  // string | Publish version ID (optional) 
-            
-            
-            
-            
             var publishedAfter = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01;  // string | Published after (optional) 
-            
-            
-            
-            
             var publishedBefore = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01;  // string | Published before (optional) 
-            
-            
-            
-            
-            
             var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a pageable list of basic flow information objects filterable by query parameters.
-                
                 FlowDivisionViewEntityListing result = apiInstance.GetFlowsDivisionviews(type, pageNumber, pageSize, sortBy, sortOrder, id, name, publishVersionId, publishedAfter, publishedBefore, divisionId);
                 Debug.WriteLine(result);
             }
@@ -4427,7 +3432,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4466,7 +3471,7 @@ Requires ANY permissions:
 * architect:dependencyTracking:rebuild
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4478,20 +3483,15 @@ namespace Example
     public class PostArchitectDependencytrackingBuildExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
 
             try
-            {
-                
+            { 
                 // Rebuild Dependency Tracking data for an organization
-                
                 apiInstance.PostArchitectDependencytrackingBuild();
             }
             catch (Exception e)
@@ -4501,7 +3501,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -4526,7 +3526,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4538,25 +3538,16 @@ namespace Example
     public class PostArchitectEmergencygroupsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
-            
             var body = new EmergencyGroup(); // EmergencyGroup | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Creates a new emergency group
-                
                 EmergencyGroup result = apiInstance.PostArchitectEmergencygroups(body);
                 Debug.WriteLine(result);
             }
@@ -4567,7 +3558,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4596,7 +3587,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4608,25 +3599,16 @@ namespace Example
     public class PostArchitectIvrsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
-            
             var body = new IVR(); // IVR | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create IVR config.
-                
                 IVR result = apiInstance.PostArchitectIvrs(body);
                 Debug.WriteLine(result);
             }
@@ -4637,7 +3619,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4666,7 +3648,7 @@ Requires ANY permissions:
 * architect:userPrompt:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4678,25 +3660,16 @@ namespace Example
     public class PostArchitectPromptHistoryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Generate prompt history
-                
                 Operation result = apiInstance.PostArchitectPromptHistory(promptId);
                 Debug.WriteLine(result);
             }
@@ -4707,7 +3680,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4736,7 +3709,7 @@ Requires ANY permissions:
 * architect:userPrompt:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4748,30 +3721,17 @@ namespace Example
     public class PostArchitectPromptResourcesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
-            
-            
             var body = new PromptAssetCreate(); // PromptAssetCreate | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new user prompt resource
-                
                 PromptAsset result = apiInstance.PostArchitectPromptResources(promptId, body);
                 Debug.WriteLine(result);
             }
@@ -4782,7 +3742,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4812,7 +3772,7 @@ Requires ANY permissions:
 * architect:userPrompt:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4824,25 +3784,16 @@ namespace Example
     public class PostArchitectPromptsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
-            
             var body = new Prompt(); // Prompt | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new user prompt
-                
                 Prompt result = apiInstance.PostArchitectPrompts(body);
                 Debug.WriteLine(result);
             }
@@ -4853,7 +3804,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4882,7 +3833,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4894,25 +3845,16 @@ namespace Example
     public class PostArchitectSchedulegroupsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
-            
             var body = new ScheduleGroup(); // ScheduleGroup | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Creates a new schedule group
-                
                 ScheduleGroup result = apiInstance.PostArchitectSchedulegroups(body);
                 Debug.WriteLine(result);
             }
@@ -4923,7 +3865,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4952,7 +3894,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4964,25 +3906,16 @@ namespace Example
     public class PostArchitectSchedulesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
-            
             var body = new Schedule(); // Schedule | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new schedule.
-                
                 Schedule result = apiInstance.PostArchitectSchedules(body);
                 Debug.WriteLine(result);
             }
@@ -4993,7 +3926,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5022,7 +3955,7 @@ Requires ANY permissions:
 * architect:systemPrompt:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5034,25 +3967,16 @@ namespace Example
     public class PostArchitectSystempromptHistoryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | promptId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Generate system prompt history
-                
                 Operation result = apiInstance.PostArchitectSystempromptHistory(promptId);
                 Debug.WriteLine(result);
             }
@@ -5063,7 +3987,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5092,7 +4016,7 @@ Requires ANY permissions:
 * architect:systemPrompt:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5104,30 +4028,17 @@ namespace Example
     public class PostArchitectSystempromptResourcesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
-            
-            
             var body = new SystemPromptAsset(); // SystemPromptAsset | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create system prompt resource override.
-                
                 SystemPromptAsset result = apiInstance.PostArchitectSystempromptResources(promptId, body);
                 Debug.WriteLine(result);
             }
@@ -5138,7 +4049,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5168,7 +4079,7 @@ Requires ANY permissions:
 * architect:flow:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5180,30 +4091,17 @@ namespace Example
     public class PostFlowVersionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flowId = flowId_example;  // string | Flow ID
-            
-            
-            
-            
             var body = ;  // Object | 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Create flow version
-                
                 FlowVersion result = apiInstance.PostFlowVersions(flowId, body);
                 Debug.WriteLine(result);
             }
@@ -5214,7 +4112,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5244,7 +4142,7 @@ Requires ANY permissions:
 * architect:flow:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5256,25 +4154,16 @@ namespace Example
     public class PostFlowsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
-            
             var body = new Flow(); // Flow | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create flow
-                
                 Flow result = apiInstance.PostFlows(body);
                 Debug.WriteLine(result);
             }
@@ -5285,7 +4174,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5315,7 +4204,7 @@ Requires ANY permissions:
 * architect:flow:unlock
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5327,25 +4216,16 @@ namespace Example
     public class PostFlowsActionsCheckinExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flow = flow_example;  // string | Flow ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Check-in flow
-                
                 Flow result = apiInstance.PostFlowsActionsCheckin(flow);
                 Debug.WriteLine(result);
             }
@@ -5356,7 +4236,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5385,7 +4265,7 @@ Requires ANY permissions:
 * architect:flow:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5397,25 +4277,16 @@ namespace Example
     public class PostFlowsActionsCheckoutExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flow = flow_example;  // string | Flow ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Check-out flow
-                
                 Flow result = apiInstance.PostFlowsActionsCheckout(flow);
                 Debug.WriteLine(result);
             }
@@ -5426,7 +4297,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5455,7 +4326,7 @@ Requires ANY permissions:
 * architect:flow:publish
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5467,25 +4338,16 @@ namespace Example
     public class PostFlowsActionsDeactivateExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flow = flow_example;  // string | Flow ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Deactivate flow
-                
                 Flow result = apiInstance.PostFlowsActionsDeactivate(flow);
                 Debug.WriteLine(result);
             }
@@ -5496,7 +4358,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5526,7 +4388,7 @@ Requires ANY permissions:
 * architect:flow:publish
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5538,30 +4400,17 @@ namespace Example
     public class PostFlowsActionsPublishExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flow = flow_example;  // string | Flow ID
-            
-            
-            
-            
             var version = version_example;  // string | version (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Publish flow
-                
                 Operation result = apiInstance.PostFlowsActionsPublish(flow, version);
                 Debug.WriteLine(result);
             }
@@ -5572,7 +4421,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5602,7 +4451,7 @@ Requires ANY permissions:
 * architect:flow:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5614,25 +4463,16 @@ namespace Example
     public class PostFlowsActionsRevertExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flow = flow_example;  // string | Flow ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Revert flow
-                
                 Flow result = apiInstance.PostFlowsActionsRevert(flow);
                 Debug.WriteLine(result);
             }
@@ -5643,7 +4483,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5672,7 +4512,7 @@ Requires ANY permissions:
 * architect:flow:unlock
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5684,25 +4524,16 @@ namespace Example
     public class PostFlowsActionsUnlockExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flow = flow_example;  // string | Flow ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Unlock flow
-                
                 Flow result = apiInstance.PostFlowsActionsUnlock(flow);
                 Debug.WriteLine(result);
             }
@@ -5713,7 +4544,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5742,7 +4573,7 @@ Requires ANY permissions:
 * architect:datatable:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5754,30 +4585,17 @@ namespace Example
     public class PostFlowsDatatableRowsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var datatableId = datatableId_example;  // string | id of datatable
-            
-            
-            
-            
             var dataTableRow = ;  // Object | 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new row entry
-                
                 Dictionary&lt;string, Object&gt; result = apiInstance.PostFlowsDatatableRows(datatableId, dataTableRow);
                 Debug.WriteLine(result);
             }
@@ -5788,7 +4606,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5818,7 +4636,7 @@ Requires ANY permissions:
 * architect:datatable:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5830,25 +4648,16 @@ namespace Example
     public class PostFlowsDatatablesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
-            
             var body = new DataTable(); // DataTable | datatable json-schema
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new datatable with the specified json-schema definition
-                
                 DataTable result = apiInstance.PostFlowsDatatables(body);
                 Debug.WriteLine(result);
             }
@@ -5859,7 +4668,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5888,7 +4697,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5900,30 +4709,17 @@ namespace Example
     public class PutArchitectEmergencygroupExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var emergencyGroupId = emergencyGroupId_example;  // string | Emergency group ID
-            
-            
-            
-            
-            
             var body = new EmergencyGroup(); // EmergencyGroup | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Updates a emergency group by ID
-                
                 EmergencyGroup result = apiInstance.PutArchitectEmergencygroup(emergencyGroupId, body);
                 Debug.WriteLine(result);
             }
@@ -5934,7 +4730,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -5964,7 +4760,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -5976,30 +4772,17 @@ namespace Example
     public class PutArchitectIvrExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var ivrId = ivrId_example;  // string | IVR id
-            
-            
-            
-            
-            
             var body = new IVR(); // IVR | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an IVR Config.
-                
                 IVR result = apiInstance.PutArchitectIvr(ivrId, body);
                 Debug.WriteLine(result);
             }
@@ -6010,7 +4793,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6040,7 +4823,7 @@ Requires ANY permissions:
 * architect:userPrompt:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6052,30 +4835,17 @@ namespace Example
     public class PutArchitectPromptExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
-            
-            
             var body = new Prompt(); // Prompt | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update specified user prompt
-                
                 Prompt result = apiInstance.PutArchitectPrompt(promptId, body);
                 Debug.WriteLine(result);
             }
@@ -6086,7 +4856,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6116,7 +4886,7 @@ Requires ANY permissions:
 * architect:userPrompt:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6128,35 +4898,18 @@ namespace Example
     public class PutArchitectPromptResourceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
-            
             var languageCode = languageCode_example;  // string | Language
-            
-            
-            
-            
-            
             var body = new PromptAsset(); // PromptAsset | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update specified user prompt resource
-                
                 PromptAsset result = apiInstance.PutArchitectPromptResource(promptId, languageCode, body);
                 Debug.WriteLine(result);
             }
@@ -6167,7 +4920,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6198,7 +4951,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6210,30 +4963,17 @@ namespace Example
     public class PutArchitectScheduleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var scheduleId = scheduleId_example;  // string | Schedule ID
-            
-            
-            
-            
-            
             var body = new Schedule(); // Schedule | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update schedule by ID
-                
                 Schedule result = apiInstance.PutArchitectSchedule(scheduleId, body);
                 Debug.WriteLine(result);
             }
@@ -6244,7 +4984,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6274,7 +5014,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6286,30 +5026,17 @@ namespace Example
     public class PutArchitectSchedulegroupExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var scheduleGroupId = scheduleGroupId_example;  // string | Schedule group ID
-            
-            
-            
-            
-            
             var body = new ScheduleGroup(); // ScheduleGroup | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Updates a schedule group by ID
-                
                 ScheduleGroup result = apiInstance.PutArchitectSchedulegroup(scheduleGroupId, body);
                 Debug.WriteLine(result);
             }
@@ -6320,7 +5047,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6350,7 +5077,7 @@ Requires ANY permissions:
 * architect:systemPrompt:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6362,35 +5089,18 @@ namespace Example
     public class PutArchitectSystempromptResourceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var promptId = promptId_example;  // string | Prompt ID
-            
-            
-            
-            
             var languageCode = languageCode_example;  // string | Language
-            
-            
-            
-            
-            
             var body = new SystemPromptAsset(); // SystemPromptAsset | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Updates a system prompt resource override.
-                
                 SystemPromptAsset result = apiInstance.PutArchitectSystempromptResource(promptId, languageCode, body);
                 Debug.WriteLine(result);
             }
@@ -6401,7 +5111,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6432,7 +5142,7 @@ Requires ANY permissions:
 * architect:flow:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6444,30 +5154,17 @@ namespace Example
     public class PutFlowExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var flowId = flowId_example;  // string | Flow ID
-            
-            
-            
-            
-            
             var body = new Flow(); // Flow | 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update flow
-                
                 Flow result = apiInstance.PutFlow(flowId, body);
                 Debug.WriteLine(result);
             }
@@ -6478,7 +5175,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6508,7 +5205,7 @@ Requires ANY permissions:
 * architect:datatable:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6520,35 +5217,18 @@ namespace Example
     public class PutFlowsDatatableExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var datatableId = datatableId_example;  // string | id of datatable
-            
-            
-            
-            
             var expand = expand_example;  // string | Expand instructions for the result (optional) 
-            
-            
-            
-            
-            
             var body = new DataTable(); // DataTable | datatable json-schema (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Updates a specific datatable by id
-                
                 DataTable result = apiInstance.PutFlowsDatatable(datatableId, expand, body);
                 Debug.WriteLine(result);
             }
@@ -6559,7 +5239,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -6590,7 +5270,7 @@ Requires ANY permissions:
 * architect:datatable:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -6602,35 +5282,18 @@ namespace Example
     public class PutFlowsDatatableRowExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ArchitectApi();
-            
-            
             var datatableId = datatableId_example;  // string | id of datatable
-            
-            
-            
-            
             var rowId = rowId_example;  // string | the key for the row
-            
-            
-            
-            
             var body = ;  // Object | datatable row (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a row entry
-                
                 Dictionary&lt;string, Object&gt; result = apiInstance.PutFlowsDatatableRow(datatableId, rowId, body);
                 Debug.WriteLine(result);
             }
@@ -6641,7 +5304,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

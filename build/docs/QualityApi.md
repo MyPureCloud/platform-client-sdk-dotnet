@@ -81,7 +81,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -93,30 +93,17 @@ namespace Example
     public class DeleteQualityCalibrationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var calibrationId = calibrationId_example;  // string | Calibration ID
-            
-            
-            
-            
             var calibratorId = calibratorId_example;  // string | calibratorId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a calibration by id.
-                
                 Calibration result = apiInstance.DeleteQualityCalibration(calibrationId, calibratorId);
                 Debug.WriteLine(result);
             }
@@ -127,7 +114,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -156,7 +143,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -168,35 +155,18 @@ namespace Example
     public class DeleteQualityConversationEvaluationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var conversationId = conversationId_example;  // string | conversationId
-            
-            
-            
-            
             var evaluationId = evaluationId_example;  // string | evaluationId
-            
-            
-            
-            
             var expand = expand_example;  // string | evaluatorId (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete an evaluation
-                
                 Evaluation result = apiInstance.DeleteQualityConversationEvaluation(conversationId, evaluationId, expand);
                 Debug.WriteLine(result);
             }
@@ -207,7 +177,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -238,7 +208,7 @@ Requires ANY permissions:
 * quality:evaluationForm:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -250,25 +220,16 @@ namespace Example
     public class DeleteQualityFormExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete an evaluation form.
-                
                 apiInstance.DeleteQualityForm(formId);
             }
             catch (Exception e)
@@ -278,7 +239,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -307,7 +268,7 @@ Requires ANY permissions:
 * quality:evaluationForm:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -319,25 +280,16 @@ namespace Example
     public class DeleteQualityFormsEvaluationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete an evaluation form.
-                
                 apiInstance.DeleteQualityFormsEvaluation(formId);
             }
             catch (Exception e)
@@ -347,7 +299,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -376,7 +328,7 @@ Requires ANY permissions:
 * quality:surveyForm:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -388,25 +340,16 @@ namespace Example
     public class DeleteQualityFormsSurveyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a survey form.
-                
                 apiInstance.DeleteQualityFormsSurvey(formId);
             }
             catch (Exception e)
@@ -416,7 +359,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -444,7 +387,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -456,25 +399,16 @@ namespace Example
     public class DeleteQualityKeywordsetExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a keywordSet by id.
-                
                 apiInstance.DeleteQualityKeywordset(keywordSetId);
             }
             catch (Exception e)
@@ -484,7 +418,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -512,7 +446,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -524,25 +458,16 @@ namespace Example
     public class DeleteQualityKeywordsetsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var ids = ids_example;  // string | A comma-delimited list of valid KeywordSet ids
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete keyword sets
-                
                 apiInstance.DeleteQualityKeywordsets(ids);
             }
             catch (Exception e)
@@ -552,7 +477,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -580,7 +505,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -592,80 +517,27 @@ namespace Example
     public class GetQualityAgentsActivityExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? | Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional) 
-            
-            
-            
-            
             var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? | End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional) 
-            
-            
-            
-            
-            
             var agentUserId = new List<string>(); // List<string> | user id of agent requested (optional) 
-            
-            
-            
             var evaluatorUserId = evaluatorUserId_example;  // string | user id of the evaluator (optional) 
-            
-            
-            
-            
             var name = name_example;  // string | name (optional) 
-            
-            
-            
-            
             var group = group_example;  // string | group id (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets a list of Agent Activities
-                
                 AgentActivityEntityListing result = apiInstance.GetQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group);
                 Debug.WriteLine(result);
             }
@@ -676,7 +548,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -715,7 +587,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -727,35 +599,18 @@ namespace Example
     public class GetQualityCalibrationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var calibrationId = calibrationId_example;  // string | Calibration ID
-            
-            
-            
-            
             var calibratorId = calibratorId_example;  // string | calibratorId (optional) 
-            
-            
-            
-            
             var conversationId = conversationId_example;  // string | conversationId (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a calibration by id.  Requires either calibrator id or conversation id
-                
                 Calibration result = apiInstance.GetQualityCalibration(calibrationId, calibratorId, conversationId);
                 Debug.WriteLine(result);
             }
@@ -766,7 +621,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -796,7 +651,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -808,70 +663,25 @@ namespace Example
     public class GetQualityCalibrationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var calibratorId = calibratorId_example;  // string | user id of calibrator
-            
-            
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var conversationId = conversationId_example;  // string | conversation id (optional) 
-            
-            
-            
-            
             var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? | Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional) 
-            
-            
-            
-            
             var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? | end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the list of calibrations
-                
                 CalibrationEntityListing result = apiInstance.GetQualityCalibrations(calibratorId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, startTime, endTime);
                 Debug.WriteLine(result);
             }
@@ -882,7 +692,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -919,7 +729,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -931,65 +741,24 @@ namespace Example
     public class GetQualityConversationAuditsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var conversationId = conversationId_example;  // string | Conversation ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var recordingId = recordingId_example;  // string | id of the recording (optional) 
-            
-            
-            
-            
             var entityType = entityType_example;  // string | entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional)  (default to RECORDING)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get audits for conversation or recording
-                
                 QualityAuditPage result = apiInstance.GetQualityConversationAudits(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
                 Debug.WriteLine(result);
             }
@@ -1000,7 +769,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1036,7 +805,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1048,35 +817,18 @@ namespace Example
     public class GetQualityConversationEvaluationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var conversationId = conversationId_example;  // string | conversationId
-            
-            
-            
-            
             var evaluationId = evaluationId_example;  // string | evaluationId
-            
-            
-            
-            
             var expand = expand_example;  // string | agent, evaluator, evaluationForm (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get an evaluation
-                
                 Evaluation result = apiInstance.GetQualityConversationEvaluation(conversationId, evaluationId, expand);
                 Debug.WriteLine(result);
             }
@@ -1087,7 +839,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1117,7 +869,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1129,25 +881,16 @@ namespace Example
     public class GetQualityConversationSurveysExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var conversationId = conversationId_example;  // string | conversationId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the surveys for a conversation
-                
                 List&lt;Survey&gt; result = apiInstance.GetQualityConversationSurveys(conversationId);
                 Debug.WriteLine(result);
             }
@@ -1158,7 +901,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1186,7 +929,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1198,110 +941,33 @@ namespace Example
     public class GetQualityEvaluationsQueryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var conversationId = conversationId_example;  // string | conversationId specified (optional) 
-            
-            
-            
-            
             var agentUserId = agentUserId_example;  // string | user id of the agent (optional) 
-            
-            
-            
-            
             var evaluatorUserId = evaluatorUserId_example;  // string | evaluator user id (optional) 
-            
-            
-            
-            
             var queueId = queueId_example;  // string | queue id (optional) 
-            
-            
-            
-            
             var startTime = startTime_example;  // string | start time of the evaluation query (optional) 
-            
-            
-            
-            
             var endTime = endTime_example;  // string | end time of the evaluation query (optional) 
-            
-            
-            
-            
-            
             var evaluationState = new List<string>(); // List<string> |  (optional) 
-            
-            
-            
             var isReleased = true;  // bool? | the evaluation has been released (optional) 
-            
-            
-            
-            
             var agentHasRead = true;  // bool? | agent has the evaluation (optional) 
-            
-            
-            
-            
             var expandAnswerTotalScores = true;  // bool? | get the total scores for evaluations (optional) 
-            
-            
-            
-            
             var maximum = 56;  // int? | maximum (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | sort order options for agentUserId or evaluatorUserId query. Valid options are 'a', 'asc', 'ascending', 'd', 'desc', 'descending' (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Queries Evaluations and returns a paged list
-                
                 EvaluationEntityListing result = apiInstance.GetQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1312,7 +978,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1357,7 +1023,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1369,75 +1035,26 @@ namespace Example
     public class GetQualityEvaluatorsActivityExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? | The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional) 
-            
-            
-            
-            
             var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? | The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional) 
-            
-            
-            
-            
             var name = name_example;  // string | Evaluator name (optional) 
-            
-            
-            
-            
-            
             var permission = new List<string>(); // List<string> | permission strings (optional) 
-            
-            
-            
             var group = group_example;  // string | group id (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get an evaluator activity
-                
                 EvaluatorActivityEntityListing result = apiInstance.GetQualityEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group);
                 Debug.WriteLine(result);
             }
@@ -1448,7 +1065,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1487,7 +1104,7 @@ Requires ANY permissions:
 * quality:evaluationForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1499,25 +1116,16 @@ namespace Example
     public class GetQualityFormExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get an evaluation form
-                
                 EvaluationForm result = apiInstance.GetQualityForm(formId);
                 Debug.WriteLine(result);
             }
@@ -1528,7 +1136,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1557,7 +1165,7 @@ Requires ANY permissions:
 * quality:evaluationForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1569,35 +1177,18 @@ namespace Example
     public class GetQualityFormVersionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets all the revisions for a specific evaluation.
-                
                 EvaluationFormEntityListing result = apiInstance.GetQualityFormVersions(formId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -1608,7 +1199,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1639,7 +1230,7 @@ Requires ANY permissions:
 * quality:evaluationForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1651,60 +1242,23 @@ namespace Example
     public class GetQualityFormsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var expand = expand_example;  // string | Expand (optional) 
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Order to sort results, either asc or desc (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the list of evaluation forms
-                
                 EvaluationFormEntityListing result = apiInstance.GetQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1715,7 +1269,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1751,7 +1305,7 @@ Requires ANY permissions:
 * quality:evaluationForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1763,25 +1317,16 @@ namespace Example
     public class GetQualityFormsEvaluationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get an evaluation form
-                
                 EvaluationForm result = apiInstance.GetQualityFormsEvaluation(formId);
                 Debug.WriteLine(result);
             }
@@ -1792,7 +1337,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1821,7 +1366,7 @@ Requires ANY permissions:
 * quality:evaluationForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1833,35 +1378,18 @@ namespace Example
     public class GetQualityFormsEvaluationVersionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets all the revisions for a specific evaluation.
-                
                 EvaluationFormEntityListing result = apiInstance.GetQualityFormsEvaluationVersions(formId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -1872,7 +1400,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1903,7 +1431,7 @@ Requires ANY permissions:
 * quality:evaluationForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1915,60 +1443,23 @@ namespace Example
     public class GetQualityFormsEvaluationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var expand = expand_example;  // string | Expand (optional) 
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Order to sort results, either asc or desc (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the list of evaluation forms
-                
                 EvaluationFormEntityListing result = apiInstance.GetQualityFormsEvaluations(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1979,7 +1470,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2015,7 +1506,7 @@ Requires ANY permissions:
 * quality:surveyForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2027,25 +1518,16 @@ namespace Example
     public class GetQualityFormsSurveyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a survey form
-                
                 SurveyForm result = apiInstance.GetQualityFormsSurvey(formId);
                 Debug.WriteLine(result);
             }
@@ -2056,7 +1538,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2085,7 +1567,7 @@ Requires ANY permissions:
 * quality:surveyForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2097,35 +1579,18 @@ namespace Example
     public class GetQualityFormsSurveyVersionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets all the revisions for a specific survey.
-                
                 SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveyVersions(formId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -2136,7 +1601,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2167,7 +1632,7 @@ Requires ANY permissions:
 * quality:surveyForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2179,60 +1644,23 @@ namespace Example
     public class GetQualityFormsSurveysExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var expand = expand_example;  // string | Expand (optional) 
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Order to sort results, either asc or desc (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the list of survey forms
-                
                 SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveys(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -2243,7 +1671,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2279,7 +1707,7 @@ Requires ANY permissions:
 * quality:surveyForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2291,25 +1719,16 @@ namespace Example
     public class GetQualityFormsSurveysBulkExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var id = new List<string>(); // List<string> | A comma-delimited list of valid survey form ids
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieve a list of survey forms by their ids
-                
                 SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveysBulk(id);
                 Debug.WriteLine(result);
             }
@@ -2320,7 +1739,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2349,7 +1768,7 @@ Requires ANY permissions:
 * quality:surveyForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2361,30 +1780,17 @@ namespace Example
     public class GetQualityFormsSurveysBulkContextsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var contextId = new List<string>(); // List<string> | A comma-delimited list of valid survey form context ids
-            
-            
-            
             var published = true;  // bool? | If true, the latest published version will be included. If false, only the unpublished version will be included. (optional)  (default to true)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieve a list of the latest form versions by context ids
-                
                 SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveysBulkContexts(contextId, published);
                 Debug.WriteLine(result);
             }
@@ -2395,7 +1801,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2424,7 +1830,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2436,25 +1842,16 @@ namespace Example
     public class GetQualityKeywordsetExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a keywordSet by id.
-                
                 KeywordSet result = apiInstance.GetQualityKeywordset(keywordSetId);
                 Debug.WriteLine(result);
             }
@@ -2465,7 +1862,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2493,7 +1890,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2505,70 +1902,25 @@ namespace Example
     public class GetQualityKeywordsetsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var name = name_example;  // string | the keyword set name - used for filtering results in searches. (optional) 
-            
-            
-            
-            
             var queueId = queueId_example;  // string | the queue id - used for filtering results in searches. (optional) 
-            
-            
-            
-            
             var agentId = agentId_example;  // string | the agent id - used for filtering results in searches. (optional) 
-            
-            
-            
-            
             var _operator = _operator_example;  // string | If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the list of keyword sets
-                
                 KeywordSetEntityListing result = apiInstance.GetQualityKeywordsets(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId, _operator);
                 Debug.WriteLine(result);
             }
@@ -2579,7 +1931,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2617,7 +1969,7 @@ Requires ANY permissions:
 * quality:evaluationForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2629,25 +1981,16 @@ namespace Example
     public class GetQualityPublishedformExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the published evaluation forms.
-                
                 EvaluationForm result = apiInstance.GetQualityPublishedform(formId);
                 Debug.WriteLine(result);
             }
@@ -2658,7 +2001,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2687,7 +2030,7 @@ Requires ANY permissions:
 * quality:evaluationForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2699,40 +2042,19 @@ namespace Example
     public class GetQualityPublishedformsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var onlyLatestPerContext = true;  // bool? | onlyLatestPerContext (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the published evaluation forms.
-                
                 EvaluationFormEntityListing result = apiInstance.GetQualityPublishedforms(pageSize, pageNumber, name, onlyLatestPerContext);
                 Debug.WriteLine(result);
             }
@@ -2743,7 +2065,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2775,7 +2097,7 @@ Requires ANY permissions:
 * quality:evaluationForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2787,25 +2109,16 @@ namespace Example
     public class GetQualityPublishedformsEvaluationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the most recent published version of an evaluation form.
-                
                 EvaluationForm result = apiInstance.GetQualityPublishedformsEvaluation(formId);
                 Debug.WriteLine(result);
             }
@@ -2816,7 +2129,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2845,7 +2158,7 @@ Requires ANY permissions:
 * quality:evaluationForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2857,40 +2170,19 @@ namespace Example
     public class GetQualityPublishedformsEvaluationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var onlyLatestPerContext = true;  // bool? | onlyLatestPerContext (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the published evaluation forms.
-                
                 EvaluationFormEntityListing result = apiInstance.GetQualityPublishedformsEvaluations(pageSize, pageNumber, name, onlyLatestPerContext);
                 Debug.WriteLine(result);
             }
@@ -2901,7 +2193,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2933,7 +2225,7 @@ Requires ANY permissions:
 * quality:surveyForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2945,25 +2237,16 @@ namespace Example
     public class GetQualityPublishedformsSurveyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the most recent published version of a survey form.
-                
                 SurveyForm result = apiInstance.GetQualityPublishedformsSurvey(formId);
                 Debug.WriteLine(result);
             }
@@ -2974,7 +2257,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3003,7 +2286,7 @@ Requires ANY permissions:
 * quality:surveyForm:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3015,40 +2298,19 @@ namespace Example
     public class GetQualityPublishedformsSurveysExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
-            
             var onlyLatestEnabledPerContext = true;  // bool? | onlyLatestEnabledPerContext (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the published survey forms.
-                
                 SurveyFormEntityListing result = apiInstance.GetQualityPublishedformsSurveys(pageSize, pageNumber, name, onlyLatestEnabledPerContext);
                 Debug.WriteLine(result);
             }
@@ -3059,7 +2321,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3090,7 +2352,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3102,25 +2364,16 @@ namespace Example
     public class GetQualitySurveyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var surveyId = surveyId_example;  // string | surveyId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a survey for a conversation
-                
                 Survey result = apiInstance.GetQualitySurvey(surveyId);
                 Debug.WriteLine(result);
             }
@@ -3131,7 +2384,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3159,7 +2412,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3171,22 +2424,14 @@ namespace Example
     public class GetQualitySurveysScorableExample
     {
         public void main()
-        {
-            
+        { 
 
             var apiInstance = new QualityApi();
-            
-            
             var customerSurveyUrl = customerSurveyUrl_example;  // string | customerSurveyUrl (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a survey as an end-customer, for the purposes of scoring it.
-                
                 ScorableSurvey result = apiInstance.GetQualitySurveysScorable(customerSurveyUrl);
                 Debug.WriteLine(result);
             }
@@ -3197,7 +2442,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3226,7 +2471,7 @@ Requires ANY permissions:
 * quality:surveyForm:disable
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3238,30 +2483,17 @@ namespace Example
     public class PatchQualityFormsSurveyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
-            
-            
             var body = new SurveyForm(); // SurveyForm | Survey form
-            
-            
 
             try
-            {
-                
+            { 
                 // Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
-                
                 SurveyForm result = apiInstance.PatchQualityFormsSurvey(formId, body);
                 Debug.WriteLine(result);
             }
@@ -3272,7 +2504,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3302,7 +2534,7 @@ Requires ANY permissions:
 * analytics:evaluationAggregate:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3314,25 +2546,16 @@ namespace Example
     public class PostAnalyticsEvaluationsAggregatesQueryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new AggregationQuery(); // AggregationQuery | query
-            
-            
 
             try
-            {
-                
+            { 
                 // Query for evaluation aggregates
-                
                 AggregateQueryResponse result = apiInstance.PostAnalyticsEvaluationsAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
@@ -3343,7 +2566,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3372,7 +2595,7 @@ Requires ANY permissions:
 * analytics:surveyAggregate:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3384,25 +2607,16 @@ namespace Example
     public class PostAnalyticsSurveysAggregatesQueryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new AggregationQuery(); // AggregationQuery | query
-            
-            
 
             try
-            {
-                
+            { 
                 // Query for survey aggregates
-                
                 AggregateQueryResponse result = apiInstance.PostAnalyticsSurveysAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
@@ -3413,7 +2627,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3441,7 +2655,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3453,30 +2667,17 @@ namespace Example
     public class PostQualityCalibrationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new CalibrationCreate(); // CalibrationCreate | calibration
-            
-            
-            
             var expand = expand_example;  // string | calibratorId (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a calibration
-                
                 Calibration result = apiInstance.PostQualityCalibrations(body, expand);
                 Debug.WriteLine(result);
             }
@@ -3487,7 +2688,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3516,7 +2717,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3528,35 +2729,18 @@ namespace Example
     public class PostQualityConversationEvaluationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var conversationId = conversationId_example;  // string | conversationId
-            
-            
-            
-            
-            
             var body = new Evaluation(); // Evaluation | evaluation
-            
-            
-            
             var expand = expand_example;  // string | evaluatorId (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Create an evaluation
-                
                 Evaluation result = apiInstance.PostQualityConversationEvaluations(conversationId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -3567,7 +2751,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3597,7 +2781,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3609,25 +2793,16 @@ namespace Example
     public class PostQualityEvaluationsScoringExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new EvaluationFormAndScoringSet(); // EvaluationFormAndScoringSet | evaluationAndScoringSet
-            
-            
 
             try
-            {
-                
+            { 
                 // Score evaluation
-                
                 EvaluationScoringSet result = apiInstance.PostQualityEvaluationsScoring(body);
                 Debug.WriteLine(result);
             }
@@ -3638,7 +2813,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3667,7 +2842,7 @@ Requires ANY permissions:
 * quality:evaluationForm:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3679,25 +2854,16 @@ namespace Example
     public class PostQualityFormsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new EvaluationForm(); // EvaluationForm | Evaluation form
-            
-            
 
             try
-            {
-                
+            { 
                 // Create an evaluation form.
-                
                 EvaluationForm result = apiInstance.PostQualityForms(body);
                 Debug.WriteLine(result);
             }
@@ -3708,7 +2874,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3737,7 +2903,7 @@ Requires ANY permissions:
 * quality:evaluationForm:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3749,25 +2915,16 @@ namespace Example
     public class PostQualityFormsEvaluationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new EvaluationForm(); // EvaluationForm | Evaluation form
-            
-            
 
             try
-            {
-                
+            { 
                 // Create an evaluation form.
-                
                 EvaluationForm result = apiInstance.PostQualityFormsEvaluations(body);
                 Debug.WriteLine(result);
             }
@@ -3778,7 +2935,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3807,7 +2964,7 @@ Requires ANY permissions:
 * quality:surveyForm:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3819,25 +2976,16 @@ namespace Example
     public class PostQualityFormsSurveysExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new SurveyForm(); // SurveyForm | Survey form
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a survey form.
-                
                 SurveyForm result = apiInstance.PostQualityFormsSurveys(body);
                 Debug.WriteLine(result);
             }
@@ -3848,7 +2996,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3876,7 +3024,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3888,30 +3036,17 @@ namespace Example
     public class PostQualityKeywordsetsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new KeywordSet(); // KeywordSet | keywordSet
-            
-            
-            
             var expand = expand_example;  // string | queueId (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a Keyword Set
-                
                 KeywordSet result = apiInstance.PostQualityKeywordsets(body, expand);
                 Debug.WriteLine(result);
             }
@@ -3922,7 +3057,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3952,7 +3087,7 @@ Requires ANY permissions:
 * quality:evaluationForm:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3964,25 +3099,16 @@ namespace Example
     public class PostQualityPublishedformsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new PublishForm(); // PublishForm | Publish request containing id of form to publish
-            
-            
 
             try
-            {
-                
+            { 
                 // Publish an evaluation form.
-                
                 EvaluationForm result = apiInstance.PostQualityPublishedforms(body);
                 Debug.WriteLine(result);
             }
@@ -3993,7 +3119,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4022,7 +3148,7 @@ Requires ANY permissions:
 * quality:evaluationForm:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4034,25 +3160,16 @@ namespace Example
     public class PostQualityPublishedformsEvaluationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new PublishForm(); // PublishForm | Publish request containing id of form to publish
-            
-            
 
             try
-            {
-                
+            { 
                 // Publish an evaluation form.
-                
                 EvaluationForm result = apiInstance.PostQualityPublishedformsEvaluations(body);
                 Debug.WriteLine(result);
             }
@@ -4063,7 +3180,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4092,7 +3209,7 @@ Requires ANY permissions:
 * quality:surveyForm:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4104,25 +3221,16 @@ namespace Example
     public class PostQualityPublishedformsSurveysExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new PublishForm(); // PublishForm | Survey form
-            
-            
 
             try
-            {
-                
+            { 
                 // Publish a survey form.
-                
                 SurveyForm result = apiInstance.PostQualityPublishedformsSurveys(body);
                 Debug.WriteLine(result);
             }
@@ -4133,7 +3241,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4161,7 +3269,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4173,25 +3281,16 @@ namespace Example
     public class PostQualitySpotabilityExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new KeywordSet(); // KeywordSet | Keyword Set (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieve the spotability statistic
-                
                 KeywordSet result = apiInstance.PostQualitySpotability(body);
                 Debug.WriteLine(result);
             }
@@ -4202,7 +3301,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4230,7 +3329,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4242,25 +3341,16 @@ namespace Example
     public class PostQualitySurveysScoringExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new SurveyFormAndScoringSet(); // SurveyFormAndScoringSet | surveyAndScoringSet
-            
-            
 
             try
-            {
-                
+            { 
                 // Score survey
-                
                 SurveyScoringSet result = apiInstance.PostQualitySurveysScoring(body);
                 Debug.WriteLine(result);
             }
@@ -4271,7 +3361,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4299,7 +3389,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4311,30 +3401,17 @@ namespace Example
     public class PutQualityCalibrationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var calibrationId = calibrationId_example;  // string | Calibration ID
-            
-            
-            
-            
-            
             var body = new Calibration(); // Calibration | Calibration
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
-                
                 Calibration result = apiInstance.PutQualityCalibration(calibrationId, body);
                 Debug.WriteLine(result);
             }
@@ -4345,7 +3422,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4374,7 +3451,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4386,40 +3463,19 @@ namespace Example
     public class PutQualityConversationEvaluationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var conversationId = conversationId_example;  // string | conversationId
-            
-            
-            
-            
             var evaluationId = evaluationId_example;  // string | evaluationId
-            
-            
-            
-            
-            
             var body = new Evaluation(); // Evaluation | evaluation
-            
-            
-            
             var expand = expand_example;  // string | evaluatorId (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an evaluation
-                
                 Evaluation result = apiInstance.PutQualityConversationEvaluation(conversationId, evaluationId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -4430,7 +3486,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4462,7 +3518,7 @@ Requires ANY permissions:
 * quality:evaluationForm:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4474,30 +3530,17 @@ namespace Example
     public class PutQualityFormExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
-            
-            
             var body = new EvaluationForm(); // EvaluationForm | Evaluation form
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an evaluation form.
-                
                 EvaluationForm result = apiInstance.PutQualityForm(formId, body);
                 Debug.WriteLine(result);
             }
@@ -4508,7 +3551,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4538,7 +3581,7 @@ Requires ANY permissions:
 * quality:evaluationForm:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4550,30 +3593,17 @@ namespace Example
     public class PutQualityFormsEvaluationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
-            
-            
             var body = new EvaluationForm(); // EvaluationForm | Evaluation form
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an evaluation form.
-                
                 EvaluationForm result = apiInstance.PutQualityFormsEvaluation(formId, body);
                 Debug.WriteLine(result);
             }
@@ -4584,7 +3614,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4614,7 +3644,7 @@ Requires ANY permissions:
 * quality:surveyForm:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4626,30 +3656,17 @@ namespace Example
     public class PutQualityFormsSurveyExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var formId = formId_example;  // string | Form ID
-            
-            
-            
-            
-            
             var body = new SurveyForm(); // SurveyForm | Survey form
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a survey form.
-                
                 SurveyForm result = apiInstance.PutQualityFormsSurvey(formId, body);
                 Debug.WriteLine(result);
             }
@@ -4660,7 +3677,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4689,7 +3706,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4701,30 +3718,17 @@ namespace Example
     public class PutQualityKeywordsetExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            
-            
             var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
-            
-            
-            
-            
-            
             var body = new KeywordSet(); // KeywordSet | keywordSet
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a keywordSet to the specified keywordSet via PUT.
-                
                 KeywordSet result = apiInstance.PutQualityKeywordset(keywordSetId, body);
                 Debug.WriteLine(result);
             }
@@ -4735,7 +3739,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -4764,7 +3768,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -4776,27 +3780,15 @@ namespace Example
     public class PutQualitySurveysScorableExample
     {
         public void main()
-        {
-            
+        { 
 
             var apiInstance = new QualityApi();
-            
-            
-            
             var body = new ScorableSurvey(); // ScorableSurvey | survey
-            
-            
-            
             var customerSurveyUrl = customerSurveyUrl_example;  // string | customerSurveyUrl (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a survey as an end-customer, for the purposes of scoring it.
-                
                 ScorableSurvey result = apiInstance.PutQualitySurveysScorable(body, customerSurveyUrl);
                 Debug.WriteLine(result);
             }
@@ -4807,7 +3799,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

@@ -29,7 +29,7 @@ Requires ANY permissions:
 * billing:subscription:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -41,30 +41,17 @@ namespace Example
     public class GetBillingReportsBillableusageExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new BillingApi();
-            
-            
             var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-            
-            
-            
-            
             var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
-                
                 BillingUsageReport result = apiInstance.GetBillingReportsBillableusage(startDate, endDate);
                 Debug.WriteLine(result);
             }
@@ -75,7 +62,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -105,7 +92,7 @@ Requires ANY permissions:
 * affiliateOrganization:clientBilling:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -117,30 +104,17 @@ namespace Example
     public class GetBillingTrusteebillingoverviewTrustorOrgIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new BillingApi();
-            
-            
             var trustorOrgId = trustorOrgId_example;  // string | The organization ID of the trustor (customer) organization.
-            
-            
-            
-            
             var billingPeriodIndex = 56;  // int? | Billing Period Index (optional)  (default to 0)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the billing overview for an organization that is managed by a partner.
-                
                 TrusteeBillingOverview result = apiInstance.GetBillingTrusteebillingoverviewTrustorOrgId(trustorOrgId, billingPeriodIndex);
                 Debug.WriteLine(result);
             }
@@ -151,7 +125,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

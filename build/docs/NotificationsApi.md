@@ -30,7 +30,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -42,25 +42,16 @@ namespace Example
     public class DeleteNotificationsChannelSubscriptionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new NotificationsApi();
-            
-            
             var channelId = channelId_example;  // string | Channel ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Remove all subscriptions
-                
                 apiInstance.DeleteNotificationsChannelSubscriptions(channelId);
             }
             catch (Exception e)
@@ -70,7 +61,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -98,7 +89,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -110,25 +101,16 @@ namespace Example
     public class GetNotificationsAvailabletopicsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new NotificationsApi();
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get available notification topics.
-                
                 AvailableTopicEntityListing result = apiInstance.GetNotificationsAvailabletopics(expand);
                 Debug.WriteLine(result);
             }
@@ -139,7 +121,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -167,7 +149,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -179,25 +161,16 @@ namespace Example
     public class GetNotificationsChannelSubscriptionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new NotificationsApi();
-            
-            
             var channelId = channelId_example;  // string | Channel ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // The list of all subscriptions for this channel
-                
                 ChannelTopicEntityListing result = apiInstance.GetNotificationsChannelSubscriptions(channelId);
                 Debug.WriteLine(result);
             }
@@ -208,7 +181,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -236,7 +209,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -248,25 +221,16 @@ namespace Example
     public class GetNotificationsChannelsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new NotificationsApi();
-            
-            
             var includechannels = includechannels_example;  // string | Show user's channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional)  (default to token)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // The list of existing channels
-                
                 ChannelEntityListing result = apiInstance.GetNotificationsChannels(includechannels);
                 Debug.WriteLine(result);
             }
@@ -277,7 +241,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -305,7 +269,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -317,30 +281,17 @@ namespace Example
     public class PostNotificationsChannelSubscriptionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new NotificationsApi();
-            
-            
             var channelId = channelId_example;  // string | Channel ID
-            
-            
-            
-            
-            
             var body = new List<ChannelTopic>(); // List<ChannelTopic> | Body
-            
-            
 
             try
-            {
-                
+            { 
                 // Add a list of subscriptions to the existing list of subscriptions
-                
                 ChannelTopicEntityListing result = apiInstance.PostNotificationsChannelSubscriptions(channelId, body);
                 Debug.WriteLine(result);
             }
@@ -351,7 +302,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -380,7 +331,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -392,20 +343,15 @@ namespace Example
     public class PostNotificationsChannelsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new NotificationsApi();
-            
 
             try
-            {
-                
+            { 
                 // Create a new channel
-                
                 Channel result = apiInstance.PostNotificationsChannels();
                 Debug.WriteLine(result);
             }
@@ -416,7 +362,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -440,7 +386,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -452,30 +398,17 @@ namespace Example
     public class PutNotificationsChannelSubscriptionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new NotificationsApi();
-            
-            
             var channelId = channelId_example;  // string | Channel ID
-            
-            
-            
-            
-            
             var body = new List<ChannelTopic>(); // List<ChannelTopic> | Body
-            
-            
 
             try
-            {
-                
+            { 
                 // Replace the current list of subscriptions with a new list.
-                
                 ChannelTopicEntityListing result = apiInstance.PutNotificationsChannelSubscriptions(channelId, body);
                 Debug.WriteLine(result);
             }
@@ -486,7 +419,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

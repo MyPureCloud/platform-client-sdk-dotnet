@@ -25,7 +25,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -37,20 +37,15 @@ namespace Example
     public class DeleteTokensMeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new TokensApi();
-            
 
             try
-            {
-                
+            { 
                 // Delete  auth token used to make the request.
-                
                 apiInstance.DeleteTokensMe();
             }
             catch (Exception e)
@@ -60,7 +55,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -84,7 +79,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -96,20 +91,15 @@ namespace Example
     public class GetTokensMeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new TokensApi();
-            
 
             try
-            {
-                
+            { 
                 // Fetch information about the current token
-                
                 TokenInfo result = apiInstance.GetTokensMe();
                 Debug.WriteLine(result);
             }
@@ -120,7 +110,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.

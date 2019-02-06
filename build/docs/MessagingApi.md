@@ -38,7 +38,7 @@ Requires ANY permissions:
 * messaging:integration:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -50,25 +50,16 @@ namespace Example
     public class DeleteMessagingIntegrationsFacebookIntegrationIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
             var integrationId = integrationId_example;  // string | Integration ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a Facebook messaging integration
-                
                 apiInstance.DeleteMessagingIntegrationsFacebookIntegrationId(integrationId);
             }
             catch (Exception e)
@@ -78,7 +69,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -107,7 +98,7 @@ Requires ANY permissions:
 * messaging:integration:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -119,25 +110,16 @@ namespace Example
     public class DeleteMessagingIntegrationsLineIntegrationIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
             var integrationId = integrationId_example;  // string | Integration ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a LINE messenger integration
-                
                 apiInstance.DeleteMessagingIntegrationsLineIntegrationId(integrationId);
             }
             catch (Exception e)
@@ -147,7 +129,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -176,7 +158,7 @@ Requires ANY permissions:
 * messaging:integration:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -188,25 +170,16 @@ namespace Example
     public class DeleteMessagingIntegrationsTwitterIntegrationIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
             var integrationId = integrationId_example;  // string | Integration ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a Twitter messaging integration
-                
                 apiInstance.DeleteMessagingIntegrationsTwitterIntegrationId(integrationId);
             }
             catch (Exception e)
@@ -216,7 +189,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -245,7 +218,7 @@ Requires ANY permissions:
 * messaging:integration:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -257,30 +230,17 @@ namespace Example
     public class GetMessagingIntegrationsFacebookExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of Facebook Integrations
-                
                 FacebookIntegrationEntityListing result = apiInstance.GetMessagingIntegrationsFacebook(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -291,7 +251,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -321,7 +281,7 @@ Requires ANY permissions:
 * messaging:integration:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -333,25 +293,16 @@ namespace Example
     public class GetMessagingIntegrationsFacebookIntegrationIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
             var integrationId = integrationId_example;  // string | Integration ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a Facebook messaging integration
-                
                 FacebookIntegration result = apiInstance.GetMessagingIntegrationsFacebookIntegrationId(integrationId);
                 Debug.WriteLine(result);
             }
@@ -362,7 +313,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -391,7 +342,7 @@ Requires ANY permissions:
 * messaging:integration:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -403,30 +354,17 @@ namespace Example
     public class GetMessagingIntegrationsLineExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of LINE messenger Integrations
-                
                 LineIntegrationEntityListing result = apiInstance.GetMessagingIntegrationsLine(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -437,7 +375,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -467,7 +405,7 @@ Requires ANY permissions:
 * messaging:integration:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -479,25 +417,16 @@ namespace Example
     public class GetMessagingIntegrationsLineIntegrationIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
             var integrationId = integrationId_example;  // string | Integration ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a LINE messenger integration
-                
                 LineIntegration result = apiInstance.GetMessagingIntegrationsLineIntegrationId(integrationId);
                 Debug.WriteLine(result);
             }
@@ -508,7 +437,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -537,7 +466,7 @@ Requires ANY permissions:
 * messaging:integration:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -549,30 +478,17 @@ namespace Example
     public class GetMessagingIntegrationsTwitterExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of Twitter Integrations
-                
                 TwitterIntegrationEntityListing result = apiInstance.GetMessagingIntegrationsTwitter(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -583,7 +499,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -613,7 +529,7 @@ Requires ANY permissions:
 * messaging:integration:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -625,25 +541,16 @@ namespace Example
     public class GetMessagingIntegrationsTwitterIntegrationIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
             var integrationId = integrationId_example;  // string | Integration ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a Twitter messaging integration
-                
                 TwitterIntegration result = apiInstance.GetMessagingIntegrationsTwitterIntegrationId(integrationId);
                 Debug.WriteLine(result);
             }
@@ -654,7 +561,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -683,7 +590,7 @@ Requires ANY permissions:
 * conversation:message:create
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -695,35 +602,18 @@ namespace Example
     public class GetMessagingStickerExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
             var messengerType = messengerType_example;  // string | Messenger Type
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of Messaging Stickers
-                
                 MessagingStickerEntityListing result = apiInstance.GetMessagingSticker(messengerType, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -734,7 +624,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -765,7 +655,7 @@ Requires ANY permissions:
 * messaging:integration:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -777,25 +667,16 @@ namespace Example
     public class PostMessagingIntegrationsFacebookExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
-            
             var body = new FacebookIntegrationRequest(); // FacebookIntegrationRequest | FacebookIntegrationRequest
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a Facebook Integration
-                
                 FacebookIntegration result = apiInstance.PostMessagingIntegrationsFacebook(body);
                 Debug.WriteLine(result);
             }
@@ -806,7 +687,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -835,7 +716,7 @@ Requires ANY permissions:
 * messaging:integration:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -847,25 +728,16 @@ namespace Example
     public class PostMessagingIntegrationsLineExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
-            
             var body = new LineIntegrationRequest(); // LineIntegrationRequest | LineIntegrationRequest
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a LINE messenger Integration
-                
                 LineIntegration result = apiInstance.PostMessagingIntegrationsLine(body);
                 Debug.WriteLine(result);
             }
@@ -876,7 +748,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -905,7 +777,7 @@ Requires ANY permissions:
 * messaging:integration:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -917,25 +789,16 @@ namespace Example
     public class PostMessagingIntegrationsTwitterExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
-            
             var body = new TwitterIntegrationRequest(); // TwitterIntegrationRequest | TwitterIntegrationRequest
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a Twitter Integration
-                
                 TwitterIntegration result = apiInstance.PostMessagingIntegrationsTwitter(body);
                 Debug.WriteLine(result);
             }
@@ -946,7 +809,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -975,7 +838,7 @@ Requires ANY permissions:
 * messaging:integration:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -987,30 +850,17 @@ namespace Example
     public class PutMessagingIntegrationsLineIntegrationIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new MessagingApi();
-            
-            
             var integrationId = integrationId_example;  // string | Integration ID
-            
-            
-            
-            
-            
             var body = new LineIntegrationRequest(); // LineIntegrationRequest | LineIntegrationRequest
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a LINE messenger integration
-                
                 LineIntegration result = apiInstance.PutMessagingIntegrationsLineIntegrationId(integrationId, body);
                 Debug.WriteLine(result);
             }
@@ -1021,7 +871,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

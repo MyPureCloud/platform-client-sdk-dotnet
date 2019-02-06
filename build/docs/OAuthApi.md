@@ -30,7 +30,7 @@ Requires ANY permissions:
 * oauth:client:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -42,25 +42,16 @@ namespace Example
     public class DeleteOauthClientExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthApi();
-            
-            
             var clientId = clientId_example;  // string | Client ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete OAuth Client
-                
                 apiInstance.DeleteOauthClient(clientId);
             }
             catch (Exception e)
@@ -70,7 +61,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -99,7 +90,7 @@ Requires ANY permissions:
 * oauth:client:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -111,25 +102,16 @@ namespace Example
     public class GetOauthClientExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthApi();
-            
-            
             var clientId = clientId_example;  // string | Client ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get OAuth Client
-                
                 OAuthClient result = apiInstance.GetOauthClient(clientId);
                 Debug.WriteLine(result);
             }
@@ -140,7 +122,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -169,7 +151,7 @@ Requires ANY permissions:
 * oauth:client:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -181,20 +163,15 @@ namespace Example
     public class GetOauthClientsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthApi();
-            
 
             try
-            {
-                
+            { 
                 // The list of OAuth clients
-                
                 OAuthClientEntityListing result = apiInstance.GetOauthClients();
                 Debug.WriteLine(result);
             }
@@ -205,7 +182,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -230,7 +207,7 @@ Requires ANY permissions:
 * oauth:client:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -242,25 +219,16 @@ namespace Example
     public class PostOauthClientSecretExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthApi();
-            
-            
             var clientId = clientId_example;  // string | Client ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Regenerate Client Secret
-                
                 OAuthClient result = apiInstance.PostOauthClientSecret(clientId);
                 Debug.WriteLine(result);
             }
@@ -271,7 +239,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -300,7 +268,7 @@ Requires ANY permissions:
 * oauth:client:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -312,25 +280,16 @@ namespace Example
     public class PostOauthClientsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthApi();
-            
-            
-            
             var body = new OAuthClient(); // OAuthClient | Client
-            
-            
 
             try
-            {
-                
+            { 
                 // Create OAuth client
-                
                 OAuthClient result = apiInstance.PostOauthClients(body);
                 Debug.WriteLine(result);
             }
@@ -341,7 +300,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -370,7 +329,7 @@ Requires ANY permissions:
 * oauth:client:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -382,30 +341,17 @@ namespace Example
     public class PutOauthClientExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OAuthApi();
-            
-            
             var clientId = clientId_example;  // string | Client ID
-            
-            
-            
-            
-            
             var body = new OAuthClient(); // OAuthClient | Client
-            
-            
 
             try
-            {
-                
+            { 
                 // Update OAuth Client
-                
                 OAuthClient result = apiInstance.PutOauthClient(clientId, body);
                 Debug.WriteLine(result);
             }
@@ -416,7 +362,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

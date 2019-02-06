@@ -32,7 +32,7 @@ Requires ANY permissions:
 * authorization:division:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -44,25 +44,16 @@ namespace Example
     public class DeleteAuthorizationDivisionExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ObjectsApi();
-            
-            
             var divisionId = divisionId_example;  // string | Division ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a division.
-                
                 apiInstance.DeleteAuthorizationDivision(divisionId);
             }
             catch (Exception e)
@@ -72,7 +63,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -100,7 +91,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -112,30 +103,17 @@ namespace Example
     public class GetAuthorizationDivisionExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ObjectsApi();
-            
-            
             var divisionId = divisionId_example;  // string | Division ID
-            
-            
-            
-            
             var objectCount = true;  // bool? | Get count of objects in this division, grouped by type (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Returns an authorization division.
-                
                 AuthzDivision result = apiInstance.GetAuthorizationDivision(divisionId, objectCount);
                 Debug.WriteLine(result);
             }
@@ -146,7 +124,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -175,7 +153,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -187,65 +165,24 @@ namespace Example
     public class GetAuthorizationDivisionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ObjectsApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var objectCount = true;  // bool? | Include the count of objects contained in the division (optional)  (default to false)
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | Optionally request specific divisions by their IDs (optional) 
-            
-            
-            
             var name = name_example;  // string | Search term to filter by division name (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieve a list of all divisions defined for the organization
-                
                 AuthzDivisionEntityListing result = apiInstance.GetAuthorizationDivisions(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, id, name);
                 Debug.WriteLine(result);
             }
@@ -256,7 +193,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -292,7 +229,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -304,20 +241,15 @@ namespace Example
     public class GetAuthorizationDivisionsHomeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ObjectsApi();
-            
 
             try
-            {
-                
+            { 
                 // Retrieve the home division for the organization.
-                
                 AuthzDivision result = apiInstance.GetAuthorizationDivisionsHome();
                 Debug.WriteLine(result);
             }
@@ -328,7 +260,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -352,7 +284,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -364,20 +296,15 @@ namespace Example
     public class GetAuthorizationDivisionsLimitExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ObjectsApi();
-            
 
             try
-            {
-                
+            { 
                 // Returns the maximum allowed number of divisions.
-                
                 int? result = apiInstance.GetAuthorizationDivisionsLimit();
                 Debug.WriteLine(result);
             }
@@ -388,7 +315,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -412,7 +339,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -424,35 +351,18 @@ namespace Example
     public class PostAuthorizationDivisionObjectExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ObjectsApi();
-            
-            
             var divisionId = divisionId_example;  // string | Division ID
-            
-            
-            
-            
             var objectType = objectType_example;  // string | The type of the objects. Must be one of the valid object types
-            
-            
-            
-            
             var body = ;  // List<string> | Object Id List
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Assign a list of objects to a division
-                
                 apiInstance.PostAuthorizationDivisionObject(divisionId, objectType, body);
             }
             catch (Exception e)
@@ -462,7 +372,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -494,7 +404,7 @@ Requires ALL permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -506,25 +416,16 @@ namespace Example
     public class PostAuthorizationDivisionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ObjectsApi();
-            
-            
-            
             var body = new AuthzDivision(); // AuthzDivision | Division
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a division.
-                
                 AuthzDivision result = apiInstance.PostAuthorizationDivisions(body);
                 Debug.WriteLine(result);
             }
@@ -535,7 +436,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -564,7 +465,7 @@ Requires ANY permissions:
 * authorization:division:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -576,30 +477,17 @@ namespace Example
     public class PutAuthorizationDivisionExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ObjectsApi();
-            
-            
             var divisionId = divisionId_example;  // string | Division ID
-            
-            
-            
-            
-            
             var body = new AuthzDivision(); // AuthzDivision | Updated division data
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a division.
-                
                 AuthzDivision result = apiInstance.PutAuthorizationDivision(divisionId, body);
                 Debug.WriteLine(result);
             }
@@ -610,7 +498,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

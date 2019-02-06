@@ -58,7 +58,7 @@ Requires ANY permissions:
 * authorization:division:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -70,25 +70,16 @@ namespace Example
     public class DeleteAuthorizationDivisionExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var divisionId = divisionId_example;  // string | Division ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a division.
-                
                 apiInstance.DeleteAuthorizationDivision(divisionId);
             }
             catch (Exception e)
@@ -98,7 +89,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -129,7 +120,7 @@ Requires ANY permissions:
 * authorization:role:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -141,25 +132,16 @@ namespace Example
     public class DeleteAuthorizationRoleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var roleId = roleId_example;  // string | Role ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete an organization role.
-                
                 apiInstance.DeleteAuthorizationRole(roleId);
             }
             catch (Exception e)
@@ -169,7 +151,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -198,7 +180,7 @@ Requires ANY permissions:
 * authorization:grant:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -210,35 +192,18 @@ namespace Example
     public class DeleteAuthorizationSubjectDivisionRoleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
-            
-            
-            
-            
             var divisionId = divisionId_example;  // string | the id of the division of the grant
-            
-            
-            
-            
             var roleId = roleId_example;  // string | the id of the role of the grant
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a grant of a role in a division
-                
                 apiInstance.DeleteAuthorizationSubjectDivisionRole(subjectId, divisionId, roleId);
             }
             catch (Exception e)
@@ -248,7 +213,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -281,7 +246,7 @@ Requires ANY permissions:
 * authorization:grant:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -293,25 +258,16 @@ namespace Example
     public class DeleteUserRolesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Removes all the roles from the user.
-                
                 apiInstance.DeleteUserRoles(userId);
             }
             catch (Exception e)
@@ -321,7 +277,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -349,7 +305,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -361,30 +317,17 @@ namespace Example
     public class GetAuthorizationDivisionExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var divisionId = divisionId_example;  // string | Division ID
-            
-            
-            
-            
             var objectCount = true;  // bool? | Get count of objects in this division, grouped by type (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Returns an authorization division.
-                
                 AuthzDivision result = apiInstance.GetAuthorizationDivision(divisionId, objectCount);
                 Debug.WriteLine(result);
             }
@@ -395,7 +338,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -424,7 +367,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -436,65 +379,24 @@ namespace Example
     public class GetAuthorizationDivisionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var objectCount = true;  // bool? | Include the count of objects contained in the division (optional)  (default to false)
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | Optionally request specific divisions by their IDs (optional) 
-            
-            
-            
             var name = name_example;  // string | Search term to filter by division name (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieve a list of all divisions defined for the organization
-                
                 AuthzDivisionEntityListing result = apiInstance.GetAuthorizationDivisions(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, id, name);
                 Debug.WriteLine(result);
             }
@@ -505,7 +407,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -541,7 +443,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -553,20 +455,15 @@ namespace Example
     public class GetAuthorizationDivisionsHomeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
 
             try
-            {
-                
+            { 
                 // Retrieve the home division for the organization.
-                
                 AuthzDivision result = apiInstance.GetAuthorizationDivisionsHome();
                 Debug.WriteLine(result);
             }
@@ -577,7 +474,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -601,7 +498,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -613,20 +510,15 @@ namespace Example
     public class GetAuthorizationDivisionsLimitExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
 
             try
-            {
-                
+            { 
                 // Returns the maximum allowed number of divisions.
-                
                 int? result = apiInstance.GetAuthorizationDivisionsLimit();
                 Debug.WriteLine(result);
             }
@@ -637,7 +529,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -661,7 +553,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -673,30 +565,17 @@ namespace Example
     public class GetAuthorizationDivisionspermittedMeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var permission = permission_example;  // string | The permission string, including the object to access, e.g. routing:queue:view
-            
-            
-            
-            
             var name = name_example;  // string | Search term to filter by division name (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Returns whether or not current user can perform the specified action(s).
-                
                 List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedMe(permission, name);
                 Debug.WriteLine(result);
             }
@@ -707,7 +586,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -736,7 +615,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -748,35 +627,18 @@ namespace Example
     public class GetAuthorizationDivisionspermittedSubjectIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
-            
-            
-            
-            
             var permission = permission_example;  // string | The permission string, including the object to access, e.g. routing:queue:view
-            
-            
-            
-            
             var name = name_example;  // string | Search term to filter by division name (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Returns whether or not specified user can perform the specified action(s).
-                
                 List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedSubjectId(subjectId, permission, name);
                 Debug.WriteLine(result);
             }
@@ -787,7 +649,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -817,7 +679,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -829,30 +691,17 @@ namespace Example
     public class GetAuthorizationPermissionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get all permissions.
-                
                 PermissionCollectionEntityListing result = apiInstance.GetAuthorizationPermissions(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -863,7 +712,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -892,7 +741,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -904,20 +753,15 @@ namespace Example
     public class GetAuthorizationProductsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
 
             try
-            {
-                
+            { 
                 // Get the list of enabled products
-                
                 OrganizationProductEntityListing result = apiInstance.GetAuthorizationProducts();
                 Debug.WriteLine(result);
             }
@@ -928,7 +772,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -953,7 +797,7 @@ Requires ANY permissions:
 * authorization:role:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -965,25 +809,16 @@ namespace Example
     public class GetAuthorizationRoleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var roleId = roleId_example;  // string | Role ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a single organization role.
-                
                 DomainOrganizationRole result = apiInstance.GetAuthorizationRole(roleId);
                 Debug.WriteLine(result);
             }
@@ -994,7 +829,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1023,7 +858,7 @@ Requires ANY permissions:
 * authorization:role:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1035,30 +870,17 @@ namespace Example
     public class GetAuthorizationRoleComparedefaultRightRoleIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var leftRoleId = leftRoleId_example;  // string | Left Role ID
-            
-            
-            
-            
             var rightRoleId = rightRoleId_example;  // string | Right Role id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get an org role to default role comparison
-                
                 DomainOrgRoleDifference result = apiInstance.GetAuthorizationRoleComparedefaultRightRoleId(leftRoleId, rightRoleId);
                 Debug.WriteLine(result);
             }
@@ -1069,7 +891,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1099,7 +921,7 @@ Requires ANY permissions:
 * authorization:role:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1111,55 +933,22 @@ namespace Example
     public class GetAuthorizationRoleSubjectgrantsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var roleId = roleId_example;  // string | Role ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the subjects' granted divisions in the specified role.
-                
                 SubjectDivisionGrantsEntityListing result = apiInstance.GetAuthorizationRoleSubjectgrants(roleId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
                 Debug.WriteLine(result);
             }
@@ -1170,7 +959,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1204,7 +993,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1216,35 +1005,18 @@ namespace Example
     public class GetAuthorizationRoleUsersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var roleId = roleId_example;  // string | Role ID
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of the users in a specified role.
-                
                 UserEntityListing result = apiInstance.GetAuthorizationRoleUsers(roleId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -1255,7 +1027,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1286,7 +1058,7 @@ Requires ANY permissions:
 * authorization:role:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1298,75 +1070,26 @@ namespace Example
     public class GetAuthorizationRolesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
-            
             var name = name_example;  // string |  (optional) 
-            
-            
-            
-            
-            
             var permission = new List<string>(); // List<string> |  (optional) 
-            
-            
-            
-            
             var defaultRoleId = new List<string>(); // List<string> |  (optional) 
-            
-            
-            
             var userCount = true;  // bool? |  (optional)  (default to true)
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | id (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieve a list of all roles defined for the organization
-                
                 OrganizationRoleEntityListing result = apiInstance.GetAuthorizationRoles(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, permission, defaultRoleId, userCount, id);
                 Debug.WriteLine(result);
             }
@@ -1377,7 +1100,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1416,7 +1139,7 @@ Requires ANY permissions:
 * authorization:grant:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1428,25 +1151,16 @@ namespace Example
     public class GetAuthorizationSubjectExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Returns a listing of roles and permissions for a user.
-                
                 AuthzSubject result = apiInstance.GetAuthorizationSubject(subjectId);
                 Debug.WriteLine(result);
             }
@@ -1457,7 +1171,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1485,7 +1199,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1497,20 +1211,15 @@ namespace Example
     public class GetAuthorizationSubjectsMeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
 
             try
-            {
-                
+            { 
                 // Returns a listing of roles and permissions for the currently authenticated user.
-                
                 AuthzSubject result = apiInstance.GetAuthorizationSubjectsMe();
                 Debug.WriteLine(result);
             }
@@ -1521,7 +1230,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -1546,7 +1255,7 @@ Requires ANY permissions:
 * authorization:grant:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1558,25 +1267,16 @@ namespace Example
     public class GetUserRolesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Returns a listing of roles and permissions for a user.
-                
                 UserAuthorization result = apiInstance.GetUserRoles(userId);
                 Debug.WriteLine(result);
             }
@@ -1587,7 +1287,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1618,7 +1318,7 @@ Requires ANY permissions:
 * authorization:role:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1630,30 +1330,17 @@ namespace Example
     public class PatchAuthorizationRoleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var roleId = roleId_example;  // string | Role ID
-            
-            
-            
-            
-            
             var body = new DomainOrganizationRole(); // DomainOrganizationRole | Organization role
-            
-            
 
             try
-            {
-                
+            { 
                 // Patch Organization Role for needsUpdate Field
-                
                 DomainOrganizationRole result = apiInstance.PatchAuthorizationRole(roleId, body);
                 Debug.WriteLine(result);
             }
@@ -1664,7 +1351,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1693,7 +1380,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1705,35 +1392,18 @@ namespace Example
     public class PostAuthorizationDivisionObjectExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var divisionId = divisionId_example;  // string | Division ID
-            
-            
-            
-            
             var objectType = objectType_example;  // string | The type of the objects. Must be one of the valid object types
-            
-            
-            
-            
             var body = ;  // List<string> | Object Id List
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Assign a list of objects to a division
-                
                 apiInstance.PostAuthorizationDivisionObject(divisionId, objectType, body);
             }
             catch (Exception e)
@@ -1743,7 +1413,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1775,7 +1445,7 @@ Requires ALL permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1787,25 +1457,16 @@ namespace Example
     public class PostAuthorizationDivisionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
-            
             var body = new AuthzDivision(); // AuthzDivision | Division
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a division.
-                
                 AuthzDivision result = apiInstance.PostAuthorizationDivisions(body);
                 Debug.WriteLine(result);
             }
@@ -1816,7 +1477,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1845,7 +1506,7 @@ Requires ANY permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1857,35 +1518,18 @@ namespace Example
     public class PostAuthorizationRoleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var roleId = roleId_example;  // string | Role ID
-            
-            
-            
-            
-            
             var body = new SubjectDivisions(); // SubjectDivisions | Subjects and Divisions
-            
-            
-            
             var subjectType = subjectType_example;  // string | what the type of the subject is, PC_GROUP or PC_USER (optional)  (default to PC_USER)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Bulk-grant subjects and divisions with an organization role.
-                
                 apiInstance.PostAuthorizationRole(roleId, body, subjectType);
             }
             catch (Exception e)
@@ -1895,7 +1539,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1926,7 +1570,7 @@ Requires ANY permissions:
 * authorization:role:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1938,35 +1582,18 @@ namespace Example
     public class PostAuthorizationRoleComparedefaultRightRoleIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var leftRoleId = leftRoleId_example;  // string | Left Role ID
-            
-            
-            
-            
             var rightRoleId = rightRoleId_example;  // string | Right Role id
-            
-            
-            
-            
-            
             var body = new DomainOrganizationRole(); // DomainOrganizationRole | Organization role
-            
-            
 
             try
-            {
-                
+            { 
                 // Get an unsaved org role to default role comparison
-                
                 DomainOrgRoleDifference result = apiInstance.PostAuthorizationRoleComparedefaultRightRoleId(leftRoleId, rightRoleId, body);
                 Debug.WriteLine(result);
             }
@@ -1977,7 +1604,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2008,7 +1635,7 @@ Requires ANY permissions:
 * authorization:role:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2020,25 +1647,16 @@ namespace Example
     public class PostAuthorizationRolesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
-            
             var body = new DomainOrganizationRoleCreate(); // DomainOrganizationRoleCreate | Organization role
-            
-            
 
             try
-            {
-                
+            { 
                 // Create an organization role.
-                
                 DomainOrganizationRole result = apiInstance.PostAuthorizationRoles(body);
                 Debug.WriteLine(result);
             }
@@ -2049,7 +1667,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2078,7 +1696,7 @@ Requires ANY permissions:
 * authorization:role:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2090,25 +1708,16 @@ namespace Example
     public class PostAuthorizationRolesDefaultExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var force = true;  // bool? | Restore default roles (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Restores all default roles
-                
                 OrganizationRoleEntityListing result = apiInstance.PostAuthorizationRolesDefault(force);
                 Debug.WriteLine(result);
             }
@@ -2119,7 +1728,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2148,7 +1757,7 @@ Requires ANY permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2160,40 +1769,19 @@ namespace Example
     public class PostAuthorizationSubjectDivisionRoleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
-            
-            
-            
-            
             var divisionId = divisionId_example;  // string | the id of the division to which to make the grant
-            
-            
-            
-            
             var roleId = roleId_example;  // string | the id of the role to grant
-            
-            
-            
-            
             var subjectType = subjectType_example;  // string | what the type of the subject is, PC_GROUP or PC_USER (optional)  (default to PC_USER)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Make a grant of a role in a division
-                
                 apiInstance.PostAuthorizationSubjectDivisionRole(subjectId, divisionId, roleId, subjectType);
             }
             catch (Exception e)
@@ -2203,7 +1791,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2235,7 +1823,7 @@ Requires ANY permissions:
 * authorization:division:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2247,30 +1835,17 @@ namespace Example
     public class PutAuthorizationDivisionExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var divisionId = divisionId_example;  // string | Division ID
-            
-            
-            
-            
-            
             var body = new AuthzDivision(); // AuthzDivision | Updated division data
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a division.
-                
                 AuthzDivision result = apiInstance.PutAuthorizationDivision(divisionId, body);
                 Debug.WriteLine(result);
             }
@@ -2281,7 +1856,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2313,7 +1888,7 @@ Requires ANY permissions:
 * authorization:role:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2325,30 +1900,17 @@ namespace Example
     public class PutAuthorizationRoleExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var roleId = roleId_example;  // string | Role ID
-            
-            
-            
-            
-            
             var body = new DomainOrganizationRoleUpdate(); // DomainOrganizationRoleUpdate | Organization role
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an organization role.
-                
                 DomainOrganizationRole result = apiInstance.PutAuthorizationRole(roleId, body);
                 Debug.WriteLine(result);
             }
@@ -2359,7 +1921,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2389,7 +1951,7 @@ Requires ANY permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2401,30 +1963,17 @@ namespace Example
     public class PutAuthorizationRoleUsersAddExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var roleId = roleId_example;  // string | Role ID
-            
-            
-            
-            
             var body = ;  // List<string> | List of user IDs
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Sets the users for the role
-                
                 List&lt;string&gt; result = apiInstance.PutAuthorizationRoleUsersAdd(roleId, body);
                 Debug.WriteLine(result);
             }
@@ -2435,7 +1984,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2465,7 +2014,7 @@ Requires ANY permissions:
 * authorization:grant:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2477,30 +2026,17 @@ namespace Example
     public class PutAuthorizationRoleUsersRemoveExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var roleId = roleId_example;  // string | Role ID
-            
-            
-            
-            
             var body = ;  // List<string> | List of user IDs
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Removes the users from the role
-                
                 List&lt;string&gt; result = apiInstance.PutAuthorizationRoleUsersRemove(roleId, body);
                 Debug.WriteLine(result);
             }
@@ -2511,7 +2047,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2541,7 +2077,7 @@ Requires ANY permissions:
 * authorization:role:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2553,25 +2089,16 @@ namespace Example
     public class PutAuthorizationRolesDefaultExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
-            
             var body = new List<DomainOrganizationRole>(); // List<DomainOrganizationRole> | Organization roles list
-            
-            
 
             try
-            {
-                
+            { 
                 // Restore specified default roles
-                
                 OrganizationRoleEntityListing result = apiInstance.PutAuthorizationRolesDefault(body);
                 Debug.WriteLine(result);
             }
@@ -2582,7 +2109,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2613,7 +2140,7 @@ Requires ANY permissions:
 * authorization:grant:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2625,30 +2152,17 @@ namespace Example
     public class PutUserRolesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AuthorizationApi();
-            
-            
             var userId = userId_example;  // string | User ID
-            
-            
-            
-            
             var body = ;  // List<string> | List of roles
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Sets the user's roles
-                
                 UserAuthorization result = apiInstance.PutUserRoles(userId, body);
                 Debug.WriteLine(result);
             }
@@ -2659,7 +2173,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

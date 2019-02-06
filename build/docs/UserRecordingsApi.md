@@ -29,7 +29,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -41,25 +41,16 @@ namespace Example
     public class DeleteUserrecordingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UserRecordingsApi();
-            
-            
             var recordingId = recordingId_example;  // string | User Recording ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a user recording.
-                
                 apiInstance.DeleteUserrecording(recordingId);
             }
             catch (Exception e)
@@ -69,7 +60,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -97,7 +88,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -109,30 +100,17 @@ namespace Example
     public class GetUserrecordingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UserRecordingsApi();
-            
-            
             var recordingId = recordingId_example;  // string | User Recording ID
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a user recording.
-                
                 UserRecording result = apiInstance.GetUserrecording(recordingId, expand);
                 Debug.WriteLine(result);
             }
@@ -143,7 +121,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -172,7 +150,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -184,30 +162,17 @@ namespace Example
     public class GetUserrecordingMediaExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UserRecordingsApi();
-            
-            
             var recordingId = recordingId_example;  // string | User Recording ID
-            
-            
-            
-            
             var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Download a user recording.
-                
                 DownloadResponse result = apiInstance.GetUserrecordingMedia(recordingId, formatId);
                 Debug.WriteLine(result);
             }
@@ -218,7 +183,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -247,7 +212,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -259,35 +224,18 @@ namespace Example
     public class GetUserrecordingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UserRecordingsApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of user recordings.
-                
                 UserRecordingEntityListing result = apiInstance.GetUserrecordings(pageSize, pageNumber, expand);
                 Debug.WriteLine(result);
             }
@@ -298,7 +246,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -328,7 +276,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -340,20 +288,15 @@ namespace Example
     public class GetUserrecordingsSummaryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UserRecordingsApi();
-            
 
             try
-            {
-                
+            { 
                 // Get user recording summary
-                
                 FaxSummary result = apiInstance.GetUserrecordingsSummary();
                 Debug.WriteLine(result);
             }
@@ -364,7 +307,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -388,7 +331,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -400,35 +343,18 @@ namespace Example
     public class PutUserrecordingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UserRecordingsApi();
-            
-            
             var recordingId = recordingId_example;  // string | User Recording ID
-            
-            
-            
-            
-            
             var body = new UserRecording(); // UserRecording | UserRecording
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a user recording.
-                
                 UserRecording result = apiInstance.PutUserrecording(recordingId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -439,7 +365,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

@@ -34,7 +34,7 @@ Requires ANY permissions:
 * routing:skill:manage
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -46,25 +46,16 @@ namespace Example
     public class DeleteLanguageExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LanguagesApi();
-            
-            
             var languageId = languageId_example;  // string | Language ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete Language (Deprecated)
-                
                 apiInstance.DeleteLanguage(languageId);
             }
             catch (Exception e)
@@ -74,7 +65,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -103,7 +94,7 @@ Requires ANY permissions:
 * routing:skill:manage
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -115,25 +106,16 @@ namespace Example
     public class DeleteRoutingLanguageExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LanguagesApi();
-            
-            
             var languageId = languageId_example;  // string | Language ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete Language
-                
                 apiInstance.DeleteRoutingLanguage(languageId);
             }
             catch (Exception e)
@@ -143,7 +125,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -172,7 +154,7 @@ Requires ANY permissions:
 * routing:skill:manage
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -184,25 +166,16 @@ namespace Example
     public class GetLanguageExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LanguagesApi();
-            
-            
             var languageId = languageId_example;  // string | Language ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get language (Deprecated)
-                
                 Language result = apiInstance.GetLanguage(languageId);
                 Debug.WriteLine(result);
             }
@@ -213,7 +186,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -242,7 +215,7 @@ Requires ANY permissions:
 * routing:skill:manage
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -254,40 +227,19 @@ namespace Example
     public class GetLanguagesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LanguagesApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
-            
-            
-            
-            
             var name = name_example;  // string | Name (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the list of supported languages. (Deprecated)
-                
                 LanguageEntityListing result = apiInstance.GetLanguages(pageSize, pageNumber, sortOrder, name);
                 Debug.WriteLine(result);
             }
@@ -298,7 +250,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -329,7 +281,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -341,20 +293,15 @@ namespace Example
     public class GetLanguagesTranslationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LanguagesApi();
-            
 
             try
-            {
-                
+            { 
                 // Get all available languages for translation
-                
                 AvailableTranslations result = apiInstance.GetLanguagesTranslations();
                 Debug.WriteLine(result);
             }
@@ -365,7 +312,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -389,7 +336,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -401,25 +348,16 @@ namespace Example
     public class GetLanguagesTranslationsBuiltinExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LanguagesApi();
-            
-            
             var language = language_example;  // string | The language of the builtin translation to retrieve
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get the builtin translation for a language
-                
                 Dictionary&lt;string, Object&gt; result = apiInstance.GetLanguagesTranslationsBuiltin(language);
                 Debug.WriteLine(result);
             }
@@ -430,7 +368,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -458,7 +396,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -470,25 +408,16 @@ namespace Example
     public class GetLanguagesTranslationsOrganizationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LanguagesApi();
-            
-            
             var language = language_example;  // string | The language of the translation to retrieve for the organization
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get effective translation for an organization by language
-                
                 Dictionary&lt;string, Object&gt; result = apiInstance.GetLanguagesTranslationsOrganization(language);
                 Debug.WriteLine(result);
             }
@@ -499,7 +428,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -527,7 +456,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -539,25 +468,16 @@ namespace Example
     public class GetLanguagesTranslationsUserExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LanguagesApi();
-            
-            
             var userId = userId_example;  // string | The user id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get effective language translation for a user
-                
                 Dictionary&lt;string, Object&gt; result = apiInstance.GetLanguagesTranslationsUser(userId);
                 Debug.WriteLine(result);
             }
@@ -568,7 +488,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -596,7 +516,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -608,25 +528,16 @@ namespace Example
     public class GetRoutingLanguageExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LanguagesApi();
-            
-            
             var languageId = languageId_example;  // string | Language ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get language
-                
                 Language result = apiInstance.GetRoutingLanguage(languageId);
                 Debug.WriteLine(result);
             }
@@ -637,7 +548,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -666,7 +577,7 @@ Requires ANY permissions:
 * routing:skill:manage
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -678,25 +589,16 @@ namespace Example
     public class PostLanguagesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LanguagesApi();
-            
-            
-            
             var body = new Language(); // Language | Language
-            
-            
 
             try
-            {
-                
+            { 
                 // Create Language (Deprecated)
-                
                 Language result = apiInstance.PostLanguages(body);
                 Debug.WriteLine(result);
             }
@@ -707,7 +609,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

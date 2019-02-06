@@ -31,7 +31,7 @@ Requires ANY permissions:
 * directory:location:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -43,25 +43,16 @@ namespace Example
     public class DeleteLocationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationsApi();
-            
-            
             var locationId = locationId_example;  // string | Location ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a location
-                
                 apiInstance.DeleteLocation(locationId);
             }
             catch (Exception e)
@@ -71,7 +62,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -100,7 +91,7 @@ Requires ANY permissions:
 * telephony:plugin:all
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -112,25 +103,16 @@ namespace Example
     public class GetLocationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationsApi();
-            
-            
             var locationId = locationId_example;  // string | Location ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Location by ID.
-                
                 LocationDefinition result = apiInstance.GetLocation(locationId);
                 Debug.WriteLine(result);
             }
@@ -141,7 +123,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -169,7 +151,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -181,40 +163,19 @@ namespace Example
     public class GetLocationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationsApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
-            
             var id = new List<string>(); // List<string> | id (optional) 
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a list of all locations.
-                
                 LocationEntityListing result = apiInstance.GetLocations(pageSize, pageNumber, id, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -225,7 +186,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -256,7 +217,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -268,30 +229,17 @@ namespace Example
     public class GetLocationsSearchExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationsApi();
-            
-            
             var q64 = q64_example;  // string | q64
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | expand (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Search locations using the q64 value returned from a previous search
-                
                 LocationsSearchResponse result = apiInstance.GetLocationsSearch(q64, expand);
                 Debug.WriteLine(result);
             }
@@ -302,7 +250,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -332,7 +280,7 @@ Requires ANY permissions:
 * directory:location:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -344,30 +292,17 @@ namespace Example
     public class PatchLocationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationsApi();
-            
-            
             var locationId = locationId_example;  // string | Location ID
-            
-            
-            
-            
-            
             var body = new LocationUpdateDefinition(); // LocationUpdateDefinition | Location
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a location
-                
                 LocationDefinition result = apiInstance.PatchLocation(locationId, body);
                 Debug.WriteLine(result);
             }
@@ -378,7 +313,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -408,7 +343,7 @@ Requires ANY permissions:
 * directory:location:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -420,25 +355,16 @@ namespace Example
     public class PostLocationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationsApi();
-            
-            
-            
             var body = new LocationDefinition(); // LocationDefinition | Location
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a location
-                
                 LocationDefinition result = apiInstance.PostLocations(body);
                 Debug.WriteLine(result);
             }
@@ -449,7 +375,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -477,7 +403,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -489,25 +415,16 @@ namespace Example
     public class PostLocationsSearchExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationsApi();
-            
-            
-            
             var body = new LocationSearchRequest(); // LocationSearchRequest | Search request options
-            
-            
 
             try
-            {
-                
+            { 
                 // Search locations
-                
                 LocationsSearchResponse result = apiInstance.PostLocationsSearch(body);
                 Debug.WriteLine(result);
             }
@@ -518,7 +435,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

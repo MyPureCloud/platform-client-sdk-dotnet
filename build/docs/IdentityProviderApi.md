@@ -52,7 +52,7 @@ Requires ANY permissions:
 * sso:provider:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -64,20 +64,15 @@ namespace Example
     public class DeleteIdentityprovidersAdfsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Delete ADFS Identity Provider
-                
                 Empty result = apiInstance.DeleteIdentityprovidersAdfs();
                 Debug.WriteLine(result);
             }
@@ -88,7 +83,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -113,7 +108,7 @@ Requires ANY permissions:
 * sso:provider:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -125,20 +120,15 @@ namespace Example
     public class DeleteIdentityprovidersCicExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Delete Customer Interaction Center (CIC) Identity Provider
-                
                 Empty result = apiInstance.DeleteIdentityprovidersCic();
                 Debug.WriteLine(result);
             }
@@ -149,7 +139,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -174,7 +164,7 @@ Requires ANY permissions:
 * sso:provider:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -186,20 +176,15 @@ namespace Example
     public class DeleteIdentityprovidersGsuiteExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Delete G Suite Identity Provider
-                
                 Empty result = apiInstance.DeleteIdentityprovidersGsuite();
                 Debug.WriteLine(result);
             }
@@ -210,7 +195,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -235,7 +220,7 @@ Requires ANY permissions:
 * sso:provider:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -247,20 +232,15 @@ namespace Example
     public class DeleteIdentityprovidersIdentitynowExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Delete IdentityNow Provider
-                
                 Empty result = apiInstance.DeleteIdentityprovidersIdentitynow();
                 Debug.WriteLine(result);
             }
@@ -271,7 +251,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -296,7 +276,7 @@ Requires ANY permissions:
 * sso:provider:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -308,20 +288,15 @@ namespace Example
     public class DeleteIdentityprovidersOktaExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Delete Okta Identity Provider
-                
                 Empty result = apiInstance.DeleteIdentityprovidersOkta();
                 Debug.WriteLine(result);
             }
@@ -332,7 +307,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -357,7 +332,7 @@ Requires ANY permissions:
 * sso:provider:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -369,20 +344,15 @@ namespace Example
     public class DeleteIdentityprovidersOneloginExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Delete OneLogin Identity Provider
-                
                 Empty result = apiInstance.DeleteIdentityprovidersOnelogin();
                 Debug.WriteLine(result);
             }
@@ -393,7 +363,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -418,7 +388,7 @@ Requires ANY permissions:
 * sso:provider:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -430,20 +400,15 @@ namespace Example
     public class DeleteIdentityprovidersPingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Delete Ping Identity Provider
-                
                 Empty result = apiInstance.DeleteIdentityprovidersPing();
                 Debug.WriteLine(result);
             }
@@ -454,7 +419,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -479,7 +444,7 @@ Requires ANY permissions:
 * sso:provider:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -491,20 +456,15 @@ namespace Example
     public class DeleteIdentityprovidersPurecloudExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Delete PureCloud Identity Provider
-                
                 Empty result = apiInstance.DeleteIdentityprovidersPurecloud();
                 Debug.WriteLine(result);
             }
@@ -515,7 +475,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -540,7 +500,7 @@ Requires ANY permissions:
 * sso:provider:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -552,20 +512,15 @@ namespace Example
     public class DeleteIdentityprovidersSalesforceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Delete Salesforce Identity Provider
-                
                 Empty result = apiInstance.DeleteIdentityprovidersSalesforce();
                 Debug.WriteLine(result);
             }
@@ -576,7 +531,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -601,7 +556,7 @@ Requires ANY permissions:
 * sso:provider:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -613,20 +568,15 @@ namespace Example
     public class GetIdentityprovidersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // The list of identity providers
-                
                 OAuthProviderEntityListing result = apiInstance.GetIdentityproviders();
                 Debug.WriteLine(result);
             }
@@ -637,7 +587,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -662,7 +612,7 @@ Requires ANY permissions:
 * sso:provider:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -674,20 +624,15 @@ namespace Example
     public class GetIdentityprovidersAdfsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Get ADFS Identity Provider
-                
                 ADFS result = apiInstance.GetIdentityprovidersAdfs();
                 Debug.WriteLine(result);
             }
@@ -698,7 +643,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -723,7 +668,7 @@ Requires ANY permissions:
 * sso:provider:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -735,20 +680,15 @@ namespace Example
     public class GetIdentityprovidersCicExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Get Customer Interaction Center (CIC) Identity Provider
-                
                 CustomerInteractionCenter result = apiInstance.GetIdentityprovidersCic();
                 Debug.WriteLine(result);
             }
@@ -759,7 +699,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -784,7 +724,7 @@ Requires ANY permissions:
 * sso:provider:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -796,20 +736,15 @@ namespace Example
     public class GetIdentityprovidersGsuiteExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Get G Suite Identity Provider
-                
                 GSuite result = apiInstance.GetIdentityprovidersGsuite();
                 Debug.WriteLine(result);
             }
@@ -820,7 +755,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -845,7 +780,7 @@ Requires ANY permissions:
 * sso:provider:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -857,20 +792,15 @@ namespace Example
     public class GetIdentityprovidersIdentitynowExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Get IdentityNow Provider
-                
                 IdentityNow result = apiInstance.GetIdentityprovidersIdentitynow();
                 Debug.WriteLine(result);
             }
@@ -881,7 +811,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -906,7 +836,7 @@ Requires ANY permissions:
 * sso:provider:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -918,20 +848,15 @@ namespace Example
     public class GetIdentityprovidersOktaExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Get Okta Identity Provider
-                
                 Okta result = apiInstance.GetIdentityprovidersOkta();
                 Debug.WriteLine(result);
             }
@@ -942,7 +867,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -967,7 +892,7 @@ Requires ANY permissions:
 * sso:provider:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -979,20 +904,15 @@ namespace Example
     public class GetIdentityprovidersOneloginExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Get OneLogin Identity Provider
-                
                 OneLogin result = apiInstance.GetIdentityprovidersOnelogin();
                 Debug.WriteLine(result);
             }
@@ -1003,7 +923,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -1028,7 +948,7 @@ Requires ANY permissions:
 * sso:provider:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1040,20 +960,15 @@ namespace Example
     public class GetIdentityprovidersPingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Get Ping Identity Provider
-                
                 PingIdentity result = apiInstance.GetIdentityprovidersPing();
                 Debug.WriteLine(result);
             }
@@ -1064,7 +979,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -1089,7 +1004,7 @@ Requires ANY permissions:
 * sso:provider:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1101,20 +1016,15 @@ namespace Example
     public class GetIdentityprovidersPurecloudExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Get PureCloud Identity Provider
-                
                 PureCloudPlatform.Client.V2.Model.PureCloud result = apiInstance.GetIdentityprovidersPurecloud();
                 Debug.WriteLine(result);
             }
@@ -1125,7 +1035,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -1150,7 +1060,7 @@ Requires ANY permissions:
 * sso:provider:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1162,20 +1072,15 @@ namespace Example
     public class GetIdentityprovidersSalesforceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
 
             try
-            {
-                
+            { 
                 // Get Salesforce Identity Provider
-                
                 Salesforce result = apiInstance.GetIdentityprovidersSalesforce();
                 Debug.WriteLine(result);
             }
@@ -1186,7 +1091,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -1212,7 +1117,7 @@ Requires ANY permissions:
 * sso:provider:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1224,25 +1129,16 @@ namespace Example
     public class PutIdentityprovidersAdfsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
-            
-            
             var body = new ADFS(); // ADFS | Provider
-            
-            
 
             try
-            {
-                
+            { 
                 // Update/Create ADFS Identity Provider
-                
                 OAuthProvider result = apiInstance.PutIdentityprovidersAdfs(body);
                 Debug.WriteLine(result);
             }
@@ -1253,7 +1149,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1283,7 +1179,7 @@ Requires ANY permissions:
 * sso:provider:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1295,25 +1191,16 @@ namespace Example
     public class PutIdentityprovidersCicExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
-            
-            
             var body = new CustomerInteractionCenter(); // CustomerInteractionCenter | Provider
-            
-            
 
             try
-            {
-                
+            { 
                 // Update/Create Customer Interaction Center (CIC) Identity Provider
-                
                 OAuthProvider result = apiInstance.PutIdentityprovidersCic(body);
                 Debug.WriteLine(result);
             }
@@ -1324,7 +1211,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1354,7 +1241,7 @@ Requires ANY permissions:
 * sso:provider:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1366,25 +1253,16 @@ namespace Example
     public class PutIdentityprovidersGsuiteExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
-            
-            
             var body = new GSuite(); // GSuite | Provider
-            
-            
 
             try
-            {
-                
+            { 
                 // Update/Create G Suite Identity Provider
-                
                 OAuthProvider result = apiInstance.PutIdentityprovidersGsuite(body);
                 Debug.WriteLine(result);
             }
@@ -1395,7 +1273,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1425,7 +1303,7 @@ Requires ANY permissions:
 * sso:provider:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1437,25 +1315,16 @@ namespace Example
     public class PutIdentityprovidersIdentitynowExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
-            
-            
             var body = new IdentityNow(); // IdentityNow | Provider
-            
-            
 
             try
-            {
-                
+            { 
                 // Update/Create IdentityNow Provider
-                
                 IdentityNow result = apiInstance.PutIdentityprovidersIdentitynow(body);
                 Debug.WriteLine(result);
             }
@@ -1466,7 +1335,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1496,7 +1365,7 @@ Requires ANY permissions:
 * sso:provider:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1508,25 +1377,16 @@ namespace Example
     public class PutIdentityprovidersOktaExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
-            
-            
             var body = new Okta(); // Okta | Provider
-            
-            
 
             try
-            {
-                
+            { 
                 // Update/Create Okta Identity Provider
-                
                 OAuthProvider result = apiInstance.PutIdentityprovidersOkta(body);
                 Debug.WriteLine(result);
             }
@@ -1537,7 +1397,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1567,7 +1427,7 @@ Requires ANY permissions:
 * sso:provider:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1579,25 +1439,16 @@ namespace Example
     public class PutIdentityprovidersOneloginExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
-            
-            
             var body = new OneLogin(); // OneLogin | Provider
-            
-            
 
             try
-            {
-                
+            { 
                 // Update/Create OneLogin Identity Provider
-                
                 OAuthProvider result = apiInstance.PutIdentityprovidersOnelogin(body);
                 Debug.WriteLine(result);
             }
@@ -1608,7 +1459,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1638,7 +1489,7 @@ Requires ANY permissions:
 * sso:provider:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1650,25 +1501,16 @@ namespace Example
     public class PutIdentityprovidersPingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
-            
-            
             var body = new PingIdentity(); // PingIdentity | Provider
-            
-            
 
             try
-            {
-                
+            { 
                 // Update/Create Ping Identity Provider
-                
                 OAuthProvider result = apiInstance.PutIdentityprovidersPing(body);
                 Debug.WriteLine(result);
             }
@@ -1679,7 +1521,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1709,7 +1551,7 @@ Requires ANY permissions:
 * sso:provider:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1721,25 +1563,16 @@ namespace Example
     public class PutIdentityprovidersPurecloudExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
-            
-            
             var body = new PureCloudPlatform.Client.V2.Model.PureCloud(); // PureCloudPlatform.Client.V2.Model.PureCloud | Provider
-            
-            
 
             try
-            {
-                
+            { 
                 // Update/Create PureCloud Identity Provider
-                
                 OAuthProvider result = apiInstance.PutIdentityprovidersPurecloud(body);
                 Debug.WriteLine(result);
             }
@@ -1750,7 +1583,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1780,7 +1613,7 @@ Requires ANY permissions:
 * sso:provider:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1792,25 +1625,16 @@ namespace Example
     public class PutIdentityprovidersSalesforceExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            
-            
-            
             var body = new Salesforce(); // Salesforce | Provider
-            
-            
 
             try
-            {
-                
+            { 
                 // Update/Create Salesforce Identity Provider
-                
                 OAuthProvider result = apiInstance.PutIdentityprovidersSalesforce(body);
                 Debug.WriteLine(result);
             }
@@ -1821,7 +1645,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

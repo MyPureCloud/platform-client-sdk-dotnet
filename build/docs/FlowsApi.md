@@ -25,7 +25,7 @@ Requires ANY permissions:
 * analytics:flowAggregate:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -37,25 +37,16 @@ namespace Example
     public class PostAnalyticsFlowsAggregatesQueryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new FlowsApi();
-            
-            
-            
             var body = new AggregationQuery(); // AggregationQuery | query
-            
-            
 
             try
-            {
-                
+            { 
                 // Query for flow aggregates
-                
                 AggregateQueryResponse result = apiInstance.PostAnalyticsFlowsAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
@@ -66,7 +57,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

@@ -64,7 +64,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -76,25 +76,16 @@ namespace Example
     public class DeleteIntegrationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var integrationId = integrationId_example;  // string | Integration Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete integration.
-                
                 Integration result = apiInstance.DeleteIntegration(integrationId);
                 Debug.WriteLine(result);
             }
@@ -105,7 +96,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -134,7 +125,7 @@ Requires ANY permissions:
 * integrations:action:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -146,25 +137,16 @@ namespace Example
     public class DeleteIntegrationsActionExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete an Action
-                
                 apiInstance.DeleteIntegrationsAction(actionId);
             }
             catch (Exception e)
@@ -174,7 +156,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -203,7 +185,7 @@ Requires ANY permissions:
 * integrations:action:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -215,25 +197,16 @@ namespace Example
     public class DeleteIntegrationsActionDraftExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a Draft
-                
                 apiInstance.DeleteIntegrationsActionDraft(actionId);
             }
             catch (Exception e)
@@ -243,7 +216,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -271,7 +244,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -283,25 +256,16 @@ namespace Example
     public class DeleteIntegrationsCredentialExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var credentialId = credentialId_example;  // string | Credential ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete a set of credentials
-                
                 apiInstance.DeleteIntegrationsCredential(credentialId);
             }
             catch (Exception e)
@@ -311,7 +275,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -339,7 +303,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -351,55 +315,22 @@ namespace Example
     public class GetIntegrationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var integrationId = integrationId_example;  // string | Integration Id
-            
-            
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get integration.
-                
                 Integration result = apiInstance.GetIntegration(integrationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
                 Debug.WriteLine(result);
             }
@@ -410,7 +341,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -444,7 +375,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -456,25 +387,16 @@ namespace Example
     public class GetIntegrationConfigCurrentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var integrationId = integrationId_example;  // string | Integration Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get integration configuration.
-                
                 IntegrationConfiguration result = apiInstance.GetIntegrationConfigCurrent(integrationId);
                 Debug.WriteLine(result);
             }
@@ -485,7 +407,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -513,7 +435,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -525,50 +447,21 @@ namespace Example
     public class GetIntegrationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // List integrations
-                
                 IntegrationEntityListing result = apiInstance.GetIntegrations(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
                 Debug.WriteLine(result);
             }
@@ -579,7 +472,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -614,7 +507,7 @@ Requires ANY permissions:
 * bridge:actions:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -626,35 +519,18 @@ namespace Example
     public class GetIntegrationsActionExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
-            
             var expand = expand_example;  // string | Indicates fields of the response which should be expanded. (optional) 
-            
-            
-            
-            
             var includeConfig = true;  // bool? | Show config when available (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieves a single Action matching id.
-                
                 PureCloudPlatform.Client.V2.Model.Action result = apiInstance.GetIntegrationsAction(actionId, expand, includeConfig);
                 Debug.WriteLine(result);
             }
@@ -665,7 +541,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -697,7 +573,7 @@ Requires ANY permissions:
 * bridge:actions:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -709,35 +585,18 @@ namespace Example
     public class GetIntegrationsActionDraftExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
-            
             var expand = expand_example;  // string | Indicates fields of the response which should be expanded. (optional) 
-            
-            
-            
-            
             var includeConfig = true;  // bool? | Show config when available (optional)  (default to false)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieve a Draft
-                
                 PureCloudPlatform.Client.V2.Model.Action result = apiInstance.GetIntegrationsActionDraft(actionId, expand, includeConfig);
                 Debug.WriteLine(result);
             }
@@ -748,7 +607,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -780,7 +639,7 @@ Requires ANY permissions:
 * bridge:actions:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -792,30 +651,17 @@ namespace Example
     public class GetIntegrationsActionDraftSchemaExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
-            
             var fileName = fileName_example;  // string | Name of schema file to be retrieved for this draft.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieve schema for a Draft based on filename.
-                
                 JsonSchemaDocument result = apiInstance.GetIntegrationsActionDraftSchema(actionId, fileName);
                 Debug.WriteLine(result);
             }
@@ -826,7 +672,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -857,7 +703,7 @@ Requires ANY permissions:
 * bridge:actions:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -869,30 +715,17 @@ namespace Example
     public class GetIntegrationsActionDraftTemplateExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
-            
             var fileName = fileName_example;  // string | Name of template file to be retrieved for this action draft.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieve templates for a Draft based on filename.
-                
                 string result = apiInstance.GetIntegrationsActionDraftTemplate(actionId, fileName);
                 Debug.WriteLine(result);
             }
@@ -903,7 +736,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -933,7 +766,7 @@ Requires ANY permissions:
 * integrations:action:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -945,25 +778,16 @@ namespace Example
     public class GetIntegrationsActionDraftValidationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Validate current Draft configuration.
-                
                 DraftValidationResult result = apiInstance.GetIntegrationsActionDraftValidation(actionId);
                 Debug.WriteLine(result);
             }
@@ -974,7 +798,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1004,7 +828,7 @@ Requires ANY permissions:
 * bridge:actions:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1016,30 +840,17 @@ namespace Example
     public class GetIntegrationsActionSchemaExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
-            
             var fileName = fileName_example;  // string | Name of schema file to be retrieved for this action.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieve schema for an action based on filename.
-                
                 JsonSchemaDocument result = apiInstance.GetIntegrationsActionSchema(actionId, fileName);
                 Debug.WriteLine(result);
             }
@@ -1050,7 +861,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1081,7 +892,7 @@ Requires ANY permissions:
 * bridge:actions:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1093,30 +904,17 @@ namespace Example
     public class GetIntegrationsActionTemplateExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
-            
             var fileName = fileName_example;  // string | Name of template file to be retrieved for this action.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieve text of templates for an action based on filename.
-                
                 string result = apiInstance.GetIntegrationsActionTemplate(actionId, fileName);
                 Debug.WriteLine(result);
             }
@@ -1127,7 +925,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1158,7 +956,7 @@ Requires ANY permissions:
 * bridge:actions:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1170,65 +968,24 @@ namespace Example
     public class GetIntegrationsActionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var category = category_example;  // string | Filter by category name (optional) 
-            
-            
-            
-            
             var secure = secure_example;  // string | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional) 
-            
-            
-            
-            
             var includeAuthActions = includeAuthActions_example;  // string | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional) 
-            
-            
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieves all actions associated with filters passed in via query param.
-                
                 ActionEntityListing result = apiInstance.GetIntegrationsActions(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
                 Debug.WriteLine(result);
             }
@@ -1239,7 +996,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1277,7 +1034,7 @@ Requires ANY permissions:
 * bridge:actions:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1289,55 +1046,22 @@ namespace Example
     public class GetIntegrationsActionsCategoriesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var secure = secure_example;  // string | Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions. (optional) 
-            
-            
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieves all categories of available Actions
-                
                 CategoryEntityListing result = apiInstance.GetIntegrationsActionsCategories(secure, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
                 Debug.WriteLine(result);
             }
@@ -1348,7 +1072,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1384,7 +1108,7 @@ Requires ANY permissions:
 * bridge:actions:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1396,65 +1120,24 @@ namespace Example
     public class GetIntegrationsActionsDraftsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var category = category_example;  // string | Filter by category name (optional) 
-            
-            
-            
-            
             var secure = secure_example;  // string | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional) 
-            
-            
-            
-            
             var includeAuthActions = includeAuthActions_example;  // string | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional) 
-            
-            
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Retrieves all action drafts associated with the filters passed in via query param.
-                
                 ActionEntityListing result = apiInstance.GetIntegrationsActionsDrafts(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
                 Debug.WriteLine(result);
             }
@@ -1465,7 +1148,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1501,7 +1184,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1513,50 +1196,21 @@ namespace Example
     public class GetIntegrationsClientappsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // List permitted client app integrations for the logged in user
-                
                 ClientAppEntityListing result = apiInstance.GetIntegrationsClientapps(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
                 Debug.WriteLine(result);
             }
@@ -1567,7 +1221,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1600,7 +1254,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1612,25 +1266,16 @@ namespace Example
     public class GetIntegrationsCredentialExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var credentialId = credentialId_example;  // string | Credential ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a single credential with sensitive fields redacted
-                
                 Credential result = apiInstance.GetIntegrationsCredential(credentialId);
                 Debug.WriteLine(result);
             }
@@ -1641,7 +1286,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1669,7 +1314,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1681,30 +1326,17 @@ namespace Example
     public class GetIntegrationsCredentialsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // List multiple sets of credentials
-                
                 CredentialInfoListing result = apiInstance.GetIntegrationsCredentials(pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -1715,7 +1347,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1744,7 +1376,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1756,20 +1388,15 @@ namespace Example
     public class GetIntegrationsCredentialsTypesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
 
             try
-            {
-                
+            { 
                 // List all credential types
-                
                 CredentialTypeListing result = apiInstance.GetIntegrationsCredentialsTypes();
                 Debug.WriteLine(result);
             }
@@ -1780,7 +1407,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 This endpoint does require any parameters.
@@ -1806,7 +1433,7 @@ Requires ANY permissions:
 * bridge:notification:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1818,45 +1445,20 @@ namespace Example
     public class GetIntegrationsEventlogExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Order by (optional)  (default to descending)
-            
-            
-            
-            
             var entityId = entityId_example;  // string | Include only events with this entity ID (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // List all events
-                
                 IntegrationEventEntityListing result = apiInstance.GetIntegrationsEventlog(pageSize, pageNumber, sortBy, sortOrder, entityId);
                 Debug.WriteLine(result);
             }
@@ -1867,7 +1469,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1901,7 +1503,7 @@ Requires ANY permissions:
 * bridge:notification:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1913,25 +1515,16 @@ namespace Example
     public class GetIntegrationsEventlogEventIdExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var eventId = eventId_example;  // string | Event Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get a single event
-                
                 IntegrationEvent result = apiInstance.GetIntegrationsEventlogEventId(eventId);
                 Debug.WriteLine(result);
             }
@@ -1942,7 +1535,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1970,7 +1563,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1982,25 +1575,16 @@ namespace Example
     public class GetIntegrationsTypeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var typeId = typeId_example;  // string | Integration Type Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get integration type.
-                
                 IntegrationType result = apiInstance.GetIntegrationsType(typeId);
                 Debug.WriteLine(result);
             }
@@ -2011,7 +1595,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2039,7 +1623,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2051,30 +1635,17 @@ namespace Example
     public class GetIntegrationsTypeConfigschemaExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var typeId = typeId_example;  // string | Integration Type Id
-            
-            
-            
-            
             var configType = configType_example;  // string | Config schema type
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get properties config schema for an integration type.
-                
                 JsonSchemaDocument result = apiInstance.GetIntegrationsTypeConfigschema(typeId, configType);
                 Debug.WriteLine(result);
             }
@@ -2085,7 +1656,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2114,7 +1685,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2126,50 +1697,21 @@ namespace Example
     public class GetIntegrationsTypesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // List integration types
-                
                 IntegrationTypeEntityListing result = apiInstance.GetIntegrationsTypes(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
                 Debug.WriteLine(result);
             }
@@ -2180,7 +1722,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2213,7 +1755,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2225,60 +1767,23 @@ namespace Example
     public class PatchIntegrationExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var integrationId = integrationId_example;  // string | Integration Id
-            
-            
-            
-            
-            
             var body = new Integration(); // Integration | Integration Update (optional) 
-            
-            
-            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            
-            
-            
-            
-            
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            
-            
-            
             var nextPage = nextPage_example;  // string | next page token (optional) 
-            
-            
-            
-            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an integration.
-                
                 Integration result = apiInstance.PatchIntegration(integrationId, body, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
                 Debug.WriteLine(result);
             }
@@ -2289,7 +1794,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2325,7 +1830,7 @@ Requires ANY permissions:
 * integrations:action:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2337,30 +1842,17 @@ namespace Example
     public class PatchIntegrationsActionExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
-            
-            
             var body = new UpdateActionInput(); // UpdateActionInput | Input used to patch the Action.
-            
-            
 
             try
-            {
-                
+            { 
                 // Patch an Action
-                
                 PureCloudPlatform.Client.V2.Model.Action result = apiInstance.PatchIntegrationsAction(actionId, body);
                 Debug.WriteLine(result);
             }
@@ -2371,7 +1863,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2401,7 +1893,7 @@ Requires ANY permissions:
 * integrations:action:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2413,30 +1905,17 @@ namespace Example
     public class PatchIntegrationsActionDraftExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
-            
-            
             var body = new UpdateDraftInput(); // UpdateDraftInput | Input used to patch the Action Draft.
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an existing Draft
-                
                 PureCloudPlatform.Client.V2.Model.Action result = apiInstance.PatchIntegrationsActionDraft(actionId, body);
                 Debug.WriteLine(result);
             }
@@ -2447,7 +1926,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2476,7 +1955,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2488,25 +1967,16 @@ namespace Example
     public class PostIntegrationsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
-            
             var body = new CreateIntegrationRequest(); // CreateIntegrationRequest | Integration (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create an integration.
-                
                 Integration result = apiInstance.PostIntegrations(body);
                 Debug.WriteLine(result);
             }
@@ -2517,7 +1987,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2546,7 +2016,7 @@ Requires ANY permissions:
 * integrations:action:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2558,25 +2028,16 @@ namespace Example
     public class PostIntegrationsActionDraftExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new Draft from existing Action
-                
                 PureCloudPlatform.Client.V2.Model.Action result = apiInstance.PostIntegrationsActionDraft(actionId);
                 Debug.WriteLine(result);
             }
@@ -2587,7 +2048,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2616,7 +2077,7 @@ Requires ANY permissions:
 * integrations:action:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2628,30 +2089,17 @@ namespace Example
     public class PostIntegrationsActionDraftPublishExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
-            
-            
             var body = new PublishDraftInput(); // PublishDraftInput | Input used to patch the Action.
-            
-            
 
             try
-            {
-                
+            { 
                 // Publish a Draft and make it the active Action configuration
-                
                 PureCloudPlatform.Client.V2.Model.Action result = apiInstance.PostIntegrationsActionDraftPublish(actionId, body);
                 Debug.WriteLine(result);
             }
@@ -2662,7 +2110,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2692,7 +2140,7 @@ Requires ANY permissions:
 * integrations:action:execute
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2704,30 +2152,17 @@ namespace Example
     public class PostIntegrationsActionDraftTestExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
-            
             var body = ;  // Object | Map of parameters used for variable substitution.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
-                
                 TestExecutionResult result = apiInstance.PostIntegrationsActionDraftTest(actionId, body);
                 Debug.WriteLine(result);
             }
@@ -2738,7 +2173,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2769,7 +2204,7 @@ Requires ANY permissions:
 * bridge:actions:execute
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2781,30 +2216,17 @@ namespace Example
     public class PostIntegrationsActionExecuteExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
-            
             var body = ;  // Object | Map of parameters used for variable substitution.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
-                
                 Object result = apiInstance.PostIntegrationsActionExecute(actionId, body);
                 Debug.WriteLine(result);
             }
@@ -2815,7 +2237,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2846,7 +2268,7 @@ Requires ANY permissions:
 * bridge:actions:execute
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2858,30 +2280,17 @@ namespace Example
     public class PostIntegrationsActionTestExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var actionId = actionId_example;  // string | actionId
-            
-            
-            
-            
             var body = ;  // Object | Map of parameters used for variable substitution.
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
-                
                 TestExecutionResult result = apiInstance.PostIntegrationsActionTest(actionId, body);
                 Debug.WriteLine(result);
             }
@@ -2892,7 +2301,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2922,7 +2331,7 @@ Requires ANY permissions:
 * integrations:action:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -2934,25 +2343,16 @@ namespace Example
     public class PostIntegrationsActionsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
-            
             var body = new PostActionInput(); // PostActionInput | Input used to create Action.
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new Action
-                
                 PureCloudPlatform.Client.V2.Model.Action result = apiInstance.PostIntegrationsActions(body);
                 Debug.WriteLine(result);
             }
@@ -2963,7 +2363,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -2992,7 +2392,7 @@ Requires ANY permissions:
 * integrations:action:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3004,25 +2404,16 @@ namespace Example
     public class PostIntegrationsActionsDraftsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
-            
             var body = new PostActionInput(); // PostActionInput | Input used to create Action Draft.
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new Draft
-                
                 PureCloudPlatform.Client.V2.Model.Action result = apiInstance.PostIntegrationsActionsDrafts(body);
                 Debug.WriteLine(result);
             }
@@ -3033,7 +2424,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3061,7 +2452,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3073,25 +2464,16 @@ namespace Example
     public class PostIntegrationsCredentialsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
-            
             var body = new Credential(); // Credential | Credential (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a set of credentials
-                
                 CredentialInfo result = apiInstance.PostIntegrationsCredentials(body);
                 Debug.WriteLine(result);
             }
@@ -3102,7 +2484,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3130,7 +2512,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3142,25 +2524,16 @@ namespace Example
     public class PostIntegrationsWorkforcemanagementVendorconnectionExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
-            
             var body = new VendorConnectionRequest(); // VendorConnectionRequest |  (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Add a vendor connection
-                
                 UserActionCategoryEntityListing result = apiInstance.PostIntegrationsWorkforcemanagementVendorconnection(body);
                 Debug.WriteLine(result);
             }
@@ -3171,7 +2544,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3199,7 +2572,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3211,30 +2584,17 @@ namespace Example
     public class PutIntegrationConfigCurrentExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var integrationId = integrationId_example;  // string | Integration Id
-            
-            
-            
-            
-            
             var body = new IntegrationConfiguration(); // IntegrationConfiguration | Integration Configuration (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update integration configuration.
-                
                 IntegrationConfiguration result = apiInstance.PutIntegrationConfigCurrent(integrationId, body);
                 Debug.WriteLine(result);
             }
@@ -3245,7 +2605,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -3274,7 +2634,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -3286,30 +2646,17 @@ namespace Example
     public class PutIntegrationsCredentialExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            
-            
             var credentialId = credentialId_example;  // string | Credential ID
-            
-            
-            
-            
-            
             var body = new Credential(); // Credential | Credential (optional) 
-            
-            
 
             try
-            {
-                
+            { 
                 // Update a set of credentials
-                
                 CredentialInfo result = apiInstance.PutIntegrationsCredential(credentialId, body);
                 Debug.WriteLine(result);
             }
@@ -3320,7 +2667,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

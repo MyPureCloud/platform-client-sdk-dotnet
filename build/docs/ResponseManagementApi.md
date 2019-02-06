@@ -34,7 +34,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -46,25 +46,16 @@ namespace Example
     public class DeleteResponsemanagementLibraryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ResponseManagementApi();
-            
-            
             var libraryId = libraryId_example;  // string | Library ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete an existing response library.
-                
                 apiInstance.DeleteResponsemanagementLibrary(libraryId);
             }
             catch (Exception e)
@@ -74,7 +65,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -102,7 +93,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -114,25 +105,16 @@ namespace Example
     public class DeleteResponsemanagementResponseExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ResponseManagementApi();
-            
-            
             var responseId = responseId_example;  // string | Response ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete an existing response.
-                
                 apiInstance.DeleteResponsemanagementResponse(responseId);
             }
             catch (Exception e)
@@ -142,7 +124,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -170,7 +152,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -182,30 +164,17 @@ namespace Example
     public class GetResponsemanagementLibrariesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ResponseManagementApi();
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets a list of existing response libraries.
-                
                 LibraryEntityListing result = apiInstance.GetResponsemanagementLibraries(pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -216,7 +185,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -245,7 +214,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -257,25 +226,16 @@ namespace Example
     public class GetResponsemanagementLibraryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ResponseManagementApi();
-            
-            
             var libraryId = libraryId_example;  // string | Library ID
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get details about an existing response library.
-                
                 Library result = apiInstance.GetResponsemanagementLibrary(libraryId);
                 Debug.WriteLine(result);
             }
@@ -286,7 +246,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -314,7 +274,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -326,30 +286,17 @@ namespace Example
     public class GetResponsemanagementResponseExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ResponseManagementApi();
-            
-            
             var responseId = responseId_example;  // string | Response ID
-            
-            
-            
-            
             var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get details about an existing response.
-                
                 Response result = apiInstance.GetResponsemanagementResponse(responseId, expand);
                 Debug.WriteLine(result);
             }
@@ -360,7 +307,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -389,7 +336,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -401,40 +348,19 @@ namespace Example
     public class GetResponsemanagementResponsesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ResponseManagementApi();
-            
-            
             var libraryId = libraryId_example;  // string | Library ID
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Gets a list of existing responses.
-                
                 ResponseEntityListing result = apiInstance.GetResponsemanagementResponses(libraryId, pageNumber, pageSize, expand);
                 Debug.WriteLine(result);
             }
@@ -445,7 +371,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -476,7 +402,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -488,25 +414,16 @@ namespace Example
     public class PostResponsemanagementLibrariesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ResponseManagementApi();
-            
-            
-            
             var body = new Library(); // Library | Library
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a response library.
-                
                 Library result = apiInstance.PostResponsemanagementLibraries(body);
                 Debug.WriteLine(result);
             }
@@ -517,7 +434,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -545,7 +462,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -557,30 +474,17 @@ namespace Example
     public class PostResponsemanagementResponsesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ResponseManagementApi();
-            
-            
-            
             var body = new Response(); // Response | Response
-            
-            
-            
             var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a response.
-                
                 Response result = apiInstance.PostResponsemanagementResponses(body, expand);
                 Debug.WriteLine(result);
             }
@@ -591,7 +495,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -620,7 +524,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -632,25 +536,16 @@ namespace Example
     public class PostResponsemanagementResponsesQueryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ResponseManagementApi();
-            
-            
-            
             var body = new ResponseQueryRequest(); // ResponseQueryRequest | Response
-            
-            
 
             try
-            {
-                
+            { 
                 // Query responses
-                
                 ResponseQueryResults result = apiInstance.PostResponsemanagementResponsesQuery(body);
                 Debug.WriteLine(result);
             }
@@ -661,7 +556,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -689,7 +584,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -701,30 +596,17 @@ namespace Example
     public class PutResponsemanagementLibraryExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ResponseManagementApi();
-            
-            
             var libraryId = libraryId_example;  // string | Library ID
-            
-            
-            
-            
-            
             var body = new Library(); // Library | Library
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an existing response library.
-                
                 Library result = apiInstance.PutResponsemanagementLibrary(libraryId, body);
                 Debug.WriteLine(result);
             }
@@ -735,7 +617,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -764,7 +646,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -776,35 +658,18 @@ namespace Example
     public class PutResponsemanagementResponseExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ResponseManagementApi();
-            
-            
             var responseId = responseId_example;  // string | Response ID
-            
-            
-            
-            
-            
             var body = new Response(); // Response | Response
-            
-            
-            
             var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Update an existing response.
-                
                 Response result = apiInstance.PutResponsemanagementResponse(responseId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -815,7 +680,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 

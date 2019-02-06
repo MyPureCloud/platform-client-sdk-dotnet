@@ -110,11 +110,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets OutputOperator
         /// </summary>
         [DataMember(Name="outputOperator", EmitDefaultValue=false)]
         public OutputOperatorEnum? OutputOperator { get; set; }
+        
+        
+        
+        
         
         
         
@@ -128,12 +138,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutputField">OutputField.</param>
         /// <param name="OutputOperator">OutputOperator.</param>
         /// <param name="ComparisonValue">ComparisonValue.</param>
+        /// <param name="OutputFieldMissingResolution">OutputFieldMissingResolution.</param>
+        /// <param name="Inverted">Inverted.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerRulesetConfigChangeDataActionConditionPredicate(string OutputField = null, OutputOperatorEnum? OutputOperator = null, string ComparisonValue = null, Object AdditionalProperties = null)
+        public DialerRulesetConfigChangeDataActionConditionPredicate(string OutputField = null, OutputOperatorEnum? OutputOperator = null, string ComparisonValue = null, bool? OutputFieldMissingResolution = null, bool? Inverted = null, Object AdditionalProperties = null)
         {
             this.OutputField = OutputField;
             this.OutputOperator = OutputOperator;
             this.ComparisonValue = ComparisonValue;
+            this.OutputFieldMissingResolution = OutputFieldMissingResolution;
+            this.Inverted = Inverted;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -159,6 +173,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets OutputFieldMissingResolution
+        /// </summary>
+        [DataMember(Name="outputFieldMissingResolution", EmitDefaultValue=false)]
+        public bool? OutputFieldMissingResolution { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Inverted
+        /// </summary>
+        [DataMember(Name="inverted", EmitDefaultValue=false)]
+        public bool? Inverted { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -177,6 +207,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OutputField: ").Append(OutputField).Append("\n");
             sb.Append("  OutputOperator: ").Append(OutputOperator).Append("\n");
             sb.Append("  ComparisonValue: ").Append(ComparisonValue).Append("\n");
+            sb.Append("  OutputFieldMissingResolution: ").Append(OutputFieldMissingResolution).Append("\n");
+            sb.Append("  Inverted: ").Append(Inverted).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -230,6 +262,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ComparisonValue.Equals(other.ComparisonValue)
                 ) &&
                 (
+                    this.OutputFieldMissingResolution == other.OutputFieldMissingResolution ||
+                    this.OutputFieldMissingResolution != null &&
+                    this.OutputFieldMissingResolution.Equals(other.OutputFieldMissingResolution)
+                ) &&
+                (
+                    this.Inverted == other.Inverted ||
+                    this.Inverted != null &&
+                    this.Inverted.Equals(other.Inverted)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -256,6 +298,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ComparisonValue != null)
                     hash = hash * 59 + this.ComparisonValue.GetHashCode();
+                
+                if (this.OutputFieldMissingResolution != null)
+                    hash = hash * 59 + this.OutputFieldMissingResolution.GetHashCode();
+                
+                if (this.Inverted != null)
+                    hash = hash * 59 + this.Inverted.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

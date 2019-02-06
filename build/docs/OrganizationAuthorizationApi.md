@@ -47,7 +47,7 @@ Requires ANY permissions:
 * authorization:orgTrustee:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -59,25 +59,16 @@ namespace Example
     public class DeleteOrgauthorizationTrusteeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete Org Trust
-                
                 apiInstance.DeleteOrgauthorizationTrustee(trusteeOrgId);
             }
             catch (Exception e)
@@ -87,7 +78,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -118,7 +109,7 @@ Requires ANY permissions:
 * role_manager
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -130,30 +121,17 @@ namespace Example
     public class DeleteOrgauthorizationTrusteeUserExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
-            
-            
-            
-            
             var trusteeUserId = trusteeUserId_example;  // string | Trustee User Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete Trustee User
-                
                 apiInstance.DeleteOrgauthorizationTrusteeUser(trusteeOrgId, trusteeUserId);
             }
             catch (Exception e)
@@ -163,7 +141,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -195,7 +173,7 @@ Requires ANY permissions:
 * role_manager
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -207,30 +185,17 @@ namespace Example
     public class DeleteOrgauthorizationTrusteeUserRolesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
-            
-            
-            
-            
             var trusteeUserId = trusteeUserId_example;  // string | Trustee User Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete Trustee User Roles
-                
                 apiInstance.DeleteOrgauthorizationTrusteeUserRoles(trusteeOrgId, trusteeUserId);
             }
             catch (Exception e)
@@ -240,7 +205,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -270,7 +235,7 @@ Requires ANY permissions:
 * authorization:orgTrustor:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -282,25 +247,16 @@ namespace Example
     public class DeleteOrgauthorizationTrustorExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trustorOrgId = trustorOrgId_example;  // string | Trustor Organization Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete Org Trust
-                
                 apiInstance.DeleteOrgauthorizationTrustor(trustorOrgId);
             }
             catch (Exception e)
@@ -310,7 +266,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -339,7 +295,7 @@ Requires ANY permissions:
 * authorization:orgTrusteeUser:delete
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -351,30 +307,17 @@ namespace Example
     public class DeleteOrgauthorizationTrustorUserExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trustorOrgId = trustorOrgId_example;  // string | Trustor Organization Id
-            
-            
-            
-            
             var trusteeUserId = trusteeUserId_example;  // string | Trustee User Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Delete Trustee User
-                
                 apiInstance.DeleteOrgauthorizationTrustorUser(trustorOrgId, trusteeUserId);
             }
             catch (Exception e)
@@ -384,7 +327,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -415,7 +358,7 @@ Requires ANY permissions:
 * authorization:orgTrustor:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -427,25 +370,16 @@ namespace Example
     public class GetOrgauthorizationPairingExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var pairingId = pairingId_example;  // string | Pairing Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Pairing Info
-                
                 TrustRequest result = apiInstance.GetOrgauthorizationPairing(pairingId);
                 Debug.WriteLine(result);
             }
@@ -456,7 +390,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -485,7 +419,7 @@ Requires ANY permissions:
 * authorization:orgTrustee:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -497,25 +431,16 @@ namespace Example
     public class GetOrgauthorizationTrusteeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Org Trust
-                
                 Trustee result = apiInstance.GetOrgauthorizationTrustee(trusteeOrgId);
                 Debug.WriteLine(result);
             }
@@ -526,7 +451,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -555,7 +480,7 @@ Requires ANY permissions:
 * authorization:orgTrusteeUser:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -567,30 +492,17 @@ namespace Example
     public class GetOrgauthorizationTrusteeUserExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
-            
-            
-            
-            
             var trusteeUserId = trusteeUserId_example;  // string | Trustee User Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Trustee User
-                
                 TrustUser result = apiInstance.GetOrgauthorizationTrusteeUser(trusteeOrgId, trusteeUserId);
                 Debug.WriteLine(result);
             }
@@ -601,7 +513,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -631,7 +543,7 @@ Requires ANY permissions:
 * authorization:orgTrusteeUser:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -643,30 +555,17 @@ namespace Example
     public class GetOrgauthorizationTrusteeUserRolesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
-            
-            
-            
-            
             var trusteeUserId = trusteeUserId_example;  // string | Trustee User Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Trustee User Roles
-                
                 UserAuthorization result = apiInstance.GetOrgauthorizationTrusteeUserRoles(trusteeOrgId, trusteeUserId);
                 Debug.WriteLine(result);
             }
@@ -677,7 +576,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -707,7 +606,7 @@ Requires ANY permissions:
 * authorization:orgTrusteeUser:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -719,35 +618,18 @@ namespace Example
     public class GetOrgauthorizationTrusteeUsersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // The list of trustee users for this organization (i.e. users granted access to this organization).
-                
                 TrustUserEntityListing result = apiInstance.GetOrgauthorizationTrusteeUsers(trusteeOrgId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -758,7 +640,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -789,7 +671,7 @@ Requires ANY permissions:
 * authorization:orgTrustee:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -801,30 +683,17 @@ namespace Example
     public class GetOrgauthorizationTrusteesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // The list of trustees for this organization (i.e. organizations granted access to this organization).
-                
                 TrustEntityListing result = apiInstance.GetOrgauthorizationTrustees(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -835,7 +704,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -865,7 +734,7 @@ Requires ANY permissions:
 * authorization:orgTrustor:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -877,25 +746,16 @@ namespace Example
     public class GetOrgauthorizationTrustorExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trustorOrgId = trustorOrgId_example;  // string | Trustor Organization Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Org Trust
-                
                 Trustor result = apiInstance.GetOrgauthorizationTrustor(trustorOrgId);
                 Debug.WriteLine(result);
             }
@@ -906,7 +766,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -935,7 +795,7 @@ Requires ANY permissions:
 * authorization:orgTrusteeUser:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -947,30 +807,17 @@ namespace Example
     public class GetOrgauthorizationTrustorUserExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trustorOrgId = trustorOrgId_example;  // string | Trustor Organization Id
-            
-            
-            
-            
             var trusteeUserId = trusteeUserId_example;  // string | Trustee User Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Trustee User
-                
                 TrustUser result = apiInstance.GetOrgauthorizationTrustorUser(trustorOrgId, trusteeUserId);
                 Debug.WriteLine(result);
             }
@@ -981,7 +828,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1011,7 +858,7 @@ Requires ANY permissions:
 * authorization:orgTrusteeUser:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1023,35 +870,18 @@ namespace Example
     public class GetOrgauthorizationTrustorUsersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trustorOrgId = trustorOrgId_example;  // string | Trustee Organization Id
-            
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // The list of users in the trustor organization (i.e. users granted access).
-                
                 TrustUserEntityListing result = apiInstance.GetOrgauthorizationTrustorUsers(trustorOrgId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -1062,7 +892,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1093,7 +923,7 @@ Requires ANY permissions:
 * authorization:orgTrustor:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1105,30 +935,17 @@ namespace Example
     public class GetOrgauthorizationTrustorsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // The list of organizations that have authorized/trusted your organization.
-                
                 TrustorEntityListing result = apiInstance.GetOrgauthorizationTrustors(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -1139,7 +956,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1169,7 +986,7 @@ Requires ANY permissions:
 * authorization:orgTrustee:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1181,25 +998,16 @@ namespace Example
     public class PostOrgauthorizationPairingsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
-            
             var body = new TrustRequestCreate(); // TrustRequestCreate | Pairing Info
-            
-            
 
             try
-            {
-                
+            { 
                 // A pairing id is created by the trustee and given to the trustor to create a trust.
-                
                 TrustRequest result = apiInstance.PostOrgauthorizationPairings(body);
                 Debug.WriteLine(result);
             }
@@ -1210,7 +1018,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1241,7 +1049,7 @@ Requires ALL permissions:
 * role_manager
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1253,30 +1061,17 @@ namespace Example
     public class PostOrgauthorizationTrusteeUsersExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
-            
-            
-            
-            
-            
             var body = new TrustMemberCreate(); // TrustMemberCreate | Trust
-            
-            
 
             try
-            {
-                
+            { 
                 // Add a user to the trust.
-                
                 TrustUser result = apiInstance.PostOrgauthorizationTrusteeUsers(trusteeOrgId, body);
                 Debug.WriteLine(result);
             }
@@ -1287,7 +1082,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1318,7 +1113,7 @@ Requires ALL permissions:
 * authorization:orgTrusteeUser:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1330,25 +1125,16 @@ namespace Example
     public class PostOrgauthorizationTrusteesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
-            
             var body = new TrustCreate(); // TrustCreate | Trust
-            
-            
 
             try
-            {
-                
+            { 
                 // Create a new organization authorization trust. This is required to grant other organizations access to your organization.
-                
                 Trustee result = apiInstance.PostOrgauthorizationTrustees(body);
                 Debug.WriteLine(result);
             }
@@ -1359,7 +1145,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1388,7 +1174,7 @@ Requires ANY permissions:
 * authorization:audit:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1400,45 +1186,20 @@ namespace Example
     public class PostOrgauthorizationTrusteesAuditsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
-            
             var body = new TrusteeAuditQueryRequest(); // TrusteeAuditQueryRequest | Values to scope the request.
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to descending)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Org Trustee Audits
-                
                 AuditQueryResponse result = apiInstance.PostOrgauthorizationTrusteesAudits(body, pageSize, pageNumber, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1449,7 +1210,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1482,7 +1243,7 @@ Requires ANY permissions:
 * authorization:audit:view
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1494,45 +1255,20 @@ namespace Example
     public class PostOrgauthorizationTrustorAuditsExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
-            
             var body = new TrustorAuditQueryRequest(); // TrustorAuditQueryRequest | Values to scope the request.
-            
-            
-            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            
-            
-            
-            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to descending)
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Get Org Trustor Audits
-                
                 AuditQueryResponse result = apiInstance.PostOrgauthorizationTrustorAudits(body, pageSize, pageNumber, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1543,7 +1279,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1576,7 +1312,7 @@ Requires ANY permissions:
 * authorization:orgTrustee:edit
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1588,30 +1324,17 @@ namespace Example
     public class PutOrgauthorizationTrusteeExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
-            
-            
-            
-            
-            
             var body = new Trustee(); // Trustee | Client
-            
-            
 
             try
-            {
-                
+            { 
                 // Update Org Trust
-                
                 Trustee result = apiInstance.PutOrgauthorizationTrustee(trusteeOrgId, body);
                 Debug.WriteLine(result);
             }
@@ -1622,7 +1345,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1654,7 +1377,7 @@ Requires ANY permissions:
 * role_manager
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1666,35 +1389,18 @@ namespace Example
     public class PutOrgauthorizationTrusteeUserRolesExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
-            
-            
-            
-            
             var trusteeUserId = trusteeUserId_example;  // string | Trustee User Id
-            
-            
-            
-            
             var body = ;  // List<string> | List of roles
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Update Trustee User Roles
-                
                 UserAuthorization result = apiInstance.PutOrgauthorizationTrusteeUserRoles(trusteeOrgId, trusteeUserId, body);
                 Debug.WriteLine(result);
             }
@@ -1705,7 +1411,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
@@ -1736,7 +1442,7 @@ Requires ALL permissions:
 * authorization:orgTrusteeUser:add
 
 ### Example
-~~~csharp
+```{"language":"csharp"}
 using System;
 using System.Diagnostics;
 using PureCloudPlatform.Client.V2.Api;
@@ -1748,30 +1454,17 @@ namespace Example
     public class PutOrgauthorizationTrustorUserExample
     {
         public void main()
-        {
-            
+        { 
             // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new OrganizationAuthorizationApi();
-            
-            
             var trustorOrgId = trustorOrgId_example;  // string | Trustor Organization Id
-            
-            
-            
-            
             var trusteeUserId = trusteeUserId_example;  // string | Trustee User Id
-            
-            
-            
 
             try
-            {
-                
+            { 
                 // Add a Trustee user to the trust.
-                
                 TrustUser result = apiInstance.PutOrgauthorizationTrustorUser(trustorOrgId, trusteeUserId);
                 Debug.WriteLine(result);
             }
@@ -1782,7 +1475,7 @@ namespace Example
         }
     }
 }
-~~~
+```
 
 ### Parameters
 
