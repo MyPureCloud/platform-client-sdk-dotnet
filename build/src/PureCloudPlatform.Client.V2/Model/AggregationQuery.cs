@@ -412,6 +412,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Eventtime,
             
             /// <summary>
+            /// Enum Calibrationid for "calibrationId"
+            /// </summary>
+            [EnumMember(Value = "calibrationId")]
+            Calibrationid,
+            
+            /// <summary>
             /// Enum Surveyid for "surveyId"
             /// </summary>
             [EnumMember(Value = "surveyId")]

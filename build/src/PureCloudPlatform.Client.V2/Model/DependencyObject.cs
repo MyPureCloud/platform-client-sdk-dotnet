@@ -122,6 +122,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Inboundcallflow,
             
             /// <summary>
+            /// Enum Inboundchatflow for "INBOUNDCHATFLOW"
+            /// </summary>
+            [EnumMember(Value = "INBOUNDCHATFLOW")]
+            Inboundchatflow,
+            
+            /// <summary>
             /// Enum Inboundemailflow for "INBOUNDEMAILFLOW"
             /// </summary>
             [EnumMember(Value = "INBOUNDEMAILFLOW")]

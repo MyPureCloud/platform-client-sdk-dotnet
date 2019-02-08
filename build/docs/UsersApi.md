@@ -1951,7 +1951,7 @@ namespace Example
 
 <a name="getusers"></a>
 
-## [**UserEntityListing**](UserEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null, string state = null)
+## [**UserEntityListing**](UserEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string state = null)
 
 
 
@@ -1982,7 +1982,8 @@ namespace Example
             var apiInstance = new UsersApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var id = new List<string>(); // List<string> | id (optional) 
+            var id = new List<string>(); // List<string> | A list of user IDs to fetch by bulk (optional) 
+            var jabberId = new List<string>(); // List<string> | A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter) (optional) 
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
             var state = state_example;  // string | Only list users of this state (optional)  (default to active)
@@ -1990,7 +1991,7 @@ namespace Example
             try
             { 
                 // Get the list of available users.
-                UserEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, sortOrder, expand, state);
+                UserEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, jabberId, sortOrder, expand, state);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2009,7 +2010,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **id** | [**List<string>**](string.html)| id | [optional]  |
+| **id** | [**List<string>**](string.html)| A list of user IDs to fetch by bulk | [optional]  |
+| **jabberId** | [**List<string>**](string.html)| A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) | [optional]  |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, languagePreference |
 | **state** | **string**| Only list users of this state | [optional] [default to active]<br />**Values**: active, inactive, deleted |

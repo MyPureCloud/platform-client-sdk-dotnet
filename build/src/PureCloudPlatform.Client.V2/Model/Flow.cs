@@ -53,6 +53,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Inboundcall,
             
             /// <summary>
+            /// Enum Inboundchat for "INBOUNDCHAT"
+            /// </summary>
+            [EnumMember(Value = "INBOUNDCHAT")]
+            Inboundchat,
+            
+            /// <summary>
             /// Enum Inboundemail for "INBOUNDEMAIL"
             /// </summary>
             [EnumMember(Value = "INBOUNDEMAIL")]

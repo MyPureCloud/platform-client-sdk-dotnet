@@ -26,6 +26,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuthorizationRoles**](AuthorizationApi.html#getauthorizationroles) | **GET** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
 | [**GetAuthorizationSubject**](AuthorizationApi.html#getauthorizationsubject) | **GET** /api/v2/authorization/subjects/{subjectId} | Returns a listing of roles and permissions for a user. |
 | [**GetAuthorizationSubjectsMe**](AuthorizationApi.html#getauthorizationsubjectsme) | **GET** /api/v2/authorization/subjects/me | Returns a listing of roles and permissions for the currently authenticated user. |
+| [**GetAuthorizationSubjectsRolecounts**](AuthorizationApi.html#getauthorizationsubjectsrolecounts) | **GET** /api/v2/authorization/subjects/rolecounts | Get the count of roles granted to a list of subjects |
 | [**GetUserRoles**](AuthorizationApi.html#getuserroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
 | [**PatchAuthorizationRole**](AuthorizationApi.html#patchauthorizationrole) | **PATCH** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
 | [**PostAuthorizationDivisionObject**](AuthorizationApi.html#postauthorizationdivisionobject) | **POST** /api/v2/authorization/divisions/{divisionId}/objects/{objectType} | Assign a list of objects to a division |
@@ -1239,6 +1240,67 @@ This endpoint does require any parameters.
 ### Return type
 
 [**AuthzSubject**](AuthzSubject.html)
+
+<a name="getauthorizationsubjectsrolecounts"></a>
+
+## **Dictionary&lt;string, Object&gt;** GetAuthorizationSubjectsRolecounts (List<string> id = null)
+
+
+
+Get the count of roles granted to a list of subjects
+
+
+
+Requires ANY permissions: 
+
+* authorization:grant:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationSubjectsRolecountsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AuthorizationApi();
+            var id = new List<string>(); // List<string> | id (optional) 
+
+            try
+            { 
+                // Get the count of roles granted to a list of subjects
+                Dictionary&lt;string, Object&gt; result = apiInstance.GetAuthorizationSubjectsRolecounts(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationSubjectsRolecounts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | [**List<string>**](string.html)| id | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+**Dictionary<string, Object>**
 
 <a name="getuserroles"></a>
 

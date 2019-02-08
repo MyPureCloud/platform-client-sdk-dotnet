@@ -70,6 +70,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsEvaluation" /> class.
@@ -82,9 +87,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FormId">Unique identifier for the form used to evaluate the conversation/agent.</param>
         /// <param name="ContextId">A unique identifier for an evaluation form, regardless of version.</param>
         /// <param name="FormName">Name of the evaluation form.</param>
+        /// <param name="CalibrationId">The calibration id used for the purpose of training evaluators.</param>
         /// <param name="OTotalScore">OTotalScore.</param>
         /// <param name="OTotalCriticalScore">OTotalCriticalScore.</param>
-        public AnalyticsEvaluation(string EvaluationId = null, string EvaluatorId = null, string UserId = null, DateTime? EventTime = null, string QueueId = null, string FormId = null, string ContextId = null, string FormName = null, long? OTotalScore = null, long? OTotalCriticalScore = null)
+        public AnalyticsEvaluation(string EvaluationId = null, string EvaluatorId = null, string UserId = null, DateTime? EventTime = null, string QueueId = null, string FormId = null, string ContextId = null, string FormName = null, string CalibrationId = null, long? OTotalScore = null, long? OTotalCriticalScore = null)
         {
             this.EvaluationId = EvaluationId;
             this.EvaluatorId = EvaluatorId;
@@ -94,6 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FormId = FormId;
             this.ContextId = ContextId;
             this.FormName = FormName;
+            this.CalibrationId = CalibrationId;
             this.OTotalScore = OTotalScore;
             this.OTotalCriticalScore = OTotalCriticalScore;
             
@@ -174,6 +181,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The calibration id used for the purpose of training evaluators
+        /// </summary>
+        /// <value>The calibration id used for the purpose of training evaluators</value>
+        [DataMember(Name="calibrationId", EmitDefaultValue=false)]
+        public string CalibrationId { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets OTotalScore
         /// </summary>
         [DataMember(Name="oTotalScore", EmitDefaultValue=false)]
@@ -205,6 +221,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FormId: ").Append(FormId).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  FormName: ").Append(FormName).Append("\n");
+            sb.Append("  CalibrationId: ").Append(CalibrationId).Append("\n");
             sb.Append("  OTotalScore: ").Append(OTotalScore).Append("\n");
             sb.Append("  OTotalCriticalScore: ").Append(OTotalCriticalScore).Append("\n");
             sb.Append("}\n");
@@ -284,6 +301,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FormName.Equals(other.FormName)
                 ) &&
                 (
+                    this.CalibrationId == other.CalibrationId ||
+                    this.CalibrationId != null &&
+                    this.CalibrationId.Equals(other.CalibrationId)
+                ) &&
+                (
                     this.OTotalScore == other.OTotalScore ||
                     this.OTotalScore != null &&
                     this.OTotalScore.Equals(other.OTotalScore)
@@ -330,6 +352,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FormName != null)
                     hash = hash * 59 + this.FormName.GetHashCode();
+                
+                if (this.CalibrationId != null)
+                    hash = hash * 59 + this.CalibrationId.GetHashCode();
                 
                 if (this.OTotalScore != null)
                     hash = hash * 59 + this.OTotalScore.GetHashCode();

@@ -81,20 +81,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="User">User.</param>
-        /// <param name="Timestamp">Timestamp.</param>
         /// <param name="Level">Level.</param>
         /// <param name="Entity">Entity.</param>
+        /// <param name="Timestamp">Timestamp.</param>
         /// <param name="Action">Action.</param>
         /// <param name="Status">Status.</param>
         /// <param name="Changes">Changes.</param>
         /// <param name="EntityType">EntityType.</param>
-        public QualityAudit(string Name = null, User User = null, string Timestamp = null, string Level = null, AuditEntity Entity = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null)
+        public QualityAudit(string Name = null, User User = null, string Level = null, AuditEntity Entity = null, string Timestamp = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null)
         {
             this.Name = Name;
             this.User = User;
-            this.Timestamp = Timestamp;
             this.Level = Level;
             this.Entity = Entity;
+            this.Timestamp = Timestamp;
             this.Action = Action;
             this.Status = Status;
             this.Changes = Changes;
@@ -130,14 +130,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Timestamp
-        /// </summary>
-        [DataMember(Name="timestamp", EmitDefaultValue=false)]
-        public string Timestamp { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets Level
         /// </summary>
         [DataMember(Name="level", EmitDefaultValue=false)]
@@ -150,6 +142,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public AuditEntity Entity { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Timestamp
+        /// </summary>
+        [DataMember(Name="timestamp", EmitDefaultValue=false)]
+        public string Timestamp { get; set; }
         
         
         
@@ -205,9 +205,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
-            sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Level: ").Append(Level).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
+            sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Changes: ").Append(Changes).Append("\n");
@@ -265,11 +265,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.User.Equals(other.User)
                 ) &&
                 (
-                    this.Timestamp == other.Timestamp ||
-                    this.Timestamp != null &&
-                    this.Timestamp.Equals(other.Timestamp)
-                ) &&
-                (
                     this.Level == other.Level ||
                     this.Level != null &&
                     this.Level.Equals(other.Level)
@@ -278,6 +273,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Entity == other.Entity ||
                     this.Entity != null &&
                     this.Entity.Equals(other.Entity)
+                ) &&
+                (
+                    this.Timestamp == other.Timestamp ||
+                    this.Timestamp != null &&
+                    this.Timestamp.Equals(other.Timestamp)
                 ) &&
                 (
                     this.Action == other.Action ||
@@ -327,14 +327,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
                 
-                if (this.Timestamp != null)
-                    hash = hash * 59 + this.Timestamp.GetHashCode();
-                
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
                 
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
+                
+                if (this.Timestamp != null)
+                    hash = hash * 59 + this.Timestamp.GetHashCode();
                 
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();

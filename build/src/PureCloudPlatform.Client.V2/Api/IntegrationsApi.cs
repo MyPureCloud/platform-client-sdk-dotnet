@@ -200,8 +200,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
         PureCloudPlatform.Client.V2.Model.Action GetIntegrationsAction (string actionId, string expand = null, bool? includeConfig = null);
 
@@ -213,8 +213,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         ApiResponse<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
         
@@ -226,8 +226,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
         PureCloudPlatform.Client.V2.Model.Action GetIntegrationsActionDraft (string actionId, string expand = null, bool? includeConfig = null);
 
@@ -239,8 +239,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         ApiResponse<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionDraftWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
         
@@ -369,17 +369,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ActionEntityListing</returns>
-        ActionEntityListing GetIntegrationsActions (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        ActionEntityListing GetIntegrationsActions (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null);
 
         /// <summary>
         /// Retrieves all actions associated with filters passed in via query param.
@@ -388,17 +389,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ApiResponse of ActionEntityListing</returns>
-        ApiResponse<ActionEntityListing> GetIntegrationsActionsWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        ApiResponse<ActionEntityListing> GetIntegrationsActionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null);
         
         /// <summary>
         /// Retrieves all categories of available Actions
@@ -407,15 +409,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="secure">Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>CategoryEntityListing</returns>
-        CategoryEntityListing GetIntegrationsActionsCategories (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        CategoryEntityListing GetIntegrationsActionsCategories (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null);
 
         /// <summary>
         /// Retrieves all categories of available Actions
@@ -424,15 +426,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="secure">Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>ApiResponse of CategoryEntityListing</returns>
-        ApiResponse<CategoryEntityListing> GetIntegrationsActionsCategoriesWithHttpInfo (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        ApiResponse<CategoryEntityListing> GetIntegrationsActionsCategoriesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null);
         
         /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param.
@@ -441,17 +443,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ActionEntityListing</returns>
-        ActionEntityListing GetIntegrationsActionsDrafts (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        ActionEntityListing GetIntegrationsActionsDrafts (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null);
 
         /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param.
@@ -460,17 +463,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ApiResponse of ActionEntityListing</returns>
-        ApiResponse<ActionEntityListing> GetIntegrationsActionsDraftsWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        ApiResponse<ActionEntityListing> GetIntegrationsActionsDraftsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null);
         
         /// <summary>
         /// List permitted client app integrations for the logged in user
@@ -1248,8 +1252,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
         System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionAsync (string actionId, string expand = null, bool? includeConfig = null);
 
@@ -1261,8 +1265,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionAsyncWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
         
@@ -1274,8 +1278,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
         System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionDraftAsync (string actionId, string expand = null, bool? includeConfig = null);
 
@@ -1287,8 +1291,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionDraftAsyncWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
         
@@ -1417,17 +1421,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ActionEntityListing</returns>
-        System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsAsync (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsAsync (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null);
 
         /// <summary>
         /// Retrieves all actions associated with filters passed in via query param.
@@ -1436,17 +1441,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsAsyncWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null);
         
         /// <summary>
         /// Retrieves all categories of available Actions
@@ -1455,15 +1461,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="secure">Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>Task of CategoryEntityListing</returns>
-        System.Threading.Tasks.Task<CategoryEntityListing> GetIntegrationsActionsCategoriesAsync (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<CategoryEntityListing> GetIntegrationsActionsCategoriesAsync (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null);
 
         /// <summary>
         /// Retrieves all categories of available Actions
@@ -1472,15 +1478,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="secure">Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>Task of ApiResponse (CategoryEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryEntityListing>> GetIntegrationsActionsCategoriesAsyncWithHttpInfo (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ApiResponse<CategoryEntityListing>> GetIntegrationsActionsCategoriesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null);
         
         /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param.
@@ -1489,17 +1495,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ActionEntityListing</returns>
-        System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsDraftsAsync (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsDraftsAsync (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null);
 
         /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param.
@@ -1508,17 +1515,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsDraftsAsyncWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsDraftsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null);
         
         /// <summary>
         /// List permitted client app integrations for the logged in user
@@ -3609,8 +3617,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
         public PureCloudPlatform.Client.V2.Model.Action GetIntegrationsAction (string actionId, string expand = null, bool? includeConfig = null)
         {
@@ -3623,8 +3631,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > GetIntegrationsActionWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null)
         { 
@@ -3710,8 +3718,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
         public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionAsync (string actionId, string expand = null, bool? includeConfig = null)
         {
@@ -3725,8 +3733,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionAsyncWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null)
         { 
@@ -3814,8 +3822,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
         public PureCloudPlatform.Client.V2.Model.Action GetIntegrationsActionDraft (string actionId, string expand = null, bool? includeConfig = null)
         {
@@ -3828,8 +3836,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > GetIntegrationsActionDraftWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null)
         { 
@@ -3915,8 +3923,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
         public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionDraftAsync (string actionId, string expand = null, bool? includeConfig = null)
         {
@@ -3930,8 +3938,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
-        /// <param name="expand">Indicates fields of the response which should be expanded. (optional)</param>
-        /// <param name="includeConfig">Show config when available (optional, default to false)</param>
+        /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
+        /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionDraftAsyncWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null)
         { 
@@ -5035,19 +5043,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves all actions associated with filters passed in via query param. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ActionEntityListing</returns>
-        public ActionEntityListing GetIntegrationsActions (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public ActionEntityListing GetIntegrationsActions (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null)
         {
-             ApiResponse<ActionEntityListing> localVarResponse = GetIntegrationsActionsWithHttpInfo(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+             ApiResponse<ActionEntityListing> localVarResponse = GetIntegrationsActionsWithHttpInfo(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, secure, includeAuthActions);
              return localVarResponse.Data;
         }
 
@@ -5055,17 +5064,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves all actions associated with filters passed in via query param. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ApiResponse of ActionEntityListing</returns>
-        public ApiResponse< ActionEntityListing > GetIntegrationsActionsWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public ApiResponse< ActionEntityListing > GetIntegrationsActionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null)
         { 
 
             var localVarPath = "/api/v2/integrations/actions";
@@ -5101,15 +5111,16 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (category != null) localVarQueryParams.Add(new Tuple<string, string>("category", this.Configuration.ApiClient.ParameterToString(category)));
-            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
-            if (includeAuthActions != null) localVarQueryParams.Add(new Tuple<string, string>("includeAuthActions", this.Configuration.ApiClient.ParameterToString(includeAuthActions)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (category != null) localVarQueryParams.Add(new Tuple<string, string>("category", this.Configuration.ApiClient.ParameterToString(category)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
+            if (includeAuthActions != null) localVarQueryParams.Add(new Tuple<string, string>("includeAuthActions", this.Configuration.ApiClient.ParameterToString(includeAuthActions)));
 
             // Header params
 
@@ -5151,19 +5162,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves all actions associated with filters passed in via query param. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ActionEntityListing</returns>
-        public async System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsAsync (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsAsync (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null)
         {
-             ApiResponse<ActionEntityListing> localVarResponse = await GetIntegrationsActionsAsyncWithHttpInfo(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+             ApiResponse<ActionEntityListing> localVarResponse = await GetIntegrationsActionsAsyncWithHttpInfo(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, secure, includeAuthActions);
              return localVarResponse.Data;
 
         }
@@ -5172,17 +5184,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves all actions associated with filters passed in via query param. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsAsyncWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null)
         { 
 
             var localVarPath = "/api/v2/integrations/actions";
@@ -5218,15 +5231,16 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (category != null) localVarQueryParams.Add(new Tuple<string, string>("category", this.Configuration.ApiClient.ParameterToString(category)));
-            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
-            if (includeAuthActions != null) localVarQueryParams.Add(new Tuple<string, string>("includeAuthActions", this.Configuration.ApiClient.ParameterToString(includeAuthActions)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (category != null) localVarQueryParams.Add(new Tuple<string, string>("category", this.Configuration.ApiClient.ParameterToString(category)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
+            if (includeAuthActions != null) localVarQueryParams.Add(new Tuple<string, string>("includeAuthActions", this.Configuration.ApiClient.ParameterToString(includeAuthActions)));
 
             // Header params
 
@@ -5269,17 +5283,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves all categories of available Actions 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="secure">Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>CategoryEntityListing</returns>
-        public CategoryEntityListing GetIntegrationsActionsCategories (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public CategoryEntityListing GetIntegrationsActionsCategories (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
         {
-             ApiResponse<CategoryEntityListing> localVarResponse = GetIntegrationsActionsCategoriesWithHttpInfo(secure, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+             ApiResponse<CategoryEntityListing> localVarResponse = GetIntegrationsActionsCategoriesWithHttpInfo(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, secure);
              return localVarResponse.Data;
         }
 
@@ -5287,15 +5301,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves all categories of available Actions 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="secure">Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>ApiResponse of CategoryEntityListing</returns>
-        public ApiResponse< CategoryEntityListing > GetIntegrationsActionsCategoriesWithHttpInfo (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public ApiResponse< CategoryEntityListing > GetIntegrationsActionsCategoriesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
         { 
 
             var localVarPath = "/api/v2/integrations/actions/categories";
@@ -5331,13 +5345,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
 
             // Header params
 
@@ -5379,17 +5393,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves all categories of available Actions 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="secure">Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>Task of CategoryEntityListing</returns>
-        public async System.Threading.Tasks.Task<CategoryEntityListing> GetIntegrationsActionsCategoriesAsync (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<CategoryEntityListing> GetIntegrationsActionsCategoriesAsync (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
         {
-             ApiResponse<CategoryEntityListing> localVarResponse = await GetIntegrationsActionsCategoriesAsyncWithHttpInfo(secure, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+             ApiResponse<CategoryEntityListing> localVarResponse = await GetIntegrationsActionsCategoriesAsyncWithHttpInfo(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, secure);
              return localVarResponse.Data;
 
         }
@@ -5398,15 +5412,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves all categories of available Actions 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="secure">Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>Task of ApiResponse (CategoryEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CategoryEntityListing>> GetIntegrationsActionsCategoriesAsyncWithHttpInfo (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CategoryEntityListing>> GetIntegrationsActionsCategoriesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
         { 
 
             var localVarPath = "/api/v2/integrations/actions/categories";
@@ -5442,13 +5456,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
 
             // Header params
 
@@ -5491,19 +5505,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves all action drafts associated with the filters passed in via query param. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ActionEntityListing</returns>
-        public ActionEntityListing GetIntegrationsActionsDrafts (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public ActionEntityListing GetIntegrationsActionsDrafts (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null)
         {
-             ApiResponse<ActionEntityListing> localVarResponse = GetIntegrationsActionsDraftsWithHttpInfo(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+             ApiResponse<ActionEntityListing> localVarResponse = GetIntegrationsActionsDraftsWithHttpInfo(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, secure, includeAuthActions);
              return localVarResponse.Data;
         }
 
@@ -5511,17 +5526,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves all action drafts associated with the filters passed in via query param. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ApiResponse of ActionEntityListing</returns>
-        public ApiResponse< ActionEntityListing > GetIntegrationsActionsDraftsWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public ApiResponse< ActionEntityListing > GetIntegrationsActionsDraftsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null)
         { 
 
             var localVarPath = "/api/v2/integrations/actions/drafts";
@@ -5557,15 +5573,16 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (category != null) localVarQueryParams.Add(new Tuple<string, string>("category", this.Configuration.ApiClient.ParameterToString(category)));
-            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
-            if (includeAuthActions != null) localVarQueryParams.Add(new Tuple<string, string>("includeAuthActions", this.Configuration.ApiClient.ParameterToString(includeAuthActions)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (category != null) localVarQueryParams.Add(new Tuple<string, string>("category", this.Configuration.ApiClient.ParameterToString(category)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
+            if (includeAuthActions != null) localVarQueryParams.Add(new Tuple<string, string>("includeAuthActions", this.Configuration.ApiClient.ParameterToString(includeAuthActions)));
 
             // Header params
 
@@ -5607,19 +5624,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves all action drafts associated with the filters passed in via query param. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ActionEntityListing</returns>
-        public async System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsDraftsAsync (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsDraftsAsync (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null)
         {
-             ApiResponse<ActionEntityListing> localVarResponse = await GetIntegrationsActionsDraftsAsyncWithHttpInfo(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+             ApiResponse<ActionEntityListing> localVarResponse = await GetIntegrationsActionsDraftsAsyncWithHttpInfo(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, secure, includeAuthActions);
              return localVarResponse.Data;
 
         }
@@ -5628,17 +5646,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves all action drafts associated with the filters passed in via query param. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="category">Filter by category name (optional)</param>
-        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
-        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)</param>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="sortBy">Root level field name to sort on. (optional)</param>
+        /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
+        /// <param name="category">Filter by category name (optional)</param>
+        /// <param name="name">Filter by action name. Provide full or just the first part of name. (optional)</param>
+        /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
+        /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsDraftsAsyncWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsDraftsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null)
         { 
 
             var localVarPath = "/api/v2/integrations/actions/drafts";
@@ -5674,15 +5693,16 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (category != null) localVarQueryParams.Add(new Tuple<string, string>("category", this.Configuration.ApiClient.ParameterToString(category)));
-            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
-            if (includeAuthActions != null) localVarQueryParams.Add(new Tuple<string, string>("includeAuthActions", this.Configuration.ApiClient.ParameterToString(includeAuthActions)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (category != null) localVarQueryParams.Add(new Tuple<string, string>("category", this.Configuration.ApiClient.ParameterToString(category)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
+            if (includeAuthActions != null) localVarQueryParams.Add(new Tuple<string, string>("includeAuthActions", this.Configuration.ApiClient.ParameterToString(includeAuthActions)));
 
             // Header params
 

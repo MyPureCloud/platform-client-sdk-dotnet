@@ -137,6 +137,41 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets OriginatingDirections
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum OriginatingDirectionsEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Inbound for "inbound"
+            /// </summary>
+            [EnumMember(Value = "inbound")]
+            Inbound,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -230,7 +265,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Facebook for "facebook"
             /// </summary>
             [EnumMember(Value = "facebook")]
-            Facebook
+            Facebook,
+            
+            /// <summary>
+            /// Enum Whatsapp for "whatsapp"
+            /// </summary>
+            [EnumMember(Value = "whatsapp")]
+            Whatsapp
         }
         
         
@@ -577,6 +618,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Inboundcall,
             
             /// <summary>
+            /// Enum Inboundchat for "inboundchat"
+            /// </summary>
+            [EnumMember(Value = "inboundchat")]
+            Inboundchat,
+            
+            /// <summary>
             /// Enum Inboundemail for "inboundemail"
             /// </summary>
             [EnumMember(Value = "inboundemail")]
@@ -743,6 +790,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Provides the agent duration sort order
         /// </summary>
@@ -827,6 +890,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewFilter" /> class.
@@ -838,8 +909,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LanguageIds">The language ids are used to filter the view.</param>
         /// <param name="LanguageGroups">The language groups used to filter the view.</param>
         /// <param name="Directions">The directions are used to filter the view.</param>
+        /// <param name="OriginatingDirections">The list of orginating directions used to filter the view.</param>
         /// <param name="WrapUpCodes">The wrap up codes are used to filter the view.</param>
         /// <param name="DnisList">The dnis list is used to filter the view.</param>
+        /// <param name="SessionDnisList">The list of session dnis used to filter the view.</param>
         /// <param name="FilterQueuesByUserIds">The user ids are used to fetch associated queues for the view.</param>
         /// <param name="FilterUsersByQueueIds">The queue ids are used to fetch associated users for the view.</param>
         /// <param name="UserIds">The user ids are used to filter the view.</param>
@@ -894,8 +967,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlowTypes">A list of types of the flow.</param>
         /// <param name="FlowEntryTypes">A list of types of the flow entry.</param>
         /// <param name="FlowEntryReasons">A list of reasons of flow entry.</param>
+        /// <param name="FlowVersions">A list of versions of a flow.</param>
         /// <param name="GroupIds">A list of directory group ids.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> StatusList = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> GroupIds = null)
+        /// <param name="HasJourneyCustomerId">Indicates filtering for journey customer id.</param>
+        /// <param name="HasJourneyActionMapId">Indicates filtering for Journey action map id.</param>
+        /// <param name="HasJourneyVisitId">Indicates filtering for Journey visit id.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> StatusList = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -904,8 +981,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LanguageIds = LanguageIds;
             this.LanguageGroups = LanguageGroups;
             this.Directions = Directions;
+            this.OriginatingDirections = OriginatingDirections;
             this.WrapUpCodes = WrapUpCodes;
             this.DnisList = DnisList;
+            this.SessionDnisList = SessionDnisList;
             this.FilterQueuesByUserIds = FilterQueuesByUserIds;
             this.FilterUsersByQueueIds = FilterUsersByQueueIds;
             this.UserIds = UserIds;
@@ -960,7 +1039,11 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FlowTypes = FlowTypes;
             this.FlowEntryTypes = FlowEntryTypes;
             this.FlowEntryReasons = FlowEntryReasons;
+            this.FlowVersions = FlowVersions;
             this.GroupIds = GroupIds;
+            this.HasJourneyCustomerId = HasJourneyCustomerId;
+            this.HasJourneyActionMapId = HasJourneyActionMapId;
+            this.HasJourneyVisitId = HasJourneyVisitId;
             
         }
         
@@ -1030,6 +1113,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The list of orginating directions used to filter the view
+        /// </summary>
+        /// <value>The list of orginating directions used to filter the view</value>
+        [DataMember(Name="originatingDirections", EmitDefaultValue=false)]
+        public List<OriginatingDirectionsEnum> OriginatingDirections { get; set; }
+        
+        
+        
+        /// <summary>
         /// The wrap up codes are used to filter the view
         /// </summary>
         /// <value>The wrap up codes are used to filter the view</value>
@@ -1044,6 +1136,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The dnis list is used to filter the view</value>
         [DataMember(Name="dnisList", EmitDefaultValue=false)]
         public List<string> DnisList { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of session dnis used to filter the view
+        /// </summary>
+        /// <value>The list of session dnis used to filter the view</value>
+        [DataMember(Name="sessionDnisList", EmitDefaultValue=false)]
+        public List<string> SessionDnisList { get; set; }
         
         
         
@@ -1513,11 +1614,47 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// A list of versions of a flow
+        /// </summary>
+        /// <value>A list of versions of a flow</value>
+        [DataMember(Name="flowVersions", EmitDefaultValue=false)]
+        public List<string> FlowVersions { get; set; }
+        
+        
+        
+        /// <summary>
         /// A list of directory group ids
         /// </summary>
         /// <value>A list of directory group ids</value>
         [DataMember(Name="groupIds", EmitDefaultValue=false)]
         public List<string> GroupIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for journey customer id
+        /// </summary>
+        /// <value>Indicates filtering for journey customer id</value>
+        [DataMember(Name="hasJourneyCustomerId", EmitDefaultValue=false)]
+        public bool? HasJourneyCustomerId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for Journey action map id
+        /// </summary>
+        /// <value>Indicates filtering for Journey action map id</value>
+        [DataMember(Name="hasJourneyActionMapId", EmitDefaultValue=false)]
+        public bool? HasJourneyActionMapId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for Journey visit id
+        /// </summary>
+        /// <value>Indicates filtering for Journey visit id</value>
+        [DataMember(Name="hasJourneyVisitId", EmitDefaultValue=false)]
+        public bool? HasJourneyVisitId { get; set; }
         
         
         /// <summary>
@@ -1536,8 +1673,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LanguageIds: ").Append(LanguageIds).Append("\n");
             sb.Append("  LanguageGroups: ").Append(LanguageGroups).Append("\n");
             sb.Append("  Directions: ").Append(Directions).Append("\n");
+            sb.Append("  OriginatingDirections: ").Append(OriginatingDirections).Append("\n");
             sb.Append("  WrapUpCodes: ").Append(WrapUpCodes).Append("\n");
             sb.Append("  DnisList: ").Append(DnisList).Append("\n");
+            sb.Append("  SessionDnisList: ").Append(SessionDnisList).Append("\n");
             sb.Append("  FilterQueuesByUserIds: ").Append(FilterQueuesByUserIds).Append("\n");
             sb.Append("  FilterUsersByQueueIds: ").Append(FilterUsersByQueueIds).Append("\n");
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
@@ -1592,7 +1731,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FlowTypes: ").Append(FlowTypes).Append("\n");
             sb.Append("  FlowEntryTypes: ").Append(FlowEntryTypes).Append("\n");
             sb.Append("  FlowEntryReasons: ").Append(FlowEntryReasons).Append("\n");
+            sb.Append("  FlowVersions: ").Append(FlowVersions).Append("\n");
             sb.Append("  GroupIds: ").Append(GroupIds).Append("\n");
+            sb.Append("  HasJourneyCustomerId: ").Append(HasJourneyCustomerId).Append("\n");
+            sb.Append("  HasJourneyActionMapId: ").Append(HasJourneyActionMapId).Append("\n");
+            sb.Append("  HasJourneyVisitId: ").Append(HasJourneyVisitId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1665,6 +1808,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Directions.SequenceEqual(other.Directions)
                 ) &&
                 (
+                    this.OriginatingDirections == other.OriginatingDirections ||
+                    this.OriginatingDirections != null &&
+                    this.OriginatingDirections.SequenceEqual(other.OriginatingDirections)
+                ) &&
+                (
                     this.WrapUpCodes == other.WrapUpCodes ||
                     this.WrapUpCodes != null &&
                     this.WrapUpCodes.SequenceEqual(other.WrapUpCodes)
@@ -1673,6 +1821,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DnisList == other.DnisList ||
                     this.DnisList != null &&
                     this.DnisList.SequenceEqual(other.DnisList)
+                ) &&
+                (
+                    this.SessionDnisList == other.SessionDnisList ||
+                    this.SessionDnisList != null &&
+                    this.SessionDnisList.SequenceEqual(other.SessionDnisList)
                 ) &&
                 (
                     this.FilterQueuesByUserIds == other.FilterQueuesByUserIds ||
@@ -1945,9 +2098,29 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlowEntryReasons.SequenceEqual(other.FlowEntryReasons)
                 ) &&
                 (
+                    this.FlowVersions == other.FlowVersions ||
+                    this.FlowVersions != null &&
+                    this.FlowVersions.SequenceEqual(other.FlowVersions)
+                ) &&
+                (
                     this.GroupIds == other.GroupIds ||
                     this.GroupIds != null &&
                     this.GroupIds.SequenceEqual(other.GroupIds)
+                ) &&
+                (
+                    this.HasJourneyCustomerId == other.HasJourneyCustomerId ||
+                    this.HasJourneyCustomerId != null &&
+                    this.HasJourneyCustomerId.Equals(other.HasJourneyCustomerId)
+                ) &&
+                (
+                    this.HasJourneyActionMapId == other.HasJourneyActionMapId ||
+                    this.HasJourneyActionMapId != null &&
+                    this.HasJourneyActionMapId.Equals(other.HasJourneyActionMapId)
+                ) &&
+                (
+                    this.HasJourneyVisitId == other.HasJourneyVisitId ||
+                    this.HasJourneyVisitId != null &&
+                    this.HasJourneyVisitId.Equals(other.HasJourneyVisitId)
                 );
         }
 
@@ -1984,11 +2157,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Directions != null)
                     hash = hash * 59 + this.Directions.GetHashCode();
                 
+                if (this.OriginatingDirections != null)
+                    hash = hash * 59 + this.OriginatingDirections.GetHashCode();
+                
                 if (this.WrapUpCodes != null)
                     hash = hash * 59 + this.WrapUpCodes.GetHashCode();
                 
                 if (this.DnisList != null)
                     hash = hash * 59 + this.DnisList.GetHashCode();
+                
+                if (this.SessionDnisList != null)
+                    hash = hash * 59 + this.SessionDnisList.GetHashCode();
                 
                 if (this.FilterQueuesByUserIds != null)
                     hash = hash * 59 + this.FilterQueuesByUserIds.GetHashCode();
@@ -2152,8 +2331,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.FlowEntryReasons != null)
                     hash = hash * 59 + this.FlowEntryReasons.GetHashCode();
                 
+                if (this.FlowVersions != null)
+                    hash = hash * 59 + this.FlowVersions.GetHashCode();
+                
                 if (this.GroupIds != null)
                     hash = hash * 59 + this.GroupIds.GetHashCode();
+                
+                if (this.HasJourneyCustomerId != null)
+                    hash = hash * 59 + this.HasJourneyCustomerId.GetHashCode();
+                
+                if (this.HasJourneyActionMapId != null)
+                    hash = hash * 59 + this.HasJourneyActionMapId.GetHashCode();
+                
+                if (this.HasJourneyVisitId != null)
+                    hash = hash * 59 + this.HasJourneyVisitId.GetHashCode();
                 
                 return hash;
             }

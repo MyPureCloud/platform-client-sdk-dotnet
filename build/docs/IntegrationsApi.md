@@ -525,8 +525,8 @@ namespace Example
 
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
-            var expand = expand_example;  // string | Indicates fields of the response which should be expanded. (optional) 
-            var includeConfig = true;  // bool? | Show config when available (optional)  (default to false)
+            var expand = expand_example;  // string | Indicates a field in the response which should be expanded. (optional) 
+            var includeConfig = true;  // bool? | Return config in response. (optional)  (default to false)
 
             try
             { 
@@ -549,8 +549,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **expand** | **string**| Indicates fields of the response which should be expanded. | [optional] <br />**Values**: contract |
-| **includeConfig** | **bool?**| Show config when available | [optional] [default to false] |
+| **expand** | **string**| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: contract |
+| **includeConfig** | **bool?**| Return config in response. | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -591,8 +591,8 @@ namespace Example
 
             var apiInstance = new IntegrationsApi();
             var actionId = actionId_example;  // string | actionId
-            var expand = expand_example;  // string | Indicates fields of the response which should be expanded. (optional) 
-            var includeConfig = true;  // bool? | Show config when available (optional)  (default to false)
+            var expand = expand_example;  // string | Indicates a field in the response which should be expanded. (optional) 
+            var includeConfig = true;  // bool? | Return config in response. (optional)  (default to false)
 
             try
             { 
@@ -615,8 +615,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-| **expand** | **string**| Indicates fields of the response which should be expanded. | [optional] <br />**Values**: contract |
-| **includeConfig** | **bool?**| Show config when available | [optional] [default to false] |
+| **expand** | **string**| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: contract |
+| **includeConfig** | **bool?**| Return config in response. | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -942,7 +942,7 @@ namespace Example
 
 <a name="getintegrationsactions"></a>
 
-## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActions (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActions (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null)
 
 
 
@@ -973,20 +973,21 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            var category = category_example;  // string | Filter by category name (optional) 
-            var secure = secure_example;  // string | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional) 
-            var includeAuthActions = includeAuthActions_example;  // string | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional) 
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            var sortBy = sortBy_example;  // string | Root level field name to sort on. (optional) 
+            var sortOrder = sortOrder_example;  // string | Direction to sort 'sortBy' field. (optional)  (default to asc)
+            var category = category_example;  // string | Filter by category name (optional) 
+            var name = name_example;  // string | Filter by action name. Provide full or just the first part of name. (optional) 
+            var secure = secure_example;  // string | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional) 
+            var includeAuthActions = includeAuthActions_example;  // string | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)  (default to false)
 
             try
             { 
                 // Retrieves all actions associated with filters passed in via query param.
-                ActionEntityListing result = apiInstance.GetIntegrationsActions(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                ActionEntityListing result = apiInstance.GetIntegrationsActions(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, secure, includeAuthActions);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1003,15 +1004,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **category** | **string**| Filter by category name | [optional]  |
-| **secure** | **string**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
-| **includeAuthActions** | **string**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] <br />**Values**: true, false |
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
-| **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
+| **sortBy** | **string**| Root level field name to sort on. | [optional]  |
+| **sortOrder** | **string**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: ASC, DESC |
+| **category** | **string**| Filter by category name | [optional]  |
+| **name** | **string**| Filter by action name. Provide full or just the first part of name. | [optional]  |
+| **secure** | **string**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
+| **includeAuthActions** | **string**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: true, false |
 {: class="table table-striped"}
 
 ### Return type
@@ -1020,7 +1022,7 @@ namespace Example
 
 <a name="getintegrationsactionscategories"></a>
 
-## [**CategoryEntityListing**](CategoryEntityListing.html) GetIntegrationsActionsCategories (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+## [**CategoryEntityListing**](CategoryEntityListing.html) GetIntegrationsActionsCategories (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
 
 
 
@@ -1051,18 +1053,18 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            var secure = secure_example;  // string | Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions. (optional) 
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            var sortBy = sortBy_example;  // string | Root level field name to sort on. (optional) 
+            var sortOrder = sortOrder_example;  // string | Direction to sort 'sortBy' field. (optional)  (default to asc)
+            var secure = secure_example;  // string | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional) 
 
             try
             { 
                 // Retrieves all categories of available Actions
-                CategoryEntityListing result = apiInstance.GetIntegrationsActionsCategories(secure, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                CategoryEntityListing result = apiInstance.GetIntegrationsActionsCategories(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, secure);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1079,13 +1081,13 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **secure** | **string**| Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions. | [optional] <br />**Values**: true, false |
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
-| **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
+| **sortBy** | **string**| Root level field name to sort on. | [optional]  |
+| **sortOrder** | **string**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: ASC, DESC |
+| **secure** | **string**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
 {: class="table table-striped"}
 
 ### Return type
@@ -1094,7 +1096,7 @@ namespace Example
 
 <a name="getintegrationsactionsdrafts"></a>
 
-## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActionsDrafts (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActionsDrafts (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string secure = null, string includeAuthActions = null)
 
 
 
@@ -1125,20 +1127,21 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IntegrationsApi();
-            var category = category_example;  // string | Filter by category name (optional) 
-            var secure = secure_example;  // string | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional) 
-            var includeAuthActions = includeAuthActions_example;  // string | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional) 
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            var sortBy = sortBy_example;  // string | Root level field name to sort on. (optional) 
+            var sortOrder = sortOrder_example;  // string | Direction to sort 'sortBy' field. (optional)  (default to asc)
+            var category = category_example;  // string | Filter by category name (optional) 
+            var name = name_example;  // string | Filter by action name. Provide full or just the first part of name. (optional) 
+            var secure = secure_example;  // string | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional) 
+            var includeAuthActions = includeAuthActions_example;  // string | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)  (default to false)
 
             try
             { 
                 // Retrieves all action drafts associated with the filters passed in via query param.
-                ActionEntityListing result = apiInstance.GetIntegrationsActionsDrafts(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                ActionEntityListing result = apiInstance.GetIntegrationsActionsDrafts(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, secure, includeAuthActions);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1155,15 +1158,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **category** | **string**| Filter by category name | [optional]  |
-| **secure** | **string**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
-| **includeAuthActions** | **string**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] <br />**Values**: true, false |
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
-| **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
+| **sortBy** | **string**| Root level field name to sort on. | [optional]  |
+| **sortOrder** | **string**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: ASC, DESC |
+| **category** | **string**| Filter by category name | [optional]  |
+| **name** | **string**| Filter by action name. Provide full or just the first part of name. | [optional]  |
+| **secure** | **string**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
+| **includeAuthActions** | **string**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: true, false |
 {: class="table table-striped"}
 
 ### Return type

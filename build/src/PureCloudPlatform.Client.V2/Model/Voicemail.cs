@@ -60,7 +60,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Timeout for "timeout"
             /// </summary>
             [EnumMember(Value = "timeout")]
-            Timeout
+            Timeout,
+            
+            /// <summary>
+            /// Enum None for "none"
+            /// </summary>
+            [EnumMember(Value = "none")]
+            None
         }
         
         
