@@ -254,12 +254,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Userprompt,
             
             /// <summary>
-            /// Enum Voicexml for "VOICEXML"
-            /// </summary>
-            [EnumMember(Value = "VOICEXML")]
-            Voicexml,
-            
-            /// <summary>
             /// Enum Workflow for "WORKFLOW"
             /// </summary>
             [EnumMember(Value = "WORKFLOW")]

@@ -11,18 +11,15 @@ title: UserQueue
 | **Name** | **string** |  | [optional] |
 | **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** | The queue description. | [optional] |
-| **Version** | **int?** | The current version of the queue. | [optional] |
 | **DateCreated** | **DateTime?** | The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **DateModified** | **DateTime?** | The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **ModifiedBy** | **string** | The ID of the user that last modified the queue. | [optional] |
 | **CreatedBy** | **string** | The ID of the user that created the queue. | [optional] |
-| **State** | **string** | Indicates if the queue is active, inactive, or deleted. | [optional] |
-| **ModifiedByApp** | **string** | The application that last modified the queue. | [optional] |
-| **CreatedByApp** | **string** | The application that created the queue. | [optional] |
-| **MediaSettings** | [**Dictionary&lt;string, MediaSetting&gt;**](MediaSetting.html) | The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION | |
+| **MemberCount** | **int?** | The number of users in the queue. | [optional] |
+| **MediaSettings** | [**Dictionary&lt;string, MediaSetting&gt;**](MediaSetting.html) | The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM | [optional] |
 | **Bullseye** | [**Bullseye**](Bullseye.html) | The bulls-eye settings for the queue. | [optional] |
-| **AcwSettings** | [**AcwSettings**](AcwSettings.html) | The ACW settings for the queue. | |
-| **SkillEvaluationMethod** | **string** | The skill evaluation method to use when routing conversations. | |
+| **AcwSettings** | [**AcwSettings**](AcwSettings.html) | The ACW settings for the queue. | [optional] |
+| **SkillEvaluationMethod** | **string** | The skill evaluation method to use when routing conversations. | [optional] |
 | **QueueFlow** | [**UriReference**](UriReference.html) | The in-queue flow to use for conversations waiting in queue. | [optional] |
 | **WhisperPrompt** | [**UriReference**](UriReference.html) | The prompt used for whisper on the queue, if configured. | [optional] |
 | **CallingPartyName** | **string** | The name to use for caller identification for outbound calls from this queue. | [optional] |
@@ -31,7 +28,6 @@ title: UserQueue
 | **OutboundMessagingAddresses** | [**QueueMessagingAddresses**](QueueMessagingAddresses.html) | The messaging addresses for the queue. | [optional] |
 | **OutboundEmailAddress** | [**QueueEmailAddress**](QueueEmailAddress.html) |  | [optional] |
 | **Joined** | **bool?** |  | [optional] |
-| **MemberCount** | **int?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

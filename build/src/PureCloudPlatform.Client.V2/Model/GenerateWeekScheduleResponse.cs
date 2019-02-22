@@ -13,11 +13,14 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// GenerateWeekScheduleResponse
+    /// Response for query for week schedule for a given week in management unit
     /// </summary>
     [DataContract]
     public partial class GenerateWeekScheduleResponse :  IEquatable<GenerateWeekScheduleResponse>
     {
+        
+        
+        
         
         
         /// <summary>
@@ -69,7 +72,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
         /// <summary>
         /// The status of the request
         /// </summary>
@@ -80,22 +82,29 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="GenerateWeekScheduleResponse" /> class.
         /// </summary>
+        /// <param name="DownloadUrl">The url to fetch the result for large responses. The value is null if result contains the data.</param>
         /// <param name="Status">The status of the request.</param>
         /// <param name="OperationId">The operation id to watch for on the notification topic if status == Processing.</param>
-        /// <param name="DownloadUrl">The url to fetch the result for large responses. The value will be null if result contains the data.</param>
-        public GenerateWeekScheduleResponse(StatusEnum? Status = null, string OperationId = null, string DownloadUrl = null)
+        public GenerateWeekScheduleResponse(string DownloadUrl = null, StatusEnum? Status = null, string OperationId = null)
         {
+            this.DownloadUrl = DownloadUrl;
             this.Status = Status;
             this.OperationId = OperationId;
-            this.DownloadUrl = DownloadUrl;
             
         }
+        
+        
+        
+        /// <summary>
+        /// The url to fetch the result for large responses. The value is null if result contains the data
+        /// </summary>
+        /// <value>The url to fetch the result for large responses. The value is null if result contains the data</value>
+        [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
+        public string DownloadUrl { get; set; }
         
         
         
@@ -109,15 +118,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string OperationId { get; set; }
         
         
-        
-        /// <summary>
-        /// The url to fetch the result for large responses. The value will be null if result contains the data
-        /// </summary>
-        /// <value>The url to fetch the result for large responses. The value will be null if result contains the data</value>
-        [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
-        public string DownloadUrl { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -127,9 +127,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class GenerateWeekScheduleResponse {\n");
             
+            sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  OperationId: ").Append(OperationId).Append("\n");
-            sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -167,6 +167,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.DownloadUrl == other.DownloadUrl ||
+                    this.DownloadUrl != null &&
+                    this.DownloadUrl.Equals(other.DownloadUrl)
+                ) &&
+                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
@@ -175,11 +180,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OperationId == other.OperationId ||
                     this.OperationId != null &&
                     this.OperationId.Equals(other.OperationId)
-                ) &&
-                (
-                    this.DownloadUrl == other.DownloadUrl ||
-                    this.DownloadUrl != null &&
-                    this.DownloadUrl.Equals(other.DownloadUrl)
                 );
         }
 
@@ -195,14 +195,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.DownloadUrl != null)
+                    hash = hash * 59 + this.DownloadUrl.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.OperationId != null)
                     hash = hash * 59 + this.OperationId.GetHashCode();
-                
-                if (this.DownloadUrl != null)
-                    hash = hash * 59 + this.DownloadUrl.GetHashCode();
                 
                 return hash;
             }

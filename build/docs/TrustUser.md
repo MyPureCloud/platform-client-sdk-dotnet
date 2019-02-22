@@ -21,6 +21,9 @@ title: TrustUser
 | **Manager** | [**User**](User.html) |  | [optional] |
 | **Images** | [**List&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
 | **Version** | **int?** | Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH. | |
+| **Certifications** | **List&lt;string&gt;** |  | [optional] |
+| **Biography** | [**Biography**](Biography.html) |  | [optional] |
+| **EmployerInfo** | [**EmployerInfo**](EmployerInfo.html) |  | [optional] |
 | **RoutingStatus** | [**RoutingStatus**](RoutingStatus.html) | ACD routing status | [optional] |
 | **Presence** | [**UserPresence**](UserPresence.html) | Active presence | [optional] |
 | **ConversationSummary** | [**UserConversationSummary**](UserConversationSummary.html) | Summary of conversion statistics for conversation types. | [optional] |

@@ -35,6 +35,7 @@ title: MessageMediaParticipant
 | **Wrapup** | [**Wrapup**](Wrapup.html) | Wrapup for this participant, if it has been applied. | [optional] |
 | **Peer** | **string** | The peer communication corresponding to a matching leg for this communication. | [optional] |
 | **FlaggedReason** | **string** | The reason specifying why participant flagged the conversation. | [optional] |
+| **JourneyContext** | [**JourneyContext**](JourneyContext.html) | Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context. | [optional] |
 | **ToAddress** | [**Address**](Address.html) | Address for the participant on receiving side of the message conversation. If the address is a phone number, E.164 format is recommended. | [optional] |
 | **FromAddress** | [**Address**](Address.html) | Address for the participant on the sending side of the message conversation. If the address is a phone number, E.164 format is recommended. | [optional] |
 | **Messages** | [**List&lt;MessageDetails&gt;**](MessageDetails.html) | Message instance details on the communication. | [optional] |

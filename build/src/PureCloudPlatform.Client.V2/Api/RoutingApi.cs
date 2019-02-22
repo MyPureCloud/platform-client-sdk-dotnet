@@ -987,7 +987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserSkillEntityListing> GetUserRoutingskillsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         
         /// <summary>
-        /// Update the ring number or joined status for a User in a Queue
+        /// Update the ring number OR joined status for a User in a Queue
         /// </summary>
         /// <remarks>
         /// 
@@ -1000,7 +1000,7 @@ namespace PureCloudPlatform.Client.V2.Api
         QueueMember PatchRoutingQueueUser (string queueId, string memberId, QueueMember body);
 
         /// <summary>
-        /// Update the ring number or joined status for a User in a Queue
+        /// Update the ring number OR joined status for a User in a Queue
         /// </summary>
         /// <remarks>
         /// 
@@ -2553,7 +2553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> GetUserRoutingskillsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         
         /// <summary>
-        /// Update the ring number or joined status for a User in a Queue
+        /// Update the ring number OR joined status for a User in a Queue
         /// </summary>
         /// <remarks>
         /// 
@@ -2566,7 +2566,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<QueueMember> PatchRoutingQueueUserAsync (string queueId, string memberId, QueueMember body);
 
         /// <summary>
-        /// Update the ring number or joined status for a User in a Queue
+        /// Update the ring number OR joined status for a User in a Queue
         /// </summary>
         /// <remarks>
         /// 
@@ -10916,7 +10916,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update the ring number or joined status for a User in a Queue 
+        /// Update the ring number OR joined status for a User in a Queue 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -10930,7 +10930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the ring number or joined status for a User in a Queue 
+        /// Update the ring number OR joined status for a User in a Queue 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -11027,7 +11027,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update the ring number or joined status for a User in a Queue 
+        /// Update the ring number OR joined status for a User in a Queue 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -11042,7 +11042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the ring number or joined status for a User in a Queue 
+        /// Update the ring number OR joined status for a User in a Queue 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>

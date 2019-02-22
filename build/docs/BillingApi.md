@@ -110,7 +110,7 @@ namespace Example
 
             var apiInstance = new BillingApi();
             var trustorOrgId = trustorOrgId_example;  // string | The organization ID of the trustor (customer) organization.
-            var billingPeriodIndex = 56;  // int? | Billing Period Index (optional)  (default to 0)
+            var billingPeriodIndex = 56;  // int? | 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional)  (default to 0)
 
             try
             { 
@@ -133,7 +133,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **trustorOrgId** | **string**| The organization ID of the trustor (customer) organization. |  |
-| **billingPeriodIndex** | **int?**| Billing Period Index | [optional] [default to 0] |
+| **billingPeriodIndex** | **int?**| 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. | [optional] [default to 0] |
 {: class="table table-striped"}
 
 ### Return type

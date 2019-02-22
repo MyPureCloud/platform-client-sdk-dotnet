@@ -136,7 +136,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum MatchAll for "MATCH_ALL"
             /// </summary>
             [EnumMember(Value = "MATCH_ALL")]
-            MatchAll
+            MatchAll,
+            
+            /// <summary>
+            /// Enum QueryString for "QUERY_STRING"
+            /// </summary>
+            [EnumMember(Value = "QUERY_STRING")]
+            QueryString
         }
         
         

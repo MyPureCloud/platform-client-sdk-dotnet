@@ -13,11 +13,17 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// AsyncWeekScheduleResponse
+    /// Response for query for week schedule for a given week in management unit
     /// </summary>
     [DataContract]
     public partial class AsyncWeekScheduleResponse :  IEquatable<AsyncWeekScheduleResponse>
     {
+        
+        
+        
+        
+        
+        
         
         
         /// <summary>
@@ -71,8 +77,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
         /// The status of the request
         /// </summary>
@@ -83,28 +87,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AsyncWeekScheduleResponse" /> class.
         /// </summary>
-        /// <param name="Status">The status of the request.</param>
         /// <param name="Result">Week schedule result. The value will be null if the data is sent through notification or if response is large..</param>
+        /// <param name="DownloadUrl">The url to fetch the result for large responses. The value is null if result contains the data.</param>
+        /// <param name="Status">The status of the request.</param>
         /// <param name="OperationId">The operation id to watch for on the notification topic if status == Processing.</param>
-        /// <param name="DownloadUrl">The url to fetch the result for large responses. The value will be null if result contains the data.</param>
-        public AsyncWeekScheduleResponse(StatusEnum? Status = null, WeekSchedule Result = null, string OperationId = null, string DownloadUrl = null)
+        public AsyncWeekScheduleResponse(WeekSchedule Result = null, string DownloadUrl = null, StatusEnum? Status = null, string OperationId = null)
         {
-            this.Status = Status;
             this.Result = Result;
-            this.OperationId = OperationId;
             this.DownloadUrl = DownloadUrl;
+            this.Status = Status;
+            this.OperationId = OperationId;
             
         }
-        
-        
         
         
         
@@ -118,20 +116,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The url to fetch the result for large responses. The value is null if result contains the data
+        /// </summary>
+        /// <value>The url to fetch the result for large responses. The value is null if result contains the data</value>
+        [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
+        public string DownloadUrl { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
         /// The operation id to watch for on the notification topic if status == Processing
         /// </summary>
         /// <value>The operation id to watch for on the notification topic if status == Processing</value>
         [DataMember(Name="operationId", EmitDefaultValue=false)]
         public string OperationId { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The url to fetch the result for large responses. The value will be null if result contains the data
-        /// </summary>
-        /// <value>The url to fetch the result for large responses. The value will be null if result contains the data</value>
-        [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
-        public string DownloadUrl { get; set; }
         
         
         /// <summary>
@@ -143,10 +143,10 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AsyncWeekScheduleResponse {\n");
             
-            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Result: ").Append(Result).Append("\n");
-            sb.Append("  OperationId: ").Append(OperationId).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  OperationId: ").Append(OperationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -184,24 +184,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Status == other.Status ||
-                    this.Status != null &&
-                    this.Status.Equals(other.Status)
-                ) &&
-                (
                     this.Result == other.Result ||
                     this.Result != null &&
                     this.Result.Equals(other.Result)
                 ) &&
                 (
-                    this.OperationId == other.OperationId ||
-                    this.OperationId != null &&
-                    this.OperationId.Equals(other.OperationId)
-                ) &&
-                (
                     this.DownloadUrl == other.DownloadUrl ||
                     this.DownloadUrl != null &&
                     this.DownloadUrl.Equals(other.DownloadUrl)
+                ) &&
+                (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
+                    this.OperationId == other.OperationId ||
+                    this.OperationId != null &&
+                    this.OperationId.Equals(other.OperationId)
                 );
         }
 
@@ -217,17 +217,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.Result != null)
                     hash = hash * 59 + this.Result.GetHashCode();
                 
-                if (this.OperationId != null)
-                    hash = hash * 59 + this.OperationId.GetHashCode();
-                
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
+                
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
+                
+                if (this.OperationId != null)
+                    hash = hash * 59 + this.OperationId.GetHashCode();
                 
                 return hash;
             }

@@ -203,12 +203,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -303,6 +318,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Manager">Manager.</param>
         /// <param name="Images">Images.</param>
         /// <param name="Version">Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH. (required).</param>
+        /// <param name="Certifications">Certifications.</param>
+        /// <param name="Biography">Biography.</param>
+        /// <param name="EmployerInfo">EmployerInfo.</param>
         /// <param name="RoutingStatus">ACD routing status.</param>
         /// <param name="Presence">Active presence.</param>
         /// <param name="ConversationSummary">Summary of conversion statistics for conversation types..</param>
@@ -331,7 +349,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Token">Information about the current token.</param>
         /// <param name="Trustors">Organizations having this user as a trustee.</param>
         /// <param name="OrgProducts">Products enabled in this organization.</param>
-        public UserMe(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, List<UserRoutingSkill> Skills = null, List<UserRoutingLanguage> Languages = null, bool? AcdAutoAnswer = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null, FieldConfigs FieldConfigs = null, TokenInfo Token = null, List<Trustor> Trustors = null, List<DomainOrganizationProduct> OrgProducts = null)
+        public UserMe(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, List<UserRoutingSkill> Skills = null, List<UserRoutingLanguage> Languages = null, bool? AcdAutoAnswer = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null, FieldConfigs FieldConfigs = null, TokenInfo Token = null, List<Trustor> Trustors = null, List<DomainOrganizationProduct> OrgProducts = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -345,6 +363,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Manager = Manager;
             this.Images = Images;
             this.Version = Version;
+            this.Certifications = Certifications;
+            this.Biography = Biography;
+            this.EmployerInfo = EmployerInfo;
             this.RoutingStatus = RoutingStatus;
             this.Presence = Presence;
             this.ConversationSummary = ConversationSummary;
@@ -486,6 +507,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Certifications
+        /// </summary>
+        [DataMember(Name="certifications", EmitDefaultValue=false)]
+        public List<string> Certifications { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Biography
+        /// </summary>
+        [DataMember(Name="biography", EmitDefaultValue=false)]
+        public Biography Biography { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets EmployerInfo
+        /// </summary>
+        [DataMember(Name="employerInfo", EmitDefaultValue=false)]
+        public EmployerInfo EmployerInfo { get; set; }
         
         
         
@@ -781,6 +826,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Manager: ").Append(Manager).Append("\n");
             sb.Append("  Images: ").Append(Images).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  Certifications: ").Append(Certifications).Append("\n");
+            sb.Append("  Biography: ").Append(Biography).Append("\n");
+            sb.Append("  EmployerInfo: ").Append(EmployerInfo).Append("\n");
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
             sb.Append("  Presence: ").Append(Presence).Append("\n");
             sb.Append("  ConversationSummary: ").Append(ConversationSummary).Append("\n");
@@ -916,6 +964,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
+                ) &&
+                (
+                    this.Certifications == other.Certifications ||
+                    this.Certifications != null &&
+                    this.Certifications.SequenceEqual(other.Certifications)
+                ) &&
+                (
+                    this.Biography == other.Biography ||
+                    this.Biography != null &&
+                    this.Biography.Equals(other.Biography)
+                ) &&
+                (
+                    this.EmployerInfo == other.EmployerInfo ||
+                    this.EmployerInfo != null &&
+                    this.EmployerInfo.Equals(other.EmployerInfo)
                 ) &&
                 (
                     this.RoutingStatus == other.RoutingStatus ||
@@ -1122,6 +1185,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
+                if (this.Certifications != null)
+                    hash = hash * 59 + this.Certifications.GetHashCode();
+                
+                if (this.Biography != null)
+                    hash = hash * 59 + this.Biography.GetHashCode();
+                
+                if (this.EmployerInfo != null)
+                    hash = hash * 59 + this.EmployerInfo.GetHashCode();
                 
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();

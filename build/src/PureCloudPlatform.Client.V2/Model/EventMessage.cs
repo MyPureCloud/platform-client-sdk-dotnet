@@ -95,6 +95,12 @@ namespace PureCloudPlatform.Client.V2.Model
             CallRuleInvalidContactColumn,
             
             /// <summary>
+            /// Enum CallRuleMissingDataActionInput for "CALL_RULE_MISSING_DATA_ACTION_INPUT"
+            /// </summary>
+            [EnumMember(Value = "CALL_RULE_MISSING_DATA_ACTION_INPUT")]
+            CallRuleMissingDataActionInput,
+            
+            /// <summary>
             /// Enum CallRuleMismatchType for "CALL_RULE_MISMATCH_TYPE"
             /// </summary>
             [EnumMember(Value = "CALL_RULE_MISMATCH_TYPE")]
@@ -147,6 +153,24 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "CONTACT_ZIP_CODE_COLUMN_VALUE_INVALID")]
             ContactZipCodeColumnValueInvalid,
+            
+            /// <summary>
+            /// Enum DataActionExecutionFailed for "DATA_ACTION_EXECUTION_FAILED"
+            /// </summary>
+            [EnumMember(Value = "DATA_ACTION_EXECUTION_FAILED")]
+            DataActionExecutionFailed,
+            
+            /// <summary>
+            /// Enum DataActionAuthenticationFailure for "DATA_ACTION_AUTHENTICATION_FAILURE"
+            /// </summary>
+            [EnumMember(Value = "DATA_ACTION_AUTHENTICATION_FAILURE")]
+            DataActionAuthenticationFailure,
+            
+            /// <summary>
+            /// Enum DataActionNotFound for "DATA_ACTION_NOT_FOUND"
+            /// </summary>
+            [EnumMember(Value = "DATA_ACTION_NOT_FOUND")]
+            DataActionNotFound,
             
             /// <summary>
             /// Enum DncAuthenticationFailure for "DNC_AUTHENTICATION_FAILURE"

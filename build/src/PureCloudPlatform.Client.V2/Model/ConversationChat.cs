@@ -237,6 +237,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -285,6 +288,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationChat" /> class.
@@ -303,7 +308,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Provider">The source provider for the email..</param>
         /// <param name="ScriptId">The UUID of the script to use..</param>
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
-        public ConversationChat(StateEnum? State = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null)
+        /// <param name="JourneyContext">A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context)..</param>
+        public ConversationChat(StateEnum? State = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null, JourneyContext JourneyContext = null)
         {
             this.State = State;
             this.Id = Id;
@@ -319,6 +325,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Provider = Provider;
             this.ScriptId = ScriptId;
             this.PeerId = PeerId;
+            this.JourneyContext = JourneyContext;
             
         }
         
@@ -428,6 +435,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string PeerId { get; set; }
         
         
+        
+        /// <summary>
+        /// A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).
+        /// </summary>
+        /// <value>A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).</value>
+        [DataMember(Name="journeyContext", EmitDefaultValue=false)]
+        public JourneyContext JourneyContext { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -451,6 +467,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
+            sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -556,6 +573,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PeerId == other.PeerId ||
                     this.PeerId != null &&
                     this.PeerId.Equals(other.PeerId)
+                ) &&
+                (
+                    this.JourneyContext == other.JourneyContext ||
+                    this.JourneyContext != null &&
+                    this.JourneyContext.Equals(other.JourneyContext)
                 );
         }
 
@@ -612,6 +634,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
+                
+                if (this.JourneyContext != null)
+                    hash = hash * 59 + this.JourneyContext.GetHashCode();
                 
                 return hash;
             }

@@ -30,16 +30,37 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchUser" /> class.
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="AcdAutoAnswer">The value that denotes if acdAutoAnswer is set on the user.</param>
-        public PatchUser(string Id = null, bool? AcdAutoAnswer = null)
+        /// <param name="Certifications">Certifications.</param>
+        /// <param name="Biography">Biography.</param>
+        /// <param name="EmployerInfo">EmployerInfo.</param>
+        public PatchUser(string Id = null, bool? AcdAutoAnswer = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null)
         {
             this.Id = Id;
             this.AcdAutoAnswer = AcdAutoAnswer;
+            this.Certifications = Certifications;
+            this.Biography = Biography;
+            this.EmployerInfo = EmployerInfo;
             
         }
         
@@ -62,6 +83,30 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AcdAutoAnswer { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets Certifications
+        /// </summary>
+        [DataMember(Name="certifications", EmitDefaultValue=false)]
+        public List<string> Certifications { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Biography
+        /// </summary>
+        [DataMember(Name="biography", EmitDefaultValue=false)]
+        public Biography Biography { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets EmployerInfo
+        /// </summary>
+        [DataMember(Name="employerInfo", EmitDefaultValue=false)]
+        public EmployerInfo EmployerInfo { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -73,6 +118,9 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
+            sb.Append("  Certifications: ").Append(Certifications).Append("\n");
+            sb.Append("  Biography: ").Append(Biography).Append("\n");
+            sb.Append("  EmployerInfo: ").Append(EmployerInfo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -118,6 +166,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AcdAutoAnswer == other.AcdAutoAnswer ||
                     this.AcdAutoAnswer != null &&
                     this.AcdAutoAnswer.Equals(other.AcdAutoAnswer)
+                ) &&
+                (
+                    this.Certifications == other.Certifications ||
+                    this.Certifications != null &&
+                    this.Certifications.SequenceEqual(other.Certifications)
+                ) &&
+                (
+                    this.Biography == other.Biography ||
+                    this.Biography != null &&
+                    this.Biography.Equals(other.Biography)
+                ) &&
+                (
+                    this.EmployerInfo == other.EmployerInfo ||
+                    this.EmployerInfo != null &&
+                    this.EmployerInfo.Equals(other.EmployerInfo)
                 );
         }
 
@@ -138,6 +201,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AcdAutoAnswer != null)
                     hash = hash * 59 + this.AcdAutoAnswer.GetHashCode();
+                
+                if (this.Certifications != null)
+                    hash = hash * 59 + this.Certifications.GetHashCode();
+                
+                if (this.Biography != null)
+                    hash = hash * 59 + this.Biography.GetHashCode();
+                
+                if (this.EmployerInfo != null)
+                    hash = hash * 59 + this.EmployerInfo.GetHashCode();
                 
                 return hash;
             }

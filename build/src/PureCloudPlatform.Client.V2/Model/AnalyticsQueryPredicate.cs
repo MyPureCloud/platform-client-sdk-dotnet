@@ -966,6 +966,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Nconsult,
             
             /// <summary>
+            /// Enum Nconnected for "nConnected"
+            /// </summary>
+            [EnumMember(Value = "nConnected")]
+            Nconnected,
+            
+            /// <summary>
             /// Enum Talert for "tAlert"
             /// </summary>
             [EnumMember(Value = "tAlert")]

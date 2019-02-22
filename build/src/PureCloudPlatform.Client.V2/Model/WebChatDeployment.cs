@@ -65,6 +65,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatDeployment" /> class.
@@ -76,7 +81,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Disabled">Disabled.</param>
         /// <param name="WebChatConfig">WebChatConfig.</param>
         /// <param name="AllowedDomains">AllowedDomains.</param>
-        public WebChatDeployment(string Name = null, string Description = null, bool? AuthenticationRequired = null, string AuthenticationUrl = null, bool? Disabled = null, WebChatConfig WebChatConfig = null, List<string> AllowedDomains = null)
+        /// <param name="Flow">The URI of the Inbound Chat Flow to run when new chats are initiated under this Deployment..</param>
+        public WebChatDeployment(string Name = null, string Description = null, bool? AuthenticationRequired = null, string AuthenticationUrl = null, bool? Disabled = null, WebChatConfig WebChatConfig = null, List<string> AllowedDomains = null, UriReference Flow = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -85,6 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Disabled = Disabled;
             this.WebChatConfig = WebChatConfig;
             this.AllowedDomains = AllowedDomains;
+            this.Flow = Flow;
             
         }
         
@@ -157,6 +164,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The URI of the Inbound Chat Flow to run when new chats are initiated under this Deployment.
+        /// </summary>
+        /// <value>The URI of the Inbound Chat Flow to run when new chats are initiated under this Deployment.</value>
+        [DataMember(Name="flow", EmitDefaultValue=false)]
+        public UriReference Flow { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -181,6 +197,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
             sb.Append("  WebChatConfig: ").Append(WebChatConfig).Append("\n");
             sb.Append("  AllowedDomains: ").Append(AllowedDomains).Append("\n");
+            sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -259,6 +276,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AllowedDomains.SequenceEqual(other.AllowedDomains)
                 ) &&
                 (
+                    this.Flow == other.Flow ||
+                    this.Flow != null &&
+                    this.Flow.Equals(other.Flow)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -300,6 +322,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AllowedDomains != null)
                     hash = hash * 59 + this.AllowedDomains.GetHashCode();
+                
+                if (this.Flow != null)
+                    hash = hash * 59 + this.Flow.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

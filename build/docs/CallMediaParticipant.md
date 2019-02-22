@@ -35,6 +35,7 @@ title: CallMediaParticipant
 | **Wrapup** | [**Wrapup**](Wrapup.html) | Wrapup for this participant, if it has been applied. | [optional] |
 | **Peer** | **string** | The peer communication corresponding to a matching leg for this communication. | [optional] |
 | **FlaggedReason** | **string** | The reason specifying why participant flagged the conversation. | [optional] |
+| **JourneyContext** | [**JourneyContext**](JourneyContext.html) | Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context. | [optional] |
 | **Muted** | **bool?** | Value is true when the call is muted. | [optional] |
 | **Confined** | **bool?** | Value is true when the call is confined. | [optional] |
 | **Recording** | **bool?** | Value is true when the call is being recorded. | [optional] |

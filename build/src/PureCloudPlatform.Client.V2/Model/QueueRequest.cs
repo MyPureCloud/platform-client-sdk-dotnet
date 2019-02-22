@@ -47,49 +47,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// Indicates if the queue is active, inactive, or deleted.
-        /// </summary>
-        /// <value>Indicates if the queue is active, inactive, or deleted.</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum StateEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Active for "active"
-            /// </summary>
-            [EnumMember(Value = "active")]
-            Active,
-            
-            /// <summary>
-            /// Enum Inactive for "inactive"
-            /// </summary>
-            [EnumMember(Value = "inactive")]
-            Inactive,
-            
-            /// <summary>
-            /// Enum Deleted for "deleted"
-            /// </summary>
-            [EnumMember(Value = "deleted")]
-            Deleted
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -185,22 +142,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// Indicates if the queue is active, inactive, or deleted.
-        /// </summary>
-        /// <value>Indicates if the queue is active, inactive, or deleted.</value>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -210,8 +151,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The skill evaluation method to use when routing conversations.</value>
         [DataMember(Name="skillEvaluationMethod", EmitDefaultValue=false)]
         public SkillEvaluationMethodEnum? SkillEvaluationMethod { get; set; }
-        
-        
         
         
         
@@ -245,18 +184,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The queue name (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Description">The queue description..</param>
-        /// <param name="Version">The current version of the queue..</param>
         /// <param name="DateCreated">The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateModified">The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ModifiedBy">The ID of the user that last modified the queue..</param>
         /// <param name="CreatedBy">The ID of the user that created the queue..</param>
-        /// <param name="State">Indicates if the queue is active, inactive, or deleted..</param>
-        /// <param name="ModifiedByApp">The application that last modified the queue..</param>
-        /// <param name="CreatedByApp">The application that created the queue..</param>
-        /// <param name="MediaSettings">The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION (required).</param>
+        /// <param name="MediaSettings">The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM.</param>
         /// <param name="Bullseye">The bulls-eye settings for the queue..</param>
-        /// <param name="AcwSettings">The ACW settings for the queue. (required).</param>
-        /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations. (required).</param>
+        /// <param name="AcwSettings">The ACW settings for the queue..</param>
+        /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations..</param>
         /// <param name="QueueFlow">The in-queue flow to use for conversations waiting in queue..</param>
         /// <param name="WhisperPrompt">The prompt used for whisper on the queue, if configured..</param>
         /// <param name="AutoAnswerOnly">Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered..</param>
@@ -265,20 +200,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
         /// <param name="OutboundMessagingAddresses">The messaging addresses for the queue..</param>
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
-        /// <param name="MemberCount">MemberCount.</param>
-        public QueueRequest(string Name = null, WritableDivision Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference WhisperPrompt = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, int? MemberCount = null)
+        public QueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference WhisperPrompt = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null)
         {
             this.Name = Name;
             this.Division = Division;
             this.Description = Description;
-            this.Version = Version;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.ModifiedBy = ModifiedBy;
             this.CreatedBy = CreatedBy;
-            this.State = State;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
             this.MediaSettings = MediaSettings;
             this.Bullseye = Bullseye;
             this.AcwSettings = AcwSettings;
@@ -291,7 +221,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DefaultScripts = DefaultScripts;
             this.OutboundMessagingAddresses = OutboundMessagingAddresses;
             this.OutboundEmailAddress = OutboundEmailAddress;
-            this.MemberCount = MemberCount;
             
         }
         
@@ -334,15 +263,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The current version of the queue.
-        /// </summary>
-        /// <value>The current version of the queue.</value>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
-        
-        
-        
-        /// <summary>
         /// The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
@@ -378,30 +298,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
-        /// The application that last modified the queue.
+        /// The number of users in the queue.
         /// </summary>
-        /// <value>The application that last modified the queue.</value>
-        [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
-        public string ModifiedByApp { get; set; }
+        /// <value>The number of users in the queue.</value>
+        [DataMember(Name="memberCount", EmitDefaultValue=false)]
+        public int? MemberCount { get; private set; }
         
         
         
         /// <summary>
-        /// The application that created the queue.
+        /// The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM
         /// </summary>
-        /// <value>The application that created the queue.</value>
-        [DataMember(Name="createdByApp", EmitDefaultValue=false)]
-        public string CreatedByApp { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION
-        /// </summary>
-        /// <value>The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION</value>
+        /// <value>The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM</value>
         [DataMember(Name="mediaSettings", EmitDefaultValue=false)]
         public Dictionary<string, MediaSetting> MediaSettings { get; set; }
         
@@ -499,14 +408,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets MemberCount
-        /// </summary>
-        [DataMember(Name="memberCount", EmitDefaultValue=false)]
-        public int? MemberCount { get; set; }
-        
-        
-        
-        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -527,14 +428,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            sb.Append("  State: ").Append(State).Append("\n");
-            sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
-            sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
+            sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
             sb.Append("  MediaSettings: ").Append(MediaSettings).Append("\n");
             sb.Append("  Bullseye: ").Append(Bullseye).Append("\n");
             sb.Append("  AcwSettings: ").Append(AcwSettings).Append("\n");
@@ -547,7 +445,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DefaultScripts: ").Append(DefaultScripts).Append("\n");
             sb.Append("  OutboundMessagingAddresses: ").Append(OutboundMessagingAddresses).Append("\n");
             sb.Append("  OutboundEmailAddress: ").Append(OutboundEmailAddress).Append("\n");
-            sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -606,11 +503,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
-                ) &&
-                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -631,19 +523,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CreatedBy.Equals(other.CreatedBy)
                 ) &&
                 (
-                    this.State == other.State ||
-                    this.State != null &&
-                    this.State.Equals(other.State)
-                ) &&
-                (
-                    this.ModifiedByApp == other.ModifiedByApp ||
-                    this.ModifiedByApp != null &&
-                    this.ModifiedByApp.Equals(other.ModifiedByApp)
-                ) &&
-                (
-                    this.CreatedByApp == other.CreatedByApp ||
-                    this.CreatedByApp != null &&
-                    this.CreatedByApp.Equals(other.CreatedByApp)
+                    this.MemberCount == other.MemberCount ||
+                    this.MemberCount != null &&
+                    this.MemberCount.Equals(other.MemberCount)
                 ) &&
                 (
                     this.MediaSettings == other.MediaSettings ||
@@ -706,11 +588,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OutboundEmailAddress.Equals(other.OutboundEmailAddress)
                 ) &&
                 (
-                    this.MemberCount == other.MemberCount ||
-                    this.MemberCount != null &&
-                    this.MemberCount.Equals(other.MemberCount)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -741,9 +618,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
                 
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
                 
@@ -756,14 +630,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
                 
-                if (this.State != null)
-                    hash = hash * 59 + this.State.GetHashCode();
-                
-                if (this.ModifiedByApp != null)
-                    hash = hash * 59 + this.ModifiedByApp.GetHashCode();
-                
-                if (this.CreatedByApp != null)
-                    hash = hash * 59 + this.CreatedByApp.GetHashCode();
+                if (this.MemberCount != null)
+                    hash = hash * 59 + this.MemberCount.GetHashCode();
                 
                 if (this.MediaSettings != null)
                     hash = hash * 59 + this.MediaSettings.GetHashCode();
@@ -800,9 +668,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.OutboundEmailAddress != null)
                     hash = hash * 59 + this.OutboundEmailAddress.GetHashCode();
-                
-                if (this.MemberCount != null)
-                    hash = hash * 59 + this.MemberCount.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
