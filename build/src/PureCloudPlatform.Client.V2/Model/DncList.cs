@@ -105,12 +105,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The type of the DncList.
         /// </summary>
         /// <value>The type of the DncList.</value>
         [DataMember(Name="dncSourceType", EmitDefaultValue=false)]
         public DncSourceTypeEnum? DncSourceType { get; set; }
+        
+        
         
         
         
@@ -137,7 +142,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LoginId">A dnc.com loginId. Required if the dncSourceType is dnc.com..</param>
         /// <param name="DncCodes">The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com..</param>
         /// <param name="LicenseId">A gryphon license number. Required if the dncSourceType is gryphon..</param>
-        public DncList(string Name = null, int? Version = null, ImportStatus ImportStatus = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null)
+        /// <param name="Division">The division this DncList belongs to..</param>
+        public DncList(string Name = null, int? Version = null, ImportStatus ImportStatus = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, UriReference Division = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -145,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LoginId = LoginId;
             this.DncCodes = DncCodes;
             this.LicenseId = LicenseId;
+            this.Division = Division;
             
         }
         
@@ -243,6 +250,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The division this DncList belongs to.
+        /// </summary>
+        /// <value>The division this DncList belongs to.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public UriReference Division { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -270,6 +286,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LoginId: ").Append(LoginId).Append("\n");
             sb.Append("  DncCodes: ").Append(DncCodes).Append("\n");
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -363,6 +380,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LicenseId.Equals(other.LicenseId)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -413,6 +435,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LicenseId != null)
                     hash = hash * 59 + this.LicenseId.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

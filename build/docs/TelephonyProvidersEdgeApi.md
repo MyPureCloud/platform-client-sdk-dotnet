@@ -13,7 +13,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteTelephonyProvidersEdgesCertificateauthority**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgescertificateauthority) | **DELETE** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Delete a certificate authority. |
 | [**DeleteTelephonyProvidersEdgesDidpool**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgesdidpool) | **DELETE** /api/v2/telephony/providers/edges/didpools/{didPoolId} | Delete a DID Pool by ID. |
 | [**DeleteTelephonyProvidersEdgesEdgegroup**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgesedgegroup) | **DELETE** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Delete an edge group. |
-| [**DeleteTelephonyProvidersEdgesEndpoint**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgesendpoint) | **DELETE** /api/v2/telephony/providers/edges/endpoints/{endpointId} | Delete endpoint |
 | [**DeleteTelephonyProvidersEdgesExtensionpool**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgesextensionpool) | **DELETE** /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId} | Delete an extension pool by ID |
 | [**DeleteTelephonyProvidersEdgesOutboundroute**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgesoutboundroute) | **DELETE** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Delete Outbound Route |
 | [**DeleteTelephonyProvidersEdgesPhone**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgesphone) | **DELETE** /api/v2/telephony/providers/edges/phones/{phoneId} | Delete a Phone by ID |
@@ -51,8 +50,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesedgegroupedgetrunkbase) | **GET** /api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId} | Gets the edge trunk base associated with the edge group |
 | [**GetTelephonyProvidersEdgesEdgegroups**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesedgegroups) | **GET** /api/v2/telephony/providers/edges/edgegroups | Get the list of edge groups. |
 | [**GetTelephonyProvidersEdgesEdgeversionreport**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesedgeversionreport) | **GET** /api/v2/telephony/providers/edges/edgeversionreport | Get the edge version report. |
-| [**GetTelephonyProvidersEdgesEndpoint**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesendpoint) | **GET** /api/v2/telephony/providers/edges/endpoints/{endpointId} | Get endpoint |
-| [**GetTelephonyProvidersEdgesEndpoints**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesendpoints) | **GET** /api/v2/telephony/providers/edges/endpoints | Get endpoints |
 | [**GetTelephonyProvidersEdgesExtension**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesextension) | **GET** /api/v2/telephony/providers/edges/extensions/{extensionId} | Get an extension by ID. |
 | [**GetTelephonyProvidersEdgesExtensionpool**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesextensionpool) | **GET** /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId} | Get an extension pool by ID |
 | [**GetTelephonyProvidersEdgesExtensionpools**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesextensionpools) | **GET** /api/v2/telephony/providers/edges/extensionpools | Get a listing of extension pools |
@@ -103,7 +100,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTelephonyProvidersEdgesCertificateauthorities**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgescertificateauthorities) | **POST** /api/v2/telephony/providers/edges/certificateauthorities | Create a certificate authority. |
 | [**PostTelephonyProvidersEdgesDidpools**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesdidpools) | **POST** /api/v2/telephony/providers/edges/didpools | Create a new DID pool |
 | [**PostTelephonyProvidersEdgesEdgegroups**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesedgegroups) | **POST** /api/v2/telephony/providers/edges/edgegroups | Create an edge group. |
-| [**PostTelephonyProvidersEdgesEndpoints**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesendpoints) | **POST** /api/v2/telephony/providers/edges/endpoints | Create endpoint |
 | [**PostTelephonyProvidersEdgesExtensionpools**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesextensionpools) | **POST** /api/v2/telephony/providers/edges/extensionpools | Create a new extension pool |
 | [**PostTelephonyProvidersEdgesOutboundroutes**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesoutboundroutes) | **POST** /api/v2/telephony/providers/edges/outboundroutes | Create outbound rule |
 | [**PostTelephonyProvidersEdgesPhoneReboot**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesphonereboot) | **POST** /api/v2/telephony/providers/edges/phones/{phoneId}/reboot | Reboot a Phone |
@@ -122,7 +118,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutTelephonyProvidersEdgesDidpool**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesdidpool) | **PUT** /api/v2/telephony/providers/edges/didpools/{didPoolId} | Update a DID Pool by ID. |
 | [**PutTelephonyProvidersEdgesEdgegroup**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesedgegroup) | **PUT** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Update an edge group. |
 | [**PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesedgegroupedgetrunkbase) | **PUT** /api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId} | Update the edge trunk base associated with the edge group |
-| [**PutTelephonyProvidersEdgesEndpoint**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesendpoint) | **PUT** /api/v2/telephony/providers/edges/endpoints/{endpointId} | Update endpoint |
 | [**PutTelephonyProvidersEdgesExtension**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesextension) | **PUT** /api/v2/telephony/providers/edges/extensions/{extensionId} | Update an extension by ID. |
 | [**PutTelephonyProvidersEdgesExtensionpool**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesextensionpool) | **PUT** /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId} | Update an extension pool by ID |
 | [**PutTelephonyProvidersEdgesOutboundroute**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesoutboundroute) | **PUT** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Update outbound route |
@@ -489,66 +484,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeGroupId** | **string**| Edge group ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="deletetelephonyprovidersedgesendpoint"></a>
-
-## void DeleteTelephonyProvidersEdgesEndpoint (string endpointId)
-
-
-
-Delete endpoint
-
-
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class DeleteTelephonyProvidersEdgesEndpointExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var endpointId = endpointId_example;  // string | Endpoint ID
-
-            try
-            { 
-                // Delete endpoint
-                apiInstance.DeleteTelephonyProvidersEdgesEndpoint(endpointId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteTelephonyProvidersEdgesEndpoint: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **endpointId** | **string**| Endpoint ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2874,134 +2809,6 @@ This endpoint does require any parameters.
 ### Return type
 
 [**EdgeVersionReport**](EdgeVersionReport.html)
-
-<a name="gettelephonyprovidersedgesendpoint"></a>
-
-## [**Endpoint**](Endpoint.html) GetTelephonyProvidersEdgesEndpoint (string endpointId)
-
-
-
-Get endpoint
-
-
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetTelephonyProvidersEdgesEndpointExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var endpointId = endpointId_example;  // string | Endpoint ID
-
-            try
-            { 
-                // Get endpoint
-                Endpoint result = apiInstance.GetTelephonyProvidersEdgesEndpoint(endpointId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesEndpoint: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **endpointId** | **string**| Endpoint ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Endpoint**](Endpoint.html)
-
-<a name="gettelephonyprovidersedgesendpoints"></a>
-
-## [**EndpointEntityListing**](EndpointEntityListing.html) GetTelephonyProvidersEdgesEndpoints (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
-
-
-
-Get endpoints
-
-
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetTelephonyProvidersEdgesEndpointsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var name = name_example;  // string | Name (optional) 
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-
-            try
-            { 
-                // Get endpoints
-                EndpointEntityListing result = apiInstance.GetTelephonyProvidersEdgesEndpoints(pageSize, pageNumber, name, sortBy);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesEndpoints: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **name** | **string**| Name | [optional]  |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
-{: class="table table-striped"}
-
-### Return type
-
-[**EndpointEntityListing**](EndpointEntityListing.html)
 
 <a name="gettelephonyprovidersedgesextension"></a>
 
@@ -6202,67 +6009,6 @@ namespace Example
 
 [**EdgeGroup**](EdgeGroup.html)
 
-<a name="posttelephonyprovidersedgesendpoints"></a>
-
-## [**Endpoint**](Endpoint.html) PostTelephonyProvidersEdgesEndpoints (Endpoint body)
-
-
-
-Create endpoint
-
-
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostTelephonyProvidersEdgesEndpointsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new Endpoint(); // Endpoint | EndpointTemplate
-
-            try
-            { 
-                // Create endpoint
-                Endpoint result = apiInstance.PostTelephonyProvidersEdgesEndpoints(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostTelephonyProvidersEdgesEndpoints: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**Endpoint**](Endpoint.html)| EndpointTemplate |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Endpoint**](Endpoint.html)
-
 <a name="posttelephonyprovidersedgesextensionpools"></a>
 
 ## [**ExtensionPool**](ExtensionPool.html) PostTelephonyProvidersEdgesExtensionpools (ExtensionPool body)
@@ -7381,69 +7127,6 @@ namespace Example
 ### Return type
 
 [**EdgeTrunkBase**](EdgeTrunkBase.html)
-
-<a name="puttelephonyprovidersedgesendpoint"></a>
-
-## [**Endpoint**](Endpoint.html) PutTelephonyProvidersEdgesEndpoint (string endpointId, Endpoint body)
-
-
-
-Update endpoint
-
-
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PutTelephonyProvidersEdgesEndpointExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var endpointId = endpointId_example;  // string | Endpoint ID
-            var body = new Endpoint(); // Endpoint | EndpointTemplate
-
-            try
-            { 
-                // Update endpoint
-                Endpoint result = apiInstance.PutTelephonyProvidersEdgesEndpoint(endpointId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutTelephonyProvidersEdgesEndpoint: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **endpointId** | **string**| Endpoint ID |  |
-| **body** | [**Endpoint**](Endpoint.html)| EndpointTemplate |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Endpoint**](Endpoint.html)
 
 <a name="puttelephonyprovidersedgesextension"></a>
 

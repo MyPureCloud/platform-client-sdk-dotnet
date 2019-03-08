@@ -41,11 +41,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="JourneyCustomer" /> class.
         /// </summary>
         /// <param name="Id">An ID of a customer within the Journey System at a point-in-time.  Note that a customer entity can have multiple customerIds based on the stitching process.  Depending on the context within the PureCloud conversation, this may or may not be mutable. (required).</param>
-        /// <param name="Type">The type of the customerId within the Journey System (e.g. cookie). (required).</param>
-        public JourneyCustomer(string Id = null, string Type = null)
+        /// <param name="IdType">The type of the customerId within the Journey System (e.g. cookie). (required).</param>
+        public JourneyCustomer(string Id = null, string IdType = null)
         {
             this.Id = Id;
-            this.Type = Type;
+            this.IdType = IdType;
             
         }
         
@@ -64,8 +64,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// The type of the customerId within the Journey System (e.g. cookie).
         /// </summary>
         /// <value>The type of the customerId within the Journey System (e.g. cookie).</value>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
+        [DataMember(Name="idType", EmitDefaultValue=false)]
+        public string IdType { get; set; }
         
         
         /// <summary>
@@ -78,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class JourneyCustomer {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  IdType: ").Append(IdType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,9 +121,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
+                    this.IdType == other.IdType ||
+                    this.IdType != null &&
+                    this.IdType.Equals(other.IdType)
                 );
         }
 
@@ -142,8 +142,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
+                if (this.IdType != null)
+                    hash = hash * 59 + this.IdType.GetHashCode();
                 
                 return hash;
             }

@@ -37,6 +37,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundCampaignrule**](OutboundApi.html#getoutboundcampaignrule) | **GET** /api/v2/outbound/campaignrules/{campaignRuleId} | Get Campaign Rule |
 | [**GetOutboundCampaignrules**](OutboundApi.html#getoutboundcampaignrules) | **GET** /api/v2/outbound/campaignrules | Query Campaign Rule list |
 | [**GetOutboundCampaigns**](OutboundApi.html#getoutboundcampaigns) | **GET** /api/v2/outbound/campaigns | Query a list of dialer campaigns. |
+| [**GetOutboundCampaignsDivisionview**](OutboundApi.html#getoutboundcampaignsdivisionview) | **GET** /api/v2/outbound/campaigns/divisionviews/{campaignId} | Get a basic Campaign information object |
 | [**GetOutboundCampaignsDivisionviews**](OutboundApi.html#getoutboundcampaignsdivisionviews) | **GET** /api/v2/outbound/campaigns/divisionviews | Query a list of basic Campaign information objects |
 | [**GetOutboundContactlist**](OutboundApi.html#getoutboundcontactlist) | **GET** /api/v2/outbound/contactlists/{contactListId} | Get a dialer contact list. |
 | [**GetOutboundContactlistContact**](OutboundApi.html#getoutboundcontactlistcontact) | **GET** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get a contact. |
@@ -1987,6 +1988,67 @@ namespace Example
 ### Return type
 
 [**CampaignEntityListing**](CampaignEntityListing.html)
+
+<a name="getoutboundcampaignsdivisionview"></a>
+
+## [**CampaignDivisionView**](CampaignDivisionView.html) GetOutboundCampaignsDivisionview (string campaignId)
+
+
+
+Get a basic Campaign information object
+
+This returns a simplified version of a Campaign, consisting of name and division.
+
+Requires ANY permissions: 
+
+* outbound:campaign:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundCampaignsDivisionviewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+
+            try
+            { 
+                // Get a basic Campaign information object
+                CampaignDivisionView result = apiInstance.GetOutboundCampaignsDivisionview(campaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundCampaignsDivisionview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CampaignDivisionView**](CampaignDivisionView.html)
 
 <a name="getoutboundcampaignsdivisionviews"></a>
 

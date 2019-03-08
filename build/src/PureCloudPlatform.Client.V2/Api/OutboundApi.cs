@@ -745,6 +745,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CampaignEntityListing> GetOutboundCampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
+        /// Get a basic Campaign information object
+        /// </summary>
+        /// <remarks>
+        /// This returns a simplified version of a Campaign, consisting of name and division.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>CampaignDivisionView</returns>
+        CampaignDivisionView GetOutboundCampaignsDivisionview (string campaignId);
+
+        /// <summary>
+        /// Get a basic Campaign information object
+        /// </summary>
+        /// <remarks>
+        /// This returns a simplified version of a Campaign, consisting of name and division.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of CampaignDivisionView</returns>
+        ApiResponse<CampaignDivisionView> GetOutboundCampaignsDivisionviewWithHttpInfo (string campaignId);
+        
+        /// <summary>
         /// Query a list of basic Campaign information objects
         /// </summary>
         /// <remarks>
@@ -3121,6 +3143,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CampaignEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<CampaignEntityListing>> GetOutboundCampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
+        
+        /// <summary>
+        /// Get a basic Campaign information object
+        /// </summary>
+        /// <remarks>
+        /// This returns a simplified version of a Campaign, consisting of name and division.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignDivisionView</returns>
+        System.Threading.Tasks.Task<CampaignDivisionView> GetOutboundCampaignsDivisionviewAsync (string campaignId);
+
+        /// <summary>
+        /// Get a basic Campaign information object
+        /// </summary>
+        /// <remarks>
+        /// This returns a simplified version of a Campaign, consisting of name and division.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignDivisionView)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignDivisionView>> GetOutboundCampaignsDivisionviewAsyncWithHttpInfo (string campaignId);
         
         /// <summary>
         /// Query a list of basic Campaign information objects
@@ -10797,6 +10841,199 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CampaignEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (CampaignEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a basic Campaign information object This returns a simplified version of a Campaign, consisting of name and division.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>CampaignDivisionView</returns>
+        public CampaignDivisionView GetOutboundCampaignsDivisionview (string campaignId)
+        {
+             ApiResponse<CampaignDivisionView> localVarResponse = GetOutboundCampaignsDivisionviewWithHttpInfo(campaignId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a basic Campaign information object This returns a simplified version of a Campaign, consisting of name and division.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of CampaignDivisionView</returns>
+        public ApiResponse< CampaignDivisionView > GetOutboundCampaignsDivisionviewWithHttpInfo (string campaignId)
+        { 
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignsDivisionview");
+
+            var localVarPath = "/api/v2/outbound/campaigns/divisionviews/{campaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignsDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignsDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignDivisionView>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignDivisionView) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignDivisionView)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a basic Campaign information object This returns a simplified version of a Campaign, consisting of name and division.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignDivisionView</returns>
+        public async System.Threading.Tasks.Task<CampaignDivisionView> GetOutboundCampaignsDivisionviewAsync (string campaignId)
+        {
+             ApiResponse<CampaignDivisionView> localVarResponse = await GetOutboundCampaignsDivisionviewAsyncWithHttpInfo(campaignId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a basic Campaign information object This returns a simplified version of a Campaign, consisting of name and division.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignDivisionView)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignDivisionView>> GetOutboundCampaignsDivisionviewAsyncWithHttpInfo (string campaignId)
+        { 
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignsDivisionview");
+            
+
+            var localVarPath = "/api/v2/outbound/campaigns/divisionviews/{campaignId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignsDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignsDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignDivisionView>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignDivisionView) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignDivisionView)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

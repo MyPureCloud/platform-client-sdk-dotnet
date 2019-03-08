@@ -223,6 +223,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The strategy this Campaign will use for dialing.
         /// </summary>
@@ -244,6 +247,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The current status of the Campaign. A Campaign may be turned 'on' or 'off'. Required for updates.</value>
         [DataMember(Name="campaignStatus", EmitDefaultValue=false)]
         public CampaignStatusEnum? CampaignStatus { get; set; }
+        
+        
         
         
         
@@ -324,7 +329,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallAnalysisLanguage">The language the edge will use to analyze the call..</param>
         /// <param name="Priority">The priority of this campaign relative to other campaigns that are running on the same queue. 5 is the highest priority, 1 the lowest..</param>
         /// <param name="ContactListFilters">Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied..</param>
-        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, UriReference Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<UriReference> ContactListFilters = null)
+        /// <param name="Division">The division this campaign belongs to..</param>
+        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, UriReference Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<UriReference> ContactListFilters = null, UriReference Division = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -354,6 +360,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CallAnalysisLanguage = CallAnalysisLanguage;
             this.Priority = Priority;
             this.ContactListFilters = ContactListFilters;
+            this.Division = Division;
             
         }
         
@@ -625,6 +632,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The division this campaign belongs to.
+        /// </summary>
+        /// <value>The division this campaign belongs to.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public UriReference Division { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -672,6 +688,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CallAnalysisLanguage: ").Append(CallAnalysisLanguage).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -865,6 +882,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContactListFilters.SequenceEqual(other.ContactListFilters)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -975,6 +997,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ContactListFilters != null)
                     hash = hash * 59 + this.ContactListFilters.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

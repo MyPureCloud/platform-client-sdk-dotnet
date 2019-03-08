@@ -1452,6 +1452,7 @@ Get queues for user
 
 Requires ANY permissions: 
 
+* routing:queue:view
 * routing:queue:join
 
 ### Example
@@ -3048,7 +3049,7 @@ Change a users password
 Requires ANY permissions: 
 
 * user_administration
-* directory:userPassword:edit
+* directory:user:setPassword
 
 ### Example
 ```{"language":"csharp"}

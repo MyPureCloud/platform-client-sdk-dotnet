@@ -1204,7 +1204,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of flows, filtered by query parameters
         /// </summary>
         /// <remarks>
-        /// Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -1232,7 +1232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of flows, filtered by query parameters
         /// </summary>
         /// <remarks>
-        /// Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -1368,7 +1368,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of basic flow information objects filterable by query parameters.
         /// </summary>
         /// <remarks>
-        /// This returns a simplified version of /flow consisting of name and type.
+        /// This returns a simplified version of /flow consisting of name and type. If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -1389,7 +1389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of basic flow information objects filterable by query parameters.
         /// </summary>
         /// <remarks>
-        /// This returns a simplified version of /flow consisting of name and type.
+        /// This returns a simplified version of /flow consisting of name and type. If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -3294,7 +3294,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of flows, filtered by query parameters
         /// </summary>
         /// <remarks>
-        /// Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -3322,7 +3322,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of flows, filtered by query parameters
         /// </summary>
         /// <remarks>
-        /// Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -3458,7 +3458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of basic flow information objects filterable by query parameters.
         /// </summary>
         /// <remarks>
-        /// This returns a simplified version of /flow consisting of name and type.
+        /// This returns a simplified version of /flow consisting of name and type. If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -3479,7 +3479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a pageable list of basic flow information objects filterable by query parameters.
         /// </summary>
         /// <remarks>
-        /// This returns a simplified version of /flow consisting of name and type.
+        /// This returns a simplified version of /flow consisting of name and type. If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -13553,7 +13553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a pageable list of flows, filtered by query parameters Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// Get a pageable list of flows, filtered by query parameters If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -13582,7 +13582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a pageable list of flows, filtered by query parameters Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// Get a pageable list of flows, filtered by query parameters If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -13696,7 +13696,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a pageable list of flows, filtered by query parameters Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// Get a pageable list of flows, filtered by query parameters If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -13726,7 +13726,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a pageable list of flows, filtered by query parameters Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// Get a pageable list of flows, filtered by query parameters If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -14673,7 +14673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type.
+        /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type. If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -14695,7 +14695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type.
+        /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type. If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -14795,7 +14795,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type.
+        /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type. If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>
@@ -14818,7 +14818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type.
+        /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type. If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Type (optional)</param>

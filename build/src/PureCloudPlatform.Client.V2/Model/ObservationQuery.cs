@@ -478,6 +478,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Tflow,
             
             /// <summary>
+            /// Enum Oflow for "oFlow"
+            /// </summary>
+            [EnumMember(Value = "oFlow")]
+            Oflow,
+            
+            /// <summary>
             /// Enum Tflowoutcome for "tFlowOutcome"
             /// </summary>
             [EnumMember(Value = "tFlowOutcome")]

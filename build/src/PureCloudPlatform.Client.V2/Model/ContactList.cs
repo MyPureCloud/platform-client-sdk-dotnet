@@ -95,6 +95,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactList" /> class.
@@ -107,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        /// <param name="Division">The division this entity belongs to..</param>
         /// <param name="ColumnNames">The names of the contact data columns. (required).</param>
         /// <param name="PhoneColumns">Indicates which columns are phone numbers. (required).</param>
         /// <param name="ImportStatus">The status of the import process..</param>
@@ -115,10 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AttemptLimits">AttemptLimits for this ContactList..</param>
         /// <param name="AutomaticTimeZoneMapping">Indicates if automatic time zone mapping is to be used for this ContactList..</param>
         /// <param name="ZipCodeColumnName">The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true..</param>
-        public ContactList(string Name = null, int? Version = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, UriReference AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null)
+        public ContactList(string Name = null, int? Version = null, UriReference Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, UriReference AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null)
         {
             this.Name = Name;
             this.Version = Version;
+            this.Division = Division;
             this.ColumnNames = ColumnNames;
             this.PhoneColumns = PhoneColumns;
             this.ImportStatus = ImportStatus;
@@ -173,6 +180,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The division this entity belongs to.
+        /// </summary>
+        /// <value>The division this entity belongs to.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public UriReference Division { get; set; }
         
         
         
@@ -279,6 +295,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  ColumnNames: ").Append(ColumnNames).Append("\n");
             sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
@@ -349,6 +366,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 ) &&
                 (
                     this.ColumnNames == other.ColumnNames ||
@@ -428,6 +450,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.ColumnNames != null)
                     hash = hash * 59 + this.ColumnNames.GetHashCode();

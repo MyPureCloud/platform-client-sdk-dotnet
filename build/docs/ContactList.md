@@ -12,6 +12,7 @@ title: ContactList
 | **DateCreated** | **DateTime?** | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **DateModified** | **DateTime?** | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
+| **Division** | [**UriReference**](UriReference.html) | The division this entity belongs to. | [optional] |
 | **ColumnNames** | **List&lt;string&gt;** | The names of the contact data columns. | |
 | **PhoneColumns** | [**List&lt;ContactPhoneNumberColumn&gt;**](ContactPhoneNumberColumn.html) | Indicates which columns are phone numbers. | |
 | **ImportStatus** | [**ImportStatus**](ImportStatus.html) | The status of the import process. | [optional] |
