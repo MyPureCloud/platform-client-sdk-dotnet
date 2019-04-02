@@ -52,6 +52,7 @@ title: ViewFilter
 | **SurveyPromoterScore** | [**NumericRange**](NumericRange.html) | The survey promoter score used to filter the view | [optional] |
 | **SurveyFormContextIds** | **List&lt;string&gt;** | The list of survey form context ids used to filter the view | [optional] |
 | **ConversationIds** | **List&lt;string&gt;** | The list of conversation ids used to filter the view | [optional] |
+| **SipCallIds** | **List&lt;string&gt;** | The list of SIP call ids used to filter the view | [optional] |
 | **IsEnded** | **bool?** | Indicates filtering for ended | [optional] |
 | **IsSurveyed** | **bool?** | Indicates filtering for survey | [optional] |
 | **SurveyScores** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The list of survey score ranges used to filter the view | [optional] |

@@ -50,22 +50,38 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleShift" /> class.
         /// </summary>
+        /// <param name="WeekSchedule">The schedule to which this shift belongs.</param>
         /// <param name="Id">ID of the schedule shift. This is only for the case of updating and deleting an existing shift.</param>
         /// <param name="Activities">List of activities in this shift.</param>
         /// <param name="Delete">If marked true for updating this schedule shift, it will be deleted.</param>
         /// <param name="ManuallyEdited">Whether the shift was set as manually edited.</param>
-        public UserScheduleShift(string Id = null, List<UserScheduleActivity> Activities = null, bool? Delete = null, bool? ManuallyEdited = null)
+        public UserScheduleShift(WeekScheduleReference WeekSchedule = null, string Id = null, List<UserScheduleActivity> Activities = null, bool? Delete = null, bool? ManuallyEdited = null)
         {
+            this.WeekSchedule = WeekSchedule;
             this.Id = Id;
             this.Activities = Activities;
             this.Delete = Delete;
             this.ManuallyEdited = ManuallyEdited;
             
         }
+        
+        
+        
+        /// <summary>
+        /// The schedule to which this shift belongs
+        /// </summary>
+        /// <value>The schedule to which this shift belongs</value>
+        [DataMember(Name="weekSchedule", EmitDefaultValue=false)]
+        public WeekScheduleReference WeekSchedule { get; set; }
         
         
         
@@ -131,6 +147,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class UserScheduleShift {\n");
             
+            sb.Append("  WeekSchedule: ").Append(WeekSchedule).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
@@ -174,6 +191,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.WeekSchedule == other.WeekSchedule ||
+                    this.WeekSchedule != null &&
+                    this.WeekSchedule.Equals(other.WeekSchedule)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -216,6 +238,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.WeekSchedule != null)
+                    hash = hash * 59 + this.WeekSchedule.GetHashCode();
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();

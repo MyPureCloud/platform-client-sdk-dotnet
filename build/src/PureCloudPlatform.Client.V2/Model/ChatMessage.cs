@@ -44,6 +44,63 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Type of the message body (v2 chats only)
+        /// </summary>
+        /// <value>Type of the message body (v2 chats only)</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum BodyTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Standard for "STANDARD"
+            /// </summary>
+            [EnumMember(Value = "STANDARD")]
+            Standard,
+            
+            /// <summary>
+            /// Enum Activity for "ACTIVITY"
+            /// </summary>
+            [EnumMember(Value = "ACTIVITY")]
+            Activity,
+            
+            /// <summary>
+            /// Enum Typing for "TYPING"
+            /// </summary>
+            [EnumMember(Value = "TYPING")]
+            Typing,
+            
+            /// <summary>
+            /// Enum Notice for "NOTICE"
+            /// </summary>
+            [EnumMember(Value = "NOTICE")]
+            Notice,
+            
+            /// <summary>
+            /// Enum Memberjoin for "MEMBERJOIN"
+            /// </summary>
+            [EnumMember(Value = "MEMBERJOIN")]
+            Memberjoin,
+            
+            /// <summary>
+            /// Enum Memberleave for "MEMBERLEAVE"
+            /// </summary>
+            [EnumMember(Value = "MEMBERLEAVE")]
+            Memberleave,
+            
+            /// <summary>
+            /// Enum Mediarequest for "MEDIAREQUEST"
+            /// </summary>
+            [EnumMember(Value = "MEDIAREQUEST")]
+            Mediarequest
+        }
         
         
         
@@ -61,6 +118,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Type of the message body (v2 chats only)
+        /// </summary>
+        /// <value>Type of the message body (v2 chats only)</value>
+        [DataMember(Name="bodyType", EmitDefaultValue=false)]
+        public BodyTypeEnum? BodyType { get; set; }
         
         
         
@@ -69,16 +139,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatMessage" /> class.
         /// </summary>
-        /// <param name="Body">Body.</param>
+        /// <param name="Body">The message body.</param>
         /// <param name="Id">Id.</param>
-        /// <param name="To">To.</param>
-        /// <param name="From">From.</param>
+        /// <param name="To">The message recipient.</param>
+        /// <param name="From">The message sender.</param>
         /// <param name="Utc">Utc.</param>
-        /// <param name="Chat">Chat.</param>
-        /// <param name="Message">Message.</param>
+        /// <param name="Chat">The interaction id (if available).</param>
+        /// <param name="Message">The message id.</param>
         /// <param name="Type">Type.</param>
-        /// <param name="User">User.</param>
-        public ChatMessage(string Body = null, string Id = null, string To = null, string From = null, string Utc = null, string Chat = null, string Message = null, string Type = null, ChatMessageUser User = null)
+        /// <param name="BodyType">Type of the message body (v2 chats only).</param>
+        /// <param name="User">The user information for the sender (if available).</param>
+        public ChatMessage(string Body = null, string Id = null, string To = null, string From = null, string Utc = null, string Chat = null, string Message = null, string Type = null, BodyTypeEnum? BodyType = null, ChatMessageUser User = null)
         {
             this.Body = Body;
             this.Id = Id;
@@ -88,6 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Chat = Chat;
             this.Message = Message;
             this.Type = Type;
+            this.BodyType = BodyType;
             this.User = User;
             
         }
@@ -95,8 +167,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Body
+        /// The message body
         /// </summary>
+        /// <value>The message body</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public string Body { get; set; }
         
@@ -111,16 +184,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets To
+        /// The message recipient
         /// </summary>
+        /// <value>The message recipient</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public string To { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets From
+        /// The message sender
         /// </summary>
+        /// <value>The message sender</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public string From { get; set; }
         
@@ -135,16 +210,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Chat
+        /// The interaction id (if available)
         /// </summary>
+        /// <value>The interaction id (if available)</value>
         [DataMember(Name="chat", EmitDefaultValue=false)]
         public string Chat { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Message
+        /// The message id
         /// </summary>
+        /// <value>The message id</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
         
@@ -158,9 +235,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
-        /// Gets or Sets User
+        /// The user information for the sender (if available)
         /// </summary>
+        /// <value>The user information for the sender (if available)</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public ChatMessageUser User { get; set; }
         
@@ -182,6 +262,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Chat: ").Append(Chat).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  BodyType: ").Append(BodyType).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -260,6 +341,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
+                    this.BodyType == other.BodyType ||
+                    this.BodyType != null &&
+                    this.BodyType.Equals(other.BodyType)
+                ) &&
+                (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
@@ -301,6 +387,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
+                if (this.BodyType != null)
+                    hash = hash * 59 + this.BodyType.GetHashCode();
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();

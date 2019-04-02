@@ -7,6 +7,9 @@ title: WfmAgentScheduleUpdateTopicWfmScheduleShift
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **WeekDate** | **string** |  | [optional] |
+| **WeekScheduleId** | **string** |  | [optional] |
+| **Id** | **string** |  | [optional] |
 | **StartDate** | **DateTime?** |  | [optional] |
 | **LengthInMinutes** | **int?** |  | [optional] |
 | **Activities** | [**List&lt;WfmAgentScheduleUpdateTopicWfmScheduleActivity&gt;**](WfmAgentScheduleUpdateTopicWfmScheduleActivity.html) |  | [optional] |

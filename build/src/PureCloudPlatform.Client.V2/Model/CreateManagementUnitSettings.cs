@@ -40,6 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateManagementUnitSettings" /> class.
@@ -48,12 +53,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShortTermForecasting">Short term forecasting settings for this management unit.</param>
         /// <param name="TimeOff">Time off request settings for this management unit.</param>
         /// <param name="Scheduling">Scheduling settings for this management unit.</param>
-        public CreateManagementUnitSettings(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffRequestSettings TimeOff = null, SchedulingSettings Scheduling = null)
+        /// <param name="ShiftTrading">Shift trade settings for this management unit.</param>
+        public CreateManagementUnitSettings(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffRequestSettings TimeOff = null, SchedulingSettings Scheduling = null, ShiftTradeSettings ShiftTrading = null)
         {
             this.Adherence = Adherence;
             this.ShortTermForecasting = ShortTermForecasting;
             this.TimeOff = TimeOff;
             this.Scheduling = Scheduling;
+            this.ShiftTrading = ShiftTrading;
             
         }
         
@@ -94,6 +101,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public SchedulingSettings Scheduling { get; set; }
         
         
+        
+        /// <summary>
+        /// Shift trade settings for this management unit
+        /// </summary>
+        /// <value>Shift trade settings for this management unit</value>
+        [DataMember(Name="shiftTrading", EmitDefaultValue=false)]
+        public ShiftTradeSettings ShiftTrading { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -107,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ShortTermForecasting: ").Append(ShortTermForecasting).Append("\n");
             sb.Append("  TimeOff: ").Append(TimeOff).Append("\n");
             sb.Append("  Scheduling: ").Append(Scheduling).Append("\n");
+            sb.Append("  ShiftTrading: ").Append(ShiftTrading).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -162,6 +179,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Scheduling == other.Scheduling ||
                     this.Scheduling != null &&
                     this.Scheduling.Equals(other.Scheduling)
+                ) &&
+                (
+                    this.ShiftTrading == other.ShiftTrading ||
+                    this.ShiftTrading != null &&
+                    this.ShiftTrading.Equals(other.ShiftTrading)
                 );
         }
 
@@ -188,6 +210,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Scheduling != null)
                     hash = hash * 59 + this.Scheduling.GetHashCode();
+                
+                if (this.ShiftTrading != null)
+                    hash = hash * 59 + this.ShiftTrading.GetHashCode();
                 
                 return hash;
             }

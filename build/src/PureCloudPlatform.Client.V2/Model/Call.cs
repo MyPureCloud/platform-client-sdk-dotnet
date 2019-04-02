@@ -349,6 +349,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -424,6 +427,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Call" /> class.
@@ -442,6 +447,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="StartHoldTime">The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DocumentId">If call is an outbound fax of a document from content management, then this is the id in content management..</param>
+        /// <param name="StartAlertingTime">The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectReasons">List of reasons that this call was disconnected. This will be set once the call disconnects..</param>
@@ -452,7 +458,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
         /// <param name="Self">Address and name data for a call endpoint..</param>
         /// <param name="Other">Address and name data for a call endpoint..</param>
-        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null)
+        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null)
         {
             this.State = State;
             this.Id = Id;
@@ -468,6 +474,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DisconnectType = DisconnectType;
             this.StartHoldTime = StartHoldTime;
             this.DocumentId = DocumentId;
+            this.StartAlertingTime = StartAlertingTime;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.DisconnectReasons = DisconnectReasons;
@@ -577,6 +584,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>If call is an outbound fax of a document from content management, then this is the id in content management.</value>
         [DataMember(Name="documentId", EmitDefaultValue=false)]
         public string DocumentId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="startAlertingTime", EmitDefaultValue=false)]
+        public DateTime? StartAlertingTime { get; set; }
         
         
         
@@ -692,6 +708,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
+            sb.Append("  StartAlertingTime: ").Append(StartAlertingTime).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
@@ -809,6 +826,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DocumentId.Equals(other.DocumentId)
                 ) &&
                 (
+                    this.StartAlertingTime == other.StartAlertingTime ||
+                    this.StartAlertingTime != null &&
+                    this.StartAlertingTime.Equals(other.StartAlertingTime)
+                ) &&
+                (
                     this.ConnectedTime == other.ConnectedTime ||
                     this.ConnectedTime != null &&
                     this.ConnectedTime.Equals(other.ConnectedTime)
@@ -913,6 +935,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DocumentId != null)
                     hash = hash * 59 + this.DocumentId.GetHashCode();
+                
+                if (this.StartAlertingTime != null)
+                    hash = hash * 59 + this.StartAlertingTime.GetHashCode();
                 
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();

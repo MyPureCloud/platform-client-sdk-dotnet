@@ -240,6 +240,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -290,6 +293,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationChat" /> class.
@@ -303,13 +308,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Direction">The direction of the chat.</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="StartHoldTime">The timestamp the chat was placed on hold in the cloud clock if the chat is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="StartAlertingTime">The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Provider">The source provider for the email..</param>
         /// <param name="ScriptId">The UUID of the script to use..</param>
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
         /// <param name="JourneyContext">A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context)..</param>
-        public ConversationChat(StateEnum? State = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null, JourneyContext JourneyContext = null)
+        public ConversationChat(StateEnum? State = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null, JourneyContext JourneyContext = null)
         {
             this.State = State;
             this.Id = Id;
@@ -320,6 +326,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Direction = Direction;
             this.DisconnectType = DisconnectType;
             this.StartHoldTime = StartHoldTime;
+            this.StartAlertingTime = StartAlertingTime;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.Provider = Provider;
@@ -388,6 +395,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The timestamp the chat was placed on hold in the cloud clock if the chat is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="startAlertingTime", EmitDefaultValue=false)]
+        public DateTime? StartAlertingTime { get; set; }
         
         
         
@@ -462,6 +478,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
+            sb.Append("  StartAlertingTime: ").Append(StartAlertingTime).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
@@ -550,6 +567,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StartHoldTime.Equals(other.StartHoldTime)
                 ) &&
                 (
+                    this.StartAlertingTime == other.StartAlertingTime ||
+                    this.StartAlertingTime != null &&
+                    this.StartAlertingTime.Equals(other.StartAlertingTime)
+                ) &&
+                (
                     this.ConnectedTime == other.ConnectedTime ||
                     this.ConnectedTime != null &&
                     this.ConnectedTime.Equals(other.ConnectedTime)
@@ -619,6 +641,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
+                
+                if (this.StartAlertingTime != null)
+                    hash = hash * 59 + this.StartAlertingTime.GetHashCode();
                 
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();

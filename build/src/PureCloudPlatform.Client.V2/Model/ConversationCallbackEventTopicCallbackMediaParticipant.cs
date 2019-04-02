@@ -394,6 +394,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -475,6 +478,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationCallbackEventTopicCallbackMediaParticipant" /> class.
@@ -508,6 +513,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Peer">Peer.</param>
         /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
         /// <param name="FlaggedReason">FlaggedReason.</param>
+        /// <param name="JourneyContext">JourneyContext.</param>
         /// <param name="OutboundPreview">OutboundPreview.</param>
         /// <param name="Voicemail">Voicemail.</param>
         /// <param name="CallbackNumbers">CallbackNumbers.</param>
@@ -516,7 +522,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
         /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
-        public ConversationCallbackEventTopicCallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationCallbackEventTopicUriReference User = null, ConversationCallbackEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, ConversationCallbackEventTopicErrorBody ErrorInfo = null, ConversationCallbackEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationCallbackEventTopicUriReference ExternalContact = null, ConversationCallbackEventTopicUriReference ExternalOrganization = null, ConversationCallbackEventTopicWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationCallbackEventTopicDialerPreview OutboundPreview = null, ConversationCallbackEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
+        public ConversationCallbackEventTopicCallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationCallbackEventTopicUriReference User = null, ConversationCallbackEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, ConversationCallbackEventTopicErrorBody ErrorInfo = null, ConversationCallbackEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationCallbackEventTopicUriReference ExternalContact = null, ConversationCallbackEventTopicUriReference ExternalOrganization = null, ConversationCallbackEventTopicWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationCallbackEventTopicJourneyContext JourneyContext = null, ConversationCallbackEventTopicDialerPreview OutboundPreview = null, ConversationCallbackEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -547,6 +553,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Peer = Peer;
             this.ScreenRecordingState = ScreenRecordingState;
             this.FlaggedReason = FlaggedReason;
+            this.JourneyContext = JourneyContext;
             this.OutboundPreview = OutboundPreview;
             this.Voicemail = Voicemail;
             this.CallbackNumbers = CallbackNumbers;
@@ -769,6 +776,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets JourneyContext
+        /// </summary>
+        [DataMember(Name="journeyContext", EmitDefaultValue=false)]
+        public ConversationCallbackEventTopicJourneyContext JourneyContext { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets OutboundPreview
         /// </summary>
         [DataMember(Name="outboundPreview", EmitDefaultValue=false)]
@@ -869,6 +884,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
+            sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  OutboundPreview: ").Append(OutboundPreview).Append("\n");
             sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
@@ -1059,6 +1075,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlaggedReason.Equals(other.FlaggedReason)
                 ) &&
                 (
+                    this.JourneyContext == other.JourneyContext ||
+                    this.JourneyContext != null &&
+                    this.JourneyContext.Equals(other.JourneyContext)
+                ) &&
+                (
                     this.OutboundPreview == other.OutboundPreview ||
                     this.OutboundPreview != null &&
                     this.OutboundPreview.Equals(other.OutboundPreview)
@@ -1198,6 +1219,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FlaggedReason != null)
                     hash = hash * 59 + this.FlaggedReason.GetHashCode();
+                
+                if (this.JourneyContext != null)
+                    hash = hash * 59 + this.JourneyContext.GetHashCode();
                 
                 if (this.OutboundPreview != null)
                     hash = hash * 59 + this.OutboundPreview.GetHashCode();

@@ -80,6 +80,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundRoute" /> class.
@@ -100,7 +110,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FromEmail">The sender email to use for outgoing replies. (required).</param>
         /// <param name="Flow">The flow to use for processing the email..</param>
         /// <param name="ReplyEmailAddress">The route to use for email replies..</param>
-        public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null, UriReference Flow = null, QueueEmailAddress ReplyEmailAddress = null)
+        /// <param name="AutoBcc">The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute..</param>
+        /// <param name="SpamFlow">The flow to use for processing inbound emails that have been marked as spam..</param>
+        public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null, UriReference Flow = null, QueueEmailAddress ReplyEmailAddress = null, List<EmailAddress> AutoBcc = null, UriReference SpamFlow = null)
         {
             this.Name = Name;
             this.Pattern = Pattern;
@@ -112,6 +124,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FromEmail = FromEmail;
             this.Flow = Flow;
             this.ReplyEmailAddress = ReplyEmailAddress;
+            this.AutoBcc = AutoBcc;
+            this.SpamFlow = SpamFlow;
             
         }
         
@@ -216,6 +230,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute.
+        /// </summary>
+        /// <value>The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute.</value>
+        [DataMember(Name="autoBcc", EmitDefaultValue=false)]
+        public List<EmailAddress> AutoBcc { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The flow to use for processing inbound emails that have been marked as spam.
+        /// </summary>
+        /// <value>The flow to use for processing inbound emails that have been marked as spam.</value>
+        [DataMember(Name="spamFlow", EmitDefaultValue=false)]
+        public UriReference SpamFlow { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -243,6 +275,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FromEmail: ").Append(FromEmail).Append("\n");
             sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  ReplyEmailAddress: ").Append(ReplyEmailAddress).Append("\n");
+            sb.Append("  AutoBcc: ").Append(AutoBcc).Append("\n");
+            sb.Append("  SpamFlow: ").Append(SpamFlow).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -336,6 +370,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ReplyEmailAddress.Equals(other.ReplyEmailAddress)
                 ) &&
                 (
+                    this.AutoBcc == other.AutoBcc ||
+                    this.AutoBcc != null &&
+                    this.AutoBcc.SequenceEqual(other.AutoBcc)
+                ) &&
+                (
+                    this.SpamFlow == other.SpamFlow ||
+                    this.SpamFlow != null &&
+                    this.SpamFlow.Equals(other.SpamFlow)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -386,6 +430,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ReplyEmailAddress != null)
                     hash = hash * 59 + this.ReplyEmailAddress.GetHashCode();
+                
+                if (this.AutoBcc != null)
+                    hash = hash * 59 + this.AutoBcc.GetHashCode();
+                
+                if (this.SpamFlow != null)
+                    hash = hash * 59 + this.SpamFlow.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

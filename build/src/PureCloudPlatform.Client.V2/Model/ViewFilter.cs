@@ -453,6 +453,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets FlowOutcomeValues
         /// </summary>
@@ -898,6 +901,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewFilter" /> class.
@@ -947,6 +952,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurveyPromoterScore">The survey promoter score used to filter the view.</param>
         /// <param name="SurveyFormContextIds">The list of survey form context ids used to filter the view.</param>
         /// <param name="ConversationIds">The list of conversation ids used to filter the view.</param>
+        /// <param name="SipCallIds">The list of SIP call ids used to filter the view.</param>
         /// <param name="IsEnded">Indicates filtering for ended.</param>
         /// <param name="IsSurveyed">Indicates filtering for survey.</param>
         /// <param name="SurveyScores">The list of survey score ranges used to filter the view.</param>
@@ -972,7 +978,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HasJourneyCustomerId">Indicates filtering for journey customer id.</param>
         /// <param name="HasJourneyActionMapId">Indicates filtering for Journey action map id.</param>
         /// <param name="HasJourneyVisitId">Indicates filtering for Journey visit id.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> StatusList = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null)
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> StatusList = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -1019,6 +1025,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SurveyPromoterScore = SurveyPromoterScore;
             this.SurveyFormContextIds = SurveyFormContextIds;
             this.ConversationIds = ConversationIds;
+            this.SipCallIds = SipCallIds;
             this.IsEnded = IsEnded;
             this.IsSurveyed = IsSurveyed;
             this.SurveyScores = SurveyScores;
@@ -1434,6 +1441,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The list of SIP call ids used to filter the view
+        /// </summary>
+        /// <value>The list of SIP call ids used to filter the view</value>
+        [DataMember(Name="sipCallIds", EmitDefaultValue=false)]
+        public List<string> SipCallIds { get; set; }
+        
+        
+        
+        /// <summary>
         /// Indicates filtering for ended
         /// </summary>
         /// <value>Indicates filtering for ended</value>
@@ -1711,6 +1727,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SurveyPromoterScore: ").Append(SurveyPromoterScore).Append("\n");
             sb.Append("  SurveyFormContextIds: ").Append(SurveyFormContextIds).Append("\n");
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
+            sb.Append("  SipCallIds: ").Append(SipCallIds).Append("\n");
             sb.Append("  IsEnded: ").Append(IsEnded).Append("\n");
             sb.Append("  IsSurveyed: ").Append(IsSurveyed).Append("\n");
             sb.Append("  SurveyScores: ").Append(SurveyScores).Append("\n");
@@ -1998,6 +2015,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationIds.SequenceEqual(other.ConversationIds)
                 ) &&
                 (
+                    this.SipCallIds == other.SipCallIds ||
+                    this.SipCallIds != null &&
+                    this.SipCallIds.SequenceEqual(other.SipCallIds)
+                ) &&
+                (
                     this.IsEnded == other.IsEnded ||
                     this.IsEnded != null &&
                     this.IsEnded.Equals(other.IsEnded)
@@ -2270,6 +2292,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ConversationIds != null)
                     hash = hash * 59 + this.ConversationIds.GetHashCode();
+                
+                if (this.SipCallIds != null)
+                    hash = hash * 59 + this.SipCallIds.GetHashCode();
                 
                 if (this.IsEnded != null)
                     hash = hash * 59 + this.IsEnded.GetHashCode();

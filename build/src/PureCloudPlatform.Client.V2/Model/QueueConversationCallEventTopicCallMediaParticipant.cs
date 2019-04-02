@@ -362,6 +362,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
@@ -508,6 +511,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
@@ -562,6 +567,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Peer">Peer.</param>
         /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
         /// <param name="FlaggedReason">FlaggedReason.</param>
+        /// <param name="JourneyContext">JourneyContext.</param>
         /// <param name="Muted">Muted.</param>
         /// <param name="Confined">Confined.</param>
         /// <param name="Recording">Recording.</param>
@@ -573,7 +579,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
         /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
         /// <param name="FaxStatus">FaxStatus.</param>
-        public QueueConversationCallEventTopicCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCallEventTopicUriReference User = null, QueueConversationCallEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, QueueConversationCallEventTopicErrorBody ErrorInfo = null, QueueConversationCallEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationCallEventTopicUriReference ExternalContact = null, QueueConversationCallEventTopicUriReference ExternalOrganization = null, QueueConversationCallEventTopicWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationCallEventTopicUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, QueueConversationCallEventTopicFaxStatus FaxStatus = null)
+        public QueueConversationCallEventTopicCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCallEventTopicUriReference User = null, QueueConversationCallEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, QueueConversationCallEventTopicErrorBody ErrorInfo = null, QueueConversationCallEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationCallEventTopicUriReference ExternalContact = null, QueueConversationCallEventTopicUriReference ExternalOrganization = null, QueueConversationCallEventTopicWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCallEventTopicJourneyContext JourneyContext = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationCallEventTopicUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, QueueConversationCallEventTopicFaxStatus FaxStatus = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -604,6 +610,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Peer = Peer;
             this.ScreenRecordingState = ScreenRecordingState;
             this.FlaggedReason = FlaggedReason;
+            this.JourneyContext = JourneyContext;
             this.Muted = Muted;
             this.Confined = Confined;
             this.Recording = Recording;
@@ -829,6 +836,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets JourneyContext
+        /// </summary>
+        [DataMember(Name="journeyContext", EmitDefaultValue=false)]
+        public QueueConversationCallEventTopicJourneyContext JourneyContext { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Muted
         /// </summary>
         [DataMember(Name="muted", EmitDefaultValue=false)]
@@ -947,6 +962,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
+            sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  Muted: ").Append(Muted).Append("\n");
             sb.Append("  Confined: ").Append(Confined).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
@@ -1140,6 +1156,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlaggedReason.Equals(other.FlaggedReason)
                 ) &&
                 (
+                    this.JourneyContext == other.JourneyContext ||
+                    this.JourneyContext != null &&
+                    this.JourneyContext.Equals(other.JourneyContext)
+                ) &&
+                (
                     this.Muted == other.Muted ||
                     this.Muted != null &&
                     this.Muted.Equals(other.Muted)
@@ -1294,6 +1315,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FlaggedReason != null)
                     hash = hash * 59 + this.FlaggedReason.GetHashCode();
+                
+                if (this.JourneyContext != null)
+                    hash = hash * 59 + this.JourneyContext.GetHashCode();
                 
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();

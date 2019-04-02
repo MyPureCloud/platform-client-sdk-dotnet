@@ -349,6 +349,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Groupid,
             
             /// <summary>
+            /// Enum Protocolcallid for "protocolCallId"
+            /// </summary>
+            [EnumMember(Value = "protocolCallId")]
+            Protocolcallid,
+            
+            /// <summary>
             /// Enum Roomid for "roomId"
             /// </summary>
             [EnumMember(Value = "roomId")]

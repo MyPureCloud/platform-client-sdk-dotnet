@@ -18,6 +18,7 @@ title: ConversationEventTopicChat
 | **StartHoldTime** | **DateTime?** |  | [optional] |
 | **ConnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectedTime** | **DateTime?** |  | [optional] |
+| **JourneyContext** | [**ConversationEventTopicJourneyContext**](ConversationEventTopicJourneyContext.html) |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

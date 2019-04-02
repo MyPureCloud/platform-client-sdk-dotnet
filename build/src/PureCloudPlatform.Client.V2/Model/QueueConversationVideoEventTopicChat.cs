@@ -231,6 +231,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -266,6 +269,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationVideoEventTopicChat" /> class.
@@ -281,8 +286,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartHoldTime">StartHoldTime.</param>
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
+        /// <param name="JourneyContext">JourneyContext.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationVideoEventTopicChat(StateEnum? State = null, string Id = null, string Provider = null, string ScriptId = null, string PeerId = null, string RoomId = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public QueueConversationVideoEventTopicChat(StateEnum? State = null, string Id = null, string Provider = null, string ScriptId = null, string PeerId = null, string RoomId = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicJourneyContext JourneyContext = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -295,6 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.StartHoldTime = StartHoldTime;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
+            this.JourneyContext = JourneyContext;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -378,6 +385,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets JourneyContext
+        /// </summary>
+        [DataMember(Name="journeyContext", EmitDefaultValue=false)]
+        public QueueConversationVideoEventTopicJourneyContext JourneyContext { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -404,6 +419,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
+            sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -497,6 +513,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisconnectedTime.Equals(other.DisconnectedTime)
                 ) &&
                 (
+                    this.JourneyContext == other.JourneyContext ||
+                    this.JourneyContext != null &&
+                    this.JourneyContext.Equals(other.JourneyContext)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -547,6 +568,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
+                
+                if (this.JourneyContext != null)
+                    hash = hash * 59 + this.JourneyContext.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

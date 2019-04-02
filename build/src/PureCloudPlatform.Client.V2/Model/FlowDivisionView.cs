@@ -140,7 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The flow name (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Type">Type.</param>
-        public FlowDivisionView(string Id = null, string Name = null, Division Division = null, TypeEnum? Type = null)
+        public FlowDivisionView(string Id = null, string Name = null, WritableDivision Division = null, TypeEnum? Type = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -174,7 +174,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public WritableDivision Division { get; set; }
         
         
         

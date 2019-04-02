@@ -35,20 +35,65 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmAgentScheduleUpdateTopicWfmScheduleShift" /> class.
         /// </summary>
+        /// <param name="WeekDate">WeekDate.</param>
+        /// <param name="WeekScheduleId">WeekScheduleId.</param>
+        /// <param name="Id">Id.</param>
         /// <param name="StartDate">StartDate.</param>
         /// <param name="LengthInMinutes">LengthInMinutes.</param>
         /// <param name="Activities">Activities.</param>
-        public WfmAgentScheduleUpdateTopicWfmScheduleShift(DateTime? StartDate = null, int? LengthInMinutes = null, List<WfmAgentScheduleUpdateTopicWfmScheduleActivity> Activities = null)
+        public WfmAgentScheduleUpdateTopicWfmScheduleShift(string WeekDate = null, string WeekScheduleId = null, string Id = null, DateTime? StartDate = null, int? LengthInMinutes = null, List<WfmAgentScheduleUpdateTopicWfmScheduleActivity> Activities = null)
         {
+            this.WeekDate = WeekDate;
+            this.WeekScheduleId = WeekScheduleId;
+            this.Id = Id;
             this.StartDate = StartDate;
             this.LengthInMinutes = LengthInMinutes;
             this.Activities = Activities;
             
         }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets WeekDate
+        /// </summary>
+        [DataMember(Name="weekDate", EmitDefaultValue=false)]
+        public string WeekDate { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets WeekScheduleId
+        /// </summary>
+        [DataMember(Name="weekScheduleId", EmitDefaultValue=false)]
+        public string WeekScheduleId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
         
         
         
@@ -84,6 +129,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class WfmAgentScheduleUpdateTopicWfmScheduleShift {\n");
             
+            sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
+            sb.Append("  WeekScheduleId: ").Append(WeekScheduleId).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
             sb.Append("  Activities: ").Append(Activities).Append("\n");
@@ -124,6 +172,21 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.WeekDate == other.WeekDate ||
+                    this.WeekDate != null &&
+                    this.WeekDate.Equals(other.WeekDate)
+                ) &&
+                (
+                    this.WeekScheduleId == other.WeekScheduleId ||
+                    this.WeekScheduleId != null &&
+                    this.WeekScheduleId.Equals(other.WeekScheduleId)
+                ) &&
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.StartDate == other.StartDate ||
                     this.StartDate != null &&
                     this.StartDate.Equals(other.StartDate)
@@ -151,6 +214,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.WeekDate != null)
+                    hash = hash * 59 + this.WeekDate.GetHashCode();
+                
+                if (this.WeekScheduleId != null)
+                    hash = hash * 59 + this.WeekScheduleId.GetHashCode();
+                
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();

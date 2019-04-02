@@ -36,6 +36,7 @@ title: QueueConversationChatEventTopicChatMediaParticipant
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
 | **FlaggedReason** | **string** |  | [optional] |
+| **JourneyContext** | [**QueueConversationChatEventTopicJourneyContext**](QueueConversationChatEventTopicJourneyContext.html) |  | [optional] |
 | **RoomId** | **string** |  | [optional] |
 {: class="table table-striped"}
 

@@ -21,6 +21,11 @@ title: HistoryListing
 | **System** | **bool?** |  | [optional] |
 | **Started** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Completed** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **Entities** | [**List&lt;HistoryEntry&gt;**](HistoryEntry.html) |  | [optional] |
+| **Total** | **long?** |  | [optional] |
+| **PageSize** | **int?** |  | [optional] |
+| **PageNumber** | **int?** |  | [optional] |
+| **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
 

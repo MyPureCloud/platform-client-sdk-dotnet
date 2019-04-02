@@ -41,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="JourneyAction" /> class.
         /// </summary>
         /// <param name="Id">The ID of an action from the Journey System (an action is spawned from an actionMap) (required).</param>
-        /// <param name="ActionMap">Details about the action map from the Journey System which triggered this action.</param>
+        /// <param name="ActionMap">Details about the action map from the Journey System which triggered this action (required).</param>
         public JourneyAction(string Id = null, JourneyActionMap ActionMap = null)
         {
             this.Id = Id;

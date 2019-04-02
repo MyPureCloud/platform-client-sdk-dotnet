@@ -357,7 +357,7 @@ namespace Example
 
 <a name="getanalyticsconversationsdetails"></a>
 
-## [**AnalyticsConversation**](AnalyticsConversation.html) GetAnalyticsConversationsDetails (List<string> id = null)
+## [**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html) GetAnalyticsConversationsDetails (List<string> id = null)
 
 
 
@@ -392,7 +392,7 @@ namespace Example
             try
             { 
                 // Gets multiple conversations by id
-                AnalyticsConversation result = apiInstance.GetAnalyticsConversationsDetails(id);
+                AnalyticsConversationMultiGetResponse result = apiInstance.GetAnalyticsConversationsDetails(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -414,7 +414,7 @@ namespace Example
 
 ### Return type
 
-[**AnalyticsConversation**](AnalyticsConversation.html)
+[**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html)
 
 <a name="getconversation"></a>
 

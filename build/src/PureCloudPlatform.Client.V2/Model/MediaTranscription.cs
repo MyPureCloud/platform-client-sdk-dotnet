@@ -41,7 +41,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Voci for "VOCI"
             /// </summary>
             [EnumMember(Value = "VOCI")]
-            Voci
+            Voci,
+            
+            /// <summary>
+            /// Enum Calljourney for "CALLJOURNEY"
+            /// </summary>
+            [EnumMember(Value = "CALLJOURNEY")]
+            Calljourney
         }
         
         

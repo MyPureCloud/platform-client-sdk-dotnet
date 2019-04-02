@@ -507,11 +507,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
+        
+        
+        
+        
         
         
         
@@ -525,11 +535,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Metric">Metric.</param>
         /// <param name="Qualifier">Qualifier.</param>
         /// <param name="Stats">Stats.</param>
-        public ObservationMetricData(MetricEnum? Metric = null, string Qualifier = null, StatisticalSummary Stats = null)
+        /// <param name="Truncated">Flag for a truncated list of observations. If truncated, the first half of the list of observations will contain the oldest observations and the second half the newest observations..</param>
+        /// <param name="Observations">List of observations sorted by timestamp in ascending order. This list may be truncated..</param>
+        public ObservationMetricData(MetricEnum? Metric = null, string Qualifier = null, StatisticalSummary Stats = null, bool? Truncated = null, List<ObservationValue> Observations = null)
         {
             this.Metric = Metric;
             this.Qualifier = Qualifier;
             this.Stats = Stats;
+            this.Truncated = Truncated;
+            this.Observations = Observations;
             
         }
         
@@ -552,6 +566,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public StatisticalSummary Stats { get; set; }
         
         
+        
+        /// <summary>
+        /// Flag for a truncated list of observations. If truncated, the first half of the list of observations will contain the oldest observations and the second half the newest observations.
+        /// </summary>
+        /// <value>Flag for a truncated list of observations. If truncated, the first half of the list of observations will contain the oldest observations and the second half the newest observations.</value>
+        [DataMember(Name="truncated", EmitDefaultValue=false)]
+        public bool? Truncated { get; set; }
+        
+        
+        
+        /// <summary>
+        /// List of observations sorted by timestamp in ascending order. This list may be truncated.
+        /// </summary>
+        /// <value>List of observations sorted by timestamp in ascending order. This list may be truncated.</value>
+        [DataMember(Name="observations", EmitDefaultValue=false)]
+        public List<ObservationValue> Observations { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -564,6 +596,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  Qualifier: ").Append(Qualifier).Append("\n");
             sb.Append("  Stats: ").Append(Stats).Append("\n");
+            sb.Append("  Truncated: ").Append(Truncated).Append("\n");
+            sb.Append("  Observations: ").Append(Observations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -614,6 +648,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Stats == other.Stats ||
                     this.Stats != null &&
                     this.Stats.Equals(other.Stats)
+                ) &&
+                (
+                    this.Truncated == other.Truncated ||
+                    this.Truncated != null &&
+                    this.Truncated.Equals(other.Truncated)
+                ) &&
+                (
+                    this.Observations == other.Observations ||
+                    this.Observations != null &&
+                    this.Observations.SequenceEqual(other.Observations)
                 );
         }
 
@@ -637,6 +681,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Stats != null)
                     hash = hash * 59 + this.Stats.GetHashCode();
+                
+                if (this.Truncated != null)
+                    hash = hash * 59 + this.Truncated.GetHashCode();
+                
+                if (this.Observations != null)
+                    hash = hash * 59 + this.Observations.GetHashCode();
                 
                 return hash;
             }

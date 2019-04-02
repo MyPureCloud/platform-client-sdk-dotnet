@@ -209,6 +209,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<UserScheduleAdherence>> GetWorkforcemanagementAdherenceWithHttpInfo (List<string> userId);
         
         /// <summary>
+        /// Get status of the modeling job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the modeling job</param>
+        /// <returns>ModelingStatusResponse</returns>
+        ModelingStatusResponse GetWorkforcemanagementAdhocmodelingjob (string jobId);
+
+        /// <summary>
+        /// Get status of the modeling job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the modeling job</param>
+        /// <returns>ApiResponse of ModelingStatusResponse</returns>
+        ApiResponse<ModelingStatusResponse> GetWorkforcemanagementAdhocmodelingjobWithHttpInfo (string jobId);
+        
+        /// <summary>
         /// Get management unit
         /// </summary>
         /// <remarks>
@@ -301,6 +323,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The agent id</param>
         /// <returns>ApiResponse of WfmAgent</returns>
         ApiResponse<WfmAgent> GetWorkforcemanagementManagementunitAgentWithHttpInfo (string managementUnitId, string agentId);
+        
+        /// <summary>
+        /// Gets all the shift trades for a given agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <returns>ShiftTradeListResponse</returns>
+        ShiftTradeListResponse GetWorkforcemanagementManagementunitAgentShifttrades (string managementUnitId, string agentId);
+
+        /// <summary>
+        /// Gets all the shift trades for a given agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <returns>ApiResponse of ShiftTradeListResponse</returns>
+        ApiResponse<ShiftTradeListResponse> GetWorkforcemanagementManagementunitAgentShifttradesWithHttpInfo (string managementUnitId, string agentId);
         
         /// <summary>
         /// Get intraday queues for the given date
@@ -465,6 +511,50 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ManagementUnitSettings> GetWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId);
         
         /// <summary>
+        /// Gets a summary of all shift trades in the matched state
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>ShiftTradeMatchesSummaryResponse</returns>
+        ShiftTradeMatchesSummaryResponse GetWorkforcemanagementManagementunitShifttradesMatched (string muId);
+
+        /// <summary>
+        /// Gets a summary of all shift trades in the matched state
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>ApiResponse of ShiftTradeMatchesSummaryResponse</returns>
+        ApiResponse<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo (string muId);
+        
+        /// <summary>
+        /// Gets list of users available for whom you can send direct shift trade requests
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>WfmUserEntityListing</returns>
+        WfmUserEntityListing GetWorkforcemanagementManagementunitShifttradesUsers (string muId);
+
+        /// <summary>
+        /// Gets list of users available for whom you can send direct shift trade requests
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>ApiResponse of WfmUserEntityListing</returns>
+        ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo (string muId);
+        
+        /// <summary>
         /// Get a time off request
         /// </summary>
         /// <remarks>
@@ -619,6 +709,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WeekScheduleListResponse> GetWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo (string managementUnitId, string weekId);
         
         /// <summary>
+        /// Gets all the shift trades for a given week
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <returns>WeekShiftTradeListResponse</returns>
+        WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null);
+
+        /// <summary>
+        /// Gets all the shift trades for a given week
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <returns>ApiResponse of WeekShiftTradeListResponse</returns>
+        ApiResponse<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null);
+        
+        /// <summary>
         /// Get the final result of a short term forecast calculation with modifications applied
         /// </summary>
         /// <remarks>
@@ -771,6 +887,68 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ManagementUnitListing> GetWorkforcemanagementManagementunitsDivisionviewsWithHttpInfo (List<string> divisionId = null);
         
         /// <summary>
+        /// Get a list of notifications for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>NotificationsResponse</returns>
+        NotificationsResponse GetWorkforcemanagementNotifications ();
+
+        /// <summary>
+        /// Get a list of notifications for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of NotificationsResponse</returns>
+        ApiResponse<NotificationsResponse> GetWorkforcemanagementNotificationsWithHttpInfo ();
+        
+        /// <summary>
+        /// Get status of the scheduling job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the scheduling job</param>
+        /// <returns>SchedulingStatusResponse</returns>
+        SchedulingStatusResponse GetWorkforcemanagementSchedulingjob (string jobId);
+
+        /// <summary>
+        /// Get status of the scheduling job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the scheduling job</param>
+        /// <returns>ApiResponse of SchedulingStatusResponse</returns>
+        ApiResponse<SchedulingStatusResponse> GetWorkforcemanagementSchedulingjobWithHttpInfo (string jobId);
+        
+        /// <summary>
+        /// Gets all of my shift trades
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ShiftTradeListResponse</returns>
+        ShiftTradeListResponse GetWorkforcemanagementShifttrades ();
+
+        /// <summary>
+        /// Gets all of my shift trades
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ShiftTradeListResponse</returns>
+        ApiResponse<ShiftTradeListResponse> GetWorkforcemanagementShifttradesWithHttpInfo ();
+        
+        /// <summary>
         /// Get a time off request for the current user
         /// </summary>
         /// <remarks>
@@ -839,6 +1017,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ActivityCode</returns>
         ApiResponse<ActivityCode> PatchWorkforcemanagementManagementunitActivitycodeWithHttpInfo (string muId, string acId, UpdateActivityCodeRequest body = null);
+        
+        /// <summary>
+        /// Update agent details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <param name="body">The request body</param>
+        /// <returns></returns>
+        void PatchWorkforcemanagementManagementunitAgent (string managementUnitId, string agentId, UpdateAgentRequest body);
+
+        /// <summary>
+        /// Update agent details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <param name="body">The request body</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchWorkforcemanagementManagementunitAgentWithHttpInfo (string managementUnitId, string agentId, UpdateAgentRequest body);
         
         /// <summary>
         /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
@@ -1383,6 +1587,114 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<PartialUploadResponse> PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadWithHttpInfo (string managementUnitId, string weekId, UserSchedulesPartialUploadRequest body = null);
         
         /// <summary>
+        /// Matches a shift trade. This route can only be called by the receiving agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>MatchShiftTradeResponse</returns>
+        MatchShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId);
+
+        /// <summary>
+        /// Matches a shift trade. This route can only be called by the receiving agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>ApiResponse of MatchShiftTradeResponse</returns>
+        ApiResponse<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId);
+        
+        /// <summary>
+        /// Updates a shift trade. This route can only be called by the initiating agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>ShiftTradeResponse</returns>
+        ShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeUpdate (string managementUnitId, DateTime? weekDateId, UpdateShiftTradeRequest body, string tradeId);
+
+        /// <summary>
+        /// Updates a shift trade. This route can only be called by the initiating agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>ApiResponse of ShiftTradeResponse</returns>
+        ApiResponse<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeUpdateWithHttpInfo (string managementUnitId, DateTime? weekDateId, UpdateShiftTradeRequest body, string tradeId);
+        
+        /// <summary>
+        /// Adds a shift trade
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ShiftTradeResponse</returns>
+        ShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body);
+
+        /// <summary>
+        /// Adds a shift trade
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ShiftTradeResponse</returns>
+        ApiResponse<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body);
+        
+        /// <summary>
+        /// Searches for potential shift trade matches for the current agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>SearchShiftTradesResponse</returns>
+        SearchShiftTradesResponse PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body);
+
+        /// <summary>
+        /// Searches for potential shift trade matches for the current agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of SearchShiftTradesResponse</returns>
+        ApiResponse<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body);
+        
+        /// <summary>
         /// Copy a short term forecast
         /// </summary>
         /// <remarks>
@@ -1567,6 +1879,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ManagementUnit> PostWorkforcemanagementManagementunitsWithHttpInfo (CreateManagementUnitApiRequest body = null);
         
         /// <summary>
+        /// Mark a list of notifications as read or unread
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>UpdateNotificationsResponse</returns>
+        UpdateNotificationsResponse PostWorkforcemanagementNotificationsUpdate (UpdateNotificationsRequest body = null);
+
+        /// <summary>
+        /// Mark a list of notifications as read or unread
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of UpdateNotificationsResponse</returns>
+        ApiResponse<UpdateNotificationsResponse> PostWorkforcemanagementNotificationsUpdateWithHttpInfo (UpdateNotificationsRequest body = null);
+        
+        /// <summary>
         /// Get published schedule for the current user
         /// </summary>
         /// <remarks>
@@ -1609,6 +1943,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
         ApiResponse<TimeOffRequestResponse> PostWorkforcemanagementTimeoffrequestsWithHttpInfo (CreateAgentTimeOffRequest body = null);
+        
+        /// <summary>
+        /// Updates a shift trade state
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
+        /// <returns>ShiftTradeResponse</returns>
+        ShiftTradeResponse PutWorkforcemanagementManagementunitWeekShifttradeState (string managementUnitId, DateTime? weekDateId, string tradeId, UpdateShiftTradeStateRequest body);
+
+        /// <summary>
+        /// Updates a shift trade state
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ShiftTradeResponse</returns>
+        ApiResponse<ShiftTradeResponse> PutWorkforcemanagementManagementunitWeekShifttradeStateWithHttpInfo (string managementUnitId, DateTime? weekDateId, string tradeId, UpdateShiftTradeStateRequest body);
         
         #endregion Synchronous Operations
         
@@ -1807,6 +2169,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<UserScheduleAdherence>>> GetWorkforcemanagementAdherenceAsyncWithHttpInfo (List<string> userId);
         
         /// <summary>
+        /// Get status of the modeling job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the modeling job</param>
+        /// <returns>Task of ModelingStatusResponse</returns>
+        System.Threading.Tasks.Task<ModelingStatusResponse> GetWorkforcemanagementAdhocmodelingjobAsync (string jobId);
+
+        /// <summary>
+        /// Get status of the modeling job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the modeling job</param>
+        /// <returns>Task of ApiResponse (ModelingStatusResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelingStatusResponse>> GetWorkforcemanagementAdhocmodelingjobAsyncWithHttpInfo (string jobId);
+        
+        /// <summary>
         /// Get management unit
         /// </summary>
         /// <remarks>
@@ -1899,6 +2283,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The agent id</param>
         /// <returns>Task of ApiResponse (WfmAgent)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmAgent>> GetWorkforcemanagementManagementunitAgentAsyncWithHttpInfo (string managementUnitId, string agentId);
+        
+        /// <summary>
+        /// Gets all the shift trades for a given agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <returns>Task of ShiftTradeListResponse</returns>
+        System.Threading.Tasks.Task<ShiftTradeListResponse> GetWorkforcemanagementManagementunitAgentShifttradesAsync (string managementUnitId, string agentId);
+
+        /// <summary>
+        /// Gets all the shift trades for a given agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <returns>Task of ApiResponse (ShiftTradeListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementManagementunitAgentShifttradesAsyncWithHttpInfo (string managementUnitId, string agentId);
         
         /// <summary>
         /// Get intraday queues for the given date
@@ -2063,6 +2471,50 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ManagementUnitSettings>> GetWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId);
         
         /// <summary>
+        /// Gets a summary of all shift trades in the matched state
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of ShiftTradeMatchesSummaryResponse</returns>
+        System.Threading.Tasks.Task<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedAsync (string muId);
+
+        /// <summary>
+        /// Gets a summary of all shift trades in the matched state
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of ApiResponse (ShiftTradeMatchesSummaryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ShiftTradeMatchesSummaryResponse>> GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo (string muId);
+        
+        /// <summary>
+        /// Gets list of users available for whom you can send direct shift trade requests
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of WfmUserEntityListing</returns>
+        System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersAsync (string muId);
+
+        /// <summary>
+        /// Gets list of users available for whom you can send direct shift trade requests
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo (string muId);
+        
+        /// <summary>
         /// Get a time off request
         /// </summary>
         /// <remarks>
@@ -2217,6 +2669,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WeekScheduleListResponse>> GetWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo (string managementUnitId, string weekId);
         
         /// <summary>
+        /// Gets all the shift trades for a given week
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <returns>Task of WeekShiftTradeListResponse</returns>
+        System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null);
+
+        /// <summary>
+        /// Gets all the shift trades for a given week
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <returns>Task of ApiResponse (WeekShiftTradeListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null);
+        
+        /// <summary>
         /// Get the final result of a short term forecast calculation with modifications applied
         /// </summary>
         /// <remarks>
@@ -2369,6 +2847,68 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsDivisionviewsAsyncWithHttpInfo (List<string> divisionId = null);
         
         /// <summary>
+        /// Get a list of notifications for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of NotificationsResponse</returns>
+        System.Threading.Tasks.Task<NotificationsResponse> GetWorkforcemanagementNotificationsAsync ();
+
+        /// <summary>
+        /// Get a list of notifications for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (NotificationsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<NotificationsResponse>> GetWorkforcemanagementNotificationsAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Get status of the scheduling job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the scheduling job</param>
+        /// <returns>Task of SchedulingStatusResponse</returns>
+        System.Threading.Tasks.Task<SchedulingStatusResponse> GetWorkforcemanagementSchedulingjobAsync (string jobId);
+
+        /// <summary>
+        /// Get status of the scheduling job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the scheduling job</param>
+        /// <returns>Task of ApiResponse (SchedulingStatusResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SchedulingStatusResponse>> GetWorkforcemanagementSchedulingjobAsyncWithHttpInfo (string jobId);
+        
+        /// <summary>
+        /// Gets all of my shift trades
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ShiftTradeListResponse</returns>
+        System.Threading.Tasks.Task<ShiftTradeListResponse> GetWorkforcemanagementShifttradesAsync ();
+
+        /// <summary>
+        /// Gets all of my shift trades
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ShiftTradeListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementShifttradesAsyncWithHttpInfo ();
+        
+        /// <summary>
         /// Get a time off request for the current user
         /// </summary>
         /// <remarks>
@@ -2437,6 +2977,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ActivityCode)</returns>
         System.Threading.Tasks.Task<ApiResponse<ActivityCode>> PatchWorkforcemanagementManagementunitActivitycodeAsyncWithHttpInfo (string muId, string acId, UpdateActivityCodeRequest body = null);
+        
+        /// <summary>
+        /// Update agent details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <param name="body">The request body</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitAgentAsync (string managementUnitId, string agentId, UpdateAgentRequest body);
+
+        /// <summary>
+        /// Update agent details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <param name="body">The request body</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitAgentAsyncWithHttpInfo (string managementUnitId, string agentId, UpdateAgentRequest body);
         
         /// <summary>
         /// Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
@@ -2981,6 +3547,114 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<PartialUploadResponse>> PostWorkforcemanagementManagementunitWeekSchedulesPartialuploadAsyncWithHttpInfo (string managementUnitId, string weekId, UserSchedulesPartialUploadRequest body = null);
         
         /// <summary>
+        /// Matches a shift trade. This route can only be called by the receiving agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>Task of MatchShiftTradeResponse</returns>
+        System.Threading.Tasks.Task<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsync (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId);
+
+        /// <summary>
+        /// Matches a shift trade. This route can only be called by the receiving agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>Task of ApiResponse (MatchShiftTradeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MatchShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId);
+        
+        /// <summary>
+        /// Updates a shift trade. This route can only be called by the initiating agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>Task of ShiftTradeResponse</returns>
+        System.Threading.Tasks.Task<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeUpdateAsync (string managementUnitId, DateTime? weekDateId, UpdateShiftTradeRequest body, string tradeId);
+
+        /// <summary>
+        /// Updates a shift trade. This route can only be called by the initiating agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeUpdateAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, UpdateShiftTradeRequest body, string tradeId);
+        
+        /// <summary>
+        /// Adds a shift trade
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ShiftTradeResponse</returns>
+        System.Threading.Tasks.Task<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body);
+
+        /// <summary>
+        /// Adds a shift trade
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body);
+        
+        /// <summary>
+        /// Searches for potential shift trade matches for the current agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of SearchShiftTradesResponse</returns>
+        System.Threading.Tasks.Task<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsync (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body);
+
+        /// <summary>
+        /// Searches for potential shift trade matches for the current agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (SearchShiftTradesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SearchShiftTradesResponse>> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body);
+        
+        /// <summary>
         /// Copy a short term forecast
         /// </summary>
         /// <remarks>
@@ -3165,6 +3839,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PostWorkforcemanagementManagementunitsAsyncWithHttpInfo (CreateManagementUnitApiRequest body = null);
         
         /// <summary>
+        /// Mark a list of notifications as read or unread
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of UpdateNotificationsResponse</returns>
+        System.Threading.Tasks.Task<UpdateNotificationsResponse> PostWorkforcemanagementNotificationsUpdateAsync (UpdateNotificationsRequest body = null);
+
+        /// <summary>
+        /// Mark a list of notifications as read or unread
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (UpdateNotificationsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UpdateNotificationsResponse>> PostWorkforcemanagementNotificationsUpdateAsyncWithHttpInfo (UpdateNotificationsRequest body = null);
+        
+        /// <summary>
         /// Get published schedule for the current user
         /// </summary>
         /// <remarks>
@@ -3207,6 +3903,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PostWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo (CreateAgentTimeOffRequest body = null);
+        
+        /// <summary>
+        /// Updates a shift trade state
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ShiftTradeResponse</returns>
+        System.Threading.Tasks.Task<ShiftTradeResponse> PutWorkforcemanagementManagementunitWeekShifttradeStateAsync (string managementUnitId, DateTime? weekDateId, string tradeId, UpdateShiftTradeStateRequest body);
+
+        /// <summary>
+        /// Updates a shift trade state
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PutWorkforcemanagementManagementunitWeekShifttradeStateAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, string tradeId, UpdateShiftTradeStateRequest body);
         
         #endregion Asynchronous Operations
         
@@ -4935,6 +5659,199 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get status of the modeling job 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the modeling job</param>
+        /// <returns>ModelingStatusResponse</returns>
+        public ModelingStatusResponse GetWorkforcemanagementAdhocmodelingjob (string jobId)
+        {
+             ApiResponse<ModelingStatusResponse> localVarResponse = GetWorkforcemanagementAdhocmodelingjobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get status of the modeling job 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the modeling job</param>
+        /// <returns>ApiResponse of ModelingStatusResponse</returns>
+        public ApiResponse< ModelingStatusResponse > GetWorkforcemanagementAdhocmodelingjobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAdhocmodelingjob");
+
+            var localVarPath = "/api/v2/workforcemanagement/adhocmodelingjobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAdhocmodelingjob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAdhocmodelingjob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ModelingStatusResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ModelingStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelingStatusResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get status of the modeling job 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the modeling job</param>
+        /// <returns>Task of ModelingStatusResponse</returns>
+        public async System.Threading.Tasks.Task<ModelingStatusResponse> GetWorkforcemanagementAdhocmodelingjobAsync (string jobId)
+        {
+             ApiResponse<ModelingStatusResponse> localVarResponse = await GetWorkforcemanagementAdhocmodelingjobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get status of the modeling job 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the modeling job</param>
+        /// <returns>Task of ApiResponse (ModelingStatusResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ModelingStatusResponse>> GetWorkforcemanagementAdhocmodelingjobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAdhocmodelingjob");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/adhocmodelingjobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAdhocmodelingjob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAdhocmodelingjob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ModelingStatusResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ModelingStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelingStatusResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5732,6 +6649,212 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WfmAgent>(localVarStatusCode,
                 localVarHeaders,
                 (WfmAgent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmAgent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Gets all the shift trades for a given agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <returns>ShiftTradeListResponse</returns>
+        public ShiftTradeListResponse GetWorkforcemanagementManagementunitAgentShifttrades (string managementUnitId, string agentId)
+        {
+             ApiResponse<ShiftTradeListResponse> localVarResponse = GetWorkforcemanagementManagementunitAgentShifttradesWithHttpInfo(managementUnitId, agentId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets all the shift trades for a given agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <returns>ApiResponse of ShiftTradeListResponse</returns>
+        public ApiResponse< ShiftTradeListResponse > GetWorkforcemanagementManagementunitAgentShifttradesWithHttpInfo (string managementUnitId, string agentId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitAgentShifttrades");
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitAgentShifttrades");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitAgentShifttrades: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitAgentShifttrades: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ShiftTradeListResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ShiftTradeListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShiftTradeListResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Gets all the shift trades for a given agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <returns>Task of ShiftTradeListResponse</returns>
+        public async System.Threading.Tasks.Task<ShiftTradeListResponse> GetWorkforcemanagementManagementunitAgentShifttradesAsync (string managementUnitId, string agentId)
+        {
+             ApiResponse<ShiftTradeListResponse> localVarResponse = await GetWorkforcemanagementManagementunitAgentShifttradesAsyncWithHttpInfo(managementUnitId, agentId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets all the shift trades for a given agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <returns>Task of ApiResponse (ShiftTradeListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementManagementunitAgentShifttradesAsyncWithHttpInfo (string managementUnitId, string agentId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitAgentShifttrades");
+            
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitAgentShifttrades");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitAgentShifttrades: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitAgentShifttrades: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ShiftTradeListResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ShiftTradeListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShiftTradeListResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7142,6 +8265,392 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Gets a summary of all shift trades in the matched state 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>ShiftTradeMatchesSummaryResponse</returns>
+        public ShiftTradeMatchesSummaryResponse GetWorkforcemanagementManagementunitShifttradesMatched (string muId)
+        {
+             ApiResponse<ShiftTradeMatchesSummaryResponse> localVarResponse = GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo(muId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a summary of all shift trades in the matched state 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>ApiResponse of ShiftTradeMatchesSummaryResponse</returns>
+        public ApiResponse< ShiftTradeMatchesSummaryResponse > GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo (string muId)
+        { 
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesMatched");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/shifttrades/matched";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitShifttradesMatched: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitShifttradesMatched: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ShiftTradeMatchesSummaryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ShiftTradeMatchesSummaryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShiftTradeMatchesSummaryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Gets a summary of all shift trades in the matched state 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of ShiftTradeMatchesSummaryResponse</returns>
+        public async System.Threading.Tasks.Task<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedAsync (string muId)
+        {
+             ApiResponse<ShiftTradeMatchesSummaryResponse> localVarResponse = await GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo(muId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a summary of all shift trades in the matched state 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of ApiResponse (ShiftTradeMatchesSummaryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeMatchesSummaryResponse>> GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo (string muId)
+        { 
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesMatched");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/shifttrades/matched";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitShifttradesMatched: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitShifttradesMatched: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ShiftTradeMatchesSummaryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ShiftTradeMatchesSummaryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShiftTradeMatchesSummaryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Gets list of users available for whom you can send direct shift trade requests 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>WfmUserEntityListing</returns>
+        public WfmUserEntityListing GetWorkforcemanagementManagementunitShifttradesUsers (string muId)
+        {
+             ApiResponse<WfmUserEntityListing> localVarResponse = GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo(muId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets list of users available for whom you can send direct shift trade requests 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>ApiResponse of WfmUserEntityListing</returns>
+        public ApiResponse< WfmUserEntityListing > GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo (string muId)
+        { 
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesUsers");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/shifttrades/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitShifttradesUsers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitShifttradesUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmUserEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (WfmUserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmUserEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Gets list of users available for whom you can send direct shift trade requests 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of WfmUserEntityListing</returns>
+        public async System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersAsync (string muId)
+        {
+             ApiResponse<WfmUserEntityListing> localVarResponse = await GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo(muId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets list of users available for whom you can send direct shift trade requests 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo (string muId)
+        { 
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesUsers");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/shifttrades/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitShifttradesUsers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitShifttradesUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmUserEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (WfmUserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmUserEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get a time off request 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8422,6 +9931,218 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Gets all the shift trades for a given week 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <returns>WeekShiftTradeListResponse</returns>
+        public WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null)
+        {
+             ApiResponse<WeekShiftTradeListResponse> localVarResponse = GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo(managementUnitId, weekDateId, evaluateMatches);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets all the shift trades for a given week 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <returns>ApiResponse of WeekShiftTradeListResponse</returns>
+        public ApiResponse< WeekShiftTradeListResponse > GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWeekShifttrades");
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWeekShifttrades");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+
+            // Query params
+            if (evaluateMatches != null) localVarQueryParams.Add(new Tuple<string, string>("evaluateMatches", this.Configuration.ApiClient.ParameterToString(evaluateMatches)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWeekShifttrades: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWeekShifttrades: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WeekShiftTradeListResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WeekShiftTradeListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WeekShiftTradeListResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Gets all the shift trades for a given week 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <returns>Task of WeekShiftTradeListResponse</returns>
+        public async System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null)
+        {
+             ApiResponse<WeekShiftTradeListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo(managementUnitId, weekDateId, evaluateMatches);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets all the shift trades for a given week 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <returns>Task of ApiResponse (WeekShiftTradeListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWeekShifttrades");
+            
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWeekShifttrades");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+
+            // Query params
+            if (evaluateMatches != null) localVarQueryParams.Add(new Tuple<string, string>("evaluateMatches", this.Configuration.ApiClient.ParameterToString(evaluateMatches)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWeekShifttrades: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitWeekShifttrades: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WeekShiftTradeListResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WeekShiftTradeListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WeekShiftTradeListResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get the final result of a short term forecast calculation with modifications applied 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9654,6 +11375,559 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get a list of notifications for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>NotificationsResponse</returns>
+        public NotificationsResponse GetWorkforcemanagementNotifications ()
+        {
+             ApiResponse<NotificationsResponse> localVarResponse = GetWorkforcemanagementNotificationsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of notifications for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of NotificationsResponse</returns>
+        public ApiResponse< NotificationsResponse > GetWorkforcemanagementNotificationsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/notifications";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementNotifications: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementNotifications: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<NotificationsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (NotificationsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotificationsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a list of notifications for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of NotificationsResponse</returns>
+        public async System.Threading.Tasks.Task<NotificationsResponse> GetWorkforcemanagementNotificationsAsync ()
+        {
+             ApiResponse<NotificationsResponse> localVarResponse = await GetWorkforcemanagementNotificationsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of notifications for the current user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (NotificationsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<NotificationsResponse>> GetWorkforcemanagementNotificationsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/notifications";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementNotifications: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementNotifications: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<NotificationsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (NotificationsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotificationsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get status of the scheduling job 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the scheduling job</param>
+        /// <returns>SchedulingStatusResponse</returns>
+        public SchedulingStatusResponse GetWorkforcemanagementSchedulingjob (string jobId)
+        {
+             ApiResponse<SchedulingStatusResponse> localVarResponse = GetWorkforcemanagementSchedulingjobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get status of the scheduling job 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the scheduling job</param>
+        /// <returns>ApiResponse of SchedulingStatusResponse</returns>
+        public ApiResponse< SchedulingStatusResponse > GetWorkforcemanagementSchedulingjobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementSchedulingjob");
+
+            var localVarPath = "/api/v2/workforcemanagement/schedulingjobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSchedulingjob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSchedulingjob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SchedulingStatusResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SchedulingStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SchedulingStatusResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get status of the scheduling job 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the scheduling job</param>
+        /// <returns>Task of SchedulingStatusResponse</returns>
+        public async System.Threading.Tasks.Task<SchedulingStatusResponse> GetWorkforcemanagementSchedulingjobAsync (string jobId)
+        {
+             ApiResponse<SchedulingStatusResponse> localVarResponse = await GetWorkforcemanagementSchedulingjobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get status of the scheduling job 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the scheduling job</param>
+        /// <returns>Task of ApiResponse (SchedulingStatusResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SchedulingStatusResponse>> GetWorkforcemanagementSchedulingjobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementSchedulingjob");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/schedulingjobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSchedulingjob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSchedulingjob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SchedulingStatusResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SchedulingStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SchedulingStatusResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Gets all of my shift trades 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ShiftTradeListResponse</returns>
+        public ShiftTradeListResponse GetWorkforcemanagementShifttrades ()
+        {
+             ApiResponse<ShiftTradeListResponse> localVarResponse = GetWorkforcemanagementShifttradesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets all of my shift trades 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ShiftTradeListResponse</returns>
+        public ApiResponse< ShiftTradeListResponse > GetWorkforcemanagementShifttradesWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/shifttrades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementShifttrades: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementShifttrades: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ShiftTradeListResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ShiftTradeListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShiftTradeListResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Gets all of my shift trades 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ShiftTradeListResponse</returns>
+        public async System.Threading.Tasks.Task<ShiftTradeListResponse> GetWorkforcemanagementShifttradesAsync ()
+        {
+             ApiResponse<ShiftTradeListResponse> localVarResponse = await GetWorkforcemanagementShifttradesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets all of my shift trades 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ShiftTradeListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementShifttradesAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/shifttrades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementShifttrades: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementShifttrades: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ShiftTradeListResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ShiftTradeListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShiftTradeListResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get a time off request for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10246,6 +12520,231 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ActivityCode>(localVarStatusCode,
                 localVarHeaders,
                 (ActivityCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityCode)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update agent details 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <param name="body">The request body</param>
+        /// <returns></returns>
+        public void PatchWorkforcemanagementManagementunitAgent (string managementUnitId, string agentId, UpdateAgentRequest body)
+        {
+             PatchWorkforcemanagementManagementunitAgentWithHttpInfo(managementUnitId, agentId, body);
+        }
+
+        /// <summary>
+        /// Update agent details 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <param name="body">The request body</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchWorkforcemanagementManagementunitAgentWithHttpInfo (string managementUnitId, string agentId, UpdateAgentRequest body)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitAgent");
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitAgent");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitAgent");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitAgent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitAgent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update agent details 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <param name="body">The request body</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitAgentAsync (string managementUnitId, string agentId, UpdateAgentRequest body)
+        {
+             await PatchWorkforcemanagementManagementunitAgentAsyncWithHttpInfo(managementUnitId, agentId, body);
+
+        }
+
+        /// <summary>
+        /// Update agent details 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="agentId">The agent id</param>
+        /// <param name="body">The request body</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitAgentAsyncWithHttpInfo (string managementUnitId, string agentId, UpdateAgentRequest body)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitAgent");
+            
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitAgent");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitAgent");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitAgent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitAgent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -14805,6 +17304,940 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Matches a shift trade. This route can only be called by the receiving agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>MatchShiftTradeResponse</returns>
+        public MatchShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId)
+        {
+             ApiResponse<MatchShiftTradeResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo(managementUnitId, weekDateId, body, tradeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Matches a shift trade. This route can only be called by the receiving agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>ApiResponse of MatchShiftTradeResponse</returns>
+        public ApiResponse< MatchShiftTradeResponse > PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
+            // verify the required parameter 'tradeId' is set
+            if (tradeId == null)
+                throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+            if (tradeId != null) localVarPathParams.Add("tradeId", this.Configuration.ApiClient.ParameterToString(tradeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttradeMatch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttradeMatch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MatchShiftTradeResponse>(localVarStatusCode,
+                localVarHeaders,
+                (MatchShiftTradeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MatchShiftTradeResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Matches a shift trade. This route can only be called by the receiving agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>Task of MatchShiftTradeResponse</returns>
+        public async System.Threading.Tasks.Task<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsync (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId)
+        {
+             ApiResponse<MatchShiftTradeResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo(managementUnitId, weekDateId, body, tradeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Matches a shift trade. This route can only be called by the receiving agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>Task of ApiResponse (MatchShiftTradeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MatchShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
+            
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
+            
+            // verify the required parameter 'tradeId' is set
+            if (tradeId == null)
+                throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+            if (tradeId != null) localVarPathParams.Add("tradeId", this.Configuration.ApiClient.ParameterToString(tradeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttradeMatch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttradeMatch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MatchShiftTradeResponse>(localVarStatusCode,
+                localVarHeaders,
+                (MatchShiftTradeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MatchShiftTradeResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Updates a shift trade. This route can only be called by the initiating agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>ShiftTradeResponse</returns>
+        public ShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeUpdate (string managementUnitId, DateTime? weekDateId, UpdateShiftTradeRequest body, string tradeId)
+        {
+             ApiResponse<ShiftTradeResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradeUpdateWithHttpInfo(managementUnitId, weekDateId, body, tradeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Updates a shift trade. This route can only be called by the initiating agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>ApiResponse of ShiftTradeResponse</returns>
+        public ApiResponse< ShiftTradeResponse > PostWorkforcemanagementManagementunitWeekShifttradeUpdateWithHttpInfo (string managementUnitId, DateTime? weekDateId, UpdateShiftTradeRequest body, string tradeId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeUpdate");
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeUpdate");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeUpdate");
+            // verify the required parameter 'tradeId' is set
+            if (tradeId == null)
+                throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeUpdate");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/update";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+            if (tradeId != null) localVarPathParams.Add("tradeId", this.Configuration.ApiClient.ParameterToString(tradeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttradeUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttradeUpdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ShiftTradeResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ShiftTradeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShiftTradeResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Updates a shift trade. This route can only be called by the initiating agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>Task of ShiftTradeResponse</returns>
+        public async System.Threading.Tasks.Task<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeUpdateAsync (string managementUnitId, DateTime? weekDateId, UpdateShiftTradeRequest body, string tradeId)
+        {
+             ApiResponse<ShiftTradeResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradeUpdateAsyncWithHttpInfo(managementUnitId, weekDateId, body, tradeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Updates a shift trade. This route can only be called by the initiating agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeUpdateAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, UpdateShiftTradeRequest body, string tradeId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeUpdate");
+            
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeUpdate");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeUpdate");
+            
+            // verify the required parameter 'tradeId' is set
+            if (tradeId == null)
+                throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeUpdate");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/update";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+            if (tradeId != null) localVarPathParams.Add("tradeId", this.Configuration.ApiClient.ParameterToString(tradeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttradeUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttradeUpdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ShiftTradeResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ShiftTradeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShiftTradeResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Adds a shift trade 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ShiftTradeResponse</returns>
+        public ShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body)
+        {
+             ApiResponse<ShiftTradeResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo(managementUnitId, weekDateId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Adds a shift trade 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ShiftTradeResponse</returns>
+        public ApiResponse< ShiftTradeResponse > PostWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttrades");
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttrades");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttrades");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttrades: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttrades: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ShiftTradeResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ShiftTradeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShiftTradeResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Adds a shift trade 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ShiftTradeResponse</returns>
+        public async System.Threading.Tasks.Task<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body)
+        {
+             ApiResponse<ShiftTradeResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo(managementUnitId, weekDateId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Adds a shift trade 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttrades");
+            
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttrades");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttrades");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttrades: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttrades: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ShiftTradeResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ShiftTradeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShiftTradeResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Searches for potential shift trade matches for the current agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>SearchShiftTradesResponse</returns>
+        public SearchShiftTradesResponse PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body)
+        {
+             ApiResponse<SearchShiftTradesResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo(managementUnitId, weekDateId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Searches for potential shift trade matches for the current agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of SearchShiftTradesResponse</returns>
+        public ApiResponse< SearchShiftTradesResponse > PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradesSearch");
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradesSearch");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradesSearch");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttradesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttradesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SearchShiftTradesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SearchShiftTradesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchShiftTradesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Searches for potential shift trade matches for the current agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of SearchShiftTradesResponse</returns>
+        public async System.Threading.Tasks.Task<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsync (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body)
+        {
+             ApiResponse<SearchShiftTradesResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo(managementUnitId, weekDateId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Searches for potential shift trade matches for the current agent 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (SearchShiftTradesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SearchShiftTradesResponse>> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradesSearch");
+            
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradesSearch");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradesSearch");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttradesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitWeekShifttradesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SearchShiftTradesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SearchShiftTradesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchShiftTradesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Copy a short term forecast 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16365,6 +19798,200 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Mark a list of notifications as read or unread 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>UpdateNotificationsResponse</returns>
+        public UpdateNotificationsResponse PostWorkforcemanagementNotificationsUpdate (UpdateNotificationsRequest body = null)
+        {
+             ApiResponse<UpdateNotificationsResponse> localVarResponse = PostWorkforcemanagementNotificationsUpdateWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Mark a list of notifications as read or unread 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of UpdateNotificationsResponse</returns>
+        public ApiResponse< UpdateNotificationsResponse > PostWorkforcemanagementNotificationsUpdateWithHttpInfo (UpdateNotificationsRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/notifications/update";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementNotificationsUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementNotificationsUpdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UpdateNotificationsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UpdateNotificationsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdateNotificationsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Mark a list of notifications as read or unread 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of UpdateNotificationsResponse</returns>
+        public async System.Threading.Tasks.Task<UpdateNotificationsResponse> PostWorkforcemanagementNotificationsUpdateAsync (UpdateNotificationsRequest body = null)
+        {
+             ApiResponse<UpdateNotificationsResponse> localVarResponse = await PostWorkforcemanagementNotificationsUpdateAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Mark a list of notifications as read or unread 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (UpdateNotificationsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UpdateNotificationsResponse>> PostWorkforcemanagementNotificationsUpdateAsyncWithHttpInfo (UpdateNotificationsRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/notifications/update";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementNotificationsUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementNotificationsUpdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UpdateNotificationsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UpdateNotificationsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdateNotificationsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get published schedule for the current user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16746,6 +20373,246 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TimeOffRequestResponse>(localVarStatusCode,
                 localVarHeaders,
                 (TimeOffRequestResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Updates a shift trade state 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
+        /// <returns>ShiftTradeResponse</returns>
+        public ShiftTradeResponse PutWorkforcemanagementManagementunitWeekShifttradeState (string managementUnitId, DateTime? weekDateId, string tradeId, UpdateShiftTradeStateRequest body)
+        {
+             ApiResponse<ShiftTradeResponse> localVarResponse = PutWorkforcemanagementManagementunitWeekShifttradeStateWithHttpInfo(managementUnitId, weekDateId, tradeId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Updates a shift trade state 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ShiftTradeResponse</returns>
+        public ApiResponse< ShiftTradeResponse > PutWorkforcemanagementManagementunitWeekShifttradeStateWithHttpInfo (string managementUnitId, DateTime? weekDateId, string tradeId, UpdateShiftTradeStateRequest body)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitWeekShifttradeState");
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitWeekShifttradeState");
+            // verify the required parameter 'tradeId' is set
+            if (tradeId == null)
+                throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitWeekShifttradeState");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitWeekShifttradeState");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/state";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+            if (tradeId != null) localVarPathParams.Add("tradeId", this.Configuration.ApiClient.ParameterToString(tradeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutWorkforcemanagementManagementunitWeekShifttradeState: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutWorkforcemanagementManagementunitWeekShifttradeState: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ShiftTradeResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ShiftTradeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShiftTradeResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Updates a shift trade state 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ShiftTradeResponse</returns>
+        public async System.Threading.Tasks.Task<ShiftTradeResponse> PutWorkforcemanagementManagementunitWeekShifttradeStateAsync (string managementUnitId, DateTime? weekDateId, string tradeId, UpdateShiftTradeStateRequest body)
+        {
+             ApiResponse<ShiftTradeResponse> localVarResponse = await PutWorkforcemanagementManagementunitWeekShifttradeStateAsyncWithHttpInfo(managementUnitId, weekDateId, tradeId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Updates a shift trade state 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="tradeId">The ID of the shift trade to update</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PutWorkforcemanagementManagementunitWeekShifttradeStateAsyncWithHttpInfo (string managementUnitId, DateTime? weekDateId, string tradeId, UpdateShiftTradeStateRequest body)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitWeekShifttradeState");
+            
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitWeekShifttradeState");
+            
+            // verify the required parameter 'tradeId' is set
+            if (tradeId == null)
+                throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitWeekShifttradeState");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitWeekShifttradeState");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/state";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+            if (tradeId != null) localVarPathParams.Add("tradeId", this.Configuration.ApiClient.ParameterToString(tradeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutWorkforcemanagementManagementunitWeekShifttradeState: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutWorkforcemanagementManagementunitWeekShifttradeState: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ShiftTradeResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ShiftTradeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShiftTradeResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

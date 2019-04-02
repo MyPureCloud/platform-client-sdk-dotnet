@@ -21,6 +21,8 @@ title: UserScheduleAdherence
 | **Impact** | **string** | The impact of the user&#39;s current adherenceState | [optional] |
 | **TimeOfAdherenceChange** | **DateTime?** | Time when the user entered the current adherenceState in ISO-8601 format | [optional] |
 | **PresenceUpdateTime** | **DateTime?** | Time when presence was last updated.  Used to calculate time in current status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **ActiveQueues** | [**List&lt;QueueReference&gt;**](QueueReference.html) | The list of queues to which this user is joined | [optional] |
+| **ActiveQueuesModifiedTime** | **DateTime?** | Time when the list of active queues for this user was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

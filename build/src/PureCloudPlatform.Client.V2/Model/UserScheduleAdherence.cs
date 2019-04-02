@@ -422,6 +422,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Activity for which the user is scheduled
         /// </summary>
@@ -485,6 +491,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleAdherence" /> class.
@@ -492,11 +502,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="User">The user for whom this status applies.</param>
         /// <param name="ManagementUnit">The management unit to which this user belongs.</param>
-        public UserScheduleAdherence(string Name = null, User User = null, ManagementUnit ManagementUnit = null)
+        /// <param name="ActiveQueues">The list of queues to which this user is joined.</param>
+        public UserScheduleAdherence(string Name = null, User User = null, ManagementUnit ManagementUnit = null, List<QueueReference> ActiveQueues = null)
         {
             this.Name = Name;
             this.User = User;
             this.ManagementUnit = ManagementUnit;
+            this.ActiveQueues = ActiveQueues;
             
         }
         
@@ -586,6 +598,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The list of queues to which this user is joined
+        /// </summary>
+        /// <value>The list of queues to which this user is joined</value>
+        [DataMember(Name="activeQueues", EmitDefaultValue=false)]
+        public List<QueueReference> ActiveQueues { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Time when the list of active queues for this user was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Time when the list of active queues for this user was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="activeQueuesModifiedTime", EmitDefaultValue=false)]
+        public DateTime? ActiveQueuesModifiedTime { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -616,6 +646,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Impact: ").Append(Impact).Append("\n");
             sb.Append("  TimeOfAdherenceChange: ").Append(TimeOfAdherenceChange).Append("\n");
             sb.Append("  PresenceUpdateTime: ").Append(PresenceUpdateTime).Append("\n");
+            sb.Append("  ActiveQueues: ").Append(ActiveQueues).Append("\n");
+            sb.Append("  ActiveQueuesModifiedTime: ").Append(ActiveQueuesModifiedTime).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -724,6 +756,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PresenceUpdateTime.Equals(other.PresenceUpdateTime)
                 ) &&
                 (
+                    this.ActiveQueues == other.ActiveQueues ||
+                    this.ActiveQueues != null &&
+                    this.ActiveQueues.SequenceEqual(other.ActiveQueues)
+                ) &&
+                (
+                    this.ActiveQueuesModifiedTime == other.ActiveQueuesModifiedTime ||
+                    this.ActiveQueuesModifiedTime != null &&
+                    this.ActiveQueuesModifiedTime.Equals(other.ActiveQueuesModifiedTime)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -783,6 +825,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PresenceUpdateTime != null)
                     hash = hash * 59 + this.PresenceUpdateTime.GetHashCode();
+                
+                if (this.ActiveQueues != null)
+                    hash = hash * 59 + this.ActiveQueues.GetHashCode();
+                
+                if (this.ActiveQueuesModifiedTime != null)
+                    hash = hash * 59 + this.ActiveQueuesModifiedTime.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

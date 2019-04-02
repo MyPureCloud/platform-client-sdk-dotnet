@@ -373,6 +373,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -440,6 +443,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationChatEventTopicChatMediaParticipant" /> class.
@@ -473,8 +478,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Peer">Peer.</param>
         /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
         /// <param name="FlaggedReason">FlaggedReason.</param>
+        /// <param name="JourneyContext">JourneyContext.</param>
         /// <param name="RoomId">RoomId.</param>
-        public ConversationChatEventTopicChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationChatEventTopicUriReference User = null, ConversationChatEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, ConversationChatEventTopicErrorBody ErrorInfo = null, ConversationChatEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationChatEventTopicUriReference ExternalContact = null, ConversationChatEventTopicUriReference ExternalOrganization = null, ConversationChatEventTopicWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, string RoomId = null)
+        public ConversationChatEventTopicChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationChatEventTopicUriReference User = null, ConversationChatEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, ConversationChatEventTopicErrorBody ErrorInfo = null, ConversationChatEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationChatEventTopicUriReference ExternalContact = null, ConversationChatEventTopicUriReference ExternalOrganization = null, ConversationChatEventTopicWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationChatEventTopicJourneyContext JourneyContext = null, string RoomId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -505,6 +511,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Peer = Peer;
             this.ScreenRecordingState = ScreenRecordingState;
             this.FlaggedReason = FlaggedReason;
+            this.JourneyContext = JourneyContext;
             this.RoomId = RoomId;
             
         }
@@ -720,6 +727,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets JourneyContext
+        /// </summary>
+        [DataMember(Name="journeyContext", EmitDefaultValue=false)]
+        public ConversationChatEventTopicJourneyContext JourneyContext { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets RoomId
         /// </summary>
         [DataMember(Name="roomId", EmitDefaultValue=false)]
@@ -764,6 +779,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
+            sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -947,6 +963,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlaggedReason.Equals(other.FlaggedReason)
                 ) &&
                 (
+                    this.JourneyContext == other.JourneyContext ||
+                    this.JourneyContext != null &&
+                    this.JourneyContext.Equals(other.JourneyContext)
+                ) &&
+                (
                     this.RoomId == other.RoomId ||
                     this.RoomId != null &&
                     this.RoomId.Equals(other.RoomId)
@@ -1051,6 +1072,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FlaggedReason != null)
                     hash = hash * 59 + this.FlaggedReason.GetHashCode();
+                
+                if (this.JourneyContext != null)
+                    hash = hash * 59 + this.JourneyContext.GetHashCode();
                 
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();

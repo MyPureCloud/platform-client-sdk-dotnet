@@ -9,7 +9,7 @@ title: FlowDivisionView
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The flow identifier | [optional] |
 | **Name** | **string** | The flow name | |
-| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
 | **Type** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

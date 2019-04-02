@@ -18,6 +18,8 @@ title: InboundRoute
 | **FromEmail** | **string** | The sender email to use for outgoing replies. | |
 | **Flow** | [**UriReference**](UriReference.html) | The flow to use for processing the email. | [optional] |
 | **ReplyEmailAddress** | [**QueueEmailAddress**](QueueEmailAddress.html) | The route to use for email replies. | [optional] |
+| **AutoBcc** | [**List&lt;EmailAddress&gt;**](EmailAddress.html) | The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute. | [optional] |
+| **SpamFlow** | [**UriReference**](UriReference.html) | The flow to use for processing inbound emails that have been marked as spam. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

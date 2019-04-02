@@ -120,8 +120,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Comma-separated conversation ids (optional)</param>
-        /// <returns>AnalyticsConversation</returns>
-        AnalyticsConversation GetAnalyticsConversationsDetails (List<string> id = null);
+        /// <returns>AnalyticsConversationMultiGetResponse</returns>
+        AnalyticsConversationMultiGetResponse GetAnalyticsConversationsDetails (List<string> id = null);
 
         /// <summary>
         /// Gets multiple conversations by id
@@ -131,8 +131,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Comma-separated conversation ids (optional)</param>
-        /// <returns>ApiResponse of AnalyticsConversation</returns>
-        ApiResponse<AnalyticsConversation> GetAnalyticsConversationsDetailsWithHttpInfo (List<string> id = null);
+        /// <returns>ApiResponse of AnalyticsConversationMultiGetResponse</returns>
+        ApiResponse<AnalyticsConversationMultiGetResponse> GetAnalyticsConversationsDetailsWithHttpInfo (List<string> id = null);
         
         /// <summary>
         /// Get conversation
@@ -2560,8 +2560,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Comma-separated conversation ids (optional)</param>
-        /// <returns>Task of AnalyticsConversation</returns>
-        System.Threading.Tasks.Task<AnalyticsConversation> GetAnalyticsConversationsDetailsAsync (List<string> id = null);
+        /// <returns>Task of AnalyticsConversationMultiGetResponse</returns>
+        System.Threading.Tasks.Task<AnalyticsConversationMultiGetResponse> GetAnalyticsConversationsDetailsAsync (List<string> id = null);
 
         /// <summary>
         /// Gets multiple conversations by id
@@ -2571,8 +2571,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Comma-separated conversation ids (optional)</param>
-        /// <returns>Task of ApiResponse (AnalyticsConversation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AnalyticsConversation>> GetAnalyticsConversationsDetailsAsyncWithHttpInfo (List<string> id = null);
+        /// <returns>Task of ApiResponse (AnalyticsConversationMultiGetResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationMultiGetResponse>> GetAnalyticsConversationsDetailsAsyncWithHttpInfo (List<string> id = null);
         
         /// <summary>
         /// Get conversation
@@ -5807,10 +5807,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Comma-separated conversation ids (optional)</param>
-        /// <returns>AnalyticsConversation</returns>
-        public AnalyticsConversation GetAnalyticsConversationsDetails (List<string> id = null)
+        /// <returns>AnalyticsConversationMultiGetResponse</returns>
+        public AnalyticsConversationMultiGetResponse GetAnalyticsConversationsDetails (List<string> id = null)
         {
-             ApiResponse<AnalyticsConversation> localVarResponse = GetAnalyticsConversationsDetailsWithHttpInfo(id);
+             ApiResponse<AnalyticsConversationMultiGetResponse> localVarResponse = GetAnalyticsConversationsDetailsWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -5819,8 +5819,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Comma-separated conversation ids (optional)</param>
-        /// <returns>ApiResponse of AnalyticsConversation</returns>
-        public ApiResponse< AnalyticsConversation > GetAnalyticsConversationsDetailsWithHttpInfo (List<string> id = null)
+        /// <returns>ApiResponse of AnalyticsConversationMultiGetResponse</returns>
+        public ApiResponse< AnalyticsConversationMultiGetResponse > GetAnalyticsConversationsDetailsWithHttpInfo (List<string> id = null)
         { 
 
             var localVarPath = "/api/v2/analytics/conversations/details";
@@ -5886,9 +5886,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AnalyticsConversation>(localVarStatusCode,
+            return new ApiResponse<AnalyticsConversationMultiGetResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AnalyticsConversation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversation)),
+                (AnalyticsConversationMultiGetResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversationMultiGetResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5899,10 +5899,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Comma-separated conversation ids (optional)</param>
-        /// <returns>Task of AnalyticsConversation</returns>
-        public async System.Threading.Tasks.Task<AnalyticsConversation> GetAnalyticsConversationsDetailsAsync (List<string> id = null)
+        /// <returns>Task of AnalyticsConversationMultiGetResponse</returns>
+        public async System.Threading.Tasks.Task<AnalyticsConversationMultiGetResponse> GetAnalyticsConversationsDetailsAsync (List<string> id = null)
         {
-             ApiResponse<AnalyticsConversation> localVarResponse = await GetAnalyticsConversationsDetailsAsyncWithHttpInfo(id);
+             ApiResponse<AnalyticsConversationMultiGetResponse> localVarResponse = await GetAnalyticsConversationsDetailsAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5912,8 +5912,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Comma-separated conversation ids (optional)</param>
-        /// <returns>Task of ApiResponse (AnalyticsConversation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsConversation>> GetAnalyticsConversationsDetailsAsyncWithHttpInfo (List<string> id = null)
+        /// <returns>Task of ApiResponse (AnalyticsConversationMultiGetResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationMultiGetResponse>> GetAnalyticsConversationsDetailsAsyncWithHttpInfo (List<string> id = null)
         { 
 
             var localVarPath = "/api/v2/analytics/conversations/details";
@@ -5979,9 +5979,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AnalyticsConversation>(localVarStatusCode,
+            return new ApiResponse<AnalyticsConversationMultiGetResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AnalyticsConversation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversation)),
+                (AnalyticsConversationMultiGetResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversationMultiGetResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

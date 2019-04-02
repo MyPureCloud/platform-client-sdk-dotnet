@@ -7,15 +7,16 @@ title: ChatMessage
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Body** | **string** |  | [optional] |
+| **Body** | **string** | The message body | [optional] |
 | **Id** | **string** |  | [optional] |
-| **To** | **string** |  | [optional] |
-| **From** | **string** |  | [optional] |
+| **To** | **string** | The message recipient | [optional] |
+| **From** | **string** | The message sender | [optional] |
 | **Utc** | **string** |  | [optional] |
-| **Chat** | **string** |  | [optional] |
-| **Message** | **string** |  | [optional] |
+| **Chat** | **string** | The interaction id (if available) | [optional] |
+| **Message** | **string** | The message id | [optional] |
 | **Type** | **string** |  | [optional] |
-| **User** | [**ChatMessageUser**](ChatMessageUser.html) |  | [optional] |
+| **BodyType** | **string** | Type of the message body (v2 chats only) | [optional] |
+| **User** | [**ChatMessageUser**](ChatMessageUser.html) | The user information for the sender (if available) | [optional] |
 {: class="table table-striped"}
 
 

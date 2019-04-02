@@ -21,7 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteWebchatDeployment (string deploymentId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete a WebChat deployment
 
@@ -136,7 +136,7 @@ void (empty response body)
 
 ## [**WebChatDeployment**](WebChatDeployment.html) GetWebchatDeployment (string deploymentId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a WebChat deployment
 
@@ -197,7 +197,7 @@ namespace Example
 
 ## [**WebChatDeploymentEntityListing**](WebChatDeploymentEntityListing.html) GetWebchatDeployments ()
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 List WebChat deployments
 
@@ -309,7 +309,7 @@ This endpoint does require any parameters.
 
 ## [**WebChatDeployment**](WebChatDeployment.html) PostWebchatDeployments (WebChatDeployment body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create WebChat deployment
 
@@ -370,7 +370,7 @@ namespace Example
 
 ## [**WebChatDeployment**](WebChatDeployment.html) PutWebchatDeployment (string deploymentId, WebChatDeployment body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update a WebChat deployment
 

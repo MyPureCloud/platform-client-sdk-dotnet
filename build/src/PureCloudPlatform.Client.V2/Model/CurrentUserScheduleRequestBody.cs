@@ -30,6 +30,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CurrentUserScheduleRequestBody" /> class.
@@ -42,10 +47,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="StartDate">Beginning of the range of schedules to fetch, in ISO-8601 format (required).</param>
         /// <param name="EndDate">End of the range of schedules to fetch, in ISO-8601 format (required).</param>
-        public CurrentUserScheduleRequestBody(DateTime? StartDate = null, DateTime? EndDate = null)
+        /// <param name="LoadFullWeeks">Whether to load the full week&#39;s schedule (for the current user) of any week overlapping the start/end date query parameters, defaults to false.</param>
+        public CurrentUserScheduleRequestBody(DateTime? StartDate = null, DateTime? EndDate = null, bool? LoadFullWeeks = null)
         {
             this.StartDate = StartDate;
             this.EndDate = EndDate;
+            this.LoadFullWeeks = LoadFullWeeks;
             
         }
         
@@ -68,6 +75,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? EndDate { get; set; }
         
         
+        
+        /// <summary>
+        /// Whether to load the full week&#39;s schedule (for the current user) of any week overlapping the start/end date query parameters, defaults to false
+        /// </summary>
+        /// <value>Whether to load the full week&#39;s schedule (for the current user) of any week overlapping the start/end date query parameters, defaults to false</value>
+        [DataMember(Name="loadFullWeeks", EmitDefaultValue=false)]
+        public bool? LoadFullWeeks { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -79,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            sb.Append("  LoadFullWeeks: ").Append(LoadFullWeeks).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,6 +141,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndDate == other.EndDate ||
                     this.EndDate != null &&
                     this.EndDate.Equals(other.EndDate)
+                ) &&
+                (
+                    this.LoadFullWeeks == other.LoadFullWeeks ||
+                    this.LoadFullWeeks != null &&
+                    this.LoadFullWeeks.Equals(other.LoadFullWeeks)
                 );
         }
 
@@ -144,6 +166,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
+                
+                if (this.LoadFullWeeks != null)
+                    hash = hash * 59 + this.LoadFullWeeks.GetHashCode();
                 
                 return hash;
             }

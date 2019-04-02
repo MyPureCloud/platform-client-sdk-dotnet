@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ManagementUnitSettings" /> class.
@@ -59,13 +64,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShortTermForecasting">Short term forecasting settings for this management unit.</param>
         /// <param name="TimeOff">Time off request settings for this management unit.</param>
         /// <param name="Scheduling">Scheduling settings for this management unit.</param>
+        /// <param name="ShiftTrading">Shift trade settings for this management unit.</param>
         /// <param name="Metadata">Version info metadata for the associated management unit (required).</param>
-        public ManagementUnitSettings(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffRequestSettings TimeOff = null, SchedulingSettings Scheduling = null, WfmVersionedEntityMetadata Metadata = null)
+        public ManagementUnitSettings(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffRequestSettings TimeOff = null, SchedulingSettings Scheduling = null, ShiftTradeSettings ShiftTrading = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Adherence = Adherence;
             this.ShortTermForecasting = ShortTermForecasting;
             this.TimeOff = TimeOff;
             this.Scheduling = Scheduling;
+            this.ShiftTrading = ShiftTrading;
             this.Metadata = Metadata;
             
         }
@@ -109,6 +116,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Shift trade settings for this management unit
+        /// </summary>
+        /// <value>Shift trade settings for this management unit</value>
+        [DataMember(Name="shiftTrading", EmitDefaultValue=false)]
+        public ShiftTradeSettings ShiftTrading { get; set; }
+        
+        
+        
+        /// <summary>
         /// Version info metadata for the associated management unit
         /// </summary>
         /// <value>Version info metadata for the associated management unit</value>
@@ -129,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ShortTermForecasting: ").Append(ShortTermForecasting).Append("\n");
             sb.Append("  TimeOff: ").Append(TimeOff).Append("\n");
             sb.Append("  Scheduling: ").Append(Scheduling).Append("\n");
+            sb.Append("  ShiftTrading: ").Append(ShiftTrading).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -187,6 +204,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Scheduling.Equals(other.Scheduling)
                 ) &&
                 (
+                    this.ShiftTrading == other.ShiftTrading ||
+                    this.ShiftTrading != null &&
+                    this.ShiftTrading.Equals(other.ShiftTrading)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -216,6 +238,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Scheduling != null)
                     hash = hash * 59 + this.Scheduling.GetHashCode();
+                
+                if (this.ShiftTrading != null)
+                    hash = hash * 59 + this.ShiftTrading.GetHashCode();
                 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

@@ -9,7 +9,7 @@ title: Flow
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The flow identifier | [optional] |
 | **Name** | **string** | The flow name | |
-| **Division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **Division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **LockedUser** | [**User**](User.html) |  | [optional] |

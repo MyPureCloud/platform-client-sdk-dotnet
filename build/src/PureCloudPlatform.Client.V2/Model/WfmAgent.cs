@@ -70,6 +70,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmAgent" /> class.
@@ -81,8 +86,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WorkPlan">The work plan associated with this agent.</param>
         /// <param name="Schedulable">Whether the agent has the permission to be included in schedule generation.</param>
         /// <param name="TimeZone">The time zone for this agent. Defaults to the time zone of the management unit to which the agent belongs.</param>
+        /// <param name="AcceptDirectShiftTrades">Whether the agent accepts direct shift trade requests.</param>
         /// <param name="Metadata">Metadata for this agent.</param>
-        public WfmAgent(UserReference User = null, List<QueueReference> Queues = null, List<LanguageReference> Languages = null, List<RoutingSkillReference> Skills = null, WorkPlanReference WorkPlan = null, bool? Schedulable = null, WfmTimeZone TimeZone = null, WfmVersionedEntityMetadata Metadata = null)
+        public WfmAgent(UserReference User = null, List<QueueReference> Queues = null, List<LanguageReference> Languages = null, List<RoutingSkillReference> Skills = null, WorkPlanReference WorkPlan = null, bool? Schedulable = null, WfmTimeZone TimeZone = null, bool? AcceptDirectShiftTrades = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.User = User;
             this.Queues = Queues;
@@ -91,6 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WorkPlan = WorkPlan;
             this.Schedulable = Schedulable;
             this.TimeZone = TimeZone;
+            this.AcceptDirectShiftTrades = AcceptDirectShiftTrades;
             this.Metadata = Metadata;
             
         }
@@ -170,6 +177,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Whether the agent accepts direct shift trade requests
+        /// </summary>
+        /// <value>Whether the agent accepts direct shift trade requests</value>
+        [DataMember(Name="acceptDirectShiftTrades", EmitDefaultValue=false)]
+        public bool? AcceptDirectShiftTrades { get; set; }
+        
+        
+        
+        /// <summary>
         /// Metadata for this agent
         /// </summary>
         /// <value>Metadata for this agent</value>
@@ -203,6 +219,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WorkPlan: ").Append(WorkPlan).Append("\n");
             sb.Append("  Schedulable: ").Append(Schedulable).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
+            sb.Append("  AcceptDirectShiftTrades: ").Append(AcceptDirectShiftTrades).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -282,6 +299,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeZone.Equals(other.TimeZone)
                 ) &&
                 (
+                    this.AcceptDirectShiftTrades == other.AcceptDirectShiftTrades ||
+                    this.AcceptDirectShiftTrades != null &&
+                    this.AcceptDirectShiftTrades.Equals(other.AcceptDirectShiftTrades)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -328,6 +350,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
+                
+                if (this.AcceptDirectShiftTrades != null)
+                    hash = hash * 59 + this.AcceptDirectShiftTrades.GetHashCode();
                 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

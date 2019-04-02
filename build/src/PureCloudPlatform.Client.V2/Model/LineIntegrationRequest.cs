@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="LineIntegrationRequest" /> class.
@@ -61,15 +66,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="LineIntegrationRequest" /> class.
         /// </summary>
         /// <param name="Name">The name of the LINE Integration (required).</param>
-        /// <param name="ChannelId">The Channel Id from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id &amp; Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Id is mandatory.</param>
-        /// <param name="ChannelSecret">The Channel Secret from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id &amp; Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Secret is mandatory.</param>
+        /// <param name="ChannelId">The Channel Id from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id &amp; Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Id is mandatory. (NOTE: ChannelId can only be updated if the integration is set to inactive).</param>
+        /// <param name="ChannelSecret">The Channel Secret from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id &amp; Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Secret is mandatory. (NOTE: ChannelSecret can only be updated if the integration is set to inactive).</param>
         /// <param name="SwitcherSecret">The Switcher Secret from LINE messenger. Some line official accounts are switcher functionality enabled. If the LINE account used for this integration is switcher enabled, then switcher secret is a required field. This secret can be found in your create documentation provided by LINE.</param>
-        public LineIntegrationRequest(string Name = null, string ChannelId = null, string ChannelSecret = null, string SwitcherSecret = null)
+        /// <param name="ServiceCode">The Service Code from LINE messenger. Only applicable to LINE Enterprise accounts. This service code can be found in your create documentation provided by LINE.</param>
+        public LineIntegrationRequest(string Name = null, string ChannelId = null, string ChannelSecret = null, string SwitcherSecret = null, string ServiceCode = null)
         {
             this.Name = Name;
             this.ChannelId = ChannelId;
             this.ChannelSecret = ChannelSecret;
             this.SwitcherSecret = SwitcherSecret;
+            this.ServiceCode = ServiceCode;
             
         }
         
@@ -94,18 +101,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The Channel Id from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id &amp; Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Id is mandatory
+        /// The Channel Id from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id &amp; Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Id is mandatory. (NOTE: ChannelId can only be updated if the integration is set to inactive)
         /// </summary>
-        /// <value>The Channel Id from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id &amp; Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Id is mandatory</value>
+        /// <value>The Channel Id from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id &amp; Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Id is mandatory. (NOTE: ChannelId can only be updated if the integration is set to inactive)</value>
         [DataMember(Name="channelId", EmitDefaultValue=false)]
         public string ChannelId { get; set; }
         
         
         
         /// <summary>
-        /// The Channel Secret from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id &amp; Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Secret is mandatory
+        /// The Channel Secret from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id &amp; Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Secret is mandatory. (NOTE: ChannelSecret can only be updated if the integration is set to inactive)
         /// </summary>
-        /// <value>The Channel Secret from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id &amp; Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Secret is mandatory</value>
+        /// <value>The Channel Secret from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id &amp; Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Secret is mandatory. (NOTE: ChannelSecret can only be updated if the integration is set to inactive)</value>
         [DataMember(Name="channelSecret", EmitDefaultValue=false)]
         public string ChannelSecret { get; set; }
         
@@ -117,6 +124,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The Switcher Secret from LINE messenger. Some line official accounts are switcher functionality enabled. If the LINE account used for this integration is switcher enabled, then switcher secret is a required field. This secret can be found in your create documentation provided by LINE</value>
         [DataMember(Name="switcherSecret", EmitDefaultValue=false)]
         public string SwitcherSecret { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The Service Code from LINE messenger. Only applicable to LINE Enterprise accounts. This service code can be found in your create documentation provided by LINE
+        /// </summary>
+        /// <value>The Service Code from LINE messenger. Only applicable to LINE Enterprise accounts. This service code can be found in your create documentation provided by LINE</value>
+        [DataMember(Name="serviceCode", EmitDefaultValue=false)]
+        public string ServiceCode { get; set; }
         
         
         
@@ -142,6 +158,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ChannelId: ").Append(ChannelId).Append("\n");
             sb.Append("  ChannelSecret: ").Append(ChannelSecret).Append("\n");
             sb.Append("  SwitcherSecret: ").Append(SwitcherSecret).Append("\n");
+            sb.Append("  ServiceCode: ").Append(ServiceCode).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -205,6 +222,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SwitcherSecret.Equals(other.SwitcherSecret)
                 ) &&
                 (
+                    this.ServiceCode == other.ServiceCode ||
+                    this.ServiceCode != null &&
+                    this.ServiceCode.Equals(other.ServiceCode)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -237,6 +259,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SwitcherSecret != null)
                     hash = hash * 59 + this.SwitcherSecret.GetHashCode();
+                
+                if (this.ServiceCode != null)
+                    hash = hash * 59 + this.ServiceCode.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

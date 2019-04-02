@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteArchitectIvr**](ArchitectApi.html#deletearchitectivr) | **DELETE** /api/v2/architect/ivrs/{ivrId} | Delete an IVR Config. |
 | [**DeleteArchitectPrompt**](ArchitectApi.html#deletearchitectprompt) | **DELETE** /api/v2/architect/prompts/{promptId} | Delete specified user prompt |
 | [**DeleteArchitectPromptResource**](ArchitectApi.html#deletearchitectpromptresource) | **DELETE** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Delete specified user prompt resource |
+| [**DeleteArchitectPromptResourceAudio**](ArchitectApi.html#deletearchitectpromptresourceaudio) | **DELETE** /api/v2/architect/prompts/{promptId}/resources/{languageCode}/audio | Delete specified user prompt resource audio |
 | [**DeleteArchitectPrompts**](ArchitectApi.html#deletearchitectprompts) | **DELETE** /api/v2/architect/prompts | Batch-delete a list of prompts |
 | [**DeleteArchitectSchedule**](ArchitectApi.html#deletearchitectschedule) | **DELETE** /api/v2/architect/schedules/{scheduleId} | Delete a schedule by id |
 | [**DeleteArchitectSchedulegroup**](ArchitectApi.html#deletearchitectschedulegroup) | **DELETE** /api/v2/architect/schedulegroups/{scheduleGroupId} | Deletes a schedule group by ID |
@@ -55,7 +56,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlows**](ArchitectApi.html#getflows) | **GET** /api/v2/flows | Get a pageable list of flows, filtered by query parameters |
 | [**GetFlowsDatatable**](ArchitectApi.html#getflowsdatatable) | **GET** /api/v2/flows/datatables/{datatableId} | Returns a specific datatable by id |
 | [**GetFlowsDatatableRow**](ArchitectApi.html#getflowsdatatablerow) | **GET** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Returns a specific row for the datatable |
-| [**GetFlowsDatatableRows**](ArchitectApi.html#getflowsdatatablerows) | **GET** /api/v2/flows/datatables/{datatableId}/rows | Returns the rows for the datatable |
+| [**GetFlowsDatatableRows**](ArchitectApi.html#getflowsdatatablerows) | **GET** /api/v2/flows/datatables/{datatableId}/rows | Returns the rows for the datatable with the given id |
 | [**GetFlowsDatatables**](ArchitectApi.html#getflowsdatatables) | **GET** /api/v2/flows/datatables | Retrieve a list of datatables for the org |
 | [**GetFlowsDivisionviews**](ArchitectApi.html#getflowsdivisionviews) | **GET** /api/v2/flows/divisionviews | Get a pageable list of basic flow information objects filterable by query parameters. |
 | [**PostArchitectDependencytrackingBuild**](ArchitectApi.html#postarchitectdependencytrackingbuild) | **POST** /api/v2/architect/dependencytracking/build | Rebuild Dependency Tracking data for an organization |
@@ -76,7 +77,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostFlowsActionsPublish**](ArchitectApi.html#postflowsactionspublish) | **POST** /api/v2/flows/actions/publish | Publish flow |
 | [**PostFlowsActionsRevert**](ArchitectApi.html#postflowsactionsrevert) | **POST** /api/v2/flows/actions/revert | Revert flow |
 | [**PostFlowsActionsUnlock**](ArchitectApi.html#postflowsactionsunlock) | **POST** /api/v2/flows/actions/unlock | Unlock flow |
-| [**PostFlowsDatatableRows**](ArchitectApi.html#postflowsdatatablerows) | **POST** /api/v2/flows/datatables/{datatableId}/rows | Create a new row entry |
+| [**PostFlowsDatatableRows**](ArchitectApi.html#postflowsdatatablerows) | **POST** /api/v2/flows/datatables/{datatableId}/rows | Create a new row entry for the datatable. |
 | [**PostFlowsDatatables**](ArchitectApi.html#postflowsdatatables) | **POST** /api/v2/flows/datatables | Create a new datatable with the specified json-schema definition |
 | [**PutArchitectEmergencygroup**](ArchitectApi.html#putarchitectemergencygroup) | **PUT** /api/v2/architect/emergencygroups/{emergencyGroupId} | Updates a emergency group by ID |
 | [**PutArchitectIvr**](ArchitectApi.html#putarchitectivr) | **PUT** /api/v2/architect/ivrs/{ivrId} | Update an IVR Config. |
@@ -315,6 +316,68 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling ArchitectApi.DeleteArchitectPromptResource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **promptId** | **string**| Prompt ID |  |
+| **languageCode** | **string**| Language |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletearchitectpromptresourceaudio"></a>
+
+## void DeleteArchitectPromptResourceAudio (string promptId, string languageCode)
+
+
+
+Delete specified user prompt resource audio
+
+
+
+Requires ANY permissions: 
+
+* architect:userPrompt:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteArchitectPromptResourceAudioExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ArchitectApi();
+            var promptId = promptId_example;  // string | Prompt ID
+            var languageCode = languageCode_example;  // string | Language
+
+            try
+            { 
+                // Delete specified user prompt resource audio
+                apiInstance.DeleteArchitectPromptResourceAudio(promptId, languageCode);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.DeleteArchitectPromptResourceAudio: " + e.Message );
             }
         }
     }
@@ -706,7 +769,7 @@ namespace Example
 
 deletes a specific datatable by id
 
-deletes an entire datatable (including schema and data) with a given id)
+Deletes an entire datatable (including the schema and data) with a given datatableId
 
 Requires ANY permissions: 
 
@@ -768,7 +831,7 @@ void (empty response body)
 
 Delete a row entry
 
-Deletes a row with a given rowId.
+Deletes a row with a given rowId (the value of the key field).
 
 Requires ANY permissions: 
 
@@ -1950,7 +2013,7 @@ namespace Example
 
 <a name="getarchitectprompts"></a>
 
-## [**PromptEntityListing**](PromptEntityListing.html) GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
+## [**PromptEntityListing**](PromptEntityListing.html) GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -1982,7 +2045,7 @@ namespace Example
             var apiInstance = new ArchitectApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var name = name_example;  // string | Name (optional) 
+            var name = new List<string>(); // List<string> | Name (optional) 
             var description = description_example;  // string | Description (optional) 
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
@@ -2010,7 +2073,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **name** | **string**| Name | [optional]  |
+| **name** | [**List<string>**](string.html)| Name | [optional]  |
 | **description** | **string**| Description | [optional]  |
 | **nameOrDescription** | **string**| Name or description | [optional]  |
 | **sortBy** | **string**| Sort by | [optional] [default to id] |
@@ -3119,7 +3182,7 @@ namespace Example
 
 Returns a specific datatable by id
 
-Given a datableid returns the schema associated with it.
+Given a datatableId returns the datatable object and schema associated with it.
 
 Requires ANY permissions: 
 
@@ -3182,7 +3245,7 @@ namespace Example
 
 Returns a specific row for the datatable
 
-Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
 
 Requires ANY permissions: 
 
@@ -3245,9 +3308,9 @@ namespace Example
 
 
 
-Returns the rows for the datatable
+Returns the rows for the datatable with the given id
 
-Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
 
 Requires ANY permissions: 
 
@@ -3278,7 +3341,7 @@ namespace Example
 
             try
             { 
-                // Returns the rows for the datatable
+                // Returns the rows for the datatable with the given id
                 DataTableRowEntityListing result = apiInstance.GetFlowsDatatableRows(datatableId, pageNumber, pageSize, showbrief);
                 Debug.WriteLine(result);
             }
@@ -3314,7 +3377,7 @@ namespace Example
 
 Retrieve a list of datatables for the org
 
-Returns a metadata list of the datatables associated with this org, including ID, name and description.
+Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
 
 Requires ANY permissions: 
 
@@ -4190,7 +4253,7 @@ namespace Example
 
 <a name="postflowsactionscheckin"></a>
 
-## [**Flow**](Flow.html) PostFlowsActionsCheckin (string flow)
+## [**Operation**](Operation.html) PostFlowsActionsCheckin (string flow)
 
 
 
@@ -4226,7 +4289,7 @@ namespace Example
             try
             { 
                 // Check-in flow
-                Flow result = apiInstance.PostFlowsActionsCheckin(flow);
+                Operation result = apiInstance.PostFlowsActionsCheckin(flow);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4248,7 +4311,7 @@ namespace Example
 
 ### Return type
 
-[**Flow**](Flow.html)
+[**Operation**](Operation.html)
 
 <a name="postflowsactionscheckout"></a>
 
@@ -4564,9 +4627,9 @@ namespace Example
 
 
 
-Create a new row entry
+Create a new row entry for the datatable.
 
-Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized' stream of key -> value pairs {      \"Field1\": \"XYZZY\",      \"Field2\": false,      \"KEY\": \"27272\"  }
 
 Requires ANY permissions: 
 
@@ -4595,7 +4658,7 @@ namespace Example
 
             try
             { 
-                // Create a new row entry
+                // Create a new row entry for the datatable.
                 Dictionary&lt;string, Object&gt; result = apiInstance.PostFlowsDatatableRows(datatableId, dataTableRow);
                 Debug.WriteLine(result);
             }
@@ -4629,7 +4692,7 @@ namespace Example
 
 Create a new datatable with the specified json-schema definition
 
-This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema's title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
 
 Requires ANY permissions: 
 
@@ -5198,7 +5261,7 @@ namespace Example
 
 Updates a specific datatable by id
 
-Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
+Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
 
 Requires ANY permissions: 
 
@@ -5263,7 +5326,7 @@ namespace Example
 
 Update a row entry
 
-Updates a row with the given to the new values.
+Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized' stream of key -> value pairs {     \"Field1\": \"XYZZY\",     \"Field2\": false,     \"KEY\": \"27272\" }
 
 Requires ANY permissions: 
 

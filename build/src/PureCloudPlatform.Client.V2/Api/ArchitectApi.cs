@@ -109,6 +109,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteArchitectPromptResourceWithHttpInfo (string promptId, string languageCode);
         
         /// <summary>
+        /// Delete specified user prompt resource audio
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns></returns>
+        void DeleteArchitectPromptResourceAudio (string promptId, string languageCode);
+
+        /// <summary>
+        /// Delete specified user prompt resource audio
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteArchitectPromptResourceAudioWithHttpInfo (string promptId, string languageCode);
+        
+        /// <summary>
         /// Batch-delete a list of prompts
         /// </summary>
         /// <remarks>
@@ -246,7 +270,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// deletes a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// deletes an entire datatable (including schema and data) with a given id)
+        /// Deletes an entire datatable (including the schema and data) with a given datatableId
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -258,7 +282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// deletes a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// deletes an entire datatable (including schema and data) with a given id)
+        /// Deletes an entire datatable (including the schema and data) with a given datatableId
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -270,7 +294,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a row entry
         /// </summary>
         /// <remarks>
-        /// Deletes a row with a given rowId.
+        /// Deletes a row with a given rowId (the value of the key field).
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -282,7 +306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a row entry
         /// </summary>
         /// <remarks>
-        /// Deletes a row with a given rowId.
+        /// Deletes a row with a given rowId (the value of the key field).
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -771,7 +795,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>PromptEntityListing</returns>
-        PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
+        PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a pageable list of user prompts
@@ -788,7 +812,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>ApiResponse of PromptEntityListing</returns>
-        ApiResponse<PromptEntityListing> GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<PromptEntityListing> GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Get a schedule by ID
@@ -1260,7 +1284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// Given a datableid returns the schema associated with it.
+        /// Given a datatableId returns the datatable object and schema associated with it.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -1272,7 +1296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// Given a datableid returns the schema associated with it.
+        /// Given a datatableId returns the datatable object and schema associated with it.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -1284,7 +1308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a specific row for the datatable
         /// </summary>
         /// <remarks>
-        /// Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -1297,7 +1321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a specific row for the datatable
         /// </summary>
         /// <remarks>
-        /// Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -1307,10 +1331,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Dictionary<string, Object>> GetFlowsDatatableRowWithHttpInfo (string datatableId, string rowId, bool? showbrief = null);
         
         /// <summary>
-        /// Returns the rows for the datatable
+        /// Returns the rows for the datatable with the given id
         /// </summary>
         /// <remarks>
-        /// Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -1321,10 +1345,10 @@ namespace PureCloudPlatform.Client.V2.Api
         DataTableRowEntityListing GetFlowsDatatableRows (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null);
 
         /// <summary>
-        /// Returns the rows for the datatable
+        /// Returns the rows for the datatable with the given id
         /// </summary>
         /// <remarks>
-        /// Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -1338,7 +1362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of datatables for the org
         /// </summary>
         /// <remarks>
-        /// Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand instructions for the result (optional)</param>
@@ -1353,7 +1377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of datatables for the org
         /// </summary>
         /// <remarks>
-        /// Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand instructions for the result (optional)</param>
@@ -1682,8 +1706,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
-        /// <returns>Flow</returns>
-        Flow PostFlowsActionsCheckin (string flow);
+        /// <returns>Operation</returns>
+        Operation PostFlowsActionsCheckin (string flow);
 
         /// <summary>
         /// Check-in flow
@@ -1693,8 +1717,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
-        /// <returns>ApiResponse of Flow</returns>
-        ApiResponse<Flow> PostFlowsActionsCheckinWithHttpInfo (string flow);
+        /// <returns>ApiResponse of Operation</returns>
+        ApiResponse<Operation> PostFlowsActionsCheckinWithHttpInfo (string flow);
         
         /// <summary>
         /// Check-out flow
@@ -1809,10 +1833,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Flow> PostFlowsActionsUnlockWithHttpInfo (string flow);
         
         /// <summary>
-        /// Create a new row entry
+        /// Create a new row entry for the datatable.
         /// </summary>
         /// <remarks>
-        /// Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -1821,10 +1845,10 @@ namespace PureCloudPlatform.Client.V2.Api
         Dictionary<string, Object> PostFlowsDatatableRows (string datatableId, Object dataTableRow);
 
         /// <summary>
-        /// Create a new row entry
+        /// Create a new row entry for the datatable.
         /// </summary>
         /// <remarks>
-        /// Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -1836,7 +1860,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new datatable with the specified json-schema definition
         /// </summary>
         /// <remarks>
-        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -1847,7 +1871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new datatable with the specified json-schema definition
         /// </summary>
         /// <remarks>
-        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -2054,7 +2078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
+        /// Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -2067,7 +2091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
+        /// Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -2080,7 +2104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a row entry
         /// </summary>
         /// <remarks>
-        /// Updates a row with the given to the new values.
+        /// Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -2093,7 +2117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a row entry
         /// </summary>
         /// <remarks>
-        /// Updates a row with the given to the new values.
+        /// Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -2197,6 +2221,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode);
+        
+        /// <summary>
+        /// Delete specified user prompt resource audio
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteArchitectPromptResourceAudioAsync (string promptId, string languageCode);
+
+        /// <summary>
+        /// Delete specified user prompt resource audio
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptResourceAudioAsyncWithHttpInfo (string promptId, string languageCode);
         
         /// <summary>
         /// Batch-delete a list of prompts
@@ -2336,7 +2384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// deletes a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// deletes an entire datatable (including schema and data) with a given id)
+        /// Deletes an entire datatable (including the schema and data) with a given datatableId
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -2348,7 +2396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// deletes a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// deletes an entire datatable (including schema and data) with a given id)
+        /// Deletes an entire datatable (including the schema and data) with a given datatableId
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -2360,7 +2408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a row entry
         /// </summary>
         /// <remarks>
-        /// Deletes a row with a given rowId.
+        /// Deletes a row with a given rowId (the value of the key field).
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -2372,7 +2420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a row entry
         /// </summary>
         /// <remarks>
-        /// Deletes a row with a given rowId.
+        /// Deletes a row with a given rowId (the value of the key field).
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -2861,7 +2909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of PromptEntityListing</returns>
-        System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a pageable list of user prompts
@@ -2878,7 +2926,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of ApiResponse (PromptEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Get a schedule by ID
@@ -3350,7 +3398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// Given a datableid returns the schema associated with it.
+        /// Given a datatableId returns the datatable object and schema associated with it.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -3362,7 +3410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// Given a datableid returns the schema associated with it.
+        /// Given a datatableId returns the datatable object and schema associated with it.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -3374,7 +3422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a specific row for the datatable
         /// </summary>
         /// <remarks>
-        /// Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -3387,7 +3435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a specific row for the datatable
         /// </summary>
         /// <remarks>
-        /// Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -3397,10 +3445,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId, bool? showbrief = null);
         
         /// <summary>
-        /// Returns the rows for the datatable
+        /// Returns the rows for the datatable with the given id
         /// </summary>
         /// <remarks>
-        /// Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -3411,10 +3459,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<DataTableRowEntityListing> GetFlowsDatatableRowsAsync (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null);
 
         /// <summary>
-        /// Returns the rows for the datatable
+        /// Returns the rows for the datatable with the given id
         /// </summary>
         /// <remarks>
-        /// Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -3428,7 +3476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of datatables for the org
         /// </summary>
         /// <remarks>
-        /// Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand instructions for the result (optional)</param>
@@ -3443,7 +3491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of datatables for the org
         /// </summary>
         /// <remarks>
-        /// Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand instructions for the result (optional)</param>
@@ -3772,8 +3820,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
-        /// <returns>Task of Flow</returns>
-        System.Threading.Tasks.Task<Flow> PostFlowsActionsCheckinAsync (string flow);
+        /// <returns>Task of Operation</returns>
+        System.Threading.Tasks.Task<Operation> PostFlowsActionsCheckinAsync (string flow);
 
         /// <summary>
         /// Check-in flow
@@ -3783,8 +3831,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
-        /// <returns>Task of ApiResponse (Flow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsCheckinAsyncWithHttpInfo (string flow);
+        /// <returns>Task of ApiResponse (Operation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowsActionsCheckinAsyncWithHttpInfo (string flow);
         
         /// <summary>
         /// Check-out flow
@@ -3899,10 +3947,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsUnlockAsyncWithHttpInfo (string flow);
         
         /// <summary>
-        /// Create a new row entry
+        /// Create a new row entry for the datatable.
         /// </summary>
         /// <remarks>
-        /// Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -3911,10 +3959,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Dictionary<string, Object>> PostFlowsDatatableRowsAsync (string datatableId, Object dataTableRow);
 
         /// <summary>
-        /// Create a new row entry
+        /// Create a new row entry for the datatable.
         /// </summary>
         /// <remarks>
-        /// Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -3926,7 +3974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new datatable with the specified json-schema definition
         /// </summary>
         /// <remarks>
-        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -3937,7 +3985,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new datatable with the specified json-schema definition
         /// </summary>
         /// <remarks>
-        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -4144,7 +4192,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
+        /// Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -4157,7 +4205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
+        /// Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -4170,7 +4218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a row entry
         /// </summary>
         /// <remarks>
-        /// Updates a row with the given to the new values.
+        /// Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -4183,7 +4231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a row entry
         /// </summary>
         /// <remarks>
-        /// Updates a row with the given to the new values.
+        /// Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -5057,6 +5105,210 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteArchitectPromptResource: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteArchitectPromptResource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete specified user prompt resource audio 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns></returns>
+        public void DeleteArchitectPromptResourceAudio (string promptId, string languageCode)
+        {
+             DeleteArchitectPromptResourceAudioWithHttpInfo(promptId, languageCode);
+        }
+
+        /// <summary>
+        /// Delete specified user prompt resource audio 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteArchitectPromptResourceAudioWithHttpInfo (string promptId, string languageCode)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeleteArchitectPromptResourceAudio");
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectPromptResourceAudio");
+
+            var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}/audio";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteArchitectPromptResourceAudio: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteArchitectPromptResourceAudio: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete specified user prompt resource audio 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteArchitectPromptResourceAudioAsync (string promptId, string languageCode)
+        {
+             await DeleteArchitectPromptResourceAudioAsyncWithHttpInfo(promptId, languageCode);
+
+        }
+
+        /// <summary>
+        /// Delete specified user prompt resource audio 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptResourceAudioAsyncWithHttpInfo (string promptId, string languageCode)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeleteArchitectPromptResourceAudio");
+            
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectPromptResourceAudio");
+            
+
+            var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}/audio";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteArchitectPromptResourceAudio: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteArchitectPromptResourceAudio: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -6231,7 +6483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given id)
+        /// deletes a specific datatable by id Deletes an entire datatable (including the schema and data) with a given datatableId
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -6243,7 +6495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given id)
+        /// deletes a specific datatable by id Deletes an entire datatable (including the schema and data) with a given datatableId
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -6328,7 +6580,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given id)
+        /// deletes a specific datatable by id Deletes an entire datatable (including the schema and data) with a given datatableId
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -6341,7 +6593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given id)
+        /// deletes a specific datatable by id Deletes an entire datatable (including the schema and data) with a given datatableId
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -6428,7 +6680,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Delete a row entry Deletes a row with a given rowId.
+        /// Delete a row entry Deletes a row with a given rowId (the value of the key field).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -6440,7 +6692,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a row entry Deletes a row with a given rowId.
+        /// Delete a row entry Deletes a row with a given rowId (the value of the key field).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -6528,7 +6780,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Delete a row entry Deletes a row with a given rowId.
+        /// Delete a row entry Deletes a row with a given rowId (the value of the key field).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -6541,7 +6793,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a row entry Deletes a row with a given rowId.
+        /// Delete a row entry Deletes a row with a given rowId (the value of the key field).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -10193,7 +10445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>PromptEntityListing</returns>
-        public PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
+        public PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<PromptEntityListing> localVarResponse = GetArchitectPromptsWithHttpInfo(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder);
              return localVarResponse.Data;
@@ -10211,7 +10463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>ApiResponse of PromptEntityListing</returns>
-        public ApiResponse< PromptEntityListing > GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< PromptEntityListing > GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/architect/prompts";
@@ -10249,7 +10501,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (name != null) name.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", this.Configuration.ApiClient.ParameterToString(description)));
             if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
@@ -10303,7 +10555,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of PromptEntityListing</returns>
-        public async System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<PromptEntityListing> localVarResponse = await GetArchitectPromptsAsyncWithHttpInfo(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder);
              return localVarResponse.Data;
@@ -10322,7 +10574,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to id)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of ApiResponse (PromptEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/architect/prompts";
@@ -10360,7 +10612,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (name != null) name.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", this.Configuration.ApiClient.ParameterToString(description)));
             if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
@@ -13841,7 +14093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Returns a specific datatable by id Given a datableid returns the schema associated with it.
+        /// Returns a specific datatable by id Given a datatableId returns the datatable object and schema associated with it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -13854,7 +14106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Returns a specific datatable by id Given a datableid returns the schema associated with it.
+        /// Returns a specific datatable by id Given a datatableId returns the datatable object and schema associated with it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -13939,7 +14191,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Returns a specific datatable by id Given a datableid returns the schema associated with it.
+        /// Returns a specific datatable by id Given a datatableId returns the datatable object and schema associated with it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -13953,7 +14205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Returns a specific datatable by id Given a datableid returns the schema associated with it.
+        /// Returns a specific datatable by id Given a datatableId returns the datatable object and schema associated with it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -14040,7 +14292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Returns a specific row for the datatable Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// Returns a specific row for the datatable Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -14054,7 +14306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Returns a specific row for the datatable Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// Returns a specific row for the datatable Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -14144,7 +14396,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Returns a specific row for the datatable Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// Returns a specific row for the datatable Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -14159,7 +14411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Returns a specific row for the datatable Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// Returns a specific row for the datatable Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -14252,7 +14504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Returns the rows for the datatable Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// Returns the rows for the datatable with the given id Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -14267,7 +14519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Returns the rows for the datatable Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// Returns the rows for the datatable with the given id Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -14356,7 +14608,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Returns the rows for the datatable Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// Returns the rows for the datatable with the given id Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -14372,7 +14624,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Returns the rows for the datatable Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// Returns the rows for the datatable with the given id Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -14463,7 +14715,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand instructions for the result (optional)</param>
@@ -14479,7 +14731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand instructions for the result (optional)</param>
@@ -14567,7 +14819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand instructions for the result (optional)</param>
@@ -14584,7 +14836,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand instructions for the result (optional)</param>
@@ -17335,10 +17587,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
-        /// <returns>Flow</returns>
-        public Flow PostFlowsActionsCheckin (string flow)
+        /// <returns>Operation</returns>
+        public Operation PostFlowsActionsCheckin (string flow)
         {
-             ApiResponse<Flow> localVarResponse = PostFlowsActionsCheckinWithHttpInfo(flow);
+             ApiResponse<Operation> localVarResponse = PostFlowsActionsCheckinWithHttpInfo(flow);
              return localVarResponse.Data;
         }
 
@@ -17347,8 +17599,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
-        /// <returns>ApiResponse of Flow</returns>
-        public ApiResponse< Flow > PostFlowsActionsCheckinWithHttpInfo (string flow)
+        /// <returns>ApiResponse of Operation</returns>
+        public ApiResponse< Operation > PostFlowsActionsCheckinWithHttpInfo (string flow)
         { 
             // verify the required parameter 'flow' is set
             if (flow == null)
@@ -17417,9 +17669,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostFlowsActionsCheckin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Flow>(localVarStatusCode,
+            return new ApiResponse<Operation>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)),
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -17430,10 +17682,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
-        /// <returns>Task of Flow</returns>
-        public async System.Threading.Tasks.Task<Flow> PostFlowsActionsCheckinAsync (string flow)
+        /// <returns>Task of Operation</returns>
+        public async System.Threading.Tasks.Task<Operation> PostFlowsActionsCheckinAsync (string flow)
         {
-             ApiResponse<Flow> localVarResponse = await PostFlowsActionsCheckinAsyncWithHttpInfo(flow);
+             ApiResponse<Operation> localVarResponse = await PostFlowsActionsCheckinAsyncWithHttpInfo(flow);
              return localVarResponse.Data;
 
         }
@@ -17443,8 +17695,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
-        /// <returns>Task of ApiResponse (Flow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsCheckinAsyncWithHttpInfo (string flow)
+        /// <returns>Task of ApiResponse (Operation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowsActionsCheckinAsyncWithHttpInfo (string flow)
         { 
             // verify the required parameter 'flow' is set
             if (flow == null)
@@ -17514,9 +17766,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostFlowsActionsCheckin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Flow>(localVarStatusCode,
+            return new ApiResponse<Operation>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)),
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -18495,7 +18747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create a new row entry Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// Create a new row entry for the datatable. Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -18508,7 +18760,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new row entry Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// Create a new row entry for the datatable. Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -18600,7 +18852,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Create a new row entry Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// Create a new row entry for the datatable. Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -18614,7 +18866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new row entry Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// Create a new row entry for the datatable. Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -18709,7 +18961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -18721,7 +18973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -18808,7 +19060,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -18821,7 +19073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
@@ -20648,7 +20900,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Updates a specific datatable by id Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
+        /// Updates a specific datatable by id Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -20662,7 +20914,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Updates a specific datatable by id Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
+        /// Updates a specific datatable by id Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -20753,7 +21005,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Updates a specific datatable by id Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
+        /// Updates a specific datatable by id Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -20768,7 +21020,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Updates a specific datatable by id Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
+        /// Updates a specific datatable by id Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -20861,7 +21113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update a row entry Updates a row with the given to the new values.
+        /// Update a row entry Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -20875,7 +21127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a row entry Updates a row with the given to the new values.
+        /// Update a row entry Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -20969,7 +21221,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update a row entry Updates a row with the given to the new values.
+        /// Update a row entry Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -20984,7 +21236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a row entry Updates a row with the given to the new values.
+        /// Update a row entry Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>

@@ -32,6 +32,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets RoutingStatus
         /// </summary>
@@ -164,6 +167,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RoutingStatus
         /// </summary>
@@ -189,6 +200,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate" /> class.
@@ -197,6 +212,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ManagementUnitId">ManagementUnitId.</param>
         /// <param name="ScheduledActivityCategory">ScheduledActivityCategory.</param>
         /// <param name="SystemPresence">SystemPresence.</param>
+        /// <param name="OrganizationSecondaryPresenceId">OrganizationSecondaryPresenceId.</param>
         /// <param name="RoutingStatus">RoutingStatus.</param>
         /// <param name="ActualActivityCategory">ActualActivityCategory.</param>
         /// <param name="IsOutOfOffice">IsOutOfOffice.</param>
@@ -204,12 +220,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Impact">Impact.</param>
         /// <param name="AdherenceChangeTime">AdherenceChangeTime.</param>
         /// <param name="PresenceUpdateTime">PresenceUpdateTime.</param>
-        public WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate(WfmUserScheduleAdherenceUpdatedTopicUserReference User = null, string ManagementUnitId = null, string ScheduledActivityCategory = null, string SystemPresence = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, DateTime? AdherenceChangeTime = null, DateTime? PresenceUpdateTime = null)
+        /// <param name="ActiveQueues">ActiveQueues.</param>
+        /// <param name="ActiveQueuesModifiedTime">ActiveQueuesModifiedTime.</param>
+        public WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate(WfmUserScheduleAdherenceUpdatedTopicUserReference User = null, string ManagementUnitId = null, string ScheduledActivityCategory = null, string SystemPresence = null, string OrganizationSecondaryPresenceId = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, DateTime? AdherenceChangeTime = null, DateTime? PresenceUpdateTime = null, List<WfmUserScheduleAdherenceUpdatedTopicQueueReference> ActiveQueues = null, DateTime? ActiveQueuesModifiedTime = null)
         {
             this.User = User;
             this.ManagementUnitId = ManagementUnitId;
             this.ScheduledActivityCategory = ScheduledActivityCategory;
             this.SystemPresence = SystemPresence;
+            this.OrganizationSecondaryPresenceId = OrganizationSecondaryPresenceId;
             this.RoutingStatus = RoutingStatus;
             this.ActualActivityCategory = ActualActivityCategory;
             this.IsOutOfOffice = IsOutOfOffice;
@@ -217,6 +236,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Impact = Impact;
             this.AdherenceChangeTime = AdherenceChangeTime;
             this.PresenceUpdateTime = PresenceUpdateTime;
+            this.ActiveQueues = ActiveQueues;
+            this.ActiveQueuesModifiedTime = ActiveQueuesModifiedTime;
             
         }
         
@@ -251,6 +272,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="systemPresence", EmitDefaultValue=false)]
         public string SystemPresence { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets OrganizationSecondaryPresenceId
+        /// </summary>
+        [DataMember(Name="organizationSecondaryPresenceId", EmitDefaultValue=false)]
+        public string OrganizationSecondaryPresenceId { get; set; }
         
         
         
@@ -297,6 +326,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? PresenceUpdateTime { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets ActiveQueues
+        /// </summary>
+        [DataMember(Name="activeQueues", EmitDefaultValue=false)]
+        public List<WfmUserScheduleAdherenceUpdatedTopicQueueReference> ActiveQueues { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets ActiveQueuesModifiedTime
+        /// </summary>
+        [DataMember(Name="activeQueuesModifiedTime", EmitDefaultValue=false)]
+        public DateTime? ActiveQueuesModifiedTime { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -310,6 +355,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ManagementUnitId: ").Append(ManagementUnitId).Append("\n");
             sb.Append("  ScheduledActivityCategory: ").Append(ScheduledActivityCategory).Append("\n");
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
+            sb.Append("  OrganizationSecondaryPresenceId: ").Append(OrganizationSecondaryPresenceId).Append("\n");
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
             sb.Append("  ActualActivityCategory: ").Append(ActualActivityCategory).Append("\n");
             sb.Append("  IsOutOfOffice: ").Append(IsOutOfOffice).Append("\n");
@@ -317,6 +363,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Impact: ").Append(Impact).Append("\n");
             sb.Append("  AdherenceChangeTime: ").Append(AdherenceChangeTime).Append("\n");
             sb.Append("  PresenceUpdateTime: ").Append(PresenceUpdateTime).Append("\n");
+            sb.Append("  ActiveQueues: ").Append(ActiveQueues).Append("\n");
+            sb.Append("  ActiveQueuesModifiedTime: ").Append(ActiveQueuesModifiedTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -374,6 +422,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SystemPresence.Equals(other.SystemPresence)
                 ) &&
                 (
+                    this.OrganizationSecondaryPresenceId == other.OrganizationSecondaryPresenceId ||
+                    this.OrganizationSecondaryPresenceId != null &&
+                    this.OrganizationSecondaryPresenceId.Equals(other.OrganizationSecondaryPresenceId)
+                ) &&
+                (
                     this.RoutingStatus == other.RoutingStatus ||
                     this.RoutingStatus != null &&
                     this.RoutingStatus.Equals(other.RoutingStatus)
@@ -407,6 +460,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PresenceUpdateTime == other.PresenceUpdateTime ||
                     this.PresenceUpdateTime != null &&
                     this.PresenceUpdateTime.Equals(other.PresenceUpdateTime)
+                ) &&
+                (
+                    this.ActiveQueues == other.ActiveQueues ||
+                    this.ActiveQueues != null &&
+                    this.ActiveQueues.SequenceEqual(other.ActiveQueues)
+                ) &&
+                (
+                    this.ActiveQueuesModifiedTime == other.ActiveQueuesModifiedTime ||
+                    this.ActiveQueuesModifiedTime != null &&
+                    this.ActiveQueuesModifiedTime.Equals(other.ActiveQueuesModifiedTime)
                 );
         }
 
@@ -434,6 +497,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SystemPresence != null)
                     hash = hash * 59 + this.SystemPresence.GetHashCode();
                 
+                if (this.OrganizationSecondaryPresenceId != null)
+                    hash = hash * 59 + this.OrganizationSecondaryPresenceId.GetHashCode();
+                
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
                 
@@ -454,6 +520,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PresenceUpdateTime != null)
                     hash = hash * 59 + this.PresenceUpdateTime.GetHashCode();
+                
+                if (this.ActiveQueues != null)
+                    hash = hash * 59 + this.ActiveQueues.GetHashCode();
+                
+                if (this.ActiveQueuesModifiedTime != null)
+                    hash = hash * 59 + this.ActiveQueuesModifiedTime.GetHashCode();
                 
                 return hash;
             }

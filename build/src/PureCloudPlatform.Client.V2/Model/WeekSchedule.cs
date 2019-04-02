@@ -79,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WeekSchedule" /> class.
         /// </summary>
-        /// <param name="WeekDate">First day of this week schedule in week in yyyy-MM-dd format.</param>
+        /// <param name="WeekDate">First day of this week schedule in yyyy-MM-dd format.</param>
         /// <param name="Description">Description of the week schedule.</param>
         /// <param name="Published">Whether the week schedule is published.</param>
         /// <param name="GenerationResults">Summary of the results from the schedule run.</param>
@@ -114,9 +114,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// First day of this week schedule in week in yyyy-MM-dd format
+        /// First day of this week schedule in yyyy-MM-dd format
         /// </summary>
-        /// <value>First day of this week schedule in week in yyyy-MM-dd format</value>
+        /// <value>First day of this week schedule in yyyy-MM-dd format</value>
         [DataMember(Name="weekDate", EmitDefaultValue=false)]
         public string WeekDate { get; set; }
         

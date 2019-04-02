@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLicenseOrganization**](LicenseApi.html#getlicenseorganization) | **GET** /api/v2/license/organization | Get license assignments for the organization. |
 | [**GetLicenseToggle**](LicenseApi.html#getlicensetoggle) | **GET** /api/v2/license/toggles/{featureName} | Get PureCloud license feature toggle value. |
 | [**GetLicenseUser**](LicenseApi.html#getlicenseuser) | **GET** /api/v2/license/users/{userId} | Get licenses for specified user. |
+| [**GetLicenseUsers**](LicenseApi.html#getlicenseusers) | **GET** /api/v2/license/users | Get a page of users and their licenses |
 | [**PostLicenseOrganization**](LicenseApi.html#postlicenseorganization) | **POST** /api/v2/license/organization | Update the organization&#39;s license assignments in a batch. |
 | [**PostLicenseToggle**](LicenseApi.html#postlicensetoggle) | **POST** /api/v2/license/toggles/{featureName} | Switch PureCloud license feature toggle value. |
 | [**PostLicenseUsers**](LicenseApi.html#postlicenseusers) | **POST** /api/v2/license/users | Fetch user licenses in a batch. |
@@ -321,6 +322,71 @@ namespace Example
 ### Return type
 
 [**LicenseUser**](LicenseUser.html)
+
+<a name="getlicenseusers"></a>
+
+## [**UserLicensesEntityListing**](UserLicensesEntityListing.html) GetLicenseUsers (int? pageSize = null, int? pageNumber = null)
+
+
+
+Get a page of users and their licenses
+
+Retrieve a page of users in an organization along with the licenses they possess.
+
+Requires ANY permissions: 
+
+* admin
+* role_manager
+* authorization:grant:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLicenseUsersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new LicenseApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get a page of users and their licenses
+                UserLicensesEntityListing result = apiInstance.GetLicenseUsers(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LicenseApi.GetLicenseUsers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserLicensesEntityListing**](UserLicensesEntityListing.html)
 
 <a name="postlicenseorganization"></a>
 

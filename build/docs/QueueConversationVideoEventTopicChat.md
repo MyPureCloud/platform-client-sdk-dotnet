@@ -18,6 +18,7 @@ title: QueueConversationVideoEventTopicChat
 | **StartHoldTime** | **DateTime?** |  | [optional] |
 | **ConnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectedTime** | **DateTime?** |  | [optional] |
+| **JourneyContext** | [**QueueConversationVideoEventTopicJourneyContext**](QueueConversationVideoEventTopicJourneyContext.html) |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

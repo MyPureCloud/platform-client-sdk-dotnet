@@ -30,15 +30,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleContainer" /> class.
         /// </summary>
         /// <param name="ManagementUnitTimeZone">The reference time zone used for the management unit.</param>
+        /// <param name="PublishedSchedules">References to all published week schedules overlapping the start/end date query parameters.</param>
         /// <param name="UserSchedules">Map of user id to user schedule.</param>
-        public UserScheduleContainer(string ManagementUnitTimeZone = null, Dictionary<string, UserSchedule> UserSchedules = null)
+        public UserScheduleContainer(string ManagementUnitTimeZone = null, List<WeekScheduleReference> PublishedSchedules = null, Dictionary<string, UserSchedule> UserSchedules = null)
         {
             this.ManagementUnitTimeZone = ManagementUnitTimeZone;
+            this.PublishedSchedules = PublishedSchedules;
             this.UserSchedules = UserSchedules;
             
         }
@@ -51,6 +58,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The reference time zone used for the management unit</value>
         [DataMember(Name="managementUnitTimeZone", EmitDefaultValue=false)]
         public string ManagementUnitTimeZone { get; set; }
+        
+        
+        
+        /// <summary>
+        /// References to all published week schedules overlapping the start/end date query parameters
+        /// </summary>
+        /// <value>References to all published week schedules overlapping the start/end date query parameters</value>
+        [DataMember(Name="publishedSchedules", EmitDefaultValue=false)]
+        public List<WeekScheduleReference> PublishedSchedules { get; set; }
         
         
         
@@ -72,6 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class UserScheduleContainer {\n");
             
             sb.Append("  ManagementUnitTimeZone: ").Append(ManagementUnitTimeZone).Append("\n");
+            sb.Append("  PublishedSchedules: ").Append(PublishedSchedules).Append("\n");
             sb.Append("  UserSchedules: ").Append(UserSchedules).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -115,6 +132,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ManagementUnitTimeZone.Equals(other.ManagementUnitTimeZone)
                 ) &&
                 (
+                    this.PublishedSchedules == other.PublishedSchedules ||
+                    this.PublishedSchedules != null &&
+                    this.PublishedSchedules.SequenceEqual(other.PublishedSchedules)
+                ) &&
+                (
                     this.UserSchedules == other.UserSchedules ||
                     this.UserSchedules != null &&
                     this.UserSchedules.SequenceEqual(other.UserSchedules)
@@ -135,6 +157,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ManagementUnitTimeZone != null)
                     hash = hash * 59 + this.ManagementUnitTimeZone.GetHashCode();
+                
+                if (this.PublishedSchedules != null)
+                    hash = hash * 59 + this.PublishedSchedules.GetHashCode();
                 
                 if (this.UserSchedules != null)
                     hash = hash * 59 + this.UserSchedules.GetHashCode();

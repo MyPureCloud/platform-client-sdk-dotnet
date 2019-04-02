@@ -38,12 +38,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
@@ -135,6 +129,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
@@ -152,6 +148,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public OrderByEnum? OrderBy { get; set; }
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationQuery" /> class.
@@ -162,11 +162,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurveyFilters">Filters that target quality management survey-level data.</param>
         /// <param name="MediaEndpointStatFilters">Filters that target call quality of service data.</param>
         /// <param name="SegmentFilters">Filters that target individual segments within a conversation.</param>
-        /// <param name="Aggregations">Include faceted search and aggregate roll-ups describing your search results. This does not function as a filter, but rather, summary data about the data matching your filters.</param>
-        /// <param name="Paging">Page size and number to control iterating through large result sets. Default page size is 25.</param>
         /// <param name="Order">Sort the result set in ascending/descending order. Default is ascending.</param>
         /// <param name="OrderBy">Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart.</param>
-        public ConversationQuery(string Interval = null, List<AnalyticsQueryFilter> ConversationFilters = null, List<AnalyticsQueryFilter> EvaluationFilters = null, List<AnalyticsQueryFilter> SurveyFilters = null, List<AnalyticsQueryFilter> MediaEndpointStatFilters = null, List<AnalyticsQueryFilter> SegmentFilters = null, List<AnalyticsQueryAggregation> Aggregations = null, PagingSpec Paging = null, OrderEnum? Order = null, OrderByEnum? OrderBy = null)
+        /// <param name="Aggregations">Include faceted search and aggregate roll-ups describing your search results. This does not function as a filter, but rather, summary data about the data matching your filters.</param>
+        /// <param name="Paging">Page size and number to control iterating through large result sets. Default page size is 25.</param>
+        public ConversationQuery(string Interval = null, List<AnalyticsQueryFilter> ConversationFilters = null, List<AnalyticsQueryFilter> EvaluationFilters = null, List<AnalyticsQueryFilter> SurveyFilters = null, List<AnalyticsQueryFilter> MediaEndpointStatFilters = null, List<AnalyticsQueryFilter> SegmentFilters = null, OrderEnum? Order = null, OrderByEnum? OrderBy = null, List<AnalyticsQueryAggregation> Aggregations = null, PagingSpec Paging = null)
         {
             this.Interval = Interval;
             this.ConversationFilters = ConversationFilters;
@@ -174,10 +174,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SurveyFilters = SurveyFilters;
             this.MediaEndpointStatFilters = MediaEndpointStatFilters;
             this.SegmentFilters = SegmentFilters;
-            this.Aggregations = Aggregations;
-            this.Paging = Paging;
             this.Order = Order;
             this.OrderBy = OrderBy;
+            this.Aggregations = Aggregations;
+            this.Paging = Paging;
             
         }
         
@@ -237,6 +237,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
         /// <summary>
         /// Include faceted search and aggregate roll-ups describing your search results. This does not function as a filter, but rather, summary data about the data matching your filters
         /// </summary>
@@ -254,10 +258,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public PagingSpec Paging { get; set; }
         
         
-        
-        
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -273,10 +273,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SurveyFilters: ").Append(SurveyFilters).Append("\n");
             sb.Append("  MediaEndpointStatFilters: ").Append(MediaEndpointStatFilters).Append("\n");
             sb.Append("  SegmentFilters: ").Append(SegmentFilters).Append("\n");
-            sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
-            sb.Append("  Paging: ").Append(Paging).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  OrderBy: ").Append(OrderBy).Append("\n");
+            sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
+            sb.Append("  Paging: ").Append(Paging).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -344,16 +344,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SegmentFilters.SequenceEqual(other.SegmentFilters)
                 ) &&
                 (
-                    this.Aggregations == other.Aggregations ||
-                    this.Aggregations != null &&
-                    this.Aggregations.SequenceEqual(other.Aggregations)
-                ) &&
-                (
-                    this.Paging == other.Paging ||
-                    this.Paging != null &&
-                    this.Paging.Equals(other.Paging)
-                ) &&
-                (
                     this.Order == other.Order ||
                     this.Order != null &&
                     this.Order.Equals(other.Order)
@@ -362,6 +352,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OrderBy == other.OrderBy ||
                     this.OrderBy != null &&
                     this.OrderBy.Equals(other.OrderBy)
+                ) &&
+                (
+                    this.Aggregations == other.Aggregations ||
+                    this.Aggregations != null &&
+                    this.Aggregations.SequenceEqual(other.Aggregations)
+                ) &&
+                (
+                    this.Paging == other.Paging ||
+                    this.Paging != null &&
+                    this.Paging.Equals(other.Paging)
                 );
         }
 
@@ -395,17 +395,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SegmentFilters != null)
                     hash = hash * 59 + this.SegmentFilters.GetHashCode();
                 
-                if (this.Aggregations != null)
-                    hash = hash * 59 + this.Aggregations.GetHashCode();
-                
-                if (this.Paging != null)
-                    hash = hash * 59 + this.Paging.GetHashCode();
-                
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
                 
                 if (this.OrderBy != null)
                     hash = hash * 59 + this.OrderBy.GetHashCode();
+                
+                if (this.Aggregations != null)
+                    hash = hash * 59 + this.Aggregations.GetHashCode();
+                
+                if (this.Paging != null)
+                    hash = hash * 59 + this.Paging.GetHashCode();
                 
                 return hash;
             }
