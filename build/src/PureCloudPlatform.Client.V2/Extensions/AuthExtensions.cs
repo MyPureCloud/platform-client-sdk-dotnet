@@ -48,14 +48,14 @@ namespace PureCloudPlatform.Client.V2.Extensions
             {
                 "application/x-www-form-urlencoded"
             };
-            String httpContentType = apiClient.Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+            String httpContentType = apiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[]
             {
                 "application/json"
             };
-            String httpHeaderAccept = apiClient.Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            String httpHeaderAccept = apiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
                 headerParams.Add("Accept", httpHeaderAccept);
 
@@ -63,9 +63,9 @@ namespace PureCloudPlatform.Client.V2.Extensions
             formParams.Add("grant_type",
                 string.IsNullOrEmpty(authorizationCode) ? "client_credentials" : "authorization_code");
             if (!string.IsNullOrEmpty(authorizationCode))
-                formParams.Add("code", apiClient.Configuration.ApiClient.ParameterToString(authorizationCode));
+                formParams.Add("code", apiClient.ParameterToString(authorizationCode));
             if (!string.IsNullOrEmpty(redirectUri))
-                formParams.Add("redirect_uri", apiClient.Configuration.ApiClient.ParameterToString(redirectUri));
+                formParams.Add("redirect_uri", apiClient.ParameterToString(redirectUri));
 
             // authentication required
             var basicAuth =
@@ -87,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Extensions
 
             return new ApiResponse<AuthTokenInfo>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AuthTokenInfo) apiClient.Configuration.ApiClient.Deserialize(response, typeof (AuthTokenInfo)),
+                (AuthTokenInfo) apiClient.Deserialize(response, typeof (AuthTokenInfo)),
                 response.Content,
                 response.StatusDescription);
         }
@@ -99,8 +99,9 @@ namespace PureCloudPlatform.Client.V2.Extensions
             String contentType)
         {
             var regex = new Regex(@"://(api)\.");
-            var authUrl = regex.Replace(apiClient.Configuration.ApiClient.RestClient.BaseUrl.ToString(), "://login.");
+            var authUrl = regex.Replace(apiClient.RestClient.BaseUrl.ToString(), "://login.");
             var restClient = new RestClient(authUrl);
+            restClient.Proxy = apiClient.RestClient.Proxy;
 
             var request = PrepareTokenRequest(
                 path, method, queryParams, postBody, headerParams, formParams, fileParams,
