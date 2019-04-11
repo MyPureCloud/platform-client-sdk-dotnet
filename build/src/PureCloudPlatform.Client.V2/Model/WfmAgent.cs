@@ -80,25 +80,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WfmAgent" /> class.
         /// </summary>
         /// <param name="User">The user associated with this data.</param>
-        /// <param name="Queues">List of queues to which the agent belongs and which are defined in the service goal groups in this management unit.</param>
-        /// <param name="Languages">The list of languages.</param>
-        /// <param name="Skills">The list of skills.</param>
         /// <param name="WorkPlan">The work plan associated with this agent.</param>
-        /// <param name="Schedulable">Whether the agent has the permission to be included in schedule generation.</param>
         /// <param name="TimeZone">The time zone for this agent. Defaults to the time zone of the management unit to which the agent belongs.</param>
         /// <param name="AcceptDirectShiftTrades">Whether the agent accepts direct shift trade requests.</param>
         /// <param name="Metadata">Metadata for this agent.</param>
-        public WfmAgent(UserReference User = null, List<QueueReference> Queues = null, List<LanguageReference> Languages = null, List<RoutingSkillReference> Skills = null, WorkPlanReference WorkPlan = null, bool? Schedulable = null, WfmTimeZone TimeZone = null, bool? AcceptDirectShiftTrades = null, WfmVersionedEntityMetadata Metadata = null)
+        /// <param name="Queues">List of queues to which the agent belongs and which are defined in the service goal groups in this management unit.</param>
+        /// <param name="Languages">The list of languages.</param>
+        /// <param name="Skills">The list of skills.</param>
+        /// <param name="Schedulable">Whether the agent has the permission to be included in schedule generation.</param>
+        public WfmAgent(UserReference User = null, WorkPlanReference WorkPlan = null, WfmTimeZone TimeZone = null, bool? AcceptDirectShiftTrades = null, WfmVersionedEntityMetadata Metadata = null, List<QueueReference> Queues = null, List<LanguageReference> Languages = null, List<RoutingSkillReference> Skills = null, bool? Schedulable = null)
         {
             this.User = User;
-            this.Queues = Queues;
-            this.Languages = Languages;
-            this.Skills = Skills;
             this.WorkPlan = WorkPlan;
-            this.Schedulable = Schedulable;
             this.TimeZone = TimeZone;
             this.AcceptDirectShiftTrades = AcceptDirectShiftTrades;
             this.Metadata = Metadata;
+            this.Queues = Queues;
+            this.Languages = Languages;
+            this.Skills = Skills;
+            this.Schedulable = Schedulable;
             
         }
         
@@ -123,47 +123,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// List of queues to which the agent belongs and which are defined in the service goal groups in this management unit
-        /// </summary>
-        /// <value>List of queues to which the agent belongs and which are defined in the service goal groups in this management unit</value>
-        [DataMember(Name="queues", EmitDefaultValue=false)]
-        public List<QueueReference> Queues { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The list of languages
-        /// </summary>
-        /// <value>The list of languages</value>
-        [DataMember(Name="languages", EmitDefaultValue=false)]
-        public List<LanguageReference> Languages { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The list of skills
-        /// </summary>
-        /// <value>The list of skills</value>
-        [DataMember(Name="skills", EmitDefaultValue=false)]
-        public List<RoutingSkillReference> Skills { get; set; }
-        
-        
-        
-        /// <summary>
         /// The work plan associated with this agent
         /// </summary>
         /// <value>The work plan associated with this agent</value>
         [DataMember(Name="workPlan", EmitDefaultValue=false)]
         public WorkPlanReference WorkPlan { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Whether the agent has the permission to be included in schedule generation
-        /// </summary>
-        /// <value>Whether the agent has the permission to be included in schedule generation</value>
-        [DataMember(Name="schedulable", EmitDefaultValue=false)]
-        public bool? Schedulable { get; set; }
         
         
         
@@ -195,6 +159,42 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// List of queues to which the agent belongs and which are defined in the service goal groups in this management unit
+        /// </summary>
+        /// <value>List of queues to which the agent belongs and which are defined in the service goal groups in this management unit</value>
+        [DataMember(Name="queues", EmitDefaultValue=false)]
+        public List<QueueReference> Queues { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of languages
+        /// </summary>
+        /// <value>The list of languages</value>
+        [DataMember(Name="languages", EmitDefaultValue=false)]
+        public List<LanguageReference> Languages { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of skills
+        /// </summary>
+        /// <value>The list of skills</value>
+        [DataMember(Name="skills", EmitDefaultValue=false)]
+        public List<RoutingSkillReference> Skills { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether the agent has the permission to be included in schedule generation
+        /// </summary>
+        /// <value>Whether the agent has the permission to be included in schedule generation</value>
+        [DataMember(Name="schedulable", EmitDefaultValue=false)]
+        public bool? Schedulable { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -213,14 +213,14 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
-            sb.Append("  Queues: ").Append(Queues).Append("\n");
-            sb.Append("  Languages: ").Append(Languages).Append("\n");
-            sb.Append("  Skills: ").Append(Skills).Append("\n");
             sb.Append("  WorkPlan: ").Append(WorkPlan).Append("\n");
-            sb.Append("  Schedulable: ").Append(Schedulable).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  AcceptDirectShiftTrades: ").Append(AcceptDirectShiftTrades).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  Queues: ").Append(Queues).Append("\n");
+            sb.Append("  Languages: ").Append(Languages).Append("\n");
+            sb.Append("  Skills: ").Append(Skills).Append("\n");
+            sb.Append("  Schedulable: ").Append(Schedulable).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -269,29 +269,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.User.Equals(other.User)
                 ) &&
                 (
-                    this.Queues == other.Queues ||
-                    this.Queues != null &&
-                    this.Queues.SequenceEqual(other.Queues)
-                ) &&
-                (
-                    this.Languages == other.Languages ||
-                    this.Languages != null &&
-                    this.Languages.SequenceEqual(other.Languages)
-                ) &&
-                (
-                    this.Skills == other.Skills ||
-                    this.Skills != null &&
-                    this.Skills.SequenceEqual(other.Skills)
-                ) &&
-                (
                     this.WorkPlan == other.WorkPlan ||
                     this.WorkPlan != null &&
                     this.WorkPlan.Equals(other.WorkPlan)
-                ) &&
-                (
-                    this.Schedulable == other.Schedulable ||
-                    this.Schedulable != null &&
-                    this.Schedulable.Equals(other.Schedulable)
                 ) &&
                 (
                     this.TimeZone == other.TimeZone ||
@@ -307,6 +287,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
+                ) &&
+                (
+                    this.Queues == other.Queues ||
+                    this.Queues != null &&
+                    this.Queues.SequenceEqual(other.Queues)
+                ) &&
+                (
+                    this.Languages == other.Languages ||
+                    this.Languages != null &&
+                    this.Languages.SequenceEqual(other.Languages)
+                ) &&
+                (
+                    this.Skills == other.Skills ||
+                    this.Skills != null &&
+                    this.Skills.SequenceEqual(other.Skills)
+                ) &&
+                (
+                    this.Schedulable == other.Schedulable ||
+                    this.Schedulable != null &&
+                    this.Schedulable.Equals(other.Schedulable)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -333,20 +333,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
                 
-                if (this.Queues != null)
-                    hash = hash * 59 + this.Queues.GetHashCode();
-                
-                if (this.Languages != null)
-                    hash = hash * 59 + this.Languages.GetHashCode();
-                
-                if (this.Skills != null)
-                    hash = hash * 59 + this.Skills.GetHashCode();
-                
                 if (this.WorkPlan != null)
                     hash = hash * 59 + this.WorkPlan.GetHashCode();
-                
-                if (this.Schedulable != null)
-                    hash = hash * 59 + this.Schedulable.GetHashCode();
                 
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
@@ -356,6 +344,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
+                
+                if (this.Queues != null)
+                    hash = hash * 59 + this.Queues.GetHashCode();
+                
+                if (this.Languages != null)
+                    hash = hash * 59 + this.Languages.GetHashCode();
+                
+                if (this.Skills != null)
+                    hash = hash * 59 + this.Skills.GetHashCode();
+                
+                if (this.Schedulable != null)
+                    hash = hash * 59 + this.Schedulable.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

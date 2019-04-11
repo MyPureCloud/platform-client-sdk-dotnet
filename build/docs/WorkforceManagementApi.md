@@ -20,7 +20,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementManagementunitActivitycode**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitactivitycode) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId} | Get an activity code |
 | [**GetWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitactivitycodes) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes | Get activity codes |
 | [**GetWorkforcemanagementManagementunitAgent**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitagent) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId} | Get data for agent in the management unit |
-| [**GetWorkforcemanagementManagementunitAgentShifttrades**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitagentshifttrades) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades | Gets all the shift trades for a given agent |
 | [**GetWorkforcemanagementManagementunitIntradayQueues**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitintradayqueues) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/intraday/queues | Get intraday queues for the given date |
 | [**GetWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitschedulingrun) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId} | Gets the status for a specific scheduling run |
 | [**GetWorkforcemanagementManagementunitSchedulingRunResult**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitschedulingrunresult) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}/result | Gets the result of a specific scheduling run |
@@ -36,7 +35,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekschedule) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId} | Get a week schedule |
 | [**GetWorkforcemanagementManagementunitWeekScheduleGenerationresults**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekschedulegenerationresults) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults | Get week schedule generation results |
 | [**GetWorkforcemanagementManagementunitWeekSchedules**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekschedules) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules | Get the list of schedules in a week in management unit |
-| [**GetWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekshifttrades) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades | Gets all the shift trades for a given week |
 | [**GetWorkforcemanagementManagementunitWeekShorttermforecastFinal**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekshorttermforecastfinal) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/final | Get the final result of a short term forecast calculation with modifications applied |
 | [**GetWorkforcemanagementManagementunitWeekShorttermforecasts**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitweekshorttermforecasts) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts | Get short term forecasts |
 | [**GetWorkforcemanagementManagementunitWorkplan**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitworkplan) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId} | Get a work plan |
@@ -49,7 +47,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementTimeoffrequest**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequest) | **GET** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Get a time off request for the current user |
 | [**GetWorkforcemanagementTimeoffrequests**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequests) | **GET** /api/v2/workforcemanagement/timeoffrequests | Get a list of time off requests for the current user |
 | [**PatchWorkforcemanagementManagementunitActivitycode**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitactivitycode) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId} | Update an activity code |
-| [**PatchWorkforcemanagementManagementunitAgent**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitagent) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId} | Update agent details |
 | [**PatchWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitschedulingrun) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId} | Marks a specific scheduling run as applied, allowing a new rescheduling run to be started |
 | [**PatchWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitservicegoalgroup) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId} | Update a service goal group |
 | [**PatchWorkforcemanagementManagementunitSettings**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitsettings) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/settings | Patch the settings for the requested management unit |
@@ -71,10 +68,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementManagementunitWeekSchedules**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedules) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules | Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500 |
 | [**PostWorkforcemanagementManagementunitWeekSchedulesGenerate**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulesgenerate) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/generate | Generate a week schedule |
 | [**PostWorkforcemanagementManagementunitWeekSchedulesPartialupload**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekschedulespartialupload) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/partialupload | Partial upload of user schedules where activity count is greater than 17500 |
-| [**PostWorkforcemanagementManagementunitWeekShifttradeMatch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttradematch) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match | Matches a shift trade. This route can only be called by the receiving agent |
-| [**PostWorkforcemanagementManagementunitWeekShifttradeUpdate**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttradeupdate) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/update | Updates a shift trade. This route can only be called by the initiating agent |
-| [**PostWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttrades) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades | Adds a shift trade |
-| [**PostWorkforcemanagementManagementunitWeekShifttradesSearch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttradessearch) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search | Searches for potential shift trade matches for the current agent |
 | [**PostWorkforcemanagementManagementunitWeekShorttermforecastCopy**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshorttermforecastcopy) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy | Copy a short term forecast |
 | [**PostWorkforcemanagementManagementunitWeekShorttermforecasts**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshorttermforecasts) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts | Import a short term forecast |
 | [**PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshorttermforecastsgenerate) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/generate | Generate a short term forecast |
@@ -85,7 +78,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementNotificationsUpdate**](WorkforceManagementApi.html#postworkforcemanagementnotificationsupdate) | **POST** /api/v2/workforcemanagement/notifications/update | Mark a list of notifications as read or unread |
 | [**PostWorkforcemanagementSchedules**](WorkforceManagementApi.html#postworkforcemanagementschedules) | **POST** /api/v2/workforcemanagement/schedules | Get published schedule for the current user |
 | [**PostWorkforcemanagementTimeoffrequests**](WorkforceManagementApi.html#postworkforcemanagementtimeoffrequests) | **POST** /api/v2/workforcemanagement/timeoffrequests | Create a time off request for the current user |
-| [**PutWorkforcemanagementManagementunitWeekShifttradeState**](WorkforceManagementApi.html#putworkforcemanagementmanagementunitweekshifttradestate) | **PUT** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/state | Updates a shift trade state |
 {: class="table table-striped"}
 
 <a name="deleteworkforcemanagementmanagementunit"></a>
@@ -100,7 +92,6 @@ Delete management unit
 
 Requires ANY permissions: 
 
-* wfm:managementUnit:administer
 * wfm:managementUnit:delete
 
 ### Example
@@ -161,7 +152,6 @@ Deletes an activity code
 
 Requires ANY permissions: 
 
-* wfm:activityCode:administer
 * wfm:activityCode:delete
 
 ### Example
@@ -286,7 +276,6 @@ Delete a service goal group
 
 Requires ANY permissions: 
 
-* wfm:serviceGoalGroup:administer
 * wfm:serviceGoalGroup:delete
 
 ### Example
@@ -349,7 +338,6 @@ Delete a schedule
 
 Requires ANY permissions: 
 
-* wfm:schedule:administer
 * wfm:schedule:delete
 
 ### Example
@@ -414,7 +402,6 @@ Must not be tied to any schedules
 
 Requires ANY permissions: 
 
-* wfm:shortTermForecast:administer
 * wfm:shortTermForecast:delete
 
 ### Example
@@ -479,7 +466,6 @@ Delete a work plan
 
 Requires ANY permissions: 
 
-* wfm:workPlan:administer
 * wfm:workPlan:delete
 
 ### Example
@@ -665,11 +651,9 @@ Get management unit
 Requires ANY permissions: 
 
 * wfm:activityCode:add
-* wfm:activityCode:administer
 * wfm:activityCode:delete
 * wfm:activityCode:edit
 * wfm:activityCode:view
-* wfm:agent:administer
 * wfm:agent:edit
 * wfm:agentSchedule:view
 * wfm:agentTimeOffRequest:submit
@@ -677,34 +661,28 @@ Requires ANY permissions:
 * wfm:historicalAdherence:view
 * wfm:intraday:view
 * wfm:managementUnit:add
-* wfm:managementUnit:administer
 * wfm:managementUnit:delete
 * wfm:managementUnit:edit
 * wfm:managementUnit:view
 * wfm:publishedSchedule:view
 * wfm:realtimeAdherence:view
 * wfm:schedule:add
-* wfm:schedule:administer
 * wfm:schedule:delete
 * wfm:schedule:edit
 * wfm:schedule:generate
 * wfm:schedule:view
 * wfm:serviceGoalGroup:add
-* wfm:serviceGoalGroup:administer
 * wfm:serviceGoalGroup:delete
 * wfm:serviceGoalGroup:edit
 * wfm:serviceGoalGroup:view
 * wfm:shortTermForecast:add
-* wfm:shortTermForecast:administer
 * wfm:shortTermForecast:delete
 * wfm:shortTermForecast:edit
 * wfm:shortTermForecast:view
 * wfm:timeOffRequest:add
-* wfm:timeOffRequest:administer
 * wfm:timeOffRequest:edit
 * wfm:timeOffRequest:view
 * wfm:workPlan:add
-* wfm:workPlan:administer
 * wfm:workPlan:delete
 * wfm:workPlan:edit
 * wfm:workPlan:view
@@ -770,7 +748,6 @@ Get an activity code
 
 Requires ANY permissions: 
 
-* wfm:activityCode:administer
 * wfm:activityCode:view
 
 ### Example
@@ -835,11 +812,9 @@ Get activity codes
 Requires ANY permissions: 
 
 * wfm:activityCode:add
-* wfm:activityCode:administer
 * wfm:activityCode:delete
 * wfm:activityCode:edit
 * wfm:activityCode:view
-* wfm:agent:administer
 * wfm:agent:edit
 * wfm:agentSchedule:view
 * wfm:agentTimeOffRequest:submit
@@ -847,34 +822,28 @@ Requires ANY permissions:
 * wfm:historicalAdherence:view
 * wfm:intraday:view
 * wfm:managementUnit:add
-* wfm:managementUnit:administer
 * wfm:managementUnit:delete
 * wfm:managementUnit:edit
 * wfm:managementUnit:view
 * wfm:publishedSchedule:view
 * wfm:realtimeAdherence:view
 * wfm:schedule:add
-* wfm:schedule:administer
 * wfm:schedule:delete
 * wfm:schedule:edit
 * wfm:schedule:generate
 * wfm:schedule:view
 * wfm:serviceGoalGroup:add
-* wfm:serviceGoalGroup:administer
 * wfm:serviceGoalGroup:delete
 * wfm:serviceGoalGroup:edit
 * wfm:serviceGoalGroup:view
 * wfm:shortTermForecast:add
-* wfm:shortTermForecast:administer
 * wfm:shortTermForecast:delete
 * wfm:shortTermForecast:edit
 * wfm:shortTermForecast:view
 * wfm:timeOffRequest:add
-* wfm:timeOffRequest:administer
 * wfm:timeOffRequest:edit
 * wfm:timeOffRequest:view
 * wfm:workPlan:add
-* wfm:workPlan:administer
 * wfm:workPlan:delete
 * wfm:workPlan:edit
 * wfm:workPlan:view
@@ -938,7 +907,6 @@ Get data for agent in the management unit
 
 Requires ANY permissions: 
 
-* wfm:agent:administer
 * wfm:agent:view
 
 ### Example
@@ -989,70 +957,6 @@ namespace Example
 ### Return type
 
 [**WfmAgent**](WfmAgent.html)
-
-<a name="getworkforcemanagementmanagementunitagentshifttrades"></a>
-
-## [**ShiftTradeListResponse**](ShiftTradeListResponse.html) GetWorkforcemanagementManagementunitAgentShifttrades (string managementUnitId, string agentId)
-
-
-
-Gets all the shift trades for a given agent
-
-
-
-Requires ANY permissions: 
-
-* wfm:shiftTradeRequest:edit
-* wfm:shiftTradeRequest:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetWorkforcemanagementManagementunitAgentShifttradesExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The id of the management unit, or 'mine' for the management unit of the logged-in user.
-            var agentId = agentId_example;  // string | The agent id
-
-            try
-            { 
-                // Gets all the shift trades for a given agent
-                ShiftTradeListResponse result = apiInstance.GetWorkforcemanagementManagementunitAgentShifttrades(managementUnitId, agentId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementManagementunitAgentShifttrades: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **agentId** | **string**| The agent id |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ShiftTradeListResponse**](ShiftTradeListResponse.html)
 
 <a name="getworkforcemanagementmanagementunitintradayqueues"></a>
 
@@ -1316,7 +1220,6 @@ Get a service goal group
 
 Requires ANY permissions: 
 
-* wfm:serviceGoalGroup:administer
 * wfm:serviceGoalGroup:view
 
 ### Example
@@ -1380,9 +1283,7 @@ Get service goal groups
 
 Requires ANY permissions: 
 
-* wfm:serviceGoalGroup:administer
 * wfm:serviceGoalGroup:view
-* wfm:shortTermForecast:administer
 * wfm:shortTermForecast:view
 
 ### Example
@@ -1444,7 +1345,6 @@ Get the settings for the requested management unit
 
 Requires ANY permissions: 
 
-* wfm:managementUnit:administer
 * wfm:managementUnit:view
 
 ### Example
@@ -1629,7 +1529,6 @@ Get a time off request
 
 Requires ANY permissions: 
 
-* wfm:timeOffRequest:administer
 * wfm:timeOffRequest:view
 
 ### Example
@@ -1695,7 +1594,6 @@ Get a list of time off requests for a given user
 
 Requires ANY permissions: 
 
-* wfm:timeOffRequest:administer
 * wfm:timeOffRequest:view
 
 ### Example
@@ -1761,16 +1659,12 @@ Get users in the management unit
 
 Requires ANY permissions: 
 
-* wfm:agent:administer
 * wfm:agent:view
 * wfm:historicalAdherence:view
 * wfm:publishedSchedule:view
 * wfm:realtimeAdherence:view
-* wfm:schedule:administer
 * wfm:schedule:view
-* wfm:timeOffRequest:administer
 * wfm:timeOffRequest:view
-* wfm:workPlan:administer
 * wfm:workPlan:view
 
 ### Example
@@ -1833,7 +1727,6 @@ Get a week schedule
 Requires ANY permissions: 
 
 * wfm:publishedSchedule:view
-* wfm:schedule:administer
 * wfm:schedule:view
 
 ### Example
@@ -1904,7 +1797,6 @@ Get week schedule generation results
 Requires ANY permissions: 
 
 * wfm:publishedSchedule:view
-* wfm:schedule:administer
 * wfm:schedule:view
 
 ### Example
@@ -1971,7 +1863,6 @@ Get the list of schedules in a week in management unit
 Requires ANY permissions: 
 
 * wfm:publishedSchedule:view
-* wfm:schedule:administer
 * wfm:schedule:view
 
 ### Example
@@ -2023,72 +1914,6 @@ namespace Example
 
 [**WeekScheduleListResponse**](WeekScheduleListResponse.html)
 
-<a name="getworkforcemanagementmanagementunitweekshifttrades"></a>
-
-## [**WeekShiftTradeListResponse**](WeekShiftTradeListResponse.html) GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, DateTime? weekDateId, bool? evaluateMatches = null)
-
-
-
-Gets all the shift trades for a given week
-
-
-
-Requires ANY permissions: 
-
-* wfm:shiftTradeRequest:view
-* wfm:shiftTradeRequest:edit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetWorkforcemanagementManagementunitWeekShifttradesExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var weekDateId = 2013-10-20;  // DateTime? | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var evaluateMatches = true;  // bool? | Whether to evaluate the matches for violations (optional)  (default to true)
-
-            try
-            { 
-                // Gets all the shift trades for a given week
-                WeekShiftTradeListResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, evaluateMatches);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementManagementunitWeekShifttrades: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **weekDateId** | **DateTime?**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **evaluateMatches** | **bool?**| Whether to evaluate the matches for violations | [optional] [default to true] |
-{: class="table table-striped"}
-
-### Return type
-
-[**WeekShiftTradeListResponse**](WeekShiftTradeListResponse.html)
-
 <a name="getworkforcemanagementmanagementunitweekshorttermforecastfinal"></a>
 
 ## [**ForecastResultResponse**](ForecastResultResponse.html) GetWorkforcemanagementManagementunitWeekShorttermforecastFinal (string managementUnitId, string weekDateId, string forecastId, bool? forceDownloadService = null)
@@ -2101,7 +1926,6 @@ Get the final result of a short term forecast calculation with modifications app
 
 Requires ANY permissions: 
 
-* wfm:shortTermForecast:administer
 * wfm:shortTermForecast:view
 
 ### Example
@@ -2170,7 +1994,6 @@ Use \"recent\" for the `weekDateId` path parameter to fetch all forecasts for +/
 Requires ANY permissions: 
 
 * wfm:schedule:generate
-* wfm:shortTermForecast:administer
 * wfm:shortTermForecast:view
 
 ### Example
@@ -2234,9 +2057,7 @@ Get a work plan
 
 Requires ANY permissions: 
 
-* wfm:workPlan:administer
 * wfm:workPlan:view
-* wfm:schedule:administer
 * wfm:schedule:edit
 
 ### Example
@@ -2300,11 +2121,8 @@ Get work plans
 
 Requires ANY permissions: 
 
-* wfm:workPlan:administer
-* wfm:agent:administer
 * wfm:agent:view
 * wfm:publishedSchedule:view
-* wfm:schedule:administer
 * wfm:schedule:view
 * wfm:workPlan:view
 
@@ -2796,7 +2614,6 @@ Update an activity code
 
 Requires ANY permissions: 
 
-* wfm:activityCode:administer
 * wfm:activityCode:edit
 
 ### Example
@@ -2849,69 +2666,6 @@ namespace Example
 ### Return type
 
 [**ActivityCode**](ActivityCode.html)
-
-<a name="patchworkforcemanagementmanagementunitagent"></a>
-
-## void PatchWorkforcemanagementManagementunitAgent (string managementUnitId, string agentId, UpdateAgentRequest body)
-
-
-
-Update agent details
-
-
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PatchWorkforcemanagementManagementunitAgentExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The id of the management unit, or 'mine' for the management unit of the logged-in user.
-            var agentId = agentId_example;  // string | The agent id
-            var body = new UpdateAgentRequest(); // UpdateAgentRequest | The request body
-
-            try
-            { 
-                // Update agent details
-                apiInstance.PatchWorkforcemanagementManagementunitAgent(managementUnitId, agentId, body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementManagementunitAgent: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **agentId** | **string**| The agent id |  |
-| **body** | [**UpdateAgentRequest**](UpdateAgentRequest.html)| The request body |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
 
 <a name="patchworkforcemanagementmanagementunitschedulingrun"></a>
 
@@ -2990,7 +2744,6 @@ Update a service goal group
 
 Requires ANY permissions: 
 
-* wfm:serviceGoalGroup:administer
 * wfm:serviceGoalGroup:edit
 
 ### Example
@@ -3056,7 +2809,6 @@ Patch the settings for the requested management unit
 
 Requires ANY permissions: 
 
-* wfm:managementUnit:administer
 * wfm:managementUnit:edit
 
 ### Example
@@ -3120,7 +2872,6 @@ Update a time off request
 
 Requires ANY permissions: 
 
-* wfm:timeOffRequest:administer
 * wfm:timeOffRequest:edit
 
 ### Example
@@ -3188,7 +2939,6 @@ Update a week schedule
 
 Requires ANY permissions: 
 
-* wfm:schedule:administer
 * wfm:schedule:edit
 
 ### Example
@@ -3260,7 +3010,6 @@ Update a work plan
 
 Requires ANY permissions: 
 
-* wfm:workPlan:administer
 * wfm:workPlan:edit
 
 ### Example
@@ -3451,7 +3200,6 @@ Create a new activity code
 Requires ANY permissions: 
 
 * wfm:activityCode:add
-* wfm:activityCode:administer
 
 ### Example
 ```{"language":"csharp"}
@@ -3641,7 +3389,6 @@ Query published schedules for given given time range for set of users
 Requires ANY permissions: 
 
 * wfm:publishedSchedule:view
-* wfm:schedule:administer
 * wfm:schedule:view
 
 ### Example
@@ -3706,7 +3453,6 @@ Create a new service goal group
 Requires ANY permissions: 
 
 * wfm:serviceGoalGroup:add
-* wfm:serviceGoalGroup:administer
 
 ### Example
 ```{"language":"csharp"}
@@ -3769,7 +3515,6 @@ Create a new time off request
 
 Requires ANY permissions: 
 
-* wfm:timeOffRequest:administer
 * wfm:timeOffRequest:add
 
 ### Example
@@ -3833,7 +3578,6 @@ Gets a list of time off requests from lookup ids
 
 Requires ANY permissions: 
 
-* wfm:timeOffRequest:administer
 * wfm:timeOffRequest:view
 
 ### Example
@@ -3897,7 +3641,6 @@ Gets the lookup ids to fetch the specified set of requests
 
 Requires ANY permissions: 
 
-* wfm:timeOffRequest:administer
 * wfm:timeOffRequest:view
 
 ### Example
@@ -3962,7 +3705,6 @@ Copy a week schedule
 Requires ANY permissions: 
 
 * wfm:schedule:add
-* wfm:schedule:administer
 
 ### Example
 ```{"language":"csharp"}
@@ -4033,7 +3775,6 @@ Start a scheduling run to compute the reschedule. When the scheduling run finish
 
 Requires ANY permissions: 
 
-* wfm:schedule:administer
 * wfm:schedule:edit
 
 ### Example
@@ -4102,7 +3843,6 @@ Add a schedule for a week in management unit using imported data. Use partial up
 Requires ANY permissions: 
 
 * wfm:schedule:add
-* wfm:schedule:administer
 
 ### Example
 ```{"language":"csharp"}
@@ -4237,7 +3977,6 @@ Partial upload of user schedules where activity count is greater than 17500
 Requires ANY permissions: 
 
 * wfm:schedule:add
-* wfm:schedule:administer
 * wfm:schedule:edit
 
 ### Example
@@ -4291,270 +4030,6 @@ namespace Example
 
 [**PartialUploadResponse**](PartialUploadResponse.html)
 
-<a name="postworkforcemanagementmanagementunitweekshifttradematch"></a>
-
-## [**MatchShiftTradeResponse**](MatchShiftTradeResponse.html) PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, DateTime? weekDateId, MatchShiftTradeRequest body, string tradeId)
-
-
-
-Matches a shift trade. This route can only be called by the receiving agent
-
-
-
-Requires ANY permissions: 
-
-* wfm:agentShiftTradeRequest:participate
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostWorkforcemanagementManagementunitWeekShifttradeMatchExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var weekDateId = 2013-10-20;  // DateTime? | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var body = new MatchShiftTradeRequest(); // MatchShiftTradeRequest | body
-            var tradeId = tradeId_example;  // string | The ID of the shift trade to update
-
-            try
-            { 
-                // Matches a shift trade. This route can only be called by the receiving agent
-                MatchShiftTradeResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShifttradeMatch(managementUnitId, weekDateId, body, tradeId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitWeekShifttradeMatch: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **weekDateId** | **DateTime?**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **body** | [**MatchShiftTradeRequest**](MatchShiftTradeRequest.html)| body |  |
-| **tradeId** | **string**| The ID of the shift trade to update |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**MatchShiftTradeResponse**](MatchShiftTradeResponse.html)
-
-<a name="postworkforcemanagementmanagementunitweekshifttradeupdate"></a>
-
-## [**ShiftTradeResponse**](ShiftTradeResponse.html) PostWorkforcemanagementManagementunitWeekShifttradeUpdate (string managementUnitId, DateTime? weekDateId, UpdateShiftTradeRequest body, string tradeId)
-
-
-
-Updates a shift trade. This route can only be called by the initiating agent
-
-
-
-Requires ANY permissions: 
-
-* wfm:agentShiftTradeRequest:participate
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostWorkforcemanagementManagementunitWeekShifttradeUpdateExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var weekDateId = 2013-10-20;  // DateTime? | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var body = new UpdateShiftTradeRequest(); // UpdateShiftTradeRequest | body
-            var tradeId = tradeId_example;  // string | The ID of the shift trade to update
-
-            try
-            { 
-                // Updates a shift trade. This route can only be called by the initiating agent
-                ShiftTradeResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShifttradeUpdate(managementUnitId, weekDateId, body, tradeId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitWeekShifttradeUpdate: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **weekDateId** | **DateTime?**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **body** | [**UpdateShiftTradeRequest**](UpdateShiftTradeRequest.html)| body |  |
-| **tradeId** | **string**| The ID of the shift trade to update |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ShiftTradeResponse**](ShiftTradeResponse.html)
-
-<a name="postworkforcemanagementmanagementunitweekshifttrades"></a>
-
-## [**ShiftTradeResponse**](ShiftTradeResponse.html) PostWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, DateTime? weekDateId, AddShiftTradeRequest body)
-
-
-
-Adds a shift trade
-
-
-
-Requires ANY permissions: 
-
-* wfm:agentShiftTradeRequest:participate
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostWorkforcemanagementManagementunitWeekShifttradesExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var weekDateId = 2013-10-20;  // DateTime? | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var body = new AddShiftTradeRequest(); // AddShiftTradeRequest | body
-
-            try
-            { 
-                // Adds a shift trade
-                ShiftTradeResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitWeekShifttrades: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **weekDateId** | **DateTime?**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **body** | [**AddShiftTradeRequest**](AddShiftTradeRequest.html)| body |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ShiftTradeResponse**](ShiftTradeResponse.html)
-
-<a name="postworkforcemanagementmanagementunitweekshifttradessearch"></a>
-
-## [**SearchShiftTradesResponse**](SearchShiftTradesResponse.html) PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, DateTime? weekDateId, SearchShiftTradesRequest body)
-
-
-
-Searches for potential shift trade matches for the current agent
-
-
-
-Requires ANY permissions: 
-
-* wfm:agentShiftTradeRequest:participate
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostWorkforcemanagementManagementunitWeekShifttradesSearchExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var weekDateId = 2013-10-20;  // DateTime? | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var body = new SearchShiftTradesRequest(); // SearchShiftTradesRequest | body
-
-            try
-            { 
-                // Searches for potential shift trade matches for the current agent
-                SearchShiftTradesResponse result = apiInstance.PostWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId, weekDateId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitWeekShifttradesSearch: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **weekDateId** | **DateTime?**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **body** | [**SearchShiftTradesRequest**](SearchShiftTradesRequest.html)| body |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**SearchShiftTradesResponse**](SearchShiftTradesResponse.html)
-
 <a name="postworkforcemanagementmanagementunitweekshorttermforecastcopy"></a>
 
 ## [**ShortTermForecastResponse**](ShortTermForecastResponse.html) PostWorkforcemanagementManagementunitWeekShorttermforecastCopy (string managementUnitId, string weekDateId, string forecastId, CopyShortTermForecastRequest body, bool? forceAsync = null)
@@ -4568,7 +4043,6 @@ Copy a short term forecast
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:add
-* wfm:shortTermForecast:administer
 
 ### Example
 ```{"language":"csharp"}
@@ -4638,7 +4112,6 @@ Import a short term forecast
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:add
-* wfm:shortTermForecast:administer
 
 ### Example
 ```{"language":"csharp"}
@@ -4706,7 +4179,6 @@ Generate a short term forecast
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:add
-* wfm:shortTermForecast:administer
 
 ### Example
 ```{"language":"csharp"}
@@ -4774,7 +4246,6 @@ Import a short term forecast
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:add
-* wfm:shortTermForecast:administer
 
 ### Example
 ```{"language":"csharp"}
@@ -4840,7 +4311,6 @@ Create a copy of work plan
 Requires ANY permissions: 
 
 * wfm:workPlan:add
-* wfm:workPlan:administer
 
 ### Example
 ```{"language":"csharp"}
@@ -4906,7 +4376,6 @@ Create a new work plan
 Requires ANY permissions: 
 
 * wfm:workPlan:add
-* wfm:workPlan:administer
 
 ### Example
 ```{"language":"csharp"}
@@ -4969,7 +4438,6 @@ Add a management unit
 
 Requires ANY permissions: 
 
-* wfm:managementUnit:administer
 * wfm:managementUnit:add
 
 ### Example
@@ -5093,7 +4561,6 @@ Requires ANY permissions:
 
 * wfm:agentSchedule:view
 * wfm:publishedSchedule:view
-* wfm:schedule:administer
 
 ### Example
 ```{"language":"csharp"}
@@ -5202,72 +4669,4 @@ namespace Example
 ### Return type
 
 [**TimeOffRequestResponse**](TimeOffRequestResponse.html)
-
-<a name="putworkforcemanagementmanagementunitweekshifttradestate"></a>
-
-## [**ShiftTradeResponse**](ShiftTradeResponse.html) PutWorkforcemanagementManagementunitWeekShifttradeState (string managementUnitId, DateTime? weekDateId, string tradeId, UpdateShiftTradeStateRequest body)
-
-
-
-Updates a shift trade state
-
-
-
-Requires ANY permissions: 
-
-* wfm:agentShiftTradeRequest:participate
-* wfm:shiftTradeRequest:edit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PutWorkforcemanagementManagementunitWeekShifttradeStateExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new WorkforceManagementApi();
-            var managementUnitId = managementUnitId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var weekDateId = 2013-10-20;  // DateTime? | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var tradeId = tradeId_example;  // string | The ID of the shift trade to update
-            var body = new UpdateShiftTradeStateRequest(); // UpdateShiftTradeStateRequest | body
-
-            try
-            { 
-                // Updates a shift trade state
-                ShiftTradeResponse result = apiInstance.PutWorkforcemanagementManagementunitWeekShifttradeState(managementUnitId, weekDateId, tradeId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WorkforceManagementApi.PutWorkforcemanagementManagementunitWeekShifttradeState: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **managementUnitId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **weekDateId** | **DateTime?**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **tradeId** | **string**| The ID of the shift trade to update |  |
-| **body** | [**UpdateShiftTradeStateRequest**](UpdateShiftTradeStateRequest.html)| body |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ShiftTradeResponse**](ShiftTradeResponse.html)
 

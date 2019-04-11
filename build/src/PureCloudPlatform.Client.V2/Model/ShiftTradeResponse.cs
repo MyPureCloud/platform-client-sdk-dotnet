@@ -191,7 +191,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ReviewedBy">The user who reviewed this shift trade.</param>
         /// <param name="ReviewedDate">The timestamp when this shift trade was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Metadata">Version data for this trade.</param>
-        public ShiftTradeResponse(string Id = null, DateTime? WeekDate = null, WeekScheduleReference Schedule = null, StateEnum? State = null, UserReference InitiatingUser = null, string InitiatingShiftId = null, DateTime? InitiatingShiftStart = null, DateTime? InitiatingShiftEnd = null, UserReference ReceivingUser = null, string ReceivingShiftId = null, DateTime? ReceivingShiftStart = null, DateTime? ReceivingShiftEnd = null, DateTime? Expiration = null, bool? OneSided = null, List<ShiftTradeResponseAcceptableIntervals> AcceptableIntervals = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, WfmVersionedEntityMetadata Metadata = null)
+        public ShiftTradeResponse(string Id = null, DateTime? WeekDate = null, WeekScheduleReference Schedule = null, StateEnum? State = null, UserReference InitiatingUser = null, string InitiatingShiftId = null, DateTime? InitiatingShiftStart = null, DateTime? InitiatingShiftEnd = null, UserReference ReceivingUser = null, string ReceivingShiftId = null, DateTime? ReceivingShiftStart = null, DateTime? ReceivingShiftEnd = null, DateTime? Expiration = null, bool? OneSided = null, List<string> AcceptableIntervals = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Id = Id;
             this.WeekDate = WeekDate;
@@ -339,7 +339,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AcceptableIntervals
         /// </summary>
         [DataMember(Name="acceptableIntervals", EmitDefaultValue=false)]
-        public List<ShiftTradeResponseAcceptableIntervals> AcceptableIntervals { get; set; }
+        public List<string> AcceptableIntervals { get; set; }
         
         
         
