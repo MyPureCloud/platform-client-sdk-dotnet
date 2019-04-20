@@ -105,13 +105,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Description.</param>
         /// <param name="RegisteredRedirectUri">List of allowed callbacks for this client. For example: https://myap.example.com/auth/callback.</param>
         /// <param name="Secret">System created secret assigned to this client. Secrets are required for code authorization and client credential grants..</param>
-        /// <param name="RoleIds">Roles assigned to this client. Roles only apply to clients using the client_credential grant.</param>
+        /// <param name="RoleIds">Deprecated. Use roleDivisions instead..</param>
         /// <param name="DateCreated">Date this client was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateModified">Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreatedBy">User that created this client.</param>
         /// <param name="ModifiedBy">User that last modified this client.</param>
-        /// <param name="Scope">The scope requested by this client (required).</param>
-        /// <param name="RoleDivisions">Set of roles and their corresponding divisions associated with this client.</param>
+        /// <param name="Scope">The scope requested by this client. Scopes only apply to clients not using the client_credential grant.</param>
+        /// <param name="RoleDivisions">Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant.</param>
         public OAuthClientListing(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, List<string> Scope = null, List<RoleDivision> RoleDivisions = null)
         {
             this.Name = Name;
@@ -185,9 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Roles assigned to this client. Roles only apply to clients using the client_credential grant
+        /// Deprecated. Use roleDivisions instead.
         /// </summary>
-        /// <value>Roles assigned to this client. Roles only apply to clients using the client_credential grant</value>
+        /// <value>Deprecated. Use roleDivisions instead.</value>
         [DataMember(Name="roleIds", EmitDefaultValue=false)]
         public List<string> RoleIds { get; set; }
         
@@ -230,18 +230,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The scope requested by this client
+        /// The scope requested by this client. Scopes only apply to clients not using the client_credential grant
         /// </summary>
-        /// <value>The scope requested by this client</value>
+        /// <value>The scope requested by this client. Scopes only apply to clients not using the client_credential grant</value>
         [DataMember(Name="scope", EmitDefaultValue=false)]
         public List<string> Scope { get; set; }
         
         
         
         /// <summary>
-        /// Set of roles and their corresponding divisions associated with this client
+        /// Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant
         /// </summary>
-        /// <value>Set of roles and their corresponding divisions associated with this client</value>
+        /// <value>Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant</value>
         [DataMember(Name="roleDivisions", EmitDefaultValue=false)]
         public List<RoleDivision> RoleDivisions { get; set; }
         

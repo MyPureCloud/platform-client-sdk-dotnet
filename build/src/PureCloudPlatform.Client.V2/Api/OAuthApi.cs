@@ -111,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
-        OAuthClient PostOauthClients (OAuthClient body);
+        OAuthClient PostOauthClients (OAuthClientRequest body);
 
         /// <summary>
         /// Create OAuth client
@@ -122,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
-        ApiResponse<OAuthClient> PostOauthClientsWithHttpInfo (OAuthClient body);
+        ApiResponse<OAuthClient> PostOauthClientsWithHttpInfo (OAuthClientRequest body);
         
         /// <summary>
         /// Update OAuth Client
@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
-        OAuthClient PutOauthClient (string clientId, OAuthClient body);
+        OAuthClient PutOauthClient (string clientId, OAuthClientRequest body);
 
         /// <summary>
         /// Update OAuth Client
@@ -146,7 +146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
-        ApiResponse<OAuthClient> PutOauthClientWithHttpInfo (string clientId, OAuthClient body);
+        ApiResponse<OAuthClient> PutOauthClientWithHttpInfo (string clientId, OAuthClientRequest body);
         
         #endregion Synchronous Operations
         
@@ -247,7 +247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        System.Threading.Tasks.Task<OAuthClient> PostOauthClientsAsync (OAuthClient body);
+        System.Threading.Tasks.Task<OAuthClient> PostOauthClientsAsync (OAuthClientRequest body);
 
         /// <summary>
         /// Create OAuth client
@@ -258,7 +258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostOauthClientsAsyncWithHttpInfo (OAuthClient body);
+        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostOauthClientsAsyncWithHttpInfo (OAuthClientRequest body);
         
         /// <summary>
         /// Update OAuth Client
@@ -270,7 +270,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        System.Threading.Tasks.Task<OAuthClient> PutOauthClientAsync (string clientId, OAuthClient body);
+        System.Threading.Tasks.Task<OAuthClient> PutOauthClientAsync (string clientId, OAuthClientRequest body);
 
         /// <summary>
         /// Update OAuth Client
@@ -282,7 +282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutOauthClientAsyncWithHttpInfo (string clientId, OAuthClient body);
+        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutOauthClientAsyncWithHttpInfo (string clientId, OAuthClientRequest body);
         
         #endregion Asynchronous Operations
         
@@ -1139,7 +1139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
-        public OAuthClient PostOauthClients (OAuthClient body)
+        public OAuthClient PostOauthClients (OAuthClientRequest body)
         {
              ApiResponse<OAuthClient> localVarResponse = PostOauthClientsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1151,7 +1151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
-        public ApiResponse< OAuthClient > PostOauthClientsWithHttpInfo (OAuthClient body)
+        public ApiResponse< OAuthClient > PostOauthClientsWithHttpInfo (OAuthClientRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1238,7 +1238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        public async System.Threading.Tasks.Task<OAuthClient> PostOauthClientsAsync (OAuthClient body)
+        public async System.Threading.Tasks.Task<OAuthClient> PostOauthClientsAsync (OAuthClientRequest body)
         {
              ApiResponse<OAuthClient> localVarResponse = await PostOauthClientsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1251,7 +1251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostOauthClientsAsyncWithHttpInfo (OAuthClient body)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostOauthClientsAsyncWithHttpInfo (OAuthClientRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1341,7 +1341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
-        public OAuthClient PutOauthClient (string clientId, OAuthClient body)
+        public OAuthClient PutOauthClient (string clientId, OAuthClientRequest body)
         {
              ApiResponse<OAuthClient> localVarResponse = PutOauthClientWithHttpInfo(clientId, body);
              return localVarResponse.Data;
@@ -1354,7 +1354,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
-        public ApiResponse< OAuthClient > PutOauthClientWithHttpInfo (string clientId, OAuthClient body)
+        public ApiResponse< OAuthClient > PutOauthClientWithHttpInfo (string clientId, OAuthClientRequest body)
         { 
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1446,7 +1446,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        public async System.Threading.Tasks.Task<OAuthClient> PutOauthClientAsync (string clientId, OAuthClient body)
+        public async System.Threading.Tasks.Task<OAuthClient> PutOauthClientAsync (string clientId, OAuthClientRequest body)
         {
              ApiResponse<OAuthClient> localVarResponse = await PutOauthClientAsyncWithHttpInfo(clientId, body);
              return localVarResponse.Data;
@@ -1460,7 +1460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutOauthClientAsyncWithHttpInfo (string clientId, OAuthClient body)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutOauthClientAsyncWithHttpInfo (string clientId, OAuthClientRequest body)
         { 
             // verify the required parameter 'clientId' is set
             if (clientId == null)

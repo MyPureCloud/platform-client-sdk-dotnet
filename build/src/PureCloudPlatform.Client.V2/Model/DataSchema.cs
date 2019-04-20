@@ -89,6 +89,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DataSchema" /> class.
@@ -102,13 +112,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Version">The schema&#39;s version. Required for updates. (required).</param>
         /// <param name="AppliesTo">The PureCloud data this schema extends..</param>
+        /// <param name="Enabled">The schema&#39;s current enabled/disabled status. A disabled schema cannot be assigned to any other objects, but the data on those objects from the schemas still exists.</param>
+        /// <param name="Deleted">The schema&#39;s deleted status. A deleted schema can not be used by any records or updated. All records using a deleted schema will eventually have their schema-based data removed..</param>
         /// <param name="CreatedBy">The user that created this schema..</param>
         /// <param name="JsonSchema">The JSON schema defining the data extension. (required).</param>
-        public DataSchema(string Name = null, int? Version = null, List<AppliesToEnum> AppliesTo = null, UriReference CreatedBy = null, JsonSchemaDocument JsonSchema = null)
+        public DataSchema(string Name = null, int? Version = null, List<AppliesToEnum> AppliesTo = null, bool? Enabled = null, bool? Deleted = null, UriReference CreatedBy = null, JsonSchemaDocument JsonSchema = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.AppliesTo = AppliesTo;
+            this.Enabled = Enabled;
+            this.Deleted = Deleted;
             this.CreatedBy = CreatedBy;
             this.JsonSchema = JsonSchema;
             
@@ -148,6 +162,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The PureCloud data this schema extends.</value>
         [DataMember(Name="appliesTo", EmitDefaultValue=false)]
         public List<AppliesToEnum> AppliesTo { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The schema&#39;s current enabled/disabled status. A disabled schema cannot be assigned to any other objects, but the data on those objects from the schemas still exists
+        /// </summary>
+        /// <value>The schema&#39;s current enabled/disabled status. A disabled schema cannot be assigned to any other objects, but the data on those objects from the schemas still exists</value>
+        [DataMember(Name="enabled", EmitDefaultValue=false)]
+        public bool? Enabled { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The schema&#39;s deleted status. A deleted schema can not be used by any records or updated. All records using a deleted schema will eventually have their schema-based data removed.
+        /// </summary>
+        /// <value>The schema&#39;s deleted status. A deleted schema can not be used by any records or updated. All records using a deleted schema will eventually have their schema-based data removed.</value>
+        [DataMember(Name="deleted", EmitDefaultValue=false)]
+        public bool? Deleted { get; set; }
         
         
         
@@ -199,6 +231,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  AppliesTo: ").Append(AppliesTo).Append("\n");
+            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  Deleted: ").Append(Deleted).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  JsonSchema: ").Append(JsonSchema).Append("\n");
@@ -260,6 +294,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AppliesTo.SequenceEqual(other.AppliesTo)
                 ) &&
                 (
+                    this.Enabled == other.Enabled ||
+                    this.Enabled != null &&
+                    this.Enabled.Equals(other.Enabled)
+                ) &&
+                (
+                    this.Deleted == other.Deleted ||
+                    this.Deleted != null &&
+                    this.Deleted.Equals(other.Deleted)
+                ) &&
+                (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
@@ -304,6 +348,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AppliesTo != null)
                     hash = hash * 59 + this.AppliesTo.GetHashCode();
+                
+                if (this.Enabled != null)
+                    hash = hash * 59 + this.Enabled.GetHashCode();
+                
+                if (this.Deleted != null)
+                    hash = hash * 59 + this.Deleted.GetHashCode();
                 
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();

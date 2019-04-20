@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteIdentityprovidersOnelogin**](IdentityProviderApi.html#deleteidentityprovidersonelogin) | **DELETE** /api/v2/identityproviders/onelogin | Delete OneLogin Identity Provider |
 | [**DeleteIdentityprovidersPing**](IdentityProviderApi.html#deleteidentityprovidersping) | **DELETE** /api/v2/identityproviders/ping | Delete Ping Identity Provider |
 | [**DeleteIdentityprovidersPurecloud**](IdentityProviderApi.html#deleteidentityproviderspurecloud) | **DELETE** /api/v2/identityproviders/purecloud | Delete PureCloud Identity Provider |
+| [**DeleteIdentityprovidersPureengage**](IdentityProviderApi.html#deleteidentityproviderspureengage) | **DELETE** /api/v2/identityproviders/pureengage | Delete PureEngage Identity Provider |
 | [**DeleteIdentityprovidersSalesforce**](IdentityProviderApi.html#deleteidentityproviderssalesforce) | **DELETE** /api/v2/identityproviders/salesforce | Delete Salesforce Identity Provider |
 | [**GetIdentityproviders**](IdentityProviderApi.html#getidentityproviders) | **GET** /api/v2/identityproviders | The list of identity providers |
 | [**GetIdentityprovidersAdfs**](IdentityProviderApi.html#getidentityprovidersadfs) | **GET** /api/v2/identityproviders/adfs | Get ADFS Identity Provider |
@@ -25,6 +26,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIdentityprovidersOnelogin**](IdentityProviderApi.html#getidentityprovidersonelogin) | **GET** /api/v2/identityproviders/onelogin | Get OneLogin Identity Provider |
 | [**GetIdentityprovidersPing**](IdentityProviderApi.html#getidentityprovidersping) | **GET** /api/v2/identityproviders/ping | Get Ping Identity Provider |
 | [**GetIdentityprovidersPurecloud**](IdentityProviderApi.html#getidentityproviderspurecloud) | **GET** /api/v2/identityproviders/purecloud | Get PureCloud Identity Provider |
+| [**GetIdentityprovidersPureengage**](IdentityProviderApi.html#getidentityproviderspureengage) | **GET** /api/v2/identityproviders/pureengage | Get PureEngage Identity Provider |
 | [**GetIdentityprovidersSalesforce**](IdentityProviderApi.html#getidentityproviderssalesforce) | **GET** /api/v2/identityproviders/salesforce | Get Salesforce Identity Provider |
 | [**PutIdentityprovidersAdfs**](IdentityProviderApi.html#putidentityprovidersadfs) | **PUT** /api/v2/identityproviders/adfs | Update/Create ADFS Identity Provider |
 | [**PutIdentityprovidersCic**](IdentityProviderApi.html#putidentityproviderscic) | **PUT** /api/v2/identityproviders/cic | Update/Create Customer Interaction Center (CIC) Identity Provider |
@@ -34,6 +36,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutIdentityprovidersOnelogin**](IdentityProviderApi.html#putidentityprovidersonelogin) | **PUT** /api/v2/identityproviders/onelogin | Update/Create OneLogin Identity Provider |
 | [**PutIdentityprovidersPing**](IdentityProviderApi.html#putidentityprovidersping) | **PUT** /api/v2/identityproviders/ping | Update/Create Ping Identity Provider |
 | [**PutIdentityprovidersPurecloud**](IdentityProviderApi.html#putidentityproviderspurecloud) | **PUT** /api/v2/identityproviders/purecloud | Update/Create PureCloud Identity Provider |
+| [**PutIdentityprovidersPureengage**](IdentityProviderApi.html#putidentityproviderspureengage) | **PUT** /api/v2/identityproviders/pureengage | Update/Create PureEngage Identity Provider |
 | [**PutIdentityprovidersSalesforce**](IdentityProviderApi.html#putidentityproviderssalesforce) | **PUT** /api/v2/identityproviders/salesforce | Update/Create Salesforce Identity Provider |
 {: class="table table-striped"}
 
@@ -471,6 +474,62 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling IdentityProviderApi.DeleteIdentityprovidersPurecloud: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**Empty**](Empty.html)
+
+<a name="deleteidentityproviderspureengage"></a>
+
+## [**Empty**](Empty.html) DeleteIdentityprovidersPureengage ()
+
+
+
+Delete PureEngage Identity Provider
+
+
+
+Requires ANY permissions: 
+
+* sso:provider:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteIdentityprovidersPureengageExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IdentityProviderApi();
+
+            try
+            { 
+                // Delete PureEngage Identity Provider
+                Empty result = apiInstance.DeleteIdentityprovidersPureengage();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.DeleteIdentityprovidersPureengage: " + e.Message );
             }
         }
     }
@@ -1045,6 +1104,62 @@ This endpoint does require any parameters.
 
 [**PureCloudPlatform.Client.V2.Model.PureCloud**](PureCloud.html)
 
+<a name="getidentityproviderspureengage"></a>
+
+## [**PureEnage**](PureEnage.html) GetIdentityprovidersPureengage ()
+
+
+
+Get PureEngage Identity Provider
+
+
+
+Requires ANY permissions: 
+
+* sso:provider:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIdentityprovidersPureengageExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IdentityProviderApi();
+
+            try
+            { 
+                // Get PureEngage Identity Provider
+                PureEnage result = apiInstance.GetIdentityprovidersPureengage();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.GetIdentityprovidersPureengage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**PureEnage**](PureEnage.html)
+
 <a name="getidentityproviderssalesforce"></a>
 
 ## [**Salesforce**](Salesforce.html) GetIdentityprovidersSalesforce ()
@@ -1591,6 +1706,68 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**PureCloudPlatform.Client.V2.Model.PureCloud**](PureCloudPlatform.Client.V2.Model.PureCloud.html)| Provider |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OAuthProvider**](OAuthProvider.html)
+
+<a name="putidentityproviderspureengage"></a>
+
+## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersPureengage (PureEnage body)
+
+
+
+Update/Create PureEngage Identity Provider
+
+
+
+Requires ANY permissions: 
+
+* sso:provider:add
+* sso:provider:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutIdentityprovidersPureengageExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IdentityProviderApi();
+            var body = new PureEnage(); // PureEnage | Provider
+
+            try
+            { 
+                // Update/Create PureEngage Identity Provider
+                OAuthProvider result = apiInstance.PutIdentityprovidersPureengage(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.PutIdentityprovidersPureengage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**PureEnage**](PureEnage.html)| Provider |  |
 {: class="table table-striped"}
 
 ### Return type

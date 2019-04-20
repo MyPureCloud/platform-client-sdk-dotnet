@@ -1842,7 +1842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a Trunk Base Settings object by ID
         /// </summary>
         /// <remarks>
-        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -1854,7 +1854,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a Trunk Base Settings object by ID
         /// </summary>
         /// <remarks>
-        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -1866,7 +1866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Trunk Base Settings listing
         /// </summary>
         /// <remarks>
-        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -1885,7 +1885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Trunk Base Settings listing
         /// </summary>
         /// <remarks>
-        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4772,7 +4772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a Trunk Base Settings object by ID
         /// </summary>
         /// <remarks>
-        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -4784,7 +4784,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a Trunk Base Settings object by ID
         /// </summary>
         /// <remarks>
-        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -4796,7 +4796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Trunk Base Settings listing
         /// </summary>
         /// <remarks>
-        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4815,7 +4815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Trunk Base Settings listing
         /// </summary>
         /// <remarks>
-        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -20789,7 +20789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a Trunk Base Settings object by ID Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Get a Trunk Base Settings object by ID Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -20802,7 +20802,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Trunk Base Settings object by ID Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Get a Trunk Base Settings object by ID Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -20887,7 +20887,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a Trunk Base Settings object by ID Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Get a Trunk Base Settings object by ID Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -20901,7 +20901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Trunk Base Settings object by ID Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Get a Trunk Base Settings object by ID Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -20988,7 +20988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get Trunk Base Settings listing Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Get Trunk Base Settings listing Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -21008,7 +21008,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get Trunk Base Settings listing Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Get Trunk Base Settings listing Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -21104,7 +21104,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get Trunk Base Settings listing Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Get Trunk Base Settings listing Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -21125,7 +21125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get Trunk Base Settings listing Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+        /// Get Trunk Base Settings listing Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
