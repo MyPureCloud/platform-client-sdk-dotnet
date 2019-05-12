@@ -91,11 +91,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets ComplianceAbandonRateDenominator
         /// </summary>
         [DataMember(Name="complianceAbandonRateDenominator", EmitDefaultValue=false)]
         public ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator { get; set; }
+        
+        
         
         
     
@@ -111,7 +116,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaxLineUtilization">MaxLineUtilization.</param>
         /// <param name="AbandonSeconds">AbandonSeconds.</param>
         /// <param name="ComplianceAbandonRateDenominator">ComplianceAbandonRateDenominator.</param>
-        public DialerOutboundSettingsConfigChangeOutboundSettings(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, int? MaxCallsPerAgent = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null)
+        /// <param name="AutomaticTimeZoneMapping">AutomaticTimeZoneMapping.</param>
+        public DialerOutboundSettingsConfigChangeOutboundSettings(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, int? MaxCallsPerAgent = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null, DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings AutomaticTimeZoneMapping = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -122,6 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MaxLineUtilization = MaxLineUtilization;
             this.AbandonSeconds = AbandonSeconds;
             this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
+            this.AutomaticTimeZoneMapping = AutomaticTimeZoneMapping;
             
         }
         
@@ -192,6 +199,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// Gets or Sets AutomaticTimeZoneMapping
+        /// </summary>
+        [DataMember(Name="automaticTimeZoneMapping", EmitDefaultValue=false)]
+        public DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings AutomaticTimeZoneMapping { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -210,6 +225,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MaxLineUtilization: ").Append(MaxLineUtilization).Append("\n");
             sb.Append("  AbandonSeconds: ").Append(AbandonSeconds).Append("\n");
             sb.Append("  ComplianceAbandonRateDenominator: ").Append(ComplianceAbandonRateDenominator).Append("\n");
+            sb.Append("  AutomaticTimeZoneMapping: ").Append(AutomaticTimeZoneMapping).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -290,6 +306,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ComplianceAbandonRateDenominator == other.ComplianceAbandonRateDenominator ||
                     this.ComplianceAbandonRateDenominator != null &&
                     this.ComplianceAbandonRateDenominator.Equals(other.ComplianceAbandonRateDenominator)
+                ) &&
+                (
+                    this.AutomaticTimeZoneMapping == other.AutomaticTimeZoneMapping ||
+                    this.AutomaticTimeZoneMapping != null &&
+                    this.AutomaticTimeZoneMapping.Equals(other.AutomaticTimeZoneMapping)
                 );
         }
 
@@ -331,6 +352,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ComplianceAbandonRateDenominator != null)
                     hash = hash * 59 + this.ComplianceAbandonRateDenominator.GetHashCode();
+                
+                if (this.AutomaticTimeZoneMapping != null)
+                    hash = hash * 59 + this.AutomaticTimeZoneMapping.GetHashCode();
                 
                 return hash;
             }

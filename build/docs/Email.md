@@ -27,6 +27,7 @@ title: Email
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 | **MessageId** | **string** | A globally unique identifier for the stored content of this communication. | [optional] |
 | **DraftAttachments** | [**List&lt;Attachment&gt;**](Attachment.html) | A list of uploaded attachments on the email draft. | [optional] |
+| **Spam** | **bool?** | Indicates if the inbound email was marked as spam. | [optional] |
 {: class="table table-striped"}
 
 

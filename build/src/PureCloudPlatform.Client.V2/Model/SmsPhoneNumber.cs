@@ -91,22 +91,34 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Invalid for "invalid"
+            /// Enum Invalid for "INVALID"
             /// </summary>
-            [EnumMember(Value = "invalid")]
+            [EnumMember(Value = "INVALID")]
             Invalid,
             
             /// <summary>
-            /// Enum Active for "active"
+            /// Enum Active for "ACTIVE"
             /// </summary>
-            [EnumMember(Value = "active")]
+            [EnumMember(Value = "ACTIVE")]
             Active,
             
             /// <summary>
-            /// Enum Porting for "porting"
+            /// Enum Porting for "PORTING"
             /// </summary>
-            [EnumMember(Value = "porting")]
-            Porting
+            [EnumMember(Value = "PORTING")]
+            Porting,
+            
+            /// <summary>
+            /// Enum Pending for "PENDING"
+            /// </summary>
+            [EnumMember(Value = "PENDING")]
+            Pending,
+            
+            /// <summary>
+            /// Enum PendingCancellation for "PENDING_CANCELLATION"
+            /// </summary>
+            [EnumMember(Value = "PENDING_CANCELLATION")]
+            PendingCancellation
         }
         
         
@@ -126,6 +138,40 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Renewal time period of this phone number, if the phoneNumberType is shortcode.
+        /// </summary>
+        /// <value>Renewal time period of this phone number, if the phoneNumberType is shortcode.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AutoRenewableEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Quarterly for "Quarterly"
+            /// </summary>
+            [EnumMember(Value = "Quarterly")]
+            Quarterly
+        }
         
         
         
@@ -173,6 +219,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Renewal time period of this phone number, if the phoneNumberType is shortcode.
+        /// </summary>
+        /// <value>Renewal time period of this phone number, if the phoneNumberType is shortcode.</value>
+        [DataMember(Name="autoRenewable", EmitDefaultValue=false)]
+        public AutoRenewableEnum? AutoRenewable { get; set; }
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsPhoneNumber" /> class.
@@ -194,7 +255,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedBy">User that provisioned this phone number.</param>
         /// <param name="ModifiedBy">User that last modified this phone number.</param>
         /// <param name="Version">Version number required for updates..</param>
-        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null)
+        /// <param name="PurchaseDate">Date this phone number was purchased, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CancellationDate">Contract end date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="RenewalDate">Contract renewal date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="AutoRenewable">Renewal time period of this phone number, if the phoneNumberType is shortcode..</param>
+        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null)
         {
             this.Name = Name;
             this.PhoneNumber = PhoneNumber;
@@ -207,6 +272,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedBy = CreatedBy;
             this.ModifiedBy = ModifiedBy;
             this.Version = Version;
+            this.PurchaseDate = PurchaseDate;
+            this.CancellationDate = CancellationDate;
+            this.RenewalDate = RenewalDate;
+            this.AutoRenewable = AutoRenewable;
             
         }
         
@@ -306,6 +375,35 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Date this phone number was purchased, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date this phone number was purchased, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="purchaseDate", EmitDefaultValue=false)]
+        public DateTime? PurchaseDate { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Contract end date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Contract end date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="cancellationDate", EmitDefaultValue=false)]
+        public DateTime? CancellationDate { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Contract renewal date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Contract renewal date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="renewalDate", EmitDefaultValue=false)]
+        public DateTime? RenewalDate { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -334,6 +432,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  PurchaseDate: ").Append(PurchaseDate).Append("\n");
+            sb.Append("  CancellationDate: ").Append(CancellationDate).Append("\n");
+            sb.Append("  RenewalDate: ").Append(RenewalDate).Append("\n");
+            sb.Append("  AutoRenewable: ").Append(AutoRenewable).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -432,6 +534,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
+                    this.PurchaseDate == other.PurchaseDate ||
+                    this.PurchaseDate != null &&
+                    this.PurchaseDate.Equals(other.PurchaseDate)
+                ) &&
+                (
+                    this.CancellationDate == other.CancellationDate ||
+                    this.CancellationDate != null &&
+                    this.CancellationDate.Equals(other.CancellationDate)
+                ) &&
+                (
+                    this.RenewalDate == other.RenewalDate ||
+                    this.RenewalDate != null &&
+                    this.RenewalDate.Equals(other.RenewalDate)
+                ) &&
+                (
+                    this.AutoRenewable == other.AutoRenewable ||
+                    this.AutoRenewable != null &&
+                    this.AutoRenewable.Equals(other.AutoRenewable)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -485,6 +607,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
+                if (this.PurchaseDate != null)
+                    hash = hash * 59 + this.PurchaseDate.GetHashCode();
+                
+                if (this.CancellationDate != null)
+                    hash = hash * 59 + this.CancellationDate.GetHashCode();
+                
+                if (this.RenewalDate != null)
+                    hash = hash * 59 + this.RenewalDate.GetHashCode();
+                
+                if (this.AutoRenewable != null)
+                    hash = hash * 59 + this.AutoRenewable.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

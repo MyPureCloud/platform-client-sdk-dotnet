@@ -71,6 +71,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Completed,
             
             /// <summary>
+            /// Enum CompletedWithPartialResults for "COMPLETED_WITH_PARTIAL_RESULTS"
+            /// </summary>
+            [EnumMember(Value = "COMPLETED_WITH_PARTIAL_RESULTS")]
+            CompletedWithPartialResults,
+            
+            /// <summary>
             /// Enum Failed for "FAILED"
             /// </summary>
             [EnumMember(Value = "FAILED")]

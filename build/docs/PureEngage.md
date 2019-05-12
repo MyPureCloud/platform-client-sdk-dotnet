@@ -1,7 +1,7 @@
 ---
-title: PureEnage
+title: PureEngage
 ---
-## ININ.PureCloudApi.Model.PureEnage
+## ININ.PureCloudApi.Model.PureEngage
 
 ## Properties
 

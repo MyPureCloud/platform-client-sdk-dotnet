@@ -87,7 +87,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Save for "SAVE"
             /// </summary>
             [EnumMember(Value = "SAVE")]
-            Save
+            Save,
+            
+            /// <summary>
+            /// Enum Transcode for "TRANSCODE"
+            /// </summary>
+            [EnumMember(Value = "TRANSCODE")]
+            Transcode,
+            
+            /// <summary>
+            /// Enum Update for "UPDATE"
+            /// </summary>
+            [EnumMember(Value = "UPDATE")]
+            Update,
+            
+            /// <summary>
+            /// Enum Upload for "UPLOAD"
+            /// </summary>
+            [EnumMember(Value = "UPLOAD")]
+            Upload
         }
         
         

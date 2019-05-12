@@ -2493,7 +2493,7 @@ namespace Example
 
 <a name="gettelephonyprovidersedgesdids"></a>
 
-## [**DIDEntityListing**](DIDEntityListing.html) GetTelephonyProvidersEdgesDids (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null)
+## [**DIDEntityListing**](DIDEntityListing.html) GetTelephonyProvidersEdgesDids (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null)
 
 
 
@@ -2528,11 +2528,13 @@ namespace Example
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to number)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
             var phoneNumber = phoneNumber_example;  // string | Filter by phoneNumber (optional) 
+            var ownerId = ownerId_example;  // string | Filter by the owner of a phone number (optional) 
+            var didPoolId = didPoolId_example;  // string | Filter by the DID Pool assignment (optional) 
 
             try
             { 
                 // Get a listing of DIDs
-                DIDEntityListing result = apiInstance.GetTelephonyProvidersEdgesDids(pageSize, pageNumber, sortBy, sortOrder, phoneNumber);
+                DIDEntityListing result = apiInstance.GetTelephonyProvidersEdgesDids(pageSize, pageNumber, sortBy, sortOrder, phoneNumber, ownerId, didPoolId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2554,6 +2556,8 @@ namespace Example
 | **sortBy** | **string**| Sort by | [optional] [default to number] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
 | **phoneNumber** | **string**| Filter by phoneNumber | [optional]  |
+| **ownerId** | **string**| Filter by the owner of a phone number | [optional]  |
+| **didPoolId** | **string**| Filter by the DID Pool assignment | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

@@ -403,8 +403,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>PureEnage</returns>
-        PureEnage GetIdentityprovidersPureengage ();
+        /// <returns>PureEngage</returns>
+        PureEngage GetIdentityprovidersPureengage ();
 
         /// <summary>
         /// Get PureEngage Identity Provider
@@ -413,8 +413,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of PureEnage</returns>
-        ApiResponse<PureEnage> GetIdentityprovidersPureengageWithHttpInfo ();
+        /// <returns>ApiResponse of PureEngage</returns>
+        ApiResponse<PureEngage> GetIdentityprovidersPureengageWithHttpInfo ();
         
         /// <summary>
         /// Get Salesforce Identity Provider
@@ -621,7 +621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
-        OAuthProvider PutIdentityprovidersPureengage (PureEnage body);
+        OAuthProvider PutIdentityprovidersPureengage (PureEngage body);
 
         /// <summary>
         /// Update/Create PureEngage Identity Provider
@@ -632,7 +632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
-        ApiResponse<OAuthProvider> PutIdentityprovidersPureengageWithHttpInfo (PureEnage body);
+        ApiResponse<OAuthProvider> PutIdentityprovidersPureengageWithHttpInfo (PureEngage body);
         
         /// <summary>
         /// Update/Create Salesforce Identity Provider
@@ -1047,8 +1047,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of PureEnage</returns>
-        System.Threading.Tasks.Task<PureEnage> GetIdentityprovidersPureengageAsync ();
+        /// <returns>Task of PureEngage</returns>
+        System.Threading.Tasks.Task<PureEngage> GetIdentityprovidersPureengageAsync ();
 
         /// <summary>
         /// Get PureEngage Identity Provider
@@ -1057,8 +1057,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (PureEnage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PureEnage>> GetIdentityprovidersPureengageAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (PureEngage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PureEngage>> GetIdentityprovidersPureengageAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get Salesforce Identity Provider
@@ -1265,7 +1265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
-        System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPureengageAsync (PureEnage body);
+        System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPureengageAsync (PureEngage body);
 
         /// <summary>
         /// Update/Create PureEngage Identity Provider
@@ -1276,7 +1276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPureengageAsyncWithHttpInfo (PureEnage body);
+        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPureengageAsyncWithHttpInfo (PureEngage body);
         
         /// <summary>
         /// Update/Create Salesforce Identity Provider
@@ -4816,10 +4816,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get PureEngage Identity Provider 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>PureEnage</returns>
-        public PureEnage GetIdentityprovidersPureengage ()
+        /// <returns>PureEngage</returns>
+        public PureEngage GetIdentityprovidersPureengage ()
         {
-             ApiResponse<PureEnage> localVarResponse = GetIdentityprovidersPureengageWithHttpInfo();
+             ApiResponse<PureEngage> localVarResponse = GetIdentityprovidersPureengageWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -4827,8 +4827,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get PureEngage Identity Provider 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of PureEnage</returns>
-        public ApiResponse< PureEnage > GetIdentityprovidersPureengageWithHttpInfo ()
+        /// <returns>ApiResponse of PureEngage</returns>
+        public ApiResponse< PureEngage > GetIdentityprovidersPureengageWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/identityproviders/pureengage";
@@ -4893,9 +4893,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetIdentityprovidersPureengage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PureEnage>(localVarStatusCode,
+            return new ApiResponse<PureEngage>(localVarStatusCode,
                 localVarHeaders,
-                (PureEnage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PureEnage)),
+                (PureEngage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PureEngage)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -4905,10 +4905,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get PureEngage Identity Provider 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of PureEnage</returns>
-        public async System.Threading.Tasks.Task<PureEnage> GetIdentityprovidersPureengageAsync ()
+        /// <returns>Task of PureEngage</returns>
+        public async System.Threading.Tasks.Task<PureEngage> GetIdentityprovidersPureengageAsync ()
         {
-             ApiResponse<PureEnage> localVarResponse = await GetIdentityprovidersPureengageAsyncWithHttpInfo();
+             ApiResponse<PureEngage> localVarResponse = await GetIdentityprovidersPureengageAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -4917,8 +4917,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get PureEngage Identity Provider 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (PureEnage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PureEnage>> GetIdentityprovidersPureengageAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (PureEngage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PureEngage>> GetIdentityprovidersPureengageAsyncWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/identityproviders/pureengage";
@@ -4983,9 +4983,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetIdentityprovidersPureengage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PureEnage>(localVarStatusCode,
+            return new ApiResponse<PureEngage>(localVarStatusCode,
                 localVarHeaders,
-                (PureEnage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PureEnage)),
+                (PureEngage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PureEngage)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6786,7 +6786,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
-        public OAuthProvider PutIdentityprovidersPureengage (PureEnage body)
+        public OAuthProvider PutIdentityprovidersPureengage (PureEngage body)
         {
              ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersPureengageWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6798,7 +6798,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
-        public ApiResponse< OAuthProvider > PutIdentityprovidersPureengageWithHttpInfo (PureEnage body)
+        public ApiResponse< OAuthProvider > PutIdentityprovidersPureengageWithHttpInfo (PureEngage body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6885,7 +6885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
-        public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPureengageAsync (PureEnage body)
+        public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPureengageAsync (PureEngage body)
         {
              ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersPureengageAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6898,7 +6898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPureengageAsyncWithHttpInfo (PureEnage body)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPureengageAsyncWithHttpInfo (PureEngage body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)

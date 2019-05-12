@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// PureEnage
+    /// PureEngage
     /// </summary>
     [DataContract]
-    public partial class PureEnage :  IEquatable<PureEnage>
+    public partial class PureEngage :  IEquatable<PureEngage>
     {
         
         
@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PureEnage" /> class.
+        /// Initializes a new instance of the <see cref="PureEngage" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="AutoProvisionUsers">AutoProvisionUsers.</param>
@@ -70,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IssuerURI">IssuerURI.</param>
         /// <param name="SsoTargetURI">SsoTargetURI.</param>
         /// <param name="Disabled">Disabled.</param>
-        public PureEnage(string Name = null, bool? AutoProvisionUsers = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null, bool? Disabled = null)
+        public PureEngage(string Name = null, bool? AutoProvisionUsers = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null, bool? Disabled = null)
         {
             this.Name = Name;
             this.AutoProvisionUsers = AutoProvisionUsers;
@@ -155,7 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PureEnage {\n");
+            sb.Append("class PureEngage {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -186,15 +186,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PureEnage);
+            return this.Equals(obj as PureEngage);
         }
 
         /// <summary>
-        /// Returns true if PureEnage instances are equal
+        /// Returns true if PureEngage instances are equal
         /// </summary>
-        /// <param name="other">Instance of PureEnage to be compared</param>
+        /// <param name="other">Instance of PureEngage to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PureEnage other)
+        public bool Equals(PureEngage other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

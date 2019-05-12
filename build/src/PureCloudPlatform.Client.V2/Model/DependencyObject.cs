@@ -92,6 +92,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Datatable,
             
             /// <summary>
+            /// Enum Dialogflowagent for "DIALOGFLOWAGENT"
+            /// </summary>
+            [EnumMember(Value = "DIALOGFLOWAGENT")]
+            Dialogflowagent,
+            
+            /// <summary>
             /// Enum Emailroute for "EMAILROUTE"
             /// </summary>
             [EnumMember(Value = "EMAILROUTE")]

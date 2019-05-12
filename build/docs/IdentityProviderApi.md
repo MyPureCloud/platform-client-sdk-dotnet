@@ -1106,7 +1106,7 @@ This endpoint does require any parameters.
 
 <a name="getidentityproviderspureengage"></a>
 
-## [**PureEnage**](PureEnage.html) GetIdentityprovidersPureengage ()
+## [**PureEngage**](PureEngage.html) GetIdentityprovidersPureengage ()
 
 
 
@@ -1140,7 +1140,7 @@ namespace Example
             try
             { 
                 // Get PureEngage Identity Provider
-                PureEnage result = apiInstance.GetIdentityprovidersPureengage();
+                PureEngage result = apiInstance.GetIdentityprovidersPureengage();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1158,7 +1158,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**PureEnage**](PureEnage.html)
+[**PureEngage**](PureEngage.html)
 
 <a name="getidentityproviderssalesforce"></a>
 
@@ -1714,7 +1714,7 @@ namespace Example
 
 <a name="putidentityproviderspureengage"></a>
 
-## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersPureengage (PureEnage body)
+## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersPureengage (PureEngage body)
 
 
 
@@ -1745,7 +1745,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new IdentityProviderApi();
-            var body = new PureEnage(); // PureEnage | Provider
+            var body = new PureEngage(); // PureEngage | Provider
 
             try
             { 
@@ -1767,7 +1767,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PureEnage**](PureEnage.html)| Provider |  |
+| **body** | [**PureEngage**](PureEngage.html)| Provider |  |
 {: class="table table-striped"}
 
 ### Return type
