@@ -192,7 +192,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **searchType** | **string**| Search Type | <br />**Values**: NAME, ADDRESS, PHONE, EMAIL |
+| **searchType** | **string**| Search Type | <br />**Values**: NAME, ADDRESS, PHONE, EMAIL, TWITTER |
 | **searchValue** | **string**| Search Value |  |
 {: class="table table-striped"}
 

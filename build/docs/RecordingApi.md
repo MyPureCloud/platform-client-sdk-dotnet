@@ -616,8 +616,9 @@ Get all of a Conversation's Recordings.
 
 
 
-Requires NO permissions: 
+Requires ALL permissions: 
 
+* recording:recording:view
 
 ### Example
 ```{"language":"csharp"}

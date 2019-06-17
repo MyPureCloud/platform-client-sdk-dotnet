@@ -3964,7 +3964,7 @@ namespace Example
 
 <a name="gettelephonyprovidersedgesphones"></a>
 
-## [**PhoneEntityListing**](PhoneEntityListing.html) GetTelephonyProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null)
+## [**PhoneEntityListing**](PhoneEntityListing.html) GetTelephonyProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, string name = null, List<string> expand = null, List<string> fields = null)
 
 
 
@@ -4006,13 +4006,14 @@ namespace Example
             var phoneHardwareId = phoneHardwareId_example;  // string | Filter by phone_hardwareId (optional) 
             var linesId = linesId_example;  // string | Filter by lines.id (optional) 
             var linesName = linesName_example;  // string | Filter by lines.name (optional) 
+            var name = name_example;  // string | Name of the Phone to filter by (optional) 
             var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
             var fields = new List<string>(); // List<string> | Fields and properties to get, comma-separated (optional) 
 
             try
             { 
                 // Get a list of Phone Instances
-                PhoneEntityListing result = apiInstance.GetTelephonyProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, expand, fields);
+                PhoneEntityListing result = apiInstance.GetTelephonyProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, name, expand, fields);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4041,6 +4042,7 @@ namespace Example
 | **phoneHardwareId** | **string**| Filter by phone_hardwareId | [optional]  |
 | **linesId** | **string**| Filter by lines.id | [optional]  |
 | **linesName** | **string**| Filter by lines.name | [optional]  |
+| **name** | **string**| Name of the Phone to filter by | [optional]  |
 | **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties, site, status, status.primaryEdgesStatus, status.secondaryEdgesStatus, phoneBaseSettings, lines |
 | **fields** | [**List<string>**](string.html)| Fields and properties to get, comma-separated | [optional] <br />**Values**: webRtcUser, properties.*, lines.loggedInUser, lines.defaultForUser |
 {: class="table table-striped"}

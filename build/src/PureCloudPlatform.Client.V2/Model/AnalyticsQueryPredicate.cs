@@ -163,6 +163,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Requestedroutinguserids,
             
             /// <summary>
+            /// Enum Routingpriority for "routingPriority"
+            /// </summary>
+            [EnumMember(Value = "routingPriority")]
+            Routingpriority,
+            
+            /// <summary>
             /// Enum Purpose for "purpose"
             /// </summary>
             [EnumMember(Value = "purpose")]

@@ -56,7 +56,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Email for "EMAIL"
             /// </summary>
             [EnumMember(Value = "EMAIL")]
-            Email
+            Email,
+            
+            /// <summary>
+            /// Enum Twitter for "TWITTER"
+            /// </summary>
+            [EnumMember(Value = "TWITTER")]
+            Twitter
         }
         
         

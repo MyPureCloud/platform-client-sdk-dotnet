@@ -35,17 +35,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WidgetClientConfig" /> class.
         /// </summary>
         /// <param name="V1">V1.</param>
         /// <param name="V2">V2.</param>
+        /// <param name="V1Http">V1Http.</param>
         /// <param name="ThirdParty">ThirdParty.</param>
-        public WidgetClientConfig(WidgetClientConfigV1 V1 = null, WidgetClientConfigV2 V2 = null, WidgetClientConfigThirdParty ThirdParty = null)
+        public WidgetClientConfig(WidgetClientConfigV1 V1 = null, WidgetClientConfigV2 V2 = null, WidgetClientConfigV1Http V1Http = null, WidgetClientConfigThirdParty ThirdParty = null)
         {
             this.V1 = V1;
             this.V2 = V2;
+            this.V1Http = V1Http;
             this.ThirdParty = ThirdParty;
             
         }
@@ -69,6 +76,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets V1Http
+        /// </summary>
+        [DataMember(Name="v1-http", EmitDefaultValue=false)]
+        public WidgetClientConfigV1Http V1Http { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets ThirdParty
         /// </summary>
         [DataMember(Name="third-party", EmitDefaultValue=false)]
@@ -86,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  V1: ").Append(V1).Append("\n");
             sb.Append("  V2: ").Append(V2).Append("\n");
+            sb.Append("  V1Http: ").Append(V1Http).Append("\n");
             sb.Append("  ThirdParty: ").Append(ThirdParty).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -134,6 +150,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.V2.Equals(other.V2)
                 ) &&
                 (
+                    this.V1Http == other.V1Http ||
+                    this.V1Http != null &&
+                    this.V1Http.Equals(other.V1Http)
+                ) &&
+                (
                     this.ThirdParty == other.ThirdParty ||
                     this.ThirdParty != null &&
                     this.ThirdParty.Equals(other.ThirdParty)
@@ -157,6 +178,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.V2 != null)
                     hash = hash * 59 + this.V2.GetHashCode();
+                
+                if (this.V1Http != null)
+                    hash = hash * 59 + this.V1Http.GetHashCode();
                 
                 if (this.ThirdParty != null)
                     hash = hash * 59 + this.ThirdParty.GetHashCode();

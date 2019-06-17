@@ -70,6 +70,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyActions" /> class.
@@ -79,18 +84,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AlwaysDelete">true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default = false.</param>
         /// <param name="AssignEvaluations">AssignEvaluations.</param>
         /// <param name="AssignMeteredEvaluations">AssignMeteredEvaluations.</param>
+        /// <param name="AssignMeteredAssignmentByAgent">AssignMeteredAssignmentByAgent.</param>
         /// <param name="AssignCalibrations">AssignCalibrations.</param>
         /// <param name="AssignSurveys">AssignSurveys.</param>
         /// <param name="RetentionDuration">RetentionDuration.</param>
         /// <param name="InitiateScreenRecording">InitiateScreenRecording.</param>
         /// <param name="MediaTranscriptions">MediaTranscriptions.</param>
-        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, List<SurveyAssignment> AssignSurveys = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null, List<MediaTranscription> MediaTranscriptions = null)
+        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<MeteredAssignmentByAgent> AssignMeteredAssignmentByAgent = null, List<CalibrationAssignment> AssignCalibrations = null, List<SurveyAssignment> AssignSurveys = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null, List<MediaTranscription> MediaTranscriptions = null)
         {
             this.RetainRecording = RetainRecording;
             this.DeleteRecording = DeleteRecording;
             this.AlwaysDelete = AlwaysDelete;
             this.AssignEvaluations = AssignEvaluations;
             this.AssignMeteredEvaluations = AssignMeteredEvaluations;
+            this.AssignMeteredAssignmentByAgent = AssignMeteredAssignmentByAgent;
             this.AssignCalibrations = AssignCalibrations;
             this.AssignSurveys = AssignSurveys;
             this.RetentionDuration = RetentionDuration;
@@ -141,6 +148,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="assignMeteredEvaluations", EmitDefaultValue=false)]
         public List<MeteredEvaluationAssignment> AssignMeteredEvaluations { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets AssignMeteredAssignmentByAgent
+        /// </summary>
+        [DataMember(Name="assignMeteredAssignmentByAgent", EmitDefaultValue=false)]
+        public List<MeteredAssignmentByAgent> AssignMeteredAssignmentByAgent { get; set; }
         
         
         
@@ -197,6 +212,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AlwaysDelete: ").Append(AlwaysDelete).Append("\n");
             sb.Append("  AssignEvaluations: ").Append(AssignEvaluations).Append("\n");
             sb.Append("  AssignMeteredEvaluations: ").Append(AssignMeteredEvaluations).Append("\n");
+            sb.Append("  AssignMeteredAssignmentByAgent: ").Append(AssignMeteredAssignmentByAgent).Append("\n");
             sb.Append("  AssignCalibrations: ").Append(AssignCalibrations).Append("\n");
             sb.Append("  AssignSurveys: ").Append(AssignSurveys).Append("\n");
             sb.Append("  RetentionDuration: ").Append(RetentionDuration).Append("\n");
@@ -264,6 +280,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AssignMeteredEvaluations.SequenceEqual(other.AssignMeteredEvaluations)
                 ) &&
                 (
+                    this.AssignMeteredAssignmentByAgent == other.AssignMeteredAssignmentByAgent ||
+                    this.AssignMeteredAssignmentByAgent != null &&
+                    this.AssignMeteredAssignmentByAgent.SequenceEqual(other.AssignMeteredAssignmentByAgent)
+                ) &&
+                (
                     this.AssignCalibrations == other.AssignCalibrations ||
                     this.AssignCalibrations != null &&
                     this.AssignCalibrations.SequenceEqual(other.AssignCalibrations)
@@ -316,6 +337,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AssignMeteredEvaluations != null)
                     hash = hash * 59 + this.AssignMeteredEvaluations.GetHashCode();
+                
+                if (this.AssignMeteredAssignmentByAgent != null)
+                    hash = hash * 59 + this.AssignMeteredAssignmentByAgent.GetHashCode();
                 
                 if (this.AssignCalibrations != null)
                     hash = hash * 59 + this.AssignCalibrations.GetHashCode();

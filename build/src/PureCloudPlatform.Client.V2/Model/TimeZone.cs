@@ -46,14 +46,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="DisplayName">DisplayName.</param>
         /// <param name="Id">Id.</param>
-        /// <param name="Dstsavings">Dstsavings.</param>
         /// <param name="RawOffset">RawOffset.</param>
-        public TimeZone(string DisplayName = null, string Id = null, int? Dstsavings = null, int? RawOffset = null)
+        /// <param name="Dstsavings">Dstsavings.</param>
+        public TimeZone(string DisplayName = null, string Id = null, int? RawOffset = null, int? Dstsavings = null)
         {
             this.DisplayName = DisplayName;
             this.Id = Id;
-            this.Dstsavings = Dstsavings;
             this.RawOffset = RawOffset;
+            this.Dstsavings = Dstsavings;
             
         }
         
@@ -76,18 +76,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Dstsavings
-        /// </summary>
-        [DataMember(Name="dstsavings", EmitDefaultValue=false)]
-        public int? Dstsavings { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets RawOffset
         /// </summary>
         [DataMember(Name="rawOffset", EmitDefaultValue=false)]
         public int? RawOffset { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Dstsavings
+        /// </summary>
+        [DataMember(Name="dstsavings", EmitDefaultValue=false)]
+        public int? Dstsavings { get; set; }
         
         
         /// <summary>
@@ -101,8 +101,8 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Dstsavings: ").Append(Dstsavings).Append("\n");
             sb.Append("  RawOffset: ").Append(RawOffset).Append("\n");
+            sb.Append("  Dstsavings: ").Append(Dstsavings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,14 +150,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Dstsavings == other.Dstsavings ||
-                    this.Dstsavings != null &&
-                    this.Dstsavings.Equals(other.Dstsavings)
-                ) &&
-                (
                     this.RawOffset == other.RawOffset ||
                     this.RawOffset != null &&
                     this.RawOffset.Equals(other.RawOffset)
+                ) &&
+                (
+                    this.Dstsavings == other.Dstsavings ||
+                    this.Dstsavings != null &&
+                    this.Dstsavings.Equals(other.Dstsavings)
                 );
         }
 
@@ -179,11 +179,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.Dstsavings != null)
-                    hash = hash * 59 + this.Dstsavings.GetHashCode();
-                
                 if (this.RawOffset != null)
                     hash = hash * 59 + this.RawOffset.GetHashCode();
+                
+                if (this.Dstsavings != null)
+                    hash = hash * 59 + this.Dstsavings.GetHashCode();
                 
                 return hash;
             }

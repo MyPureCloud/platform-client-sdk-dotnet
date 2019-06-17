@@ -21,6 +21,9 @@ title: Evaluation
 | **AssignedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **ChangedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Queue** | [**Queue**](Queue.html) |  | [optional] |
+| **MediaType** | **List&lt;string&gt;** | List of different communication types used in conversation. | [optional] |
+| **Rescore** | **bool?** | Is only true when evaluation is re-scored. | [optional] |
+| **ConversationDate** | **DateTime?** | Date of conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **NeverRelease** | **bool?** | Signifies if the evaluation is never to be released. This cannot be set true if release date is also set. | [optional] |
 | **ResourceId** | **string** | Only used for email evaluations. Will be null for all other evaluations. | [optional] |
 | **ResourceType** | **string** | The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources. | [optional] |

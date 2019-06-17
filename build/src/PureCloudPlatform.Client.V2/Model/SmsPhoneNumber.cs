@@ -246,7 +246,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="PhoneNumber">A phone number provisioned for SMS communications in E.164 format. E.g. +13175555555 or +34234234234 (required).</param>
-        /// <param name="PhoneNumberType">Type of the phone number provisioned..</param>
         /// <param name="ProvisionedThroughPureCloud">Is set to false, if the phone number is provisioned through a SMS provider, outside of PureCloud.</param>
         /// <param name="PhoneNumberStatus">Status of the provisioned phone number..</param>
         /// <param name="CountryCode">The ISO 3166-1 alpha-2 country code of the country this phone number is associated with..</param>
@@ -254,16 +253,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">Date this phone number was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreatedBy">User that provisioned this phone number.</param>
         /// <param name="ModifiedBy">User that last modified this phone number.</param>
-        /// <param name="Version">Version number required for updates..</param>
+        /// <param name="Version">Version number required for updates. (required).</param>
         /// <param name="PurchaseDate">Date this phone number was purchased, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CancellationDate">Contract end date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="RenewalDate">Contract renewal date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="AutoRenewable">Renewal time period of this phone number, if the phoneNumberType is shortcode..</param>
-        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null)
+        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null)
         {
             this.Name = Name;
             this.PhoneNumber = PhoneNumber;
-            this.PhoneNumberType = PhoneNumberType;
             this.ProvisionedThroughPureCloud = ProvisionedThroughPureCloud;
             this.PhoneNumberStatus = PhoneNumberStatus;
             this.CountryCode = CountryCode;

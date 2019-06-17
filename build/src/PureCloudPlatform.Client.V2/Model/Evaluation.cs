@@ -97,6 +97,86 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MediaTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Call for "CALL"
+            /// </summary>
+            [EnumMember(Value = "CALL")]
+            Call,
+            
+            /// <summary>
+            /// Enum Callback for "CALLBACK"
+            /// </summary>
+            [EnumMember(Value = "CALLBACK")]
+            Callback,
+            
+            /// <summary>
+            /// Enum Chat for "CHAT"
+            /// </summary>
+            [EnumMember(Value = "CHAT")]
+            Chat,
+            
+            /// <summary>
+            /// Enum Cobrowse for "COBROWSE"
+            /// </summary>
+            [EnumMember(Value = "COBROWSE")]
+            Cobrowse,
+            
+            /// <summary>
+            /// Enum Email for "EMAIL"
+            /// </summary>
+            [EnumMember(Value = "EMAIL")]
+            Email,
+            
+            /// <summary>
+            /// Enum Message for "MESSAGE"
+            /// </summary>
+            [EnumMember(Value = "MESSAGE")]
+            Message,
+            
+            /// <summary>
+            /// Enum SocialExpression for "SOCIAL_EXPRESSION"
+            /// </summary>
+            [EnumMember(Value = "SOCIAL_EXPRESSION")]
+            SocialExpression,
+            
+            /// <summary>
+            /// Enum Video for "VIDEO"
+            /// </summary>
+            [EnumMember(Value = "VIDEO")]
+            Video,
+            
+            /// <summary>
+            /// Enum Screenshare for "SCREENSHARE"
+            /// </summary>
+            [EnumMember(Value = "SCREENSHARE")]
+            Screenshare
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -174,6 +254,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.
         /// </summary>
@@ -205,12 +291,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssignedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ChangedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Queue">Queue.</param>
+        /// <param name="MediaType">List of different communication types used in conversation..</param>
+        /// <param name="Rescore">Is only true when evaluation is re-scored..</param>
+        /// <param name="ConversationDate">Date of conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="NeverRelease">Signifies if the evaluation is never to be released. This cannot be set true if release date is also set..</param>
         /// <param name="ResourceId">Only used for email evaluations. Will be null for all other evaluations..</param>
         /// <param name="ResourceType">The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources..</param>
         /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation.</param>
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
-        public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null)
+        public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -225,6 +314,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AssignedDate = AssignedDate;
             this.ChangedDate = ChangedDate;
             this.Queue = Queue;
+            this.MediaType = MediaType;
+            this.Rescore = Rescore;
+            this.ConversationDate = ConversationDate;
             this.NeverRelease = NeverRelease;
             this.ResourceId = ResourceId;
             this.ResourceType = ResourceType;
@@ -347,6 +439,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// List of different communication types used in conversation.
+        /// </summary>
+        /// <value>List of different communication types used in conversation.</value>
+        [DataMember(Name="mediaType", EmitDefaultValue=false)]
+        public List<MediaTypeEnum> MediaType { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Is only true when evaluation is re-scored.
+        /// </summary>
+        /// <value>Is only true when evaluation is re-scored.</value>
+        [DataMember(Name="rescore", EmitDefaultValue=false)]
+        public bool? Rescore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Date of conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date of conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="conversationDate", EmitDefaultValue=false)]
+        public DateTime? ConversationDate { get; set; }
+        
+        
+        
+        /// <summary>
         /// Signifies if the evaluation is never to be released. This cannot be set true if release date is also set.
         /// </summary>
         /// <value>Signifies if the evaluation is never to be released. This cannot be set true if release date is also set.</value>
@@ -414,6 +533,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssignedDate: ").Append(AssignedDate).Append("\n");
             sb.Append("  ChangedDate: ").Append(ChangedDate).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
+            sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  Rescore: ").Append(Rescore).Append("\n");
+            sb.Append("  ConversationDate: ").Append(ConversationDate).Append("\n");
             sb.Append("  NeverRelease: ").Append(NeverRelease).Append("\n");
             sb.Append("  ResourceId: ").Append(ResourceId).Append("\n");
             sb.Append("  ResourceType: ").Append(ResourceType).Append("\n");
@@ -527,6 +649,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Queue.Equals(other.Queue)
                 ) &&
                 (
+                    this.MediaType == other.MediaType ||
+                    this.MediaType != null &&
+                    this.MediaType.SequenceEqual(other.MediaType)
+                ) &&
+                (
+                    this.Rescore == other.Rescore ||
+                    this.Rescore != null &&
+                    this.Rescore.Equals(other.Rescore)
+                ) &&
+                (
+                    this.ConversationDate == other.ConversationDate ||
+                    this.ConversationDate != null &&
+                    this.ConversationDate.Equals(other.ConversationDate)
+                ) &&
+                (
                     this.NeverRelease == other.NeverRelease ||
                     this.NeverRelease != null &&
                     this.NeverRelease.Equals(other.NeverRelease)
@@ -611,6 +748,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
+                
+                if (this.MediaType != null)
+                    hash = hash * 59 + this.MediaType.GetHashCode();
+                
+                if (this.Rescore != null)
+                    hash = hash * 59 + this.Rescore.GetHashCode();
+                
+                if (this.ConversationDate != null)
+                    hash = hash * 59 + this.ConversationDate.GetHashCode();
                 
                 if (this.NeverRelease != null)
                     hash = hash * 59 + this.NeverRelease.GetHashCode();

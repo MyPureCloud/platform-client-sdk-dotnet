@@ -41,6 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The direction of the communication
         /// </summary>
@@ -68,6 +71,8 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
+        
+        
         
         
         
@@ -140,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SessionId">The unique identifier of this session.</param>
         /// <param name="RequestedRoutingSkillIds">Unique identifier for a skill requested for an interaction.</param>
         /// <param name="RequestedLanguageId">Unique identifier for the language requested for an interaction.</param>
+        /// <param name="RoutingPriority">Routing priority for the current interaction.</param>
         /// <param name="ParticipantName">A human readable name identifying the participant.</param>
         /// <param name="UserId">Unique identifier for the user.</param>
         /// <param name="Direction">The direction of the communication.</param>
@@ -149,13 +155,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AddressTo">The address receiving an action.</param>
         /// <param name="Ani">Automatic Number Identification (caller&#39;s number).</param>
         /// <param name="Dnis">Dialed number identification service (number dialed by the calling party).</param>
-        public ObservationValue(DateTime? ObservationDate = null, string ConversationId = null, string SessionId = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, string ParticipantName = null, string UserId = null, DirectionEnum? Direction = null, string ConvertedFrom = null, string ConvertedTo = null, string AddressFrom = null, string AddressTo = null, string Ani = null, string Dnis = null)
+        public ObservationValue(DateTime? ObservationDate = null, string ConversationId = null, string SessionId = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, long? RoutingPriority = null, string ParticipantName = null, string UserId = null, DirectionEnum? Direction = null, string ConvertedFrom = null, string ConvertedTo = null, string AddressFrom = null, string AddressTo = null, string Ani = null, string Dnis = null)
         {
             this.ObservationDate = ObservationDate;
             this.ConversationId = ConversationId;
             this.SessionId = SessionId;
             this.RequestedRoutingSkillIds = RequestedRoutingSkillIds;
             this.RequestedLanguageId = RequestedLanguageId;
+            this.RoutingPriority = RoutingPriority;
             this.ParticipantName = ParticipantName;
             this.UserId = UserId;
             this.Direction = Direction;
@@ -212,6 +219,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Unique identifier for the language requested for an interaction</value>
         [DataMember(Name="requestedLanguageId", EmitDefaultValue=false)]
         public string RequestedLanguageId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Routing priority for the current interaction
+        /// </summary>
+        /// <value>Routing priority for the current interaction</value>
+        [DataMember(Name="routingPriority", EmitDefaultValue=false)]
+        public long? RoutingPriority { get; set; }
         
         
         
@@ -302,6 +318,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  RequestedRoutingSkillIds: ").Append(RequestedRoutingSkillIds).Append("\n");
             sb.Append("  RequestedLanguageId: ").Append(RequestedLanguageId).Append("\n");
+            sb.Append("  RoutingPriority: ").Append(RoutingPriority).Append("\n");
             sb.Append("  ParticipantName: ").Append(ParticipantName).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
@@ -371,6 +388,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RequestedLanguageId == other.RequestedLanguageId ||
                     this.RequestedLanguageId != null &&
                     this.RequestedLanguageId.Equals(other.RequestedLanguageId)
+                ) &&
+                (
+                    this.RoutingPriority == other.RoutingPriority ||
+                    this.RoutingPriority != null &&
+                    this.RoutingPriority.Equals(other.RoutingPriority)
                 ) &&
                 (
                     this.ParticipantName == other.ParticipantName ||
@@ -445,6 +467,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RequestedLanguageId != null)
                     hash = hash * 59 + this.RequestedLanguageId.GetHashCode();
+                
+                if (this.RoutingPriority != null)
+                    hash = hash * 59 + this.RoutingPriority.GetHashCode();
                 
                 if (this.ParticipantName != null)
                     hash = hash * 59 + this.ParticipantName.GetHashCode();

@@ -69,6 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
             V2,
             
             /// <summary>
+            /// Enum V1http for "v1-http"
+            /// </summary>
+            [EnumMember(Value = "v1-http")]
+            V1http,
+            
+            /// <summary>
             /// Enum Thirdparty for "third-party"
             /// </summary>
             [EnumMember(Value = "third-party")]

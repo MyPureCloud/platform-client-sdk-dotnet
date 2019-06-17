@@ -55,6 +55,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="GDPRSubject" /> class.
@@ -63,15 +73,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserId">UserId.</param>
         /// <param name="ExternalContactId">ExternalContactId.</param>
         /// <param name="DialerContactId">DialerContactId.</param>
+        /// <param name="JourneyCustomer">JourneyCustomer.</param>
+        /// <param name="SocialHandle">SocialHandle.</param>
         /// <param name="Addresses">Addresses.</param>
         /// <param name="PhoneNumbers">PhoneNumbers.</param>
         /// <param name="EmailAddresses">EmailAddresses.</param>
-        public GDPRSubject(string Name = null, string UserId = null, string ExternalContactId = null, DialerContactId DialerContactId = null, List<string> Addresses = null, List<string> PhoneNumbers = null, List<string> EmailAddresses = null)
+        public GDPRSubject(string Name = null, string UserId = null, string ExternalContactId = null, DialerContactId DialerContactId = null, GDPRJourneyCustomer JourneyCustomer = null, SocialHandle SocialHandle = null, List<string> Addresses = null, List<string> PhoneNumbers = null, List<string> EmailAddresses = null)
         {
             this.Name = Name;
             this.UserId = UserId;
             this.ExternalContactId = ExternalContactId;
             this.DialerContactId = DialerContactId;
+            this.JourneyCustomer = JourneyCustomer;
+            this.SocialHandle = SocialHandle;
             this.Addresses = Addresses;
             this.PhoneNumbers = PhoneNumbers;
             this.EmailAddresses = EmailAddresses;
@@ -113,6 +127,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets JourneyCustomer
+        /// </summary>
+        [DataMember(Name="journeyCustomer", EmitDefaultValue=false)]
+        public GDPRJourneyCustomer JourneyCustomer { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets SocialHandle
+        /// </summary>
+        [DataMember(Name="socialHandle", EmitDefaultValue=false)]
+        public SocialHandle SocialHandle { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Addresses
         /// </summary>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
@@ -148,6 +178,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  DialerContactId: ").Append(DialerContactId).Append("\n");
+            sb.Append("  JourneyCustomer: ").Append(JourneyCustomer).Append("\n");
+            sb.Append("  SocialHandle: ").Append(SocialHandle).Append("\n");
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
             sb.Append("  PhoneNumbers: ").Append(PhoneNumbers).Append("\n");
             sb.Append("  EmailAddresses: ").Append(EmailAddresses).Append("\n");
@@ -208,6 +240,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DialerContactId.Equals(other.DialerContactId)
                 ) &&
                 (
+                    this.JourneyCustomer == other.JourneyCustomer ||
+                    this.JourneyCustomer != null &&
+                    this.JourneyCustomer.Equals(other.JourneyCustomer)
+                ) &&
+                (
+                    this.SocialHandle == other.SocialHandle ||
+                    this.SocialHandle != null &&
+                    this.SocialHandle.Equals(other.SocialHandle)
+                ) &&
+                (
                     this.Addresses == other.Addresses ||
                     this.Addresses != null &&
                     this.Addresses.SequenceEqual(other.Addresses)
@@ -247,6 +289,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DialerContactId != null)
                     hash = hash * 59 + this.DialerContactId.GetHashCode();
+                
+                if (this.JourneyCustomer != null)
+                    hash = hash * 59 + this.JourneyCustomer.GetHashCode();
+                
+                if (this.SocialHandle != null)
+                    hash = hash * 59 + this.SocialHandle.GetHashCode();
                 
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();

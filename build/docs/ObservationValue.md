@@ -12,6 +12,7 @@ title: ObservationValue
 | **SessionId** | **string** | The unique identifier of this session | [optional] |
 | **RequestedRoutingSkillIds** | **List&lt;string&gt;** | Unique identifier for a skill requested for an interaction | [optional] |
 | **RequestedLanguageId** | **string** | Unique identifier for the language requested for an interaction | [optional] |
+| **RoutingPriority** | **long?** | Routing priority for the current interaction | [optional] |
 | **ParticipantName** | **string** | A human readable name identifying the participant | [optional] |
 | **UserId** | **string** | Unique identifier for the user | [optional] |
 | **Direction** | **string** | The direction of the communication | [optional] |

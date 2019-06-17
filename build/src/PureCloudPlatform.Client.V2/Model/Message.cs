@@ -276,7 +276,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Whatsapp for "whatsapp"
             /// </summary>
             [EnumMember(Value = "whatsapp")]
-            Whatsapp
+            Whatsapp,
+            
+            /// <summary>
+            /// Enum Telegram for "telegram"
+            /// </summary>
+            [EnumMember(Value = "telegram")]
+            Telegram,
+            
+            /// <summary>
+            /// Enum Kakao for "kakao"
+            /// </summary>
+            [EnumMember(Value = "kakao")]
+            Kakao
         }
         
         

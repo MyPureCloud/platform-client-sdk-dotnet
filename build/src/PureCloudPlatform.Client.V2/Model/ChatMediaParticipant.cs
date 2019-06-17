@@ -359,6 +359,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting
         /// </summary>
@@ -430,6 +433,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatMediaParticipant" /> class.
@@ -464,7 +469,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
         /// <param name="JourneyContext">Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context..</param>
         /// <param name="RoomId">The ID of the chat room..</param>
-        public ChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, string RoomId = null)
+        /// <param name="AvatarImageUrl">If available, the URI to the avatar image of this communication..</param>
+        public ChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, string RoomId = null, string AvatarImageUrl = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -496,6 +502,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FlaggedReason = FlaggedReason;
             this.JourneyContext = JourneyContext;
             this.RoomId = RoomId;
+            this.AvatarImageUrl = AvatarImageUrl;
             
         }
         
@@ -742,6 +749,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string RoomId { get; set; }
         
         
+        
+        /// <summary>
+        /// If available, the URI to the avatar image of this communication.
+        /// </summary>
+        /// <value>If available, the URI to the avatar image of this communication.</value>
+        [DataMember(Name="avatarImageUrl", EmitDefaultValue=false)]
+        public string AvatarImageUrl { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -781,6 +797,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
+            sb.Append("  AvatarImageUrl: ").Append(AvatarImageUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -966,6 +983,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoomId == other.RoomId ||
                     this.RoomId != null &&
                     this.RoomId.Equals(other.RoomId)
+                ) &&
+                (
+                    this.AvatarImageUrl == other.AvatarImageUrl ||
+                    this.AvatarImageUrl != null &&
+                    this.AvatarImageUrl.Equals(other.AvatarImageUrl)
                 );
         }
 
@@ -1070,6 +1092,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
+                
+                if (this.AvatarImageUrl != null)
+                    hash = hash * 59 + this.AvatarImageUrl.GetHashCode();
                 
                 return hash;
             }
