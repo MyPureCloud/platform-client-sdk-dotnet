@@ -380,6 +380,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting
         /// </summary>
@@ -465,6 +468,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CallbackMediaParticipant" /> class.
@@ -498,6 +503,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Peer">The peer communication corresponding to a matching leg for this communication..</param>
         /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
         /// <param name="JourneyContext">Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context..</param>
+        /// <param name="ConversationRoutingData">Information on how a communication should be routed to an agent..</param>
         /// <param name="OutboundPreview">The outbound preview associated with this callback..</param>
         /// <param name="Voicemail">The voicemail associated with this callback..</param>
         /// <param name="CallbackNumbers">The list of phone number to use for this callback..</param>
@@ -506,7 +512,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeoutSeconds">Duration in seconds before the callback will be auto-dialed..</param>
         /// <param name="AutomatedCallbackConfigId">The id of the config for automatically placing the callback (and handling the disposition). If absent, the callback will not be placed automatically but routed to an agent as per normal..</param>
         /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, DialerPreview OutboundPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string AutomatedCallbackConfigId = null, DateTime? CallbackScheduledTime = null)
+        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DialerPreview OutboundPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string AutomatedCallbackConfigId = null, DateTime? CallbackScheduledTime = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -537,6 +543,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Peer = Peer;
             this.FlaggedReason = FlaggedReason;
             this.JourneyContext = JourneyContext;
+            this.ConversationRoutingData = ConversationRoutingData;
             this.OutboundPreview = OutboundPreview;
             this.Voicemail = Voicemail;
             this.CallbackNumbers = CallbackNumbers;
@@ -784,6 +791,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Information on how a communication should be routed to an agent.
+        /// </summary>
+        /// <value>Information on how a communication should be routed to an agent.</value>
+        [DataMember(Name="conversationRoutingData", EmitDefaultValue=false)]
+        public ConversationRoutingData ConversationRoutingData { get; set; }
+        
+        
+        
+        /// <summary>
         /// The outbound preview associated with this callback.
         /// </summary>
         /// <value>The outbound preview associated with this callback.</value>
@@ -892,6 +908,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
+            sb.Append("  ConversationRoutingData: ").Append(ConversationRoutingData).Append("\n");
             sb.Append("  OutboundPreview: ").Append(OutboundPreview).Append("\n");
             sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
@@ -1082,6 +1099,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.JourneyContext.Equals(other.JourneyContext)
                 ) &&
                 (
+                    this.ConversationRoutingData == other.ConversationRoutingData ||
+                    this.ConversationRoutingData != null &&
+                    this.ConversationRoutingData.Equals(other.ConversationRoutingData)
+                ) &&
+                (
                     this.OutboundPreview == other.OutboundPreview ||
                     this.OutboundPreview != null &&
                     this.OutboundPreview.Equals(other.OutboundPreview)
@@ -1221,6 +1243,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.JourneyContext != null)
                     hash = hash * 59 + this.JourneyContext.GetHashCode();
+                
+                if (this.ConversationRoutingData != null)
+                    hash = hash * 59 + this.ConversationRoutingData.GetHashCode();
                 
                 if (this.OutboundPreview != null)
                     hash = hash * 59 + this.OutboundPreview.GetHashCode();

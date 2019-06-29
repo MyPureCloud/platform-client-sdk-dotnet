@@ -110,12 +110,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The direction of the communication
         /// </summary>
         /// <value>The direction of the communication</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
         
         
         
@@ -155,7 +160,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AddressTo">The address receiving an action.</param>
         /// <param name="Ani">Automatic Number Identification (caller&#39;s number).</param>
         /// <param name="Dnis">Dialed number identification service (number dialed by the calling party).</param>
-        public ObservationValue(DateTime? ObservationDate = null, string ConversationId = null, string SessionId = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, long? RoutingPriority = null, string ParticipantName = null, string UserId = null, DirectionEnum? Direction = null, string ConvertedFrom = null, string ConvertedTo = null, string AddressFrom = null, string AddressTo = null, string Ani = null, string Dnis = null)
+        /// <param name="ScoredAgents">ScoredAgents.</param>
+        public ObservationValue(DateTime? ObservationDate = null, string ConversationId = null, string SessionId = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, long? RoutingPriority = null, string ParticipantName = null, string UserId = null, DirectionEnum? Direction = null, string ConvertedFrom = null, string ConvertedTo = null, string AddressFrom = null, string AddressTo = null, string Ani = null, string Dnis = null, List<AnalyticsScoredAgent> ScoredAgents = null)
         {
             this.ObservationDate = ObservationDate;
             this.ConversationId = ConversationId;
@@ -172,6 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AddressTo = AddressTo;
             this.Ani = Ani;
             this.Dnis = Dnis;
+            this.ScoredAgents = ScoredAgents;
             
         }
         
@@ -304,6 +311,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Dnis { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets ScoredAgents
+        /// </summary>
+        [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
+        public List<AnalyticsScoredAgent> ScoredAgents { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -328,6 +343,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AddressTo: ").Append(AddressTo).Append("\n");
             sb.Append("  Ani: ").Append(Ani).Append("\n");
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
+            sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -438,6 +454,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Dnis == other.Dnis ||
                     this.Dnis != null &&
                     this.Dnis.Equals(other.Dnis)
+                ) &&
+                (
+                    this.ScoredAgents == other.ScoredAgents ||
+                    this.ScoredAgents != null &&
+                    this.ScoredAgents.SequenceEqual(other.ScoredAgents)
                 );
         }
 
@@ -497,6 +518,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Dnis != null)
                     hash = hash * 59 + this.Dnis.GetHashCode();
+                
+                if (this.ScoredAgents != null)
+                    hash = hash * 59 + this.ScoredAgents.GetHashCode();
                 
                 return hash;
             }

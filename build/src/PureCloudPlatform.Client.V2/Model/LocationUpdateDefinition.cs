@@ -78,12 +78,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Current activity status of the location.
         /// </summary>
         /// <value>Current activity status of the location.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -101,7 +106,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="State">Current activity status of the location..</param>
         /// <param name="Version">Version.</param>
         /// <param name="Path">Path.</param>
-        public LocationUpdateDefinition(string Name = null, LocationAddress Address = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, StateEnum? State = null, int? Version = null, List<string> Path = null)
+        /// <param name="Notes">Notes.</param>
+        public LocationUpdateDefinition(string Name = null, LocationAddress Address = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, StateEnum? State = null, int? Version = null, List<string> Path = null, string Notes = null)
         {
             this.Name = Name;
             this.Address = Address;
@@ -110,6 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.State = State;
             this.Version = Version;
             this.Path = Path;
+            this.Notes = Notes;
             
         }
         
@@ -165,6 +172,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> Path { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets Notes
+        /// </summary>
+        [DataMember(Name="notes", EmitDefaultValue=false)]
+        public string Notes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -181,6 +196,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
+            sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -251,6 +267,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Path == other.Path ||
                     this.Path != null &&
                     this.Path.SequenceEqual(other.Path)
+                ) &&
+                (
+                    this.Notes == other.Notes ||
+                    this.Notes != null &&
+                    this.Notes.Equals(other.Notes)
                 );
         }
 
@@ -286,6 +307,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Path != null)
                     hash = hash * 59 + this.Path.GetHashCode();
+                
+                if (this.Notes != null)
+                    hash = hash * 59 + this.Notes.GetHashCode();
                 
                 return hash;
             }

@@ -116,8 +116,6 @@ Delete an organization role.
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:role:delete
 
 ### Example
@@ -242,8 +240,6 @@ Removes all the roles from the user.
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:delete
 
 ### Example
@@ -1375,8 +1371,6 @@ Patch Organization Role for needsUpdate Field
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:role:edit
 
 ### Example
@@ -1483,7 +1477,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
-| **objectType** | **string**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, FLOW, USER |
+| **objectType** | **string**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, USER |
 | **body** | **List<string>**| Object Id List |  |
 {: class="table table-striped"}
 
@@ -1945,8 +1939,6 @@ Update
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:role:edit
 
 ### Example
@@ -2197,8 +2189,6 @@ Sets the user's roles
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 ### Example

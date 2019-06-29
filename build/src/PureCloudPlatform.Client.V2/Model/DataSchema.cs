@@ -110,7 +110,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DataSchema" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Version">The schema&#39;s version. Required for updates. (required).</param>
+        /// <param name="Version">The schema&#39;s version, a positive integer. Required for updates. (required).</param>
         /// <param name="AppliesTo">The PureCloud data this schema extends..</param>
         /// <param name="Enabled">The schema&#39;s current enabled/disabled status. A disabled schema cannot be assigned to any other objects, but the data on those objects from the schemas still exists.</param>
         /// <param name="Deleted">The schema&#39;s deleted status. A deleted schema can not be used by any records or updated. All records using a deleted schema will eventually have their schema-based data removed..</param>
@@ -148,9 +148,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The schema&#39;s version. Required for updates.
+        /// The schema&#39;s version, a positive integer. Required for updates.
         /// </summary>
-        /// <value>The schema&#39;s version. Required for updates.</value>
+        /// <value>The schema&#39;s version, a positive integer. Required for updates.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         

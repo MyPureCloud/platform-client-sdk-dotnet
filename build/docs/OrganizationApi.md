@@ -197,7 +197,7 @@ Update organization
 
 Requires ANY permissions: 
 
-* admin
+* directory:organization:admin
 
 ### Example
 ```{"language":"csharp"}
@@ -260,7 +260,7 @@ Update organization.
 
 Requires ANY permissions: 
 
-* admin
+* directory:organization:admin
 
 ### Example
 ```{"language":"csharp"}
@@ -321,7 +321,7 @@ Update organization whitelist settings
 
 Requires ANY permissions: 
 
-* admin
+* directory:organization:admin
 
 ### Example
 ```{"language":"csharp"}

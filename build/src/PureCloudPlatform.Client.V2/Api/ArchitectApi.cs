@@ -414,8 +414,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>ConsumingResourcesEntityListing</returns>
-        ConsumingResourcesEntityListing GetArchitectDependencytrackingConsumingresources (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null);
+        ConsumingResourcesEntityListing GetArchitectDependencytrackingConsumingresources (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null);
 
         /// <summary>
         /// Get resources that consume a given Dependency Tracking object
@@ -429,8 +430,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>ApiResponse of ConsumingResourcesEntityListing</returns>
-        ApiResponse<ConsumingResourcesEntityListing> GetArchitectDependencytrackingConsumingresourcesWithHttpInfo (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null);
+        ApiResponse<ConsumingResourcesEntityListing> GetArchitectDependencytrackingConsumingresourcesWithHttpInfo (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null);
         
         /// <summary>
         /// Get Dependency Tracking objects that consume deleted resources
@@ -2536,8 +2538,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>Task of ConsumingResourcesEntityListing</returns>
-        System.Threading.Tasks.Task<ConsumingResourcesEntityListing> GetArchitectDependencytrackingConsumingresourcesAsync (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ConsumingResourcesEntityListing> GetArchitectDependencytrackingConsumingresourcesAsync (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null);
 
         /// <summary>
         /// Get resources that consume a given Dependency Tracking object
@@ -2551,8 +2554,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>Task of ApiResponse (ConsumingResourcesEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConsumingResourcesEntityListing>> GetArchitectDependencytrackingConsumingresourcesAsyncWithHttpInfo (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<ConsumingResourcesEntityListing>> GetArchitectDependencytrackingConsumingresourcesAsyncWithHttpInfo (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null);
         
         /// <summary>
         /// Get Dependency Tracking objects that consume deleted resources
@@ -7560,10 +7564,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>ConsumingResourcesEntityListing</returns>
-        public ConsumingResourcesEntityListing GetArchitectDependencytrackingConsumingresources (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null)
+        public ConsumingResourcesEntityListing GetArchitectDependencytrackingConsumingresources (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null)
         {
-             ApiResponse<ConsumingResourcesEntityListing> localVarResponse = GetArchitectDependencytrackingConsumingresourcesWithHttpInfo(id, objectType, resourceType, pageNumber, pageSize);
+             ApiResponse<ConsumingResourcesEntityListing> localVarResponse = GetArchitectDependencytrackingConsumingresourcesWithHttpInfo(id, objectType, resourceType, pageNumber, pageSize, flowFilter);
              return localVarResponse.Data;
         }
 
@@ -7576,8 +7581,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>ApiResponse of ConsumingResourcesEntityListing</returns>
-        public ApiResponse< ConsumingResourcesEntityListing > GetArchitectDependencytrackingConsumingresourcesWithHttpInfo (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null)
+        public ApiResponse< ConsumingResourcesEntityListing > GetArchitectDependencytrackingConsumingresourcesWithHttpInfo (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null)
         { 
             // verify the required parameter 'id' is set
             if (id == null)
@@ -7624,6 +7630,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (flowFilter != null) localVarQueryParams.Add(new Tuple<string, string>("flowFilter", this.Configuration.ApiClient.ParameterToString(flowFilter)));
 
             // Header params
 
@@ -7670,10 +7677,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>Task of ConsumingResourcesEntityListing</returns>
-        public async System.Threading.Tasks.Task<ConsumingResourcesEntityListing> GetArchitectDependencytrackingConsumingresourcesAsync (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ConsumingResourcesEntityListing> GetArchitectDependencytrackingConsumingresourcesAsync (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null)
         {
-             ApiResponse<ConsumingResourcesEntityListing> localVarResponse = await GetArchitectDependencytrackingConsumingresourcesAsyncWithHttpInfo(id, objectType, resourceType, pageNumber, pageSize);
+             ApiResponse<ConsumingResourcesEntityListing> localVarResponse = await GetArchitectDependencytrackingConsumingresourcesAsyncWithHttpInfo(id, objectType, resourceType, pageNumber, pageSize, flowFilter);
              return localVarResponse.Data;
 
         }
@@ -7687,8 +7695,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>Task of ApiResponse (ConsumingResourcesEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConsumingResourcesEntityListing>> GetArchitectDependencytrackingConsumingresourcesAsyncWithHttpInfo (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ConsumingResourcesEntityListing>> GetArchitectDependencytrackingConsumingresourcesAsyncWithHttpInfo (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null)
         { 
             // verify the required parameter 'id' is set
             if (id == null)
@@ -7737,6 +7746,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (flowFilter != null) localVarQueryParams.Add(new Tuple<string, string>("flowFilter", this.Configuration.ApiClient.ParameterToString(flowFilter)));
 
             // Header params
 

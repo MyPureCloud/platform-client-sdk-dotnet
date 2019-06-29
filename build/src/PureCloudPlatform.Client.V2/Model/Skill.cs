@@ -13,21 +13,11 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// LicenseOrganization
+    /// Skill
     /// </summary>
     [DataContract]
-    public partial class LicenseOrganization :  IEquatable<LicenseOrganization>
+    public partial class Skill :  IEquatable<Skill>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -42,50 +32,32 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="LicenseOrganization" /> class.
+        /// Initializes a new instance of the <see cref="Skill" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Licenses">Licenses.</param>
-        public LicenseOrganization(string Name = null, Dictionary<string, List<AddressableEntityUser>> Licenses = null)
+        /// <param name="Id">Id.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+        public Skill(string Id = null, string SelfUri = null)
         {
-            this.Name = Name;
-            this.Licenses = Licenses;
+            this.Id = Id;
+            this.SelfUri = SelfUri;
             
         }
         
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets SelfUri
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Licenses
-        /// </summary>
-        [DataMember(Name="licenses", EmitDefaultValue=false)]
-        public Dictionary<string, List<AddressableEntityUser>> Licenses { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
+        public string SelfUri { get; set; }
         
         
         /// <summary>
@@ -95,11 +67,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class LicenseOrganization {\n");
+            sb.Append("class Skill {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Licenses: ").Append(Licenses).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -122,15 +92,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as LicenseOrganization);
+            return this.Equals(obj as Skill);
         }
 
         /// <summary>
-        /// Returns true if LicenseOrganization instances are equal
+        /// Returns true if Skill instances are equal
         /// </summary>
-        /// <param name="other">Instance of LicenseOrganization to be compared</param>
+        /// <param name="other">Instance of Skill to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LicenseOrganization other)
+        public bool Equals(Skill other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -141,16 +111,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this.Licenses == other.Licenses ||
-                    this.Licenses != null &&
-                    this.Licenses.SequenceEqual(other.Licenses)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -173,12 +133,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                
-                if (this.Licenses != null)
-                    hash = hash * 59 + this.Licenses.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

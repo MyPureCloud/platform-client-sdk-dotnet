@@ -77,7 +77,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Transcoded for "transcoded"
             /// </summary>
             [EnumMember(Value = "transcoded")]
-            Transcoded
+            Transcoded,
+            
+            /// <summary>
+            /// Enum Transcodefailed for "transcodeFailed"
+            /// </summary>
+            [EnumMember(Value = "transcodeFailed")]
+            Transcodefailed
         }
         
         

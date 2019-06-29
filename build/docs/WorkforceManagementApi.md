@@ -658,6 +658,10 @@ Requires ANY permissions:
 * wfm:agentSchedule:view
 * wfm:agentTimeOffRequest:submit
 * wfm:agent:view
+* wfm:businessUnit:add
+* wfm:businessUnit:delete
+* wfm:businessUnit:edit
+* wfm:businessUnit:view
 * wfm:historicalAdherence:view
 * wfm:intraday:view
 * wfm:managementUnit:add
@@ -675,6 +679,9 @@ Requires ANY permissions:
 * wfm:serviceGoalGroup:delete
 * wfm:serviceGoalGroup:edit
 * wfm:serviceGoalGroup:view
+* wfm:shiftTradeRequest:edit
+* wfm:shiftTradeRequest:view
+* wfm:agentShiftTradeRequest:participate
 * wfm:shortTermForecast:add
 * wfm:shortTermForecast:delete
 * wfm:shortTermForecast:edit
@@ -819,6 +826,10 @@ Requires ANY permissions:
 * wfm:agentSchedule:view
 * wfm:agentTimeOffRequest:submit
 * wfm:agent:view
+* wfm:businessUnit:add
+* wfm:businessUnit:delete
+* wfm:businessUnit:edit
+* wfm:businessUnit:view
 * wfm:historicalAdherence:view
 * wfm:intraday:view
 * wfm:managementUnit:add
@@ -1852,7 +1863,7 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunitweekschedules"></a>
 
-## [**WeekScheduleListResponse**](WeekScheduleListResponse.html) GetWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId)
+## [**WeekScheduleListResponse**](WeekScheduleListResponse.html) GetWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null)
 
 
 
@@ -1885,11 +1896,14 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format.
+            var includeOnlyPublished = true;  // bool? | Return only published schedules (optional) 
+            var earliestWeekDate = earliestWeekDate_example;  // string | The start date of the earliest week to query in yyyy-MM-dd format (optional) 
+            var latestWeekDate = latestWeekDate_example;  // string | The start date of the latest week to query in yyyy-MM-dd format (optional) 
 
             try
             { 
                 // Get the list of schedules in a week in management unit
-                WeekScheduleListResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId);
+                WeekScheduleListResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId, includeOnlyPublished, earliestWeekDate, latestWeekDate);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1908,6 +1922,9 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **weekId** | **string**| First day of schedule week in yyyy-MM-dd format. |  |
+| **includeOnlyPublished** | **bool?**| Return only published schedules | [optional]  |
+| **earliestWeekDate** | **string**| The start date of the earliest week to query in yyyy-MM-dd format | [optional]  |
+| **latestWeekDate** | **string**| The start date of the latest week to query in yyyy-MM-dd format | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2235,7 +2252,7 @@ namespace Example
 | **pageSize** | **int?**|  | [optional]  |
 | **pageNumber** | **int?**|  | [optional]  |
 | **expand** | **string**|  | [optional] <br />**Values**: details |
-| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans |
+| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BusinessUnits, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ServiceGoalTemplates, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans |
 | **divisionId** | **string**|  | [optional]  |
 {: class="table table-striped"}
 

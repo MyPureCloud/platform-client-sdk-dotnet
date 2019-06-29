@@ -300,6 +300,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The session media type
         /// </summary>
@@ -336,6 +339,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Direction</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
         
         
         
@@ -471,7 +476,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="JourneyActionMapId">Journey action map ID.</param>
         /// <param name="JourneyActionMapVersion">Journey action map version.</param>
         /// <param name="ProtocolCallId">The original voice protocol call ID, e.g. a SIP call ID.</param>
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null, string ProtocolCallId = null)
+        /// <param name="Provider">The source provider for the communication.</param>
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null, string ProtocolCallId = null, string Provider = null)
         {
             this.MediaType = MediaType;
             this.SessionId = SessionId;
@@ -522,6 +528,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.JourneyActionMapId = JourneyActionMapId;
             this.JourneyActionMapVersion = JourneyActionMapVersion;
             this.ProtocolCallId = ProtocolCallId;
+            this.Provider = Provider;
             
         }
         
@@ -939,6 +946,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ProtocolCallId { get; set; }
         
         
+        
+        /// <summary>
+        /// The source provider for the communication
+        /// </summary>
+        /// <value>The source provider for the communication</value>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -997,6 +1013,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  JourneyActionMapId: ").Append(JourneyActionMapId).Append("\n");
             sb.Append("  JourneyActionMapVersion: ").Append(JourneyActionMapVersion).Append("\n");
             sb.Append("  ProtocolCallId: ").Append(ProtocolCallId).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1277,6 +1294,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ProtocolCallId == other.ProtocolCallId ||
                     this.ProtocolCallId != null &&
                     this.ProtocolCallId.Equals(other.ProtocolCallId)
+                ) &&
+                (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
                 );
         }
 
@@ -1438,6 +1460,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ProtocolCallId != null)
                     hash = hash * 59 + this.ProtocolCallId.GetHashCode();
+                
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
                 
                 return hash;
             }

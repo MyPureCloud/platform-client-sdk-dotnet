@@ -25,25 +25,39 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Agent" /> class.
         /// </summary>
-        /// <param name="Stage">The current stage for this agent.</param>
-        public Agent(string Stage = null)
+        /// <param name="Id">Id.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+        public Agent(string Id = null, string SelfUri = null)
         {
-            this.Stage = Stage;
+            this.Id = Id;
+            this.SelfUri = SelfUri;
             
         }
         
         
         
         /// <summary>
-        /// The current stage for this agent
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The current stage for this agent</value>
-        [DataMember(Name="stage", EmitDefaultValue=false)]
-        public string Stage { get; set; }
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets SelfUri
+        /// </summary>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; set; }
         
         
         /// <summary>
@@ -55,7 +69,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class Agent {\n");
             
-            sb.Append("  Stage: ").Append(Stage).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,9 +108,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Stage == other.Stage ||
-                    this.Stage != null &&
-                    this.Stage.Equals(other.Stage)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -111,8 +131,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Stage != null)
-                    hash = hash * 59 + this.Stage.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

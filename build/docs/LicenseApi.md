@@ -9,7 +9,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**GetLicenseDefinition**](LicenseApi.html#getlicensedefinition) | **GET** /api/v2/license/definitions/{licenseId} | Get PureCloud license definition. |
 | [**GetLicenseDefinitions**](LicenseApi.html#getlicensedefinitions) | **GET** /api/v2/license/definitions | Get all PureCloud license definitions available for the organization. |
-| [**GetLicenseOrganization**](LicenseApi.html#getlicenseorganization) | **GET** /api/v2/license/organization | Get license assignments for the organization. |
 | [**GetLicenseToggle**](LicenseApi.html#getlicensetoggle) | **GET** /api/v2/license/toggles/{featureName} | Get PureCloud license feature toggle value. |
 | [**GetLicenseUser**](LicenseApi.html#getlicenseuser) | **GET** /api/v2/license/users/{userId} | Get licenses for specified user. |
 | [**GetLicenseUsers**](LicenseApi.html#getlicenseusers) | **GET** /api/v2/license/users | Get a page of users and their licenses |
@@ -30,8 +29,6 @@ Get PureCloud license definition.
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 ### Example
@@ -93,8 +90,6 @@ Get all PureCloud license definitions available for the organization.
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 ### Example
@@ -139,64 +134,6 @@ This endpoint does require any parameters.
 
 [**List<LicenseDefinition>**](LicenseDefinition.html)
 
-<a name="getlicenseorganization"></a>
-
-## [**LicenseOrganization**](LicenseOrganization.html) GetLicenseOrganization ()
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Get license assignments for the organization.
-
-
-
-Requires ANY permissions: 
-
-* admin
-* role_manager
-* authorization:grant:add
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetLicenseOrganizationExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new LicenseApi();
-
-            try
-            { 
-                // Get license assignments for the organization.
-                LicenseOrganization result = apiInstance.GetLicenseOrganization();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling LicenseApi.GetLicenseOrganization: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-[**LicenseOrganization**](LicenseOrganization.html)
-
 <a name="getlicensetoggle"></a>
 
 ## [**LicenseOrgToggle**](LicenseOrgToggle.html) GetLicenseToggle (string featureName)
@@ -209,8 +146,6 @@ Get PureCloud license feature toggle value.
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 ### Example
@@ -272,8 +207,6 @@ Get licenses for specified user.
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 ### Example
@@ -333,11 +266,8 @@ Get a page of users and their licenses
 
 Retrieve a page of users in an organization along with the licenses they possess.
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* admin
-* role_manager
-* authorization:grant:add
 
 ### Example
 ```{"language":"csharp"}
@@ -400,8 +330,6 @@ Update the organization's license assignments in a batch.
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 ### Example
@@ -463,8 +391,6 @@ Switch PureCloud license feature toggle value.
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 ### Example

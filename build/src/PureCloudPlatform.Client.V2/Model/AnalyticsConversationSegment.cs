@@ -331,6 +331,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// A description of the event that disconnected the segment
         /// </summary>
@@ -346,6 +349,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The activity taking place for the participant in the segment</value>
         [DataMember(Name="segmentType", EmitDefaultValue=false)]
         public SegmentTypeEnum? SegmentType { get; set; }
+        
+        
         
         
         
@@ -394,6 +399,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RequestedRoutingUserIds">RequestedRoutingUserIds.</param>
         /// <param name="RequestedRoutingSkillIds">RequestedRoutingSkillIds.</param>
         /// <param name="RequestedLanguageId">A unique identifier for the language requested for an interaction..</param>
+        /// <param name="ScoredAgents">ScoredAgents.</param>
         /// <param name="Properties">Properties.</param>
         /// <param name="SourceConversationId">SourceConversationId.</param>
         /// <param name="DestinationConversationId">DestinationConversationId.</param>
@@ -406,7 +412,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Subject">Subject.</param>
         /// <param name="AudioMuted">AudioMuted.</param>
         /// <param name="VideoMuted">VideoMuted.</param>
-        public AnalyticsConversationSegment(DateTime? SegmentStart = null, DateTime? SegmentEnd = null, string QueueId = null, string WrapUpCode = null, string WrapUpNote = null, List<string> WrapUpTags = null, string ErrorCode = null, DisconnectTypeEnum? DisconnectType = null, SegmentTypeEnum? SegmentType = null, List<string> RequestedRoutingUserIds = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, List<AnalyticsProperty> Properties = null, string SourceConversationId = null, string DestinationConversationId = null, string SourceSessionId = null, string DestinationSessionId = null, List<long?> SipResponseCodes = null, List<long?> Q850ResponseCodes = null, bool? Conference = null, string GroupId = null, string Subject = null, bool? AudioMuted = null, bool? VideoMuted = null)
+        public AnalyticsConversationSegment(DateTime? SegmentStart = null, DateTime? SegmentEnd = null, string QueueId = null, string WrapUpCode = null, string WrapUpNote = null, List<string> WrapUpTags = null, string ErrorCode = null, DisconnectTypeEnum? DisconnectType = null, SegmentTypeEnum? SegmentType = null, List<string> RequestedRoutingUserIds = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, List<AnalyticsScoredAgent> ScoredAgents = null, List<AnalyticsProperty> Properties = null, string SourceConversationId = null, string DestinationConversationId = null, string SourceSessionId = null, string DestinationSessionId = null, List<long?> SipResponseCodes = null, List<long?> Q850ResponseCodes = null, bool? Conference = null, string GroupId = null, string Subject = null, bool? AudioMuted = null, bool? VideoMuted = null)
         {
             this.SegmentStart = SegmentStart;
             this.SegmentEnd = SegmentEnd;
@@ -420,6 +426,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RequestedRoutingUserIds = RequestedRoutingUserIds;
             this.RequestedRoutingSkillIds = RequestedRoutingSkillIds;
             this.RequestedLanguageId = RequestedLanguageId;
+            this.ScoredAgents = ScoredAgents;
             this.Properties = Properties;
             this.SourceConversationId = SourceConversationId;
             this.DestinationConversationId = DestinationConversationId;
@@ -524,6 +531,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A unique identifier for the language requested for an interaction.</value>
         [DataMember(Name="requestedLanguageId", EmitDefaultValue=false)]
         public string RequestedLanguageId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets ScoredAgents
+        /// </summary>
+        [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
+        public List<AnalyticsScoredAgent> ScoredAgents { get; set; }
         
         
         
@@ -644,6 +659,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RequestedRoutingUserIds: ").Append(RequestedRoutingUserIds).Append("\n");
             sb.Append("  RequestedRoutingSkillIds: ").Append(RequestedRoutingSkillIds).Append("\n");
             sb.Append("  RequestedLanguageId: ").Append(RequestedLanguageId).Append("\n");
+            sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("  SourceConversationId: ").Append(SourceConversationId).Append("\n");
             sb.Append("  DestinationConversationId: ").Append(DestinationConversationId).Append("\n");
@@ -751,6 +767,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RequestedLanguageId == other.RequestedLanguageId ||
                     this.RequestedLanguageId != null &&
                     this.RequestedLanguageId.Equals(other.RequestedLanguageId)
+                ) &&
+                (
+                    this.ScoredAgents == other.ScoredAgents ||
+                    this.ScoredAgents != null &&
+                    this.ScoredAgents.SequenceEqual(other.ScoredAgents)
                 ) &&
                 (
                     this.Properties == other.Properties ||
@@ -861,6 +882,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RequestedLanguageId != null)
                     hash = hash * 59 + this.RequestedLanguageId.GetHashCode();
+                
+                if (this.ScoredAgents != null)
+                    hash = hash * 59 + this.ScoredAgents.GetHashCode();
                 
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();

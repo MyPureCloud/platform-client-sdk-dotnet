@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Abandon rate configuration for a service goal group
+    /// Service goal abandon rate configuration
     /// </summary>
     [DataContract]
     public partial class WfmAbandonRate :  IEquatable<WfmAbandonRate>
@@ -40,8 +40,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmAbandonRate" /> class.
         /// </summary>
-        /// <param name="Include">Whether to include abandon rate in the associated service goal group&#39;s configuration (required).</param>
-        /// <param name="Percent">Abandon rate percent goal for the associated service goal group. Required if include == true.</param>
+        /// <param name="Include">Whether to include abandon rate in the associated configuration (required).</param>
+        /// <param name="Percent">Abandon rate percent goal. Required if include == true.</param>
         public WfmAbandonRate(bool? Include = null, int? Percent = null)
         {
             this.Include = Include;
@@ -52,18 +52,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Whether to include abandon rate in the associated service goal group&#39;s configuration
+        /// Whether to include abandon rate in the associated configuration
         /// </summary>
-        /// <value>Whether to include abandon rate in the associated service goal group&#39;s configuration</value>
+        /// <value>Whether to include abandon rate in the associated configuration</value>
         [DataMember(Name="include", EmitDefaultValue=false)]
         public bool? Include { get; set; }
         
         
         
         /// <summary>
-        /// Abandon rate percent goal for the associated service goal group. Required if include == true
+        /// Abandon rate percent goal. Required if include == true
         /// </summary>
-        /// <value>Abandon rate percent goal for the associated service goal group. Required if include == true</value>
+        /// <value>Abandon rate percent goal. Required if include == true</value>
         [DataMember(Name="percent", EmitDefaultValue=false)]
         public int? Percent { get; set; }
         

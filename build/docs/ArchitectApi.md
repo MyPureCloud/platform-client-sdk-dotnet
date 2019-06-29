@@ -1089,7 +1089,7 @@ namespace Example
 
 <a name="getarchitectdependencytrackingconsumingresources"></a>
 
-## [**ConsumingResourcesEntityListing**](ConsumingResourcesEntityListing.html) GetArchitectDependencytrackingConsumingresources (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null)
+## [**ConsumingResourcesEntityListing**](ConsumingResourcesEntityListing.html) GetArchitectDependencytrackingConsumingresources (string id, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null)
 
 
 
@@ -1124,11 +1124,12 @@ namespace Example
             var resourceType = new List<string>(); // List<string> | Types of consuming resources to show.  Only versioned types are allowed here. (optional) 
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var flowFilter = flowFilter_example;  // string | Show only checkedIn or published flows (optional) 
 
             try
             { 
                 // Get resources that consume a given Dependency Tracking object
-                ConsumingResourcesEntityListing result = apiInstance.GetArchitectDependencytrackingConsumingresources(id, objectType, resourceType, pageNumber, pageSize);
+                ConsumingResourcesEntityListing result = apiInstance.GetArchitectDependencytrackingConsumingresources(id, objectType, resourceType, pageNumber, pageSize, flowFilter);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1150,6 +1151,7 @@ namespace Example
 | **resourceType** | [**List<string>**](string.html)| Types of consuming resources to show.  Only versioned types are allowed here. | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGFLOWAGENT, EMAILROUTE, EMERGENCYGROUP, FLOWOUTCOME, GROUP, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, LEXBOT, LEXBOTALIAS, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, WORKFLOW |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **flowFilter** | **string**| Show only checkedIn or published flows | [optional] <br />**Values**: checkedIn, published |
 {: class="table table-striped"}
 
 ### Return type
@@ -4023,7 +4025,7 @@ Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
 
 Requires ANY permissions: 
 
-* architect:systemPrompt:edit
+* architect:systemPrompt:view
 
 ### Example
 ```{"language":"csharp"}

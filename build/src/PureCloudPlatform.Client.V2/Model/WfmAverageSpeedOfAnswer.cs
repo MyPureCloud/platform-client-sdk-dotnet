@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Average speed of answer settings
+    /// Service goal average speed of answer configuration
     /// </summary>
     [DataContract]
     public partial class WfmAverageSpeedOfAnswer :  IEquatable<WfmAverageSpeedOfAnswer>
@@ -40,7 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmAverageSpeedOfAnswer" /> class.
         /// </summary>
-        /// <param name="Include">Whether to include average speed of answer (ASA) in this service goal group&#39;s configuration (required).</param>
+        /// <param name="Include">Whether to include average speed of answer (ASA) in the associated configuration (required).</param>
         /// <param name="Seconds">The target average speed of answer (ASA) in seconds. Required if include == true.</param>
         public WfmAverageSpeedOfAnswer(bool? Include = null, int? Seconds = null)
         {
@@ -52,9 +52,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Whether to include average speed of answer (ASA) in this service goal group&#39;s configuration
+        /// Whether to include average speed of answer (ASA) in the associated configuration
         /// </summary>
-        /// <value>Whether to include average speed of answer (ASA) in this service goal group&#39;s configuration</value>
+        /// <value>Whether to include average speed of answer (ASA) in the associated configuration</value>
         [DataMember(Name="include", EmitDefaultValue=false)]
         public bool? Include { get; set; }
         

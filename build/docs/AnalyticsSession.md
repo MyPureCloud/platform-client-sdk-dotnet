@@ -56,6 +56,7 @@ title: AnalyticsSession
 | **JourneyActionMapId** | **string** | Journey action map ID | [optional] |
 | **JourneyActionMapVersion** | **string** | Journey action map version | [optional] |
 | **ProtocolCallId** | **string** | The original voice protocol call ID, e.g. a SIP call ID | [optional] |
+| **Provider** | **string** | The source provider for the communication | [optional] |
 {: class="table table-striped"}
 
 

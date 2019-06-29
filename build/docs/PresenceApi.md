@@ -523,7 +523,7 @@ Update bulk user Presences
 
 Requires ANY permissions: 
 
-* user_administration
+* directory:user:edit
 
 ### Example
 ```{"language":"csharp"}

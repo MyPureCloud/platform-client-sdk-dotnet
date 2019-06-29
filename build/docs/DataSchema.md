@@ -9,7 +9,7 @@ title: DataSchema
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Version** | **int?** | The schema&#39;s version. Required for updates. | |
+| **Version** | **int?** | The schema&#39;s version, a positive integer. Required for updates. | |
 | **AppliesTo** | **List&lt;string&gt;** | The PureCloud data this schema extends. | [optional] |
 | **Enabled** | **bool?** | The schema&#39;s current enabled/disabled status. A disabled schema cannot be assigned to any other objects, but the data on those objects from the schemas still exists | [optional] |
 | **Deleted** | **bool?** | The schema&#39;s deleted status. A deleted schema can not be used by any records or updated. All records using a deleted schema will eventually have their schema-based data removed. | [optional] |

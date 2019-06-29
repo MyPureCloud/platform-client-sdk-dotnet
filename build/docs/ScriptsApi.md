@@ -288,7 +288,7 @@ namespace Example
 
 <a name="getscriptspublished"></a>
 
-## [**ScriptEntityListing**](ScriptEntityListing.html) GetScriptsPublished (string scriptId, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
+## [**ScriptEntityListing**](ScriptEntityListing.html) GetScriptsPublished (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
 
 
 
@@ -318,7 +318,6 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ScriptsApi();
-            var scriptId = scriptId_example;  // string | Script ID
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var expand = expand_example;  // string | Expand (optional) 
@@ -330,7 +329,7 @@ namespace Example
             try
             { 
                 // Get the published scripts.
-                ScriptEntityListing result = apiInstance.GetScriptsPublished(scriptId, pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion);
+                ScriptEntityListing result = apiInstance.GetScriptsPublished(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -347,7 +346,6 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **scriptId** | **string**| Script ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **expand** | **string**| Expand | [optional]  |

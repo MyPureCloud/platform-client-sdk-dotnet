@@ -36,6 +36,7 @@ title: CallbackMediaParticipant
 | **Peer** | **string** | The peer communication corresponding to a matching leg for this communication. | [optional] |
 | **FlaggedReason** | **string** | The reason specifying why participant flagged the conversation. | [optional] |
 | **JourneyContext** | [**JourneyContext**](JourneyContext.html) | Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context. | [optional] |
+| **ConversationRoutingData** | [**ConversationRoutingData**](ConversationRoutingData.html) | Information on how a communication should be routed to an agent. | [optional] |
 | **OutboundPreview** | [**DialerPreview**](DialerPreview.html) | The outbound preview associated with this callback. | [optional] |
 | **Voicemail** | [**Voicemail**](Voicemail.html) | The voicemail associated with this callback. | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** | The list of phone number to use for this callback. | [optional] |

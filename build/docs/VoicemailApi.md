@@ -284,8 +284,6 @@ Requires ANY permissions:
 
 * directory:group:add
 * directory:group:edit
-* group_administration
-* group_creation
 
 ### Example
 ```{"language":"csharp"}
@@ -1004,8 +1002,6 @@ Requires ANY permissions:
 
 * directory:group:add
 * directory:group:edit
-* group_administration
-* group_creation
 
 ### Example
 ```{"language":"csharp"}

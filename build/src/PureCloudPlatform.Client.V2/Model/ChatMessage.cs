@@ -125,12 +125,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Type of the message body (v2 chats only)
         /// </summary>
         /// <value>Type of the message body (v2 chats only)</value>
         [DataMember(Name="bodyType", EmitDefaultValue=false)]
         public BodyTypeEnum? BodyType { get; set; }
+        
+        
+        
+        
         
         
         
@@ -148,8 +158,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Message">The message id.</param>
         /// <param name="Type">Type.</param>
         /// <param name="BodyType">Type of the message body (v2 chats only).</param>
+        /// <param name="SenderCommunicationId">Communication of sender (v2 chats only).</param>
+        /// <param name="ParticipantPurpose">Participant purpose of sender (v2 chats only).</param>
         /// <param name="User">The user information for the sender (if available).</param>
-        public ChatMessage(string Body = null, string Id = null, string To = null, string From = null, string Utc = null, string Chat = null, string Message = null, string Type = null, BodyTypeEnum? BodyType = null, ChatMessageUser User = null)
+        public ChatMessage(string Body = null, string Id = null, string To = null, string From = null, string Utc = null, string Chat = null, string Message = null, string Type = null, BodyTypeEnum? BodyType = null, string SenderCommunicationId = null, string ParticipantPurpose = null, ChatMessageUser User = null)
         {
             this.Body = Body;
             this.Id = Id;
@@ -160,6 +172,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Message = Message;
             this.Type = Type;
             this.BodyType = BodyType;
+            this.SenderCommunicationId = SenderCommunicationId;
+            this.ParticipantPurpose = ParticipantPurpose;
             this.User = User;
             
         }
@@ -238,6 +252,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Communication of sender (v2 chats only)
+        /// </summary>
+        /// <value>Communication of sender (v2 chats only)</value>
+        [DataMember(Name="senderCommunicationId", EmitDefaultValue=false)]
+        public string SenderCommunicationId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Participant purpose of sender (v2 chats only)
+        /// </summary>
+        /// <value>Participant purpose of sender (v2 chats only)</value>
+        [DataMember(Name="participantPurpose", EmitDefaultValue=false)]
+        public string ParticipantPurpose { get; set; }
+        
+        
+        
+        /// <summary>
         /// The user information for the sender (if available)
         /// </summary>
         /// <value>The user information for the sender (if available)</value>
@@ -263,6 +295,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  BodyType: ").Append(BodyType).Append("\n");
+            sb.Append("  SenderCommunicationId: ").Append(SenderCommunicationId).Append("\n");
+            sb.Append("  ParticipantPurpose: ").Append(ParticipantPurpose).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -346,6 +380,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.BodyType.Equals(other.BodyType)
                 ) &&
                 (
+                    this.SenderCommunicationId == other.SenderCommunicationId ||
+                    this.SenderCommunicationId != null &&
+                    this.SenderCommunicationId.Equals(other.SenderCommunicationId)
+                ) &&
+                (
+                    this.ParticipantPurpose == other.ParticipantPurpose ||
+                    this.ParticipantPurpose != null &&
+                    this.ParticipantPurpose.Equals(other.ParticipantPurpose)
+                ) &&
+                (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
@@ -390,6 +434,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.BodyType != null)
                     hash = hash * 59 + this.BodyType.GetHashCode();
+                
+                if (this.SenderCommunicationId != null)
+                    hash = hash * 59 + this.SenderCommunicationId.GetHashCode();
+                
+                if (this.ParticipantPurpose != null)
+                    hash = hash * 59 + this.ParticipantPurpose.GetHashCode();
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();

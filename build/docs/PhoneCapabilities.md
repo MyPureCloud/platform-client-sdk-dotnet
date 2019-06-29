@@ -14,6 +14,7 @@ title: PhoneCapabilities
 | **AllowReboot** | **bool?** |  | [optional] |
 | **NoRebalance** | **bool?** |  | [optional] |
 | **NoCloudProvisioning** | **bool?** |  | [optional] |
+| **MediaCodecs** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

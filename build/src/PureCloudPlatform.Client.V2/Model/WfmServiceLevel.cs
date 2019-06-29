@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Service level target configuration for a service goal group
+    /// Service goal service level configuration
     /// </summary>
     [DataContract]
     public partial class WfmServiceLevel :  IEquatable<WfmServiceLevel>
@@ -45,9 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmServiceLevel" /> class.
         /// </summary>
-        /// <param name="Include">Whether to include service level targets in the associated service goal group&#39;s configuration (required).</param>
-        /// <param name="Percent">Service level target percent answered for the associated service goal group. Required if include == true.</param>
-        /// <param name="Seconds">Service level target answer time for the associated service goal group. Required if include == true.</param>
+        /// <param name="Include">Whether to include service level targets in the associated configuration (required).</param>
+        /// <param name="Percent">Service level target percent answered. Required if include == true.</param>
+        /// <param name="Seconds">Service level target answer time. Required if include == true.</param>
         public WfmServiceLevel(bool? Include = null, int? Percent = null, int? Seconds = null)
         {
             this.Include = Include;
@@ -59,27 +59,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Whether to include service level targets in the associated service goal group&#39;s configuration
+        /// Whether to include service level targets in the associated configuration
         /// </summary>
-        /// <value>Whether to include service level targets in the associated service goal group&#39;s configuration</value>
+        /// <value>Whether to include service level targets in the associated configuration</value>
         [DataMember(Name="include", EmitDefaultValue=false)]
         public bool? Include { get; set; }
         
         
         
         /// <summary>
-        /// Service level target percent answered for the associated service goal group. Required if include == true
+        /// Service level target percent answered. Required if include == true
         /// </summary>
-        /// <value>Service level target percent answered for the associated service goal group. Required if include == true</value>
+        /// <value>Service level target percent answered. Required if include == true</value>
         [DataMember(Name="percent", EmitDefaultValue=false)]
         public int? Percent { get; set; }
         
         
         
         /// <summary>
-        /// Service level target answer time for the associated service goal group. Required if include == true
+        /// Service level target answer time. Required if include == true
         /// </summary>
-        /// <value>Service level target answer time for the associated service goal group. Required if include == true</value>
+        /// <value>Service level target answer time. Required if include == true</value>
         [DataMember(Name="seconds", EmitDefaultValue=false)]
         public int? Seconds { get; set; }
         

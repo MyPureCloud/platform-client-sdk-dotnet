@@ -157,6 +157,101 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Returns Enabled when the trunk base supports the availability interval and it has a value greater than 0.
+        /// </summary>
+        /// <value>Returns Enabled when the trunk base supports the availability interval and it has a value greater than 0.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum OptionsEnabledStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Enabled for "ENABLED"
+            /// </summary>
+            [EnumMember(Value = "ENABLED")]
+            Enabled,
+            
+            /// <summary>
+            /// Enum Disabled for "DISABLED"
+            /// </summary>
+            [EnumMember(Value = "DISABLED")]
+            Disabled,
+            
+            /// <summary>
+            /// Enum NotSupported for "NOT_SUPPORTED"
+            /// </summary>
+            [EnumMember(Value = "NOT_SUPPORTED")]
+            NotSupported
+        }
+        
+        
+        
+        
+        /// <summary>
+        /// Returns Enabled when the trunk base supports the registration interval and it has a value greater than 0.
+        /// </summary>
+        /// <value>Returns Enabled when the trunk base supports the registration interval and it has a value greater than 0.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum RegistersEnabledStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Enabled for "ENABLED"
+            /// </summary>
+            [EnumMember(Value = "ENABLED")]
+            Enabled,
+            
+            /// <summary>
+            /// Enum Disabled for "DISABLED"
+            /// </summary>
+            [EnumMember(Value = "DISABLED")]
+            Disabled,
+            
+            /// <summary>
+            /// Enum NotSupported for "NOT_SUPPORTED"
+            /// </summary>
+            [EnumMember(Value = "NOT_SUPPORTED")]
+            NotSupported
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -197,6 +292,38 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Returns Enabled when the trunk base supports the availability interval and it has a value greater than 0.
+        /// </summary>
+        /// <value>Returns Enabled when the trunk base supports the availability interval and it has a value greater than 0.</value>
+        [DataMember(Name="optionsEnabledStatus", EmitDefaultValue=false)]
+        public OptionsEnabledStatusEnum? OptionsEnabledStatus { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Returns Enabled when the trunk base supports the registration interval and it has a value greater than 0.
+        /// </summary>
+        /// <value>Returns Enabled when the trunk base supports the registration interval and it has a value greater than 0.</value>
+        [DataMember(Name="registersEnabledStatus", EmitDefaultValue=false)]
+        public RegistersEnabledStatusEnum? RegistersEnabledStatus { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Trunk" /> class.
@@ -222,7 +349,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TrunkMetabase">The metabase used to create this trunk..</param>
         /// <param name="EdgeGroup">The edge group associated with this trunk..</param>
         /// <param name="Enabled">True if the Edge used by this trunk is in-service.</param>
-        public Trunk(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, TrunkTypeEnum? TrunkType = null, UriReference Edge = null, UriReference TrunkBase = null, UriReference TrunkMetabase = null, UriReference EdgeGroup = null, bool? Enabled = null)
+        /// <param name="LogicalInterface">The Logical Interface on the Edge to which the trunk is assigned..</param>
+        /// <param name="ConnectedStatus">The connected status of the trunk.</param>
+        /// <param name="OptionsStatus">The trunk optionsStatus.</param>
+        /// <param name="RegistersStatus">The trunk registersStatus.</param>
+        /// <param name="IpStatus">The trunk ipStatus.</param>
+        /// <param name="ProxyAddressList">The list of proxy addresses (ports if provided) for the trunk.</param>
+        public Trunk(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, TrunkTypeEnum? TrunkType = null, UriReference Edge = null, UriReference TrunkBase = null, UriReference TrunkMetabase = null, UriReference EdgeGroup = null, bool? Enabled = null, UriReference LogicalInterface = null, TrunkConnectedStatus ConnectedStatus = null, List<TrunkMetricsOptions> OptionsStatus = null, List<TrunkMetricsRegisters> RegistersStatus = null, TrunkMetricsNetworkTypeIp IpStatus = null, List<string> ProxyAddressList = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -239,6 +372,12 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TrunkMetabase = TrunkMetabase;
             this.EdgeGroup = EdgeGroup;
             this.Enabled = Enabled;
+            this.LogicalInterface = LogicalInterface;
+            this.ConnectedStatus = ConnectedStatus;
+            this.OptionsStatus = OptionsStatus;
+            this.RegistersStatus = RegistersStatus;
+            this.IpStatus = IpStatus;
+            this.ProxyAddressList = ProxyAddressList;
             
         }
         
@@ -393,6 +532,73 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The Logical Interface on the Edge to which the trunk is assigned.
+        /// </summary>
+        /// <value>The Logical Interface on the Edge to which the trunk is assigned.</value>
+        [DataMember(Name="logicalInterface", EmitDefaultValue=false)]
+        public UriReference LogicalInterface { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The connected status of the trunk
+        /// </summary>
+        /// <value>The connected status of the trunk</value>
+        [DataMember(Name="connectedStatus", EmitDefaultValue=false)]
+        public TrunkConnectedStatus ConnectedStatus { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The trunk optionsStatus
+        /// </summary>
+        /// <value>The trunk optionsStatus</value>
+        [DataMember(Name="optionsStatus", EmitDefaultValue=false)]
+        public List<TrunkMetricsOptions> OptionsStatus { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The trunk registersStatus
+        /// </summary>
+        /// <value>The trunk registersStatus</value>
+        [DataMember(Name="registersStatus", EmitDefaultValue=false)]
+        public List<TrunkMetricsRegisters> RegistersStatus { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The trunk ipStatus
+        /// </summary>
+        /// <value>The trunk ipStatus</value>
+        [DataMember(Name="ipStatus", EmitDefaultValue=false)]
+        public TrunkMetricsNetworkTypeIp IpStatus { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The IP Network Family of the trunk
+        /// </summary>
+        /// <value>The IP Network Family of the trunk</value>
+        [DataMember(Name="family", EmitDefaultValue=false)]
+        public int? Family { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The list of proxy addresses (ports if provided) for the trunk
+        /// </summary>
+        /// <value>The list of proxy addresses (ports if provided) for the trunk</value>
+        [DataMember(Name="proxyAddressList", EmitDefaultValue=false)]
+        public List<string> ProxyAddressList { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -427,6 +633,15 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EdgeGroup: ").Append(EdgeGroup).Append("\n");
             sb.Append("  InService: ").Append(InService).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  LogicalInterface: ").Append(LogicalInterface).Append("\n");
+            sb.Append("  ConnectedStatus: ").Append(ConnectedStatus).Append("\n");
+            sb.Append("  OptionsStatus: ").Append(OptionsStatus).Append("\n");
+            sb.Append("  RegistersStatus: ").Append(RegistersStatus).Append("\n");
+            sb.Append("  IpStatus: ").Append(IpStatus).Append("\n");
+            sb.Append("  OptionsEnabledStatus: ").Append(OptionsEnabledStatus).Append("\n");
+            sb.Append("  RegistersEnabledStatus: ").Append(RegistersEnabledStatus).Append("\n");
+            sb.Append("  Family: ").Append(Family).Append("\n");
+            sb.Append("  ProxyAddressList: ").Append(ProxyAddressList).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -555,6 +770,51 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled.Equals(other.Enabled)
                 ) &&
                 (
+                    this.LogicalInterface == other.LogicalInterface ||
+                    this.LogicalInterface != null &&
+                    this.LogicalInterface.Equals(other.LogicalInterface)
+                ) &&
+                (
+                    this.ConnectedStatus == other.ConnectedStatus ||
+                    this.ConnectedStatus != null &&
+                    this.ConnectedStatus.Equals(other.ConnectedStatus)
+                ) &&
+                (
+                    this.OptionsStatus == other.OptionsStatus ||
+                    this.OptionsStatus != null &&
+                    this.OptionsStatus.SequenceEqual(other.OptionsStatus)
+                ) &&
+                (
+                    this.RegistersStatus == other.RegistersStatus ||
+                    this.RegistersStatus != null &&
+                    this.RegistersStatus.SequenceEqual(other.RegistersStatus)
+                ) &&
+                (
+                    this.IpStatus == other.IpStatus ||
+                    this.IpStatus != null &&
+                    this.IpStatus.Equals(other.IpStatus)
+                ) &&
+                (
+                    this.OptionsEnabledStatus == other.OptionsEnabledStatus ||
+                    this.OptionsEnabledStatus != null &&
+                    this.OptionsEnabledStatus.Equals(other.OptionsEnabledStatus)
+                ) &&
+                (
+                    this.RegistersEnabledStatus == other.RegistersEnabledStatus ||
+                    this.RegistersEnabledStatus != null &&
+                    this.RegistersEnabledStatus.Equals(other.RegistersEnabledStatus)
+                ) &&
+                (
+                    this.Family == other.Family ||
+                    this.Family != null &&
+                    this.Family.Equals(other.Family)
+                ) &&
+                (
+                    this.ProxyAddressList == other.ProxyAddressList ||
+                    this.ProxyAddressList != null &&
+                    this.ProxyAddressList.SequenceEqual(other.ProxyAddressList)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -626,6 +886,33 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                
+                if (this.LogicalInterface != null)
+                    hash = hash * 59 + this.LogicalInterface.GetHashCode();
+                
+                if (this.ConnectedStatus != null)
+                    hash = hash * 59 + this.ConnectedStatus.GetHashCode();
+                
+                if (this.OptionsStatus != null)
+                    hash = hash * 59 + this.OptionsStatus.GetHashCode();
+                
+                if (this.RegistersStatus != null)
+                    hash = hash * 59 + this.RegistersStatus.GetHashCode();
+                
+                if (this.IpStatus != null)
+                    hash = hash * 59 + this.IpStatus.GetHashCode();
+                
+                if (this.OptionsEnabledStatus != null)
+                    hash = hash * 59 + this.OptionsEnabledStatus.GetHashCode();
+                
+                if (this.RegistersEnabledStatus != null)
+                    hash = hash * 59 + this.RegistersEnabledStatus.GetHashCode();
+                
+                if (this.Family != null)
+                    hash = hash * 59 + this.Family.GetHashCode();
+                
+                if (this.ProxyAddressList != null)
+                    hash = hash * 59 + this.ProxyAddressList.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

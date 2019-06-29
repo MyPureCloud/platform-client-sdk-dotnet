@@ -118,11 +118,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        
+        
         
         
         
@@ -145,7 +150,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Queue">Queue.</param>
         /// <param name="Answers">Answers.</param>
         /// <param name="CompletedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public Survey(string Name = null, Conversation Conversation = null, SurveyForm SurveyForm = null, UriReference Agent = null, StatusEnum? Status = null, QueueReference Queue = null, SurveyScoringSet Answers = null, DateTime? CompletedDate = null)
+        /// <param name="SurveyErrorDetails">Additional information about what happened when the survey is in Error status..</param>
+        public Survey(string Name = null, Conversation Conversation = null, SurveyForm SurveyForm = null, UriReference Agent = null, StatusEnum? Status = null, QueueReference Queue = null, SurveyScoringSet Answers = null, DateTime? CompletedDate = null, SurveyErrorDetails SurveyErrorDetails = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -155,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Queue = Queue;
             this.Answers = Answers;
             this.CompletedDate = CompletedDate;
+            this.SurveyErrorDetails = SurveyErrorDetails;
             
         }
         
@@ -230,6 +237,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Additional information about what happened when the survey is in Error status.
+        /// </summary>
+        /// <value>Additional information about what happened when the survey is in Error status.</value>
+        [DataMember(Name="surveyErrorDetails", EmitDefaultValue=false)]
+        public SurveyErrorDetails SurveyErrorDetails { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -255,6 +271,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  Answers: ").Append(Answers).Append("\n");
             sb.Append("  CompletedDate: ").Append(CompletedDate).Append("\n");
+            sb.Append("  SurveyErrorDetails: ").Append(SurveyErrorDetails).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -338,6 +355,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CompletedDate.Equals(other.CompletedDate)
                 ) &&
                 (
+                    this.SurveyErrorDetails == other.SurveyErrorDetails ||
+                    this.SurveyErrorDetails != null &&
+                    this.SurveyErrorDetails.Equals(other.SurveyErrorDetails)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -382,6 +404,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CompletedDate != null)
                     hash = hash * 59 + this.CompletedDate.GetHashCode();
+                
+                if (this.SurveyErrorDetails != null)
+                    hash = hash * 59 + this.SurveyErrorDetails.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

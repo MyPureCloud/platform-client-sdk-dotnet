@@ -48,8 +48,17 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Shifttrade for "ShiftTrade"
             /// </summary>
             [EnumMember(Value = "ShiftTrade")]
-            Shifttrade
+            Shifttrade,
+            
+            /// <summary>
+            /// Enum Timeoffrequest for "TimeOffRequest"
+            /// </summary>
+            [EnumMember(Value = "TimeOffRequest")]
+            Timeoffrequest
         }
+        
+        
+        
         
         
         
@@ -89,6 +98,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmUserNotification" /> class.
@@ -102,13 +113,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The immutable globally unique identifier for the object. (required).</param>
         /// <param name="MutableGroupId">The group ID of the notification (mutable, may change  on update) (required).</param>
         /// <param name="ShiftTrade">A shift trade notification.  Only set if type == ShiftTrade.</param>
+        /// <param name="TimeOffRequest">A time off request notification.  Only set if type == TimeOffRequest.</param>
         /// <param name="MarkedAsRead">Whether this notification has been marked \&quot;read\&quot; (required).</param>
         /// <param name="OtherNotificationIdsInGroup">Other notification IDs in group.  This field is only populated in real-time notifications.</param>
-        public WfmUserNotification(string Id = null, string MutableGroupId = null, ShiftTradeNotification ShiftTrade = null, bool? MarkedAsRead = null, List<string> OtherNotificationIdsInGroup = null)
+        public WfmUserNotification(string Id = null, string MutableGroupId = null, ShiftTradeNotification ShiftTrade = null, TimeOffRequestNotification TimeOffRequest = null, bool? MarkedAsRead = null, List<string> OtherNotificationIdsInGroup = null)
         {
             this.Id = Id;
             this.MutableGroupId = MutableGroupId;
             this.ShiftTrade = ShiftTrade;
+            this.TimeOffRequest = TimeOffRequest;
             this.MarkedAsRead = MarkedAsRead;
             this.OtherNotificationIdsInGroup = OtherNotificationIdsInGroup;
             
@@ -155,6 +168,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// A time off request notification.  Only set if type == TimeOffRequest
+        /// </summary>
+        /// <value>A time off request notification.  Only set if type == TimeOffRequest</value>
+        [DataMember(Name="timeOffRequest", EmitDefaultValue=false)]
+        public TimeOffRequestNotification TimeOffRequest { get; set; }
+        
+        
+        
+        /// <summary>
         /// Whether this notification has been marked \&quot;read\&quot;
         /// </summary>
         /// <value>Whether this notification has been marked \&quot;read\&quot;</value>
@@ -194,6 +216,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ShiftTrade: ").Append(ShiftTrade).Append("\n");
+            sb.Append("  TimeOffRequest: ").Append(TimeOffRequest).Append("\n");
             sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
             sb.Append("  AgentNotification: ").Append(AgentNotification).Append("\n");
             sb.Append("  OtherNotificationIdsInGroup: ").Append(OtherNotificationIdsInGroup).Append("\n");
@@ -259,6 +282,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ShiftTrade.Equals(other.ShiftTrade)
                 ) &&
                 (
+                    this.TimeOffRequest == other.TimeOffRequest ||
+                    this.TimeOffRequest != null &&
+                    this.TimeOffRequest.Equals(other.TimeOffRequest)
+                ) &&
+                (
                     this.MarkedAsRead == other.MarkedAsRead ||
                     this.MarkedAsRead != null &&
                     this.MarkedAsRead.Equals(other.MarkedAsRead)
@@ -301,6 +329,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ShiftTrade != null)
                     hash = hash * 59 + this.ShiftTrade.GetHashCode();
+                
+                if (this.TimeOffRequest != null)
+                    hash = hash * 59 + this.TimeOffRequest.GetHashCode();
                 
                 if (this.MarkedAsRead != null)
                     hash = hash * 59 + this.MarkedAsRead.GetHashCode();

@@ -80,6 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2CreateUser" /> class.
@@ -99,10 +104,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhoneNumbers">Phone numbers.</param>
         /// <param name="Emails">Emails.</param>
         /// <param name="Photos">Photos.</param>
+        /// <param name="ExternalId">External ID.</param>
         /// <param name="Groups">Group References.</param>
         /// <param name="Meta">Resource SCIM meta.</param>
         /// <param name="Urnietfparamsscimschemasextensionenterprise20User">Urnietfparamsscimschemasextensionenterprise20User.</param>
-        public ScimV2CreateUser(string DisplayName = null, List<string> Schemas = null, bool? Active = null, string UserName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, List<Photo> Photos = null, List<ScimV2GroupReference> Groups = null, ScimMetadata Meta = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null)
+        public ScimV2CreateUser(string DisplayName = null, List<string> Schemas = null, bool? Active = null, string UserName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, List<Photo> Photos = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, ScimMetadata Meta = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null)
         {
             this.DisplayName = DisplayName;
             this.Schemas = Schemas;
@@ -113,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PhoneNumbers = PhoneNumbers;
             this.Emails = Emails;
             this.Photos = Photos;
+            this.ExternalId = ExternalId;
             this.Groups = Groups;
             this.Meta = Meta;
             this.Urnietfparamsscimschemasextensionenterprise20User = Urnietfparamsscimschemasextensionenterprise20User;
@@ -203,6 +210,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// External ID
+        /// </summary>
+        /// <value>External ID</value>
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
+        
+        
+        
+        /// <summary>
         /// Group References
         /// </summary>
         /// <value>Group References</value>
@@ -245,6 +261,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PhoneNumbers: ").Append(PhoneNumbers).Append("\n");
             sb.Append("  Emails: ").Append(Emails).Append("\n");
             sb.Append("  Photos: ").Append(Photos).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
             sb.Append("  Meta: ").Append(Meta).Append("\n");
             sb.Append("  Urnietfparamsscimschemasextensionenterprise20User: ").Append(Urnietfparamsscimschemasextensionenterprise20User).Append("\n");
@@ -330,6 +347,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Photos.SequenceEqual(other.Photos)
                 ) &&
                 (
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
                     this.Groups == other.Groups ||
                     this.Groups != null &&
                     this.Groups.SequenceEqual(other.Groups)
@@ -384,6 +406,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Photos != null)
                     hash = hash * 59 + this.Photos.GetHashCode();
+                
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
                 
                 if (this.Groups != null)
                     hash = hash * 59 + this.Groups.GetHashCode();

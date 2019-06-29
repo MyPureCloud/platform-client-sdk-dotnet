@@ -133,7 +133,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scriptId">Script ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Expand (optional)</param>
@@ -142,7 +141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
         /// <returns>ScriptEntityListing</returns>
-        ScriptEntityListing GetScriptsPublished (string scriptId, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null);
+        ScriptEntityListing GetScriptsPublished (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null);
 
         /// <summary>
         /// Get the published scripts.
@@ -151,7 +150,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scriptId">Script ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Expand (optional)</param>
@@ -160,7 +158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
         /// <returns>ApiResponse of ScriptEntityListing</returns>
-        ApiResponse<ScriptEntityListing> GetScriptsPublishedWithHttpInfo (string scriptId, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null);
+        ApiResponse<ScriptEntityListing> GetScriptsPublishedWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null);
         
         /// <summary>
         /// Get the published script.
@@ -435,7 +433,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scriptId">Script ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Expand (optional)</param>
@@ -444,7 +441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
         /// <returns>Task of ScriptEntityListing</returns>
-        System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsPublishedAsync (string scriptId, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null);
+        System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsPublishedAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null);
 
         /// <summary>
         /// Get the published scripts.
@@ -453,7 +450,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scriptId">Script ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Expand (optional)</param>
@@ -462,7 +458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedAsyncWithHttpInfo (string scriptId, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null);
+        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null);
         
         /// <summary>
         /// Get the published script.
@@ -1550,7 +1546,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the published scripts. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scriptId">Script ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Expand (optional)</param>
@@ -1559,9 +1554,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
         /// <returns>ScriptEntityListing</returns>
-        public ScriptEntityListing GetScriptsPublished (string scriptId, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
+        public ScriptEntityListing GetScriptsPublished (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
         {
-             ApiResponse<ScriptEntityListing> localVarResponse = GetScriptsPublishedWithHttpInfo(scriptId, pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion);
+             ApiResponse<ScriptEntityListing> localVarResponse = GetScriptsPublishedWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion);
              return localVarResponse.Data;
         }
 
@@ -1569,7 +1564,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the published scripts. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scriptId">Script ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Expand (optional)</param>
@@ -1578,11 +1572,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
         /// <returns>ApiResponse of ScriptEntityListing</returns>
-        public ApiResponse< ScriptEntityListing > GetScriptsPublishedWithHttpInfo (string scriptId, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
+        public ApiResponse< ScriptEntityListing > GetScriptsPublishedWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
         { 
-            // verify the required parameter 'scriptId' is set
-            if (scriptId == null)
-                throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublished");
 
             var localVarPath = "/api/v2/scripts/published";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1615,7 +1606,6 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scriptId != null) localVarPathParams.Add("scriptId", this.Configuration.ApiClient.ParameterToString(scriptId));
 
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
@@ -1666,7 +1656,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the published scripts. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scriptId">Script ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Expand (optional)</param>
@@ -1675,9 +1664,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
         /// <returns>Task of ScriptEntityListing</returns>
-        public async System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsPublishedAsync (string scriptId, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
+        public async System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsPublishedAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
         {
-             ApiResponse<ScriptEntityListing> localVarResponse = await GetScriptsPublishedAsyncWithHttpInfo(scriptId, pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion);
+             ApiResponse<ScriptEntityListing> localVarResponse = await GetScriptsPublishedAsyncWithHttpInfo(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion);
              return localVarResponse.Data;
 
         }
@@ -1686,7 +1675,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the published scripts. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scriptId">Script ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Expand (optional)</param>
@@ -1695,12 +1683,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedAsyncWithHttpInfo (string scriptId, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
         { 
-            // verify the required parameter 'scriptId' is set
-            if (scriptId == null)
-                throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublished");
-            
 
             var localVarPath = "/api/v2/scripts/published";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1733,7 +1717,6 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scriptId != null) localVarPathParams.Add("scriptId", this.Configuration.ApiClient.ParameterToString(scriptId));
 
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));

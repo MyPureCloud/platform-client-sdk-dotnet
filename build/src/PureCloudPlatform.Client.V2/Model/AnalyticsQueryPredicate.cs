@@ -169,6 +169,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Routingpriority,
             
             /// <summary>
+            /// Enum Scoredagentid for "scoredAgentId"
+            /// </summary>
+            [EnumMember(Value = "scoredAgentId")]
+            Scoredagentid,
+            
+            /// <summary>
+            /// Enum Agentscore for "agentScore"
+            /// </summary>
+            [EnumMember(Value = "agentScore")]
+            Agentscore,
+            
+            /// <summary>
             /// Enum Purpose for "purpose"
             /// </summary>
             [EnumMember(Value = "purpose")]
@@ -245,6 +257,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "flaggedReason")]
             Flaggedreason,
+            
+            /// <summary>
+            /// Enum Provider for "provider"
+            /// </summary>
+            [EnumMember(Value = "provider")]
+            Provider,
             
             /// <summary>
             /// Enum Stationid for "stationId"

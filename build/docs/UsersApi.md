@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteAuthorizationSubjectDivisionRole**](UsersApi.html#deleteauthorizationsubjectdivisionrole) | **DELETE** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
 | [**DeleteUser**](UsersApi.html#deleteuser) | **DELETE** /api/v2/users/{userId} | Delete user |
+| [**DeleteUserExternalidAuthorityNameExternalKey**](UsersApi.html#deleteuserexternalidauthoritynameexternalkey) | **DELETE** /api/v2/users/{userId}/externalid/{authorityName}/{externalKey} | Delete the external identifier for user. |
 | [**DeleteUserRoles**](UsersApi.html#deleteuserroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
 | [**DeleteUserRoutinglanguage**](UsersApi.html#deleteuserroutinglanguage) | **DELETE** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
 | [**DeleteUserRoutingskill**](UsersApi.html#deleteuserroutingskill) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
@@ -24,6 +25,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserAdjacents**](UsersApi.html#getuseradjacents) | **GET** /api/v2/users/{userId}/adjacents | Get adjacents |
 | [**GetUserCallforwarding**](UsersApi.html#getusercallforwarding) | **GET** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
 | [**GetUserDirectreports**](UsersApi.html#getuserdirectreports) | **GET** /api/v2/users/{userId}/directreports | Get direct reports |
+| [**GetUserExternalid**](UsersApi.html#getuserexternalid) | **GET** /api/v2/users/{userId}/externalid | Get the external identifiers for a user. |
+| [**GetUserExternalidAuthorityName**](UsersApi.html#getuserexternalidauthorityname) | **GET** /api/v2/users/{userId}/externalid/{authorityName} | Get the external identifier of user for an authority. |
 | [**GetUserFavorites**](UsersApi.html#getuserfavorites) | **GET** /api/v2/users/{userId}/favorites | Get favorites |
 | [**GetUserGeolocation**](UsersApi.html#getusergeolocation) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
 | [**GetUserOutofoffice**](UsersApi.html#getuseroutofoffice) | **GET** /api/v2/users/{userId}/outofoffice | Get a OutOfOffice |
@@ -38,6 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserSuperiors**](UsersApi.html#getusersuperiors) | **GET** /api/v2/users/{userId}/superiors | Get superiors |
 | [**GetUserTrustors**](UsersApi.html#getusertrustors) | **GET** /api/v2/users/{userId}/trustors | List the organizations that have authorized/trusted the user. |
 | [**GetUsers**](UsersApi.html#getusers) | **GET** /api/v2/users | Get the list of available users. |
+| [**GetUsersExternalidAuthorityNameExternalKey**](UsersApi.html#getusersexternalidauthoritynameexternalkey) | **GET** /api/v2/users/externalid/{authorityName}/{externalKey} | Get the user associated with external identifier. |
 | [**GetUsersMe**](UsersApi.html#getusersme) | **GET** /api/v2/users/me | Get current user details. |
 | [**GetUsersSearch**](UsersApi.html#getuserssearch) | **GET** /api/v2/users/search | Search users using the q64 value returned from a previous search |
 | [**PatchUser**](UsersApi.html#patchuser) | **PATCH** /api/v2/users/{userId} | Update user |
@@ -53,6 +57,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsUsersDetailsQuery**](UsersApi.html#postanalyticsusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
 | [**PostAnalyticsUsersObservationsQuery**](UsersApi.html#postanalyticsusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
 | [**PostAuthorizationSubjectDivisionRole**](UsersApi.html#postauthorizationsubjectdivisionrole) | **POST** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Make a grant of a role in a division |
+| [**PostUserExternalid**](UsersApi.html#postuserexternalid) | **POST** /api/v2/users/{userId}/externalid | Create mapping between external identifier and user. Limit 100 per entity. |
 | [**PostUserInvite**](UsersApi.html#postuserinvite) | **POST** /api/v2/users/{userId}/invite | Send an activation email to the user |
 | [**PostUserPassword**](UsersApi.html#postuserpassword) | **POST** /api/v2/users/{userId}/password | Change a users password |
 | [**PostUserRoutinglanguages**](UsersApi.html#postuserroutinglanguages) | **POST** /api/v2/users/{userId}/routinglanguages | Add routing language to user |
@@ -148,8 +153,6 @@ Delete user
 Requires ANY permissions: 
 
 * directory:user:delete
-* user_manager
-* user_administration
 
 ### Example
 ```{"language":"csharp"}
@@ -198,6 +201,70 @@ namespace Example
 
 [**Empty**](Empty.html)
 
+<a name="deleteuserexternalidauthoritynameexternalkey"></a>
+
+## void DeleteUserExternalidAuthorityNameExternalKey (string userId, string authorityName, string externalKey)
+
+
+
+Delete the external identifier for user.
+
+
+
+Requires ANY permissions: 
+
+* directory:user:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteUserExternalidAuthorityNameExternalKeyExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var authorityName = authorityName_example;  // string | Authority Name
+            var externalKey = externalKey_example;  // string | External Key
+
+            try
+            { 
+                // Delete the external identifier for user.
+                apiInstance.DeleteUserExternalidAuthorityNameExternalKey(userId, authorityName, externalKey);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.DeleteUserExternalidAuthorityNameExternalKey: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **authorityName** | **string**| Authority Name |  |
+| **externalKey** | **string**| External Key |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="deleteuserroles"></a>
 
 ## void DeleteUserRoles (string userId)
@@ -210,8 +277,6 @@ Removes all the roles from the user.
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:delete
 
 ### Example
@@ -273,7 +338,6 @@ Remove routing language from user
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -336,7 +400,6 @@ Remove routing skill from user
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -1127,6 +1190,128 @@ namespace Example
 ### Return type
 
 [**List<User>**](User.html)
+
+<a name="getuserexternalid"></a>
+
+## [**List&lt;UserExternalIdentifier&gt;**](UserExternalIdentifier.html) GetUserExternalid (string userId)
+
+
+
+Get the external identifiers for a user.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUserExternalidExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+
+            try
+            { 
+                // Get the external identifiers for a user.
+                List&lt;UserExternalIdentifier&gt; result = apiInstance.GetUserExternalid(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserExternalid: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<UserExternalIdentifier>**](UserExternalIdentifier.html)
+
+<a name="getuserexternalidauthorityname"></a>
+
+## [**UserExternalIdentifier**](UserExternalIdentifier.html) GetUserExternalidAuthorityName (string userId, string authorityName)
+
+
+
+Get the external identifier of user for an authority.
+
+Authority name and external key are case sensitive.
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUserExternalidAuthorityNameExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var authorityName = authorityName_example;  // string | Authority Name
+
+            try
+            { 
+                // Get the external identifier of user for an authority.
+                UserExternalIdentifier result = apiInstance.GetUserExternalidAuthorityName(userId, authorityName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserExternalidAuthorityName: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **authorityName** | **string**| Authority Name |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserExternalIdentifier**](UserExternalIdentifier.html)
 
 <a name="getuserfavorites"></a>
 
@@ -2023,6 +2208,70 @@ namespace Example
 
 [**UserEntityListing**](UserEntityListing.html)
 
+<a name="getusersexternalidauthoritynameexternalkey"></a>
+
+## [**User**](User.html) GetUsersExternalidAuthorityNameExternalKey (string authorityName, string externalKey, List<string> expand = null)
+
+
+
+Get the user associated with external identifier.
+
+Authority name and external key are case sensitive.
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUsersExternalidAuthorityNameExternalKeyExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var authorityName = authorityName_example;  // string | Authority Name
+            var externalKey = externalKey_example;  // string | External Key
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            { 
+                // Get the user associated with external identifier.
+                User result = apiInstance.GetUsersExternalidAuthorityNameExternalKey(authorityName, externalKey, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUsersExternalidAuthorityNameExternalKey: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **authorityName** | **string**| Authority Name |  |
+| **externalKey** | **string**| External Key |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+{: class="table table-striped"}
+
+### Return type
+
+[**User**](User.html)
+
 <a name="getusersme"></a>
 
 ## [**UserMe**](UserMe.html) GetUsersMe (List<string> expand = null)
@@ -2158,8 +2407,6 @@ Update user
 Requires ANY permissions: 
 
 * directory:user:edit
-* user_manager
-* user_administration
 
 ### Example
 ```{"language":"csharp"}
@@ -2479,7 +2726,6 @@ Update routing language proficiency or state.
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -2545,7 +2791,6 @@ Add bulk routing language to user. Max limit 50 languages
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -2609,7 +2854,6 @@ Bulk add routing skills to user
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -2673,8 +2917,6 @@ Update bulk acd autoanswer on users
 Requires ANY permissions: 
 
 * directory:user:add
-* user_manager
-* user_administration
 * directory:user:edit
 
 ### Example
@@ -2973,6 +3215,69 @@ namespace Example
 
 void (empty response body)
 
+<a name="postuserexternalid"></a>
+
+## [**List&lt;UserExternalIdentifier&gt;**](UserExternalIdentifier.html) PostUserExternalid (string userId, UserExternalIdentifier body)
+
+
+
+Create mapping between external identifier and user. Limit 100 per entity.
+
+Authority Name and External key are case sensitive.
+
+Requires ANY permissions: 
+
+* directory:user:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUserExternalidExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var body = new UserExternalIdentifier(); // UserExternalIdentifier | 
+
+            try
+            { 
+                // Create mapping between external identifier and user. Limit 100 per entity.
+                List&lt;UserExternalIdentifier&gt; result = apiInstance.PostUserExternalid(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostUserExternalid: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**UserExternalIdentifier**](UserExternalIdentifier.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<UserExternalIdentifier>**](UserExternalIdentifier.html)
+
 <a name="postuserinvite"></a>
 
 ## void PostUserInvite (string userId, bool? force = null)
@@ -2986,8 +3291,6 @@ Send an activation email to the user
 Requires ANY permissions: 
 
 * directory:user:add
-* user_manager
-* user_administration
 
 ### Example
 ```{"language":"csharp"}
@@ -3049,7 +3352,6 @@ Change a users password
 
 Requires ANY permissions: 
 
-* user_administration
 * directory:user:setPassword
 
 ### Example
@@ -3113,7 +3415,6 @@ Add routing language to user
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -3177,7 +3478,6 @@ Add routing skill to user
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -3545,9 +3845,6 @@ Update profile skills for a user
 Requires ANY permissions: 
 
 * directory:userProfile:edit
-* admin
-* user_manager
-* user_administration
 
 ### Example
 ```{"language":"csharp"}
@@ -3610,8 +3907,6 @@ Sets the user's roles
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 ### Example
@@ -3676,7 +3971,6 @@ Update routing skill proficiency or state.
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -3742,7 +4036,6 @@ Replace all routing skills assigned to a user
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}

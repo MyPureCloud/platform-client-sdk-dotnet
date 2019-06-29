@@ -669,8 +669,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="includeOnlyPublished">Return only published schedules (optional)</param>
+        /// <param name="earliestWeekDate">The start date of the earliest week to query in yyyy-MM-dd format (optional)</param>
+        /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>WeekScheduleListResponse</returns>
-        WeekScheduleListResponse GetWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId);
+        WeekScheduleListResponse GetWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null);
 
         /// <summary>
         /// Get the list of schedules in a week in management unit
@@ -681,8 +684,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="includeOnlyPublished">Return only published schedules (optional)</param>
+        /// <param name="earliestWeekDate">The start date of the earliest week to query in yyyy-MM-dd format (optional)</param>
+        /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>ApiResponse of WeekScheduleListResponse</returns>
-        ApiResponse<WeekScheduleListResponse> GetWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo (string managementUnitId, string weekId);
+        ApiResponse<WeekScheduleListResponse> GetWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null);
         
         /// <summary>
         /// Get the final result of a short term forecast calculation with modifications applied
@@ -2417,8 +2423,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="includeOnlyPublished">Return only published schedules (optional)</param>
+        /// <param name="earliestWeekDate">The start date of the earliest week to query in yyyy-MM-dd format (optional)</param>
+        /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>Task of WeekScheduleListResponse</returns>
-        System.Threading.Tasks.Task<WeekScheduleListResponse> GetWorkforcemanagementManagementunitWeekSchedulesAsync (string managementUnitId, string weekId);
+        System.Threading.Tasks.Task<WeekScheduleListResponse> GetWorkforcemanagementManagementunitWeekSchedulesAsync (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null);
 
         /// <summary>
         /// Get the list of schedules in a week in management unit
@@ -2429,8 +2438,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="includeOnlyPublished">Return only published schedules (optional)</param>
+        /// <param name="earliestWeekDate">The start date of the earliest week to query in yyyy-MM-dd format (optional)</param>
+        /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>Task of ApiResponse (WeekScheduleListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WeekScheduleListResponse>> GetWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo (string managementUnitId, string weekId);
+        System.Threading.Tasks.Task<ApiResponse<WeekScheduleListResponse>> GetWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null);
         
         /// <summary>
         /// Get the final result of a short term forecast calculation with modifications applied
@@ -9100,10 +9112,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="includeOnlyPublished">Return only published schedules (optional)</param>
+        /// <param name="earliestWeekDate">The start date of the earliest week to query in yyyy-MM-dd format (optional)</param>
+        /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>WeekScheduleListResponse</returns>
-        public WeekScheduleListResponse GetWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId)
+        public WeekScheduleListResponse GetWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null)
         {
-             ApiResponse<WeekScheduleListResponse> localVarResponse = GetWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo(managementUnitId, weekId);
+             ApiResponse<WeekScheduleListResponse> localVarResponse = GetWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo(managementUnitId, weekId, includeOnlyPublished, earliestWeekDate, latestWeekDate);
              return localVarResponse.Data;
         }
 
@@ -9113,8 +9128,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="includeOnlyPublished">Return only published schedules (optional)</param>
+        /// <param name="earliestWeekDate">The start date of the earliest week to query in yyyy-MM-dd format (optional)</param>
+        /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>ApiResponse of WeekScheduleListResponse</returns>
-        public ApiResponse< WeekScheduleListResponse > GetWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo (string managementUnitId, string weekId)
+        public ApiResponse< WeekScheduleListResponse > GetWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -9158,6 +9176,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
 
             // Query params
+            if (includeOnlyPublished != null) localVarQueryParams.Add(new Tuple<string, string>("includeOnlyPublished", this.Configuration.ApiClient.ParameterToString(includeOnlyPublished)));
+            if (earliestWeekDate != null) localVarQueryParams.Add(new Tuple<string, string>("earliestWeekDate", this.Configuration.ApiClient.ParameterToString(earliestWeekDate)));
+            if (latestWeekDate != null) localVarQueryParams.Add(new Tuple<string, string>("latestWeekDate", this.Configuration.ApiClient.ParameterToString(latestWeekDate)));
 
             // Header params
 
@@ -9201,10 +9222,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="includeOnlyPublished">Return only published schedules (optional)</param>
+        /// <param name="earliestWeekDate">The start date of the earliest week to query in yyyy-MM-dd format (optional)</param>
+        /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>Task of WeekScheduleListResponse</returns>
-        public async System.Threading.Tasks.Task<WeekScheduleListResponse> GetWorkforcemanagementManagementunitWeekSchedulesAsync (string managementUnitId, string weekId)
+        public async System.Threading.Tasks.Task<WeekScheduleListResponse> GetWorkforcemanagementManagementunitWeekSchedulesAsync (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null)
         {
-             ApiResponse<WeekScheduleListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo(managementUnitId, weekId);
+             ApiResponse<WeekScheduleListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo(managementUnitId, weekId, includeOnlyPublished, earliestWeekDate, latestWeekDate);
              return localVarResponse.Data;
 
         }
@@ -9215,8 +9239,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format.</param>
+        /// <param name="includeOnlyPublished">Return only published schedules (optional)</param>
+        /// <param name="earliestWeekDate">The start date of the earliest week to query in yyyy-MM-dd format (optional)</param>
+        /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>Task of ApiResponse (WeekScheduleListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WeekScheduleListResponse>> GetWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo (string managementUnitId, string weekId)
+        public async System.Threading.Tasks.Task<ApiResponse<WeekScheduleListResponse>> GetWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -9262,6 +9289,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
 
             // Query params
+            if (includeOnlyPublished != null) localVarQueryParams.Add(new Tuple<string, string>("includeOnlyPublished", this.Configuration.ApiClient.ParameterToString(includeOnlyPublished)));
+            if (earliestWeekDate != null) localVarQueryParams.Add(new Tuple<string, string>("earliestWeekDate", this.Configuration.ApiClient.ParameterToString(earliestWeekDate)));
+            if (latestWeekDate != null) localVarQueryParams.Add(new Tuple<string, string>("latestWeekDate", this.Configuration.ApiClient.ParameterToString(latestWeekDate)));
 
             // Header params
 

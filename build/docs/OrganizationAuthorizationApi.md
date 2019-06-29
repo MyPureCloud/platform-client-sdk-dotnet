@@ -105,8 +105,6 @@ Delete Trustee User
 Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:delete
-* admin
-* role_manager
 
 ### Example
 ```{"language":"csharp"}
@@ -169,8 +167,6 @@ Delete Trustee User Roles
 Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:delete
-* admin
-* role_manager
 
 ### Example
 ```{"language":"csharp"}
@@ -1042,11 +1038,9 @@ Add a user to the trust.
 
 
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:add
-* admin
-* role_manager
 
 ### Example
 ```{"language":"csharp"}
@@ -1373,8 +1367,6 @@ Update Trustee User Roles
 Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:edit
-* admin
-* role_manager
 
 ### Example
 ```{"language":"csharp"}

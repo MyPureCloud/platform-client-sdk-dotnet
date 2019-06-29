@@ -36,8 +36,6 @@ Delete group
 Requires ANY permissions: 
 
 * directory:group:delete
-* group_administration
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -728,8 +726,6 @@ Create a group
 Requires ANY permissions: 
 
 * directory:group:add
-* group_administration
-* group_creation
 
 ### Example
 ```{"language":"csharp"}
@@ -851,8 +847,6 @@ Update group
 Requires ANY permissions: 
 
 * directory:group:edit
-* group_administration
-* admin
 
 ### Example
 ```{"language":"csharp"}

@@ -43,6 +43,52 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets MediaCodecs
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MediaCodecsEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Audioopus for "audio/opus"
+            /// </summary>
+            [EnumMember(Value = "audio/opus")]
+            Audioopus,
+            
+            /// <summary>
+            /// Enum Audiopcmu for "audio/pcmu"
+            /// </summary>
+            [EnumMember(Value = "audio/pcmu")]
+            Audiopcmu,
+            
+            /// <summary>
+            /// Enum Audiopcma for "audio/pcma"
+            /// </summary>
+            [EnumMember(Value = "audio/pcma")]
+            Audiopcma,
+            
+            /// <summary>
+            /// Enum Audiog722 for "audio/g722"
+            /// </summary>
+            [EnumMember(Value = "audio/g722")]
+            Audiog722
+        }
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -66,7 +112,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AllowReboot">AllowReboot.</param>
         /// <param name="NoRebalance">NoRebalance.</param>
         /// <param name="NoCloudProvisioning">NoCloudProvisioning.</param>
-        public PhoneCapabilities(bool? Provisions = null, bool? Registers = null, bool? DualRegisters = null, string HardwareIdType = null, bool? AllowReboot = null, bool? NoRebalance = null, bool? NoCloudProvisioning = null)
+        /// <param name="MediaCodecs">MediaCodecs.</param>
+        public PhoneCapabilities(bool? Provisions = null, bool? Registers = null, bool? DualRegisters = null, string HardwareIdType = null, bool? AllowReboot = null, bool? NoRebalance = null, bool? NoCloudProvisioning = null, List<MediaCodecsEnum> MediaCodecs = null)
         {
             this.Provisions = Provisions;
             this.Registers = Registers;
@@ -75,6 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AllowReboot = AllowReboot;
             this.NoRebalance = NoRebalance;
             this.NoCloudProvisioning = NoCloudProvisioning;
+            this.MediaCodecs = MediaCodecs;
             
         }
         
@@ -135,6 +183,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? NoCloudProvisioning { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets MediaCodecs
+        /// </summary>
+        [DataMember(Name="mediaCodecs", EmitDefaultValue=false)]
+        public List<MediaCodecsEnum> MediaCodecs { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -151,6 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AllowReboot: ").Append(AllowReboot).Append("\n");
             sb.Append("  NoRebalance: ").Append(NoRebalance).Append("\n");
             sb.Append("  NoCloudProvisioning: ").Append(NoCloudProvisioning).Append("\n");
+            sb.Append("  MediaCodecs: ").Append(MediaCodecs).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -221,6 +278,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NoCloudProvisioning == other.NoCloudProvisioning ||
                     this.NoCloudProvisioning != null &&
                     this.NoCloudProvisioning.Equals(other.NoCloudProvisioning)
+                ) &&
+                (
+                    this.MediaCodecs == other.MediaCodecs ||
+                    this.MediaCodecs != null &&
+                    this.MediaCodecs.SequenceEqual(other.MediaCodecs)
                 );
         }
 
@@ -256,6 +318,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.NoCloudProvisioning != null)
                     hash = hash * 59 + this.NoCloudProvisioning.GetHashCode();
+                
+                if (this.MediaCodecs != null)
+                    hash = hash * 59 + this.MediaCodecs.GetHashCode();
                 
                 return hash;
             }

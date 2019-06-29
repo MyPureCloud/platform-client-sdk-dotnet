@@ -629,7 +629,6 @@ Remove routing language from user
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -692,7 +691,6 @@ Remove routing skill from user
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -2640,7 +2638,6 @@ Update routing language proficiency or state.
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -2706,7 +2703,6 @@ Add bulk routing language to user. Max limit 50 languages
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -2770,7 +2766,6 @@ Bulk add routing skills to user
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -3513,7 +3508,6 @@ Add routing language to user
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -3577,7 +3571,6 @@ Add routing skill to user
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -4019,7 +4012,6 @@ Update routing skill proficiency or state.
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}
@@ -4085,7 +4077,6 @@ Replace all routing skills assigned to a user
 Requires ANY permissions: 
 
 * routing:skill:assign
-* admin
 
 ### Example
 ```{"language":"csharp"}

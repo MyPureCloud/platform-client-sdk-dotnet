@@ -41,7 +41,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum NoLongerSubscribed for "no_longer_subscribed"
             /// </summary>
             [EnumMember(Value = "no_longer_subscribed")]
-            NoLongerSubscribed
+            NoLongerSubscribed,
+            
+            /// <summary>
+            /// Enum SubscriptionChanged for "subscription_changed"
+            /// </summary>
+            [EnumMember(Value = "subscription_changed")]
+            SubscriptionChanged
         }
         
         
@@ -132,7 +138,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Reason">Reason.</param>
         /// <param name="Message">Message.</param>
         /// <param name="Data">Data.</param>
-        public SystemMessageSystemMessage(string ChannelId = null, SystemTopicTypeEnum? SystemTopicType = null, string CorrelationId = null, string OrganizationId = null, string UserId = null, string OauthClientId = null, ReasonEnum? Reason = null, string Message = null, Dictionary<string, string> Data = null)
+        public SystemMessageSystemMessage(string ChannelId = null, SystemTopicTypeEnum? SystemTopicType = null, string CorrelationId = null, string OrganizationId = null, string UserId = null, string OauthClientId = null, ReasonEnum? Reason = null, string Message = null, Object Data = null)
         {
             this.ChannelId = ChannelId;
             this.SystemTopicType = SystemTopicType;
@@ -204,7 +210,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public Dictionary<string, string> Data { get; set; }
+        public Object Data { get; set; }
         
         
         /// <summary>
@@ -304,7 +310,7 @@ namespace PureCloudPlatform.Client.V2.Model
                 (
                     this.Data == other.Data ||
                     this.Data != null &&
-                    this.Data.SequenceEqual(other.Data)
+                    this.Data.Equals(other.Data)
                 );
         }
 

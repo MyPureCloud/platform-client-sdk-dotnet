@@ -13,16 +13,11 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// AddressableEntityUser
+    /// FlowDiagnosticInfo
     /// </summary>
     [DataContract]
-    public partial class AddressableEntityUser :  IEquatable<AddressableEntityUser>
+    public partial class FlowDiagnosticInfo :  IEquatable<FlowDiagnosticInfo>
     {
-        
-        
-        
-        
-        
         
         
         
@@ -32,30 +27,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AddressableEntityUser" /> class.
+        /// Initializes a new instance of the <see cref="FlowDiagnosticInfo" /> class.
         /// </summary>
-        public AddressableEntityUser()
+        /// <param name="LastActionId">The step number of the survey invite flow where the error occurred..</param>
+        public FlowDiagnosticInfo(int? LastActionId = null)
         {
+            this.LastActionId = LastActionId;
             
         }
         
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The step number of the survey invite flow where the error occurred.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
-        
-        
-        
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
+        /// <value>The step number of the survey invite flow where the error occurred.</value>
+        [DataMember(Name="lastActionId", EmitDefaultValue=false)]
+        public int? LastActionId { get; set; }
         
         
         /// <summary>
@@ -65,10 +53,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AddressableEntityUser {\n");
+            sb.Append("class FlowDiagnosticInfo {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  LastActionId: ").Append(LastActionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -90,15 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AddressableEntityUser);
+            return this.Equals(obj as FlowDiagnosticInfo);
         }
 
         /// <summary>
-        /// Returns true if AddressableEntityUser instances are equal
+        /// Returns true if FlowDiagnosticInfo instances are equal
         /// </summary>
-        /// <param name="other">Instance of AddressableEntityUser to be compared</param>
+        /// <param name="other">Instance of FlowDiagnosticInfo to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AddressableEntityUser other)
+        public bool Equals(FlowDiagnosticInfo other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -106,14 +93,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
+                    this.LastActionId == other.LastActionId ||
+                    this.LastActionId != null &&
+                    this.LastActionId.Equals(other.LastActionId)
                 );
         }
 
@@ -129,11 +111,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
+                if (this.LastActionId != null)
+                    hash = hash * 59 + this.LastActionId.GetHashCode();
                 
                 return hash;
             }

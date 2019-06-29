@@ -362,6 +362,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting
         /// </summary>
@@ -435,6 +438,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatMediaParticipant" /> class.
@@ -468,9 +473,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Peer">The peer communication corresponding to a matching leg for this communication..</param>
         /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
         /// <param name="JourneyContext">Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context..</param>
+        /// <param name="ConversationRoutingData">Information on how a communication should be routed to an agent..</param>
         /// <param name="RoomId">The ID of the chat room..</param>
         /// <param name="AvatarImageUrl">If available, the URI to the avatar image of this communication..</param>
-        public ChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, string RoomId = null, string AvatarImageUrl = null)
+        public ChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, string RoomId = null, string AvatarImageUrl = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -501,6 +507,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Peer = Peer;
             this.FlaggedReason = FlaggedReason;
             this.JourneyContext = JourneyContext;
+            this.ConversationRoutingData = ConversationRoutingData;
             this.RoomId = RoomId;
             this.AvatarImageUrl = AvatarImageUrl;
             
@@ -742,6 +749,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Information on how a communication should be routed to an agent.
+        /// </summary>
+        /// <value>Information on how a communication should be routed to an agent.</value>
+        [DataMember(Name="conversationRoutingData", EmitDefaultValue=false)]
+        public ConversationRoutingData ConversationRoutingData { get; set; }
+        
+        
+        
+        /// <summary>
         /// The ID of the chat room.
         /// </summary>
         /// <value>The ID of the chat room.</value>
@@ -796,6 +812,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
+            sb.Append("  ConversationRoutingData: ").Append(ConversationRoutingData).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
             sb.Append("  AvatarImageUrl: ").Append(AvatarImageUrl).Append("\n");
             sb.Append("}\n");
@@ -980,6 +997,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.JourneyContext.Equals(other.JourneyContext)
                 ) &&
                 (
+                    this.ConversationRoutingData == other.ConversationRoutingData ||
+                    this.ConversationRoutingData != null &&
+                    this.ConversationRoutingData.Equals(other.ConversationRoutingData)
+                ) &&
+                (
                     this.RoomId == other.RoomId ||
                     this.RoomId != null &&
                     this.RoomId.Equals(other.RoomId)
@@ -1089,6 +1111,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.JourneyContext != null)
                     hash = hash * 59 + this.JourneyContext.GetHashCode();
+                
+                if (this.ConversationRoutingData != null)
+                    hash = hash * 59 + this.ConversationRoutingData.GetHashCode();
                 
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
