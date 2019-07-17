@@ -33,6 +33,7 @@ title: ConversationChatEventTopicChatMediaParticipant
 | **ExternalContact** | [**ConversationChatEventTopicUriReference**](ConversationChatEventTopicUriReference.html) |  | [optional] |
 | **ExternalOrganization** | [**ConversationChatEventTopicUriReference**](ConversationChatEventTopicUriReference.html) |  | [optional] |
 | **Wrapup** | [**ConversationChatEventTopicWrapup**](ConversationChatEventTopicWrapup.html) |  | [optional] |
+| **ConversationRoutingData** | [**ConversationChatEventTopicConversationRoutingData**](ConversationChatEventTopicConversationRoutingData.html) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
 | **FlaggedReason** | **string** |  | [optional] |

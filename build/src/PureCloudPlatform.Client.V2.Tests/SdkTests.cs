@@ -59,7 +59,16 @@ namespace PureCloudPlatform.Client.V2.Tests
         [Test, Order(1)]
         public void Authenticate()
         {
-            PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.RestClient.BaseUrl = new Uri("https://api." + environment);
+          
+        PureCloudRegionHosts? region = getRegion(environment);
+            if(region == null){ //Returned in the case of default value
+            PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.setBasePath("https://api." + environment);
+        }
+        else {
+            PureCloudRegionHosts regionval = region.GetValueOrDefault();
+            PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.setBasePath(regionval);
+        }
+           
             var accessTokenInfo = PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.PostToken(clientId, clientSecret);
             PureCloudPlatform.Client.V2.Client.Configuration.Default.AccessToken = accessTokenInfo.AccessToken;
 
@@ -202,6 +211,23 @@ namespace PureCloudPlatform.Client.V2.Tests
             if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
             {
                 stop = true;
+            }
+        }
+        public Nullable<PureCloudRegionHosts> getRegion(String str = "http://api.mypurecloud.com"){
+            switch(str){
+                case "mypurecloud.com":
+                 return PureCloudRegionHosts.us_east_1;
+                case "mypurecloud.ie":
+                  return PureCloudRegionHosts.eu_west_1;
+                case "mypurecloud.de":
+                 return PureCloudRegionHosts.eu_central_1;
+                case "mypurecloud.jp":
+                 return PureCloudRegionHosts.ap_northeast_1;
+                case "mypurecloud.com.au":
+                 return PureCloudRegionHosts.ap_southeast_1;
+                default:
+                 Console.WriteLine("Value does not exist in enum using default val");
+                 return null;
             }
         }
     }

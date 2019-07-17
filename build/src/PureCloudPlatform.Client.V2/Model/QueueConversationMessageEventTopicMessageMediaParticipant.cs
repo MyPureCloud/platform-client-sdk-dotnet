@@ -329,6 +329,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets FlaggedReason
         /// </summary>
@@ -512,6 +515,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets FlaggedReason
         /// </summary>
@@ -565,6 +570,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalContact">ExternalContact.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="ConversationRoutingData">ConversationRoutingData.</param>
         /// <param name="Peer">Peer.</param>
         /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
         /// <param name="FlaggedReason">FlaggedReason.</param>
@@ -573,7 +579,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         /// <param name="RecipientCountry">RecipientCountry.</param>
         /// <param name="RecipientType">RecipientType.</param>
-        public QueueConversationMessageEventTopicMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationMessageEventTopicUriReference User = null, QueueConversationMessageEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, QueueConversationMessageEventTopicErrorBody ErrorInfo = null, QueueConversationMessageEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationMessageEventTopicUriReference ExternalContact = null, QueueConversationMessageEventTopicUriReference ExternalOrganization = null, QueueConversationMessageEventTopicWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationMessageEventTopicJourneyContext JourneyContext = null, List<QueueConversationMessageEventTopicMessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
+        public QueueConversationMessageEventTopicMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationMessageEventTopicUriReference User = null, QueueConversationMessageEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, QueueConversationMessageEventTopicErrorBody ErrorInfo = null, QueueConversationMessageEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationMessageEventTopicUriReference ExternalContact = null, QueueConversationMessageEventTopicUriReference ExternalOrganization = null, QueueConversationMessageEventTopicWrapup Wrapup = null, QueueConversationMessageEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationMessageEventTopicJourneyContext JourneyContext = null, List<QueueConversationMessageEventTopicMessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -601,6 +607,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalContact = ExternalContact;
             this.ExternalOrganization = ExternalOrganization;
             this.Wrapup = Wrapup;
+            this.ConversationRoutingData = ConversationRoutingData;
             this.Peer = Peer;
             this.ScreenRecordingState = ScreenRecordingState;
             this.FlaggedReason = FlaggedReason;
@@ -805,6 +812,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets ConversationRoutingData
+        /// </summary>
+        [DataMember(Name="conversationRoutingData", EmitDefaultValue=false)]
+        public QueueConversationMessageEventTopicConversationRoutingData ConversationRoutingData { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Peer
         /// </summary>
         [DataMember(Name="peer", EmitDefaultValue=false)]
@@ -890,6 +905,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  ConversationRoutingData: ").Append(ConversationRoutingData).Append("\n");
             sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
@@ -1065,6 +1081,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup.Equals(other.Wrapup)
                 ) &&
                 (
+                    this.ConversationRoutingData == other.ConversationRoutingData ||
+                    this.ConversationRoutingData != null &&
+                    this.ConversationRoutingData.Equals(other.ConversationRoutingData)
+                ) &&
+                (
                     this.Peer == other.Peer ||
                     this.Peer != null &&
                     this.Peer.Equals(other.Peer)
@@ -1195,6 +1216,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                
+                if (this.ConversationRoutingData != null)
+                    hash = hash * 59 + this.ConversationRoutingData.GetHashCode();
                 
                 if (this.Peer != null)
                     hash = hash * 59 + this.Peer.GetHashCode();

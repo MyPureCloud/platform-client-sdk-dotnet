@@ -175,7 +175,7 @@ namespace PureCloudPlatform.Client.V2.Client
             RestClient.UserAgent = Configuration.UserAgent;
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "60.0.0");
+            request.AddHeader("purecloud-sdk", "60.0.1");
 
             
             var response = RestClient.Execute(request);
@@ -268,6 +268,24 @@ namespace PureCloudPlatform.Client.V2.Client
             }
             else
                 return Convert.ToString (obj);
+        }
+
+         /// <summary>
+        /// Creates a restclient with a base path string input
+        /// <returns>Returns a rest client</returns>
+        public RestClient setBasePath(String basePath){
+            if (String.IsNullOrEmpty(basePath))
+                throw new ArgumentException("basePath cannot be empty");
+
+                 RestClient.BaseUrl = new Uri(basePath);
+                 return RestClient;
+
+        }
+        /// <summary>
+        /// Creates a restclient with a PureCloudRegionHost string input
+        /// <returns>Returns a rest client</returns>
+        public RestClient setBasePath(PureCloudRegionHosts region){
+         return setBasePath(region.GetDescription());
         }
 
         /// <summary>

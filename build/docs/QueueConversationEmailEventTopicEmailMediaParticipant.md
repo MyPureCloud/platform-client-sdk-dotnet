@@ -33,6 +33,7 @@ title: QueueConversationEmailEventTopicEmailMediaParticipant
 | **ExternalContact** | [**QueueConversationEmailEventTopicUriReference**](QueueConversationEmailEventTopicUriReference.html) |  | [optional] |
 | **ExternalOrganization** | [**QueueConversationEmailEventTopicUriReference**](QueueConversationEmailEventTopicUriReference.html) |  | [optional] |
 | **Wrapup** | [**QueueConversationEmailEventTopicWrapup**](QueueConversationEmailEventTopicWrapup.html) |  | [optional] |
+| **ConversationRoutingData** | [**QueueConversationEmailEventTopicConversationRoutingData**](QueueConversationEmailEventTopicConversationRoutingData.html) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
 | **FlaggedReason** | **string** |  | [optional] |

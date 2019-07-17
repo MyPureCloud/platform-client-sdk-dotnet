@@ -33,6 +33,7 @@ title: QueueConversationCobrowseEventTopicCobrowseMediaParticipant
 | **ExternalContact** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference.html) |  | [optional] |
 | **ExternalOrganization** | [**QueueConversationCobrowseEventTopicUriReference**](QueueConversationCobrowseEventTopicUriReference.html) |  | [optional] |
 | **Wrapup** | [**QueueConversationCobrowseEventTopicWrapup**](QueueConversationCobrowseEventTopicWrapup.html) |  | [optional] |
+| **ConversationRoutingData** | [**QueueConversationCobrowseEventTopicConversationRoutingData**](QueueConversationCobrowseEventTopicConversationRoutingData.html) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
 | **FlaggedReason** | **string** |  | [optional] |

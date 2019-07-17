@@ -33,6 +33,7 @@ title: QueueConversationMessageEventTopicMessageMediaParticipant
 | **ExternalContact** | [**QueueConversationMessageEventTopicUriReference**](QueueConversationMessageEventTopicUriReference.html) |  | [optional] |
 | **ExternalOrganization** | [**QueueConversationMessageEventTopicUriReference**](QueueConversationMessageEventTopicUriReference.html) |  | [optional] |
 | **Wrapup** | [**QueueConversationMessageEventTopicWrapup**](QueueConversationMessageEventTopicWrapup.html) |  | [optional] |
+| **ConversationRoutingData** | [**QueueConversationMessageEventTopicConversationRoutingData**](QueueConversationMessageEventTopicConversationRoutingData.html) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
 | **FlaggedReason** | **string** |  | [optional] |

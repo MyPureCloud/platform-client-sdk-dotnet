@@ -425,7 +425,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ExportTypeNotImplemented for "EXPORT_TYPE_NOT_IMPLEMENTED"
             /// </summary>
             [EnumMember(Value = "EXPORT_TYPE_NOT_IMPLEMENTED")]
-            ExportTypeNotImplemented
+            ExportTypeNotImplemented,
+            
+            /// <summary>
+            /// Enum ReachedMaximumAttemptOfRetry for "REACHED_MAXIMUM_ATTEMPT_OF_RETRY"
+            /// </summary>
+            [EnumMember(Value = "REACHED_MAXIMUM_ATTEMPT_OF_RETRY")]
+            ReachedMaximumAttemptOfRetry,
+            
+            /// <summary>
+            /// Enum FailedLongRunningExport for "FAILED_LONG_RUNNING_EXPORT"
+            /// </summary>
+            [EnumMember(Value = "FAILED_LONG_RUNNING_EXPORT")]
+            FailedLongRunningExport
         }
         
         

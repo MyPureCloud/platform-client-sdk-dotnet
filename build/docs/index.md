@@ -74,6 +74,30 @@ var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4
   "http://redirecturi.com/",
   "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
+Configuration.Default.AccessToken = accessTokenInfo.AccessToken;
+```
+
+#### OAuth2 SAML2 Bearer Grant
+
+**Use when...**
+
+* The app is authenticating as a human user, the [OAuth2 SAML2 Bearer](https://developer.mypurecloud.com/api/rest/authorization/use-saml2-bearer.html) can be used via the AuthExtensions extension methods.
+
+First, use the following namespaces:
+
+```{"language":"csharp"}
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Extensions;
+```
+
+Then call the _PostTokenSaml2Bearer_ extension method of _ApiClient_ with your orgName and encodedSamlaAsertion
+
+```{"language":"csharp"}
+var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+  "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",orgName, encodedSamlAssertion);
+Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
+Configuration.Default.AccessToken = accessTokenInfo.AccessToken;
 ```
 
 #### Client Credentials Grant
@@ -98,6 +122,7 @@ Then call the _PostToken_ extension method of _ApiClient_, leaving the redirect 
 var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
   "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo");
 Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
+Configuration.Default.AccessToken = accessTokenInfo.AccessToken;
 ```
 
 ### Making Requests
@@ -107,7 +132,8 @@ Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
 If connecting to a PureCloud environment other than mypurecloud.com (e.g. mypurecloud.ie), set the new base path before constructing any API classes. The new base path should be the base path to the Platform API for your environment.
 
 ```{"language":"csharp"}
-Configuration.Default.ApiClient.RestClient.BaseUrl = new Uri("https://api.mypurecloud.ie");
+PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1;
+Configuration.Default.ApiClient.setBasePath(region);
 ```
 
 #### Setting the Access Token
@@ -156,11 +182,11 @@ Add a subscription:
 
 ```{"language":"csharp"}
 // Single
-handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(UserPresenceNotification));
+handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(PresenceEventUserPresence));
 
 // Multiple
 var subscriptions = new List<Tuple<string, Type>>();
-subscriptions.Add(new Tuple($"v2.users.{_me.Id}.presence", typeof(UserPresenceNotification)));
+subscriptions.Add(new Tuple($"v2.users.{_me.Id}.presence", typeof(PresenceEventUserPresence)));
 subscriptions.Add(new Tuple($"v2.users.{_me.Id}.routingStatus", typeof(UserRoutingStatusNotification)));
 handler.AddSubscriptions(subscriptions);
 ```
@@ -178,9 +204,9 @@ handler.NotificationReceived += (data) =>
 {
     Console.WriteLine(JsonConvert.SerializeObject(data, Formatting.Indented));
 
-    if (data.GetType() == typeof (NotificationData<UserPresenceNotification>))
+    if (data.GetType() == typeof (NotificationData<PresenceEventUserPresence>))
     {
-        var presence = (NotificationData<UserPresenceNotification>) data;
+        var presence = (NotificationData<PresenceEventUserPresence>) data;
         Console.WriteLine($"New presence: {presence.EventBody.PresenceDefinition.SystemPresence}");
     }
 };
@@ -190,15 +216,15 @@ Full example:
 
 ```{"language":"csharp"}
 var handler = new NotificationHandler();
-handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(UserPresenceNotification));
+handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(PresenceEventUserPresence));
 handler.AddSubscription($"v2.users.{_me.Id}.conversations", typeof(ConversationNotification));
 handler.NotificationReceived += (data) =>
 {
     Console.WriteLine(JsonConvert.SerializeObject(data, Formatting.Indented));
 
-    if (data.GetType() == typeof (NotificationData<UserPresenceNotification>))
+    if (data.GetType() == typeof (NotificationData<PresenceEventUserPresence>))
     {
-        var presence = (NotificationData<UserPresenceNotification>) data;
+        var presence = (NotificationData<PresenceEventUserPresence>) data;
         Console.WriteLine($"New presence: {presence.EventBody.PresenceDefinition.SystemPresence}");
     }
     else if (data.GetType() == typeof (NotificationData<ConversationNotification>))

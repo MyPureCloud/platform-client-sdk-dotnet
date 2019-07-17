@@ -24,6 +24,7 @@ title: ConversationEventTopicParticipant
 | **WrapupPrompt** | **string** |  | [optional] |
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **Wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) |  | [optional] |
+| **ConversationRoutingData** | [**ConversationEventTopicConversationRoutingData**](ConversationEventTopicConversationRoutingData.html) |  | [optional] |
 | **AlertingTimeoutMs** | **int?** |  | [optional] |
 | **MonitoredParticipantId** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |

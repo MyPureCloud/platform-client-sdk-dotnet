@@ -33,6 +33,7 @@ title: ConversationVideoEventTopicVideoMediaParticipant
 | **ExternalContact** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference.html) |  | [optional] |
 | **ExternalOrganization** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference.html) |  | [optional] |
 | **Wrapup** | [**ConversationVideoEventTopicWrapup**](ConversationVideoEventTopicWrapup.html) |  | [optional] |
+| **ConversationRoutingData** | [**ConversationVideoEventTopicConversationRoutingData**](ConversationVideoEventTopicConversationRoutingData.html) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
 | **FlaggedReason** | **string** |  | [optional] |

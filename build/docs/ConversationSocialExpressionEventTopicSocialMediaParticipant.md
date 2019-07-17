@@ -33,6 +33,7 @@ title: ConversationSocialExpressionEventTopicSocialMediaParticipant
 | **ExternalContact** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) |  | [optional] |
 | **ExternalOrganization** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) |  | [optional] |
 | **Wrapup** | [**ConversationSocialExpressionEventTopicWrapup**](ConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
+| **ConversationRoutingData** | [**ConversationSocialExpressionEventTopicConversationRoutingData**](ConversationSocialExpressionEventTopicConversationRoutingData.html) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
 | **FlaggedReason** | **string** |  | [optional] |

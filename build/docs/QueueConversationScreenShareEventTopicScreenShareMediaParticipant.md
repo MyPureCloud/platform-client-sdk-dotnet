@@ -33,6 +33,7 @@ title: QueueConversationScreenShareEventTopicScreenShareMediaParticipant
 | **ExternalContact** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
 | **ExternalOrganization** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
 | **Wrapup** | [**QueueConversationScreenShareEventTopicWrapup**](QueueConversationScreenShareEventTopicWrapup.html) |  | [optional] |
+| **ConversationRoutingData** | [**QueueConversationScreenShareEventTopicConversationRoutingData**](QueueConversationScreenShareEventTopicConversationRoutingData.html) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
 | **FlaggedReason** | **string** |  | [optional] |
