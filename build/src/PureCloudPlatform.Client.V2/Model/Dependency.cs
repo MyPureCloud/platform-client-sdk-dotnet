@@ -260,6 +260,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Userprompt,
             
             /// <summary>
+            /// Enum Widget for "WIDGET"
+            /// </summary>
+            [EnumMember(Value = "WIDGET")]
+            Widget,
+            
+            /// <summary>
             /// Enum Workflow for "WORKFLOW"
             /// </summary>
             [EnumMember(Value = "WORKFLOW")]

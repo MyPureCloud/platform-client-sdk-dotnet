@@ -46,8 +46,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>LocationDefinition</returns>
-        LocationDefinition GetLocation (string locationId);
+        LocationDefinition GetLocation (string locationId, List<string> expand = null);
 
         /// <summary>
         /// Get Location by ID.
@@ -57,8 +58,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of LocationDefinition</returns>
-        ApiResponse<LocationDefinition> GetLocationWithHttpInfo (string locationId);
+        ApiResponse<LocationDefinition> GetLocationWithHttpInfo (string locationId, List<string> expand = null);
         
         /// <summary>
         /// Get a list of all locations.
@@ -214,8 +216,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of LocationDefinition</returns>
-        System.Threading.Tasks.Task<LocationDefinition> GetLocationAsync (string locationId);
+        System.Threading.Tasks.Task<LocationDefinition> GetLocationAsync (string locationId, List<string> expand = null);
 
         /// <summary>
         /// Get Location by ID.
@@ -225,8 +228,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (LocationDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LocationDefinition>> GetLocationAsyncWithHttpInfo (string locationId);
+        System.Threading.Tasks.Task<ApiResponse<LocationDefinition>> GetLocationAsyncWithHttpInfo (string locationId, List<string> expand = null);
         
         /// <summary>
         /// Get a list of all locations.
@@ -636,10 +640,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>LocationDefinition</returns>
-        public LocationDefinition GetLocation (string locationId)
+        public LocationDefinition GetLocation (string locationId, List<string> expand = null)
         {
-             ApiResponse<LocationDefinition> localVarResponse = GetLocationWithHttpInfo(locationId);
+             ApiResponse<LocationDefinition> localVarResponse = GetLocationWithHttpInfo(locationId, expand);
              return localVarResponse.Data;
         }
 
@@ -648,8 +653,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of LocationDefinition</returns>
-        public ApiResponse< LocationDefinition > GetLocationWithHttpInfo (string locationId)
+        public ApiResponse< LocationDefinition > GetLocationWithHttpInfo (string locationId, List<string> expand = null)
         { 
             // verify the required parameter 'locationId' is set
             if (locationId == null)
@@ -689,6 +695,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (locationId != null) localVarPathParams.Add("locationId", this.Configuration.ApiClient.ParameterToString(locationId));
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -731,10 +738,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of LocationDefinition</returns>
-        public async System.Threading.Tasks.Task<LocationDefinition> GetLocationAsync (string locationId)
+        public async System.Threading.Tasks.Task<LocationDefinition> GetLocationAsync (string locationId, List<string> expand = null)
         {
-             ApiResponse<LocationDefinition> localVarResponse = await GetLocationAsyncWithHttpInfo(locationId);
+             ApiResponse<LocationDefinition> localVarResponse = await GetLocationAsyncWithHttpInfo(locationId, expand);
              return localVarResponse.Data;
 
         }
@@ -744,8 +752,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (LocationDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LocationDefinition>> GetLocationAsyncWithHttpInfo (string locationId)
+        public async System.Threading.Tasks.Task<ApiResponse<LocationDefinition>> GetLocationAsyncWithHttpInfo (string locationId, List<string> expand = null)
         { 
             // verify the required parameter 'locationId' is set
             if (locationId == null)
@@ -786,6 +795,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (locationId != null) localVarPathParams.Add("locationId", this.Configuration.ApiClient.ParameterToString(locationId));
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

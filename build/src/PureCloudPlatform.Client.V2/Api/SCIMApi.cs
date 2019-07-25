@@ -17,381 +17,381 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Soft delete user with specified ID
+        /// Delete a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Empty</returns>
         Empty DeleteScimUser (string userId, string ifMatch = null);
 
         /// <summary>
-        /// Soft delete user with specified ID
+        /// Delete a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of Empty</returns>
         ApiResponse<Empty> DeleteScimUserWithHttpInfo (string userId, string ifMatch = null);
         
         /// <summary>
-        /// Soft delete user with specified ID
+        /// Delete a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Empty</returns>
         Empty DeleteScimV2User (string userId, string ifMatch = null);
 
         /// <summary>
-        /// Soft delete user with specified ID
+        /// Delete a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of Empty</returns>
         ApiResponse<Empty> DeleteScimV2UserWithHttpInfo (string userId, string ifMatch = null);
         
         /// <summary>
-        /// Return Group with specified ID
+        /// Get a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2Group</returns>
         ScimV2Group GetScimGroup (string groupId, string ifNoneMatch = null);
 
         /// <summary>
-        /// Return Group with specified ID
+        /// Get a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         ApiResponse<ScimV2Group> GetScimGroupWithHttpInfo (string groupId, string ifNoneMatch = null);
         
         /// <summary>
-        /// Query Groups
+        /// Get a list of groups
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName (optional)</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
+        /// <param name="filter">Filters results. (optional)</param>
         /// <returns>ScimListResponse</returns>
         ScimListResponse GetScimGroups (int? startIndex = null, int? count = null, string filter = null);
 
         /// <summary>
-        /// Query Groups
+        /// Get a list of groups
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName (optional)</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
+        /// <param name="filter">Filters results. (optional)</param>
         /// <returns>ApiResponse of ScimListResponse</returns>
         ApiResponse<ScimListResponse> GetScimGroupsWithHttpInfo (int? startIndex = null, int? count = null, string filter = null);
         
         /// <summary>
-        /// Return user with specified ID (default version)
+        /// Get a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2User</returns>
         ScimV2User GetScimUser (string userId, string ifNoneMatch = null);
 
         /// <summary>
-        /// Return user with specified ID (default version)
+        /// Get a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         ApiResponse<ScimV2User> GetScimUserWithHttpInfo (string userId, string ifNoneMatch = null);
         
         /// <summary>
-        /// Query Users
+        /// Get a list of users
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>ScimListResponse</returns>
         ScimListResponse GetScimUsers (string filter, int? startIndex = null, int? count = null);
 
         /// <summary>
-        /// Query Users
+        /// Get a list of users
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>ApiResponse of ScimListResponse</returns>
         ApiResponse<ScimListResponse> GetScimUsersWithHttpInfo (string filter, int? startIndex = null, int? count = null);
         
         /// <summary>
-        /// Return Group with specified ID
+        /// Get a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2Group</returns>
         ScimV2Group GetScimV2Group (string groupId, string ifNoneMatch = null);
 
         /// <summary>
-        /// Return Group with specified ID
+        /// Get a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         ApiResponse<ScimV2Group> GetScimV2GroupWithHttpInfo (string groupId, string ifNoneMatch = null);
         
         /// <summary>
-        /// Query Groups
+        /// Get a list of groups
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>ScimListResponse</returns>
         ScimListResponse GetScimV2Groups (string filter, int? startIndex = null, int? count = null);
 
         /// <summary>
-        /// Query Groups
+        /// Get a list of groups
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>ApiResponse of ScimListResponse</returns>
         ApiResponse<ScimListResponse> GetScimV2GroupsWithHttpInfo (string filter, int? startIndex = null, int? count = null);
         
         /// <summary>
-        /// Get SCIM Configuration
+        /// Get the SCIM configuration
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimServiceProviderConfig</returns>
         ScimServiceProviderConfig GetScimV2Serviceproviderconfig (string ifNoneMatch = null);
 
         /// <summary>
-        /// Get SCIM Configuration
+        /// Get the SCIM configuration
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimServiceProviderConfig</returns>
         ApiResponse<ScimServiceProviderConfig> GetScimV2ServiceproviderconfigWithHttpInfo (string ifNoneMatch = null);
         
         /// <summary>
-        /// Return User with specified ID
+        /// Get a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2User</returns>
         ScimV2User GetScimV2User (string userId, string ifNoneMatch = null);
 
         /// <summary>
-        /// Return User with specified ID
+        /// Get a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         ApiResponse<ScimV2User> GetScimV2UserWithHttpInfo (string userId, string ifNoneMatch = null);
         
         /// <summary>
-        /// Query Users
+        /// Get a list of users
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>ScimListResponse</returns>
         ScimListResponse GetScimV2Users (string filter, int? startIndex = null, int? count = null);
 
         /// <summary>
-        /// Query Users
+        /// Get a list of users
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>ApiResponse of ScimListResponse</returns>
         ApiResponse<ScimListResponse> GetScimV2UsersWithHttpInfo (string filter, int? startIndex = null, int? count = null);
         
         /// <summary>
-        /// Update Group with specified ID
+        /// Modify a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2Group</returns>
         ScimV2Group PatchScimGroup (string groupId, PatchRequest body, string ifMatch = null);
 
         /// <summary>
-        /// Update Group with specified ID
+        /// Modify a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         ApiResponse<ScimV2Group> PatchScimGroupWithHttpInfo (string groupId, PatchRequest body, string ifMatch = null);
         
         /// <summary>
-        /// Patch user with specified ID
+        /// Modify a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2User</returns>
         ScimV2User PatchScimUser (string userId, ScimV2PatchRequest body, string ifMatch = null);
 
         /// <summary>
-        /// Patch user with specified ID
+        /// Modify a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         ApiResponse<ScimV2User> PatchScimUserWithHttpInfo (string userId, ScimV2PatchRequest body, string ifMatch = null);
         
         /// <summary>
-        /// Update Group with specified ID
+        /// Modify a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2Group</returns>
         ScimV2Group PatchScimV2Group (string groupId, PatchRequest body, string ifMatch = null);
 
         /// <summary>
-        /// Update Group with specified ID
+        /// Modify a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         ApiResponse<ScimV2Group> PatchScimV2GroupWithHttpInfo (string groupId, PatchRequest body, string ifMatch = null);
         
         /// <summary>
-        /// Update user with specified ID
+        /// Modify a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2User</returns>
         ScimV2User PatchScimV2User (string userId, ScimV2PatchRequest body, string ifMatch = null);
 
         /// <summary>
-        /// Update user with specified ID
+        /// Modify a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         ApiResponse<ScimV2User> PatchScimV2UserWithHttpInfo (string userId, ScimV2PatchRequest body, string ifMatch = null);
         
         /// <summary>
-        /// Create user
+        /// Create a user
         /// </summary>
         /// <remarks>
         /// 
@@ -402,7 +402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ScimV2User PostScimUsers (ScimV2CreateUser body);
 
         /// <summary>
-        /// Create user
+        /// Create a user
         /// </summary>
         /// <remarks>
         /// 
@@ -413,7 +413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ScimV2User> PostScimUsersWithHttpInfo (ScimV2CreateUser body);
         
         /// <summary>
-        /// Create user
+        /// Create a user
         /// </summary>
         /// <remarks>
         /// 
@@ -424,7 +424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ScimV2User PostScimV2Users (ScimV2CreateUser body);
 
         /// <summary>
-        /// Create user
+        /// Create a user
         /// </summary>
         /// <remarks>
         /// 
@@ -435,106 +435,106 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ScimV2User> PostScimV2UsersWithHttpInfo (ScimV2CreateUser body);
         
         /// <summary>
-        /// Update Group with specified ID
+        /// Replace a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2Group</returns>
         ScimV2Group PutScimGroup (string groupId, ScimV2Group body, string ifMatch = null);
 
         /// <summary>
-        /// Update Group with specified ID
+        /// Replace a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         ApiResponse<ScimV2Group> PutScimGroupWithHttpInfo (string groupId, ScimV2Group body, string ifMatch = null);
         
         /// <summary>
-        /// Update user with specified ID
+        /// Replace a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2User</returns>
         ScimV2User PutScimUser (string userId, ScimV2User body, string ifMatch = null);
 
         /// <summary>
-        /// Update user with specified ID
+        /// Replace a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         ApiResponse<ScimV2User> PutScimUserWithHttpInfo (string userId, ScimV2User body, string ifMatch = null);
         
         /// <summary>
-        /// Update Group with specified ID
+        /// Replace a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2Group</returns>
         ScimV2Group PutScimV2Group (string groupId, ScimV2Group body, string ifMatch = null);
 
         /// <summary>
-        /// Update Group with specified ID
+        /// Replace a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         ApiResponse<ScimV2Group> PutScimV2GroupWithHttpInfo (string groupId, ScimV2Group body, string ifMatch = null);
         
         /// <summary>
-        /// Update user with specified ID
+        /// Replace a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2User</returns>
         ScimV2User PutScimV2User (string userId, ScimV2User body, string ifMatch = null);
 
         /// <summary>
-        /// Update user with specified ID
+        /// Replace a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         ApiResponse<ScimV2User> PutScimV2UserWithHttpInfo (string userId, ScimV2User body, string ifMatch = null);
         
@@ -543,381 +543,381 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Soft delete user with specified ID
+        /// Delete a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of Empty</returns>
         System.Threading.Tasks.Task<Empty> DeleteScimUserAsync (string userId, string ifMatch = null);
 
         /// <summary>
-        /// Soft delete user with specified ID
+        /// Delete a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (Empty)</returns>
         System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteScimUserAsyncWithHttpInfo (string userId, string ifMatch = null);
         
         /// <summary>
-        /// Soft delete user with specified ID
+        /// Delete a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of Empty</returns>
         System.Threading.Tasks.Task<Empty> DeleteScimV2UserAsync (string userId, string ifMatch = null);
 
         /// <summary>
-        /// Soft delete user with specified ID
+        /// Delete a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (Empty)</returns>
         System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteScimV2UserAsyncWithHttpInfo (string userId, string ifMatch = null);
         
         /// <summary>
-        /// Return Group with specified ID
+        /// Get a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         System.Threading.Tasks.Task<ScimV2Group> GetScimGroupAsync (string groupId, string ifNoneMatch = null);
 
         /// <summary>
-        /// Return Group with specified ID
+        /// Get a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> GetScimGroupAsyncWithHttpInfo (string groupId, string ifNoneMatch = null);
         
         /// <summary>
-        /// Query Groups
+        /// Get a list of groups
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName (optional)</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
+        /// <param name="filter">Filters results. (optional)</param>
         /// <returns>Task of ScimListResponse</returns>
         System.Threading.Tasks.Task<ScimListResponse> GetScimGroupsAsync (int? startIndex = null, int? count = null, string filter = null);
 
         /// <summary>
-        /// Query Groups
+        /// Get a list of groups
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName (optional)</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
+        /// <param name="filter">Filters results. (optional)</param>
         /// <returns>Task of ApiResponse (ScimListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimListResponse>> GetScimGroupsAsyncWithHttpInfo (int? startIndex = null, int? count = null, string filter = null);
         
         /// <summary>
-        /// Return user with specified ID (default version)
+        /// Get a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         System.Threading.Tasks.Task<ScimV2User> GetScimUserAsync (string userId, string ifNoneMatch = null);
 
         /// <summary>
-        /// Return user with specified ID (default version)
+        /// Get a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2User>> GetScimUserAsyncWithHttpInfo (string userId, string ifNoneMatch = null);
         
         /// <summary>
-        /// Query Users
+        /// Get a list of users
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>Task of ScimListResponse</returns>
         System.Threading.Tasks.Task<ScimListResponse> GetScimUsersAsync (string filter, int? startIndex = null, int? count = null);
 
         /// <summary>
-        /// Query Users
+        /// Get a list of users
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ScimListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimListResponse>> GetScimUsersAsyncWithHttpInfo (string filter, int? startIndex = null, int? count = null);
         
         /// <summary>
-        /// Return Group with specified ID
+        /// Get a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         System.Threading.Tasks.Task<ScimV2Group> GetScimV2GroupAsync (string groupId, string ifNoneMatch = null);
 
         /// <summary>
-        /// Return Group with specified ID
+        /// Get a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> GetScimV2GroupAsyncWithHttpInfo (string groupId, string ifNoneMatch = null);
         
         /// <summary>
-        /// Query Groups
+        /// Get a list of groups
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>Task of ScimListResponse</returns>
         System.Threading.Tasks.Task<ScimListResponse> GetScimV2GroupsAsync (string filter, int? startIndex = null, int? count = null);
 
         /// <summary>
-        /// Query Groups
+        /// Get a list of groups
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ScimListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimListResponse>> GetScimV2GroupsAsyncWithHttpInfo (string filter, int? startIndex = null, int? count = null);
         
         /// <summary>
-        /// Get SCIM Configuration
+        /// Get the SCIM configuration
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimServiceProviderConfig</returns>
         System.Threading.Tasks.Task<ScimServiceProviderConfig> GetScimV2ServiceproviderconfigAsync (string ifNoneMatch = null);
 
         /// <summary>
-        /// Get SCIM Configuration
+        /// Get the SCIM configuration
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimServiceProviderConfig)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimServiceProviderConfig>> GetScimV2ServiceproviderconfigAsyncWithHttpInfo (string ifNoneMatch = null);
         
         /// <summary>
-        /// Return User with specified ID
+        /// Get a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         System.Threading.Tasks.Task<ScimV2User> GetScimV2UserAsync (string userId, string ifNoneMatch = null);
 
         /// <summary>
-        /// Return User with specified ID
+        /// Get a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2User>> GetScimV2UserAsyncWithHttpInfo (string userId, string ifNoneMatch = null);
         
         /// <summary>
-        /// Query Users
+        /// Get a list of users
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>Task of ScimListResponse</returns>
         System.Threading.Tasks.Task<ScimListResponse> GetScimV2UsersAsync (string filter, int? startIndex = null, int? count = null);
 
         /// <summary>
-        /// Query Users
+        /// Get a list of users
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ScimListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimListResponse>> GetScimV2UsersAsyncWithHttpInfo (string filter, int? startIndex = null, int? count = null);
         
         /// <summary>
-        /// Update Group with specified ID
+        /// Modify a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         System.Threading.Tasks.Task<ScimV2Group> PatchScimGroupAsync (string groupId, PatchRequest body, string ifMatch = null);
 
         /// <summary>
-        /// Update Group with specified ID
+        /// Modify a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PatchScimGroupAsyncWithHttpInfo (string groupId, PatchRequest body, string ifMatch = null);
         
         /// <summary>
-        /// Patch user with specified ID
+        /// Modify a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         System.Threading.Tasks.Task<ScimV2User> PatchScimUserAsync (string userId, ScimV2PatchRequest body, string ifMatch = null);
 
         /// <summary>
-        /// Patch user with specified ID
+        /// Modify a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2User>> PatchScimUserAsyncWithHttpInfo (string userId, ScimV2PatchRequest body, string ifMatch = null);
         
         /// <summary>
-        /// Update Group with specified ID
+        /// Modify a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         System.Threading.Tasks.Task<ScimV2Group> PatchScimV2GroupAsync (string groupId, PatchRequest body, string ifMatch = null);
 
         /// <summary>
-        /// Update Group with specified ID
+        /// Modify a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PatchScimV2GroupAsyncWithHttpInfo (string groupId, PatchRequest body, string ifMatch = null);
         
         /// <summary>
-        /// Update user with specified ID
+        /// Modify a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         System.Threading.Tasks.Task<ScimV2User> PatchScimV2UserAsync (string userId, ScimV2PatchRequest body, string ifMatch = null);
 
         /// <summary>
-        /// Update user with specified ID
+        /// Modify a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2User>> PatchScimV2UserAsyncWithHttpInfo (string userId, ScimV2PatchRequest body, string ifMatch = null);
         
         /// <summary>
-        /// Create user
+        /// Create a user
         /// </summary>
         /// <remarks>
         /// 
@@ -928,7 +928,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ScimV2User> PostScimUsersAsync (ScimV2CreateUser body);
 
         /// <summary>
-        /// Create user
+        /// Create a user
         /// </summary>
         /// <remarks>
         /// 
@@ -939,7 +939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ScimV2User>> PostScimUsersAsyncWithHttpInfo (ScimV2CreateUser body);
         
         /// <summary>
-        /// Create user
+        /// Create a user
         /// </summary>
         /// <remarks>
         /// 
@@ -950,7 +950,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ScimV2User> PostScimV2UsersAsync (ScimV2CreateUser body);
 
         /// <summary>
-        /// Create user
+        /// Create a user
         /// </summary>
         /// <remarks>
         /// 
@@ -961,106 +961,106 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ScimV2User>> PostScimV2UsersAsyncWithHttpInfo (ScimV2CreateUser body);
         
         /// <summary>
-        /// Update Group with specified ID
+        /// Replace a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         System.Threading.Tasks.Task<ScimV2Group> PutScimGroupAsync (string groupId, ScimV2Group body, string ifMatch = null);
 
         /// <summary>
-        /// Update Group with specified ID
+        /// Replace a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PutScimGroupAsyncWithHttpInfo (string groupId, ScimV2Group body, string ifMatch = null);
         
         /// <summary>
-        /// Update user with specified ID
+        /// Replace a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         System.Threading.Tasks.Task<ScimV2User> PutScimUserAsync (string userId, ScimV2User body, string ifMatch = null);
 
         /// <summary>
-        /// Update user with specified ID
+        /// Replace a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2User>> PutScimUserAsyncWithHttpInfo (string userId, ScimV2User body, string ifMatch = null);
         
         /// <summary>
-        /// Update Group with specified ID
+        /// Replace a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         System.Threading.Tasks.Task<ScimV2Group> PutScimV2GroupAsync (string groupId, ScimV2Group body, string ifMatch = null);
 
         /// <summary>
-        /// Update Group with specified ID
+        /// Replace a group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PutScimV2GroupAsyncWithHttpInfo (string groupId, ScimV2Group body, string ifMatch = null);
         
         /// <summary>
-        /// Update user with specified ID
+        /// Replace a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         System.Threading.Tasks.Task<ScimV2User> PutScimV2UserAsync (string userId, ScimV2User body, string ifMatch = null);
 
         /// <summary>
-        /// Update user with specified ID
+        /// Replace a user
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimV2User>> PutScimV2UserAsyncWithHttpInfo (string userId, ScimV2User body, string ifMatch = null);
         
@@ -1157,11 +1157,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Soft delete user with specified ID 
+        /// Delete a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Empty</returns>
         public Empty DeleteScimUser (string userId, string ifMatch = null)
         {
@@ -1170,11 +1170,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Soft delete user with specified ID 
+        /// Delete a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of Empty</returns>
         public ApiResponse< Empty > DeleteScimUserWithHttpInfo (string userId, string ifMatch = null)
         { 
@@ -1259,11 +1259,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Soft delete user with specified ID 
+        /// Delete a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of Empty</returns>
         public async System.Threading.Tasks.Task<Empty> DeleteScimUserAsync (string userId, string ifMatch = null)
         {
@@ -1273,11 +1273,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Soft delete user with specified ID 
+        /// Delete a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (Empty)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteScimUserAsyncWithHttpInfo (string userId, string ifMatch = null)
         { 
@@ -1364,11 +1364,11 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Soft delete user with specified ID 
+        /// Delete a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Empty</returns>
         public Empty DeleteScimV2User (string userId, string ifMatch = null)
         {
@@ -1377,11 +1377,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Soft delete user with specified ID 
+        /// Delete a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of Empty</returns>
         public ApiResponse< Empty > DeleteScimV2UserWithHttpInfo (string userId, string ifMatch = null)
         { 
@@ -1466,11 +1466,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Soft delete user with specified ID 
+        /// Delete a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of Empty</returns>
         public async System.Threading.Tasks.Task<Empty> DeleteScimV2UserAsync (string userId, string ifMatch = null)
         {
@@ -1480,11 +1480,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Soft delete user with specified ID 
+        /// Delete a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (Empty)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteScimV2UserAsyncWithHttpInfo (string userId, string ifMatch = null)
         { 
@@ -1571,11 +1571,11 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Return Group with specified ID 
+        /// Get a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2Group</returns>
         public ScimV2Group GetScimGroup (string groupId, string ifNoneMatch = null)
         {
@@ -1584,11 +1584,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Return Group with specified ID 
+        /// Get a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         public ApiResponse< ScimV2Group > GetScimGroupWithHttpInfo (string groupId, string ifNoneMatch = null)
         { 
@@ -1673,11 +1673,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Return Group with specified ID 
+        /// Get a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         public async System.Threading.Tasks.Task<ScimV2Group> GetScimGroupAsync (string groupId, string ifNoneMatch = null)
         {
@@ -1687,11 +1687,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Return Group with specified ID 
+        /// Get a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> GetScimGroupAsyncWithHttpInfo (string groupId, string ifNoneMatch = null)
         { 
@@ -1778,12 +1778,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Query Groups 
+        /// Get a list of groups 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName (optional)</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
+        /// <param name="filter">Filters results. (optional)</param>
         /// <returns>ScimListResponse</returns>
         public ScimListResponse GetScimGroups (int? startIndex = null, int? count = null, string filter = null)
         {
@@ -1792,12 +1792,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query Groups 
+        /// Get a list of groups 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName (optional)</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
+        /// <param name="filter">Filters results. (optional)</param>
         /// <returns>ApiResponse of ScimListResponse</returns>
         public ApiResponse< ScimListResponse > GetScimGroupsWithHttpInfo (int? startIndex = null, int? count = null, string filter = null)
         { 
@@ -1880,12 +1880,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Query Groups 
+        /// Get a list of groups 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName (optional)</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
+        /// <param name="filter">Filters results. (optional)</param>
         /// <returns>Task of ScimListResponse</returns>
         public async System.Threading.Tasks.Task<ScimListResponse> GetScimGroupsAsync (int? startIndex = null, int? count = null, string filter = null)
         {
@@ -1895,12 +1895,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query Groups 
+        /// Get a list of groups 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName (optional)</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
+        /// <param name="filter">Filters results. (optional)</param>
         /// <returns>Task of ApiResponse (ScimListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimListResponse>> GetScimGroupsAsyncWithHttpInfo (int? startIndex = null, int? count = null, string filter = null)
         { 
@@ -1984,11 +1984,11 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Return user with specified ID (default version) 
+        /// Get a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2User</returns>
         public ScimV2User GetScimUser (string userId, string ifNoneMatch = null)
         {
@@ -1997,11 +1997,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Return user with specified ID (default version) 
+        /// Get a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         public ApiResponse< ScimV2User > GetScimUserWithHttpInfo (string userId, string ifNoneMatch = null)
         { 
@@ -2086,11 +2086,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Return user with specified ID (default version) 
+        /// Get a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         public async System.Threading.Tasks.Task<ScimV2User> GetScimUserAsync (string userId, string ifNoneMatch = null)
         {
@@ -2100,11 +2100,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Return user with specified ID (default version) 
+        /// Get a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2User>> GetScimUserAsyncWithHttpInfo (string userId, string ifNoneMatch = null)
         { 
@@ -2191,12 +2191,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Query Users 
+        /// Get a list of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>ScimListResponse</returns>
         public ScimListResponse GetScimUsers (string filter, int? startIndex = null, int? count = null)
         {
@@ -2205,12 +2205,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query Users 
+        /// Get a list of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>ApiResponse of ScimListResponse</returns>
         public ApiResponse< ScimListResponse > GetScimUsersWithHttpInfo (string filter, int? startIndex = null, int? count = null)
         { 
@@ -2296,12 +2296,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Query Users 
+        /// Get a list of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>Task of ScimListResponse</returns>
         public async System.Threading.Tasks.Task<ScimListResponse> GetScimUsersAsync (string filter, int? startIndex = null, int? count = null)
         {
@@ -2311,12 +2311,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query Users 
+        /// Get a list of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ScimListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimListResponse>> GetScimUsersAsyncWithHttpInfo (string filter, int? startIndex = null, int? count = null)
         { 
@@ -2404,11 +2404,11 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Return Group with specified ID 
+        /// Get a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2Group</returns>
         public ScimV2Group GetScimV2Group (string groupId, string ifNoneMatch = null)
         {
@@ -2417,11 +2417,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Return Group with specified ID 
+        /// Get a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         public ApiResponse< ScimV2Group > GetScimV2GroupWithHttpInfo (string groupId, string ifNoneMatch = null)
         { 
@@ -2506,11 +2506,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Return Group with specified ID 
+        /// Get a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         public async System.Threading.Tasks.Task<ScimV2Group> GetScimV2GroupAsync (string groupId, string ifNoneMatch = null)
         {
@@ -2520,11 +2520,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Return Group with specified ID 
+        /// Get a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> GetScimV2GroupAsyncWithHttpInfo (string groupId, string ifNoneMatch = null)
         { 
@@ -2611,12 +2611,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Query Groups 
+        /// Get a list of groups 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>ScimListResponse</returns>
         public ScimListResponse GetScimV2Groups (string filter, int? startIndex = null, int? count = null)
         {
@@ -2625,12 +2625,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query Groups 
+        /// Get a list of groups 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>ApiResponse of ScimListResponse</returns>
         public ApiResponse< ScimListResponse > GetScimV2GroupsWithHttpInfo (string filter, int? startIndex = null, int? count = null)
         { 
@@ -2716,12 +2716,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Query Groups 
+        /// Get a list of groups 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>Task of ScimListResponse</returns>
         public async System.Threading.Tasks.Task<ScimListResponse> GetScimV2GroupsAsync (string filter, int? startIndex = null, int? count = null)
         {
@@ -2731,12 +2731,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query Groups 
+        /// Get a list of groups 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. displayName eq groupName</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ScimListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimListResponse>> GetScimV2GroupsAsyncWithHttpInfo (string filter, int? startIndex = null, int? count = null)
         { 
@@ -2824,10 +2824,10 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get SCIM Configuration 
+        /// Get the SCIM configuration 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimServiceProviderConfig</returns>
         public ScimServiceProviderConfig GetScimV2Serviceproviderconfig (string ifNoneMatch = null)
         {
@@ -2836,10 +2836,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get SCIM Configuration 
+        /// Get the SCIM configuration 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimServiceProviderConfig</returns>
         public ApiResponse< ScimServiceProviderConfig > GetScimV2ServiceproviderconfigWithHttpInfo (string ifNoneMatch = null)
         { 
@@ -2914,10 +2914,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get SCIM Configuration 
+        /// Get the SCIM configuration 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimServiceProviderConfig</returns>
         public async System.Threading.Tasks.Task<ScimServiceProviderConfig> GetScimV2ServiceproviderconfigAsync (string ifNoneMatch = null)
         {
@@ -2927,10 +2927,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get SCIM Configuration 
+        /// Get the SCIM configuration 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimServiceProviderConfig)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimServiceProviderConfig>> GetScimV2ServiceproviderconfigAsyncWithHttpInfo (string ifNoneMatch = null)
         { 
@@ -3006,11 +3006,11 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Return User with specified ID 
+        /// Get a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ScimV2User</returns>
         public ScimV2User GetScimV2User (string userId, string ifNoneMatch = null)
         {
@@ -3019,11 +3019,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Return User with specified ID 
+        /// Get a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         public ApiResponse< ScimV2User > GetScimV2UserWithHttpInfo (string userId, string ifNoneMatch = null)
         { 
@@ -3108,11 +3108,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Return User with specified ID 
+        /// Get a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         public async System.Threading.Tasks.Task<ScimV2User> GetScimV2UserAsync (string userId, string ifNoneMatch = null)
         {
@@ -3122,11 +3122,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Return User with specified ID 
+        /// Get a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <param name="ifNoneMatch">If-None-Match for ETag version checking (optional)</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
+        /// <param name="ifNoneMatch">The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2User>> GetScimV2UserAsyncWithHttpInfo (string userId, string ifNoneMatch = null)
         { 
@@ -3213,12 +3213,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Query Users 
+        /// Get a list of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>ScimListResponse</returns>
         public ScimListResponse GetScimV2Users (string filter, int? startIndex = null, int? count = null)
         {
@@ -3227,12 +3227,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query Users 
+        /// Get a list of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>ApiResponse of ScimListResponse</returns>
         public ApiResponse< ScimListResponse > GetScimV2UsersWithHttpInfo (string filter, int? startIndex = null, int? count = null)
         { 
@@ -3318,12 +3318,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Query Users 
+        /// Get a list of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>Task of ScimListResponse</returns>
         public async System.Threading.Tasks.Task<ScimListResponse> GetScimV2UsersAsync (string filter, int? startIndex = null, int? count = null)
         {
@@ -3333,12 +3333,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query Users 
+        /// Get a list of users 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">filter parameter e.g. userName eq search@sample.org</param>
-        /// <param name="startIndex">Starting item of request. 1-based (optional, default to 1)</param>
-        /// <param name="count">The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional, default to 25)</param>
+        /// <param name="filter">Filters results.</param>
+        /// <param name="startIndex">The 1-based index of the first query result. (optional, default to 1)</param>
+        /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ScimListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimListResponse>> GetScimV2UsersAsyncWithHttpInfo (string filter, int? startIndex = null, int? count = null)
         { 
@@ -3426,12 +3426,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update Group with specified ID 
+        /// Modify a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2Group</returns>
         public ScimV2Group PatchScimGroup (string groupId, PatchRequest body, string ifMatch = null)
         {
@@ -3440,12 +3440,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update Group with specified ID 
+        /// Modify a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         public ApiResponse< ScimV2Group > PatchScimGroupWithHttpInfo (string groupId, PatchRequest body, string ifMatch = null)
         { 
@@ -3538,12 +3538,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update Group with specified ID 
+        /// Modify a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         public async System.Threading.Tasks.Task<ScimV2Group> PatchScimGroupAsync (string groupId, PatchRequest body, string ifMatch = null)
         {
@@ -3553,12 +3553,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update Group with specified ID 
+        /// Modify a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PatchScimGroupAsyncWithHttpInfo (string groupId, PatchRequest body, string ifMatch = null)
         { 
@@ -3654,12 +3654,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Patch user with specified ID 
+        /// Modify a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2User</returns>
         public ScimV2User PatchScimUser (string userId, ScimV2PatchRequest body, string ifMatch = null)
         {
@@ -3668,12 +3668,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch user with specified ID 
+        /// Modify a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         public ApiResponse< ScimV2User > PatchScimUserWithHttpInfo (string userId, ScimV2PatchRequest body, string ifMatch = null)
         { 
@@ -3766,12 +3766,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Patch user with specified ID 
+        /// Modify a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         public async System.Threading.Tasks.Task<ScimV2User> PatchScimUserAsync (string userId, ScimV2PatchRequest body, string ifMatch = null)
         {
@@ -3781,12 +3781,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch user with specified ID 
+        /// Modify a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2User>> PatchScimUserAsyncWithHttpInfo (string userId, ScimV2PatchRequest body, string ifMatch = null)
         { 
@@ -3882,12 +3882,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update Group with specified ID 
+        /// Modify a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2Group</returns>
         public ScimV2Group PatchScimV2Group (string groupId, PatchRequest body, string ifMatch = null)
         {
@@ -3896,12 +3896,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update Group with specified ID 
+        /// Modify a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         public ApiResponse< ScimV2Group > PatchScimV2GroupWithHttpInfo (string groupId, PatchRequest body, string ifMatch = null)
         { 
@@ -3994,12 +3994,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update Group with specified ID 
+        /// Modify a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         public async System.Threading.Tasks.Task<ScimV2Group> PatchScimV2GroupAsync (string groupId, PatchRequest body, string ifMatch = null)
         {
@@ -4009,12 +4009,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update Group with specified ID 
+        /// Modify a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PatchScimV2GroupAsyncWithHttpInfo (string groupId, PatchRequest body, string ifMatch = null)
         { 
@@ -4110,12 +4110,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update user with specified ID 
+        /// Modify a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2User</returns>
         public ScimV2User PatchScimV2User (string userId, ScimV2PatchRequest body, string ifMatch = null)
         {
@@ -4124,12 +4124,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update user with specified ID 
+        /// Modify a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         public ApiResponse< ScimV2User > PatchScimV2UserWithHttpInfo (string userId, ScimV2PatchRequest body, string ifMatch = null)
         { 
@@ -4222,12 +4222,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update user with specified ID 
+        /// Modify a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         public async System.Threading.Tasks.Task<ScimV2User> PatchScimV2UserAsync (string userId, ScimV2PatchRequest body, string ifMatch = null)
         {
@@ -4237,12 +4237,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update user with specified ID 
+        /// Modify a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">SCIM Patch Request</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2User>> PatchScimV2UserAsyncWithHttpInfo (string userId, ScimV2PatchRequest body, string ifMatch = null)
         { 
@@ -4338,7 +4338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create user 
+        /// Create a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SCIM Create User</param>
@@ -4350,7 +4350,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create user 
+        /// Create a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SCIM Create User</param>
@@ -4441,7 +4441,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Create user 
+        /// Create a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SCIM Create User</param>
@@ -4454,7 +4454,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create user 
+        /// Create a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SCIM Create User</param>
@@ -4547,7 +4547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create user 
+        /// Create a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SCIM Create User</param>
@@ -4559,7 +4559,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create user 
+        /// Create a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SCIM Create User</param>
@@ -4650,7 +4650,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Create user 
+        /// Create a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SCIM Create User</param>
@@ -4663,7 +4663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create user 
+        /// Create a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SCIM Create User</param>
@@ -4756,12 +4756,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update Group with specified ID 
+        /// Replace a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2Group</returns>
         public ScimV2Group PutScimGroup (string groupId, ScimV2Group body, string ifMatch = null)
         {
@@ -4770,12 +4770,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update Group with specified ID 
+        /// Replace a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         public ApiResponse< ScimV2Group > PutScimGroupWithHttpInfo (string groupId, ScimV2Group body, string ifMatch = null)
         { 
@@ -4868,12 +4868,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update Group with specified ID 
+        /// Replace a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         public async System.Threading.Tasks.Task<ScimV2Group> PutScimGroupAsync (string groupId, ScimV2Group body, string ifMatch = null)
         {
@@ -4883,12 +4883,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update Group with specified ID 
+        /// Replace a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PutScimGroupAsyncWithHttpInfo (string groupId, ScimV2Group body, string ifMatch = null)
         { 
@@ -4984,12 +4984,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update user with specified ID 
+        /// Replace a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2User</returns>
         public ScimV2User PutScimUser (string userId, ScimV2User body, string ifMatch = null)
         {
@@ -4998,12 +4998,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update user with specified ID 
+        /// Replace a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         public ApiResponse< ScimV2User > PutScimUserWithHttpInfo (string userId, ScimV2User body, string ifMatch = null)
         { 
@@ -5096,12 +5096,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update user with specified ID 
+        /// Replace a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         public async System.Threading.Tasks.Task<ScimV2User> PutScimUserAsync (string userId, ScimV2User body, string ifMatch = null)
         {
@@ -5111,12 +5111,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update user with specified ID 
+        /// Replace a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2User>> PutScimUserAsyncWithHttpInfo (string userId, ScimV2User body, string ifMatch = null)
         { 
@@ -5212,12 +5212,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update Group with specified ID 
+        /// Replace a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2Group</returns>
         public ScimV2Group PutScimV2Group (string groupId, ScimV2Group body, string ifMatch = null)
         {
@@ -5226,12 +5226,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update Group with specified ID 
+        /// Replace a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         public ApiResponse< ScimV2Group > PutScimV2GroupWithHttpInfo (string groupId, ScimV2Group body, string ifMatch = null)
         { 
@@ -5324,12 +5324,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update Group with specified ID 
+        /// Replace a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         public async System.Threading.Tasks.Task<ScimV2Group> PutScimV2GroupAsync (string groupId, ScimV2Group body, string ifMatch = null)
         {
@@ -5339,12 +5339,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update Group with specified ID 
+        /// Replace a group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupId"></param>
+        /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">Group</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PutScimV2GroupAsyncWithHttpInfo (string groupId, ScimV2Group body, string ifMatch = null)
         { 
@@ -5440,12 +5440,12 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update user with specified ID 
+        /// Replace a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ScimV2User</returns>
         public ScimV2User PutScimV2User (string userId, ScimV2User body, string ifMatch = null)
         {
@@ -5454,12 +5454,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update user with specified ID 
+        /// Replace a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>ApiResponse of ScimV2User</returns>
         public ApiResponse< ScimV2User > PutScimV2UserWithHttpInfo (string userId, ScimV2User body, string ifMatch = null)
         { 
@@ -5552,12 +5552,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update user with specified ID 
+        /// Replace a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ScimV2User</returns>
         public async System.Threading.Tasks.Task<ScimV2User> PutScimV2UserAsync (string userId, ScimV2User body, string ifMatch = null)
         {
@@ -5567,12 +5567,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update user with specified ID 
+        /// Replace a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id</param>
+        /// <param name="userId">The ID of a user. Returned with GET /api/v2/scim/v2/users.</param>
         /// <param name="body">User</param>
-        /// <param name="ifMatch">If-Match for ETag version checking (optional)</param>
+        /// <param name="ifMatch">The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2User)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScimV2User>> PutScimV2UserAsyncWithHttpInfo (string userId, ScimV2User body, string ifMatch = null)
         { 

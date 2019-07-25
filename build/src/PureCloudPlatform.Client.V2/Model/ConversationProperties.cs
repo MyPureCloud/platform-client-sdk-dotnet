@@ -65,6 +65,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationProperties" /> class.
@@ -72,17 +77,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsWaiting">Indicates filtering for waiting.</param>
         /// <param name="IsActive">Indicates filtering for active.</param>
         /// <param name="IsAcd">Indicates filtering for Acd.</param>
+        /// <param name="IsPreferred">Indicates filtering for Preferred Agent Routing.</param>
         /// <param name="IsScreenshare">Indicates filtering for screenshare.</param>
         /// <param name="IsCobrowse">Indicates filtering for Cobrowse.</param>
         /// <param name="IsVoicemail">Indicates filtering for Voice mail.</param>
         /// <param name="IsFlagged">Indicates filtering for flagged.</param>
         /// <param name="FilterWrapUpNotes">Indicates filtering for WrapUpNotes.</param>
         /// <param name="MatchAll">Indicates comparison operation, TRUE indicates filters will use AND logic, FALSE indicates OR logic.</param>
-        public ConversationProperties(bool? IsWaiting = null, bool? IsActive = null, bool? IsAcd = null, bool? IsScreenshare = null, bool? IsCobrowse = null, bool? IsVoicemail = null, bool? IsFlagged = null, bool? FilterWrapUpNotes = null, bool? MatchAll = null)
+        public ConversationProperties(bool? IsWaiting = null, bool? IsActive = null, bool? IsAcd = null, bool? IsPreferred = null, bool? IsScreenshare = null, bool? IsCobrowse = null, bool? IsVoicemail = null, bool? IsFlagged = null, bool? FilterWrapUpNotes = null, bool? MatchAll = null)
         {
             this.IsWaiting = IsWaiting;
             this.IsActive = IsActive;
             this.IsAcd = IsAcd;
+            this.IsPreferred = IsPreferred;
             this.IsScreenshare = IsScreenshare;
             this.IsCobrowse = IsCobrowse;
             this.IsVoicemail = IsVoicemail;
@@ -118,6 +125,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Indicates filtering for Acd</value>
         [DataMember(Name="isAcd", EmitDefaultValue=false)]
         public bool? IsAcd { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for Preferred Agent Routing
+        /// </summary>
+        /// <value>Indicates filtering for Preferred Agent Routing</value>
+        [DataMember(Name="isPreferred", EmitDefaultValue=false)]
+        public bool? IsPreferred { get; set; }
         
         
         
@@ -186,6 +202,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsWaiting: ").Append(IsWaiting).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  IsAcd: ").Append(IsAcd).Append("\n");
+            sb.Append("  IsPreferred: ").Append(IsPreferred).Append("\n");
             sb.Append("  IsScreenshare: ").Append(IsScreenshare).Append("\n");
             sb.Append("  IsCobrowse: ").Append(IsCobrowse).Append("\n");
             sb.Append("  IsVoicemail: ").Append(IsVoicemail).Append("\n");
@@ -244,6 +261,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsAcd.Equals(other.IsAcd)
                 ) &&
                 (
+                    this.IsPreferred == other.IsPreferred ||
+                    this.IsPreferred != null &&
+                    this.IsPreferred.Equals(other.IsPreferred)
+                ) &&
+                (
                     this.IsScreenshare == other.IsScreenshare ||
                     this.IsScreenshare != null &&
                     this.IsScreenshare.Equals(other.IsScreenshare)
@@ -295,6 +317,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.IsAcd != null)
                     hash = hash * 59 + this.IsAcd.GetHashCode();
+                
+                if (this.IsPreferred != null)
+                    hash = hash * 59 + this.IsPreferred.GetHashCode();
                 
                 if (this.IsScreenshare != null)
                     hash = hash * 59 + this.IsScreenshare.GetHashCode();

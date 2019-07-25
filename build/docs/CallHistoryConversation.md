@@ -18,6 +18,7 @@ title: CallHistoryConversation
 | **WasCallback** | **bool?** | Was this conversation a callback | [optional] |
 | **HadScreenShare** | **bool?** | Did this conversation have a screen share session | [optional] |
 | **HadCobrowse** | **bool?** | Did this conversation have a cobrowse session | [optional] |
+| **WasOutboundCampaign** | **bool?** | Was this conversation associated with an outbound campaign | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

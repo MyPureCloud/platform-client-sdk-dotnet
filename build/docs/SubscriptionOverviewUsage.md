@@ -16,6 +16,7 @@ title: SubscriptionOverviewUsage
 | **PrepayQuantity** | **string** | Items prepaid for specified period | |
 | **PrepayPrice** | **string** | Price for prepay charge | [optional] |
 | **UsageNotes** | **string** | Notes about the usage/charge item | [optional] |
+| **IsCancellable** | **bool?** | Indicates whether the item is cancellable | [optional] |
 {: class="table table-striped"}
 
 

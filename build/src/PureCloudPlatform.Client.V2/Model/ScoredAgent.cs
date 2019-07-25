@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Agent">The agent.</param>
         /// <param name="Score">Agent&#39;s score for the current conversation, from 0 - 100, higher being better.</param>
-        public ScoredAgent(Agent Agent = null, int? Score = null)
+        public ScoredAgent(AddressableEntityRef Agent = null, int? Score = null)
         {
             this.Agent = Agent;
             this.Score = Score;
@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The agent</value>
         [DataMember(Name="agent", EmitDefaultValue=false)]
-        public Agent Agent { get; set; }
+        public AddressableEntityRef Agent { get; set; }
         
         
         

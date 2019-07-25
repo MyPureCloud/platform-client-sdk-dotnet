@@ -13,6 +13,7 @@ title: QueueConversationEventTopicChat
 | **ScriptId** | **string** |  | [optional] |
 | **PeerId** | **string** |  | [optional] |
 | **RoomId** | **string** |  | [optional] |
+| **AvatarImageUrl** | **string** |  | [optional] |
 | **Held** | **bool?** |  | [optional] |
 | **DisconnectType** | **string** |  | [optional] |
 | **StartHoldTime** | **DateTime?** |  | [optional] |

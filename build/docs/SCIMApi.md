@@ -7,27 +7,27 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteScimUser**](SCIMApi.html#deletescimuser) | **DELETE** /api/v2/scim/users/{userId} | Soft delete user with specified ID |
-| [**DeleteScimV2User**](SCIMApi.html#deletescimv2user) | **DELETE** /api/v2/scim/v2/users/{userId} | Soft delete user with specified ID |
-| [**GetScimGroup**](SCIMApi.html#getscimgroup) | **GET** /api/v2/scim/groups/{groupId} | Return Group with specified ID |
-| [**GetScimGroups**](SCIMApi.html#getscimgroups) | **GET** /api/v2/scim/groups | Query Groups |
-| [**GetScimUser**](SCIMApi.html#getscimuser) | **GET** /api/v2/scim/users/{userId} | Return user with specified ID (default version) |
-| [**GetScimUsers**](SCIMApi.html#getscimusers) | **GET** /api/v2/scim/users | Query Users |
-| [**GetScimV2Group**](SCIMApi.html#getscimv2group) | **GET** /api/v2/scim/v2/groups/{groupId} | Return Group with specified ID |
-| [**GetScimV2Groups**](SCIMApi.html#getscimv2groups) | **GET** /api/v2/scim/v2/groups | Query Groups |
-| [**GetScimV2Serviceproviderconfig**](SCIMApi.html#getscimv2serviceproviderconfig) | **GET** /api/v2/scim/v2/serviceproviderconfig | Get SCIM Configuration |
-| [**GetScimV2User**](SCIMApi.html#getscimv2user) | **GET** /api/v2/scim/v2/users/{userId} | Return User with specified ID |
-| [**GetScimV2Users**](SCIMApi.html#getscimv2users) | **GET** /api/v2/scim/v2/users | Query Users |
-| [**PatchScimGroup**](SCIMApi.html#patchscimgroup) | **PATCH** /api/v2/scim/groups/{groupId} | Update Group with specified ID |
-| [**PatchScimUser**](SCIMApi.html#patchscimuser) | **PATCH** /api/v2/scim/users/{userId} | Patch user with specified ID |
-| [**PatchScimV2Group**](SCIMApi.html#patchscimv2group) | **PATCH** /api/v2/scim/v2/groups/{groupId} | Update Group with specified ID |
-| [**PatchScimV2User**](SCIMApi.html#patchscimv2user) | **PATCH** /api/v2/scim/v2/users/{userId} | Update user with specified ID |
-| [**PostScimUsers**](SCIMApi.html#postscimusers) | **POST** /api/v2/scim/users | Create user |
-| [**PostScimV2Users**](SCIMApi.html#postscimv2users) | **POST** /api/v2/scim/v2/users | Create user |
-| [**PutScimGroup**](SCIMApi.html#putscimgroup) | **PUT** /api/v2/scim/groups/{groupId} | Update Group with specified ID |
-| [**PutScimUser**](SCIMApi.html#putscimuser) | **PUT** /api/v2/scim/users/{userId} | Update user with specified ID |
-| [**PutScimV2Group**](SCIMApi.html#putscimv2group) | **PUT** /api/v2/scim/v2/groups/{groupId} | Update Group with specified ID |
-| [**PutScimV2User**](SCIMApi.html#putscimv2user) | **PUT** /api/v2/scim/v2/users/{userId} | Update user with specified ID |
+| [**DeleteScimUser**](SCIMApi.html#deletescimuser) | **DELETE** /api/v2/scim/users/{userId} | Delete a user |
+| [**DeleteScimV2User**](SCIMApi.html#deletescimv2user) | **DELETE** /api/v2/scim/v2/users/{userId} | Delete a user |
+| [**GetScimGroup**](SCIMApi.html#getscimgroup) | **GET** /api/v2/scim/groups/{groupId} | Get a group |
+| [**GetScimGroups**](SCIMApi.html#getscimgroups) | **GET** /api/v2/scim/groups | Get a list of groups |
+| [**GetScimUser**](SCIMApi.html#getscimuser) | **GET** /api/v2/scim/users/{userId} | Get a user |
+| [**GetScimUsers**](SCIMApi.html#getscimusers) | **GET** /api/v2/scim/users | Get a list of users |
+| [**GetScimV2Group**](SCIMApi.html#getscimv2group) | **GET** /api/v2/scim/v2/groups/{groupId} | Get a group |
+| [**GetScimV2Groups**](SCIMApi.html#getscimv2groups) | **GET** /api/v2/scim/v2/groups | Get a list of groups |
+| [**GetScimV2Serviceproviderconfig**](SCIMApi.html#getscimv2serviceproviderconfig) | **GET** /api/v2/scim/v2/serviceproviderconfig | Get the SCIM configuration |
+| [**GetScimV2User**](SCIMApi.html#getscimv2user) | **GET** /api/v2/scim/v2/users/{userId} | Get a user |
+| [**GetScimV2Users**](SCIMApi.html#getscimv2users) | **GET** /api/v2/scim/v2/users | Get a list of users |
+| [**PatchScimGroup**](SCIMApi.html#patchscimgroup) | **PATCH** /api/v2/scim/groups/{groupId} | Modify a group |
+| [**PatchScimUser**](SCIMApi.html#patchscimuser) | **PATCH** /api/v2/scim/users/{userId} | Modify a user |
+| [**PatchScimV2Group**](SCIMApi.html#patchscimv2group) | **PATCH** /api/v2/scim/v2/groups/{groupId} | Modify a group |
+| [**PatchScimV2User**](SCIMApi.html#patchscimv2user) | **PATCH** /api/v2/scim/v2/users/{userId} | Modify a user |
+| [**PostScimUsers**](SCIMApi.html#postscimusers) | **POST** /api/v2/scim/users | Create a user |
+| [**PostScimV2Users**](SCIMApi.html#postscimv2users) | **POST** /api/v2/scim/v2/users | Create a user |
+| [**PutScimGroup**](SCIMApi.html#putscimgroup) | **PUT** /api/v2/scim/groups/{groupId} | Replace a group |
+| [**PutScimUser**](SCIMApi.html#putscimuser) | **PUT** /api/v2/scim/users/{userId} | Replace a user |
+| [**PutScimV2Group**](SCIMApi.html#putscimv2group) | **PUT** /api/v2/scim/v2/groups/{groupId} | Replace a group |
+| [**PutScimV2User**](SCIMApi.html#putscimv2user) | **PUT** /api/v2/scim/v2/users/{userId} | Replace a user |
 {: class="table table-striped"}
 
 <a name="deletescimuser"></a>
@@ -36,7 +36,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 
-Soft delete user with specified ID
+Delete a user
 
 
 
@@ -62,12 +62,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var userId = userId_example;  // string | 
-            var ifMatch = ifMatch_example;  // string | If-Match for ETag version checking (optional) 
+            var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/users.
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional) 
 
             try
             { 
-                // Soft delete user with specified ID
+                // Delete a user
                 Empty result = apiInstance.DeleteScimUser(userId, ifMatch);
                 Debug.WriteLine(result);
             }
@@ -85,8 +85,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**|  |  |
-| **ifMatch** | **string**| If-Match for ETag version checking | [optional]  |
+| **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/users. |  |
+| **ifMatch** | **string**| The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -99,7 +99,7 @@ namespace Example
 
 
 
-Soft delete user with specified ID
+Delete a user
 
 
 
@@ -125,12 +125,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var userId = userId_example;  // string | 
-            var ifMatch = ifMatch_example;  // string | If-Match for ETag version checking (optional) 
+            var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/v2/users.
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional) 
 
             try
             { 
-                // Soft delete user with specified ID
+                // Delete a user
                 Empty result = apiInstance.DeleteScimV2User(userId, ifMatch);
                 Debug.WriteLine(result);
             }
@@ -148,8 +148,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**|  |  |
-| **ifMatch** | **string**| If-Match for ETag version checking | [optional]  |
+| **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/v2/users. |  |
+| **ifMatch** | **string**| The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -162,7 +162,7 @@ namespace Example
 
 
 
-Return Group with specified ID
+Get a group
 
 
 
@@ -188,12 +188,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var groupId = groupId_example;  // string | 
-            var ifNoneMatch = ifNoneMatch_example;  // string | If-None-Match for ETag version checking (optional) 
+            var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/groups.
+            var ifNoneMatch = ifNoneMatch_example;  // string | The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional) 
 
             try
             { 
-                // Return Group with specified ID
+                // Get a group
                 ScimV2Group result = apiInstance.GetScimGroup(groupId, ifNoneMatch);
                 Debug.WriteLine(result);
             }
@@ -211,8 +211,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **groupId** | **string**|  |  |
-| **ifNoneMatch** | **string**| If-None-Match for ETag version checking | [optional]  |
+| **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/groups. |  |
+| **ifNoneMatch** | **string**| The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -225,7 +225,7 @@ namespace Example
 
 
 
-Query Groups
+Get a list of groups
 
 
 
@@ -251,13 +251,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var startIndex = 56;  // int? | Starting item of request. 1-based (optional)  (default to 1)
-            var count = 56;  // int? | The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional)  (default to 25)
-            var filter = displayName eq groupName;  // string | filter parameter e.g. displayName eq groupName (optional) 
+            var startIndex = 56;  // int? | The 1-based index of the first query result. (optional)  (default to 1)
+            var count = 56;  // int? | The requested number of items per page. A value of 0 returns totalResults. (optional)  (default to 25)
+            var filter = displayName eq groupName;  // string | Filters results. (optional) 
 
             try
             { 
-                // Query Groups
+                // Get a list of groups
                 ScimListResponse result = apiInstance.GetScimGroups(startIndex, count, filter);
                 Debug.WriteLine(result);
             }
@@ -275,9 +275,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startIndex** | **int?**| Starting item of request. 1-based | [optional] [default to 1] |
-| **count** | **int?**| The requested number of items per page. A value of 0 will return no results other than the totalResults count. | [optional] [default to 25] |
-| **filter** | **string**| filter parameter e.g. displayName eq groupName | [optional]  |
+| **startIndex** | **int?**| The 1-based index of the first query result. | [optional] [default to 1] |
+| **count** | **int?**| The requested number of items per page. A value of 0 returns totalResults. | [optional] [default to 25] |
+| **filter** | **string**| Filters results. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -290,7 +290,7 @@ namespace Example
 
 
 
-Return user with specified ID (default version)
+Get a user
 
 
 
@@ -317,12 +317,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var userId = userId_example;  // string | 
-            var ifNoneMatch = ifNoneMatch_example;  // string | If-None-Match for ETag version checking (optional) 
+            var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/users.
+            var ifNoneMatch = ifNoneMatch_example;  // string | The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional) 
 
             try
             { 
-                // Return user with specified ID (default version)
+                // Get a user
                 ScimV2User result = apiInstance.GetScimUser(userId, ifNoneMatch);
                 Debug.WriteLine(result);
             }
@@ -340,8 +340,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**|  |  |
-| **ifNoneMatch** | **string**| If-None-Match for ETag version checking | [optional]  |
+| **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/users. |  |
+| **ifNoneMatch** | **string**| The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -354,7 +354,7 @@ namespace Example
 
 
 
-Query Users
+Get a list of users
 
 
 
@@ -381,13 +381,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var filter = filter_example;  // string | filter parameter e.g. userName eq search@sample.org
-            var startIndex = 56;  // int? | Starting item of request. 1-based (optional)  (default to 1)
-            var count = 56;  // int? | The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional)  (default to 25)
+            var filter = filter_example;  // string | Filters results.
+            var startIndex = 56;  // int? | The 1-based index of the first query result. (optional)  (default to 1)
+            var count = 56;  // int? | The requested number of items per page. A value of 0 returns totalResults. (optional)  (default to 25)
 
             try
             { 
-                // Query Users
+                // Get a list of users
                 ScimListResponse result = apiInstance.GetScimUsers(filter, startIndex, count);
                 Debug.WriteLine(result);
             }
@@ -405,9 +405,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **filter** | **string**| filter parameter e.g. userName eq search@sample.org |  |
-| **startIndex** | **int?**| Starting item of request. 1-based | [optional] [default to 1] |
-| **count** | **int?**| The requested number of items per page. A value of 0 will return no results other than the totalResults count. | [optional] [default to 25] |
+| **filter** | **string**| Filters results. |  |
+| **startIndex** | **int?**| The 1-based index of the first query result. | [optional] [default to 1] |
+| **count** | **int?**| The requested number of items per page. A value of 0 returns totalResults. | [optional] [default to 25] |
 {: class="table table-striped"}
 
 ### Return type
@@ -420,7 +420,7 @@ namespace Example
 
 
 
-Return Group with specified ID
+Get a group
 
 
 
@@ -446,12 +446,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var groupId = groupId_example;  // string | 
-            var ifNoneMatch = ifNoneMatch_example;  // string | If-None-Match for ETag version checking (optional) 
+            var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/v2/groups.
+            var ifNoneMatch = ifNoneMatch_example;  // string | The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional) 
 
             try
             { 
-                // Return Group with specified ID
+                // Get a group
                 ScimV2Group result = apiInstance.GetScimV2Group(groupId, ifNoneMatch);
                 Debug.WriteLine(result);
             }
@@ -469,8 +469,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **groupId** | **string**|  |  |
-| **ifNoneMatch** | **string**| If-None-Match for ETag version checking | [optional]  |
+| **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. |  |
+| **ifNoneMatch** | **string**| The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -483,7 +483,7 @@ namespace Example
 
 
 
-Query Groups
+Get a list of groups
 
 
 
@@ -509,13 +509,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var filter = displayName eq groupName;  // string | filter parameter e.g. displayName eq groupName
-            var startIndex = 56;  // int? | Starting item of request. 1-based (optional)  (default to 1)
-            var count = 56;  // int? | The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional)  (default to 25)
+            var filter = displayName eq groupName;  // string | Filters results.
+            var startIndex = 56;  // int? | The 1-based index of the first query result. (optional)  (default to 1)
+            var count = 56;  // int? | The requested number of items per page. A value of 0 returns totalResults. (optional)  (default to 25)
 
             try
             { 
-                // Query Groups
+                // Get a list of groups
                 ScimListResponse result = apiInstance.GetScimV2Groups(filter, startIndex, count);
                 Debug.WriteLine(result);
             }
@@ -533,9 +533,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **filter** | **string**| filter parameter e.g. displayName eq groupName |  |
-| **startIndex** | **int?**| Starting item of request. 1-based | [optional] [default to 1] |
-| **count** | **int?**| The requested number of items per page. A value of 0 will return no results other than the totalResults count. | [optional] [default to 25] |
+| **filter** | **string**| Filters results. |  |
+| **startIndex** | **int?**| The 1-based index of the first query result. | [optional] [default to 1] |
+| **count** | **int?**| The requested number of items per page. A value of 0 returns totalResults. | [optional] [default to 25] |
 {: class="table table-striped"}
 
 ### Return type
@@ -548,7 +548,7 @@ namespace Example
 
 
 
-Get SCIM Configuration
+Get the SCIM configuration
 
 
 
@@ -571,11 +571,11 @@ namespace Example
         { 
 
             var apiInstance = new SCIMApi();
-            var ifNoneMatch = ifNoneMatch_example;  // string | If-None-Match for ETag version checking (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional) 
 
             try
             { 
-                // Get SCIM Configuration
+                // Get the SCIM configuration
                 ScimServiceProviderConfig result = apiInstance.GetScimV2Serviceproviderconfig(ifNoneMatch);
                 Debug.WriteLine(result);
             }
@@ -593,7 +593,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ifNoneMatch** | **string**| If-None-Match for ETag version checking | [optional]  |
+| **ifNoneMatch** | **string**| The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -606,7 +606,7 @@ namespace Example
 
 
 
-Return User with specified ID
+Get a user
 
 
 
@@ -633,12 +633,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var userId = userId_example;  // string | 
-            var ifNoneMatch = ifNoneMatch_example;  // string | If-None-Match for ETag version checking (optional) 
+            var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/v2/users.
+            var ifNoneMatch = ifNoneMatch_example;  // string | The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. (optional) 
 
             try
             { 
-                // Return User with specified ID
+                // Get a user
                 ScimV2User result = apiInstance.GetScimV2User(userId, ifNoneMatch);
                 Debug.WriteLine(result);
             }
@@ -656,8 +656,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**|  |  |
-| **ifNoneMatch** | **string**| If-None-Match for ETag version checking | [optional]  |
+| **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/v2/users. |  |
+| **ifNoneMatch** | **string**| The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -670,7 +670,7 @@ namespace Example
 
 
 
-Query Users
+Get a list of users
 
 
 
@@ -697,13 +697,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var filter = filter_example;  // string | filter parameter e.g. userName eq search@sample.org
-            var startIndex = 56;  // int? | Starting item of request. 1-based (optional)  (default to 1)
-            var count = 56;  // int? | The requested number of items per page. A value of 0 will return no results other than the totalResults count. (optional)  (default to 25)
+            var filter = filter_example;  // string | Filters results.
+            var startIndex = 56;  // int? | The 1-based index of the first query result. (optional)  (default to 1)
+            var count = 56;  // int? | The requested number of items per page. A value of 0 returns totalResults. (optional)  (default to 25)
 
             try
             { 
-                // Query Users
+                // Get a list of users
                 ScimListResponse result = apiInstance.GetScimV2Users(filter, startIndex, count);
                 Debug.WriteLine(result);
             }
@@ -721,9 +721,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **filter** | **string**| filter parameter e.g. userName eq search@sample.org |  |
-| **startIndex** | **int?**| Starting item of request. 1-based | [optional] [default to 1] |
-| **count** | **int?**| The requested number of items per page. A value of 0 will return no results other than the totalResults count. | [optional] [default to 25] |
+| **filter** | **string**| Filters results. |  |
+| **startIndex** | **int?**| The 1-based index of the first query result. | [optional] [default to 1] |
+| **count** | **int?**| The requested number of items per page. A value of 0 returns totalResults. | [optional] [default to 25] |
 {: class="table table-striped"}
 
 ### Return type
@@ -736,7 +736,7 @@ namespace Example
 
 
 
-Update Group with specified ID
+Modify a group
 
 
 
@@ -762,13 +762,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var groupId = groupId_example;  // string | 
+            var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/groups.
             var body = new PatchRequest(); // PatchRequest | Group
-            var ifMatch = ifMatch_example;  // string | If-Match for ETag version checking (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional) 
 
             try
             { 
-                // Update Group with specified ID
+                // Modify a group
                 ScimV2Group result = apiInstance.PatchScimGroup(groupId, body, ifMatch);
                 Debug.WriteLine(result);
             }
@@ -786,9 +786,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **groupId** | **string**|  |  |
+| **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/groups. |  |
 | **body** | [**PatchRequest**](PatchRequest.html)| Group |  |
-| **ifMatch** | **string**| If-Match for ETag version checking | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -801,7 +801,7 @@ namespace Example
 
 
 
-Patch user with specified ID
+Modify a user
 
 
 
@@ -828,13 +828,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var userId = userId_example;  // string | 
+            var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/users.
             var body = new ScimV2PatchRequest(); // ScimV2PatchRequest | SCIM Patch Request
-            var ifMatch = ifMatch_example;  // string | If-Match for ETag version checking (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional) 
 
             try
             { 
-                // Patch user with specified ID
+                // Modify a user
                 ScimV2User result = apiInstance.PatchScimUser(userId, body, ifMatch);
                 Debug.WriteLine(result);
             }
@@ -852,9 +852,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**|  |  |
+| **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/users. |  |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| SCIM Patch Request |  |
-| **ifMatch** | **string**| If-Match for ETag version checking | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -867,7 +867,7 @@ namespace Example
 
 
 
-Update Group with specified ID
+Modify a group
 
 
 
@@ -893,13 +893,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var groupId = groupId_example;  // string | 
+            var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/v2/groups.
             var body = new PatchRequest(); // PatchRequest | Group
-            var ifMatch = ifMatch_example;  // string | If-Match for ETag version checking (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional) 
 
             try
             { 
-                // Update Group with specified ID
+                // Modify a group
                 ScimV2Group result = apiInstance.PatchScimV2Group(groupId, body, ifMatch);
                 Debug.WriteLine(result);
             }
@@ -917,9 +917,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **groupId** | **string**|  |  |
+| **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. |  |
 | **body** | [**PatchRequest**](PatchRequest.html)| Group |  |
-| **ifMatch** | **string**| If-Match for ETag version checking | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -932,7 +932,7 @@ namespace Example
 
 
 
-Update user with specified ID
+Modify a user
 
 
 
@@ -959,13 +959,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var userId = userId_example;  // string | User Id
+            var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/v2/users.
             var body = new ScimV2PatchRequest(); // ScimV2PatchRequest | SCIM Patch Request
-            var ifMatch = ifMatch_example;  // string | If-Match for ETag version checking (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional) 
 
             try
             { 
-                // Update user with specified ID
+                // Modify a user
                 ScimV2User result = apiInstance.PatchScimV2User(userId, body, ifMatch);
                 Debug.WriteLine(result);
             }
@@ -983,9 +983,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| User Id |  |
+| **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/v2/users. |  |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| SCIM Patch Request |  |
-| **ifMatch** | **string**| If-Match for ETag version checking | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -998,7 +998,7 @@ namespace Example
 
 
 
-Create user
+Create a user
 
 
 
@@ -1028,7 +1028,7 @@ namespace Example
 
             try
             { 
-                // Create user
+                // Create a user
                 ScimV2User result = apiInstance.PostScimUsers(body);
                 Debug.WriteLine(result);
             }
@@ -1059,7 +1059,7 @@ namespace Example
 
 
 
-Create user
+Create a user
 
 
 
@@ -1089,7 +1089,7 @@ namespace Example
 
             try
             { 
-                // Create user
+                // Create a user
                 ScimV2User result = apiInstance.PostScimV2Users(body);
                 Debug.WriteLine(result);
             }
@@ -1120,7 +1120,7 @@ namespace Example
 
 
 
-Update Group with specified ID
+Replace a group
 
 
 
@@ -1146,13 +1146,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var groupId = groupId_example;  // string | 
+            var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/groups.
             var body = new ScimV2Group(); // ScimV2Group | Group
-            var ifMatch = ifMatch_example;  // string | If-Match for ETag version checking (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional) 
 
             try
             { 
-                // Update Group with specified ID
+                // Replace a group
                 ScimV2Group result = apiInstance.PutScimGroup(groupId, body, ifMatch);
                 Debug.WriteLine(result);
             }
@@ -1170,9 +1170,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **groupId** | **string**|  |  |
+| **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/groups. |  |
 | **body** | [**ScimV2Group**](ScimV2Group.html)| Group |  |
-| **ifMatch** | **string**| If-Match for ETag version checking | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1185,7 +1185,7 @@ namespace Example
 
 
 
-Update user with specified ID
+Replace a user
 
 
 
@@ -1212,13 +1212,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var userId = userId_example;  // string | 
+            var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/users.
             var body = new ScimV2User(); // ScimV2User | User
-            var ifMatch = ifMatch_example;  // string | If-Match for ETag version checking (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional) 
 
             try
             { 
-                // Update user with specified ID
+                // Replace a user
                 ScimV2User result = apiInstance.PutScimUser(userId, body, ifMatch);
                 Debug.WriteLine(result);
             }
@@ -1236,9 +1236,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**|  |  |
+| **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/users. |  |
 | **body** | [**ScimV2User**](ScimV2User.html)| User |  |
-| **ifMatch** | **string**| If-Match for ETag version checking | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1251,7 +1251,7 @@ namespace Example
 
 
 
-Update Group with specified ID
+Replace a group
 
 
 
@@ -1277,13 +1277,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var groupId = groupId_example;  // string | 
+            var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/v2/groups.
             var body = new ScimV2Group(); // ScimV2Group | Group
-            var ifMatch = ifMatch_example;  // string | If-Match for ETag version checking (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional) 
 
             try
             { 
-                // Update Group with specified ID
+                // Replace a group
                 ScimV2Group result = apiInstance.PutScimV2Group(groupId, body, ifMatch);
                 Debug.WriteLine(result);
             }
@@ -1301,9 +1301,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **groupId** | **string**|  |  |
+| **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. |  |
 | **body** | [**ScimV2Group**](ScimV2Group.html)| Group |  |
-| **ifMatch** | **string**| If-Match for ETag version checking | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1316,7 +1316,7 @@ namespace Example
 
 
 
-Update user with specified ID
+Replace a user
 
 
 
@@ -1343,13 +1343,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new SCIMApi();
-            var userId = userId_example;  // string | User Id
+            var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/v2/users.
             var body = new ScimV2User(); // ScimV2User | User
-            var ifMatch = ifMatch_example;  // string | If-Match for ETag version checking (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. (optional) 
 
             try
             { 
-                // Update user with specified ID
+                // Replace a user
                 ScimV2User result = apiInstance.PutScimV2User(userId, body, ifMatch);
                 Debug.WriteLine(result);
             }
@@ -1367,9 +1367,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| User Id |  |
+| **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/v2/users. |  |
 | **body** | [**ScimV2User**](ScimV2User.html)| User |  |
-| **ifMatch** | **string**| If-Match for ETag version checking | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

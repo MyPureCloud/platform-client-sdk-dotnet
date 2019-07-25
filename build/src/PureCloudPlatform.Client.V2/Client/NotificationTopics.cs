@@ -90,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.users.{id}.workforcemanagement.schedules", typeof(WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification)},
               {"v2.users.{id}.workforcemanagement.timeoffrequests", typeof(WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate)},
               {"v2.workforcemanagement.agents", typeof(WfmMoveAgentsCompleteTopicWfmMoveAgentsComplete)},
+              {"v2.workforcemanagement.managementunits.{id}", typeof(WfmMoveManagementUnitTopicMoveManagementUnitNotification)},
               {"v2.workforcemanagement.managementunits.{id}.agents.sync", typeof(WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete)},
               {"v2.workforcemanagement.managementunits.{id}.schedules", typeof(WfmScheduleTopicWfmScheduleNotification)},
             };

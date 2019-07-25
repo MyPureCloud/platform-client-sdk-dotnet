@@ -13,16 +13,11 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Skill
+    /// WfmMoveManagementUnitTopicBusinessUnit
     /// </summary>
     [DataContract]
-    public partial class Skill :  IEquatable<Skill>
+    public partial class WfmMoveManagementUnitTopicBusinessUnit :  IEquatable<WfmMoveManagementUnitTopicBusinessUnit>
     {
-        
-        
-        
-        
-        
         
         
         
@@ -32,14 +27,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Skill" /> class.
+        /// Initializes a new instance of the <see cref="WfmMoveManagementUnitTopicBusinessUnit" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        /// <param name="SelfUri">SelfUri.</param>
-        public Skill(string Id = null, string SelfUri = null)
+        public WfmMoveManagementUnitTopicBusinessUnit(string Id = null)
         {
             this.Id = Id;
-            this.SelfUri = SelfUri;
             
         }
         
@@ -52,14 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Id { get; set; }
         
         
-        
-        /// <summary>
-        /// Gets or Sets SelfUri
-        /// </summary>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -67,10 +52,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Skill {\n");
+            sb.Append("class WfmMoveManagementUnitTopicBusinessUnit {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,15 +76,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Skill);
+            return this.Equals(obj as WfmMoveManagementUnitTopicBusinessUnit);
         }
 
         /// <summary>
-        /// Returns true if Skill instances are equal
+        /// Returns true if WfmMoveManagementUnitTopicBusinessUnit instances are equal
         /// </summary>
-        /// <param name="other">Instance of Skill to be compared</param>
+        /// <param name="other">Instance of WfmMoveManagementUnitTopicBusinessUnit to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Skill other)
+        public bool Equals(WfmMoveManagementUnitTopicBusinessUnit other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -111,11 +95,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -133,9 +112,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

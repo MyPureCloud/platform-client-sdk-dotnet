@@ -237,6 +237,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The participant's direction.  Values can be: 'inbound' or 'outbound'
         /// </summary>
@@ -281,6 +284,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public FlaggedReasonEnum? FlaggedReason { get; set; }
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CallHistoryParticipant" /> class.
@@ -303,7 +308,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DidInteract">Indicates whether the contact ever connected.</param>
         /// <param name="SipResponseCodes">Indicates SIP Response codes associated with the participant.</param>
         /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
-        public CallHistoryParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? EndTime = null, string Purpose = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, User User = null, Queue Queue = null, Group Group = null, DisconnectTypeEnum? DisconnectType = null, ExternalContact ExternalContact = null, ExternalOrganization ExternalOrganization = null, bool? DidInteract = null, List<long?> SipResponseCodes = null, FlaggedReasonEnum? FlaggedReason = null)
+        /// <param name="OutboundCampaign">The outbound campaign associated with the participant.</param>
+        public CallHistoryParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? EndTime = null, string Purpose = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, User User = null, Queue Queue = null, Group Group = null, DisconnectTypeEnum? DisconnectType = null, ExternalContact ExternalContact = null, ExternalOrganization ExternalOrganization = null, bool? DidInteract = null, List<long?> SipResponseCodes = null, FlaggedReasonEnum? FlaggedReason = null, Campaign OutboundCampaign = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -323,6 +329,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DidInteract = DidInteract;
             this.SipResponseCodes = SipResponseCodes;
             this.FlaggedReason = FlaggedReason;
+            this.OutboundCampaign = OutboundCampaign;
             
         }
         
@@ -468,6 +475,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// The outbound campaign associated with the participant
+        /// </summary>
+        /// <value>The outbound campaign associated with the participant</value>
+        [DataMember(Name="outboundCampaign", EmitDefaultValue=false)]
+        public Campaign OutboundCampaign { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -495,6 +511,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DidInteract: ").Append(DidInteract).Append("\n");
             sb.Append("  SipResponseCodes: ").Append(SipResponseCodes).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
+            sb.Append("  OutboundCampaign: ").Append(OutboundCampaign).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -620,6 +637,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlaggedReason == other.FlaggedReason ||
                     this.FlaggedReason != null &&
                     this.FlaggedReason.Equals(other.FlaggedReason)
+                ) &&
+                (
+                    this.OutboundCampaign == other.OutboundCampaign ||
+                    this.OutboundCampaign != null &&
+                    this.OutboundCampaign.Equals(other.OutboundCampaign)
                 );
         }
 
@@ -688,6 +710,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FlaggedReason != null)
                     hash = hash * 59 + this.FlaggedReason.GetHashCode();
+                
+                if (this.OutboundCampaign != null)
+                    hash = hash * 59 + this.OutboundCampaign.GetHashCode();
                 
                 return hash;
             }

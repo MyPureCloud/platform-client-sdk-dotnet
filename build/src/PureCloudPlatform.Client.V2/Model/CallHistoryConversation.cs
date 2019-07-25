@@ -91,12 +91,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The direction of the call relating to the current user
         /// </summary>
         /// <value>The direction of the call relating to the current user</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
         
         
         
@@ -129,7 +134,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WasCallback">Was this conversation a callback.</param>
         /// <param name="HadScreenShare">Did this conversation have a screen share session.</param>
         /// <param name="HadCobrowse">Did this conversation have a cobrowse session.</param>
-        public CallHistoryConversation(string Name = null, List<CallHistoryParticipant> Participants = null, DirectionEnum? Direction = null, bool? WentToVoicemail = null, bool? MissedCall = null, DateTime? StartTime = null, bool? WasConference = null, bool? WasCallback = null, bool? HadScreenShare = null, bool? HadCobrowse = null)
+        /// <param name="WasOutboundCampaign">Was this conversation associated with an outbound campaign.</param>
+        public CallHistoryConversation(string Name = null, List<CallHistoryParticipant> Participants = null, DirectionEnum? Direction = null, bool? WentToVoicemail = null, bool? MissedCall = null, DateTime? StartTime = null, bool? WasConference = null, bool? WasCallback = null, bool? HadScreenShare = null, bool? HadCobrowse = null, bool? WasOutboundCampaign = null)
         {
             this.Name = Name;
             this.Participants = Participants;
@@ -141,6 +147,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WasCallback = WasCallback;
             this.HadScreenShare = HadScreenShare;
             this.HadCobrowse = HadCobrowse;
+            this.WasOutboundCampaign = WasOutboundCampaign;
             
         }
         
@@ -238,6 +245,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Was this conversation associated with an outbound campaign
+        /// </summary>
+        /// <value>Was this conversation associated with an outbound campaign</value>
+        [DataMember(Name="wasOutboundCampaign", EmitDefaultValue=false)]
+        public bool? WasOutboundCampaign { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -265,6 +281,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WasCallback: ").Append(WasCallback).Append("\n");
             sb.Append("  HadScreenShare: ").Append(HadScreenShare).Append("\n");
             sb.Append("  HadCobrowse: ").Append(HadCobrowse).Append("\n");
+            sb.Append("  WasOutboundCampaign: ").Append(WasOutboundCampaign).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -358,6 +375,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HadCobrowse.Equals(other.HadCobrowse)
                 ) &&
                 (
+                    this.WasOutboundCampaign == other.WasOutboundCampaign ||
+                    this.WasOutboundCampaign != null &&
+                    this.WasOutboundCampaign.Equals(other.WasOutboundCampaign)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -408,6 +430,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.HadCobrowse != null)
                     hash = hash * 59 + this.HadCobrowse.GetHashCode();
+                
+                if (this.WasOutboundCampaign != null)
+                    hash = hash * 59 + this.WasOutboundCampaign.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

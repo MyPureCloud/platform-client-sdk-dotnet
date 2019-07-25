@@ -75,12 +75,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QualityAudit" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="User">User.</param>
+        /// <param name="JobId">JobId.</param>
         /// <param name="Level">Level.</param>
         /// <param name="Entity">Entity.</param>
         /// <param name="Timestamp">Timestamp.</param>
@@ -88,10 +94,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">Status.</param>
         /// <param name="Changes">Changes.</param>
         /// <param name="EntityType">EntityType.</param>
-        public QualityAudit(string Name = null, User User = null, string Level = null, AuditEntity Entity = null, string Timestamp = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null)
+        public QualityAudit(string Name = null, User User = null, string JobId = null, string Level = null, AuditEntity Entity = null, string Timestamp = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null)
         {
             this.Name = Name;
             this.User = User;
+            this.JobId = JobId;
             this.Level = Level;
             this.Entity = Entity;
             this.Timestamp = Timestamp;
@@ -126,6 +133,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets JobId
+        /// </summary>
+        [DataMember(Name="jobId", EmitDefaultValue=false)]
+        public string JobId { get; set; }
         
         
         
@@ -205,6 +220,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  JobId: ").Append(JobId).Append("\n");
             sb.Append("  Level: ").Append(Level).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
@@ -263,6 +279,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
+                ) &&
+                (
+                    this.JobId == other.JobId ||
+                    this.JobId != null &&
+                    this.JobId.Equals(other.JobId)
                 ) &&
                 (
                     this.Level == other.Level ||
@@ -326,6 +347,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
+                if (this.JobId != null)
+                    hash = hash * 59 + this.JobId.GetHashCode();
                 
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();

@@ -89,12 +89,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Current activity status of the location.
         /// </summary>
         /// <value>Current activity status of the location.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
         
         
         
@@ -123,7 +133,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">Version.</param>
         /// <param name="Path">Path.</param>
         /// <param name="Notes">Notes.</param>
-        public LocationDefinition(string Name = null, LocationAddress Address = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, StateEnum? State = null, int? Version = null, List<string> Path = null, string Notes = null)
+        /// <param name="ProfileImage">Profile image set for the location.</param>
+        /// <param name="FloorplanImage">FloorplanImage.</param>
+        public LocationDefinition(string Name = null, LocationAddress Address = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, StateEnum? State = null, int? Version = null, List<string> Path = null, string Notes = null, List<LocationImage> ProfileImage = null, List<LocationImage> FloorplanImage = null)
         {
             this.Name = Name;
             this.Address = Address;
@@ -133,6 +145,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Version = Version;
             this.Path = Path;
             this.Notes = Notes;
+            this.ProfileImage = ProfileImage;
+            this.FloorplanImage = FloorplanImage;
             
         }
         
@@ -207,6 +221,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Profile image set for the location
+        /// </summary>
+        /// <value>Profile image set for the location</value>
+        [DataMember(Name="profileImage", EmitDefaultValue=false)]
+        public List<LocationImage> ProfileImage { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets FloorplanImage
+        /// </summary>
+        [DataMember(Name="floorplanImage", EmitDefaultValue=false)]
+        public List<LocationImage> FloorplanImage { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -232,6 +263,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
+            sb.Append("  ProfileImage: ").Append(ProfileImage).Append("\n");
+            sb.Append("  FloorplanImage: ").Append(FloorplanImage).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -315,6 +348,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Notes.Equals(other.Notes)
                 ) &&
                 (
+                    this.ProfileImage == other.ProfileImage ||
+                    this.ProfileImage != null &&
+                    this.ProfileImage.SequenceEqual(other.ProfileImage)
+                ) &&
+                (
+                    this.FloorplanImage == other.FloorplanImage ||
+                    this.FloorplanImage != null &&
+                    this.FloorplanImage.SequenceEqual(other.FloorplanImage)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -359,6 +402,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
+                
+                if (this.ProfileImage != null)
+                    hash = hash * 59 + this.ProfileImage.GetHashCode();
+                
+                if (this.FloorplanImage != null)
+                    hash = hash * 59 + this.FloorplanImage.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

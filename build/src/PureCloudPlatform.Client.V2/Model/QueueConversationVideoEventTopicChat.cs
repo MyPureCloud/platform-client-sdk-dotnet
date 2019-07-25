@@ -104,6 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
@@ -254,6 +257,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
@@ -281,6 +286,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ScriptId">ScriptId.</param>
         /// <param name="PeerId">PeerId.</param>
         /// <param name="RoomId">RoomId.</param>
+        /// <param name="AvatarImageUrl">AvatarImageUrl.</param>
         /// <param name="Held">Held.</param>
         /// <param name="DisconnectType">DisconnectType.</param>
         /// <param name="StartHoldTime">StartHoldTime.</param>
@@ -288,7 +294,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="JourneyContext">JourneyContext.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationVideoEventTopicChat(StateEnum? State = null, string Id = null, string Provider = null, string ScriptId = null, string PeerId = null, string RoomId = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicJourneyContext JourneyContext = null, Object AdditionalProperties = null)
+        public QueueConversationVideoEventTopicChat(StateEnum? State = null, string Id = null, string Provider = null, string ScriptId = null, string PeerId = null, string RoomId = null, string AvatarImageUrl = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicJourneyContext JourneyContext = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -296,6 +302,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ScriptId = ScriptId;
             this.PeerId = PeerId;
             this.RoomId = RoomId;
+            this.AvatarImageUrl = AvatarImageUrl;
             this.Held = Held;
             this.DisconnectType = DisconnectType;
             this.StartHoldTime = StartHoldTime;
@@ -347,6 +354,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="roomId", EmitDefaultValue=false)]
         public string RoomId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets AvatarImageUrl
+        /// </summary>
+        [DataMember(Name="avatarImageUrl", EmitDefaultValue=false)]
+        public string AvatarImageUrl { get; set; }
         
         
         
@@ -414,6 +429,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
+            sb.Append("  AvatarImageUrl: ").Append(AvatarImageUrl).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
@@ -488,6 +504,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoomId.Equals(other.RoomId)
                 ) &&
                 (
+                    this.AvatarImageUrl == other.AvatarImageUrl ||
+                    this.AvatarImageUrl != null &&
+                    this.AvatarImageUrl.Equals(other.AvatarImageUrl)
+                ) &&
+                (
                     this.Held == other.Held ||
                     this.Held != null &&
                     this.Held.Equals(other.Held)
@@ -553,6 +574,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
+                
+                if (this.AvatarImageUrl != null)
+                    hash = hash * 59 + this.AvatarImageUrl.GetHashCode();
                 
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();

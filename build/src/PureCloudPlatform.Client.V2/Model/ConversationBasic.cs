@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationBasic" /> class.
@@ -63,12 +68,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="StartTime">The time when the conversation started. This will be the time when the first participant joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
         /// <param name="EndTime">The time when the conversation ended. This will be the time when the last participant left the conversation, or null when the conversation is still active. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Divisions">Identifiers of divisions associated with this conversation.</param>
         /// <param name="Participants">Participants.</param>
-        public ConversationBasic(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ParticipantBasic> Participants = null)
+        public ConversationBasic(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ConversationDivisionMembership> Divisions = null, List<ParticipantBasic> Participants = null)
         {
             this.Name = Name;
             this.StartTime = StartTime;
             this.EndTime = EndTime;
+            this.Divisions = Divisions;
             this.Participants = Participants;
             
         }
@@ -111,6 +118,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Identifiers of divisions associated with this conversation
+        /// </summary>
+        /// <value>Identifiers of divisions associated with this conversation</value>
+        [DataMember(Name="divisions", EmitDefaultValue=false)]
+        public List<ConversationDivisionMembership> Divisions { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -139,6 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
+            sb.Append("  Divisions: ").Append(Divisions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("}\n");
@@ -198,6 +215,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndTime.Equals(other.EndTime)
                 ) &&
                 (
+                    this.Divisions == other.Divisions ||
+                    this.Divisions != null &&
+                    this.Divisions.SequenceEqual(other.Divisions)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -232,6 +254,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
+                
+                if (this.Divisions != null)
+                    hash = hash * 59 + this.Divisions.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

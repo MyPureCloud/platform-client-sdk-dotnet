@@ -25,6 +25,7 @@ title: CallHistoryParticipant
 | **DidInteract** | **bool?** | Indicates whether the contact ever connected | [optional] |
 | **SipResponseCodes** | **List&lt;long?&gt;** | Indicates SIP Response codes associated with the participant | [optional] |
 | **FlaggedReason** | **string** | The reason specifying why participant flagged the conversation. | [optional] |
+| **OutboundCampaign** | [**Campaign**](Campaign.html) | The outbound campaign associated with the participant | [optional] |
 {: class="table table-striped"}
 
 

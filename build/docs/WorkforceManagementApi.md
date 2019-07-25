@@ -26,7 +26,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementManagementunitSchedulingRuns**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitschedulingruns) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs | Get the status of all the ongoing schedule runs |
 | [**GetWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitservicegoalgroup) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId} | Get a service goal group |
 | [**GetWorkforcemanagementManagementunitServicegoalgroups**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitservicegoalgroups) | **GET** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups | Get service goal groups |
-| [**GetWorkforcemanagementManagementunitSettings**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitsettings) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/settings | Get the settings for the requested management unit |
+| [**GetWorkforcemanagementManagementunitSettings**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitsettings) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/settings | Get the settings for the requested management unit. Deprecated, use the GET management unit route instead |
 | [**GetWorkforcemanagementManagementunitShifttradesMatched**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitshifttradesmatched) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/shifttrades/matched | Gets a summary of all shift trades in the matched state |
 | [**GetWorkforcemanagementManagementunitShifttradesUsers**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitshifttradesusers) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/shifttrades/users | Gets list of users available for whom you can send direct shift trade requests |
 | [**GetWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitusertimeoffrequest) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId} | Get a time off request |
@@ -46,10 +46,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementShifttrades**](WorkforceManagementApi.html#getworkforcemanagementshifttrades) | **GET** /api/v2/workforcemanagement/shifttrades | Gets all of my shift trades |
 | [**GetWorkforcemanagementTimeoffrequest**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequest) | **GET** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Get a time off request for the current user |
 | [**GetWorkforcemanagementTimeoffrequests**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequests) | **GET** /api/v2/workforcemanagement/timeoffrequests | Get a list of time off requests for the current user |
+| [**PatchWorkforcemanagementManagementunit**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunit) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId} | Update the requested management unit |
 | [**PatchWorkforcemanagementManagementunitActivitycode**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitactivitycode) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId} | Update an activity code |
 | [**PatchWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitschedulingrun) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId} | Marks a specific scheduling run as applied, allowing a new rescheduling run to be started |
 | [**PatchWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitservicegoalgroup) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId} | Update a service goal group |
-| [**PatchWorkforcemanagementManagementunitSettings**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitsettings) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/settings | Patch the settings for the requested management unit |
+| [**PatchWorkforcemanagementManagementunitSettings**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitsettings) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/settings | Update the settings for the requested management unit |
 | [**PatchWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitusertimeoffrequest) | **PATCH** /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId} | Update a time off request |
 | [**PatchWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitweekschedule) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId} | Update a week schedule |
 | [**PatchWorkforcemanagementManagementunitWorkplan**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitworkplan) | **PATCH** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId} | Update a work plan |
@@ -58,6 +59,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitactivitycodes) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes | Create a new activity code |
 | [**PostWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunithistoricaladherencequery) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/historicaladherencequery | Request a historical adherence report |
 | [**PostWorkforcemanagementManagementunitIntraday**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitintraday) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/intraday | Get intraday data for the given date for the requested queueIds |
+| [**PostWorkforcemanagementManagementunitMove**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitmove) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/move | Move the requested management unit to a new business unit |
 | [**PostWorkforcemanagementManagementunitSchedulesSearch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitschedulessearch) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/schedules/search | Query published schedules for given given time range for set of users |
 | [**PostWorkforcemanagementManagementunitServicegoalgroups**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitservicegoalgroups) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups | Create a new service goal group |
 | [**PostWorkforcemanagementManagementunitTimeoffrequests**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequests) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests | Create a new time off request |
@@ -112,7 +114,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
             try
             { 
@@ -133,7 +135,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **muId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -640,7 +642,7 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunit"></a>
 
-## [**ManagementUnit**](ManagementUnit.html) GetWorkforcemanagementManagementunit (string muId, string expand = null)
+## [**ManagementUnit**](ManagementUnit.html) GetWorkforcemanagementManagementunit (string muId, List<string> expand = null)
 
 
 
@@ -712,8 +714,8 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var expand = expand_example;  // string |  (optional) 
+            var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var expand = new List<string>(); // List<string> |  (optional) 
 
             try
             { 
@@ -735,8 +737,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **expand** | **string**|  | [optional] <br />**Values**: settings |
+| **muId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **expand** | [**List<string>**](string.html)|  | [optional] <br />**Values**: settings, settings.adherence, settings.timeOff, settings.scheduling, settings.shortTermForecasting, settings.shiftTrading |
 {: class="table table-striped"}
 
 ### Return type
@@ -1348,9 +1350,9 @@ namespace Example
 
 ## [**ManagementUnitSettings**](ManagementUnitSettings.html) GetWorkforcemanagementManagementunitSettings (string muId)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Get the settings for the requested management unit
+Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
 
 
 
@@ -1376,11 +1378,11 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
             try
             { 
-                // Get the settings for the requested management unit
+                // Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
                 ManagementUnitSettings result = apiInstance.GetWorkforcemanagementManagementunitSettings(muId);
                 Debug.WriteLine(result);
             }
@@ -1398,7 +1400,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **muId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2252,7 +2254,7 @@ namespace Example
 | **pageSize** | **int?**|  | [optional]  |
 | **pageNumber** | **int?**|  | [optional]  |
 | **expand** | **string**|  | [optional] <br />**Values**: details |
-| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BusinessUnits, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ServiceGoalTemplates, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans |
+| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BusinessUnitActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ServiceGoalTemplates, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans |
 | **divisionId** | **string**|  | [optional]  |
 {: class="table table-striped"}
 
@@ -2619,6 +2621,69 @@ namespace Example
 
 [**TimeOffRequestList**](TimeOffRequestList.html)
 
+<a name="patchworkforcemanagementmanagementunit"></a>
+
+## [**ManagementUnit**](ManagementUnit.html) PatchWorkforcemanagementManagementunit (string muId, UpdateManagementUnitRequest body = null)
+
+
+
+Update the requested management unit
+
+
+
+Requires ANY permissions: 
+
+* wfm:managementUnit:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementManagementunitExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new WorkforceManagementApi();
+            var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var body = new UpdateManagementUnitRequest(); // UpdateManagementUnitRequest | body (optional) 
+
+            try
+            { 
+                // Update the requested management unit
+                ManagementUnit result = apiInstance.PatchWorkforcemanagementManagementunit(muId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementManagementunit: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **muId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **body** | [**UpdateManagementUnitRequest**](UpdateManagementUnitRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ManagementUnit**](ManagementUnit.html)
+
 <a name="patchworkforcemanagementmanagementunitactivitycode"></a>
 
 ## [**ActivityCode**](ActivityCode.html) PatchWorkforcemanagementManagementunitActivitycode (string muId, string acId, UpdateActivityCodeRequest body = null)
@@ -2820,7 +2885,7 @@ namespace Example
 
 
 
-Patch the settings for the requested management unit
+Update the settings for the requested management unit
 
 
 
@@ -2846,12 +2911,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new WorkforceManagementApi();
-            var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var body = new ManagementUnitSettings(); // ManagementUnitSettings | config (optional) 
 
             try
             { 
-                // Patch the settings for the requested management unit
+                // Update the settings for the requested management unit
                 ManagementUnitSettings result = apiInstance.PatchWorkforcemanagementManagementunitSettings(muId, body);
                 Debug.WriteLine(result);
             }
@@ -2869,7 +2934,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **muId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **body** | [**ManagementUnitSettings**](ManagementUnitSettings.html)| config | [optional]  |
 {: class="table table-striped"}
 
@@ -3392,6 +3457,69 @@ namespace Example
 ### Return type
 
 [**IntradayResponse**](IntradayResponse.html)
+
+<a name="postworkforcemanagementmanagementunitmove"></a>
+
+## [**MoveManagementUnitResponse**](MoveManagementUnitResponse.html) PostWorkforcemanagementManagementunitMove (string muId, MoveManagementUnitRequest body = null)
+
+
+
+Move the requested management unit to a new business unit
+
+Returns status 200 if the management unit is already in the requested business unit
+
+Requires ANY permissions: 
+
+* wfm:managementUnit:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementManagementunitMoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new WorkforceManagementApi();
+            var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var body = new MoveManagementUnitRequest(); // MoveManagementUnitRequest | body (optional) 
+
+            try
+            { 
+                // Move the requested management unit to a new business unit
+                MoveManagementUnitResponse result = apiInstance.PostWorkforcemanagementManagementunitMove(muId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitMove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **muId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **body** | [**MoveManagementUnitRequest**](MoveManagementUnitRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MoveManagementUnitResponse**](MoveManagementUnitResponse.html)
 
 <a name="postworkforcemanagementmanagementunitschedulessearch"></a>
 

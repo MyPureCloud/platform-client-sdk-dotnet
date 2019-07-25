@@ -30,6 +30,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIntegrationsCredentialsTypes**](IntegrationsApi.html#getintegrationscredentialstypes) | **GET** /api/v2/integrations/credentials/types | List all credential types |
 | [**GetIntegrationsEventlog**](IntegrationsApi.html#getintegrationseventlog) | **GET** /api/v2/integrations/eventlog | List all events |
 | [**GetIntegrationsEventlogEventId**](IntegrationsApi.html#getintegrationseventlogeventid) | **GET** /api/v2/integrations/eventlog/{eventId} | Get a single event |
+| [**GetIntegrationsSpeechDialogflowAgent**](IntegrationsApi.html#getintegrationsspeechdialogflowagent) | **GET** /api/v2/integrations/speech/dialogflow/agents/{agentId} | Get details about a Dialogflow agent |
+| [**GetIntegrationsSpeechDialogflowAgents**](IntegrationsApi.html#getintegrationsspeechdialogflowagents) | **GET** /api/v2/integrations/speech/dialogflow/agents | Get a list of Dialogflow agents in the customers&#39; Google accounts |
+| [**GetIntegrationsSpeechLexBotAlias**](IntegrationsApi.html#getintegrationsspeechlexbotalias) | **GET** /api/v2/integrations/speech/lex/bot/alias/{aliasId} | Get details about a Lex bot alias |
+| [**GetIntegrationsSpeechLexBotBotIdAliases**](IntegrationsApi.html#getintegrationsspeechlexbotbotidaliases) | **GET** /api/v2/integrations/speech/lex/bot/{botId}/aliases | Get a list of aliases for a bot in the customer&#39;s AWS accounts |
+| [**GetIntegrationsSpeechLexBots**](IntegrationsApi.html#getintegrationsspeechlexbots) | **GET** /api/v2/integrations/speech/lex/bots | Get a list of Lex bots in the customers&#39; AWS accounts |
+| [**GetIntegrationsSpeechTtsEngine**](IntegrationsApi.html#getintegrationsspeechttsengine) | **GET** /api/v2/integrations/speech/tts/engines/{engineId} | Get details about a TTS engine |
+| [**GetIntegrationsSpeechTtsEngineVoice**](IntegrationsApi.html#getintegrationsspeechttsenginevoice) | **GET** /api/v2/integrations/speech/tts/engines/{engineId}/voices/{voiceId} | Get details about a specific voice for a TTS engine |
+| [**GetIntegrationsSpeechTtsEngineVoices**](IntegrationsApi.html#getintegrationsspeechttsenginevoices) | **GET** /api/v2/integrations/speech/tts/engines/{engineId}/voices | Get a list of voices for a TTS engine |
+| [**GetIntegrationsSpeechTtsEngines**](IntegrationsApi.html#getintegrationsspeechttsengines) | **GET** /api/v2/integrations/speech/tts/engines | Get a list of TTS engines enabled for org |
+| [**GetIntegrationsSpeechTtsSettings**](IntegrationsApi.html#getintegrationsspeechttssettings) | **GET** /api/v2/integrations/speech/tts/settings | Get TTS settings for an org |
 | [**GetIntegrationsType**](IntegrationsApi.html#getintegrationstype) | **GET** /api/v2/integrations/types/{typeId} | Get integration type. |
 | [**GetIntegrationsTypeConfigschema**](IntegrationsApi.html#getintegrationstypeconfigschema) | **GET** /api/v2/integrations/types/{typeId}/configschemas/{configType} | Get properties config schema for an integration type. |
 | [**GetIntegrationsTypes**](IntegrationsApi.html#getintegrationstypes) | **GET** /api/v2/integrations/types | List integration types |
@@ -48,6 +58,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostIntegrationsWorkforcemanagementVendorconnection**](IntegrationsApi.html#postintegrationsworkforcemanagementvendorconnection) | **POST** /api/v2/integrations/workforcemanagement/vendorconnection | Add a vendor connection |
 | [**PutIntegrationConfigCurrent**](IntegrationsApi.html#putintegrationconfigcurrent) | **PUT** /api/v2/integrations/{integrationId}/config/current | Update integration configuration. |
 | [**PutIntegrationsCredential**](IntegrationsApi.html#putintegrationscredential) | **PUT** /api/v2/integrations/credentials/{credentialId} | Update a set of credentials |
+| [**PutIntegrationsSpeechTtsSettings**](IntegrationsApi.html#putintegrationsspeechttssettings) | **PUT** /api/v2/integrations/speech/tts/settings | Update TTS settings for an org |
 {: class="table table-striped"}
 
 <a name="deleteintegration"></a>
@@ -1553,6 +1564,643 @@ namespace Example
 
 [**IntegrationEvent**](IntegrationEvent.html)
 
+<a name="getintegrationsspeechdialogflowagent"></a>
+
+## [**DialogflowAgent**](DialogflowAgent.html) GetIntegrationsSpeechDialogflowAgent (string agentId)
+
+
+
+Get details about a Dialogflow agent
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechDialogflowAgentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IntegrationsApi();
+            var agentId = agentId_example;  // string | The agent ID
+
+            try
+            { 
+                // Get details about a Dialogflow agent
+                DialogflowAgent result = apiInstance.GetIntegrationsSpeechDialogflowAgent(agentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechDialogflowAgent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentId** | **string**| The agent ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DialogflowAgent**](DialogflowAgent.html)
+
+<a name="getintegrationsspeechdialogflowagents"></a>
+
+## [**DialogflowAgentSummaryEntityListing**](DialogflowAgentSummaryEntityListing.html) GetIntegrationsSpeechDialogflowAgents (int? pageNumber = null, int? pageSize = null, string name = null)
+
+
+
+Get a list of Dialogflow agents in the customers' Google accounts
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechDialogflowAgentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IntegrationsApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var name = name_example;  // string | Filter on agent name (optional) 
+
+            try
+            { 
+                // Get a list of Dialogflow agents in the customers' Google accounts
+                DialogflowAgentSummaryEntityListing result = apiInstance.GetIntegrationsSpeechDialogflowAgents(pageNumber, pageSize, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechDialogflowAgents: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **name** | **string**| Filter on agent name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DialogflowAgentSummaryEntityListing**](DialogflowAgentSummaryEntityListing.html)
+
+<a name="getintegrationsspeechlexbotalias"></a>
+
+## [**LexBotAlias**](LexBotAlias.html) GetIntegrationsSpeechLexBotAlias (string aliasId)
+
+
+
+Get details about a Lex bot alias
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechLexBotAliasExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IntegrationsApi();
+            var aliasId = aliasId_example;  // string | The alias ID
+
+            try
+            { 
+                // Get details about a Lex bot alias
+                LexBotAlias result = apiInstance.GetIntegrationsSpeechLexBotAlias(aliasId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechLexBotAlias: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **aliasId** | **string**| The alias ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LexBotAlias**](LexBotAlias.html)
+
+<a name="getintegrationsspeechlexbotbotidaliases"></a>
+
+## [**LexBotAliasEntityListing**](LexBotAliasEntityListing.html) GetIntegrationsSpeechLexBotBotIdAliases (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
+
+
+
+Get a list of aliases for a bot in the customer's AWS accounts
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechLexBotBotIdAliasesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IntegrationsApi();
+            var botId = botId_example;  // string | The bot ID
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var status = status_example;  // string | Filter on alias status (optional) 
+            var name = name_example;  // string | Filter on alias name (optional) 
+
+            try
+            { 
+                // Get a list of aliases for a bot in the customer's AWS accounts
+                LexBotAliasEntityListing result = apiInstance.GetIntegrationsSpeechLexBotBotIdAliases(botId, pageNumber, pageSize, status, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechLexBotBotIdAliases: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **botId** | **string**| The bot ID |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **status** | **string**| Filter on alias status | [optional] <br />**Values**: READY, FAILED, BUILDING, NOT_BUILT |
+| **name** | **string**| Filter on alias name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LexBotAliasEntityListing**](LexBotAliasEntityListing.html)
+
+<a name="getintegrationsspeechlexbots"></a>
+
+## [**LexBotEntityListing**](LexBotEntityListing.html) GetIntegrationsSpeechLexBots (int? pageNumber = null, int? pageSize = null, string name = null)
+
+
+
+Get a list of Lex bots in the customers' AWS accounts
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechLexBotsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IntegrationsApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var name = name_example;  // string | Filter on bot name (optional) 
+
+            try
+            { 
+                // Get a list of Lex bots in the customers' AWS accounts
+                LexBotEntityListing result = apiInstance.GetIntegrationsSpeechLexBots(pageNumber, pageSize, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechLexBots: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **name** | **string**| Filter on bot name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LexBotEntityListing**](LexBotEntityListing.html)
+
+<a name="getintegrationsspeechttsengine"></a>
+
+## [**TtsEngineEntity**](TtsEngineEntity.html) GetIntegrationsSpeechTtsEngine (string engineId, bool? includeVoices = null)
+
+
+
+Get details about a TTS engine
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechTtsEngineExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IntegrationsApi();
+            var engineId = engineId_example;  // string | The engine ID
+            var includeVoices = true;  // bool? | Include voices for the engine (optional)  (default to false)
+
+            try
+            { 
+                // Get details about a TTS engine
+                TtsEngineEntity result = apiInstance.GetIntegrationsSpeechTtsEngine(engineId, includeVoices);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechTtsEngine: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **engineId** | **string**| The engine ID |  |
+| **includeVoices** | **bool?**| Include voices for the engine | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**TtsEngineEntity**](TtsEngineEntity.html)
+
+<a name="getintegrationsspeechttsenginevoice"></a>
+
+## [**TtsVoiceEntity**](TtsVoiceEntity.html) GetIntegrationsSpeechTtsEngineVoice (string engineId, string voiceId)
+
+
+
+Get details about a specific voice for a TTS engine
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechTtsEngineVoiceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IntegrationsApi();
+            var engineId = engineId_example;  // string | The engine ID
+            var voiceId = voiceId_example;  // string | The voice ID
+
+            try
+            { 
+                // Get details about a specific voice for a TTS engine
+                TtsVoiceEntity result = apiInstance.GetIntegrationsSpeechTtsEngineVoice(engineId, voiceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechTtsEngineVoice: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **engineId** | **string**| The engine ID |  |
+| **voiceId** | **string**| The voice ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TtsVoiceEntity**](TtsVoiceEntity.html)
+
+<a name="getintegrationsspeechttsenginevoices"></a>
+
+## [**TtsVoiceEntityListing**](TtsVoiceEntityListing.html) GetIntegrationsSpeechTtsEngineVoices (string engineId, int? pageNumber = null, int? pageSize = null)
+
+
+
+Get a list of voices for a TTS engine
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechTtsEngineVoicesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IntegrationsApi();
+            var engineId = engineId_example;  // string | The engine ID
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Get a list of voices for a TTS engine
+                TtsVoiceEntityListing result = apiInstance.GetIntegrationsSpeechTtsEngineVoices(engineId, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechTtsEngineVoices: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **engineId** | **string**| The engine ID |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**TtsVoiceEntityListing**](TtsVoiceEntityListing.html)
+
+<a name="getintegrationsspeechttsengines"></a>
+
+## [**TtsEngineEntityListing**](TtsEngineEntityListing.html) GetIntegrationsSpeechTtsEngines (int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null)
+
+
+
+Get a list of TTS engines enabled for org
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechTtsEnginesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IntegrationsApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var includeVoices = true;  // bool? | Include voices for the engine (optional)  (default to false)
+            var name = name_example;  // string | Filter on engine name (optional) 
+            var language = language_example;  // string | Filter on supported language. If includeVoices=true then the voices are also filtered. (optional) 
+
+            try
+            { 
+                // Get a list of TTS engines enabled for org
+                TtsEngineEntityListing result = apiInstance.GetIntegrationsSpeechTtsEngines(pageNumber, pageSize, includeVoices, name, language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechTtsEngines: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **includeVoices** | **bool?**| Include voices for the engine | [optional] [default to false] |
+| **name** | **string**| Filter on engine name | [optional]  |
+| **language** | **string**| Filter on supported language. If includeVoices=true then the voices are also filtered. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TtsEngineEntityListing**](TtsEngineEntityListing.html)
+
+<a name="getintegrationsspeechttssettings"></a>
+
+## [**TtsSettings**](TtsSettings.html) GetIntegrationsSpeechTtsSettings ()
+
+
+
+Get TTS settings for an org
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechTtsSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IntegrationsApi();
+
+            try
+            { 
+                // Get TTS settings for an org
+                TtsSettings result = apiInstance.GetIntegrationsSpeechTtsSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechTtsSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**TtsSettings**](TtsSettings.html)
+
 <a name="getintegrationstype"></a>
 
 ## [**IntegrationType**](IntegrationType.html) GetIntegrationsType (string typeId)
@@ -2685,4 +3333,65 @@ namespace Example
 ### Return type
 
 [**CredentialInfo**](CredentialInfo.html)
+
+<a name="putintegrationsspeechttssettings"></a>
+
+## [**TtsSettings**](TtsSettings.html) PutIntegrationsSpeechTtsSettings (TtsSettings body)
+
+
+
+Update TTS settings for an org
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutIntegrationsSpeechTtsSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IntegrationsApi();
+            var body = new TtsSettings(); // TtsSettings | Updated TtsSettings
+
+            try
+            { 
+                // Update TTS settings for an org
+                TtsSettings result = apiInstance.PutIntegrationsSpeechTtsSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PutIntegrationsSpeechTtsSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**TtsSettings**](TtsSettings.html)| Updated TtsSettings |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TtsSettings**](TtsSettings.html)
 

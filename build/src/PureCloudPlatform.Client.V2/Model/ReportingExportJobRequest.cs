@@ -304,7 +304,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum FlowDestinationDetailView for "FLOW_DESTINATION_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "FLOW_DESTINATION_DETAIL_VIEW")]
-            FlowDestinationDetailView
+            FlowDestinationDetailView,
+            
+            /// <summary>
+            /// Enum ApiUsageView for "API_USAGE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "API_USAGE_VIEW")]
+            ApiUsageView
         }
         
         

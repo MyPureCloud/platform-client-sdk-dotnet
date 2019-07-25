@@ -379,6 +379,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -450,6 +453,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationChatEventTopicChatMediaParticipant" /> class.
@@ -486,7 +491,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlaggedReason">FlaggedReason.</param>
         /// <param name="JourneyContext">JourneyContext.</param>
         /// <param name="RoomId">RoomId.</param>
-        public QueueConversationChatEventTopicChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationChatEventTopicUriReference User = null, QueueConversationChatEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, QueueConversationChatEventTopicErrorBody ErrorInfo = null, QueueConversationChatEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationChatEventTopicUriReference ExternalContact = null, QueueConversationChatEventTopicUriReference ExternalOrganization = null, QueueConversationChatEventTopicWrapup Wrapup = null, QueueConversationChatEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationChatEventTopicJourneyContext JourneyContext = null, string RoomId = null)
+        /// <param name="AvatarImageUrl">AvatarImageUrl.</param>
+        public QueueConversationChatEventTopicChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationChatEventTopicUriReference User = null, QueueConversationChatEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, QueueConversationChatEventTopicErrorBody ErrorInfo = null, QueueConversationChatEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationChatEventTopicUriReference ExternalContact = null, QueueConversationChatEventTopicUriReference ExternalOrganization = null, QueueConversationChatEventTopicWrapup Wrapup = null, QueueConversationChatEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationChatEventTopicJourneyContext JourneyContext = null, string RoomId = null, string AvatarImageUrl = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -520,6 +526,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FlaggedReason = FlaggedReason;
             this.JourneyContext = JourneyContext;
             this.RoomId = RoomId;
+            this.AvatarImageUrl = AvatarImageUrl;
             
         }
         
@@ -756,6 +763,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string RoomId { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets AvatarImageUrl
+        /// </summary>
+        [DataMember(Name="avatarImageUrl", EmitDefaultValue=false)]
+        public string AvatarImageUrl { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -797,6 +812,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
+            sb.Append("  AvatarImageUrl: ").Append(AvatarImageUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -992,6 +1008,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoomId == other.RoomId ||
                     this.RoomId != null &&
                     this.RoomId.Equals(other.RoomId)
+                ) &&
+                (
+                    this.AvatarImageUrl == other.AvatarImageUrl ||
+                    this.AvatarImageUrl != null &&
+                    this.AvatarImageUrl.Equals(other.AvatarImageUrl)
                 );
         }
 
@@ -1102,6 +1123,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
+                
+                if (this.AvatarImageUrl != null)
+                    hash = hash * 59 + this.AvatarImageUrl.GetHashCode();
                 
                 return hash;
             }

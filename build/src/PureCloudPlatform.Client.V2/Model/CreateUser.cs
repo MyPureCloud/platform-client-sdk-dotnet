@@ -71,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
         /// <param name="Title">Title.</param>
         /// <param name="Password">User&#39;s password (required).</param>
-        /// <param name="DivisionId">The division to which this user will belong.</param>
+        /// <param name="DivisionId">The division to which this user will belong (required).</param>
         public CreateUser(string Name = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Password = null, string DivisionId = null)
         {
             this.Name = Name;

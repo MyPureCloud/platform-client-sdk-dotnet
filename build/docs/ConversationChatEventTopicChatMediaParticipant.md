@@ -39,6 +39,7 @@ title: ConversationChatEventTopicChatMediaParticipant
 | **FlaggedReason** | **string** |  | [optional] |
 | **JourneyContext** | [**ConversationChatEventTopicJourneyContext**](ConversationChatEventTopicJourneyContext.html) |  | [optional] |
 | **RoomId** | **string** |  | [optional] |
+| **AvatarImageUrl** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

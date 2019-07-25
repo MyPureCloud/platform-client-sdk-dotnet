@@ -10,6 +10,7 @@ title: QualityAudit
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **User** | [**User**](User.html) |  | [optional] |
+| **JobId** | **string** |  | [optional] |
 | **Level** | **string** |  | [optional] |
 | **Entity** | [**AuditEntity**](AuditEntity.html) |  | [optional] |
 | **Timestamp** | **string** |  | [optional] |

@@ -47,8 +47,17 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Shifttrade for "ShiftTrade"
             /// </summary>
             [EnumMember(Value = "ShiftTrade")]
-            Shifttrade
+            Shifttrade,
+            
+            /// <summary>
+            /// Enum Timeoffrequest for "TimeOffRequest"
+            /// </summary>
+            [EnumMember(Value = "TimeOffRequest")]
+            Timeoffrequest
         }
+        
+        
+        
         
         
         
@@ -82,6 +91,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmUserNotificationTopicWfmUserNotification" /> class.
@@ -91,15 +102,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Timestamp">Timestamp.</param>
         /// <param name="Type">Type.</param>
         /// <param name="ShiftTrade">ShiftTrade.</param>
+        /// <param name="TimeOffRequest">TimeOffRequest.</param>
         /// <param name="AgentNotification">AgentNotification.</param>
         /// <param name="OtherNotificationIdsInGroup">OtherNotificationIdsInGroup.</param>
-        public WfmUserNotificationTopicWfmUserNotification(string Id = null, string MutableGroupId = null, DateTime? Timestamp = null, TypeEnum? Type = null, WfmUserNotificationTopicShiftTradeNotification ShiftTrade = null, bool? AgentNotification = null, List<string> OtherNotificationIdsInGroup = null)
+        public WfmUserNotificationTopicWfmUserNotification(string Id = null, string MutableGroupId = null, DateTime? Timestamp = null, TypeEnum? Type = null, WfmUserNotificationTopicShiftTradeNotification ShiftTrade = null, WfmUserNotificationTopicTimeOffRequestNotification TimeOffRequest = null, bool? AgentNotification = null, List<string> OtherNotificationIdsInGroup = null)
         {
             this.Id = Id;
             this.MutableGroupId = MutableGroupId;
             this.Timestamp = Timestamp;
             this.Type = Type;
             this.ShiftTrade = ShiftTrade;
+            this.TimeOffRequest = TimeOffRequest;
             this.AgentNotification = AgentNotification;
             this.OtherNotificationIdsInGroup = OtherNotificationIdsInGroup;
             
@@ -142,6 +155,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets TimeOffRequest
+        /// </summary>
+        [DataMember(Name="timeOffRequest", EmitDefaultValue=false)]
+        public WfmUserNotificationTopicTimeOffRequestNotification TimeOffRequest { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AgentNotification
         /// </summary>
         [DataMember(Name="agentNotification", EmitDefaultValue=false)]
@@ -170,6 +191,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ShiftTrade: ").Append(ShiftTrade).Append("\n");
+            sb.Append("  TimeOffRequest: ").Append(TimeOffRequest).Append("\n");
             sb.Append("  AgentNotification: ").Append(AgentNotification).Append("\n");
             sb.Append("  OtherNotificationIdsInGroup: ").Append(OtherNotificationIdsInGroup).Append("\n");
             sb.Append("}\n");
@@ -234,6 +256,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ShiftTrade.Equals(other.ShiftTrade)
                 ) &&
                 (
+                    this.TimeOffRequest == other.TimeOffRequest ||
+                    this.TimeOffRequest != null &&
+                    this.TimeOffRequest.Equals(other.TimeOffRequest)
+                ) &&
+                (
                     this.AgentNotification == other.AgentNotification ||
                     this.AgentNotification != null &&
                     this.AgentNotification.Equals(other.AgentNotification)
@@ -271,6 +298,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ShiftTrade != null)
                     hash = hash * 59 + this.ShiftTrade.GetHashCode();
+                
+                if (this.TimeOffRequest != null)
+                    hash = hash * 59 + this.TimeOffRequest.GetHashCode();
                 
                 if (this.AgentNotification != null)
                     hash = hash * 59 + this.AgentNotification.GetHashCode();

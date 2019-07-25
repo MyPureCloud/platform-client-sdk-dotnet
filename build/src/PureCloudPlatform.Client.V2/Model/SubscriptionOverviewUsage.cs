@@ -65,6 +65,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriptionOverviewUsage" /> class.
@@ -84,7 +89,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PrepayQuantity">Items prepaid for specified period (required).</param>
         /// <param name="PrepayPrice">Price for prepay charge.</param>
         /// <param name="UsageNotes">Notes about the usage/charge item.</param>
-        public SubscriptionOverviewUsage(string Name = null, string PartNumber = null, string Grouping = null, string UnitOfMeasureType = null, string UsageQuantity = null, string OveragePrice = null, string PrepayQuantity = null, string PrepayPrice = null, string UsageNotes = null)
+        /// <param name="IsCancellable">Indicates whether the item is cancellable.</param>
+        public SubscriptionOverviewUsage(string Name = null, string PartNumber = null, string Grouping = null, string UnitOfMeasureType = null, string UsageQuantity = null, string OveragePrice = null, string PrepayQuantity = null, string PrepayPrice = null, string UsageNotes = null, bool? IsCancellable = null)
         {
             this.Name = Name;
             this.PartNumber = PartNumber;
@@ -95,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PrepayQuantity = PrepayQuantity;
             this.PrepayPrice = PrepayPrice;
             this.UsageNotes = UsageNotes;
+            this.IsCancellable = IsCancellable;
             
         }
         
@@ -180,6 +187,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string UsageNotes { get; set; }
         
         
+        
+        /// <summary>
+        /// Indicates whether the item is cancellable
+        /// </summary>
+        /// <value>Indicates whether the item is cancellable</value>
+        [DataMember(Name="isCancellable", EmitDefaultValue=false)]
+        public bool? IsCancellable { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -198,6 +214,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PrepayQuantity: ").Append(PrepayQuantity).Append("\n");
             sb.Append("  PrepayPrice: ").Append(PrepayPrice).Append("\n");
             sb.Append("  UsageNotes: ").Append(UsageNotes).Append("\n");
+            sb.Append("  IsCancellable: ").Append(IsCancellable).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -278,6 +295,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UsageNotes == other.UsageNotes ||
                     this.UsageNotes != null &&
                     this.UsageNotes.Equals(other.UsageNotes)
+                ) &&
+                (
+                    this.IsCancellable == other.IsCancellable ||
+                    this.IsCancellable != null &&
+                    this.IsCancellable.Equals(other.IsCancellable)
                 );
         }
 
@@ -319,6 +341,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.UsageNotes != null)
                     hash = hash * 59 + this.UsageNotes.GetHashCode();
+                
+                if (this.IsCancellable != null)
+                    hash = hash * 59 + this.IsCancellable.GetHashCode();
                 
                 return hash;
             }

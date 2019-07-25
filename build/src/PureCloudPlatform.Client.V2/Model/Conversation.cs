@@ -186,6 +186,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.
         /// </summary>
@@ -201,6 +204,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The conversation's state</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -224,7 +229,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaxParticipants">If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference..</param>
         /// <param name="RecordingState">On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings; otherwise indicates state of conversation recording..</param>
         /// <param name="State">The conversation&#39;s state.</param>
-        public Conversation(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null, StateEnum? State = null)
+        /// <param name="Divisions">Identifiers of divisions associated with this conversation.</param>
+        public Conversation(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null, StateEnum? State = null, List<ConversationDivisionMembership> Divisions = null)
         {
             this.Name = Name;
             this.StartTime = StartTime;
@@ -235,6 +241,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MaxParticipants = MaxParticipants;
             this.RecordingState = RecordingState;
             this.State = State;
+            this.Divisions = Divisions;
             
         }
         
@@ -316,6 +323,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Identifiers of divisions associated with this conversation
+        /// </summary>
+        /// <value>Identifiers of divisions associated with this conversation</value>
+        [DataMember(Name="divisions", EmitDefaultValue=false)]
+        public List<ConversationDivisionMembership> Divisions { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -342,6 +358,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  Divisions: ").Append(Divisions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -430,6 +447,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.State.Equals(other.State)
                 ) &&
                 (
+                    this.Divisions == other.Divisions ||
+                    this.Divisions != null &&
+                    this.Divisions.SequenceEqual(other.Divisions)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -477,6 +499,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
+                if (this.Divisions != null)
+                    hash = hash * 59 + this.Divisions.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

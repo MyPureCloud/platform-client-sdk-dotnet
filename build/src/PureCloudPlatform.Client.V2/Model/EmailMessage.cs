@@ -80,6 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailMessage" /> class.
@@ -100,7 +105,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TextBody">The text body of the email message. (required).</param>
         /// <param name="HtmlBody">The html body of the email message..</param>
         /// <param name="Time">The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public EmailMessage(string Name = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, string Subject = null, List<Attachment> Attachments = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null)
+        /// <param name="HistoryIncluded">Indicates whether the history of previous emails of the conversation is included within the email bodies of this message..</param>
+        public EmailMessage(string Name = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, string Subject = null, List<Attachment> Attachments = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null, bool? HistoryIncluded = null)
         {
             this.Name = Name;
             this.To = To;
@@ -112,6 +118,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TextBody = TextBody;
             this.HtmlBody = HtmlBody;
             this.Time = Time;
+            this.HistoryIncluded = HistoryIncluded;
             
         }
         
@@ -216,6 +223,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Indicates whether the history of previous emails of the conversation is included within the email bodies of this message.
+        /// </summary>
+        /// <value>Indicates whether the history of previous emails of the conversation is included within the email bodies of this message.</value>
+        [DataMember(Name="historyIncluded", EmitDefaultValue=false)]
+        public bool? HistoryIncluded { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -243,6 +259,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
             sb.Append("  HtmlBody: ").Append(HtmlBody).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
+            sb.Append("  HistoryIncluded: ").Append(HistoryIncluded).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -336,6 +353,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Time.Equals(other.Time)
                 ) &&
                 (
+                    this.HistoryIncluded == other.HistoryIncluded ||
+                    this.HistoryIncluded != null &&
+                    this.HistoryIncluded.Equals(other.HistoryIncluded)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -386,6 +408,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
+                
+                if (this.HistoryIncluded != null)
+                    hash = hash * 59 + this.HistoryIncluded.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

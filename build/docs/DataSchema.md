@@ -10,12 +10,11 @@ title: DataSchema
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Version** | **int?** | The schema&#39;s version, a positive integer. Required for updates. | |
-| **AppliesTo** | **List&lt;string&gt;** | The PureCloud data this schema extends. | [optional] |
-| **Enabled** | **bool?** | The schema&#39;s current enabled/disabled status. A disabled schema cannot be assigned to any other objects, but the data on those objects from the schemas still exists | [optional] |
-| **Deleted** | **bool?** | The schema&#39;s deleted status. A deleted schema can not be used by any records or updated. All records using a deleted schema will eventually have their schema-based data removed. | [optional] |
-| **CreatedBy** | [**UriReference**](UriReference.html) | The user that created this schema. | [optional] |
+| **AppliesTo** | **List&lt;string&gt;** | One of \&quot;CONTACT\&quot; or \&quot;EXTERNAL_ORGANIZATION\&quot;.  Indicates the built-in entity type to which this schema applies. | [optional] |
+| **Enabled** | **bool?** | The schema&#39;s current enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists | [optional] |
+| **CreatedBy** | [**UriReference**](UriReference.html) | The URI of the user that created this schema. | [optional] |
 | **DateCreated** | **DateTime?** | The date and time this schema was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **JsonSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | The JSON schema defining the data extension. | |
+| **JsonSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | The JSON schema defining the extension to the built-in entity type. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

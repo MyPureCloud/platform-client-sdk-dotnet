@@ -78,7 +78,7 @@ void (empty response body)
 
 <a name="getlocation"></a>
 
-## [**LocationDefinition**](LocationDefinition.html) GetLocation (string locationId)
+## [**LocationDefinition**](LocationDefinition.html) GetLocation (string locationId, List<string> expand = null)
 
 
 
@@ -108,11 +108,12 @@ namespace Example
 
             var apiInstance = new LocationsApi();
             var locationId = locationId_example;  // string | Location ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             { 
                 // Get Location by ID.
-                LocationDefinition result = apiInstance.GetLocation(locationId);
+                LocationDefinition result = apiInstance.GetLocation(locationId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -130,6 +131,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **locationId** | **string**| Location ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: images |
 {: class="table table-striped"}
 
 ### Return type

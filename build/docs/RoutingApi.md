@@ -2170,7 +2170,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **phoneNumber** | **string**| Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. | [optional]  |
-| **phoneNumberType** | **string**| Filter on phone number type | [optional] <br />**Values**: local, mobile, tollfree |
+| **phoneNumberType** | **string**| Filter on phone number type | [optional] <br />**Values**: local, mobile, tollfree, shortcode |
 | **phoneNumberStatus** | **string**| Filter on phone number status | [optional] <br />**Values**: active, invalid, porting |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |

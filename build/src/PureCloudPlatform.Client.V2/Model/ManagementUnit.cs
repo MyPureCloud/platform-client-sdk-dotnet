@@ -29,9 +29,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// Start day of week for scheduling and forecasting purposes
         /// </summary>
@@ -121,8 +118,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
         /// Start day of week for scheduling and forecasting purposes
         /// </summary>
@@ -149,32 +144,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ManagementUnit" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected ManagementUnit() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ManagementUnit" /> class.
-        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Division">The division to which this entity belongs..</param>
-        /// <param name="BusinessUnit">The business unit to which this management unit belongs.</param>
         /// <param name="StartDayOfWeek">Start day of week for scheduling and forecasting purposes.</param>
-        /// <param name="TimeZone">The time zone for the management unit in standard Olson Format (See https://en.wikipedia.org/wiki/Tz_database).</param>
+        /// <param name="TimeZone">The time zone for the management unit in standard Olson format.</param>
         /// <param name="Settings">The configuration settings for this management unit.</param>
-        /// <param name="Version">The version of the underlying entity.  Deprecated, use metadata field instead (required).</param>
-        /// <param name="ModifiedBy">The user who last modified this entity.  Deprecated, use metadata field instead.</param>
-        /// <param name="Metadata">Version info metadata for this management unit (required).</param>
-        public ManagementUnit(string Name = null, Division Division = null, BusinessUnitReference BusinessUnit = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, ManagementUnitSettings Settings = null, int? Version = null, UserReference ModifiedBy = null, WfmVersionedEntityMetadata Metadata = null)
+        /// <param name="Metadata">Version info metadata for this management unit. Deprecated, use settings.metadata.</param>
+        /// <param name="ModifiedBy">The user who last modified this entity.  Deprecated, use field from settings.metadata instead.</param>
+        public ManagementUnit(string Name = null, Division Division = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, ManagementUnitSettings Settings = null, WfmVersionedEntityMetadata Metadata = null, UserReference ModifiedBy = null)
         {
             this.Name = Name;
             this.Division = Division;
-            this.BusinessUnit = BusinessUnit;
             this.StartDayOfWeek = StartDayOfWeek;
             this.TimeZone = TimeZone;
             this.Settings = Settings;
-            this.Version = Version;
-            this.ModifiedBy = ModifiedBy;
             this.Metadata = Metadata;
+            this.ModifiedBy = ModifiedBy;
             
         }
         
@@ -206,21 +191,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// The business unit to which this management unit belongs
-        /// </summary>
-        /// <value>The business unit to which this management unit belongs</value>
-        [DataMember(Name="businessUnit", EmitDefaultValue=false)]
-        public BusinessUnitReference BusinessUnit { get; set; }
-        
-        
-        
         
         
         /// <summary>
-        /// The time zone for the management unit in standard Olson Format (See https://en.wikipedia.org/wiki/Tz_database)
+        /// The time zone for the management unit in standard Olson format
         /// </summary>
-        /// <value>The time zone for the management unit in standard Olson Format (See https://en.wikipedia.org/wiki/Tz_database)</value>
+        /// <value>The time zone for the management unit in standard Olson format</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
         
@@ -236,38 +212,38 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The version of the underlying entity.  Deprecated, use metadata field instead
+        /// Version info metadata for this management unit. Deprecated, use settings.metadata
         /// </summary>
-        /// <value>The version of the underlying entity.  Deprecated, use metadata field instead</value>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        /// <value>Version info metadata for this management unit. Deprecated, use settings.metadata</value>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public WfmVersionedEntityMetadata Metadata { get; set; }
         
         
         
         /// <summary>
-        /// The date and time at which this entity was last modified.  Deprecated, use metadata field instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The version of the underlying entity.  Deprecated, use field from settings.metadata instead
         /// </summary>
-        /// <value>The date and time at which this entity was last modified.  Deprecated, use metadata field instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The version of the underlying entity.  Deprecated, use field from settings.metadata instead</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The date and time at which this entity was last modified.  Deprecated, use field from settings.metadata instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The date and time at which this entity was last modified.  Deprecated, use field from settings.metadata instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
         
         
         
         /// <summary>
-        /// The user who last modified this entity.  Deprecated, use metadata field instead
+        /// The user who last modified this entity.  Deprecated, use field from settings.metadata instead
         /// </summary>
-        /// <value>The user who last modified this entity.  Deprecated, use metadata field instead</value>
+        /// <value>The user who last modified this entity.  Deprecated, use field from settings.metadata instead</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public UserReference ModifiedBy { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Version info metadata for this management unit
-        /// </summary>
-        /// <value>Version info metadata for this management unit</value>
-        [DataMember(Name="metadata", EmitDefaultValue=false)]
-        public WfmVersionedEntityMetadata Metadata { get; set; }
         
         
         
@@ -291,14 +267,13 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
-            sb.Append("  BusinessUnit: ").Append(BusinessUnit).Append("\n");
             sb.Append("  StartDayOfWeek: ").Append(StartDayOfWeek).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -352,11 +327,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Division.Equals(other.Division)
                 ) &&
                 (
-                    this.BusinessUnit == other.BusinessUnit ||
-                    this.BusinessUnit != null &&
-                    this.BusinessUnit.Equals(other.BusinessUnit)
-                ) &&
-                (
                     this.StartDayOfWeek == other.StartDayOfWeek ||
                     this.StartDayOfWeek != null &&
                     this.StartDayOfWeek.Equals(other.StartDayOfWeek)
@@ -372,6 +342,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Settings.Equals(other.Settings)
                 ) &&
                 (
+                    this.Metadata == other.Metadata ||
+                    this.Metadata != null &&
+                    this.Metadata.Equals(other.Metadata)
+                ) &&
+                (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
@@ -385,11 +360,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) &&
-                (
-                    this.Metadata == other.Metadata ||
-                    this.Metadata != null &&
-                    this.Metadata.Equals(other.Metadata)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -419,9 +389,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
                 
-                if (this.BusinessUnit != null)
-                    hash = hash * 59 + this.BusinessUnit.GetHashCode();
-                
                 if (this.StartDayOfWeek != null)
                     hash = hash * 59 + this.StartDayOfWeek.GetHashCode();
                 
@@ -431,6 +398,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Settings != null)
                     hash = hash * 59 + this.Settings.GetHashCode();
                 
+                if (this.Metadata != null)
+                    hash = hash * 59 + this.Metadata.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
                 
@@ -439,9 +409,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
-                if (this.Metadata != null)
-                    hash = hash * 59 + this.Metadata.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

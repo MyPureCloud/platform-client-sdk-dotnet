@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">The priority of the conversation to use for routing decisions.</param>
         /// <param name="Skills">The skills to use for routing decisions.</param>
         /// <param name="ScoredAgents">A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents.</param>
-        public ConversationRoutingData(Queue Queue = null, Language Language = null, int? Priority = null, List<Skill> Skills = null, List<ScoredAgent> ScoredAgents = null)
+        public ConversationRoutingData(AddressableEntityRef Queue = null, AddressableEntityRef Language = null, int? Priority = null, List<AddressableEntityRef> Skills = null, List<ScoredAgent> ScoredAgents = null)
         {
             this.Queue = Queue;
             this.Language = Language;
@@ -71,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The queue to use for routing decisions</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
-        public Queue Queue { get; set; }
+        public AddressableEntityRef Queue { get; set; }
         
         
         
@@ -80,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The language to use for routing decisions</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
-        public Language Language { get; set; }
+        public AddressableEntityRef Language { get; set; }
         
         
         
@@ -98,7 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The skills to use for routing decisions</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
-        public List<Skill> Skills { get; set; }
+        public List<AddressableEntityRef> Skills { get; set; }
         
         
         

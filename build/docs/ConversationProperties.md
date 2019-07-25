@@ -10,6 +10,7 @@ title: ConversationProperties
 | **IsWaiting** | **bool?** | Indicates filtering for waiting | [optional] |
 | **IsActive** | **bool?** | Indicates filtering for active | [optional] |
 | **IsAcd** | **bool?** | Indicates filtering for Acd | [optional] |
+| **IsPreferred** | **bool?** | Indicates filtering for Preferred Agent Routing | [optional] |
 | **IsScreenshare** | **bool?** | Indicates filtering for screenshare | [optional] |
 | **IsCobrowse** | **bool?** | Indicates filtering for Cobrowse | [optional] |
 | **IsVoicemail** | **bool?** | Indicates filtering for Voice mail | [optional] |
