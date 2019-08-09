@@ -90,27 +90,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="PromptAsset" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="PromptId">PromptId.</param>
-        /// <param name="Language">Language.</param>
-        /// <param name="MediaUri">MediaUri.</param>
-        /// <param name="TtsString">TtsString.</param>
-        /// <param name="Text">Text.</param>
-        /// <param name="UploadStatus">UploadStatus.</param>
-        /// <param name="UploadUri">UploadUri.</param>
-        /// <param name="LanguageDefault">LanguageDefault.</param>
+        /// <param name="TtsString">Text to speech of the resource.</param>
+        /// <param name="Text">Text of the resource.</param>
         /// <param name="Tags">Tags.</param>
         /// <param name="DurationSeconds">DurationSeconds.</param>
-        public PromptAsset(string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string Text = null, string UploadStatus = null, string UploadUri = null, bool? LanguageDefault = null, Dictionary<string, List<string>> Tags = null, double? DurationSeconds = null)
+        public PromptAsset(string Name = null, string TtsString = null, string Text = null, Dictionary<string, List<string>> Tags = null, double? DurationSeconds = null)
         {
             this.Name = Name;
-            this.PromptId = PromptId;
-            this.Language = Language;
-            this.MediaUri = MediaUri;
             this.TtsString = TtsString;
             this.Text = Text;
-            this.UploadStatus = UploadStatus;
-            this.UploadUri = UploadUri;
-            this.LanguageDefault = LanguageDefault;
             this.Tags = Tags;
             this.DurationSeconds = DurationSeconds;
             
@@ -136,66 +124,74 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets PromptId
+        /// Associated prompt ID
         /// </summary>
+        /// <value>Associated prompt ID</value>
         [DataMember(Name="promptId", EmitDefaultValue=false)]
-        public string PromptId { get; set; }
+        public string PromptId { get; private set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Language
+        /// Prompt resource language
         /// </summary>
+        /// <value>Prompt resource language</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
-        public string Language { get; set; }
+        public string Language { get; private set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MediaUri
+        /// URI of the resource audio
         /// </summary>
+        /// <value>URI of the resource audio</value>
         [DataMember(Name="mediaUri", EmitDefaultValue=false)]
-        public string MediaUri { get; set; }
+        public string MediaUri { get; private set; }
         
         
         
         /// <summary>
-        /// Gets or Sets TtsString
+        /// Text to speech of the resource
         /// </summary>
+        /// <value>Text to speech of the resource</value>
         [DataMember(Name="ttsString", EmitDefaultValue=false)]
         public string TtsString { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Text
+        /// Text of the resource
         /// </summary>
+        /// <value>Text of the resource</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets UploadStatus
+        /// Audio upload status
         /// </summary>
+        /// <value>Audio upload status</value>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
-        public string UploadStatus { get; set; }
+        public string UploadStatus { get; private set; }
         
         
         
         /// <summary>
-        /// Gets or Sets UploadUri
+        /// Upload URI for the resource audio
         /// </summary>
+        /// <value>Upload URI for the resource audio</value>
         [DataMember(Name="uploadUri", EmitDefaultValue=false)]
-        public string UploadUri { get; set; }
+        public string UploadUri { get; private set; }
         
         
         
         /// <summary>
-        /// Gets or Sets LanguageDefault
+        /// Whether or not this resource locale is the default for the language
         /// </summary>
+        /// <value>Whether or not this resource locale is the default for the language</value>
         [DataMember(Name="languageDefault", EmitDefaultValue=false)]
-        public bool? LanguageDefault { get; set; }
+        public bool? LanguageDefault { get; private set; }
         
         
         

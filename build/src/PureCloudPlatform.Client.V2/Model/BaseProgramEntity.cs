@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Common attributes to all SCIM resources
+    /// BaseProgramEntity
     /// </summary>
     [DataContract]
-    public partial class ScimResource :  IEquatable<ScimResource>
+    public partial class BaseProgramEntity :  IEquatable<BaseProgramEntity>
     {
         
         
@@ -37,42 +37,40 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ScimResource" /> class.
+        /// Initializes a new instance of the <see cref="BaseProgramEntity" /> class.
         /// </summary>
-        /// <param name="DisplayName">Display Name.</param>
-        /// <param name="Meta">Meta.</param>
-        public ScimResource(string DisplayName = null, ScimMetadata Meta = null)
+        /// <param name="Name">Name.</param>
+        public BaseProgramEntity(string Name = null)
         {
-            this.DisplayName = DisplayName;
-            this.Meta = Meta;
+            this.Name = Name;
             
         }
         
         
         
         /// <summary>
-        /// SCIM Resource identifier
+        /// The globally unique identifier for the object.
         /// </summary>
-        /// <value>SCIM Resource identifier</value>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         
         
         
         /// <summary>
-        /// Display Name
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>Display Name</value>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
-        public string DisplayName { get; set; }
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Meta
+        /// The URI for this object
         /// </summary>
-        [DataMember(Name="meta", EmitDefaultValue=false)]
-        public ScimMetadata Meta { get; set; }
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
         
         
         /// <summary>
@@ -82,11 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ScimResource {\n");
+            sb.Append("class BaseProgramEntity {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            sb.Append("  Meta: ").Append(Meta).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,15 +106,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ScimResource);
+            return this.Equals(obj as BaseProgramEntity);
         }
 
         /// <summary>
-        /// Returns true if ScimResource instances are equal
+        /// Returns true if BaseProgramEntity instances are equal
         /// </summary>
-        /// <param name="other">Instance of ScimResource to be compared</param>
+        /// <param name="other">Instance of BaseProgramEntity to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ScimResource other)
+        public bool Equals(BaseProgramEntity other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -129,14 +127,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.DisplayName == other.DisplayName ||
-                    this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this.Meta == other.Meta ||
-                    this.Meta != null &&
-                    this.Meta.Equals(other.Meta)
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -155,11 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.DisplayName != null)
-                    hash = hash * 59 + this.DisplayName.GetHashCode();
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this.Meta != null)
-                    hash = hash * 59 + this.Meta.GetHashCode();
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

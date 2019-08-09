@@ -126,25 +126,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="LocationDefinition" /> class.
         /// </summary>
         /// <param name="Name">The name of the Location. (required).</param>
+        /// <param name="EmergencyNumber">EmergencyNumber.</param>
         /// <param name="Address">Address.</param>
         /// <param name="AddressVerified">AddressVerified.</param>
-        /// <param name="EmergencyNumber">EmergencyNumber.</param>
         /// <param name="State">Current activity status of the location..</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="Path">Path.</param>
         /// <param name="Notes">Notes.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="Path">A list of ancestor IDs in order.</param>
         /// <param name="ProfileImage">Profile image set for the location.</param>
         /// <param name="FloorplanImage">FloorplanImage.</param>
-        public LocationDefinition(string Name = null, LocationAddress Address = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, StateEnum? State = null, int? Version = null, List<string> Path = null, string Notes = null, List<LocationImage> ProfileImage = null, List<LocationImage> FloorplanImage = null)
+        public LocationDefinition(string Name = null, LocationEmergencyNumber EmergencyNumber = null, LocationAddress Address = null, bool? AddressVerified = null, StateEnum? State = null, string Notes = null, int? Version = null, List<string> Path = null, List<LocationImage> ProfileImage = null, List<LocationImage> FloorplanImage = null)
         {
             this.Name = Name;
+            this.EmergencyNumber = EmergencyNumber;
             this.Address = Address;
             this.AddressVerified = AddressVerified;
-            this.EmergencyNumber = EmergencyNumber;
             this.State = State;
+            this.Notes = Notes;
             this.Version = Version;
             this.Path = Path;
-            this.Notes = Notes;
             this.ProfileImage = ProfileImage;
             this.FloorplanImage = FloorplanImage;
             
@@ -171,6 +171,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets EmergencyNumber
+        /// </summary>
+        [DataMember(Name="emergencyNumber", EmitDefaultValue=false)]
+        public LocationEmergencyNumber EmergencyNumber { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
@@ -186,13 +194,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
-        /// Gets or Sets EmergencyNumber
+        /// Gets or Sets Notes
         /// </summary>
-        [DataMember(Name="emergencyNumber", EmitDefaultValue=false)]
-        public LocationEmergencyNumber EmergencyNumber { get; set; }
-        
-        
+        [DataMember(Name="notes", EmitDefaultValue=false)]
+        public string Notes { get; set; }
         
         
         
@@ -205,18 +213,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Path
+        /// A list of ancestor IDs in order
         /// </summary>
+        /// <value>A list of ancestor IDs in order</value>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public List<string> Path { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Notes
-        /// </summary>
-        [DataMember(Name="notes", EmitDefaultValue=false)]
-        public string Notes { get; set; }
         
         
         
@@ -256,13 +257,13 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  EmergencyNumber: ").Append(EmergencyNumber).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  AddressVerified: ").Append(AddressVerified).Append("\n");
-            sb.Append("  EmergencyNumber: ").Append(EmergencyNumber).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
-            sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  ProfileImage: ").Append(ProfileImage).Append("\n");
             sb.Append("  FloorplanImage: ").Append(FloorplanImage).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -313,6 +314,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.EmergencyNumber == other.EmergencyNumber ||
+                    this.EmergencyNumber != null &&
+                    this.EmergencyNumber.Equals(other.EmergencyNumber)
+                ) &&
+                (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
@@ -323,14 +329,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AddressVerified.Equals(other.AddressVerified)
                 ) &&
                 (
-                    this.EmergencyNumber == other.EmergencyNumber ||
-                    this.EmergencyNumber != null &&
-                    this.EmergencyNumber.Equals(other.EmergencyNumber)
-                ) &&
-                (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
+                ) &&
+                (
+                    this.Notes == other.Notes ||
+                    this.Notes != null &&
+                    this.Notes.Equals(other.Notes)
                 ) &&
                 (
                     this.Version == other.Version ||
@@ -341,11 +347,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Path == other.Path ||
                     this.Path != null &&
                     this.Path.SequenceEqual(other.Path)
-                ) &&
-                (
-                    this.Notes == other.Notes ||
-                    this.Notes != null &&
-                    this.Notes.Equals(other.Notes)
                 ) &&
                 (
                     this.ProfileImage == other.ProfileImage ||
@@ -382,26 +383,26 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
+                if (this.EmergencyNumber != null)
+                    hash = hash * 59 + this.EmergencyNumber.GetHashCode();
+                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
                 
                 if (this.AddressVerified != null)
                     hash = hash * 59 + this.AddressVerified.GetHashCode();
                 
-                if (this.EmergencyNumber != null)
-                    hash = hash * 59 + this.EmergencyNumber.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
+                if (this.Notes != null)
+                    hash = hash * 59 + this.Notes.GetHashCode();
                 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.Path != null)
                     hash = hash * 59 + this.Path.GetHashCode();
-                
-                if (this.Notes != null)
-                    hash = hash * 59 + this.Notes.GetHashCode();
                 
                 if (this.ProfileImage != null)
                     hash = hash * 59 + this.ProfileImage.GetHashCode();

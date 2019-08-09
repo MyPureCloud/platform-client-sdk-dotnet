@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteLocation**](LocationsApi.html#deletelocation) | **DELETE** /api/v2/locations/{locationId} | Delete a location |
 | [**GetLocation**](LocationsApi.html#getlocation) | **GET** /api/v2/locations/{locationId} | Get Location by ID. |
+| [**GetLocationSublocations**](LocationsApi.html#getlocationsublocations) | **GET** /api/v2/locations/{locationId}/sublocations | Get sublocations for location ID. |
 | [**GetLocations**](LocationsApi.html#getlocations) | **GET** /api/v2/locations | Get a list of all locations. |
 | [**GetLocationsSearch**](LocationsApi.html#getlocationssearch) | **GET** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
 | [**PatchLocation**](LocationsApi.html#patchlocation) | **PATCH** /api/v2/locations/{locationId} | Update a location |
@@ -137,6 +138,66 @@ namespace Example
 ### Return type
 
 [**LocationDefinition**](LocationDefinition.html)
+
+<a name="getlocationsublocations"></a>
+
+## [**LocationEntityListing**](LocationEntityListing.html) GetLocationSublocations (string locationId)
+
+
+
+Get sublocations for location ID.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLocationSublocationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new LocationsApi();
+            var locationId = locationId_example;  // string | Location ID
+
+            try
+            { 
+                // Get sublocations for location ID.
+                LocationEntityListing result = apiInstance.GetLocationSublocations(locationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LocationsApi.GetLocationSublocations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **locationId** | **string**| Location ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LocationEntityListing**](LocationEntityListing.html)
 
 <a name="getlocations"></a>
 

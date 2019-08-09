@@ -8,7 +8,6 @@ title: RecordingJob
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** |  | [optional] |
 | **State** | **string** | The current state of the job. | |
 | **RecordingJobsQuery** | [**RecordingJobsQuery**](RecordingJobsQuery.html) | Original query of the job. | [optional] |
 | **DateCreated** | **DateTime?** | Date when the job was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |

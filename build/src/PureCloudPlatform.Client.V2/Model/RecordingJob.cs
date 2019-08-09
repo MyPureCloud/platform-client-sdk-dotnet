@@ -23,9 +23,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// The current state of the job.
         /// </summary>
@@ -108,8 +105,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
         /// The current state of the job.
         /// </summary>
@@ -144,12 +139,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingJob" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
         /// <param name="State">The current state of the job. (required).</param>
         /// <param name="RecordingJobsQuery">Original query of the job..</param>
-        public RecordingJob(string Name = null, StateEnum? State = null, RecordingJobsQuery RecordingJobsQuery = null)
+        public RecordingJob(StateEnum? State = null, RecordingJobsQuery RecordingJobsQuery = null)
         {
-            this.Name = Name;
             this.State = State;
             this.RecordingJobsQuery = RecordingJobsQuery;
             
@@ -163,14 +156,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
         
         
         
@@ -257,7 +242,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class RecordingJob {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  RecordingJobsQuery: ").Append(RecordingJobsQuery).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -307,11 +291,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
                 ) &&
                 (
                     this.State == other.State ||
@@ -374,9 +353,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();

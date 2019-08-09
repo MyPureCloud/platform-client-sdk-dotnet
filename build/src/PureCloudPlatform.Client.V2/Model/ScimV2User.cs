@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Represents a SCIM V2 User
+    /// SCIM version 2 User
     /// </summary>
     [DataContract]
     public partial class ScimV2User :  IEquatable<ScimV2User>
@@ -94,10 +94,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2User" /> class.
         /// </summary>
-        /// <param name="DisplayName">Display Name.</param>
         /// <param name="Schemas">schemas supported.</param>
         /// <param name="Active">Active flag.</param>
         /// <param name="UserName">User Name (Must be Unique) maps to PureCloud e-mail address.</param>
+        /// <param name="DisplayName">Display Name.</param>
         /// <param name="Password">Password (updateOnly).</param>
         /// <param name="Title">Title.</param>
         /// <param name="PhoneNumbers">Phone numbers.</param>
@@ -105,14 +105,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Photos">Photos.</param>
         /// <param name="ExternalId">External ID.</param>
         /// <param name="Groups">Group References.</param>
-        /// <param name="Meta">Meta.</param>
+        /// <param name="Meta">Resource SCIM meta.</param>
         /// <param name="Urnietfparamsscimschemasextensionenterprise20User">Urnietfparamsscimschemasextensionenterprise20User.</param>
-        public ScimV2User(string DisplayName = null, List<string> Schemas = null, bool? Active = null, string UserName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, List<Photo> Photos = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, ScimMetadata Meta = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null)
+        public ScimV2User(List<string> Schemas = null, bool? Active = null, string UserName = null, string DisplayName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, List<Photo> Photos = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, ScimMetadata Meta = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null)
         {
-            this.DisplayName = DisplayName;
             this.Schemas = Schemas;
             this.Active = Active;
             this.UserName = UserName;
+            this.DisplayName = DisplayName;
             this.Password = Password;
             this.Title = Title;
             this.PhoneNumbers = PhoneNumbers;
@@ -133,15 +133,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>SCIM Resource identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
-        /// <summary>
-        /// Display Name
-        /// </summary>
-        /// <value>Display Name</value>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
-        public string DisplayName { get; set; }
         
         
         
@@ -169,6 +160,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>User Name (Must be Unique) maps to PureCloud e-mail address</value>
         [DataMember(Name="userName", EmitDefaultValue=false)]
         public string UserName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Display Name
+        /// </summary>
+        /// <value>Display Name</value>
+        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        public string DisplayName { get; set; }
         
         
         
@@ -236,8 +236,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Meta
+        /// Resource SCIM meta
         /// </summary>
+        /// <value>Resource SCIM meta</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
         public ScimMetadata Meta { get; set; }
         
@@ -260,10 +261,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ScimV2User {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Schemas: ").Append(Schemas).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  UserName: ").Append(UserName).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  PhoneNumbers: ").Append(PhoneNumbers).Append("\n");
@@ -315,11 +316,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.DisplayName == other.DisplayName ||
-                    this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
-                ) &&
-                (
                     this.Schemas == other.Schemas ||
                     this.Schemas != null &&
                     this.Schemas.SequenceEqual(other.Schemas)
@@ -333,6 +329,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserName == other.UserName ||
                     this.UserName != null &&
                     this.UserName.Equals(other.UserName)
+                ) &&
+                (
+                    this.DisplayName == other.DisplayName ||
+                    this.DisplayName != null &&
+                    this.DisplayName.Equals(other.DisplayName)
                 ) &&
                 (
                     this.Password == other.Password ||
@@ -396,9 +397,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.DisplayName != null)
-                    hash = hash * 59 + this.DisplayName.GetHashCode();
-                
                 if (this.Schemas != null)
                     hash = hash * 59 + this.Schemas.GetHashCode();
                 
@@ -407,6 +405,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.UserName != null)
                     hash = hash * 59 + this.UserName.GetHashCode();
+                
+                if (this.DisplayName != null)
+                    hash = hash * 59 + this.DisplayName.GetHashCode();
                 
                 if (this.Password != null)
                     hash = hash * 59 + this.Password.GetHashCode();

@@ -76,6 +76,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Audiopcma,
             
             /// <summary>
+            /// Enum Audiog729 for "audio/g729"
+            /// </summary>
+            [EnumMember(Value = "audio/g729")]
+            Audiog729,
+            
+            /// <summary>
             /// Enum Audiog722 for "audio/g722"
             /// </summary>
             [EnumMember(Value = "audio/g722")]

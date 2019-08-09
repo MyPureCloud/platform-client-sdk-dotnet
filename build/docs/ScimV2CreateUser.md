@@ -7,10 +7,10 @@ title: ScimV2CreateUser
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **DisplayName** | **string** | Display Name | |
 | **Schemas** | **List&lt;string&gt;** | schemas supported | [optional] |
 | **Active** | **bool?** | Active flag | [optional] |
 | **UserName** | **string** | User Name (Must be Unique) maps to PureCloud e-mail address | |
+| **DisplayName** | **string** | Display Name | |
 | **Password** | **string** | Password (updateOnly) | [optional] |
 | **Title** | **string** | Title | [optional] |
 | **PhoneNumbers** | [**List&lt;ScimPhoneNumber&gt;**](ScimPhoneNumber.html) | Phone numbers | [optional] |

@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Path
+    /// UserTokensTopicUriReference
     /// </summary>
     [DataContract]
-    public partial class Path :  IEquatable<Path>
+    public partial class UserTokensTopicUriReference :  IEquatable<UserTokensTopicUriReference>
     {
         
         
@@ -32,32 +32,32 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Path" /> class.
+        /// Initializes a new instance of the <see cref="UserTokensTopicUriReference" /> class.
         /// </summary>
-        /// <param name="SchemaUrn">SchemaUrn.</param>
-        /// <param name="Root">Root.</param>
-        public Path(string SchemaUrn = null, bool? Root = null)
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+        public UserTokensTopicUriReference(string Id = null, string Name = null)
         {
-            this.SchemaUrn = SchemaUrn;
-            this.Root = Root;
+            this.Id = Id;
+            this.Name = Name;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets SchemaUrn
+        /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="schemaUrn", EmitDefaultValue=false)]
-        public string SchemaUrn { get; set; }
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Root
+        /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name="root", EmitDefaultValue=false)]
-        public bool? Root { get; set; }
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
         
         
         /// <summary>
@@ -67,10 +67,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Path {\n");
+            sb.Append("class UserTokensTopicUriReference {\n");
             
-            sb.Append("  SchemaUrn: ").Append(SchemaUrn).Append("\n");
-            sb.Append("  Root: ").Append(Root).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,15 +92,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Path);
+            return this.Equals(obj as UserTokensTopicUriReference);
         }
 
         /// <summary>
-        /// Returns true if Path instances are equal
+        /// Returns true if UserTokensTopicUriReference instances are equal
         /// </summary>
-        /// <param name="other">Instance of Path to be compared</param>
+        /// <param name="other">Instance of UserTokensTopicUriReference to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Path other)
+        public bool Equals(UserTokensTopicUriReference other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -108,14 +108,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.SchemaUrn == other.SchemaUrn ||
-                    this.SchemaUrn != null &&
-                    this.SchemaUrn.Equals(other.SchemaUrn)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Root == other.Root ||
-                    this.Root != null &&
-                    this.Root.Equals(other.Root)
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
                 );
         }
 
@@ -131,11 +131,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.SchemaUrn != null)
-                    hash = hash * 59 + this.SchemaUrn.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.Root != null)
-                    hash = hash * 59 + this.Root.GetHashCode();
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 return hash;
             }

@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Represents a SCIM V2 List Response
+    /// SCIM Group List Response
     /// </summary>
     [DataContract]
-    public partial class ScimListResponse :  IEquatable<ScimListResponse>
+    public partial class ScimGroupListResponse :  IEquatable<ScimGroupListResponse>
     {
         
         
@@ -47,18 +47,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ScimListResponse" /> class.
+        /// Initializes a new instance of the <see cref="ScimGroupListResponse" /> class.
         /// </summary>
-        /// <param name="TotalResults">Total Results.</param>
-        /// <param name="StartIndex">Start index.</param>
-        /// <param name="ItemsPerPage">Items per Page.</param>
         /// <param name="Resources">Resources.</param>
         /// <param name="Schemas">schemas supported.</param>
-        public ScimListResponse(long? TotalResults = null, long? StartIndex = null, long? ItemsPerPage = null, List<ScimResource> Resources = null, List<string> Schemas = null)
+        public ScimGroupListResponse(List<ScimV2Group> Resources = null, List<string> Schemas = null)
         {
-            this.TotalResults = TotalResults;
-            this.StartIndex = StartIndex;
-            this.ItemsPerPage = ItemsPerPage;
             this.Resources = Resources;
             this.Schemas = Schemas;
             
@@ -71,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Total Results</value>
         [DataMember(Name="totalResults", EmitDefaultValue=false)]
-        public long? TotalResults { get; set; }
+        public long? TotalResults { get; private set; }
         
         
         
@@ -80,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Start index</value>
         [DataMember(Name="startIndex", EmitDefaultValue=false)]
-        public long? StartIndex { get; set; }
+        public long? StartIndex { get; private set; }
         
         
         
@@ -89,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Items per Page</value>
         [DataMember(Name="itemsPerPage", EmitDefaultValue=false)]
-        public long? ItemsPerPage { get; set; }
+        public long? ItemsPerPage { get; private set; }
         
         
         
@@ -98,7 +92,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Resources</value>
         [DataMember(Name="Resources", EmitDefaultValue=false)]
-        public List<ScimResource> Resources { get; set; }
+        public List<ScimV2Group> Resources { get; set; }
         
         
         
@@ -117,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ScimListResponse {\n");
+            sb.Append("class ScimGroupListResponse {\n");
             
             sb.Append("  TotalResults: ").Append(TotalResults).Append("\n");
             sb.Append("  StartIndex: ").Append(StartIndex).Append("\n");
@@ -145,15 +139,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ScimListResponse);
+            return this.Equals(obj as ScimGroupListResponse);
         }
 
         /// <summary>
-        /// Returns true if ScimListResponse instances are equal
+        /// Returns true if ScimGroupListResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of ScimListResponse to be compared</param>
+        /// <param name="other">Instance of ScimGroupListResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ScimListResponse other)
+        public bool Equals(ScimGroupListResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

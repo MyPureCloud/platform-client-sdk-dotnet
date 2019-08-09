@@ -554,7 +554,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum GroupVoicemail for "GROUP_VOICEMAIL"
             /// </summary>
             [EnumMember(Value = "GROUP_VOICEMAIL")]
-            GroupVoicemail
+            GroupVoicemail,
+            
+            /// <summary>
+            /// Enum ReturnToAgent for "RETURN_TO_AGENT"
+            /// </summary>
+            [EnumMember(Value = "RETURN_TO_AGENT")]
+            ReturnToAgent
         }
         
         
@@ -613,6 +619,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OUTDATED_SDK_VERSION")]
             OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Commonmodule for "commonmodule"
+            /// </summary>
+            [EnumMember(Value = "commonmodule")]
+            Commonmodule,
             
             /// <summary>
             /// Enum Inboundcall for "inboundcall"
@@ -809,6 +821,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Provides the agent duration sort order
         /// </summary>
@@ -833,6 +851,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Provides the interacting duration sort order</value>
         [DataMember(Name="interactingDurationSortOrder", EmitDefaultValue=false)]
         public InteractingDurationSortOrderEnum? InteractingDurationSortOrder { get; set; }
+        
+        
+        
+        
         
         
         
@@ -978,7 +1000,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HasJourneyCustomerId">Indicates filtering for journey customer id.</param>
         /// <param name="HasJourneyActionMapId">Indicates filtering for Journey action map id.</param>
         /// <param name="HasJourneyVisitId">Indicates filtering for Journey visit id.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> StatusList = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null)
+        /// <param name="OauthClientIds">A list of OAuth client IDs.</param>
+        /// <param name="ApiOperations">A list of API operations (ex: [\&quot;GET /api/v2/users/{userId}/queues\&quot;]).</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> StatusList = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, List<string> OauthClientIds = null, List<string> ApiOperations = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -1051,6 +1075,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.HasJourneyCustomerId = HasJourneyCustomerId;
             this.HasJourneyActionMapId = HasJourneyActionMapId;
             this.HasJourneyVisitId = HasJourneyVisitId;
+            this.OauthClientIds = OauthClientIds;
+            this.ApiOperations = ApiOperations;
             
         }
         
@@ -1673,6 +1699,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? HasJourneyVisitId { get; set; }
         
         
+        
+        /// <summary>
+        /// A list of OAuth client IDs
+        /// </summary>
+        /// <value>A list of OAuth client IDs</value>
+        [DataMember(Name="oauthClientIds", EmitDefaultValue=false)]
+        public List<string> OauthClientIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of API operations (ex: [\&quot;GET /api/v2/users/{userId}/queues\&quot;])
+        /// </summary>
+        /// <value>A list of API operations (ex: [\&quot;GET /api/v2/users/{userId}/queues\&quot;])</value>
+        [DataMember(Name="apiOperations", EmitDefaultValue=false)]
+        public List<string> ApiOperations { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1753,6 +1797,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HasJourneyCustomerId: ").Append(HasJourneyCustomerId).Append("\n");
             sb.Append("  HasJourneyActionMapId: ").Append(HasJourneyActionMapId).Append("\n");
             sb.Append("  HasJourneyVisitId: ").Append(HasJourneyVisitId).Append("\n");
+            sb.Append("  OauthClientIds: ").Append(OauthClientIds).Append("\n");
+            sb.Append("  ApiOperations: ").Append(ApiOperations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -2143,6 +2189,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HasJourneyVisitId == other.HasJourneyVisitId ||
                     this.HasJourneyVisitId != null &&
                     this.HasJourneyVisitId.Equals(other.HasJourneyVisitId)
+                ) &&
+                (
+                    this.OauthClientIds == other.OauthClientIds ||
+                    this.OauthClientIds != null &&
+                    this.OauthClientIds.SequenceEqual(other.OauthClientIds)
+                ) &&
+                (
+                    this.ApiOperations == other.ApiOperations ||
+                    this.ApiOperations != null &&
+                    this.ApiOperations.SequenceEqual(other.ApiOperations)
                 );
         }
 
@@ -2370,6 +2426,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.HasJourneyVisitId != null)
                     hash = hash * 59 + this.HasJourneyVisitId.GetHashCode();
+                
+                if (this.OauthClientIds != null)
+                    hash = hash * 59 + this.OauthClientIds.GetHashCode();
+                
+                if (this.ApiOperations != null)
+                    hash = hash * 59 + this.ApiOperations.GetHashCode();
                 
                 return hash;
             }

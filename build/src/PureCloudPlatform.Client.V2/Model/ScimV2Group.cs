@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Common attributes to all SCIM resources
+    /// SCIM version 2 Group
     /// </summary>
     [DataContract]
     public partial class ScimV2Group :  IEquatable<ScimV2Group>
@@ -49,13 +49,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2Group" /> class.
         /// </summary>
-        /// <param name="DisplayName">Display Name.</param>
         /// <param name="Schemas">schemas supported.</param>
         /// <param name="Members">Scim Group Members.</param>
-        /// <param name="Meta">Meta.</param>
-        public ScimV2Group(string DisplayName = null, List<string> Schemas = null, List<ScimV2MemberReference> Members = null, ScimMetadata Meta = null)
+        /// <param name="Meta">Resource SCIM meta.</param>
+        public ScimV2Group(List<string> Schemas = null, List<ScimV2MemberReference> Members = null, ScimMetadata Meta = null)
         {
-            this.DisplayName = DisplayName;
             this.Schemas = Schemas;
             this.Members = Members;
             this.Meta = Meta;
@@ -74,20 +72,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Display Name
-        /// </summary>
-        /// <value>Display Name</value>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
-        public string DisplayName { get; set; }
-        
-        
-        
-        /// <summary>
         /// schemas supported
         /// </summary>
         /// <value>schemas supported</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
         public List<string> Schemas { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Display Name
+        /// </summary>
+        /// <value>Display Name</value>
+        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        public string DisplayName { get; private set; }
         
         
         
@@ -101,8 +99,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Meta
+        /// Resource SCIM meta
         /// </summary>
+        /// <value>Resource SCIM meta</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
         public ScimMetadata Meta { get; set; }
         
@@ -117,8 +116,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ScimV2Group {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Schemas: ").Append(Schemas).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Members: ").Append(Members).Append("\n");
             sb.Append("  Meta: ").Append(Meta).Append("\n");
             sb.Append("}\n");
@@ -163,14 +162,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.DisplayName == other.DisplayName ||
-                    this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
-                ) &&
-                (
                     this.Schemas == other.Schemas ||
                     this.Schemas != null &&
                     this.Schemas.SequenceEqual(other.Schemas)
+                ) &&
+                (
+                    this.DisplayName == other.DisplayName ||
+                    this.DisplayName != null &&
+                    this.DisplayName.Equals(other.DisplayName)
                 ) &&
                 (
                     this.Members == other.Members ||
@@ -199,11 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.DisplayName != null)
-                    hash = hash * 59 + this.DisplayName.GetHashCode();
-                
                 if (this.Schemas != null)
                     hash = hash * 59 + this.Schemas.GetHashCode();
+                
+                if (this.DisplayName != null)
+                    hash = hash * 59 + this.DisplayName.GetHashCode();
                 
                 if (this.Members != null)
                     hash = hash * 59 + this.Members.GetHashCode();

@@ -16,8 +16,8 @@ title: AnalyticsEvaluation
 | **ContextId** | **string** | A unique identifier for an evaluation form, regardless of version | [optional] |
 | **FormName** | **string** | Name of the evaluation form | [optional] |
 | **CalibrationId** | **string** | The calibration id used for the purpose of training evaluators | [optional] |
-| **OTotalScore** | **long?** |  | [optional] |
 | **OTotalCriticalScore** | **long?** |  | [optional] |
+| **OTotalScore** | **long?** |  | [optional] |
 {: class="table table-striped"}
 
 

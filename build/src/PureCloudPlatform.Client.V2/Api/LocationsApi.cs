@@ -63,6 +63,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LocationDefinition> GetLocationWithHttpInfo (string locationId, List<string> expand = null);
         
         /// <summary>
+        /// Get sublocations for location ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Location ID</param>
+        /// <returns>LocationEntityListing</returns>
+        LocationEntityListing GetLocationSublocations (string locationId);
+
+        /// <summary>
+        /// Get sublocations for location ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Location ID</param>
+        /// <returns>ApiResponse of LocationEntityListing</returns>
+        ApiResponse<LocationEntityListing> GetLocationSublocationsWithHttpInfo (string locationId);
+        
+        /// <summary>
         /// Get a list of all locations.
         /// </summary>
         /// <remarks>
@@ -231,6 +253,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (LocationDefinition)</returns>
         System.Threading.Tasks.Task<ApiResponse<LocationDefinition>> GetLocationAsyncWithHttpInfo (string locationId, List<string> expand = null);
+        
+        /// <summary>
+        /// Get sublocations for location ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Location ID</param>
+        /// <returns>Task of LocationEntityListing</returns>
+        System.Threading.Tasks.Task<LocationEntityListing> GetLocationSublocationsAsync (string locationId);
+
+        /// <summary>
+        /// Get sublocations for location ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Location ID</param>
+        /// <returns>Task of ApiResponse (LocationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LocationEntityListing>> GetLocationSublocationsAsyncWithHttpInfo (string locationId);
         
         /// <summary>
         /// Get a list of all locations.
@@ -828,6 +872,199 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LocationDefinition>(localVarStatusCode,
                 localVarHeaders,
                 (LocationDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get sublocations for location ID. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Location ID</param>
+        /// <returns>LocationEntityListing</returns>
+        public LocationEntityListing GetLocationSublocations (string locationId)
+        {
+             ApiResponse<LocationEntityListing> localVarResponse = GetLocationSublocationsWithHttpInfo(locationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get sublocations for location ID. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Location ID</param>
+        /// <returns>ApiResponse of LocationEntityListing</returns>
+        public ApiResponse< LocationEntityListing > GetLocationSublocationsWithHttpInfo (string locationId)
+        { 
+            // verify the required parameter 'locationId' is set
+            if (locationId == null)
+                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationsApi->GetLocationSublocations");
+
+            var localVarPath = "/api/v2/locations/{locationId}/sublocations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (locationId != null) localVarPathParams.Add("locationId", this.Configuration.ApiClient.ParameterToString(locationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLocationSublocations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLocationSublocations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LocationEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LocationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get sublocations for location ID. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Location ID</param>
+        /// <returns>Task of LocationEntityListing</returns>
+        public async System.Threading.Tasks.Task<LocationEntityListing> GetLocationSublocationsAsync (string locationId)
+        {
+             ApiResponse<LocationEntityListing> localVarResponse = await GetLocationSublocationsAsyncWithHttpInfo(locationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get sublocations for location ID. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="locationId">Location ID</param>
+        /// <returns>Task of ApiResponse (LocationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LocationEntityListing>> GetLocationSublocationsAsyncWithHttpInfo (string locationId)
+        { 
+            // verify the required parameter 'locationId' is set
+            if (locationId == null)
+                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationsApi->GetLocationSublocations");
+            
+
+            var localVarPath = "/api/v2/locations/{locationId}/sublocations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (locationId != null) localVarPathParams.Add("locationId", this.Configuration.ApiClient.ParameterToString(locationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLocationSublocations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLocationSublocations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LocationEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LocationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

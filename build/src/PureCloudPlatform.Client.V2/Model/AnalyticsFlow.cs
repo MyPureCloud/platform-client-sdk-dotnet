@@ -45,6 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Commonmodule for "COMMONMODULE"
+            /// </summary>
+            [EnumMember(Value = "COMMONMODULE")]
+            Commonmodule,
+            
+            /// <summary>
             /// Enum Inboundcall for "INBOUNDCALL"
             /// </summary>
             [EnumMember(Value = "INBOUNDCALL")]

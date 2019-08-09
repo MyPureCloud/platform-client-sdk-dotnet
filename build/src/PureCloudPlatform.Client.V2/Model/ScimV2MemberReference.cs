@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM Members of Group Resource
+    /// SCIM Members of Group Reference
     /// </summary>
     [DataContract]
     public partial class ScimV2MemberReference :  IEquatable<ScimV2MemberReference>
@@ -67,9 +67,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// SCIM Resource Type of member
         /// </summary>
@@ -84,18 +81,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2MemberReference" /> class.
         /// </summary>
-        /// <param name="DisplayName">Display Name.</param>
-        /// <param name="Meta">Meta.</param>
-        public ScimV2MemberReference(string DisplayName = null, ScimMetadata Meta = null)
+        /// <param name="Meta">Resource SCIM meta.</param>
+        /// <param name="Value">Value of ID of group member. May be User or Group id.</param>
+        public ScimV2MemberReference(ScimMetadata Meta = null, string Value = null)
         {
-            this.DisplayName = DisplayName;
             this.Meta = Meta;
+            this.Value = Value;
             
         }
         
@@ -104,17 +99,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Display Name
+        /// Resource SCIM meta
         /// </summary>
-        /// <value>Display Name</value>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
-        public string DisplayName { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Meta
-        /// </summary>
+        /// <value>Resource SCIM meta</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
         public ScimMetadata Meta { get; set; }
         
@@ -125,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Value of ID of group member. May be User or Group id</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
-        public string Value { get; private set; }
+        public string Value { get; set; }
         
         
         
@@ -147,7 +134,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ScimV2MemberReference {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Meta: ").Append(Meta).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  _Ref: ").Append(_Ref).Append("\n");
@@ -193,11 +179,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
-                    this.DisplayName == other.DisplayName ||
-                    this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
-                ) &&
-                (
                     this.Meta == other.Meta ||
                     this.Meta != null &&
                     this.Meta.Equals(other.Meta)
@@ -228,9 +209,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
-                if (this.DisplayName != null)
-                    hash = hash * 59 + this.DisplayName.GetHashCode();
                 
                 if (this.Meta != null)
                     hash = hash * 59 + this.Meta.GetHashCode();

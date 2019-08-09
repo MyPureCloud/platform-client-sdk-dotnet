@@ -338,6 +338,7 @@ Remove routing language from user
 Requires ANY permissions: 
 
 * routing:skill:assign
+* routing:language:assign
 
 ### Example
 ```{"language":"csharp"}
@@ -873,7 +874,7 @@ namespace Example
 
 <a name="getprofilesusers"></a>
 
-## [**UserProfileEntityListing**](UserProfileEntityListing.html) GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string state = null)
+## [**UserProfileEntityListing**](UserProfileEntityListing.html) GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null)
 
 
 
@@ -908,12 +909,11 @@ namespace Example
             var jid = new List<string>(); // List<string> | jid (optional) 
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
-            var state = state_example;  // string | Only list users of this state (optional)  (default to active)
 
             try
             { 
                 // Get a user profile listing
-                UserProfileEntityListing result = apiInstance.GetProfilesUsers(pageSize, pageNumber, id, jid, sortOrder, expand, state);
+                UserProfileEntityListing result = apiInstance.GetProfilesUsers(pageSize, pageNumber, id, jid, sortOrder, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -936,7 +936,6 @@ namespace Example
 | **jid** | [**List<string>**](string.html)| jid | [optional]  |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization |
-| **state** | **string**| Only list users of this state | [optional] [default to active]<br />**Values**: active, deleted |
 {: class="table table-striped"}
 
 ### Return type
@@ -2726,6 +2725,7 @@ Update routing language proficiency or state.
 Requires ANY permissions: 
 
 * routing:skill:assign
+* routing:language:assign
 
 ### Example
 ```{"language":"csharp"}
@@ -2791,6 +2791,7 @@ Add bulk routing language to user. Max limit 50 languages
 Requires ANY permissions: 
 
 * routing:skill:assign
+* routing:language:assign
 
 ### Example
 ```{"language":"csharp"}
@@ -3415,6 +3416,7 @@ Add routing language to user
 Requires ANY permissions: 
 
 * routing:skill:assign
+* routing:language:assign
 
 ### Example
 ```{"language":"csharp"}

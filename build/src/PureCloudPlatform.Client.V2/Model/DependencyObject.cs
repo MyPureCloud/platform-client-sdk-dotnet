@@ -68,6 +68,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Bridgeaction,
             
             /// <summary>
+            /// Enum Commonmoduleflow for "COMMONMODULEFLOW"
+            /// </summary>
+            [EnumMember(Value = "COMMONMODULEFLOW")]
+            Commonmoduleflow,
+            
+            /// <summary>
             /// Enum Composerscript for "COMPOSERSCRIPT"
             /// </summary>
             [EnumMember(Value = "COMPOSERSCRIPT")]

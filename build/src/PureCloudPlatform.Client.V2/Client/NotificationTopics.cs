@@ -82,6 +82,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.users.{id}.presence", typeof(PresenceEventUserPresence)},
               {"v2.users.{id}.routingStatus", typeof(UserRoutingStatusUserRoutingStatus)},
               {"v2.users.{id}.station", typeof(UserStationChangeTopicUserStations)},
+              {"v2.users.{id}.tokens", typeof(UserTokensTopicTokenNotification)},
               {"v2.users.{id}.userrecordings", typeof(AdhocRecordingTopicRecordingDataV2)},
               {"v2.users.{id}.voicemail.messages", typeof(VoicemailMessagesTopicVoicemailMessage)},
               {"v2.users.{id}.workforcemanagement.adherence", typeof(WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate)},

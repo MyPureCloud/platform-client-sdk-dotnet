@@ -249,6 +249,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
@@ -318,6 +327,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainLogicalInterface" /> class.
@@ -357,7 +372,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UseForInternalEdgeCommunication">This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group..</param>
         /// <param name="ExternalTrunkBaseAssignments">External trunk base settings to use for external communication from this interface..</param>
         /// <param name="PhoneTrunkBaseAssignments">Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true..</param>
-        public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
+        /// <param name="TraceEnabled">TraceEnabled.</param>
+        /// <param name="StartDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EndDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null, bool? TraceEnabled = null, DateTime? StartDate = null, DateTime? EndDate = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -388,6 +406,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.UseForInternalEdgeCommunication = UseForInternalEdgeCommunication;
             this.ExternalTrunkBaseAssignments = ExternalTrunkBaseAssignments;
             this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
+            this.TraceEnabled = TraceEnabled;
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
             
         }
         
@@ -654,6 +675,32 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets TraceEnabled
+        /// </summary>
+        [DataMember(Name="traceEnabled", EmitDefaultValue=false)]
+        public bool? TraceEnabled { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="startDate", EmitDefaultValue=false)]
+        public DateTime? StartDate { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="endDate", EmitDefaultValue=false)]
+        public DateTime? EndDate { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -702,6 +749,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UseForInternalEdgeCommunication: ").Append(UseForInternalEdgeCommunication).Append("\n");
             sb.Append("  ExternalTrunkBaseAssignments: ").Append(ExternalTrunkBaseAssignments).Append("\n");
             sb.Append("  PhoneTrunkBaseAssignments: ").Append(PhoneTrunkBaseAssignments).Append("\n");
+            sb.Append("  TraceEnabled: ").Append(TraceEnabled).Append("\n");
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -900,6 +950,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PhoneTrunkBaseAssignments.SequenceEqual(other.PhoneTrunkBaseAssignments)
                 ) &&
                 (
+                    this.TraceEnabled == other.TraceEnabled ||
+                    this.TraceEnabled != null &&
+                    this.TraceEnabled.Equals(other.TraceEnabled)
+                ) &&
+                (
+                    this.StartDate == other.StartDate ||
+                    this.StartDate != null &&
+                    this.StartDate.Equals(other.StartDate)
+                ) &&
+                (
+                    this.EndDate == other.EndDate ||
+                    this.EndDate != null &&
+                    this.EndDate.Equals(other.EndDate)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -1013,6 +1078,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PhoneTrunkBaseAssignments != null)
                     hash = hash * 59 + this.PhoneTrunkBaseAssignments.GetHashCode();
+                
+                if (this.TraceEnabled != null)
+                    hash = hash * 59 + this.TraceEnabled.GetHashCode();
+                
+                if (this.StartDate != null)
+                    hash = hash * 59 + this.StartDate.GetHashCode();
+                
+                if (this.EndDate != null)
+                    hash = hash * 59 + this.EndDate.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

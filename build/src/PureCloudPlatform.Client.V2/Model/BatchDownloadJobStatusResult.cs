@@ -55,24 +55,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchDownloadJobStatusResult" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
         /// <param name="JobId">JobId returned when job was initially submitted.</param>
         /// <param name="ExpectedResultCount">Number of results expected when job is completed.</param>
         /// <param name="ResultCount">Current number of results available.</param>
         /// <param name="ErrorCount">Number of error results produced so far.</param>
         /// <param name="Results">Current set of results for the job.</param>
-        public BatchDownloadJobStatusResult(string Name = null, string JobId = null, int? ExpectedResultCount = null, int? ResultCount = null, int? ErrorCount = null, List<BatchDownloadJobResult> Results = null)
+        public BatchDownloadJobStatusResult(string JobId = null, int? ExpectedResultCount = null, int? ResultCount = null, int? ErrorCount = null, List<BatchDownloadJobResult> Results = null)
         {
-            this.Name = Name;
             this.JobId = JobId;
             this.ExpectedResultCount = ExpectedResultCount;
             this.ResultCount = ResultCount;
@@ -89,14 +82,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
         
         
         
@@ -163,7 +148,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class BatchDownloadJobStatusResult {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  JobId: ").Append(JobId).Append("\n");
             sb.Append("  ExpectedResultCount: ").Append(ExpectedResultCount).Append("\n");
             sb.Append("  ResultCount: ").Append(ResultCount).Append("\n");
@@ -212,11 +196,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
                     this.JobId == other.JobId ||
                     this.JobId != null &&
                     this.JobId.Equals(other.JobId)
@@ -262,9 +241,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.JobId != null)
                     hash = hash * 59 + this.JobId.GetHashCode();
