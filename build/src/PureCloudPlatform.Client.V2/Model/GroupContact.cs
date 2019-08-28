@@ -26,6 +26,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Contact type of the address
         /// </summary>
@@ -87,6 +90,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Contact type of the address
         /// </summary>
@@ -115,11 +120,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="GroupContact" /> class.
         /// </summary>
         /// <param name="Address">Phone number for this contact type (required).</param>
+        /// <param name="Extension">Extension is set if the number is e164 valid.</param>
         /// <param name="Type">Contact type of the address (required).</param>
         /// <param name="MediaType">Media type of the address (required).</param>
-        public GroupContact(string Address = null, TypeEnum? Type = null, MediaTypeEnum? MediaType = null)
+        public GroupContact(string Address = null, string Extension = null, TypeEnum? Type = null, MediaTypeEnum? MediaType = null)
         {
             this.Address = Address;
+            this.Extension = Extension;
             this.Type = Type;
             this.MediaType = MediaType;
             
@@ -133,6 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Phone number for this contact type</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Extension is set if the number is e164 valid
+        /// </summary>
+        /// <value>Extension is set if the number is e164 valid</value>
+        [DataMember(Name="extension", EmitDefaultValue=false)]
+        public string Extension { get; set; }
         
         
         
@@ -158,6 +174,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class GroupContact {\n");
             
             sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  Extension: ").Append(Extension).Append("\n");
             sb.Append("  Display: ").Append(Display).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
@@ -203,6 +220,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Address.Equals(other.Address)
                 ) &&
                 (
+                    this.Extension == other.Extension ||
+                    this.Extension != null &&
+                    this.Extension.Equals(other.Extension)
+                ) &&
+                (
                     this.Display == other.Display ||
                     this.Display != null &&
                     this.Display.Equals(other.Display)
@@ -233,6 +255,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
+                
+                if (this.Extension != null)
+                    hash = hash * 59 + this.Extension.GetHashCode();
                 
                 if (this.Display != null)
                     hash = hash * 59 + this.Display.GetHashCode();

@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ScimV2Group" /> class.
         /// </summary>
         /// <param name="Schemas">schemas supported.</param>
-        /// <param name="Members">Scim Group Members.</param>
+        /// <param name="Members">A list of members in a SCIM group..</param>
         /// <param name="Meta">Resource SCIM meta.</param>
         public ScimV2Group(List<string> Schemas = null, List<ScimV2MemberReference> Members = null, ScimMetadata Meta = null)
         {
@@ -81,18 +81,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Display Name
+        /// The display name for the group.
         /// </summary>
-        /// <value>Display Name</value>
+        /// <value>The display name for the group.</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; private set; }
         
         
         
         /// <summary>
-        /// Scim Group Members
+        /// A list of members in a SCIM group.
         /// </summary>
-        /// <value>Scim Group Members</value>
+        /// <value>A list of members in a SCIM group.</value>
         [DataMember(Name="members", EmitDefaultValue=false)]
         public List<ScimV2MemberReference> Members { get; set; }
         

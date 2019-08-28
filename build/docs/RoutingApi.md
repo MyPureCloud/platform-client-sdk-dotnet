@@ -37,6 +37,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingQueuesMe**](RoutingApi.html#getroutingqueuesme) | **GET** /api/v2/routing/queues/me | Get a paged listing of queues the user is a member of. |
 | [**GetRoutingSkill**](RoutingApi.html#getroutingskill) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
 | [**GetRoutingSkills**](RoutingApi.html#getroutingskills) | **GET** /api/v2/routing/skills | Get the list of routing skills. |
+| [**GetRoutingSmsAddress**](RoutingApi.html#getroutingsmsaddress) | **GET** /api/v2/routing/sms/addresses/{addressId} | Get an Address by Id for SMS |
+| [**GetRoutingSmsAddresses**](RoutingApi.html#getroutingsmsaddresses) | **GET** /api/v2/routing/sms/addresses | Get a list of Addresses for SMS |
 | [**GetRoutingSmsAvailablephonenumbers**](RoutingApi.html#getroutingsmsavailablephonenumbers) | **GET** /api/v2/routing/sms/availablephonenumbers | Get a list of available phone numbers for SMS provisioning. |
 | [**GetRoutingSmsPhonenumber**](RoutingApi.html#getroutingsmsphonenumber) | **GET** /api/v2/routing/sms/phonenumbers/{addressId} | Get a phone number provisioned for SMS. |
 | [**GetRoutingSmsPhonenumbers**](RoutingApi.html#getroutingsmsphonenumbers) | **GET** /api/v2/routing/sms/phonenumbers | Get a list of provisioned phone numbers. |
@@ -1978,6 +1980,130 @@ namespace Example
 
 [**SkillEntityListing**](SkillEntityListing.html)
 
+<a name="getroutingsmsaddress"></a>
+
+## [**SmsAddress**](SmsAddress.html) GetRoutingSmsAddress (string addressId)
+
+
+
+Get an Address by Id for SMS
+
+
+
+Requires ANY permissions: 
+
+* sms:phoneNumber:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingSmsAddressExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RoutingApi();
+            var addressId = addressId_example;  // string | Address ID
+
+            try
+            { 
+                // Get an Address by Id for SMS
+                SmsAddress result = apiInstance.GetRoutingSmsAddress(addressId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingSmsAddress: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **addressId** | **string**| Address ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SmsAddress**](SmsAddress.html)
+
+<a name="getroutingsmsaddresses"></a>
+
+## [**SmsAddressEntityListing**](SmsAddressEntityListing.html) GetRoutingSmsAddresses (int? pageSize = null, int? pageNumber = null)
+
+
+
+Get a list of Addresses for SMS
+
+
+
+Requires ANY permissions: 
+
+* sms:phoneNumber:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingSmsAddressesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RoutingApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get a list of Addresses for SMS
+                SmsAddressEntityListing result = apiInstance.GetRoutingSmsAddresses(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingSmsAddresses: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**SmsAddressEntityListing**](SmsAddressEntityListing.html)
+
 <a name="getroutingsmsavailablephonenumbers"></a>
 
 ## [**SMSAvailablePhoneNumberEntityListing**](SMSAvailablePhoneNumberEntityListing.html) GetRoutingSmsAvailablephonenumbers (string countryCode, string phoneNumberType, string region = null, string city = null, string areaCode = null, string pattern = null, string addressRequirement = null)
@@ -3317,7 +3443,7 @@ namespace Example
 
 <a name="postroutingsmsaddresses"></a>
 
-## [**SmsPhoneNumber**](SmsPhoneNumber.html) PostRoutingSmsAddresses (SmsAddressProvision body)
+## [**SmsAddress**](SmsAddress.html) PostRoutingSmsAddresses (SmsAddressProvision body)
 
 
 
@@ -3352,7 +3478,7 @@ namespace Example
             try
             { 
                 // Provision an Address for SMS
-                SmsPhoneNumber result = apiInstance.PostRoutingSmsAddresses(body);
+                SmsAddress result = apiInstance.PostRoutingSmsAddresses(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3374,7 +3500,7 @@ namespace Example
 
 ### Return type
 
-[**SmsPhoneNumber**](SmsPhoneNumber.html)
+[**SmsAddress**](SmsAddress.html)
 
 <a name="postroutingsmsphonenumbers"></a>
 

@@ -1361,9 +1361,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="externalTrunkBasesIds">Filter by externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>OutboundRouteEntityListing</returns>
-        OutboundRouteEntityListing GetTelephonyProvidersEdgesOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
+        OutboundRouteEntityListing GetTelephonyProvidersEdgesOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null);
 
         /// <summary>
         /// Get outbound routes
@@ -1376,9 +1377,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="externalTrunkBasesIds">Filter by externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>ApiResponse of OutboundRouteEntityListing</returns>
-        ApiResponse<OutboundRouteEntityListing> GetTelephonyProvidersEdgesOutboundroutesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
+        ApiResponse<OutboundRouteEntityListing> GetTelephonyProvidersEdgesOutboundroutesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null);
         
         /// <summary>
         /// Get a Phone by ID
@@ -1723,9 +1725,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="externalTrunkBasesIds">externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>OutboundRouteBaseEntityListing</returns>
-        OutboundRouteBaseEntityListing GetTelephonyProvidersEdgesSiteOutboundroutes (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        OutboundRouteBaseEntityListing GetTelephonyProvidersEdgesSiteOutboundroutes (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null);
 
         /// <summary>
         /// Get outbound routes
@@ -1738,9 +1741,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="externalTrunkBasesIds">externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>ApiResponse of OutboundRouteBaseEntityListing</returns>
-        ApiResponse<OutboundRouteBaseEntityListing> GetTelephonyProvidersEdgesSiteOutboundroutesWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        ApiResponse<OutboundRouteBaseEntityListing> GetTelephonyProvidersEdgesSiteOutboundroutesWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null);
         
         /// <summary>
         /// Get the list of Sites.
@@ -4297,9 +4301,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="externalTrunkBasesIds">Filter by externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>Task of OutboundRouteEntityListing</returns>
-        System.Threading.Tasks.Task<OutboundRouteEntityListing> GetTelephonyProvidersEdgesOutboundroutesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
+        System.Threading.Tasks.Task<OutboundRouteEntityListing> GetTelephonyProvidersEdgesOutboundroutesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null);
 
         /// <summary>
         /// Get outbound routes
@@ -4312,9 +4317,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="externalTrunkBasesIds">Filter by externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>Task of ApiResponse (OutboundRouteEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OutboundRouteEntityListing>> GetTelephonyProvidersEdgesOutboundroutesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
+        System.Threading.Tasks.Task<ApiResponse<OutboundRouteEntityListing>> GetTelephonyProvidersEdgesOutboundroutesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null);
         
         /// <summary>
         /// Get a Phone by ID
@@ -4659,9 +4665,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="externalTrunkBasesIds">externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>Task of OutboundRouteBaseEntityListing</returns>
-        System.Threading.Tasks.Task<OutboundRouteBaseEntityListing> GetTelephonyProvidersEdgesSiteOutboundroutesAsync (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        System.Threading.Tasks.Task<OutboundRouteBaseEntityListing> GetTelephonyProvidersEdgesSiteOutboundroutesAsync (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null);
 
         /// <summary>
         /// Get outbound routes
@@ -4674,9 +4681,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="externalTrunkBasesIds">externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>Task of ApiResponse (OutboundRouteBaseEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OutboundRouteBaseEntityListing>> GetTelephonyProvidersEdgesSiteOutboundroutesAsyncWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        System.Threading.Tasks.Task<ApiResponse<OutboundRouteBaseEntityListing>> GetTelephonyProvidersEdgesSiteOutboundroutesAsyncWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null);
         
         /// <summary>
         /// Get the list of Sites.
@@ -16959,11 +16967,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="externalTrunkBasesIds">Filter by externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>OutboundRouteEntityListing</returns>
-        public OutboundRouteEntityListing GetTelephonyProvidersEdgesOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
+        public OutboundRouteEntityListing GetTelephonyProvidersEdgesOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null)
         {
-             ApiResponse<OutboundRouteEntityListing> localVarResponse = GetTelephonyProvidersEdgesOutboundroutesWithHttpInfo(pageSize, pageNumber, name, siteId, sortBy);
+             ApiResponse<OutboundRouteEntityListing> localVarResponse = GetTelephonyProvidersEdgesOutboundroutesWithHttpInfo(pageSize, pageNumber, name, siteId, externalTrunkBasesIds, sortBy);
              return localVarResponse.Data;
         }
 
@@ -16975,9 +16984,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="externalTrunkBasesIds">Filter by externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>ApiResponse of OutboundRouteEntityListing</returns>
-        public ApiResponse< OutboundRouteEntityListing > GetTelephonyProvidersEdgesOutboundroutesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
+        public ApiResponse< OutboundRouteEntityListing > GetTelephonyProvidersEdgesOutboundroutesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges/outboundroutes";
@@ -17017,6 +17027,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (siteId != null) localVarQueryParams.Add(new Tuple<string, string>("site.id", this.Configuration.ApiClient.ParameterToString(siteId)));
+            if (externalTrunkBasesIds != null) localVarQueryParams.Add(new Tuple<string, string>("externalTrunkBases.ids", this.Configuration.ApiClient.ParameterToString(externalTrunkBasesIds)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
 
             // Header params
@@ -17063,11 +17074,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="externalTrunkBasesIds">Filter by externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>Task of OutboundRouteEntityListing</returns>
-        public async System.Threading.Tasks.Task<OutboundRouteEntityListing> GetTelephonyProvidersEdgesOutboundroutesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<OutboundRouteEntityListing> GetTelephonyProvidersEdgesOutboundroutesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null)
         {
-             ApiResponse<OutboundRouteEntityListing> localVarResponse = await GetTelephonyProvidersEdgesOutboundroutesAsyncWithHttpInfo(pageSize, pageNumber, name, siteId, sortBy);
+             ApiResponse<OutboundRouteEntityListing> localVarResponse = await GetTelephonyProvidersEdgesOutboundroutesAsyncWithHttpInfo(pageSize, pageNumber, name, siteId, externalTrunkBasesIds, sortBy);
              return localVarResponse.Data;
 
         }
@@ -17080,9 +17092,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="externalTrunkBasesIds">Filter by externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>Task of ApiResponse (OutboundRouteEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteEntityListing>> GetTelephonyProvidersEdgesOutboundroutesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteEntityListing>> GetTelephonyProvidersEdgesOutboundroutesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges/outboundroutes";
@@ -17122,6 +17135,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (siteId != null) localVarQueryParams.Add(new Tuple<string, string>("site.id", this.Configuration.ApiClient.ParameterToString(siteId)));
+            if (externalTrunkBasesIds != null) localVarQueryParams.Add(new Tuple<string, string>("externalTrunkBases.ids", this.Configuration.ApiClient.ParameterToString(externalTrunkBasesIds)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
 
             // Header params
@@ -19809,11 +19823,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="externalTrunkBasesIds">externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>OutboundRouteBaseEntityListing</returns>
-        public OutboundRouteBaseEntityListing GetTelephonyProvidersEdgesSiteOutboundroutes (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public OutboundRouteBaseEntityListing GetTelephonyProvidersEdgesSiteOutboundroutes (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null)
         {
-             ApiResponse<OutboundRouteBaseEntityListing> localVarResponse = GetTelephonyProvidersEdgesSiteOutboundroutesWithHttpInfo(siteId, pageSize, pageNumber, name, sortBy);
+             ApiResponse<OutboundRouteBaseEntityListing> localVarResponse = GetTelephonyProvidersEdgesSiteOutboundroutesWithHttpInfo(siteId, pageSize, pageNumber, name, externalTrunkBasesIds, sortBy);
              return localVarResponse.Data;
         }
 
@@ -19825,9 +19840,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="externalTrunkBasesIds">externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>ApiResponse of OutboundRouteBaseEntityListing</returns>
-        public ApiResponse< OutboundRouteBaseEntityListing > GetTelephonyProvidersEdgesSiteOutboundroutesWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public ApiResponse< OutboundRouteBaseEntityListing > GetTelephonyProvidersEdgesSiteOutboundroutesWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null)
         { 
             // verify the required parameter 'siteId' is set
             if (siteId == null)
@@ -19870,6 +19886,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (externalTrunkBasesIds != null) localVarQueryParams.Add(new Tuple<string, string>("externalTrunkBases.ids", this.Configuration.ApiClient.ParameterToString(externalTrunkBasesIds)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
 
             // Header params
@@ -19916,11 +19933,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="externalTrunkBasesIds">externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>Task of OutboundRouteBaseEntityListing</returns>
-        public async System.Threading.Tasks.Task<OutboundRouteBaseEntityListing> GetTelephonyProvidersEdgesSiteOutboundroutesAsync (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<OutboundRouteBaseEntityListing> GetTelephonyProvidersEdgesSiteOutboundroutesAsync (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null)
         {
-             ApiResponse<OutboundRouteBaseEntityListing> localVarResponse = await GetTelephonyProvidersEdgesSiteOutboundroutesAsyncWithHttpInfo(siteId, pageSize, pageNumber, name, sortBy);
+             ApiResponse<OutboundRouteBaseEntityListing> localVarResponse = await GetTelephonyProvidersEdgesSiteOutboundroutesAsyncWithHttpInfo(siteId, pageSize, pageNumber, name, externalTrunkBasesIds, sortBy);
              return localVarResponse.Data;
 
         }
@@ -19933,9 +19951,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="externalTrunkBasesIds">externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>Task of ApiResponse (OutboundRouteBaseEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteBaseEntityListing>> GetTelephonyProvidersEdgesSiteOutboundroutesAsyncWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteBaseEntityListing>> GetTelephonyProvidersEdgesSiteOutboundroutesAsyncWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null)
         { 
             // verify the required parameter 'siteId' is set
             if (siteId == null)
@@ -19979,6 +19998,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (externalTrunkBasesIds != null) localVarQueryParams.Add(new Tuple<string, string>("externalTrunkBases.ids", this.Configuration.ApiClient.ParameterToString(externalTrunkBasesIds)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
 
             // Header params

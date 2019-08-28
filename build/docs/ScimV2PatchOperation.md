@@ -7,9 +7,9 @@ title: ScimV2PatchOperation
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Op** | **string** | Patch operation | |
-| **Path** | **string** | Attribute path describing the target of the operation.  Required for &#39;remove&#39; operation. | [optional] |
-| **Value** | [**JsonNode**](JsonNode.html) | Value to set in the specified path | [optional] |
+| **Op** | **string** | The patch operation to perform. | |
+| **Path** | **string** | The attribute path that describes the target of the operation. Required for a &#39;remove&#39; operation. | [optional] |
+| **Value** | [**JsonNode**](JsonNode.html) | The value to set in the path. | [optional] |
 {: class="table table-striped"}
 
 

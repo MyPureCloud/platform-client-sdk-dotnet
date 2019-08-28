@@ -775,6 +775,52 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SkillEntityListing> GetRoutingSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null);
         
         /// <summary>
+        /// Get an Address by Id for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>SmsAddress</returns>
+        SmsAddress GetRoutingSmsAddress (string addressId);
+
+        /// <summary>
+        /// Get an Address by Id for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>ApiResponse of SmsAddress</returns>
+        ApiResponse<SmsAddress> GetRoutingSmsAddressWithHttpInfo (string addressId);
+        
+        /// <summary>
+        /// Get a list of Addresses for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>SmsAddressEntityListing</returns>
+        SmsAddressEntityListing GetRoutingSmsAddresses (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a list of Addresses for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of SmsAddressEntityListing</returns>
+        ApiResponse<SmsAddressEntityListing> GetRoutingSmsAddressesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
+        /// <summary>
         /// Get a list of available phone numbers for SMS provisioning.
         /// </summary>
         /// <remarks>
@@ -1302,8 +1348,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsAddress</param>
-        /// <returns>SmsPhoneNumber</returns>
-        SmsPhoneNumber PostRoutingSmsAddresses (SmsAddressProvision body);
+        /// <returns>SmsAddress</returns>
+        SmsAddress PostRoutingSmsAddresses (SmsAddressProvision body);
 
         /// <summary>
         /// Provision an Address for SMS
@@ -1313,8 +1359,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsAddress</param>
-        /// <returns>ApiResponse of SmsPhoneNumber</returns>
-        ApiResponse<SmsPhoneNumber> PostRoutingSmsAddressesWithHttpInfo (SmsAddressProvision body);
+        /// <returns>ApiResponse of SmsAddress</returns>
+        ApiResponse<SmsAddress> PostRoutingSmsAddressesWithHttpInfo (SmsAddressProvision body);
         
         /// <summary>
         /// Provision a phone number for SMS
@@ -2365,6 +2411,52 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetRoutingSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null);
         
         /// <summary>
+        /// Get an Address by Id for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>Task of SmsAddress</returns>
+        System.Threading.Tasks.Task<SmsAddress> GetRoutingSmsAddressAsync (string addressId);
+
+        /// <summary>
+        /// Get an Address by Id for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>Task of ApiResponse (SmsAddress)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SmsAddress>> GetRoutingSmsAddressAsyncWithHttpInfo (string addressId);
+        
+        /// <summary>
+        /// Get a list of Addresses for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of SmsAddressEntityListing</returns>
+        System.Threading.Tasks.Task<SmsAddressEntityListing> GetRoutingSmsAddressesAsync (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a list of Addresses for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (SmsAddressEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SmsAddressEntityListing>> GetRoutingSmsAddressesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
+        /// <summary>
         /// Get a list of available phone numbers for SMS provisioning.
         /// </summary>
         /// <remarks>
@@ -2892,8 +2984,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsAddress</param>
-        /// <returns>Task of SmsPhoneNumber</returns>
-        System.Threading.Tasks.Task<SmsPhoneNumber> PostRoutingSmsAddressesAsync (SmsAddressProvision body);
+        /// <returns>Task of SmsAddress</returns>
+        System.Threading.Tasks.Task<SmsAddress> PostRoutingSmsAddressesAsync (SmsAddressProvision body);
 
         /// <summary>
         /// Provision an Address for SMS
@@ -2903,8 +2995,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsAddress</param>
-        /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsAddressesAsyncWithHttpInfo (SmsAddressProvision body);
+        /// <returns>Task of ApiResponse (SmsAddress)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SmsAddress>> PostRoutingSmsAddressesAsyncWithHttpInfo (SmsAddressProvision body);
         
         /// <summary>
         /// Provision a phone number for SMS
@@ -9326,6 +9418,391 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get an Address by Id for SMS 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>SmsAddress</returns>
+        public SmsAddress GetRoutingSmsAddress (string addressId)
+        {
+             ApiResponse<SmsAddress> localVarResponse = GetRoutingSmsAddressWithHttpInfo(addressId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an Address by Id for SMS 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>ApiResponse of SmsAddress</returns>
+        public ApiResponse< SmsAddress > GetRoutingSmsAddressWithHttpInfo (string addressId)
+        { 
+            // verify the required parameter 'addressId' is set
+            if (addressId == null)
+                throw new ApiException(400, "Missing required parameter 'addressId' when calling RoutingApi->GetRoutingSmsAddress");
+
+            var localVarPath = "/api/v2/routing/sms/addresses/{addressId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsAddress: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsAddress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SmsAddress>(localVarStatusCode,
+                localVarHeaders,
+                (SmsAddress) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsAddress)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get an Address by Id for SMS 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>Task of SmsAddress</returns>
+        public async System.Threading.Tasks.Task<SmsAddress> GetRoutingSmsAddressAsync (string addressId)
+        {
+             ApiResponse<SmsAddress> localVarResponse = await GetRoutingSmsAddressAsyncWithHttpInfo(addressId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an Address by Id for SMS 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressId">Address ID</param>
+        /// <returns>Task of ApiResponse (SmsAddress)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SmsAddress>> GetRoutingSmsAddressAsyncWithHttpInfo (string addressId)
+        { 
+            // verify the required parameter 'addressId' is set
+            if (addressId == null)
+                throw new ApiException(400, "Missing required parameter 'addressId' when calling RoutingApi->GetRoutingSmsAddress");
+            
+
+            var localVarPath = "/api/v2/routing/sms/addresses/{addressId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsAddress: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsAddress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SmsAddress>(localVarStatusCode,
+                localVarHeaders,
+                (SmsAddress) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsAddress)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a list of Addresses for SMS 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>SmsAddressEntityListing</returns>
+        public SmsAddressEntityListing GetRoutingSmsAddresses (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<SmsAddressEntityListing> localVarResponse = GetRoutingSmsAddressesWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of Addresses for SMS 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of SmsAddressEntityListing</returns>
+        public ApiResponse< SmsAddressEntityListing > GetRoutingSmsAddressesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/sms/addresses";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsAddresses: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsAddresses: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SmsAddressEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SmsAddressEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsAddressEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a list of Addresses for SMS 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of SmsAddressEntityListing</returns>
+        public async System.Threading.Tasks.Task<SmsAddressEntityListing> GetRoutingSmsAddressesAsync (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<SmsAddressEntityListing> localVarResponse = await GetRoutingSmsAddressesAsyncWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of Addresses for SMS 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (SmsAddressEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SmsAddressEntityListing>> GetRoutingSmsAddressesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/sms/addresses";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsAddresses: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsAddresses: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SmsAddressEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SmsAddressEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsAddressEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get a list of available phone numbers for SMS provisioning. This request will return up to 30 random phone numbers matching the criteria specified.  To get additional phone numbers repeat the request.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13717,10 +14194,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsAddress</param>
-        /// <returns>SmsPhoneNumber</returns>
-        public SmsPhoneNumber PostRoutingSmsAddresses (SmsAddressProvision body)
+        /// <returns>SmsAddress</returns>
+        public SmsAddress PostRoutingSmsAddresses (SmsAddressProvision body)
         {
-             ApiResponse<SmsPhoneNumber> localVarResponse = PostRoutingSmsAddressesWithHttpInfo(body);
+             ApiResponse<SmsAddress> localVarResponse = PostRoutingSmsAddressesWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -13729,8 +14206,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsAddress</param>
-        /// <returns>ApiResponse of SmsPhoneNumber</returns>
-        public ApiResponse< SmsPhoneNumber > PostRoutingSmsAddressesWithHttpInfo (SmsAddressProvision body)
+        /// <returns>ApiResponse of SmsAddress</returns>
+        public ApiResponse< SmsAddress > PostRoutingSmsAddressesWithHttpInfo (SmsAddressProvision body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -13803,9 +14280,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostRoutingSmsAddresses: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SmsPhoneNumber>(localVarStatusCode,
+            return new ApiResponse<SmsAddress>(localVarStatusCode,
                 localVarHeaders,
-                (SmsPhoneNumber) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsPhoneNumber)),
+                (SmsAddress) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsAddress)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -13816,10 +14293,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsAddress</param>
-        /// <returns>Task of SmsPhoneNumber</returns>
-        public async System.Threading.Tasks.Task<SmsPhoneNumber> PostRoutingSmsAddressesAsync (SmsAddressProvision body)
+        /// <returns>Task of SmsAddress</returns>
+        public async System.Threading.Tasks.Task<SmsAddress> PostRoutingSmsAddressesAsync (SmsAddressProvision body)
         {
-             ApiResponse<SmsPhoneNumber> localVarResponse = await PostRoutingSmsAddressesAsyncWithHttpInfo(body);
+             ApiResponse<SmsAddress> localVarResponse = await PostRoutingSmsAddressesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -13829,8 +14306,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsAddress</param>
-        /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsAddressesAsyncWithHttpInfo (SmsAddressProvision body)
+        /// <returns>Task of ApiResponse (SmsAddress)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SmsAddress>> PostRoutingSmsAddressesAsyncWithHttpInfo (SmsAddressProvision body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -13904,9 +14381,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostRoutingSmsAddresses: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SmsPhoneNumber>(localVarStatusCode,
+            return new ApiResponse<SmsAddress>(localVarStatusCode,
                 localVarHeaders,
-                (SmsPhoneNumber) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsPhoneNumber)),
+                (SmsAddress) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsAddress)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

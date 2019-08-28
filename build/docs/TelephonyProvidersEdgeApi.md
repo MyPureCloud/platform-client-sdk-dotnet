@@ -3578,7 +3578,7 @@ namespace Example
 
 <a name="gettelephonyprovidersedgesoutboundroutes"></a>
 
-## [**OutboundRouteEntityListing**](OutboundRouteEntityListing.html) GetTelephonyProvidersEdgesOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
+## [**OutboundRouteEntityListing**](OutboundRouteEntityListing.html) GetTelephonyProvidersEdgesOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null)
 
 
 
@@ -3612,12 +3612,13 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var name = name_example;  // string | Name (optional) 
             var siteId = siteId_example;  // string | Filter by site.id (optional) 
+            var externalTrunkBasesIds = externalTrunkBasesIds_example;  // string | Filter by externalTrunkBases.ids (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
 
             try
             { 
                 // Get outbound routes
-                OutboundRouteEntityListing result = apiInstance.GetTelephonyProvidersEdgesOutboundroutes(pageSize, pageNumber, name, siteId, sortBy);
+                OutboundRouteEntityListing result = apiInstance.GetTelephonyProvidersEdgesOutboundroutes(pageSize, pageNumber, name, siteId, externalTrunkBasesIds, sortBy);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3638,6 +3639,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **name** | **string**| Name | [optional]  |
 | **siteId** | **string**| Filter by site.id | [optional]  |
+| **externalTrunkBasesIds** | **string**| Filter by externalTrunkBases.ids | [optional]  |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
 {: class="table table-striped"}
 
@@ -4487,7 +4489,7 @@ namespace Example
 
 <a name="gettelephonyprovidersedgessiteoutboundroutes"></a>
 
-## [**OutboundRouteBaseEntityListing**](OutboundRouteBaseEntityListing.html) GetTelephonyProvidersEdgesSiteOutboundroutes (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+## [**OutboundRouteBaseEntityListing**](OutboundRouteBaseEntityListing.html) GetTelephonyProvidersEdgesSiteOutboundroutes (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null)
 
 
 
@@ -4521,12 +4523,13 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var name = name_example;  // string | Name (optional) 
+            var externalTrunkBasesIds = externalTrunkBasesIds_example;  // string | externalTrunkBases.ids (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
 
             try
             { 
                 // Get outbound routes
-                OutboundRouteBaseEntityListing result = apiInstance.GetTelephonyProvidersEdgesSiteOutboundroutes(siteId, pageSize, pageNumber, name, sortBy);
+                OutboundRouteBaseEntityListing result = apiInstance.GetTelephonyProvidersEdgesSiteOutboundroutes(siteId, pageSize, pageNumber, name, externalTrunkBasesIds, sortBy);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4547,6 +4550,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **name** | **string**| Name | [optional]  |
+| **externalTrunkBasesIds** | **string**| externalTrunkBases.ids | [optional]  |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
 {: class="table table-striped"}
 

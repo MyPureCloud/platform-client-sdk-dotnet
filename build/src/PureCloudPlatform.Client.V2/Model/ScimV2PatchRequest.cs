@@ -40,7 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2PatchRequest" /> class.
         /// </summary>
-        /// <param name="Schemas">Schemas used in this patch request (required).</param>
+        /// <param name="Schemas">A list of schemas used in the patch request. (required).</param>
         /// <param name="Operations">Operations.</param>
         public ScimV2PatchRequest(List<string> Schemas = null, List<ScimV2PatchOperation> Operations = null)
         {
@@ -52,9 +52,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Schemas used in this patch request
+        /// A list of schemas used in the patch request.
         /// </summary>
-        /// <value>Schemas used in this patch request</value>
+        /// <value>A list of schemas used in the patch request.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
         public List<string> Schemas { get; set; }
         

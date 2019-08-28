@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Type of Email
+        /// The type of email address.
         /// </summary>
-        /// <value>Type of Email</value>
+        /// <value>The type of email address.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -61,9 +61,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Type of Email
+        /// The type of email address.
         /// </summary>
-        /// <value>Type of Email</value>
+        /// <value>The type of email address.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
@@ -74,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimEmail" /> class.
         /// </summary>
-        /// <param name="Value">Email address.</param>
-        /// <param name="Type">Type of Email.</param>
-        /// <param name="Primary">Primary flag.</param>
+        /// <param name="Value">The email address..</param>
+        /// <param name="Type">The type of email address..</param>
+        /// <param name="Primary">Indicates whether the email address is the primary email address..</param>
         public ScimEmail(string Value = null, TypeEnum? Type = null, bool? Primary = null)
         {
             this.Value = Value;
@@ -88,9 +88,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Email address
+        /// The email address.
         /// </summary>
-        /// <value>Email address</value>
+        /// <value>The email address.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         
@@ -99,9 +99,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Primary flag
+        /// Indicates whether the email address is the primary email address.
         /// </summary>
-        /// <value>Primary flag</value>
+        /// <value>Indicates whether the email address is the primary email address.</value>
         [DataMember(Name="primary", EmitDefaultValue=false)]
         public bool? Primary { get; set; }
         

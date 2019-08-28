@@ -7,8 +7,8 @@ title: Photo
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Value** | **string** | URI of photo | [optional] |
-| **Type** | **string** | Type of photo | [optional] |
+| **Value** | **string** | The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG.  | [optional] |
+| **Type** | **string** | The type of photo. | [optional] |
 {: class="table table-striped"}
 
 

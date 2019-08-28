@@ -39,6 +39,26 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FieldConfig> GetFieldconfigWithHttpInfo (string type);
         
         /// <summary>
+        /// Get the list of domains that will be allowed to embed PureCloud applications
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>EmbeddedIntegration</returns>
+        EmbeddedIntegration GetOrganizationsEmbeddedintegration ();
+
+        /// <summary>
+        /// Get the list of domains that will be allowed to embed PureCloud applications
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of EmbeddedIntegration</returns>
+        ApiResponse<EmbeddedIntegration> GetOrganizationsEmbeddedintegrationWithHttpInfo ();
+        
+        /// <summary>
         /// Get organization.
         /// </summary>
         /// <remarks>
@@ -59,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Organization> GetOrganizationsMeWithHttpInfo ();
         
         /// <summary>
-        /// Get organization whitelist settings
+        /// Use PUT /api/v2/organizations/embeddedintegration instead
         /// </summary>
         /// <remarks>
         /// 
@@ -69,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Api
         OrgWhitelistSettings GetOrganizationsWhitelist ();
 
         /// <summary>
-        /// Get organization whitelist settings
+        /// Use PUT /api/v2/organizations/embeddedintegration instead
         /// </summary>
         /// <remarks>
         /// 
@@ -103,6 +123,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<OrganizationFeatures> PatchOrganizationsFeatureWithHttpInfo (string featureName, FeatureState enabled);
         
         /// <summary>
+        /// Update the list of domains that will be allowed to embed PureCloud applications
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Whitelist settings</param>
+        /// <returns>EmbeddedIntegration</returns>
+        EmbeddedIntegration PutOrganizationsEmbeddedintegration (EmbeddedIntegration body);
+
+        /// <summary>
+        /// Update the list of domains that will be allowed to embed PureCloud applications
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Whitelist settings</param>
+        /// <returns>ApiResponse of EmbeddedIntegration</returns>
+        ApiResponse<EmbeddedIntegration> PutOrganizationsEmbeddedintegrationWithHttpInfo (EmbeddedIntegration body);
+        
+        /// <summary>
         /// Update organization.
         /// </summary>
         /// <remarks>
@@ -125,7 +167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Organization> PutOrganizationsMeWithHttpInfo (Organization body = null);
         
         /// <summary>
-        /// Update organization whitelist settings
+        /// Use PUT /api/v2/organizations/embeddedintegration instead
         /// </summary>
         /// <remarks>
         /// 
@@ -136,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         OrgWhitelistSettings PutOrganizationsWhitelist (OrgWhitelistSettings body);
 
         /// <summary>
-        /// Update organization whitelist settings
+        /// Use PUT /api/v2/organizations/embeddedintegration instead
         /// </summary>
         /// <remarks>
         /// 
@@ -173,6 +215,26 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FieldConfig>> GetFieldconfigAsyncWithHttpInfo (string type);
         
         /// <summary>
+        /// Get the list of domains that will be allowed to embed PureCloud applications
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of EmbeddedIntegration</returns>
+        System.Threading.Tasks.Task<EmbeddedIntegration> GetOrganizationsEmbeddedintegrationAsync ();
+
+        /// <summary>
+        /// Get the list of domains that will be allowed to embed PureCloud applications
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (EmbeddedIntegration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmbeddedIntegration>> GetOrganizationsEmbeddedintegrationAsyncWithHttpInfo ();
+        
+        /// <summary>
         /// Get organization.
         /// </summary>
         /// <remarks>
@@ -193,7 +255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Organization>> GetOrganizationsMeAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Get organization whitelist settings
+        /// Use PUT /api/v2/organizations/embeddedintegration instead
         /// </summary>
         /// <remarks>
         /// 
@@ -203,7 +265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<OrgWhitelistSettings> GetOrganizationsWhitelistAsync ();
 
         /// <summary>
-        /// Get organization whitelist settings
+        /// Use PUT /api/v2/organizations/embeddedintegration instead
         /// </summary>
         /// <remarks>
         /// 
@@ -237,6 +299,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<OrganizationFeatures>> PatchOrganizationsFeatureAsyncWithHttpInfo (string featureName, FeatureState enabled);
         
         /// <summary>
+        /// Update the list of domains that will be allowed to embed PureCloud applications
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Whitelist settings</param>
+        /// <returns>Task of EmbeddedIntegration</returns>
+        System.Threading.Tasks.Task<EmbeddedIntegration> PutOrganizationsEmbeddedintegrationAsync (EmbeddedIntegration body);
+
+        /// <summary>
+        /// Update the list of domains that will be allowed to embed PureCloud applications
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Whitelist settings</param>
+        /// <returns>Task of ApiResponse (EmbeddedIntegration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmbeddedIntegration>> PutOrganizationsEmbeddedintegrationAsyncWithHttpInfo (EmbeddedIntegration body);
+        
+        /// <summary>
         /// Update organization.
         /// </summary>
         /// <remarks>
@@ -259,7 +343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Organization>> PutOrganizationsMeAsyncWithHttpInfo (Organization body = null);
         
         /// <summary>
-        /// Update organization whitelist settings
+        /// Use PUT /api/v2/organizations/embeddedintegration instead
         /// </summary>
         /// <remarks>
         /// 
@@ -270,7 +354,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<OrgWhitelistSettings> PutOrganizationsWhitelistAsync (OrgWhitelistSettings body);
 
         /// <summary>
-        /// Update organization whitelist settings
+        /// Use PUT /api/v2/organizations/embeddedintegration instead
         /// </summary>
         /// <remarks>
         /// 
@@ -566,6 +650,186 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get the list of domains that will be allowed to embed PureCloud applications 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>EmbeddedIntegration</returns>
+        public EmbeddedIntegration GetOrganizationsEmbeddedintegration ()
+        {
+             ApiResponse<EmbeddedIntegration> localVarResponse = GetOrganizationsEmbeddedintegrationWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of domains that will be allowed to embed PureCloud applications 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of EmbeddedIntegration</returns>
+        public ApiResponse< EmbeddedIntegration > GetOrganizationsEmbeddedintegrationWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/organizations/embeddedintegration";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsEmbeddedintegration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsEmbeddedintegration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmbeddedIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (EmbeddedIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbeddedIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the list of domains that will be allowed to embed PureCloud applications 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of EmbeddedIntegration</returns>
+        public async System.Threading.Tasks.Task<EmbeddedIntegration> GetOrganizationsEmbeddedintegrationAsync ()
+        {
+             ApiResponse<EmbeddedIntegration> localVarResponse = await GetOrganizationsEmbeddedintegrationAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of domains that will be allowed to embed PureCloud applications 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (EmbeddedIntegration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmbeddedIntegration>> GetOrganizationsEmbeddedintegrationAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/organizations/embeddedintegration";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsEmbeddedintegration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsEmbeddedintegration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmbeddedIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (EmbeddedIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbeddedIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get organization. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -746,7 +1010,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get organization whitelist settings 
+        /// Use PUT /api/v2/organizations/embeddedintegration instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OrgWhitelistSettings</returns>
@@ -757,7 +1021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get organization whitelist settings 
+        /// Use PUT /api/v2/organizations/embeddedintegration instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OrgWhitelistSettings</returns>
@@ -835,7 +1099,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get organization whitelist settings 
+        /// Use PUT /api/v2/organizations/embeddedintegration instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OrgWhitelistSettings</returns>
@@ -847,7 +1111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get organization whitelist settings 
+        /// Use PUT /api/v2/organizations/embeddedintegration instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OrgWhitelistSettings)</returns>
@@ -1140,6 +1404,207 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Update the list of domains that will be allowed to embed PureCloud applications 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Whitelist settings</param>
+        /// <returns>EmbeddedIntegration</returns>
+        public EmbeddedIntegration PutOrganizationsEmbeddedintegration (EmbeddedIntegration body)
+        {
+             ApiResponse<EmbeddedIntegration> localVarResponse = PutOrganizationsEmbeddedintegrationWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the list of domains that will be allowed to embed PureCloud applications 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Whitelist settings</param>
+        /// <returns>ApiResponse of EmbeddedIntegration</returns>
+        public ApiResponse< EmbeddedIntegration > PutOrganizationsEmbeddedintegrationWithHttpInfo (EmbeddedIntegration body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationApi->PutOrganizationsEmbeddedintegration");
+
+            var localVarPath = "/api/v2/organizations/embeddedintegration";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsEmbeddedintegration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsEmbeddedintegration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmbeddedIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (EmbeddedIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbeddedIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update the list of domains that will be allowed to embed PureCloud applications 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Whitelist settings</param>
+        /// <returns>Task of EmbeddedIntegration</returns>
+        public async System.Threading.Tasks.Task<EmbeddedIntegration> PutOrganizationsEmbeddedintegrationAsync (EmbeddedIntegration body)
+        {
+             ApiResponse<EmbeddedIntegration> localVarResponse = await PutOrganizationsEmbeddedintegrationAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the list of domains that will be allowed to embed PureCloud applications 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Whitelist settings</param>
+        /// <returns>Task of ApiResponse (EmbeddedIntegration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmbeddedIntegration>> PutOrganizationsEmbeddedintegrationAsyncWithHttpInfo (EmbeddedIntegration body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationApi->PutOrganizationsEmbeddedintegration");
+            
+
+            var localVarPath = "/api/v2/organizations/embeddedintegration";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsEmbeddedintegration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsEmbeddedintegration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmbeddedIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (EmbeddedIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbeddedIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Update organization. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1334,7 +1799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update organization whitelist settings 
+        /// Use PUT /api/v2/organizations/embeddedintegration instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
@@ -1346,7 +1811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update organization whitelist settings 
+        /// Use PUT /api/v2/organizations/embeddedintegration instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
@@ -1433,7 +1898,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update organization whitelist settings 
+        /// Use PUT /api/v2/organizations/embeddedintegration instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
@@ -1446,7 +1911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update organization whitelist settings 
+        /// Use PUT /api/v2/organizations/embeddedintegration instead 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>

@@ -11,6 +11,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteConversationParticipantFlaggedreason**](ConversationsApi.html#deleteconversationparticipantflaggedreason) | **DELETE** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Remove flagged reason from conversation participant. |
 | [**DeleteConversationsCallParticipantConsult**](ConversationsApi.html#deleteconversationscallparticipantconsult) | **DELETE** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Cancel the transfer |
 | [**DeleteConversationsEmailMessagesDraftAttachment**](ConversationsApi.html#deleteconversationsemailmessagesdraftattachment) | **DELETE** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
+| [**DeleteConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationsfacebookintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Delete a Facebook messaging integration |
+| [**DeleteConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationslineintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/line/{integrationId} | Delete a LINE messenger integration |
+| [**DeleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationstwitterintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Delete a Twitter messaging integration |
 | [**GetAnalyticsConversationDetails**](ConversationsApi.html#getanalyticsconversationdetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
 | [**GetAnalyticsConversationsDetails**](ConversationsApi.html#getanalyticsconversationsdetails) | **GET** /api/v2/analytics/conversations/details | Gets multiple conversations by id |
 | [**GetConversation**](ConversationsApi.html#getconversation) | **GET** /api/v2/conversations/{conversationId} | Get conversation |
@@ -50,6 +53,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessageParticipantWrapup**](ConversationsApi.html#getconversationsmessageparticipantwrapup) | **GET** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationsMessageParticipantWrapupcodes**](ConversationsApi.html#getconversationsmessageparticipantwrapupcodes) | **GET** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversationsMessages**](ConversationsApi.html#getconversationsmessages) | **GET** /api/v2/conversations/messages | Get active message conversations for the logged in user |
+| [**GetConversationsMessagingIntegrations**](ConversationsApi.html#getconversationsmessagingintegrations) | **GET** /api/v2/conversations/messaging/integrations | Get a list of Integrations |
+| [**GetConversationsMessagingIntegrationsFacebook**](ConversationsApi.html#getconversationsmessagingintegrationsfacebook) | **GET** /api/v2/conversations/messaging/integrations/facebook | Get a list of Facebook Integrations |
+| [**GetConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationsfacebookintegrationid) | **GET** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Get a Facebook messaging integration |
+| [**GetConversationsMessagingIntegrationsLine**](ConversationsApi.html#getconversationsmessagingintegrationsline) | **GET** /api/v2/conversations/messaging/integrations/line | Get a list of LINE messenger Integrations |
+| [**GetConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationslineintegrationid) | **GET** /api/v2/conversations/messaging/integrations/line/{integrationId} | Get a LINE messenger integration |
+| [**GetConversationsMessagingIntegrationsTwitter**](ConversationsApi.html#getconversationsmessagingintegrationstwitter) | **GET** /api/v2/conversations/messaging/integrations/twitter | Get a list of Twitter Integrations |
+| [**GetConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationstwitterintegrationid) | **GET** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Get a Twitter messaging integration |
+| [**GetConversationsMessagingSticker**](ConversationsApi.html#getconversationsmessagingsticker) | **GET** /api/v2/conversations/messaging/stickers/{messengerType} | Get a list of Messaging Stickers |
 | [**PatchConversationParticipant**](ConversationsApi.html#patchconversationparticipant) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](ConversationsApi.html#patchconversationparticipantattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsCall**](ConversationsApi.html#patchconversationscall) | **PATCH** /api/v2/conversations/calls/{conversationId} | Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
@@ -106,9 +117,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessageMessagesBulk**](ConversationsApi.html#postconversationsmessagemessagesbulk) | **POST** /api/v2/conversations/messages/{conversationId}/messages/bulk | Get messages in batch |
 | [**PostConversationsMessageParticipantReplace**](ConversationsApi.html#postconversationsmessageparticipantreplace) | **POST** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsMessages**](ConversationsApi.html#postconversationsmessages) | **POST** /api/v2/conversations/messages | Create an outbound messaging conversation. |
+| [**PostConversationsMessagingIntegrationsFacebook**](ConversationsApi.html#postconversationsmessagingintegrationsfacebook) | **POST** /api/v2/conversations/messaging/integrations/facebook | Create a Facebook Integration |
+| [**PostConversationsMessagingIntegrationsLine**](ConversationsApi.html#postconversationsmessagingintegrationsline) | **POST** /api/v2/conversations/messaging/integrations/line | Create a LINE messenger Integration |
+| [**PostConversationsMessagingIntegrationsTwitter**](ConversationsApi.html#postconversationsmessagingintegrationstwitter) | **POST** /api/v2/conversations/messaging/integrations/twitter | Create a Twitter Integration |
 | [**PutConversationParticipantFlaggedreason**](ConversationsApi.html#putconversationparticipantflaggedreason) | **PUT** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Set flagged reason on conversation participant to indicate bad conversation quality. |
 | [**PutConversationsCallParticipantCommunicationUuidata**](ConversationsApi.html#putconversationscallparticipantcommunicationuuidata) | **PUT** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata | Set uuiData to be sent on future commands. |
 | [**PutConversationsEmailMessagesDraft**](ConversationsApi.html#putconversationsemailmessagesdraft) | **PUT** /api/v2/conversations/emails/{conversationId}/messages/draft | Update conversation draft reply |
+| [**PutConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#putconversationsmessagingintegrationslineintegrationid) | **PUT** /api/v2/conversations/messaging/integrations/line/{integrationId} | Update a LINE messenger integration |
 {: class="table table-striped"}
 
 <a name="deleteconversationparticipantcode"></a>
@@ -351,6 +366,186 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **attachmentId** | **string**| attachmentId |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteconversationsmessagingintegrationsfacebookintegrationid"></a>
+
+## void DeleteConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId)
+
+
+
+Delete a Facebook messaging integration
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteConversationsMessagingIntegrationsFacebookIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Delete a Facebook messaging integration
+                apiInstance.DeleteConversationsMessagingIntegrationsFacebookIntegrationId(integrationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversationsMessagingIntegrationsFacebookIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteconversationsmessagingintegrationslineintegrationid"></a>
+
+## void DeleteConversationsMessagingIntegrationsLineIntegrationId (string integrationId)
+
+
+
+Delete a LINE messenger integration
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteConversationsMessagingIntegrationsLineIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Delete a LINE messenger integration
+                apiInstance.DeleteConversationsMessagingIntegrationsLineIntegrationId(integrationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversationsMessagingIntegrationsLineIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteconversationsmessagingintegrationstwitterintegrationid"></a>
+
+## void DeleteConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId)
+
+
+
+Delete a Twitter messaging integration
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteConversationsMessagingIntegrationsTwitterIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Delete a Twitter messaging integration
+                apiInstance.DeleteConversationsMessagingIntegrationsTwitterIntegrationId(integrationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversationsMessagingIntegrationsTwitterIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2728,6 +2923,506 @@ This endpoint does require any parameters.
 ### Return type
 
 [**MessageConversationEntityListing**](MessageConversationEntityListing.html)
+
+<a name="getconversationsmessagingintegrations"></a>
+
+## [**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing.html) GetConversationsMessagingIntegrations (int? pageSize = null, int? pageNumber = null)
+
+
+
+Get a list of Integrations
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get a list of Integrations
+                MessagingIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrations(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing.html)
+
+<a name="getconversationsmessagingintegrationsfacebook"></a>
+
+## [**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing.html) GetConversationsMessagingIntegrationsFacebook (int? pageSize = null, int? pageNumber = null)
+
+
+
+Get a list of Facebook Integrations
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsFacebookExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get a list of Facebook Integrations
+                FacebookIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsFacebook(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsFacebook: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing.html)
+
+<a name="getconversationsmessagingintegrationsfacebookintegrationid"></a>
+
+## [**FacebookIntegration**](FacebookIntegration.html) GetConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId)
+
+
+
+Get a Facebook messaging integration
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsFacebookIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Get a Facebook messaging integration
+                FacebookIntegration result = apiInstance.GetConversationsMessagingIntegrationsFacebookIntegrationId(integrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsFacebookIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FacebookIntegration**](FacebookIntegration.html)
+
+<a name="getconversationsmessagingintegrationsline"></a>
+
+## [**LineIntegrationEntityListing**](LineIntegrationEntityListing.html) GetConversationsMessagingIntegrationsLine (int? pageSize = null, int? pageNumber = null)
+
+
+
+Get a list of LINE messenger Integrations
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsLineExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get a list of LINE messenger Integrations
+                LineIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsLine(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsLine: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**LineIntegrationEntityListing**](LineIntegrationEntityListing.html)
+
+<a name="getconversationsmessagingintegrationslineintegrationid"></a>
+
+## [**LineIntegration**](LineIntegration.html) GetConversationsMessagingIntegrationsLineIntegrationId (string integrationId)
+
+
+
+Get a LINE messenger integration
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsLineIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Get a LINE messenger integration
+                LineIntegration result = apiInstance.GetConversationsMessagingIntegrationsLineIntegrationId(integrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsLineIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LineIntegration**](LineIntegration.html)
+
+<a name="getconversationsmessagingintegrationstwitter"></a>
+
+## [**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing.html) GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null)
+
+
+
+Get a list of Twitter Integrations
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsTwitterExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get a list of Twitter Integrations
+                TwitterIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsTwitter(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsTwitter: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing.html)
+
+<a name="getconversationsmessagingintegrationstwitterintegrationid"></a>
+
+## [**TwitterIntegration**](TwitterIntegration.html) GetConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId)
+
+
+
+Get a Twitter messaging integration
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsTwitterIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Get a Twitter messaging integration
+                TwitterIntegration result = apiInstance.GetConversationsMessagingIntegrationsTwitterIntegrationId(integrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsTwitterIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TwitterIntegration**](TwitterIntegration.html)
+
+<a name="getconversationsmessagingsticker"></a>
+
+## [**MessagingStickerEntityListing**](MessagingStickerEntityListing.html) GetConversationsMessagingSticker (string messengerType, int? pageSize = null, int? pageNumber = null)
+
+
+
+Get a list of Messaging Stickers
+
+
+
+Requires ANY permissions: 
+
+* conversation:message:create
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingStickerExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var messengerType = messengerType_example;  // string | Messenger Type
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get a list of Messaging Stickers
+                MessagingStickerEntityListing result = apiInstance.GetConversationsMessagingSticker(messengerType, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingSticker: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messengerType** | **string**| Messenger Type |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingStickerEntityListing**](MessagingStickerEntityListing.html)
 
 <a name="patchconversationparticipant"></a>
 
@@ -6257,6 +6952,189 @@ namespace Example
 
 [**MessageConversation**](MessageConversation.html)
 
+<a name="postconversationsmessagingintegrationsfacebook"></a>
+
+## [**FacebookIntegration**](FacebookIntegration.html) PostConversationsMessagingIntegrationsFacebook (FacebookIntegrationRequest body)
+
+
+
+Create a Facebook Integration
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessagingIntegrationsFacebookExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var body = new FacebookIntegrationRequest(); // FacebookIntegrationRequest | FacebookIntegrationRequest
+
+            try
+            { 
+                // Create a Facebook Integration
+                FacebookIntegration result = apiInstance.PostConversationsMessagingIntegrationsFacebook(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessagingIntegrationsFacebook: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**FacebookIntegrationRequest**](FacebookIntegrationRequest.html)| FacebookIntegrationRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FacebookIntegration**](FacebookIntegration.html)
+
+<a name="postconversationsmessagingintegrationsline"></a>
+
+## [**LineIntegration**](LineIntegration.html) PostConversationsMessagingIntegrationsLine (LineIntegrationRequest body)
+
+
+
+Create a LINE messenger Integration
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessagingIntegrationsLineExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var body = new LineIntegrationRequest(); // LineIntegrationRequest | LineIntegrationRequest
+
+            try
+            { 
+                // Create a LINE messenger Integration
+                LineIntegration result = apiInstance.PostConversationsMessagingIntegrationsLine(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessagingIntegrationsLine: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**LineIntegrationRequest**](LineIntegrationRequest.html)| LineIntegrationRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LineIntegration**](LineIntegration.html)
+
+<a name="postconversationsmessagingintegrationstwitter"></a>
+
+## [**TwitterIntegration**](TwitterIntegration.html) PostConversationsMessagingIntegrationsTwitter (TwitterIntegrationRequest body)
+
+
+
+Create a Twitter Integration
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessagingIntegrationsTwitterExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var body = new TwitterIntegrationRequest(); // TwitterIntegrationRequest | TwitterIntegrationRequest
+
+            try
+            { 
+                // Create a Twitter Integration
+                TwitterIntegration result = apiInstance.PostConversationsMessagingIntegrationsTwitter(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessagingIntegrationsTwitter: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**TwitterIntegrationRequest**](TwitterIntegrationRequest.html)| TwitterIntegrationRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TwitterIntegration**](TwitterIntegration.html)
+
 <a name="putconversationparticipantflaggedreason"></a>
 
 ## void PutConversationParticipantFlaggedreason (string conversationId, string participantId)
@@ -6445,4 +7323,67 @@ namespace Example
 ### Return type
 
 [**EmailMessage**](EmailMessage.html)
+
+<a name="putconversationsmessagingintegrationslineintegrationid"></a>
+
+## [**LineIntegration**](LineIntegration.html) PutConversationsMessagingIntegrationsLineIntegrationId (string integrationId, LineIntegrationRequest body)
+
+
+
+Update a LINE messenger integration
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsMessagingIntegrationsLineIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+            var body = new LineIntegrationRequest(); // LineIntegrationRequest | LineIntegrationRequest
+
+            try
+            { 
+                // Update a LINE messenger integration
+                LineIntegration result = apiInstance.PutConversationsMessagingIntegrationsLineIntegrationId(integrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsMessagingIntegrationsLineIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+| **body** | [**LineIntegrationRequest**](LineIntegrationRequest.html)| LineIntegrationRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LineIntegration**](LineIntegration.html)
 

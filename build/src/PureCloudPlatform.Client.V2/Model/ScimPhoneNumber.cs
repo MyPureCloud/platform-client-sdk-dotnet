@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Type of Phone number
+        /// The type of phone number. 
         /// </summary>
-        /// <value>Type of Phone number</value>
+        /// <value>The type of phone number. </value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -91,9 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Type of Phone number
+        /// The type of phone number. 
         /// </summary>
-        /// <value>Type of Phone number</value>
+        /// <value>The type of phone number. </value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
@@ -104,9 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimPhoneNumber" /> class.
         /// </summary>
-        /// <param name="Value">Phone number (e164).</param>
-        /// <param name="Type">Type of Phone number.</param>
-        /// <param name="Primary">Primary phone number flag.</param>
+        /// <param name="Value">A phone number in E.164 format..</param>
+        /// <param name="Type">The type of phone number. .</param>
+        /// <param name="Primary">Indicates whether the phone number is the primary phone number..</param>
         public ScimPhoneNumber(string Value = null, TypeEnum? Type = null, bool? Primary = null)
         {
             this.Value = Value;
@@ -118,9 +118,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Phone number (e164)
+        /// A phone number in E.164 format.
         /// </summary>
-        /// <value>Phone number (e164)</value>
+        /// <value>A phone number in E.164 format.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         
@@ -129,9 +129,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Primary phone number flag
+        /// Indicates whether the phone number is the primary phone number.
         /// </summary>
-        /// <value>Primary phone number flag</value>
+        /// <value>Indicates whether the phone number is the primary phone number.</value>
         [DataMember(Name="primary", EmitDefaultValue=false)]
         public bool? Primary { get; set; }
         

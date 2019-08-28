@@ -85,12 +85,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Type of the phone number provisioned.
         /// </summary>
         /// <value>Type of the phone number provisioned.</value>
         [DataMember(Name="phoneNumberType", EmitDefaultValue=false)]
         public PhoneNumberTypeEnum? PhoneNumberType { get; set; }
+        
+        
         
         
         
@@ -111,12 +116,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhoneNumber">A phone number to be used for SMS communications. E.g. +13175555555 or +34234234234 (required).</param>
         /// <param name="PhoneNumberType">Type of the phone number provisioned. (required).</param>
         /// <param name="CountryCode">The ISO 3166-1 alpha-2 country code of the country this phone number is associated with. (required).</param>
-        public SmsPhoneNumberProvision(string Name = null, string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, string CountryCode = null)
+        /// <param name="AddressId">The id of an address added on your account. Due to regulatory requirements in some countries, an address may be required when provisioning a sms number. In those cases you should provide the provisioned sms address id here.</param>
+        public SmsPhoneNumberProvision(string Name = null, string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, string CountryCode = null, string AddressId = null)
         {
             this.Name = Name;
             this.PhoneNumber = PhoneNumber;
             this.PhoneNumberType = PhoneNumberType;
             this.CountryCode = CountryCode;
+            this.AddressId = AddressId;
             
         }
         
@@ -160,6 +167,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The id of an address added on your account. Due to regulatory requirements in some countries, an address may be required when provisioning a sms number. In those cases you should provide the provisioned sms address id here
+        /// </summary>
+        /// <value>The id of an address added on your account. Due to regulatory requirements in some countries, an address may be required when provisioning a sms number. In those cases you should provide the provisioned sms address id here</value>
+        [DataMember(Name="addressId", EmitDefaultValue=false)]
+        public string AddressId { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -181,6 +197,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  PhoneNumberType: ").Append(PhoneNumberType).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
+            sb.Append("  AddressId: ").Append(AddressId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -244,6 +261,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CountryCode.Equals(other.CountryCode)
                 ) &&
                 (
+                    this.AddressId == other.AddressId ||
+                    this.AddressId != null &&
+                    this.AddressId.Equals(other.AddressId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -276,6 +298,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
+                
+                if (this.AddressId != null)
+                    hash = hash * 59 + this.AddressId.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

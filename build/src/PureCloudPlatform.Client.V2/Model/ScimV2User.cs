@@ -90,24 +90,30 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2User" /> class.
         /// </summary>
         /// <param name="Schemas">schemas supported.</param>
-        /// <param name="Active">Active flag.</param>
-        /// <param name="UserName">User Name (Must be Unique) maps to PureCloud e-mail address.</param>
-        /// <param name="DisplayName">Display Name.</param>
-        /// <param name="Password">Password (updateOnly).</param>
-        /// <param name="Title">Title.</param>
-        /// <param name="PhoneNumbers">Phone numbers.</param>
-        /// <param name="Emails">Emails.</param>
-        /// <param name="Photos">Photos.</param>
-        /// <param name="ExternalId">External ID.</param>
-        /// <param name="Groups">Group References.</param>
+        /// <param name="Active">Indicates whether the user&#39;s administrative status is active..</param>
+        /// <param name="UserName">The user&#39;s PureCloud email address. Must be unique..</param>
+        /// <param name="DisplayName">The display name for the user..</param>
+        /// <param name="Password">A new password for a PureCloud user. Does not return an existing password..</param>
+        /// <param name="Title">The user&#39;s title..</param>
+        /// <param name="PhoneNumbers">A list of the user&#39;s phone numbers..</param>
+        /// <param name="Emails">A list of the user&#39;s email addresses..</param>
+        /// <param name="Photos">A list of the user&#39;s photos..</param>
+        /// <param name="ExternalId">The external ID of the user. Set by the provisioning client. caseExact is set to true. mutability is set to readWrite..</param>
+        /// <param name="Groups">A list of groups that the user is a member of..</param>
+        /// <param name="Roles">Roles.</param>
         /// <param name="Meta">Resource SCIM meta.</param>
         /// <param name="Urnietfparamsscimschemasextensionenterprise20User">Urnietfparamsscimschemasextensionenterprise20User.</param>
-        public ScimV2User(List<string> Schemas = null, bool? Active = null, string UserName = null, string DisplayName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, List<Photo> Photos = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, ScimMetadata Meta = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null)
+        public ScimV2User(List<string> Schemas = null, bool? Active = null, string UserName = null, string DisplayName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, List<Photo> Photos = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, List<string> Roles = null, ScimMetadata Meta = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null)
         {
             this.Schemas = Schemas;
             this.Active = Active;
@@ -120,6 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Photos = Photos;
             this.ExternalId = ExternalId;
             this.Groups = Groups;
+            this.Roles = Roles;
             this.Meta = Meta;
             this.Urnietfparamsscimschemasextensionenterprise20User = Urnietfparamsscimschemasextensionenterprise20User;
             
@@ -146,92 +153,101 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Active flag
+        /// Indicates whether the user&#39;s administrative status is active.
         /// </summary>
-        /// <value>Active flag</value>
+        /// <value>Indicates whether the user&#39;s administrative status is active.</value>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
         
         
         
         /// <summary>
-        /// User Name (Must be Unique) maps to PureCloud e-mail address
+        /// The user&#39;s PureCloud email address. Must be unique.
         /// </summary>
-        /// <value>User Name (Must be Unique) maps to PureCloud e-mail address</value>
+        /// <value>The user&#39;s PureCloud email address. Must be unique.</value>
         [DataMember(Name="userName", EmitDefaultValue=false)]
         public string UserName { get; set; }
         
         
         
         /// <summary>
-        /// Display Name
+        /// The display name for the user.
         /// </summary>
-        /// <value>Display Name</value>
+        /// <value>The display name for the user.</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
         
         
         
         /// <summary>
-        /// Password (updateOnly)
+        /// A new password for a PureCloud user. Does not return an existing password.
         /// </summary>
-        /// <value>Password (updateOnly)</value>
+        /// <value>A new password for a PureCloud user. Does not return an existing password.</value>
         [DataMember(Name="password", EmitDefaultValue=false)]
         public string Password { get; set; }
         
         
         
         /// <summary>
-        /// Title
+        /// The user&#39;s title.
         /// </summary>
-        /// <value>Title</value>
+        /// <value>The user&#39;s title.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
         
         
         
         /// <summary>
-        /// Phone numbers
+        /// A list of the user&#39;s phone numbers.
         /// </summary>
-        /// <value>Phone numbers</value>
+        /// <value>A list of the user&#39;s phone numbers.</value>
         [DataMember(Name="phoneNumbers", EmitDefaultValue=false)]
         public List<ScimPhoneNumber> PhoneNumbers { get; set; }
         
         
         
         /// <summary>
-        /// Emails
+        /// A list of the user&#39;s email addresses.
         /// </summary>
-        /// <value>Emails</value>
+        /// <value>A list of the user&#39;s email addresses.</value>
         [DataMember(Name="emails", EmitDefaultValue=false)]
         public List<ScimEmail> Emails { get; set; }
         
         
         
         /// <summary>
-        /// Photos
+        /// A list of the user&#39;s photos.
         /// </summary>
-        /// <value>Photos</value>
+        /// <value>A list of the user&#39;s photos.</value>
         [DataMember(Name="photos", EmitDefaultValue=false)]
         public List<Photo> Photos { get; set; }
         
         
         
         /// <summary>
-        /// External ID
+        /// The external ID of the user. Set by the provisioning client. caseExact is set to true. mutability is set to readWrite.
         /// </summary>
-        /// <value>External ID</value>
+        /// <value>The external ID of the user. Set by the provisioning client. caseExact is set to true. mutability is set to readWrite.</value>
         [DataMember(Name="externalId", EmitDefaultValue=false)]
         public string ExternalId { get; set; }
         
         
         
         /// <summary>
-        /// Group References
+        /// A list of groups that the user is a member of.
         /// </summary>
-        /// <value>Group References</value>
+        /// <value>A list of groups that the user is a member of.</value>
         [DataMember(Name="groups", EmitDefaultValue=false)]
         public List<ScimV2GroupReference> Groups { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Roles
+        /// </summary>
+        /// <value>Roles</value>
+        [DataMember(Name="roles", EmitDefaultValue=false)]
+        public List<string> Roles { get; set; }
         
         
         
@@ -272,6 +288,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Photos: ").Append(Photos).Append("\n");
             sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
+            sb.Append("  Roles: ").Append(Roles).Append("\n");
             sb.Append("  Meta: ").Append(Meta).Append("\n");
             sb.Append("  Urnietfparamsscimschemasextensionenterprise20User: ").Append(Urnietfparamsscimschemasextensionenterprise20User).Append("\n");
             sb.Append("}\n");
@@ -371,6 +388,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Groups.SequenceEqual(other.Groups)
                 ) &&
                 (
+                    this.Roles == other.Roles ||
+                    this.Roles != null &&
+                    this.Roles.SequenceEqual(other.Roles)
+                ) &&
+                (
                     this.Meta == other.Meta ||
                     this.Meta != null &&
                     this.Meta.Equals(other.Meta)
@@ -429,6 +451,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Groups != null)
                     hash = hash * 59 + this.Groups.GetHashCode();
+                
+                if (this.Roles != null)
+                    hash = hash * 59 + this.Roles.GetHashCode();
                 
                 if (this.Meta != null)
                     hash = hash * 59 + this.Meta.GetHashCode();

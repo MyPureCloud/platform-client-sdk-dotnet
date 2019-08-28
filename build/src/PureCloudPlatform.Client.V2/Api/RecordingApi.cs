@@ -421,8 +421,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to userId)</param>
+        /// <param name="state">Filter by state (optional)</param>
+        /// <param name="showOnlyMyJobs">Show only my jobs (optional)</param>
+        /// <param name="jobType">Job Type (Can be left empty for both) (optional)</param>
         /// <returns>RecordingJobEntityListing</returns>
-        RecordingJobEntityListing GetRecordingJobs (int? pageSize = null, int? pageNumber = null);
+        RecordingJobEntityListing GetRecordingJobs (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null);
 
         /// <summary>
         /// Get the status of all jobs within the user&#39;s organization
@@ -433,8 +437,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to userId)</param>
+        /// <param name="state">Filter by state (optional)</param>
+        /// <param name="showOnlyMyJobs">Show only my jobs (optional)</param>
+        /// <param name="jobType">Job Type (Can be left empty for both) (optional)</param>
         /// <returns>ApiResponse of RecordingJobEntityListing</returns>
-        ApiResponse<RecordingJobEntityListing> GetRecordingJobsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<RecordingJobEntityListing> GetRecordingJobsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null);
         
         /// <summary>
         /// Get the local encryption settings
@@ -1437,8 +1445,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to userId)</param>
+        /// <param name="state">Filter by state (optional)</param>
+        /// <param name="showOnlyMyJobs">Show only my jobs (optional)</param>
+        /// <param name="jobType">Job Type (Can be left empty for both) (optional)</param>
         /// <returns>Task of RecordingJobEntityListing</returns>
-        System.Threading.Tasks.Task<RecordingJobEntityListing> GetRecordingJobsAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<RecordingJobEntityListing> GetRecordingJobsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null);
 
         /// <summary>
         /// Get the status of all jobs within the user&#39;s organization
@@ -1449,8 +1461,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to userId)</param>
+        /// <param name="state">Filter by state (optional)</param>
+        /// <param name="showOnlyMyJobs">Show only my jobs (optional)</param>
+        /// <param name="jobType">Job Type (Can be left empty for both) (optional)</param>
         /// <returns>Task of ApiResponse (RecordingJobEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RecordingJobEntityListing>> GetRecordingJobsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<RecordingJobEntityListing>> GetRecordingJobsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null);
         
         /// <summary>
         /// Get the local encryption settings
@@ -5396,10 +5412,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to userId)</param>
+        /// <param name="state">Filter by state (optional)</param>
+        /// <param name="showOnlyMyJobs">Show only my jobs (optional)</param>
+        /// <param name="jobType">Job Type (Can be left empty for both) (optional)</param>
         /// <returns>RecordingJobEntityListing</returns>
-        public RecordingJobEntityListing GetRecordingJobs (int? pageSize = null, int? pageNumber = null)
+        public RecordingJobEntityListing GetRecordingJobs (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null)
         {
-             ApiResponse<RecordingJobEntityListing> localVarResponse = GetRecordingJobsWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<RecordingJobEntityListing> localVarResponse = GetRecordingJobsWithHttpInfo(pageSize, pageNumber, sortBy, state, showOnlyMyJobs, jobType);
              return localVarResponse.Data;
         }
 
@@ -5409,8 +5429,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to userId)</param>
+        /// <param name="state">Filter by state (optional)</param>
+        /// <param name="showOnlyMyJobs">Show only my jobs (optional)</param>
+        /// <param name="jobType">Job Type (Can be left empty for both) (optional)</param>
         /// <returns>ApiResponse of RecordingJobEntityListing</returns>
-        public ApiResponse< RecordingJobEntityListing > GetRecordingJobsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< RecordingJobEntityListing > GetRecordingJobsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null)
         { 
 
             var localVarPath = "/api/v2/recording/jobs";
@@ -5448,6 +5472,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
+            if (showOnlyMyJobs != null) localVarQueryParams.Add(new Tuple<string, string>("showOnlyMyJobs", this.Configuration.ApiClient.ParameterToString(showOnlyMyJobs)));
+            if (jobType != null) localVarQueryParams.Add(new Tuple<string, string>("jobType", this.Configuration.ApiClient.ParameterToString(jobType)));
 
             // Header params
 
@@ -5491,10 +5519,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to userId)</param>
+        /// <param name="state">Filter by state (optional)</param>
+        /// <param name="showOnlyMyJobs">Show only my jobs (optional)</param>
+        /// <param name="jobType">Job Type (Can be left empty for both) (optional)</param>
         /// <returns>Task of RecordingJobEntityListing</returns>
-        public async System.Threading.Tasks.Task<RecordingJobEntityListing> GetRecordingJobsAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<RecordingJobEntityListing> GetRecordingJobsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null)
         {
-             ApiResponse<RecordingJobEntityListing> localVarResponse = await GetRecordingJobsAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<RecordingJobEntityListing> localVarResponse = await GetRecordingJobsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, state, showOnlyMyJobs, jobType);
              return localVarResponse.Data;
 
         }
@@ -5505,8 +5537,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to userId)</param>
+        /// <param name="state">Filter by state (optional)</param>
+        /// <param name="showOnlyMyJobs">Show only my jobs (optional)</param>
+        /// <param name="jobType">Job Type (Can be left empty for both) (optional)</param>
         /// <returns>Task of ApiResponse (RecordingJobEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RecordingJobEntityListing>> GetRecordingJobsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RecordingJobEntityListing>> GetRecordingJobsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null)
         { 
 
             var localVarPath = "/api/v2/recording/jobs";
@@ -5544,6 +5580,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
+            if (showOnlyMyJobs != null) localVarQueryParams.Add(new Tuple<string, string>("showOnlyMyJobs", this.Configuration.ApiClient.ParameterToString(showOnlyMyJobs)));
+            if (jobType != null) localVarQueryParams.Add(new Tuple<string, string>("jobType", this.Configuration.ApiClient.ParameterToString(jobType)));
 
             // Header params
 

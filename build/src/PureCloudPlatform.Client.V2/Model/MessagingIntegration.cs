@@ -69,7 +69,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Incomplete for "Incomplete"
             /// </summary>
             [EnumMember(Value = "Incomplete")]
-            Incomplete
+            Incomplete,
+            
+            /// <summary>
+            /// Enum Deleting for "Deleting"
+            /// </summary>
+            [EnumMember(Value = "Deleting")]
+            Deleting,
+            
+            /// <summary>
+            /// Enum Deletionfailed for "DeletionFailed"
+            /// </summary>
+            [EnumMember(Value = "DeletionFailed")]
+            Deletionfailed
         }
         
         

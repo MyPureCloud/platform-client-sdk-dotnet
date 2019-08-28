@@ -109,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AppliesTo">One of \&quot;CONTACT\&quot; or \&quot;EXTERNAL_ORGANIZATION\&quot;.  Indicates the built-in entity type to which this schema applies..</param>
         /// <param name="Enabled">The schema&#39;s current enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists.</param>
         /// <param name="CreatedBy">The URI of the user that created this schema..</param>
-        /// <param name="JsonSchema">The JSON schema defining the extension to the built-in entity type. (required).</param>
+        /// <param name="JsonSchema">A JSON schema defining the extension to the built-in entity type. (required).</param>
         public DataSchema(string Name = null, int? Version = null, List<AppliesToEnum> AppliesTo = null, bool? Enabled = null, UriReference CreatedBy = null, JsonSchemaDocument JsonSchema = null)
         {
             this.Name = Name;
@@ -186,9 +186,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The JSON schema defining the extension to the built-in entity type.
+        /// A JSON schema defining the extension to the built-in entity type.
         /// </summary>
-        /// <value>The JSON schema defining the extension to the built-in entity type.</value>
+        /// <value>A JSON schema defining the extension to the built-in entity type.</value>
         [DataMember(Name="jsonSchema", EmitDefaultValue=false)]
         public JsonSchemaDocument JsonSchema { get; set; }
         

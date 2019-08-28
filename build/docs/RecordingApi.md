@@ -1061,7 +1061,7 @@ namespace Example
 
 <a name="getrecordingjobs"></a>
 
-## [**RecordingJobEntityListing**](RecordingJobEntityListing.html) GetRecordingJobs (int? pageSize = null, int? pageNumber = null)
+## [**RecordingJobEntityListing**](RecordingJobEntityListing.html) GetRecordingJobs (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null)
 
 
 
@@ -1093,11 +1093,15 @@ namespace Example
             var apiInstance = new RecordingApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to userId)
+            var state = state_example;  // string | Filter by state (optional) 
+            var showOnlyMyJobs = true;  // bool? | Show only my jobs (optional) 
+            var jobType = jobType_example;  // string | Job Type (Can be left empty for both) (optional) 
 
             try
             { 
                 // Get the status of all jobs within the user's organization
-                RecordingJobEntityListing result = apiInstance.GetRecordingJobs(pageSize, pageNumber);
+                RecordingJobEntityListing result = apiInstance.GetRecordingJobs(pageSize, pageNumber, sortBy, state, showOnlyMyJobs, jobType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1116,6 +1120,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortBy** | **string**| Sort by | [optional] [default to userId]<br />**Values**: userId, dateCreated |
+| **state** | **string**| Filter by state | [optional] <br />**Values**: FULFILLED, PENDING, READY, PROCESSING, CANCELLED, FAILED |
+| **showOnlyMyJobs** | **bool?**| Show only my jobs | [optional]  |
+| **jobType** | **string**| Job Type (Can be left empty for both) | [optional] <br />**Values**: DELETE, EXPORT |
 {: class="table table-striped"}
 
 ### Return type

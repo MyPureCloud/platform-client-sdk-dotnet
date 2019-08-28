@@ -186,6 +186,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Type of the phone number provisioned.
         /// </summary>
@@ -234,6 +237,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsPhoneNumber" /> class.
@@ -258,7 +263,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CancellationDate">Contract end date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="RenewalDate">Contract renewal date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="AutoRenewable">Renewal time period of this phone number, if the phoneNumberType is shortcode..</param>
-        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null)
+        /// <param name="AddressId">The id of an address attached to this phone number..</param>
+        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null)
         {
             this.Name = Name;
             this.PhoneNumber = PhoneNumber;
@@ -274,6 +280,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CancellationDate = CancellationDate;
             this.RenewalDate = RenewalDate;
             this.AutoRenewable = AutoRenewable;
+            this.AddressId = AddressId;
             
         }
         
@@ -402,6 +409,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The id of an address attached to this phone number.
+        /// </summary>
+        /// <value>The id of an address attached to this phone number.</value>
+        [DataMember(Name="addressId", EmitDefaultValue=false)]
+        public SmsAddress AddressId { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -434,6 +450,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CancellationDate: ").Append(CancellationDate).Append("\n");
             sb.Append("  RenewalDate: ").Append(RenewalDate).Append("\n");
             sb.Append("  AutoRenewable: ").Append(AutoRenewable).Append("\n");
+            sb.Append("  AddressId: ").Append(AddressId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -552,6 +569,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AutoRenewable.Equals(other.AutoRenewable)
                 ) &&
                 (
+                    this.AddressId == other.AddressId ||
+                    this.AddressId != null &&
+                    this.AddressId.Equals(other.AddressId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -617,6 +639,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AutoRenewable != null)
                     hash = hash * 59 + this.AutoRenewable.GetHashCode();
+                
+                if (this.AddressId != null)
+                    hash = hash * 59 + this.AddressId.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

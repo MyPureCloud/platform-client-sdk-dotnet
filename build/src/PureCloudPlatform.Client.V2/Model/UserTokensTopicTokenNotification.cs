@@ -40,6 +40,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserTokensTopicTokenNotification" /> class.
@@ -48,12 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IpAddress">IpAddress.</param>
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="TokenExpirationDate">TokenExpirationDate.</param>
-        public UserTokensTopicTokenNotification(UserTokensTopicUriReference User = null, string IpAddress = null, string DateCreated = null, string TokenExpirationDate = null)
+        /// <param name="SessionId">SessionId.</param>
+        /// <param name="ClientId">ClientId.</param>
+        /// <param name="TokenHash">TokenHash.</param>
+        public UserTokensTopicTokenNotification(UserTokensTopicUriReference User = null, string IpAddress = null, string DateCreated = null, string TokenExpirationDate = null, string SessionId = null, string ClientId = null, string TokenHash = null)
         {
             this.User = User;
             this.IpAddress = IpAddress;
             this.DateCreated = DateCreated;
             this.TokenExpirationDate = TokenExpirationDate;
+            this.SessionId = SessionId;
+            this.ClientId = ClientId;
+            this.TokenHash = TokenHash;
             
         }
         
@@ -90,6 +111,30 @@ namespace PureCloudPlatform.Client.V2.Model
         public string TokenExpirationDate { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets SessionId
+        /// </summary>
+        [DataMember(Name="sessionId", EmitDefaultValue=false)]
+        public string SessionId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets ClientId
+        /// </summary>
+        [DataMember(Name="clientId", EmitDefaultValue=false)]
+        public string ClientId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets TokenHash
+        /// </summary>
+        [DataMember(Name="tokenHash", EmitDefaultValue=false)]
+        public string TokenHash { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -103,6 +148,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IpAddress: ").Append(IpAddress).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  TokenExpirationDate: ").Append(TokenExpirationDate).Append("\n");
+            sb.Append("  SessionId: ").Append(SessionId).Append("\n");
+            sb.Append("  ClientId: ").Append(ClientId).Append("\n");
+            sb.Append("  TokenHash: ").Append(TokenHash).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,6 +206,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TokenExpirationDate == other.TokenExpirationDate ||
                     this.TokenExpirationDate != null &&
                     this.TokenExpirationDate.Equals(other.TokenExpirationDate)
+                ) &&
+                (
+                    this.SessionId == other.SessionId ||
+                    this.SessionId != null &&
+                    this.SessionId.Equals(other.SessionId)
+                ) &&
+                (
+                    this.ClientId == other.ClientId ||
+                    this.ClientId != null &&
+                    this.ClientId.Equals(other.ClientId)
+                ) &&
+                (
+                    this.TokenHash == other.TokenHash ||
+                    this.TokenHash != null &&
+                    this.TokenHash.Equals(other.TokenHash)
                 );
         }
 
@@ -184,6 +247,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TokenExpirationDate != null)
                     hash = hash * 59 + this.TokenExpirationDate.GetHashCode();
+                
+                if (this.SessionId != null)
+                    hash = hash * 59 + this.SessionId.GetHashCode();
+                
+                if (this.ClientId != null)
+                    hash = hash * 59 + this.ClientId.GetHashCode();
+                
+                if (this.TokenHash != null)
+                    hash = hash * 59 + this.TokenHash.GetHashCode();
                 
                 return hash;
             }

@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Patch operation
+        /// The patch operation to perform.
         /// </summary>
-        /// <value>Patch operation</value>
+        /// <value>The patch operation to perform.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OpEnum
         {
@@ -65,9 +65,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Patch operation
+        /// The patch operation to perform.
         /// </summary>
-        /// <value>Patch operation</value>
+        /// <value>The patch operation to perform.</value>
         [DataMember(Name="op", EmitDefaultValue=false)]
         public OpEnum? Op { get; set; }
         
@@ -86,9 +86,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2PatchOperation" /> class.
         /// </summary>
-        /// <param name="Op">Patch operation (required).</param>
-        /// <param name="Path">Attribute path describing the target of the operation.  Required for &#39;remove&#39; operation..</param>
-        /// <param name="Value">Value to set in the specified path.</param>
+        /// <param name="Op">The patch operation to perform. (required).</param>
+        /// <param name="Path">The attribute path that describes the target of the operation. Required for a &#39;remove&#39; operation..</param>
+        /// <param name="Value">The value to set in the path..</param>
         public ScimV2PatchOperation(OpEnum? Op = null, string Path = null, JsonNode Value = null)
         {
             this.Op = Op;
@@ -102,18 +102,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Attribute path describing the target of the operation.  Required for &#39;remove&#39; operation.
+        /// The attribute path that describes the target of the operation. Required for a &#39;remove&#39; operation.
         /// </summary>
-        /// <value>Attribute path describing the target of the operation.  Required for &#39;remove&#39; operation.</value>
+        /// <value>The attribute path that describes the target of the operation. Required for a &#39;remove&#39; operation.</value>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public string Path { get; set; }
         
         
         
         /// <summary>
-        /// Value to set in the specified path
+        /// The value to set in the path.
         /// </summary>
-        /// <value>Value to set in the specified path</value>
+        /// <value>The value to set in the path.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public JsonNode Value { get; set; }
         

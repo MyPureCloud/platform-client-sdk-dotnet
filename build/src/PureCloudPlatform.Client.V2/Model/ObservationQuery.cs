@@ -499,7 +499,61 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nflowoutcomefailed for "nFlowOutcomeFailed"
             /// </summary>
             [EnumMember(Value = "nFlowOutcomeFailed")]
-            Nflowoutcomefailed
+            Nflowoutcomefailed,
+            
+            /// <summary>
+            /// Enum Nwebactionsqualified for "nWebActionsQualified"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsQualified")]
+            Nwebactionsqualified,
+            
+            /// <summary>
+            /// Enum Nwebactionsoffered for "nWebActionsOffered"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsOffered")]
+            Nwebactionsoffered,
+            
+            /// <summary>
+            /// Enum Nwebactionsaccepted for "nWebActionsAccepted"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsAccepted")]
+            Nwebactionsaccepted,
+            
+            /// <summary>
+            /// Enum Nwebactionsrejected for "nWebActionsRejected"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsRejected")]
+            Nwebactionsrejected,
+            
+            /// <summary>
+            /// Enum Nwebactionstimedout for "nWebActionsTimedout"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsTimedout")]
+            Nwebactionstimedout,
+            
+            /// <summary>
+            /// Enum Nwebactionserrored for "nWebActionsErrored"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsErrored")]
+            Nwebactionserrored,
+            
+            /// <summary>
+            /// Enum Nwebactionsignored for "nWebActionsIgnored"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsIgnored")]
+            Nwebactionsignored,
+            
+            /// <summary>
+            /// Enum Nwebactionsstarted for "nWebActionsStarted"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsStarted")]
+            Nwebactionsstarted,
+            
+            /// <summary>
+            /// Enum Nwebactionsengaged for "nWebActionsEngaged"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsEngaged")]
+            Nwebactionsengaged
         }
         
         
@@ -981,7 +1035,61 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nflowoutcomefailed for "nFlowOutcomeFailed"
             /// </summary>
             [EnumMember(Value = "nFlowOutcomeFailed")]
-            Nflowoutcomefailed
+            Nflowoutcomefailed,
+            
+            /// <summary>
+            /// Enum Nwebactionsqualified for "nWebActionsQualified"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsQualified")]
+            Nwebactionsqualified,
+            
+            /// <summary>
+            /// Enum Nwebactionsoffered for "nWebActionsOffered"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsOffered")]
+            Nwebactionsoffered,
+            
+            /// <summary>
+            /// Enum Nwebactionsaccepted for "nWebActionsAccepted"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsAccepted")]
+            Nwebactionsaccepted,
+            
+            /// <summary>
+            /// Enum Nwebactionsrejected for "nWebActionsRejected"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsRejected")]
+            Nwebactionsrejected,
+            
+            /// <summary>
+            /// Enum Nwebactionstimedout for "nWebActionsTimedout"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsTimedout")]
+            Nwebactionstimedout,
+            
+            /// <summary>
+            /// Enum Nwebactionserrored for "nWebActionsErrored"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsErrored")]
+            Nwebactionserrored,
+            
+            /// <summary>
+            /// Enum Nwebactionsignored for "nWebActionsIgnored"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsIgnored")]
+            Nwebactionsignored,
+            
+            /// <summary>
+            /// Enum Nwebactionsstarted for "nWebActionsStarted"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsStarted")]
+            Nwebactionsstarted,
+            
+            /// <summary>
+            /// Enum Nwebactionsengaged for "nWebActionsEngaged"
+            /// </summary>
+            [EnumMember(Value = "nWebActionsEngaged")]
+            Nwebactionsengaged
         }
         
         

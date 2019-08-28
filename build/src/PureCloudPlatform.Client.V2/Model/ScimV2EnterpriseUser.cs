@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2EnterpriseUser" /> class.
         /// </summary>
-        /// <param name="Division">User division name.</param>
-        /// <param name="Department">User department name.</param>
-        /// <param name="Manager">Manager.</param>
+        /// <param name="Division">The division that the user belongs to..</param>
+        /// <param name="Department">The department that the user belongs to..</param>
+        /// <param name="Manager">The user&#39;s manager..</param>
         public ScimV2EnterpriseUser(string Division = null, string Department = null, Manager Manager = null)
         {
             this.Division = Division;
@@ -53,27 +53,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// User division name
+        /// The division that the user belongs to.
         /// </summary>
-        /// <value>User division name</value>
+        /// <value>The division that the user belongs to.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public string Division { get; set; }
         
         
         
         /// <summary>
-        /// User department name
+        /// The department that the user belongs to.
         /// </summary>
-        /// <value>User department name</value>
+        /// <value>The department that the user belongs to.</value>
         [DataMember(Name="department", EmitDefaultValue=false)]
         public string Department { get; set; }
         
         
         
         /// <summary>
-        /// Manager
+        /// The user&#39;s manager.
         /// </summary>
-        /// <value>Manager</value>
+        /// <value>The user&#39;s manager.</value>
         [DataMember(Name="manager", EmitDefaultValue=false)]
         public Manager Manager { get; set; }
         

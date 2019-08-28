@@ -8,11 +8,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**GetFieldconfig**](OrganizationApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
+| [**GetOrganizationsEmbeddedintegration**](OrganizationApi.html#getorganizationsembeddedintegration) | **GET** /api/v2/organizations/embeddedintegration | Get the list of domains that will be allowed to embed PureCloud applications |
 | [**GetOrganizationsMe**](OrganizationApi.html#getorganizationsme) | **GET** /api/v2/organizations/me | Get organization. |
-| [**GetOrganizationsWhitelist**](OrganizationApi.html#getorganizationswhitelist) | **GET** /api/v2/organizations/whitelist | Get organization whitelist settings |
+| [**GetOrganizationsWhitelist**](OrganizationApi.html#getorganizationswhitelist) | **GET** /api/v2/organizations/whitelist | Use PUT /api/v2/organizations/embeddedintegration instead |
 | [**PatchOrganizationsFeature**](OrganizationApi.html#patchorganizationsfeature) | **PATCH** /api/v2/organizations/features/{featureName} | Update organization |
+| [**PutOrganizationsEmbeddedintegration**](OrganizationApi.html#putorganizationsembeddedintegration) | **PUT** /api/v2/organizations/embeddedintegration | Update the list of domains that will be allowed to embed PureCloud applications |
 | [**PutOrganizationsMe**](OrganizationApi.html#putorganizationsme) | **PUT** /api/v2/organizations/me | Update organization. |
-| [**PutOrganizationsWhitelist**](OrganizationApi.html#putorganizationswhitelist) | **PUT** /api/v2/organizations/whitelist | Update organization whitelist settings |
+| [**PutOrganizationsWhitelist**](OrganizationApi.html#putorganizationswhitelist) | **PUT** /api/v2/organizations/whitelist | Use PUT /api/v2/organizations/embeddedintegration instead |
 {: class="table table-striped"}
 
 <a name="getfieldconfig"></a>
@@ -75,6 +77,61 @@ namespace Example
 
 [**FieldConfig**](FieldConfig.html)
 
+<a name="getorganizationsembeddedintegration"></a>
+
+## [**EmbeddedIntegration**](EmbeddedIntegration.html) GetOrganizationsEmbeddedintegration ()
+
+
+
+Get the list of domains that will be allowed to embed PureCloud applications
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrganizationsEmbeddedintegrationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OrganizationApi();
+
+            try
+            { 
+                // Get the list of domains that will be allowed to embed PureCloud applications
+                EmbeddedIntegration result = apiInstance.GetOrganizationsEmbeddedintegration();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.GetOrganizationsEmbeddedintegration: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**EmbeddedIntegration**](EmbeddedIntegration.html)
+
 <a name="getorganizationsme"></a>
 
 ## [**Organization**](Organization.html) GetOrganizationsMe ()
@@ -134,9 +191,9 @@ This endpoint does require any parameters.
 
 ## [**OrgWhitelistSettings**](OrgWhitelistSettings.html) GetOrganizationsWhitelist ()
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Get organization whitelist settings
+Use PUT /api/v2/organizations/embeddedintegration instead
 
 
 
@@ -164,7 +221,7 @@ namespace Example
 
             try
             { 
-                // Get organization whitelist settings
+                // Use PUT /api/v2/organizations/embeddedintegration instead
                 OrgWhitelistSettings result = apiInstance.GetOrganizationsWhitelist();
                 Debug.WriteLine(result);
             }
@@ -248,6 +305,67 @@ namespace Example
 
 [**OrganizationFeatures**](OrganizationFeatures.html)
 
+<a name="putorganizationsembeddedintegration"></a>
+
+## [**EmbeddedIntegration**](EmbeddedIntegration.html) PutOrganizationsEmbeddedintegration (EmbeddedIntegration body)
+
+
+
+Update the list of domains that will be allowed to embed PureCloud applications
+
+
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOrganizationsEmbeddedintegrationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OrganizationApi();
+            var body = new EmbeddedIntegration(); // EmbeddedIntegration | Whitelist settings
+
+            try
+            { 
+                // Update the list of domains that will be allowed to embed PureCloud applications
+                EmbeddedIntegration result = apiInstance.PutOrganizationsEmbeddedintegration(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.PutOrganizationsEmbeddedintegration: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**EmbeddedIntegration**](EmbeddedIntegration.html)| Whitelist settings |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmbeddedIntegration**](EmbeddedIntegration.html)
+
 <a name="putorganizationsme"></a>
 
 ## [**Organization**](Organization.html) PutOrganizationsMe (Organization body = null)
@@ -313,9 +431,9 @@ namespace Example
 
 ## [**OrgWhitelistSettings**](OrgWhitelistSettings.html) PutOrganizationsWhitelist (OrgWhitelistSettings body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Update organization whitelist settings
+Use PUT /api/v2/organizations/embeddedintegration instead
 
 
 
@@ -345,7 +463,7 @@ namespace Example
 
             try
             { 
-                // Update organization whitelist settings
+                // Use PUT /api/v2/organizations/embeddedintegration instead
                 OrgWhitelistSettings result = apiInstance.PutOrganizationsWhitelist(body);
                 Debug.WriteLine(result);
             }

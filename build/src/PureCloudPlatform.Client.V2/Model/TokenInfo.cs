@@ -35,17 +35,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenInfo" /> class.
         /// </summary>
         /// <param name="Organization">The current organization.</param>
         /// <param name="HomeOrganization">The token&#39;s home organization.</param>
+        /// <param name="AuthorizedScope">The list of scopes authorized for the OAuth client.</param>
         /// <param name="OAuthClient">OAuthClient.</param>
-        public TokenInfo(NamedEntity Organization = null, NamedEntity HomeOrganization = null, OrgOAuthClient OAuthClient = null)
+        public TokenInfo(NamedEntity Organization = null, NamedEntity HomeOrganization = null, List<string> AuthorizedScope = null, OrgOAuthClient OAuthClient = null)
         {
             this.Organization = Organization;
             this.HomeOrganization = HomeOrganization;
+            this.AuthorizedScope = AuthorizedScope;
             this.OAuthClient = OAuthClient;
             
         }
@@ -71,6 +78,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The list of scopes authorized for the OAuth client
+        /// </summary>
+        /// <value>The list of scopes authorized for the OAuth client</value>
+        [DataMember(Name="authorizedScope", EmitDefaultValue=false)]
+        public List<string> AuthorizedScope { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets OAuthClient
         /// </summary>
         [DataMember(Name="OAuthClient", EmitDefaultValue=false)]
@@ -88,6 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Organization: ").Append(Organization).Append("\n");
             sb.Append("  HomeOrganization: ").Append(HomeOrganization).Append("\n");
+            sb.Append("  AuthorizedScope: ").Append(AuthorizedScope).Append("\n");
             sb.Append("  OAuthClient: ").Append(OAuthClient).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -136,6 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HomeOrganization.Equals(other.HomeOrganization)
                 ) &&
                 (
+                    this.AuthorizedScope == other.AuthorizedScope ||
+                    this.AuthorizedScope != null &&
+                    this.AuthorizedScope.SequenceEqual(other.AuthorizedScope)
+                ) &&
+                (
                     this.OAuthClient == other.OAuthClient ||
                     this.OAuthClient != null &&
                     this.OAuthClient.Equals(other.OAuthClient)
@@ -159,6 +181,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.HomeOrganization != null)
                     hash = hash * 59 + this.HomeOrganization.GetHashCode();
+                
+                if (this.AuthorizedScope != null)
+                    hash = hash * 59 + this.AuthorizedScope.GetHashCode();
                 
                 if (this.OAuthClient != null)
                     hash = hash * 59 + this.OAuthClient.GetHashCode();

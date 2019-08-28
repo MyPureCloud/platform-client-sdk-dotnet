@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Type of photo
+        /// The type of photo.
         /// </summary>
-        /// <value>Type of photo</value>
+        /// <value>The type of photo.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -58,9 +58,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Type of photo
+        /// The type of photo.
         /// </summary>
-        /// <value>Type of photo</value>
+        /// <value>The type of photo.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
@@ -69,8 +69,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Photo" /> class.
         /// </summary>
-        /// <param name="Value">URI of photo.</param>
-        /// <param name="Type">Type of photo.</param>
+        /// <param name="Value">The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG. .</param>
+        /// <param name="Type">The type of photo..</param>
         public Photo(string Value = null, TypeEnum? Type = null)
         {
             this.Value = Value;
@@ -81,9 +81,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// URI of photo
+        /// The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG. 
         /// </summary>
-        /// <value>URI of photo</value>
+        /// <value>The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG. </value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         

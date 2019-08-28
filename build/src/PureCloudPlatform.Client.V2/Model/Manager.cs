@@ -34,7 +34,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Manager" /> class.
         /// </summary>
-        /// <param name="Value">Identifier of the Manager.</param>
+        /// <param name="Value">The ID of the manager..</param>
         public Manager(string Value = null)
         {
             this.Value = Value;
@@ -44,9 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Identifier of the Manager
+        /// The ID of the manager.
         /// </summary>
-        /// <value>Identifier of the Manager</value>
+        /// <value>The ID of the manager.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         

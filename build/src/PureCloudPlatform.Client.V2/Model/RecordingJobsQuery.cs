@@ -39,8 +39,17 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Delete for "DELETE"
             /// </summary>
             [EnumMember(Value = "DELETE")]
-            Delete
+            Delete,
+            
+            /// <summary>
+            /// Enum Export for "EXPORT"
+            /// </summary>
+            [EnumMember(Value = "EXPORT")]
+            Export
         }
+        
+        
+        
         
         
         
@@ -64,6 +73,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingJobsQuery" /> class.
@@ -76,11 +87,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Action">Operation to perform bulk task (required).</param>
         /// <param name="ActionDate">The date when the action will be performed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
+        /// <param name="IntegrationId">Integration ID (required).</param>
         /// <param name="ConversationQuery">Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query. (required).</param>
-        public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, AsyncConversationQuery ConversationQuery = null)
+        public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, string IntegrationId = null, AsyncConversationQuery ConversationQuery = null)
         {
             this.Action = Action;
             this.ActionDate = ActionDate;
+            this.IntegrationId = IntegrationId;
             this.ConversationQuery = ConversationQuery;
             
         }
@@ -95,6 +108,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The date when the action will be performed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="actionDate", EmitDefaultValue=false)]
         public DateTime? ActionDate { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Integration ID
+        /// </summary>
+        /// <value>Integration ID</value>
+        [DataMember(Name="integrationId", EmitDefaultValue=false)]
+        public string IntegrationId { get; set; }
         
         
         
@@ -117,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ActionDate: ").Append(ActionDate).Append("\n");
+            sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
             sb.Append("  ConversationQuery: ").Append(ConversationQuery).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -165,6 +188,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActionDate.Equals(other.ActionDate)
                 ) &&
                 (
+                    this.IntegrationId == other.IntegrationId ||
+                    this.IntegrationId != null &&
+                    this.IntegrationId.Equals(other.IntegrationId)
+                ) &&
+                (
                     this.ConversationQuery == other.ConversationQuery ||
                     this.ConversationQuery != null &&
                     this.ConversationQuery.Equals(other.ConversationQuery)
@@ -188,6 +216,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ActionDate != null)
                     hash = hash * 59 + this.ActionDate.GetHashCode();
+                
+                if (this.IntegrationId != null)
+                    hash = hash * 59 + this.IntegrationId.GetHashCode();
                 
                 if (this.ConversationQuery != null)
                     hash = hash * 59 + this.ConversationQuery.GetHashCode();

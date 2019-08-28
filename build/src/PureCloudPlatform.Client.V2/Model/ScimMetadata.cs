@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM V2 Meta data
+    /// The meta object of the SCIM V2 implementation.
     /// </summary>
     [DataContract]
     public partial class ScimMetadata :  IEquatable<ScimMetadata>
@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Resource type
+        /// The type of the resource.
         /// </summary>
-        /// <value>Resource type</value>
+        /// <value>The type of the resource.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ResourceTypeEnum
         {
@@ -68,9 +68,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Resource type
+        /// The type of the resource.
         /// </summary>
-        /// <value>Resource type</value>
+        /// <value>The type of the resource.</value>
         [DataMember(Name="resourceType", EmitDefaultValue=false)]
         public ResourceTypeEnum? ResourceType { get; set; }
         
@@ -95,27 +95,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Last Modified ISO6501 (UTC). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The last time that the resource was modified. Time in ISO 6501 (UTC) format. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Last Modified ISO6501 (UTC). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The last time that the resource was modified. Time in ISO 6501 (UTC) format. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="lastModified", EmitDefaultValue=false)]
         public DateTime? LastModified { get; private set; }
         
         
         
         /// <summary>
-        /// URI location of resource
+        /// The URI of the resource.
         /// </summary>
-        /// <value>URI location of resource</value>
+        /// <value>The URI of the resource.</value>
         [DataMember(Name="location", EmitDefaultValue=false)]
         public string Location { get; private set; }
         
         
         
         /// <summary>
-        /// ETag version of resource [RFC7232]
+        /// The version of the resource. Matches the ETag HTTP response header.
         /// </summary>
-        /// <value>ETag version of resource [RFC7232]</value>
+        /// <value>The version of the resource. Matches the ETag HTTP response header.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; private set; }
         

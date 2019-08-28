@@ -13,16 +13,11 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// BaseProgramEntity
+    /// EmbeddedIntegration
     /// </summary>
     [DataContract]
-    public partial class BaseProgramEntity :  IEquatable<BaseProgramEntity>
+    public partial class EmbeddedIntegration :  IEquatable<EmbeddedIntegration>
     {
-        
-        
-        
-        
-        
         
         
         
@@ -37,40 +32,32 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="BaseProgramEntity" /> class.
+        /// Initializes a new instance of the <see cref="EmbeddedIntegration" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        public BaseProgramEntity(string Name = null)
+        /// <param name="EnableWhitelist">EnableWhitelist.</param>
+        /// <param name="DomainWhitelist">DomainWhitelist.</param>
+        public EmbeddedIntegration(bool? EnableWhitelist = null, List<string> DomainWhitelist = null)
         {
-            this.Name = Name;
+            this.EnableWhitelist = EnableWhitelist;
+            this.DomainWhitelist = DomainWhitelist;
             
         }
         
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Gets or Sets EnableWhitelist
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        [DataMember(Name="enableWhitelist", EmitDefaultValue=false)]
+        public bool? EnableWhitelist { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets DomainWhitelist
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
+        [DataMember(Name="domainWhitelist", EmitDefaultValue=false)]
+        public List<string> DomainWhitelist { get; set; }
         
         
         /// <summary>
@@ -80,11 +67,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BaseProgramEntity {\n");
+            sb.Append("class EmbeddedIntegration {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  EnableWhitelist: ").Append(EnableWhitelist).Append("\n");
+            sb.Append("  DomainWhitelist: ").Append(DomainWhitelist).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,15 +92,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BaseProgramEntity);
+            return this.Equals(obj as EmbeddedIntegration);
         }
 
         /// <summary>
-        /// Returns true if BaseProgramEntity instances are equal
+        /// Returns true if EmbeddedIntegration instances are equal
         /// </summary>
-        /// <param name="other">Instance of BaseProgramEntity to be compared</param>
+        /// <param name="other">Instance of EmbeddedIntegration to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BaseProgramEntity other)
+        public bool Equals(EmbeddedIntegration other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -122,19 +108,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.EnableWhitelist == other.EnableWhitelist ||
+                    this.EnableWhitelist != null &&
+                    this.EnableWhitelist.Equals(other.EnableWhitelist)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
+                    this.DomainWhitelist == other.DomainWhitelist ||
+                    this.DomainWhitelist != null &&
+                    this.DomainWhitelist.SequenceEqual(other.DomainWhitelist)
                 );
         }
 
@@ -150,14 +131,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                if (this.EnableWhitelist != null)
+                    hash = hash * 59 + this.EnableWhitelist.GetHashCode();
                 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
+                if (this.DomainWhitelist != null)
+                    hash = hash * 59 + this.DomainWhitelist.GetHashCode();
                 
                 return hash;
             }

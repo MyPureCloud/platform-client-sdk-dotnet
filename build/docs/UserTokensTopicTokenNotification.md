@@ -11,6 +11,9 @@ title: UserTokensTopicTokenNotification
 | **IpAddress** | **string** |  | [optional] |
 | **DateCreated** | **string** |  | [optional] |
 | **TokenExpirationDate** | **string** |  | [optional] |
+| **SessionId** | **string** |  | [optional] |
+| **ClientId** | **string** |  | [optional] |
+| **TokenHash** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 
