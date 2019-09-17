@@ -171,7 +171,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client.  (required).</param>
         /// <param name="Scope">The scope requested by this client. Scopes only apply to clients not using the client_credential grant.</param>
         /// <param name="RoleDivisions">Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant.</param>
-        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, List<string> Scope = null, List<RoleDivision> RoleDivisions = null)
+        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, List<string> Scope = null, List<RoleDivision> RoleDivisions = null)
         {
             this.Name = Name;
             this.AccessTokenValiditySeconds = AccessTokenValiditySeconds;
@@ -276,7 +276,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User that created this client</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UriReference CreatedBy { get; set; }
+        public DomainEntityRef CreatedBy { get; set; }
         
         
         
@@ -285,7 +285,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User that last modified this client</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public UriReference ModifiedBy { get; set; }
+        public DomainEntityRef ModifiedBy { get; set; }
         
         
         

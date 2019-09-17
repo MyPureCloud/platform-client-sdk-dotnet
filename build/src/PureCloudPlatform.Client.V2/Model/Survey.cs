@@ -151,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Answers">Answers.</param>
         /// <param name="CompletedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="SurveyErrorDetails">Additional information about what happened when the survey is in Error status..</param>
-        public Survey(string Name = null, Conversation Conversation = null, SurveyForm SurveyForm = null, UriReference Agent = null, StatusEnum? Status = null, QueueReference Queue = null, SurveyScoringSet Answers = null, DateTime? CompletedDate = null, SurveyErrorDetails SurveyErrorDetails = null)
+        public Survey(string Name = null, Conversation Conversation = null, SurveyForm SurveyForm = null, DomainEntityRef Agent = null, StatusEnum? Status = null, QueueReference Queue = null, SurveyScoringSet Answers = null, DateTime? CompletedDate = null, SurveyErrorDetails SurveyErrorDetails = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -205,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Agent
         /// </summary>
         [DataMember(Name="agent", EmitDefaultValue=false)]
-        public UriReference Agent { get; set; }
+        public DomainEntityRef Agent { get; set; }
         
         
         

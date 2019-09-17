@@ -112,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">User that last modified this client.</param>
         /// <param name="Scope">The scope requested by this client. Scopes only apply to clients not using the client_credential grant.</param>
         /// <param name="RoleDivisions">Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant.</param>
-        public OAuthClientListing(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, List<string> Scope = null, List<RoleDivision> RoleDivisions = null)
+        public OAuthClientListing(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, List<string> Scope = null, List<RoleDivision> RoleDivisions = null)
         {
             this.Name = Name;
             this.AccessTokenValiditySeconds = AccessTokenValiditySeconds;
@@ -216,7 +216,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User that created this client</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UriReference CreatedBy { get; set; }
+        public DomainEntityRef CreatedBy { get; set; }
         
         
         
@@ -225,7 +225,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User that last modified this client</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public UriReference ModifiedBy { get; set; }
+        public DomainEntityRef ModifiedBy { get; set; }
         
         
         

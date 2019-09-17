@@ -61,12 +61,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Operation to perform bulk task
         /// </summary>
         /// <value>Operation to perform bulk task</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
+        
+        
         
         
         
@@ -87,13 +92,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Action">Operation to perform bulk task (required).</param>
         /// <param name="ActionDate">The date when the action will be performed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        /// <param name="IntegrationId">Integration ID (required).</param>
+        /// <param name="IntegrationId">Integration ID (Required only for EXPORT action).</param>
+        /// <param name="IncludeScreenRecordings">Include Screen recordings for export action, default value = true .</param>
         /// <param name="ConversationQuery">Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query. (required).</param>
-        public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, string IntegrationId = null, AsyncConversationQuery ConversationQuery = null)
+        public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, string IntegrationId = null, bool? IncludeScreenRecordings = null, AsyncConversationQuery ConversationQuery = null)
         {
             this.Action = Action;
             this.ActionDate = ActionDate;
             this.IntegrationId = IntegrationId;
+            this.IncludeScreenRecordings = IncludeScreenRecordings;
             this.ConversationQuery = ConversationQuery;
             
         }
@@ -112,11 +119,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Integration ID
+        /// Integration ID (Required only for EXPORT action)
         /// </summary>
-        /// <value>Integration ID</value>
+        /// <value>Integration ID (Required only for EXPORT action)</value>
         [DataMember(Name="integrationId", EmitDefaultValue=false)]
         public string IntegrationId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Include Screen recordings for export action, default value = true 
+        /// </summary>
+        /// <value>Include Screen recordings for export action, default value = true </value>
+        [DataMember(Name="includeScreenRecordings", EmitDefaultValue=false)]
+        public bool? IncludeScreenRecordings { get; set; }
         
         
         
@@ -140,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ActionDate: ").Append(ActionDate).Append("\n");
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
+            sb.Append("  IncludeScreenRecordings: ").Append(IncludeScreenRecordings).Append("\n");
             sb.Append("  ConversationQuery: ").Append(ConversationQuery).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -193,6 +210,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IntegrationId.Equals(other.IntegrationId)
                 ) &&
                 (
+                    this.IncludeScreenRecordings == other.IncludeScreenRecordings ||
+                    this.IncludeScreenRecordings != null &&
+                    this.IncludeScreenRecordings.Equals(other.IncludeScreenRecordings)
+                ) &&
+                (
                     this.ConversationQuery == other.ConversationQuery ||
                     this.ConversationQuery != null &&
                     this.ConversationQuery.Equals(other.ConversationQuery)
@@ -219,6 +241,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.IntegrationId != null)
                     hash = hash * 59 + this.IntegrationId.GetHashCode();
+                
+                if (this.IncludeScreenRecordings != null)
+                    hash = hash * 59 + this.IncludeScreenRecordings.GetHashCode();
                 
                 if (this.ConversationQuery != null)
                     hash = hash * 59 + this.ConversationQuery.GetHashCode();

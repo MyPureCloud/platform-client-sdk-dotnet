@@ -154,7 +154,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Workspace">Workspace.</param>
         /// <param name="User">User.</param>
         /// <param name="Group">Group.</param>
-        public Share(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, UriReference SharedEntity = null, MemberTypeEnum? MemberType = null, UriReference Member = null, UriReference SharedBy = null, UriReference Workspace = null, User User = null, Group Group = null)
+        public Share(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, DomainEntityRef SharedEntity = null, MemberTypeEnum? MemberType = null, DomainEntityRef Member = null, DomainEntityRef SharedBy = null, DomainEntityRef Workspace = null, User User = null, Group Group = null)
         {
             this.Name = Name;
             this.SharedEntityType = SharedEntityType;
@@ -193,7 +193,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets SharedEntity
         /// </summary>
         [DataMember(Name="sharedEntity", EmitDefaultValue=false)]
-        public UriReference SharedEntity { get; set; }
+        public DomainEntityRef SharedEntity { get; set; }
         
         
         
@@ -203,7 +203,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
-        public UriReference Member { get; set; }
+        public DomainEntityRef Member { get; set; }
         
         
         
@@ -211,7 +211,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets SharedBy
         /// </summary>
         [DataMember(Name="sharedBy", EmitDefaultValue=false)]
-        public UriReference SharedBy { get; set; }
+        public DomainEntityRef SharedBy { get; set; }
         
         
         
@@ -219,7 +219,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
-        public UriReference Workspace { get; set; }
+        public DomainEntityRef Workspace { get; set; }
         
         
         

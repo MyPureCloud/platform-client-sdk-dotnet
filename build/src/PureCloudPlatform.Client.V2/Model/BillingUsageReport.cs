@@ -32,6 +32,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Generation status of report
+        /// </summary>
+        /// <value>Generation status of report</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Inprogress for "InProgress"
+            /// </summary>
+            [EnumMember(Value = "InProgress")]
+            Inprogress,
+            
+            /// <summary>
+            /// Enum Complete for "Complete"
+            /// </summary>
+            [EnumMember(Value = "Complete")]
+            Complete
+        }
         
         
         
@@ -44,6 +71,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Generation status of report
+        /// </summary>
+        /// <value>Generation status of report</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
         
         
         
@@ -63,12 +103,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="StartDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
         /// <param name="EndDate">The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
+        /// <param name="Status">Generation status of report.</param>
         /// <param name="Usages">The usages for the given period. (required).</param>
-        public BillingUsageReport(string Name = null, DateTime? StartDate = null, DateTime? EndDate = null, List<BillingUsage> Usages = null)
+        public BillingUsageReport(string Name = null, DateTime? StartDate = null, DateTime? EndDate = null, StatusEnum? Status = null, List<BillingUsage> Usages = null)
         {
             this.Name = Name;
             this.StartDate = StartDate;
             this.EndDate = EndDate;
+            this.Status = Status;
             this.Usages = Usages;
             
         }
@@ -110,6 +152,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The usages for the given period.
         /// </summary>
@@ -140,6 +184,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Usages: ").Append(Usages).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -199,6 +244,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndDate.Equals(other.EndDate)
                 ) &&
                 (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
                     this.Usages == other.Usages ||
                     this.Usages != null &&
                     this.Usages.SequenceEqual(other.Usages)
@@ -233,6 +283,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
+                
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.Usages != null)
                     hash = hash * 59 + this.Usages.GetHashCode();

@@ -342,7 +342,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">The priority of this campaign relative to other campaigns that are running on the same queue. 5 is the highest priority, 1 the lowest..</param>
         /// <param name="ContactListFilters">Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied..</param>
         /// <param name="Division">The division this campaign belongs to..</param>
-        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, UriReference Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<UriReference> ContactListFilters = null, UriReference Division = null)
+        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -428,7 +428,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The ContactList for this Campaign to dial.</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
-        public UriReference ContactList { get; set; }
+        public DomainEntityRef ContactList { get; set; }
         
         
         
@@ -437,7 +437,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The Queue for this Campaign to route calls to. Required for all dialing modes except agentless.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
-        public UriReference Queue { get; set; }
+        public DomainEntityRef Queue { get; set; }
         
         
         
@@ -448,7 +448,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The Script to be displayed to agents that are handling outbound calls. Required for all dialing modes except agentless.</value>
         [DataMember(Name="script", EmitDefaultValue=false)]
-        public UriReference Script { get; set; }
+        public DomainEntityRef Script { get; set; }
         
         
         
@@ -457,7 +457,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The EdgeGroup that will place the calls. Required for all dialing modes except preview.</value>
         [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
-        public UriReference EdgeGroup { get; set; }
+        public DomainEntityRef EdgeGroup { get; set; }
         
         
         
@@ -466,7 +466,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The identifier of the site to be used for dialing; can be set in place of an edge group.</value>
         [DataMember(Name="site", EmitDefaultValue=false)]
-        public UriReference Site { get; set; }
+        public DomainEntityRef Site { get; set; }
         
         
         
@@ -495,7 +495,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>DncLists for this Campaign to check before placing a call.</value>
         [DataMember(Name="dncLists", EmitDefaultValue=false)]
-        public List<UriReference> DncLists { get; set; }
+        public List<DomainEntityRef> DncLists { get; set; }
         
         
         
@@ -504,7 +504,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The callable time set for this campaign to check before placing a call.</value>
         [DataMember(Name="callableTimeSet", EmitDefaultValue=false)]
-        public UriReference CallableTimeSet { get; set; }
+        public DomainEntityRef CallableTimeSet { get; set; }
         
         
         
@@ -513,7 +513,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The call analysis response set to handle call analysis results from the edge. Required for all dialing modes except preview.</value>
         [DataMember(Name="callAnalysisResponseSet", EmitDefaultValue=false)]
-        public UriReference CallAnalysisResponseSet { get; set; }
+        public DomainEntityRef CallAnalysisResponseSet { get; set; }
         
         
         
@@ -558,7 +558,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Rule sets to be applied while this campaign is dialing.</value>
         [DataMember(Name="ruleSets", EmitDefaultValue=false)]
-        public List<UriReference> RuleSets { get; set; }
+        public List<DomainEntityRef> RuleSets { get; set; }
         
         
         
@@ -639,7 +639,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied.</value>
         [DataMember(Name="contactListFilters", EmitDefaultValue=false)]
-        public List<UriReference> ContactListFilters { get; set; }
+        public List<DomainEntityRef> ContactListFilters { get; set; }
         
         
         
@@ -648,7 +648,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The division this campaign belongs to.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public UriReference Division { get; set; }
+        public DomainEntityRef Division { get; set; }
         
         
         

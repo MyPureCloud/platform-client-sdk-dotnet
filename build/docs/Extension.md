@@ -19,8 +19,8 @@ title: Extension
 | **ModifiedByApp** | **string** | The application that last modified the resource. | [optional] |
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
 | **Number** | **string** |  | [optional] |
-| **Owner** | [**UriReference**](UriReference.html) | A Uri reference to the owner of this extension, which is either a User or an IVR | [optional] |
-| **ExtensionPool** | [**UriReference**](UriReference.html) |  | [optional] |
+| **Owner** | [**DomainEntityRef**](DomainEntityRef.html) | A Uri reference to the owner of this extension, which is either a User or an IVR | [optional] |
+| **ExtensionPool** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **OwnerType** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

@@ -199,7 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TrunkMetabase">The meta-base this trunk is based on. (required).</param>
         /// <param name="Properties">Properties.</param>
         /// <param name="TrunkType">The type of this trunk base. (required).</param>
-        public EdgeTrunkBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference TrunkMetabase = null, Dictionary<string, Object> Properties = null, TrunkTypeEnum? TrunkType = null)
+        public EdgeTrunkBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DomainEntityRef TrunkMetabase = null, Dictionary<string, Object> Properties = null, TrunkTypeEnum? TrunkType = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -315,7 +315,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The meta-base this trunk is based on.</value>
         [DataMember(Name="trunkMetabase", EmitDefaultValue=false)]
-        public UriReference TrunkMetabase { get; set; }
+        public DomainEntityRef TrunkMetabase { get; set; }
         
         
         

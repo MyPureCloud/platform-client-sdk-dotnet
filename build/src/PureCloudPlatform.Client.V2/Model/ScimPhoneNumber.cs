@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of phone number. 
+        /// The type of phone number.
         /// </summary>
-        /// <value>The type of phone number. </value>
+        /// <value>The type of phone number.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -91,9 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of phone number. 
+        /// The type of phone number.
         /// </summary>
-        /// <value>The type of phone number. </value>
+        /// <value>The type of phone number.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ScimPhoneNumber" /> class.
         /// </summary>
         /// <param name="Value">A phone number in E.164 format..</param>
-        /// <param name="Type">The type of phone number. .</param>
+        /// <param name="Type">The type of phone number..</param>
         /// <param name="Primary">Indicates whether the phone number is the primary phone number..</param>
         public ScimPhoneNumber(string Value = null, TypeEnum? Type = null, bool? Primary = null)
         {

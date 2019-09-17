@@ -136,7 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
         /// <param name="Type">Type.</param>
         /// <param name="LineAppearanceId">LineAppearanceId.</param>
-        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, string WebRtcUserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, string Type = null, string LineAppearanceId = null)
+        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, string WebRtcUserId = null, DomainEntityRef PrimaryEdge = null, DomainEntityRef SecondaryEdge = null, string Type = null, string LineAppearanceId = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -201,7 +201,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PrimaryEdge
         /// </summary>
         [DataMember(Name="primaryEdge", EmitDefaultValue=false)]
-        public UriReference PrimaryEdge { get; set; }
+        public DomainEntityRef PrimaryEdge { get; set; }
         
         
         
@@ -209,7 +209,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets SecondaryEdge
         /// </summary>
         [DataMember(Name="secondaryEdge", EmitDefaultValue=false)]
-        public UriReference SecondaryEdge { get; set; }
+        public DomainEntityRef SecondaryEdge { get; set; }
         
         
         

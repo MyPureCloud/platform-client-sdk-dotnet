@@ -133,7 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Summary">Summary.</param>
         /// <param name="Acl">Acl.</param>
         /// <param name="Description">Description.</param>
-        public Workspace(string Name = null, TypeEnum? Type = null, bool? IsCurrentUserWorkspace = null, UriReference User = null, string Bucket = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkspaceSummary Summary = null, List<string> Acl = null, string Description = null)
+        public Workspace(string Name = null, TypeEnum? Type = null, bool? IsCurrentUserWorkspace = null, DomainEntityRef User = null, string Bucket = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkspaceSummary Summary = null, List<string> Acl = null, string Description = null)
         {
             this.Name = Name;
             this.Type = Type;
@@ -182,7 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public UriReference User { get; set; }
+        public DomainEntityRef User { get; set; }
         
         
         

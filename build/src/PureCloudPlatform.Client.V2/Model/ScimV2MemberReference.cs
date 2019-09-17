@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// SCIM Resource Type of member
+        /// The SCIM resource type. Can be user or group.
         /// </summary>
-        /// <value>SCIM Resource Type of member</value>
+        /// <value>The SCIM resource type. Can be user or group.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -64,17 +64,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
-        /// SCIM Resource Type of member
+        /// The SCIM resource type. Can be user or group.
         /// </summary>
-        /// <value>SCIM Resource Type of member</value>
+        /// <value>The SCIM resource type. Can be user or group.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-        
-        
         
         
         
@@ -85,25 +80,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2MemberReference" /> class.
         /// </summary>
-        /// <param name="Meta">Resource SCIM meta.</param>
         /// <param name="Value">The ID of the group member. Can be userId or groupId..</param>
-        public ScimV2MemberReference(ScimMetadata Meta = null, string Value = null)
+        public ScimV2MemberReference(string Value = null)
         {
-            this.Meta = Meta;
             this.Value = Value;
             
         }
         
         
-        
-        
-        
-        /// <summary>
-        /// Resource SCIM meta
-        /// </summary>
-        /// <value>Resource SCIM meta</value>
-        [DataMember(Name="meta", EmitDefaultValue=false)]
-        public ScimMetadata Meta { get; set; }
         
         
         
@@ -117,9 +101,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Ref to entity
+        /// The reference URI of the SCIM resource.
         /// </summary>
-        /// <value>Ref to entity</value>
+        /// <value>The reference URI of the SCIM resource.</value>
         [DataMember(Name="$ref", EmitDefaultValue=false)]
         public string _Ref { get; private set; }
         
@@ -134,7 +118,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ScimV2MemberReference {\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Meta: ").Append(Meta).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  _Ref: ").Append(_Ref).Append("\n");
             sb.Append("}\n");
@@ -179,11 +162,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
-                    this.Meta == other.Meta ||
-                    this.Meta != null &&
-                    this.Meta.Equals(other.Meta)
-                ) &&
-                (
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
@@ -209,9 +187,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
-                if (this.Meta != null)
-                    hash = hash * 59 + this.Meta.GetHashCode();
                 
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();

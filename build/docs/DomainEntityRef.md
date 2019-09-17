@@ -1,7 +1,7 @@
 ---
-title: UriReference
+title: DomainEntityRef
 ---
-## ININ.PureCloudApi.Model.UriReference
+## ININ.PureCloudApi.Model.DomainEntityRef
 
 ## Properties
 

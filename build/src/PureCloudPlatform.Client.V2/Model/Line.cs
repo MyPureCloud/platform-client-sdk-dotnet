@@ -194,7 +194,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SecondaryEdge">The secondary edge associated to the line. (Deprecated).</param>
         /// <param name="LoggedInUser">LoggedInUser.</param>
         /// <param name="DefaultForUser">DefaultForUser.</param>
-        public Line(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, Object> Properties = null, UriReference EdgeGroup = null, UriReference Template = null, UriReference Site = null, UriReference LineBaseSettings = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null, UriReference LoggedInUser = null, UriReference DefaultForUser = null)
+        public Line(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, Object> Properties = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Template = null, DomainEntityRef Site = null, DomainEntityRef LineBaseSettings = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null, DomainEntityRef LoggedInUser = null, DomainEntityRef DefaultForUser = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -323,7 +323,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets EdgeGroup
         /// </summary>
         [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
-        public UriReference EdgeGroup { get; set; }
+        public DomainEntityRef EdgeGroup { get; set; }
         
         
         
@@ -331,7 +331,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Template
         /// </summary>
         [DataMember(Name="template", EmitDefaultValue=false)]
-        public UriReference Template { get; set; }
+        public DomainEntityRef Template { get; set; }
         
         
         
@@ -339,7 +339,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Site
         /// </summary>
         [DataMember(Name="site", EmitDefaultValue=false)]
-        public UriReference Site { get; set; }
+        public DomainEntityRef Site { get; set; }
         
         
         
@@ -347,7 +347,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LineBaseSettings
         /// </summary>
         [DataMember(Name="lineBaseSettings", EmitDefaultValue=false)]
-        public UriReference LineBaseSettings { get; set; }
+        public DomainEntityRef LineBaseSettings { get; set; }
         
         
         
@@ -373,7 +373,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LoggedInUser
         /// </summary>
         [DataMember(Name="loggedInUser", EmitDefaultValue=false)]
-        public UriReference LoggedInUser { get; set; }
+        public DomainEntityRef LoggedInUser { get; set; }
         
         
         
@@ -381,7 +381,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DefaultForUser
         /// </summary>
         [DataMember(Name="defaultForUser", EmitDefaultValue=false)]
-        public UriReference DefaultForUser { get; set; }
+        public DomainEntityRef DefaultForUser { get; set; }
         
         
         

@@ -200,7 +200,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Location">Location (required).</param>
         /// <param name="Managed">Managed.</param>
         /// <param name="NtpSettings">Network Time Protocol settings for the site.</param>
-        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> PrimarySites = null, List<UriReference> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, LocationDefinition Location = null, bool? Managed = null, NTPSettings NtpSettings = null)
+        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<DomainEntityRef> PrimarySites = null, List<DomainEntityRef> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, LocationDefinition Location = null, bool? Managed = null, NTPSettings NtpSettings = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -322,7 +322,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PrimarySites
         /// </summary>
         [DataMember(Name="primarySites", EmitDefaultValue=false)]
-        public List<UriReference> PrimarySites { get; set; }
+        public List<DomainEntityRef> PrimarySites { get; set; }
         
         
         
@@ -330,7 +330,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets SecondarySites
         /// </summary>
         [DataMember(Name="secondarySites", EmitDefaultValue=false)]
-        public List<UriReference> SecondarySites { get; set; }
+        public List<DomainEntityRef> SecondarySites { get; set; }
         
         
         

@@ -4700,7 +4700,7 @@ namespace Example
 
 <a name="postoutboundcontactlistexport"></a>
 
-## [**UriReference**](UriReference.html) PostOutboundContactlistExport (string contactListId)
+## [**DomainEntityRef**](DomainEntityRef.html) PostOutboundContactlistExport (string contactListId)
 
 
 
@@ -4736,7 +4736,7 @@ namespace Example
             try
             { 
                 // Initiate the export of a contact list.
-                UriReference result = apiInstance.PostOutboundContactlistExport(contactListId);
+                DomainEntityRef result = apiInstance.PostOutboundContactlistExport(contactListId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4758,7 +4758,7 @@ namespace Example
 
 ### Return type
 
-[**UriReference**](UriReference.html)
+[**DomainEntityRef**](DomainEntityRef.html)
 
 <a name="postoutboundcontactlistfilters"></a>
 
@@ -5005,7 +5005,7 @@ void (empty response body)
 
 <a name="postoutbounddnclistexport"></a>
 
-## [**UriReference**](UriReference.html) PostOutboundDnclistExport (string dncListId)
+## [**DomainEntityRef**](DomainEntityRef.html) PostOutboundDnclistExport (string dncListId)
 
 
 
@@ -5041,7 +5041,7 @@ namespace Example
             try
             { 
                 // Initiate the export of a dnc list.
-                UriReference result = apiInstance.PostOutboundDnclistExport(dncListId);
+                DomainEntityRef result = apiInstance.PostOutboundDnclistExport(dncListId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5063,7 +5063,7 @@ namespace Example
 
 ### Return type
 
-[**UriReference**](UriReference.html)
+[**DomainEntityRef**](DomainEntityRef.html)
 
 <a name="postoutbounddnclistphonenumbers"></a>
 

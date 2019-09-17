@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteAnalyticsConversationsDetailsJob**](ConversationsApi.html#deleteanalyticsconversationsdetailsjob) | **DELETE** /api/v2/analytics/conversations/details/jobs/{jobId} | Delete/cancel an async request |
 | [**DeleteConversationParticipantCode**](ConversationsApi.html#deleteconversationparticipantcode) | **DELETE** /api/v2/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode} | Delete a code used to add a communication to this participant |
 | [**DeleteConversationParticipantFlaggedreason**](ConversationsApi.html#deleteconversationparticipantflaggedreason) | **DELETE** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Remove flagged reason from conversation participant. |
 | [**DeleteConversationsCallParticipantConsult**](ConversationsApi.html#deleteconversationscallparticipantconsult) | **DELETE** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Cancel the transfer |
@@ -16,6 +17,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationstwitterintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Delete a Twitter messaging integration |
 | [**GetAnalyticsConversationDetails**](ConversationsApi.html#getanalyticsconversationdetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
 | [**GetAnalyticsConversationsDetails**](ConversationsApi.html#getanalyticsconversationsdetails) | **GET** /api/v2/analytics/conversations/details | Gets multiple conversations by id |
+| [**GetAnalyticsConversationsDetailsJob**](ConversationsApi.html#getanalyticsconversationsdetailsjob) | **GET** /api/v2/analytics/conversations/details/jobs/{jobId} | Get status for async query for conversation details |
+| [**GetAnalyticsConversationsDetailsJobResults**](ConversationsApi.html#getanalyticsconversationsdetailsjobresults) | **GET** /api/v2/analytics/conversations/details/jobs/{jobId}/results | Fetch a page of results for an async query |
 | [**GetConversation**](ConversationsApi.html#getconversation) | **GET** /api/v2/conversations/{conversationId} | Get conversation |
 | [**GetConversationParticipantSecureivrsession**](ConversationsApi.html#getconversationparticipantsecureivrsession) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions/{secureSessionId} | Fetch info on a secure session |
 | [**GetConversationParticipantSecureivrsessions**](ConversationsApi.html#getconversationparticipantsecureivrsessions) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Get a list of secure sessions for this participant. |
@@ -60,6 +63,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationslineintegrationid) | **GET** /api/v2/conversations/messaging/integrations/line/{integrationId} | Get a LINE messenger integration |
 | [**GetConversationsMessagingIntegrationsTwitter**](ConversationsApi.html#getconversationsmessagingintegrationstwitter) | **GET** /api/v2/conversations/messaging/integrations/twitter | Get a list of Twitter Integrations |
 | [**GetConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationstwitterintegrationid) | **GET** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Get a Twitter messaging integration |
+| [**GetConversationsMessagingIntegrationsWhatsapp**](ConversationsApi.html#getconversationsmessagingintegrationswhatsapp) | **GET** /api/v2/conversations/messaging/integrations/whatsapp | Get a list of WhatsApp Integrations |
+| [**GetConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationswhatsappintegrationid) | **GET** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Get a WhatsApp messaging integration |
 | [**GetConversationsMessagingSticker**](ConversationsApi.html#getconversationsmessagingsticker) | **GET** /api/v2/conversations/messaging/stickers/{messengerType} | Get a list of Messaging Stickers |
 | [**PatchConversationParticipant**](ConversationsApi.html#patchconversationparticipant) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](ConversationsApi.html#patchconversationparticipantattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
@@ -88,8 +93,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsMessageParticipant**](ConversationsApi.html#patchconversationsmessageparticipant) | **PATCH** /api/v2/conversations/messages/{conversationId}/participants/{participantId} | Update conversation participant |
 | [**PatchConversationsMessageParticipantAttributes**](ConversationsApi.html#patchconversationsmessageparticipantattributes) | **PATCH** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsMessageParticipantCommunication**](ConversationsApi.html#patchconversationsmessageparticipantcommunication) | **PATCH** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationswhatsappintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Activate a WhatsApp messaging integration. |
 | [**PostAnalyticsConversationDetailsProperties**](ConversationsApi.html#postanalyticsconversationdetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
 | [**PostAnalyticsConversationsAggregatesQuery**](ConversationsApi.html#postanalyticsconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
+| [**PostAnalyticsConversationsDetailsJobs**](ConversationsApi.html#postanalyticsconversationsdetailsjobs) | **POST** /api/v2/analytics/conversations/details/jobs | Query for conversation details asynchronously |
 | [**PostAnalyticsConversationsDetailsQuery**](ConversationsApi.html#postanalyticsconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
 | [**PostConversationDisconnect**](ConversationsApi.html#postconversationdisconnect) | **POST** /api/v2/conversations/{conversationId}/disconnect | Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resyncronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation. |
 | [**PostConversationParticipantCallbacks**](ConversationsApi.html#postconversationparticipantcallbacks) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
@@ -125,6 +132,66 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutConversationsEmailMessagesDraft**](ConversationsApi.html#putconversationsemailmessagesdraft) | **PUT** /api/v2/conversations/emails/{conversationId}/messages/draft | Update conversation draft reply |
 | [**PutConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#putconversationsmessagingintegrationslineintegrationid) | **PUT** /api/v2/conversations/messaging/integrations/line/{integrationId} | Update a LINE messenger integration |
 {: class="table table-striped"}
+
+<a name="deleteanalyticsconversationsdetailsjob"></a>
+
+## void DeleteAnalyticsConversationsDetailsJob (string jobId)
+
+
+
+Delete/cancel an async request
+
+
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteAnalyticsConversationsDetailsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Delete/cancel an async request
+                apiInstance.DeleteAnalyticsConversationsDetailsJob(jobId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteAnalyticsConversationsDetailsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deleteconversationparticipantcode"></a>
 
@@ -673,6 +740,130 @@ namespace Example
 ### Return type
 
 [**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html)
+
+<a name="getanalyticsconversationsdetailsjob"></a>
+
+## [**AsyncQueryStatus**](AsyncQueryStatus.html) GetAnalyticsConversationsDetailsJob (string jobId)
+
+
+
+Get status for async query for conversation details
+
+
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsConversationsDetailsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Get status for async query for conversation details
+                AsyncQueryStatus result = apiInstance.GetAnalyticsConversationsDetailsJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetAnalyticsConversationsDetailsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus.html)
+
+<a name="getanalyticsconversationsdetailsjobresults"></a>
+
+## [**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse.html) GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null)
+
+
+
+Fetch a page of results for an async query
+
+
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsConversationsDetailsJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var jobId = jobId_example;  // string | jobId
+            var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page) (optional) 
+
+            try
+            { 
+                // Fetch a page of results for an async query
+                AnalyticsConversationAsyncQueryResponse result = apiInstance.GetAnalyticsConversationsDetailsJobResults(jobId, cursor);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetAnalyticsConversationsDetailsJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+| **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse.html)
 
 <a name="getconversation"></a>
 
@@ -3359,6 +3550,130 @@ namespace Example
 
 [**TwitterIntegration**](TwitterIntegration.html)
 
+<a name="getconversationsmessagingintegrationswhatsapp"></a>
+
+## [**WhatsAppIntegrationEntityListing**](WhatsAppIntegrationEntityListing.html) GetConversationsMessagingIntegrationsWhatsapp (int? pageSize = null, int? pageNumber = null)
+
+
+
+Get a list of WhatsApp Integrations
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsWhatsappExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get a list of WhatsApp Integrations
+                WhatsAppIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsWhatsapp(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsWhatsapp: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**WhatsAppIntegrationEntityListing**](WhatsAppIntegrationEntityListing.html)
+
+<a name="getconversationsmessagingintegrationswhatsappintegrationid"></a>
+
+## [**WhatsAppIntegration**](WhatsAppIntegration.html) GetConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId)
+
+
+
+Get a WhatsApp messaging integration
+
+
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsWhatsappIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Get a WhatsApp messaging integration
+                WhatsAppIntegration result = apiInstance.GetConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsWhatsappIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WhatsAppIntegration**](WhatsAppIntegration.html)
+
 <a name="getconversationsmessagingsticker"></a>
 
 ## [**MessagingStickerEntityListing**](MessagingStickerEntityListing.html) GetConversationsMessagingSticker (string messengerType, int? pageSize = null, int? pageNumber = null)
@@ -5144,6 +5459,69 @@ namespace Example
 
 [**Empty**](Empty.html)
 
+<a name="patchconversationsmessagingintegrationswhatsappintegrationid"></a>
+
+## [**WhatsAppIntegration**](WhatsAppIntegration.html) PatchConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId, WhatsAppIntegrationUpdateRequest body)
+
+
+
+Activate a WhatsApp messaging integration.
+
+The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+
+Requires ANY permissions: 
+
+* messaging:integration:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsMessagingIntegrationsWhatsappIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+            var body = new WhatsAppIntegrationUpdateRequest(); // WhatsAppIntegrationUpdateRequest | WhatsAppIntegrationUpdateRequest
+
+            try
+            { 
+                // Activate a WhatsApp messaging integration.
+                WhatsAppIntegration result = apiInstance.PatchConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsMessagingIntegrationsWhatsappIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+| **body** | [**WhatsAppIntegrationUpdateRequest**](WhatsAppIntegrationUpdateRequest.html)| WhatsAppIntegrationUpdateRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WhatsAppIntegration**](WhatsAppIntegration.html)
+
 <a name="postanalyticsconversationdetailsproperties"></a>
 
 ## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostAnalyticsConversationDetailsProperties (string conversationId, PropertyIndexRequest body)
@@ -5267,6 +5645,67 @@ namespace Example
 ### Return type
 
 [**AggregateQueryResponse**](AggregateQueryResponse.html)
+
+<a name="postanalyticsconversationsdetailsjobs"></a>
+
+## [**AsyncQueryResponse**](AsyncQueryResponse.html) PostAnalyticsConversationsDetailsJobs (AsyncConversationQuery body)
+
+
+
+Query for conversation details asynchronously
+
+
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsConversationsDetailsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var body = new AsyncConversationQuery(); // AsyncConversationQuery | query
+
+            try
+            { 
+                // Query for conversation details asynchronously
+                AsyncQueryResponse result = apiInstance.PostAnalyticsConversationsDetailsJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostAnalyticsConversationsDetailsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AsyncConversationQuery**](AsyncConversationQuery.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse.html)
 
 <a name="postanalyticsconversationsdetailsquery"></a>
 

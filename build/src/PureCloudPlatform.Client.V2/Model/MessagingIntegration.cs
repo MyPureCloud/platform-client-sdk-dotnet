@@ -200,7 +200,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Recipient">The recipient associated to the Integration. This recipient is used to associate a flow to an integration.</param>
         /// <param name="CreatedBy">User reference that created this Integration.</param>
         /// <param name="ModifiedBy">User reference that last modified this Integration.</param>
-        public MessagingIntegration(UriReference Recipient = null, UriReference CreatedBy = null, UriReference ModifiedBy = null)
+        public MessagingIntegration(DomainEntityRef Recipient = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null)
         {
             this.Recipient = Recipient;
             this.CreatedBy = CreatedBy;
@@ -237,7 +237,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The recipient associated to the Integration. This recipient is used to associate a flow to an integration</value>
         [DataMember(Name="recipient", EmitDefaultValue=false)]
-        public UriReference Recipient { get; set; }
+        public DomainEntityRef Recipient { get; set; }
         
         
         
@@ -264,7 +264,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User reference that created this Integration</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UriReference CreatedBy { get; set; }
+        public DomainEntityRef CreatedBy { get; set; }
         
         
         
@@ -273,7 +273,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User reference that last modified this Integration</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public UriReference ModifiedBy { get; set; }
+        public DomainEntityRef ModifiedBy { get; set; }
         
         
         

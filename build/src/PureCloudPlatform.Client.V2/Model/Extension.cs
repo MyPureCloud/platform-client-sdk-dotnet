@@ -209,7 +209,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Owner">A Uri reference to the owner of this extension, which is either a User or an IVR.</param>
         /// <param name="ExtensionPool">ExtensionPool.</param>
         /// <param name="OwnerType">OwnerType.</param>
-        public Extension(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string Number = null, UriReference Owner = null, UriReference ExtensionPool = null, OwnerTypeEnum? OwnerType = null)
+        public Extension(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string Number = null, DomainEntityRef Owner = null, DomainEntityRef ExtensionPool = null, OwnerTypeEnum? OwnerType = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -334,7 +334,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A Uri reference to the owner of this extension, which is either a User or an IVR</value>
         [DataMember(Name="owner", EmitDefaultValue=false)]
-        public UriReference Owner { get; set; }
+        public DomainEntityRef Owner { get; set; }
         
         
         
@@ -342,7 +342,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ExtensionPool
         /// </summary>
         [DataMember(Name="extensionPool", EmitDefaultValue=false)]
-        public UriReference ExtensionPool { get; set; }
+        public DomainEntityRef ExtensionPool { get; set; }
         
         
         

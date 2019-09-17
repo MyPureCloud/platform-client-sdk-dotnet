@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Trunk">Trunk.</param>
         /// <param name="Calls">Calls.</param>
         /// <param name="Qos">Qos.</param>
-        public TrunkMetrics(DateTime? EventTime = null, UriReference LogicalInterface = null, UriReference Trunk = null, TrunkMetricsCalls Calls = null, TrunkMetricsQoS Qos = null)
+        public TrunkMetrics(DateTime? EventTime = null, DomainEntityRef LogicalInterface = null, DomainEntityRef Trunk = null, TrunkMetricsCalls Calls = null, TrunkMetricsQoS Qos = null)
         {
             this.EventTime = EventTime;
             this.LogicalInterface = LogicalInterface;
@@ -79,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LogicalInterface
         /// </summary>
         [DataMember(Name="logicalInterface", EmitDefaultValue=false)]
-        public UriReference LogicalInterface { get; set; }
+        public DomainEntityRef LogicalInterface { get; set; }
         
         
         
@@ -87,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Trunk
         /// </summary>
         [DataMember(Name="trunk", EmitDefaultValue=false)]
-        public UriReference Trunk { get; set; }
+        public DomainEntityRef Trunk { get; set; }
         
         
         

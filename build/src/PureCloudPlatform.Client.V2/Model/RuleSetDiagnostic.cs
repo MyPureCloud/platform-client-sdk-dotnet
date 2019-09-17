@@ -77,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="RuleSet">A campaign rule set.</param>
         /// <param name="Warnings">Diagnostic warnings for the rule set.</param>
-        public RuleSetDiagnostic(UriReference RuleSet = null, List<WarningsEnum> Warnings = null)
+        public RuleSetDiagnostic(DomainEntityRef RuleSet = null, List<WarningsEnum> Warnings = null)
         {
             this.RuleSet = RuleSet;
             this.Warnings = Warnings;
@@ -91,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A campaign rule set</value>
         [DataMember(Name="ruleSet", EmitDefaultValue=false)]
-        public UriReference RuleSet { get; set; }
+        public DomainEntityRef RuleSet { get; set; }
         
         
         

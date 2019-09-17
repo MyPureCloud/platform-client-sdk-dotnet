@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Conversation">The conversation associated with the callback (required).</param>
         /// <param name="CallbackIdentifiers">The list of communication identifiers for the callback participants (required).</param>
-        public CreateCallbackResponse(UriReference Conversation = null, List<CallbackIdentifier> CallbackIdentifiers = null)
+        public CreateCallbackResponse(DomainEntityRef Conversation = null, List<CallbackIdentifier> CallbackIdentifiers = null)
         {
             this.Conversation = Conversation;
             this.CallbackIdentifiers = CallbackIdentifiers;
@@ -56,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The conversation associated with the callback</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
-        public UriReference Conversation { get; set; }
+        public DomainEntityRef Conversation { get; set; }
         
         
         

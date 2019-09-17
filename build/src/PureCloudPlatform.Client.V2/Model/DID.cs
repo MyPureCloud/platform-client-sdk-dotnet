@@ -209,7 +209,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DidPool">DidPool.</param>
         /// <param name="Owner">A Uri reference to the owner of this DID, which is either a User or an IVR.</param>
         /// <param name="OwnerType">OwnerType.</param>
-        public DID(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string PhoneNumber = null, UriReference DidPool = null, UriReference Owner = null, OwnerTypeEnum? OwnerType = null)
+        public DID(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string PhoneNumber = null, DomainEntityRef DidPool = null, DomainEntityRef Owner = null, OwnerTypeEnum? OwnerType = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -333,7 +333,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets DidPool
         /// </summary>
         [DataMember(Name="didPool", EmitDefaultValue=false)]
-        public UriReference DidPool { get; set; }
+        public DomainEntityRef DidPool { get; set; }
         
         
         
@@ -342,7 +342,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A Uri reference to the owner of this DID, which is either a User or an IVR</value>
         [DataMember(Name="owner", EmitDefaultValue=false)]
-        public UriReference Owner { get; set; }
+        public DomainEntityRef Owner { get; set; }
         
         
         

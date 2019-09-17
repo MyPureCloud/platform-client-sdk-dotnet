@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Division">A division the conversation belongs to..</param>
         /// <param name="Entities">The entities on the conversation within the division. These are the users, queues, work flows, etc. that can be on conversations and and be assigned to different divisions..</param>
-        public ConversationDivisionMembership(UriReference Division = null, List<UriReference> Entities = null)
+        public ConversationDivisionMembership(DomainEntityRef Division = null, List<DomainEntityRef> Entities = null)
         {
             this.Division = Division;
             this.Entities = Entities;
@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A division the conversation belongs to.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public UriReference Division { get; set; }
+        public DomainEntityRef Division { get; set; }
         
         
         
@@ -59,7 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The entities on the conversation within the division. These are the users, queues, work flows, etc. that can be on conversations and and be assigned to different divisions.</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<UriReference> Entities { get; set; }
+        public List<DomainEntityRef> Entities { get; set; }
         
         
         /// <summary>

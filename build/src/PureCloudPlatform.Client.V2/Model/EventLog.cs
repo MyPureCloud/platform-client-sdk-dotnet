@@ -214,7 +214,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Category">Category.</param>
         /// <param name="CorrelationId">CorrelationId.</param>
         /// <param name="EventMessage">EventMessage.</param>
-        public EventLog(string Name = null, UriReference ErrorEntity = null, UriReference RelatedEntity = null, DateTime? Timestamp = null, LevelEnum? Level = null, CategoryEnum? Category = null, string CorrelationId = null, EventMessage EventMessage = null)
+        public EventLog(string Name = null, DomainEntityRef ErrorEntity = null, DomainEntityRef RelatedEntity = null, DateTime? Timestamp = null, LevelEnum? Level = null, CategoryEnum? Category = null, string CorrelationId = null, EventMessage EventMessage = null)
         {
             this.Name = Name;
             this.ErrorEntity = ErrorEntity;
@@ -250,7 +250,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ErrorEntity
         /// </summary>
         [DataMember(Name="errorEntity", EmitDefaultValue=false)]
-        public UriReference ErrorEntity { get; set; }
+        public DomainEntityRef ErrorEntity { get; set; }
         
         
         
@@ -258,7 +258,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets RelatedEntity
         /// </summary>
         [DataMember(Name="relatedEntity", EmitDefaultValue=false)]
-        public UriReference RelatedEntity { get; set; }
+        public DomainEntityRef RelatedEntity { get; set; }
         
         
         

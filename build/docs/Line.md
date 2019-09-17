@@ -19,14 +19,14 @@ title: Line
 | **ModifiedByApp** | **string** | The application that last modified the resource. | [optional] |
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-| **EdgeGroup** | [**UriReference**](UriReference.html) |  | [optional] |
-| **Template** | [**UriReference**](UriReference.html) |  | [optional] |
-| **Site** | [**UriReference**](UriReference.html) |  | [optional] |
-| **LineBaseSettings** | [**UriReference**](UriReference.html) |  | [optional] |
+| **EdgeGroup** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **Template** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **Site** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **LineBaseSettings** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **PrimaryEdge** | [**Edge**](Edge.html) | The primary edge associated to the line. (Deprecated) | [optional] |
 | **SecondaryEdge** | [**Edge**](Edge.html) | The secondary edge associated to the line. (Deprecated) | [optional] |
-| **LoggedInUser** | [**UriReference**](UriReference.html) |  | [optional] |
-| **DefaultForUser** | [**UriReference**](UriReference.html) |  | [optional] |
+| **LoggedInUser** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **DefaultForUser** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

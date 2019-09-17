@@ -17,6 +17,28 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// Delete/cancel an async request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns></returns>
+        void DeleteAnalyticsConversationsDetailsJob (string jobId);
+
+        /// <summary>
+        /// Delete/cancel an async request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteAnalyticsConversationsDetailsJobWithHttpInfo (string jobId);
+        
+        /// <summary>
         /// Delete a scheduled report job.
         /// </summary>
         /// <remarks>
@@ -81,6 +103,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma-separated conversation ids (optional)</param>
         /// <returns>ApiResponse of AnalyticsConversationMultiGetResponse</returns>
         ApiResponse<AnalyticsConversationMultiGetResponse> GetAnalyticsConversationsDetailsWithHttpInfo (List<string> id = null);
+        
+        /// <summary>
+        /// Get status for async query for conversation details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>AsyncQueryStatus</returns>
+        AsyncQueryStatus GetAnalyticsConversationsDetailsJob (string jobId);
+
+        /// <summary>
+        /// Get status for async query for conversation details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>ApiResponse of AsyncQueryStatus</returns>
+        ApiResponse<AsyncQueryStatus> GetAnalyticsConversationsDetailsJobWithHttpInfo (string jobId);
+        
+        /// <summary>
+        /// Fetch a page of results for an async query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <returns>AnalyticsConversationAsyncQueryResponse</returns>
+        AnalyticsConversationAsyncQueryResponse GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null);
+
+        /// <summary>
+        /// Fetch a page of results for an async query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <returns>ApiResponse of AnalyticsConversationAsyncQueryResponse</returns>
+        ApiResponse<AnalyticsConversationAsyncQueryResponse> GetAnalyticsConversationsDetailsJobResultsWithHttpInfo (string jobId, string cursor = null);
         
         /// <summary>
         /// Get all view export requests for a user
@@ -355,6 +423,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AggregateQueryResponse</returns>
         ApiResponse<AggregateQueryResponse> PostAnalyticsConversationsAggregatesQueryWithHttpInfo (AggregationQuery body);
+        
+        /// <summary>
+        /// Query for conversation details asynchronously
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AsyncQueryResponse</returns>
+        AsyncQueryResponse PostAnalyticsConversationsDetailsJobs (AsyncConversationQuery body);
+
+        /// <summary>
+        /// Query for conversation details asynchronously
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AsyncQueryResponse</returns>
+        ApiResponse<AsyncQueryResponse> PostAnalyticsConversationsDetailsJobsWithHttpInfo (AsyncConversationQuery body);
         
         /// <summary>
         /// Query for conversation details
@@ -649,6 +739,28 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
         
         /// <summary>
+        /// Delete/cancel an async request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteAnalyticsConversationsDetailsJobAsync (string jobId);
+
+        /// <summary>
+        /// Delete/cancel an async request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAnalyticsConversationsDetailsJobAsyncWithHttpInfo (string jobId);
+        
+        /// <summary>
         /// Delete a scheduled report job.
         /// </summary>
         /// <remarks>
@@ -713,6 +825,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma-separated conversation ids (optional)</param>
         /// <returns>Task of ApiResponse (AnalyticsConversationMultiGetResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationMultiGetResponse>> GetAnalyticsConversationsDetailsAsyncWithHttpInfo (List<string> id = null);
+        
+        /// <summary>
+        /// Get status for async query for conversation details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of AsyncQueryStatus</returns>
+        System.Threading.Tasks.Task<AsyncQueryStatus> GetAnalyticsConversationsDetailsJobAsync (string jobId);
+
+        /// <summary>
+        /// Get status for async query for conversation details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of ApiResponse (AsyncQueryStatus)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AsyncQueryStatus>> GetAnalyticsConversationsDetailsJobAsyncWithHttpInfo (string jobId);
+        
+        /// <summary>
+        /// Fetch a page of results for an async query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <returns>Task of AnalyticsConversationAsyncQueryResponse</returns>
+        System.Threading.Tasks.Task<AnalyticsConversationAsyncQueryResponse> GetAnalyticsConversationsDetailsJobResultsAsync (string jobId, string cursor = null);
+
+        /// <summary>
+        /// Fetch a page of results for an async query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <returns>Task of ApiResponse (AnalyticsConversationAsyncQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationAsyncQueryResponse>> GetAnalyticsConversationsDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null);
         
         /// <summary>
         /// Get all view export requests for a user
@@ -987,6 +1145,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsConversationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
+        
+        /// <summary>
+        /// Query for conversation details asynchronously
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AsyncQueryResponse</returns>
+        System.Threading.Tasks.Task<AsyncQueryResponse> PostAnalyticsConversationsDetailsJobsAsync (AsyncConversationQuery body);
+
+        /// <summary>
+        /// Query for conversation details asynchronously
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AsyncQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AsyncQueryResponse>> PostAnalyticsConversationsDetailsJobsAsyncWithHttpInfo (AsyncConversationQuery body);
         
         /// <summary>
         /// Query for conversation details
@@ -1367,6 +1547,197 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
+        
+        /// <summary>
+        /// Delete/cancel an async request 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns></returns>
+        public void DeleteAnalyticsConversationsDetailsJob (string jobId)
+        {
+             DeleteAnalyticsConversationsDetailsJobWithHttpInfo(jobId);
+        }
+
+        /// <summary>
+        /// Delete/cancel an async request 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteAnalyticsConversationsDetailsJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AnalyticsApi->DeleteAnalyticsConversationsDetailsJob");
+
+            var localVarPath = "/api/v2/analytics/conversations/details/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsConversationsDetailsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsConversationsDetailsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete/cancel an async request 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteAnalyticsConversationsDetailsJobAsync (string jobId)
+        {
+             await DeleteAnalyticsConversationsDetailsJobAsyncWithHttpInfo(jobId);
+
+        }
+
+        /// <summary>
+        /// Delete/cancel an async request 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAnalyticsConversationsDetailsJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AnalyticsApi->DeleteAnalyticsConversationsDetailsJob");
+            
+
+            var localVarPath = "/api/v2/analytics/conversations/details/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsConversationsDetailsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsConversationsDetailsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
         
         /// <summary>
         /// Delete a scheduled report job. 
@@ -1932,6 +2303,398 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AnalyticsConversationMultiGetResponse>(localVarStatusCode,
                 localVarHeaders,
                 (AnalyticsConversationMultiGetResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversationMultiGetResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get status for async query for conversation details 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>AsyncQueryStatus</returns>
+        public AsyncQueryStatus GetAnalyticsConversationsDetailsJob (string jobId)
+        {
+             ApiResponse<AsyncQueryStatus> localVarResponse = GetAnalyticsConversationsDetailsJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get status for async query for conversation details 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>ApiResponse of AsyncQueryStatus</returns>
+        public ApiResponse< AsyncQueryStatus > GetAnalyticsConversationsDetailsJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AnalyticsApi->GetAnalyticsConversationsDetailsJob");
+
+            var localVarPath = "/api/v2/analytics/conversations/details/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncQueryStatus>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncQueryStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncQueryStatus)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get status for async query for conversation details 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of AsyncQueryStatus</returns>
+        public async System.Threading.Tasks.Task<AsyncQueryStatus> GetAnalyticsConversationsDetailsJobAsync (string jobId)
+        {
+             ApiResponse<AsyncQueryStatus> localVarResponse = await GetAnalyticsConversationsDetailsJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get status for async query for conversation details 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of ApiResponse (AsyncQueryStatus)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AsyncQueryStatus>> GetAnalyticsConversationsDetailsJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AnalyticsApi->GetAnalyticsConversationsDetailsJob");
+            
+
+            var localVarPath = "/api/v2/analytics/conversations/details/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncQueryStatus>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncQueryStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncQueryStatus)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Fetch a page of results for an async query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <returns>AnalyticsConversationAsyncQueryResponse</returns>
+        public AnalyticsConversationAsyncQueryResponse GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null)
+        {
+             ApiResponse<AnalyticsConversationAsyncQueryResponse> localVarResponse = GetAnalyticsConversationsDetailsJobResultsWithHttpInfo(jobId, cursor);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch a page of results for an async query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <returns>ApiResponse of AnalyticsConversationAsyncQueryResponse</returns>
+        public ApiResponse< AnalyticsConversationAsyncQueryResponse > GetAnalyticsConversationsDetailsJobResultsWithHttpInfo (string jobId, string cursor = null)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AnalyticsApi->GetAnalyticsConversationsDetailsJobResults");
+
+            var localVarPath = "/api/v2/analytics/conversations/details/jobs/{jobId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AnalyticsConversationAsyncQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AnalyticsConversationAsyncQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversationAsyncQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Fetch a page of results for an async query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <returns>Task of AnalyticsConversationAsyncQueryResponse</returns>
+        public async System.Threading.Tasks.Task<AnalyticsConversationAsyncQueryResponse> GetAnalyticsConversationsDetailsJobResultsAsync (string jobId, string cursor = null)
+        {
+             ApiResponse<AnalyticsConversationAsyncQueryResponse> localVarResponse = await GetAnalyticsConversationsDetailsJobResultsAsyncWithHttpInfo(jobId, cursor);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Fetch a page of results for an async query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <returns>Task of ApiResponse (AnalyticsConversationAsyncQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationAsyncQueryResponse>> GetAnalyticsConversationsDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AnalyticsApi->GetAnalyticsConversationsDetailsJobResults");
+            
+
+            var localVarPath = "/api/v2/analytics/conversations/details/jobs/{jobId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AnalyticsConversationAsyncQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AnalyticsConversationAsyncQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversationAsyncQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -4273,6 +5036,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
                 (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Query for conversation details asynchronously 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AsyncQueryResponse</returns>
+        public AsyncQueryResponse PostAnalyticsConversationsDetailsJobs (AsyncConversationQuery body)
+        {
+             ApiResponse<AsyncQueryResponse> localVarResponse = PostAnalyticsConversationsDetailsJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for conversation details asynchronously 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AsyncQueryResponse</returns>
+        public ApiResponse< AsyncQueryResponse > PostAnalyticsConversationsDetailsJobsWithHttpInfo (AsyncConversationQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsConversationsDetailsJobs");
+
+            var localVarPath = "/api/v2/analytics/conversations/details/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsDetailsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsDetailsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Query for conversation details asynchronously 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AsyncQueryResponse</returns>
+        public async System.Threading.Tasks.Task<AsyncQueryResponse> PostAnalyticsConversationsDetailsJobsAsync (AsyncConversationQuery body)
+        {
+             ApiResponse<AsyncQueryResponse> localVarResponse = await PostAnalyticsConversationsDetailsJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for conversation details asynchronously 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AsyncQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AsyncQueryResponse>> PostAnalyticsConversationsDetailsJobsAsyncWithHttpInfo (AsyncConversationQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsConversationsDetailsJobs");
+            
+
+            var localVarPath = "/api/v2/analytics/conversations/details/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsDetailsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsDetailsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

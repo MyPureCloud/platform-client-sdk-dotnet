@@ -233,7 +233,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Endpoint">Endpoint.</param>
         /// <param name="IpAddress">IpAddress.</param>
         /// <param name="LogicalInterfaceId">LogicalInterfaceId.</param>
-        public EdgeLine(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference Schema = null, Dictionary<string, Object> Properties = null, Edge Edge = null, EdgeGroup EdgeGroup = null, LineTypeEnum? LineType = null, Endpoint Endpoint = null, string IpAddress = null, string LogicalInterfaceId = null)
+        public EdgeLine(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DomainEntityRef Schema = null, Dictionary<string, Object> Properties = null, Edge Edge = null, EdgeGroup EdgeGroup = null, LineTypeEnum? LineType = null, Endpoint Endpoint = null, string IpAddress = null, string LogicalInterfaceId = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -353,7 +353,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Schema
         /// </summary>
         [DataMember(Name="schema", EmitDefaultValue=false)]
-        public UriReference Schema { get; set; }
+        public DomainEntityRef Schema { get; set; }
         
         
         

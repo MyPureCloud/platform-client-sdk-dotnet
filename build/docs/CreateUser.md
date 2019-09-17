@@ -14,6 +14,7 @@ title: CreateUser
 | **Title** | **string** |  | [optional] |
 | **Password** | **string** | User&#39;s password | |
 | **DivisionId** | **string** | The division to which this user will belong | |
+| **State** | **string** | Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive. | [optional] |
 {: class="table table-striped"}
 
 

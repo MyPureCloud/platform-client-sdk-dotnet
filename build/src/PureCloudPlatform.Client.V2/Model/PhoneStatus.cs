@@ -205,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LineStatuses">A list of LineStatus information for each of the lines of this phone.</param>
         /// <param name="PhoneAssignmentToEdgeType">The phone status&#39;s edge assignment type..</param>
         /// <param name="Edge">The URI of the edge that provided this status information..</param>
-        public PhoneStatus(string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, string EventCreationTime = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, UriReference Edge = null)
+        public PhoneStatus(string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, string EventCreationTime = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, DomainEntityRef Edge = null)
         {
             this.Name = Name;
             this.OperationalStatus = OperationalStatus;
@@ -275,7 +275,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The URI of the edge that provided this status information.</value>
         [DataMember(Name="edge", EmitDefaultValue=false)]
-        public UriReference Edge { get; set; }
+        public DomainEntityRef Edge { get; set; }
         
         
         

@@ -131,7 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Campaigns">The ordered list of Campaigns that this CampaignSequence will run. (required).</param>
         /// <param name="Status">The current status of the CampaignSequence. A CampaignSequence can be turned &#39;on&#39; or &#39;off&#39;. (required).</param>
         /// <param name="Repeat">Indicates if a sequence should repeat from the beginning after the last campaign completes. Default is false..</param>
-        public CampaignSequence(string Name = null, int? Version = null, List<UriReference> Campaigns = null, StatusEnum? Status = null, bool? Repeat = null)
+        public CampaignSequence(string Name = null, int? Version = null, List<DomainEntityRef> Campaigns = null, StatusEnum? Status = null, bool? Repeat = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -192,7 +192,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The ordered list of Campaigns that this CampaignSequence will run.</value>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
-        public List<UriReference> Campaigns { get; set; }
+        public List<DomainEntityRef> Campaigns { get; set; }
         
         
         

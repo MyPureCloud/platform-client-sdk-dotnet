@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// UriReference
+    /// DomainEntityRef
     /// </summary>
     [DataContract]
-    public partial class UriReference :  IEquatable<UriReference>
+    public partial class DomainEntityRef :  IEquatable<DomainEntityRef>
     {
         
         
@@ -37,12 +37,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="UriReference" /> class.
+        /// Initializes a new instance of the <see cref="DomainEntityRef" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Name">Name.</param>
         /// <param name="SelfUri">SelfUri.</param>
-        public UriReference(string Id = null, string Name = null, string SelfUri = null)
+        public DomainEntityRef(string Id = null, string Name = null, string SelfUri = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UriReference {\n");
+            sb.Append("class DomainEntityRef {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -108,15 +108,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UriReference);
+            return this.Equals(obj as DomainEntityRef);
         }
 
         /// <summary>
-        /// Returns true if UriReference instances are equal
+        /// Returns true if DomainEntityRef instances are equal
         /// </summary>
-        /// <param name="other">Instance of UriReference to be compared</param>
+        /// <param name="other">Instance of DomainEntityRef to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UriReference other)
+        public bool Equals(DomainEntityRef other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

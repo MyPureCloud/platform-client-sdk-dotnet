@@ -111,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="State">The current state of a secure session (required).</param>
         /// <param name="SourceParticipantId">Unique identifier for the participant initiating the secure session..</param>
         /// <param name="Disconnect">If true, disconnect the agent after creating the session.</param>
-        public SecureSession(UriReference Flow = null, string UserData = null, StateEnum? State = null, string SourceParticipantId = null, bool? Disconnect = null)
+        public SecureSession(DomainEntityRef Flow = null, string UserData = null, StateEnum? State = null, string SourceParticipantId = null, bool? Disconnect = null)
         {
             this.Flow = Flow;
             this.UserData = UserData;
@@ -137,7 +137,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The flow to execute securely</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
-        public UriReference Flow { get; set; }
+        public DomainEntityRef Flow { get; set; }
         
         
         

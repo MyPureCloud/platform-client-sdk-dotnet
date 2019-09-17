@@ -238,6 +238,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Provider,
             
             /// <summary>
+            /// Enum Flowouttype for "flowOutType"
+            /// </summary>
+            [EnumMember(Value = "flowOutType")]
+            Flowouttype,
+            
+            /// <summary>
             /// Enum Stationid for "stationId"
             /// </summary>
             [EnumMember(Value = "stationId")]

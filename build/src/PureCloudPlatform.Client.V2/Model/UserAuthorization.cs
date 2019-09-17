@@ -35,16 +35,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAuthorization" /> class.
         /// </summary>
         /// <param name="Roles">Roles.</param>
+        /// <param name="UnusedRoles">UnusedRoles.</param>
         /// <param name="Permissions">A collection of the permissions granted by all assigned roles.</param>
         /// <param name="PermissionPolicies">The policies configured for assigned permissions..</param>
-        public UserAuthorization(List<DomainRole> Roles = null, List<string> Permissions = null, List<ResourcePermissionPolicy> PermissionPolicies = null)
+        public UserAuthorization(List<DomainRole> Roles = null, List<DomainRole> UnusedRoles = null, List<string> Permissions = null, List<ResourcePermissionPolicy> PermissionPolicies = null)
         {
             this.Roles = Roles;
+            this.UnusedRoles = UnusedRoles;
             this.Permissions = Permissions;
             this.PermissionPolicies = PermissionPolicies;
             
@@ -57,6 +64,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="roles", EmitDefaultValue=false)]
         public List<DomainRole> Roles { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets UnusedRoles
+        /// </summary>
+        [DataMember(Name="unusedRoles", EmitDefaultValue=false)]
+        public List<DomainRole> UnusedRoles { get; set; }
         
         
         
@@ -87,6 +102,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class UserAuthorization {\n");
             
             sb.Append("  Roles: ").Append(Roles).Append("\n");
+            sb.Append("  UnusedRoles: ").Append(UnusedRoles).Append("\n");
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
             sb.Append("  PermissionPolicies: ").Append(PermissionPolicies).Append("\n");
             sb.Append("}\n");
@@ -131,6 +147,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Roles.SequenceEqual(other.Roles)
                 ) &&
                 (
+                    this.UnusedRoles == other.UnusedRoles ||
+                    this.UnusedRoles != null &&
+                    this.UnusedRoles.SequenceEqual(other.UnusedRoles)
+                ) &&
+                (
                     this.Permissions == other.Permissions ||
                     this.Permissions != null &&
                     this.Permissions.SequenceEqual(other.Permissions)
@@ -156,6 +177,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Roles != null)
                     hash = hash * 59 + this.Roles.GetHashCode();
+                
+                if (this.UnusedRoles != null)
+                    hash = hash * 59 + this.UnusedRoles.GetHashCode();
                 
                 if (this.Permissions != null)
                     hash = hash * 59 + this.Permissions.GetHashCode();

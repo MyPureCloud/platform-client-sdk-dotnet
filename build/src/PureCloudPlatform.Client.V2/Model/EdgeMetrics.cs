@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Disks">Disks.</param>
         /// <param name="Subsystems">Subsystems.</param>
         /// <param name="Networks">Networks.</param>
-        public EdgeMetrics(UriReference Edge = null, DateTime? EventTime = null, long? UpTimeMsec = null, List<EdgeMetricsProcessor> Processors = null, List<EdgeMetricsMemory> Memory = null, List<EdgeMetricsDisk> Disks = null, List<EdgeMetricsSubsystem> Subsystems = null, List<EdgeMetricsNetwork> Networks = null)
+        public EdgeMetrics(DomainEntityRef Edge = null, DateTime? EventTime = null, long? UpTimeMsec = null, List<EdgeMetricsProcessor> Processors = null, List<EdgeMetricsMemory> Memory = null, List<EdgeMetricsDisk> Disks = null, List<EdgeMetricsSubsystem> Subsystems = null, List<EdgeMetricsNetwork> Networks = null)
         {
             this.Edge = Edge;
             this.EventTime = EventTime;
@@ -91,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Edge
         /// </summary>
         [DataMember(Name="edge", EmitDefaultValue=false)]
-        public UriReference Edge { get; set; }
+        public DomainEntityRef Edge { get; set; }
         
         
         

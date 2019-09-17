@@ -93,7 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UploadStatus">UploadStatus.</param>
         /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
         /// <param name="UploadMethod">UploadMethod.</param>
-        public ReplaceResponse(string Id = null, string Name = null, int? ChangeNumber = null, UriReference UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null)
+        public ReplaceResponse(string Id = null, string Name = null, int? ChangeNumber = null, DomainEntityRef UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets UploadStatus
         /// </summary>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
-        public UriReference UploadStatus { get; set; }
+        public DomainEntityRef UploadStatus { get; set; }
         
         
         

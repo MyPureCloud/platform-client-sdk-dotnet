@@ -143,7 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DncCodes">The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com..</param>
         /// <param name="LicenseId">A gryphon license number. Required if the dncSourceType is gryphon..</param>
         /// <param name="Division">The division this DncList belongs to..</param>
-        public DncList(string Name = null, int? Version = null, ImportStatus ImportStatus = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, UriReference Division = null)
+        public DncList(string Name = null, int? Version = null, ImportStatus ImportStatus = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, DomainEntityRef Division = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -254,7 +254,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The division this DncList belongs to.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public UriReference Division { get; set; }
+        public DomainEntityRef Division { get; set; }
         
         
         

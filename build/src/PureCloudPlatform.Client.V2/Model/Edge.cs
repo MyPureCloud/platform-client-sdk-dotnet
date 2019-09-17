@@ -211,7 +211,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unpaired for "UNPAIRED"
             /// </summary>
             [EnumMember(Value = "UNPAIRED")]
-            Unpaired
+            Unpaired,
+            
+            /// <summary>
+            /// Enum Initializing for "INITIALIZING"
+            /// </summary>
+            [EnumMember(Value = "INITIALIZING")]
+            Initializing
         }
         
         

@@ -80,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Intervals">A list of intervals during which to run the associated CampaignSequence. (required).</param>
         /// <param name="TimeZone">The time zone for this SequenceSchedule. For example, Africa/Abidjan. (required).</param>
         /// <param name="Sequence">The CampaignSequence that this SequenceSchedule is for. (required).</param>
-        public SequenceSchedule(string Name = null, int? Version = null, List<ScheduleInterval> Intervals = null, string TimeZone = null, UriReference Sequence = null)
+        public SequenceSchedule(string Name = null, int? Version = null, List<ScheduleInterval> Intervals = null, string TimeZone = null, DomainEntityRef Sequence = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -159,7 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The CampaignSequence that this SequenceSchedule is for.</value>
         [DataMember(Name="sequence", EmitDefaultValue=false)]
-        public UriReference Sequence { get; set; }
+        public DomainEntityRef Sequence { get; set; }
         
         
         

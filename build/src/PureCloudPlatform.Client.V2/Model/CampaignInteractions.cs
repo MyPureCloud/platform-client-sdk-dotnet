@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PreviewingInteractions">PreviewingInteractions.</param>
         /// <param name="InteractingInteractions">InteractingInteractions.</param>
         /// <param name="ScheduledInteractions">ScheduledInteractions.</param>
-        public CampaignInteractions(UriReference Campaign = null, List<CampaignInteraction> PendingInteractions = null, List<CampaignInteraction> ProceedingInteractions = null, List<CampaignInteraction> PreviewingInteractions = null, List<CampaignInteraction> InteractingInteractions = null, List<CampaignInteraction> ScheduledInteractions = null)
+        public CampaignInteractions(DomainEntityRef Campaign = null, List<CampaignInteraction> PendingInteractions = null, List<CampaignInteraction> ProceedingInteractions = null, List<CampaignInteraction> PreviewingInteractions = null, List<CampaignInteraction> InteractingInteractions = null, List<CampaignInteraction> ScheduledInteractions = null)
         {
             this.Campaign = Campaign;
             this.PendingInteractions = PendingInteractions;
@@ -77,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Campaign
         /// </summary>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
-        public UriReference Campaign { get; set; }
+        public DomainEntityRef Campaign { get; set; }
         
         
         

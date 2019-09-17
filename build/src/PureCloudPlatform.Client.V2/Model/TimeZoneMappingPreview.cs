@@ -78,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactsMappedToMultipleZonesUsingZipCode">The total number of contacts that mapped to multiple time zones and were mapped using the zip code column.</param>
         /// <param name="ContactsInDefaultWindow">The total number of contacts that will be dialed during the default window.</param>
         /// <param name="ContactListSize">The total number of contacts in the contact list.</param>
-        public TimeZoneMappingPreview(UriReference ContactList = null, Dictionary<string, long?> ContactsPerTimeZone = null, Dictionary<string, long?> ContactsMappedUsingZipCode = null, long? ContactsMappedToASingleZone = null, long? ContactsMappedToASingleZoneUsingZipCode = null, long? ContactsMappedToMultipleZones = null, long? ContactsMappedToMultipleZonesUsingZipCode = null, long? ContactsInDefaultWindow = null, long? ContactListSize = null)
+        public TimeZoneMappingPreview(DomainEntityRef ContactList = null, Dictionary<string, long?> ContactsPerTimeZone = null, Dictionary<string, long?> ContactsMappedUsingZipCode = null, long? ContactsMappedToASingleZone = null, long? ContactsMappedToASingleZoneUsingZipCode = null, long? ContactsMappedToMultipleZones = null, long? ContactsMappedToMultipleZonesUsingZipCode = null, long? ContactsInDefaultWindow = null, long? ContactListSize = null)
         {
             this.ContactList = ContactList;
             this.ContactsPerTimeZone = ContactsPerTimeZone;
@@ -99,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The associated ContactList</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
-        public UriReference ContactList { get; set; }
+        public DomainEntityRef ContactList { get; set; }
         
         
         

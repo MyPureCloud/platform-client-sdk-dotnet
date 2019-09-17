@@ -19,13 +19,13 @@ title: Trunk
 | **ModifiedByApp** | **string** | The application that last modified the resource. | [optional] |
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
 | **TrunkType** | **string** | The type of this trunk. | [optional] |
-| **Edge** | [**UriReference**](UriReference.html) | The Edge using this trunk. | [optional] |
-| **TrunkBase** | [**UriReference**](UriReference.html) | The trunk base configuration used on this trunk. | [optional] |
-| **TrunkMetabase** | [**UriReference**](UriReference.html) | The metabase used to create this trunk. | [optional] |
-| **EdgeGroup** | [**UriReference**](UriReference.html) | The edge group associated with this trunk. | [optional] |
+| **Edge** | [**DomainEntityRef**](DomainEntityRef.html) | The Edge using this trunk. | [optional] |
+| **TrunkBase** | [**DomainEntityRef**](DomainEntityRef.html) | The trunk base configuration used on this trunk. | [optional] |
+| **TrunkMetabase** | [**DomainEntityRef**](DomainEntityRef.html) | The metabase used to create this trunk. | [optional] |
+| **EdgeGroup** | [**DomainEntityRef**](DomainEntityRef.html) | The edge group associated with this trunk. | [optional] |
 | **InService** | **bool?** | True if this trunk is in-service.  This comes from the trunk_enabled property of the referenced trunk base. | [optional] |
 | **Enabled** | **bool?** | True if the Edge used by this trunk is in-service | [optional] |
-| **LogicalInterface** | [**UriReference**](UriReference.html) | The Logical Interface on the Edge to which the trunk is assigned. | [optional] |
+| **LogicalInterface** | [**DomainEntityRef**](DomainEntityRef.html) | The Logical Interface on the Edge to which the trunk is assigned. | [optional] |
 | **ConnectedStatus** | [**TrunkConnectedStatus**](TrunkConnectedStatus.html) | The connected status of the trunk | [optional] |
 | **OptionsStatus** | [**List&lt;TrunkMetricsOptions&gt;**](TrunkMetricsOptions.html) | The trunk optionsStatus | [optional] |
 | **RegistersStatus** | [**List&lt;TrunkMetricsRegisters&gt;**](TrunkMetricsRegisters.html) | The trunk registersStatus | [optional] |

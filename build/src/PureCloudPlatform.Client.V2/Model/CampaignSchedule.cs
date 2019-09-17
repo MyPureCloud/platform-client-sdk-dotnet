@@ -80,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Intervals">A list of intervals during which to run the associated Campaign. (required).</param>
         /// <param name="TimeZone">The time zone for this CampaignSchedule. For example, Africa/Abidjan. (required).</param>
         /// <param name="Campaign">The Campaign that this CampaignSchedule is for. (required).</param>
-        public CampaignSchedule(string Name = null, int? Version = null, List<ScheduleInterval> Intervals = null, string TimeZone = null, UriReference Campaign = null)
+        public CampaignSchedule(string Name = null, int? Version = null, List<ScheduleInterval> Intervals = null, string TimeZone = null, DomainEntityRef Campaign = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -159,7 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The Campaign that this CampaignSchedule is for.</value>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
-        public UriReference Campaign { get; set; }
+        public DomainEntityRef Campaign { get; set; }
         
         
         

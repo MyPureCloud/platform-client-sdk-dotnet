@@ -1836,8 +1836,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>UriReference</returns>
-        UriReference PostOutboundContactlistExport (string contactListId);
+        /// <returns>DomainEntityRef</returns>
+        DomainEntityRef PostOutboundContactlistExport (string contactListId);
 
         /// <summary>
         /// Initiate the export of a contact list.
@@ -1847,8 +1847,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>ApiResponse of UriReference</returns>
-        ApiResponse<UriReference> PostOutboundContactlistExportWithHttpInfo (string contactListId);
+        /// <returns>ApiResponse of DomainEntityRef</returns>
+        ApiResponse<DomainEntityRef> PostOutboundContactlistExportWithHttpInfo (string contactListId);
         
         /// <summary>
         /// Create Contact List Filter
@@ -1946,8 +1946,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>UriReference</returns>
-        UriReference PostOutboundDnclistExport (string dncListId);
+        /// <returns>DomainEntityRef</returns>
+        DomainEntityRef PostOutboundDnclistExport (string dncListId);
 
         /// <summary>
         /// Initiate the export of a dnc list.
@@ -1957,8 +1957,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>ApiResponse of UriReference</returns>
-        ApiResponse<UriReference> PostOutboundDnclistExportWithHttpInfo (string dncListId);
+        /// <returns>ApiResponse of DomainEntityRef</returns>
+        ApiResponse<DomainEntityRef> PostOutboundDnclistExportWithHttpInfo (string dncListId);
         
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
@@ -4236,8 +4236,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>Task of UriReference</returns>
-        System.Threading.Tasks.Task<UriReference> PostOutboundContactlistExportAsync (string contactListId);
+        /// <returns>Task of DomainEntityRef</returns>
+        System.Threading.Tasks.Task<DomainEntityRef> PostOutboundContactlistExportAsync (string contactListId);
 
         /// <summary>
         /// Initiate the export of a contact list.
@@ -4247,8 +4247,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>Task of ApiResponse (UriReference)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UriReference>> PostOutboundContactlistExportAsyncWithHttpInfo (string contactListId);
+        /// <returns>Task of ApiResponse (DomainEntityRef)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DomainEntityRef>> PostOutboundContactlistExportAsyncWithHttpInfo (string contactListId);
         
         /// <summary>
         /// Create Contact List Filter
@@ -4346,8 +4346,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>Task of UriReference</returns>
-        System.Threading.Tasks.Task<UriReference> PostOutboundDnclistExportAsync (string dncListId);
+        /// <returns>Task of DomainEntityRef</returns>
+        System.Threading.Tasks.Task<DomainEntityRef> PostOutboundDnclistExportAsync (string dncListId);
 
         /// <summary>
         /// Initiate the export of a dnc list.
@@ -4357,8 +4357,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>Task of ApiResponse (UriReference)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UriReference>> PostOutboundDnclistExportAsyncWithHttpInfo (string dncListId);
+        /// <returns>Task of ApiResponse (DomainEntityRef)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DomainEntityRef>> PostOutboundDnclistExportAsyncWithHttpInfo (string dncListId);
         
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
@@ -19459,10 +19459,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>UriReference</returns>
-        public UriReference PostOutboundContactlistExport (string contactListId)
+        /// <returns>DomainEntityRef</returns>
+        public DomainEntityRef PostOutboundContactlistExport (string contactListId)
         {
-             ApiResponse<UriReference> localVarResponse = PostOutboundContactlistExportWithHttpInfo(contactListId);
+             ApiResponse<DomainEntityRef> localVarResponse = PostOutboundContactlistExportWithHttpInfo(contactListId);
              return localVarResponse.Data;
         }
 
@@ -19471,8 +19471,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>ApiResponse of UriReference</returns>
-        public ApiResponse< UriReference > PostOutboundContactlistExportWithHttpInfo (string contactListId)
+        /// <returns>ApiResponse of DomainEntityRef</returns>
+        public ApiResponse< DomainEntityRef > PostOutboundContactlistExportWithHttpInfo (string contactListId)
         { 
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -19541,9 +19541,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UriReference>(localVarStatusCode,
+            return new ApiResponse<DomainEntityRef>(localVarStatusCode,
                 localVarHeaders,
-                (UriReference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UriReference)),
+                (DomainEntityRef) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainEntityRef)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -19554,10 +19554,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>Task of UriReference</returns>
-        public async System.Threading.Tasks.Task<UriReference> PostOutboundContactlistExportAsync (string contactListId)
+        /// <returns>Task of DomainEntityRef</returns>
+        public async System.Threading.Tasks.Task<DomainEntityRef> PostOutboundContactlistExportAsync (string contactListId)
         {
-             ApiResponse<UriReference> localVarResponse = await PostOutboundContactlistExportAsyncWithHttpInfo(contactListId);
+             ApiResponse<DomainEntityRef> localVarResponse = await PostOutboundContactlistExportAsyncWithHttpInfo(contactListId);
              return localVarResponse.Data;
 
         }
@@ -19567,8 +19567,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>Task of ApiResponse (UriReference)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UriReference>> PostOutboundContactlistExportAsyncWithHttpInfo (string contactListId)
+        /// <returns>Task of ApiResponse (DomainEntityRef)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DomainEntityRef>> PostOutboundContactlistExportAsyncWithHttpInfo (string contactListId)
         { 
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -19638,9 +19638,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UriReference>(localVarStatusCode,
+            return new ApiResponse<DomainEntityRef>(localVarStatusCode,
                 localVarHeaders,
-                (UriReference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UriReference)),
+                (DomainEntityRef) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainEntityRef)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -20446,10 +20446,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>UriReference</returns>
-        public UriReference PostOutboundDnclistExport (string dncListId)
+        /// <returns>DomainEntityRef</returns>
+        public DomainEntityRef PostOutboundDnclistExport (string dncListId)
         {
-             ApiResponse<UriReference> localVarResponse = PostOutboundDnclistExportWithHttpInfo(dncListId);
+             ApiResponse<DomainEntityRef> localVarResponse = PostOutboundDnclistExportWithHttpInfo(dncListId);
              return localVarResponse.Data;
         }
 
@@ -20458,8 +20458,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>ApiResponse of UriReference</returns>
-        public ApiResponse< UriReference > PostOutboundDnclistExportWithHttpInfo (string dncListId)
+        /// <returns>ApiResponse of DomainEntityRef</returns>
+        public ApiResponse< DomainEntityRef > PostOutboundDnclistExportWithHttpInfo (string dncListId)
         { 
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
@@ -20528,9 +20528,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostOutboundDnclistExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UriReference>(localVarStatusCode,
+            return new ApiResponse<DomainEntityRef>(localVarStatusCode,
                 localVarHeaders,
-                (UriReference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UriReference)),
+                (DomainEntityRef) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainEntityRef)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -20541,10 +20541,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>Task of UriReference</returns>
-        public async System.Threading.Tasks.Task<UriReference> PostOutboundDnclistExportAsync (string dncListId)
+        /// <returns>Task of DomainEntityRef</returns>
+        public async System.Threading.Tasks.Task<DomainEntityRef> PostOutboundDnclistExportAsync (string dncListId)
         {
-             ApiResponse<UriReference> localVarResponse = await PostOutboundDnclistExportAsyncWithHttpInfo(dncListId);
+             ApiResponse<DomainEntityRef> localVarResponse = await PostOutboundDnclistExportAsyncWithHttpInfo(dncListId);
              return localVarResponse.Data;
 
         }
@@ -20554,8 +20554,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>Task of ApiResponse (UriReference)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UriReference>> PostOutboundDnclistExportAsyncWithHttpInfo (string dncListId)
+        /// <returns>Task of ApiResponse (DomainEntityRef)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DomainEntityRef>> PostOutboundDnclistExportAsyncWithHttpInfo (string dncListId)
         { 
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
@@ -20625,9 +20625,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostOutboundDnclistExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UriReference>(localVarStatusCode,
+            return new ApiResponse<DomainEntityRef>(localVarStatusCode,
                 localVarHeaders,
-                (UriReference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UriReference)),
+                (DomainEntityRef) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainEntityRef)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

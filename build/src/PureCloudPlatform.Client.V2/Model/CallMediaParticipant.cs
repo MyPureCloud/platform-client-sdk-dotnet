@@ -577,7 +577,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MonitoredParticipantId">The ID of the participant being monitored when performing a call monitor..</param>
         /// <param name="ConsultParticipantId">The ID of the consult transfer target participant when performing a consult transfer..</param>
         /// <param name="UuiData">User-to-User information which maps to a SIP header field defined in RFC7433. UUI data is used in the Public Switched Telephone Network (PSTN) for use cases described in RFC6567..</param>
-        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, UriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, string UuiData = null)
+        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DomainEntityRef User = null, DomainEntityRef Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, string UuiData = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -736,7 +736,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The PureCloud user for this participant.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public UriReference User { get; set; }
+        public DomainEntityRef User { get; set; }
         
         
         
@@ -745,7 +745,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The PureCloud queue for this participant.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
-        public UriReference Queue { get; set; }
+        public DomainEntityRef Queue { get; set; }
         
         
         
@@ -772,7 +772,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The Engage script that should be used by this participant.</value>
         [DataMember(Name="script", EmitDefaultValue=false)]
-        public UriReference Script { get; set; }
+        public DomainEntityRef Script { get; set; }
         
         
         
@@ -817,7 +817,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>If this participant represents an external contact, then this will be the reference for the external contact.</value>
         [DataMember(Name="externalContact", EmitDefaultValue=false)]
-        public UriReference ExternalContact { get; set; }
+        public DomainEntityRef ExternalContact { get; set; }
         
         
         
@@ -826,7 +826,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>If this participant represents an external org, then this will be the reference for the external org.</value>
         [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
-        public UriReference ExternalOrganization { get; set; }
+        public DomainEntityRef ExternalOrganization { get; set; }
         
         
         
@@ -902,7 +902,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The group involved in the group ring call.</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
-        public UriReference Group { get; set; }
+        public DomainEntityRef Group { get; set; }
         
         
         

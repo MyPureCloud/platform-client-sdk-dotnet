@@ -17,10 +17,10 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
+        /// Get a report of the billable license usages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response&#39;s status is InProgress, wait a few seconds, then try the same request again.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
@@ -29,10 +29,10 @@ namespace PureCloudPlatform.Client.V2.Api
         BillingUsageReport GetBillingReportsBillableusage (DateTime? startDate, DateTime? endDate);
 
         /// <summary>
-        /// Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
+        /// Get a report of the billable license usages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response&#39;s status is InProgress, wait a few seconds, then try the same request again.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
@@ -69,10 +69,10 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
+        /// Get a report of the billable license usages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response&#39;s status is InProgress, wait a few seconds, then try the same request again.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
@@ -81,10 +81,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<BillingUsageReport> GetBillingReportsBillableusageAsync (DateTime? startDate, DateTime? endDate);
 
         /// <summary>
-        /// Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
+        /// Get a report of the billable license usages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response&#39;s status is InProgress, wait a few seconds, then try the same request again.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
@@ -209,7 +209,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a report of the billable usages (e.g. licenses and devices utilized) for a given period. 
+        /// Get a report of the billable license usages Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response&#39;s status is InProgress, wait a few seconds, then try the same request again.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
@@ -222,7 +222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a report of the billable usages (e.g. licenses and devices utilized) for a given period. 
+        /// Get a report of the billable license usages Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response&#39;s status is InProgress, wait a few seconds, then try the same request again.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
@@ -310,7 +310,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a report of the billable usages (e.g. licenses and devices utilized) for a given period. 
+        /// Get a report of the billable license usages Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response&#39;s status is InProgress, wait a few seconds, then try the same request again.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
@@ -324,7 +324,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a report of the billable usages (e.g. licenses and devices utilized) for a given period. 
+        /// Get a report of the billable license usages Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response&#39;s status is InProgress, wait a few seconds, then try the same request again.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>

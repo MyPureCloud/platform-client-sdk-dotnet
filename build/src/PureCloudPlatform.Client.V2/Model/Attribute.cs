@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public Attribute(string Name = null, int? Version = null, string Description = null, UriReference CreatedBy = null, DateTime? DateCreated = null, UriReference ModifiedBy = null, DateTime? DateModified = null)
+        public Attribute(string Name = null, int? Version = null, string Description = null, DomainEntityRef CreatedBy = null, DateTime? DateCreated = null, DomainEntityRef ModifiedBy = null, DateTime? DateModified = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UriReference CreatedBy { get; set; }
+        public DomainEntityRef CreatedBy { get; set; }
         
         
         
@@ -151,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public UriReference ModifiedBy { get; set; }
+        public DomainEntityRef ModifiedBy { get; set; }
         
         
         

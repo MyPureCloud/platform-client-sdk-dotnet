@@ -205,7 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Properties">Properties.</param>
         /// <param name="TrunkType">The type of this trunk base. (required).</param>
         /// <param name="Managed">Is this trunk being managed remotely. This property is synchronized with the managed property of the Edge Group to which it is assigned..</param>
-        public TrunkBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference TrunkMetabase = null, Dictionary<string, Object> Properties = null, TrunkTypeEnum? TrunkType = null, bool? Managed = null)
+        public TrunkBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DomainEntityRef TrunkMetabase = null, Dictionary<string, Object> Properties = null, TrunkTypeEnum? TrunkType = null, bool? Managed = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -322,7 +322,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The meta-base this trunk is based on.</value>
         [DataMember(Name="trunkMetabase", EmitDefaultValue=false)]
-        public UriReference TrunkMetabase { get; set; }
+        public DomainEntityRef TrunkMetabase { get; set; }
         
         
         

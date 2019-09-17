@@ -34,9 +34,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationExport" /> class.
         /// </summary>
-        /// <param name="Integration">The aws-s3-recording-bulk-actions-integration that the policy uses for exports..</param>
-        /// <param name="ShouldExportScreenRecordings">True if the policy should export screen recordings in addition to the other conversation media. Default = true.</param>
-        public IntegrationExport(UriReference Integration = null, bool? ShouldExportScreenRecordings = null)
+        [JsonConstructorAttribute]
+        protected IntegrationExport() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IntegrationExport" /> class.
+        /// </summary>
+        /// <param name="Integration">The aws-s3-recording-bulk-actions-integration that the policy uses for exports. (required).</param>
+        /// <param name="ShouldExportScreenRecordings">True if the policy should export screen recordings in addition to the other conversation media. Default = false.</param>
+        public IntegrationExport(DomainEntityRef Integration = null, bool? ShouldExportScreenRecordings = null)
         {
             this.Integration = Integration;
             this.ShouldExportScreenRecordings = ShouldExportScreenRecordings;
@@ -50,14 +56,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The aws-s3-recording-bulk-actions-integration that the policy uses for exports.</value>
         [DataMember(Name="integration", EmitDefaultValue=false)]
-        public UriReference Integration { get; set; }
+        public DomainEntityRef Integration { get; set; }
         
         
         
         /// <summary>
-        /// True if the policy should export screen recordings in addition to the other conversation media. Default = true
+        /// True if the policy should export screen recordings in addition to the other conversation media. Default = false
         /// </summary>
-        /// <value>True if the policy should export screen recordings in addition to the other conversation media. Default = true</value>
+        /// <value>True if the policy should export screen recordings in addition to the other conversation media. Default = false</value>
         [DataMember(Name="shouldExportScreenRecordings", EmitDefaultValue=false)]
         public bool? ShouldExportScreenRecordings { get; set; }
         

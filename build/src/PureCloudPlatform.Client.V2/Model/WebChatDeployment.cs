@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WebChatConfig">WebChatConfig.</param>
         /// <param name="AllowedDomains">AllowedDomains.</param>
         /// <param name="Flow">The URI of the Inbound Chat Flow to run when new chats are initiated under this Deployment..</param>
-        public WebChatDeployment(string Name = null, string Description = null, bool? AuthenticationRequired = null, string AuthenticationUrl = null, bool? Disabled = null, WebChatConfig WebChatConfig = null, List<string> AllowedDomains = null, UriReference Flow = null)
+        public WebChatDeployment(string Name = null, string Description = null, bool? AuthenticationRequired = null, string AuthenticationUrl = null, bool? Disabled = null, WebChatConfig WebChatConfig = null, List<string> AllowedDomains = null, DomainEntityRef Flow = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -168,7 +168,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The URI of the Inbound Chat Flow to run when new chats are initiated under this Deployment.</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
-        public UriReference Flow { get; set; }
+        public DomainEntityRef Flow { get; set; }
         
         
         

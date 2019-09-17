@@ -69,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Photo" /> class.
         /// </summary>
-        /// <param name="Value">The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG. .</param>
+        /// <param name="Value">The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG..</param>
         /// <param name="Type">The type of photo..</param>
         public Photo(string Value = null, TypeEnum? Type = null)
         {
@@ -81,9 +81,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG. 
+        /// The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG.
         /// </summary>
-        /// <value>The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG. </value>
+        /// <value>The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         

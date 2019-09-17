@@ -117,7 +117,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">User.</param>
         /// <param name="Group">Group.</param>
         /// <param name="SecurityProfile">SecurityProfile.</param>
-        public WorkspaceMember(string Name = null, UriReference Workspace = null, MemberTypeEnum? MemberType = null, UriReference Member = null, User User = null, Group Group = null, SecurityProfile SecurityProfile = null)
+        public WorkspaceMember(string Name = null, DomainEntityRef Workspace = null, MemberTypeEnum? MemberType = null, DomainEntityRef Member = null, User User = null, Group Group = null, SecurityProfile SecurityProfile = null)
         {
             this.Name = Name;
             this.Workspace = Workspace;
@@ -152,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
-        public UriReference Workspace { get; set; }
+        public DomainEntityRef Workspace { get; set; }
         
         
         
@@ -162,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
-        public UriReference Member { get; set; }
+        public DomainEntityRef Member { get; set; }
         
         
         

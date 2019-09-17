@@ -10,7 +10,7 @@ title: ReplaceResponse
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **ChangeNumber** | **int?** |  | [optional] |
-| **UploadStatus** | [**UriReference**](UriReference.html) |  | [optional] |
+| **UploadStatus** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **UploadDestinationUri** | **string** |  | [optional] |
 | **UploadMethod** | **string** |  | [optional] |
 {: class="table table-striped"}

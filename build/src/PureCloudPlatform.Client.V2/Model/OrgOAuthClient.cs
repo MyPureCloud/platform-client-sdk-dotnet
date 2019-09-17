@@ -142,7 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Scope">The scope requested by this client. Scopes only apply to clients not using the client_credential grant.</param>
         /// <param name="RoleDivisions">Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant.</param>
         /// <param name="Organization">The  oauth client&#39;s organization..</param>
-        public OrgOAuthClient(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, List<string> Scope = null, List<RoleDivision> RoleDivisions = null, NamedEntity Organization = null)
+        public OrgOAuthClient(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, List<string> Scope = null, List<RoleDivision> RoleDivisions = null, NamedEntity Organization = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -199,7 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User that created this client</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UriReference CreatedBy { get; set; }
+        public DomainEntityRef CreatedBy { get; set; }
         
         
         
@@ -208,7 +208,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User that last modified this client</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public UriReference ModifiedBy { get; set; }
+        public DomainEntityRef ModifiedBy { get; set; }
         
         
         

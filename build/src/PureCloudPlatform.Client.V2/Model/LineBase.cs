@@ -152,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedByApp">The application that created the resource..</param>
         /// <param name="LineMetaBase">LineMetaBase.</param>
         /// <param name="Properties">Properties.</param>
-        public LineBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference LineMetaBase = null, Dictionary<string, Object> Properties = null)
+        public LineBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DomainEntityRef LineMetaBase = null, Dictionary<string, Object> Properties = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -266,7 +266,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LineMetaBase
         /// </summary>
         [DataMember(Name="lineMetaBase", EmitDefaultValue=false)]
-        public UriReference LineMetaBase { get; set; }
+        public DomainEntityRef LineMetaBase { get; set; }
         
         
         

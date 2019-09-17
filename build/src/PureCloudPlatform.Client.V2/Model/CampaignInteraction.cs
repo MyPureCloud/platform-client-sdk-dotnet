@@ -221,7 +221,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DialerSystemParticipantId">conversation participant id that is the dialer system participant to monitor the call from dialer perspective.</param>
         /// <param name="DialingMode">DialingMode.</param>
         /// <param name="Skills">Any skills that are attached to the call for routing.</param>
-        public CampaignInteraction(string Id = null, UriReference Campaign = null, UriReference Agent = null, UriReference Contact = null, string DestinationAddress = null, bool? ActivePreviewCall = null, DateTime? LastActivePreviewWrapupTime = null, DateTime? CreationTime = null, DateTime? CallPlacedTime = null, DateTime? CallRoutedTime = null, DateTime? PreviewConnectedTime = null, UriReference Queue = null, UriReference Script = null, DispositionEnum? Disposition = null, string CallerName = null, string CallerAddress = null, DateTime? PreviewPopDeliveredTime = null, ConversationBasic Conversation = null, string DialerSystemParticipantId = null, string DialingMode = null, List<UriReference> Skills = null)
+        public CampaignInteraction(string Id = null, DomainEntityRef Campaign = null, DomainEntityRef Agent = null, DomainEntityRef Contact = null, string DestinationAddress = null, bool? ActivePreviewCall = null, DateTime? LastActivePreviewWrapupTime = null, DateTime? CreationTime = null, DateTime? CallPlacedTime = null, DateTime? CallRoutedTime = null, DateTime? PreviewConnectedTime = null, DomainEntityRef Queue = null, DomainEntityRef Script = null, DispositionEnum? Disposition = null, string CallerName = null, string CallerAddress = null, DateTime? PreviewPopDeliveredTime = null, ConversationBasic Conversation = null, string DialerSystemParticipantId = null, string DialingMode = null, List<DomainEntityRef> Skills = null)
         {
             this.Id = Id;
             this.Campaign = Campaign;
@@ -261,7 +261,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Campaign
         /// </summary>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
-        public UriReference Campaign { get; set; }
+        public DomainEntityRef Campaign { get; set; }
         
         
         
@@ -269,7 +269,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Agent
         /// </summary>
         [DataMember(Name="agent", EmitDefaultValue=false)]
-        public UriReference Agent { get; set; }
+        public DomainEntityRef Agent { get; set; }
         
         
         
@@ -277,7 +277,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Contact
         /// </summary>
         [DataMember(Name="contact", EmitDefaultValue=false)]
-        public UriReference Contact { get; set; }
+        public DomainEntityRef Contact { get; set; }
         
         
         
@@ -347,7 +347,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
-        public UriReference Queue { get; set; }
+        public DomainEntityRef Queue { get; set; }
         
         
         
@@ -355,7 +355,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Script
         /// </summary>
         [DataMember(Name="script", EmitDefaultValue=false)]
-        public UriReference Script { get; set; }
+        public DomainEntityRef Script { get; set; }
         
         
         
@@ -416,7 +416,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Any skills that are attached to the call for routing</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
-        public List<UriReference> Skills { get; set; }
+        public List<DomainEntityRef> Skills { get; set; }
         
         
         /// <summary>

@@ -164,7 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OpenSchedules">The schedules defining the hours an organization is open..</param>
         /// <param name="ClosedSchedules">The schedules defining the hours an organization is closed..</param>
         /// <param name="HolidaySchedules">The schedules defining the hours an organization is closed for the holidays..</param>
-        public ScheduleGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string TimeZone = null, List<UriReference> OpenSchedules = null, List<UriReference> ClosedSchedules = null, List<UriReference> HolidaySchedules = null)
+        public ScheduleGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string TimeZone = null, List<DomainEntityRef> OpenSchedules = null, List<DomainEntityRef> ClosedSchedules = null, List<DomainEntityRef> HolidaySchedules = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -290,7 +290,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The schedules defining the hours an organization is open.</value>
         [DataMember(Name="openSchedules", EmitDefaultValue=false)]
-        public List<UriReference> OpenSchedules { get; set; }
+        public List<DomainEntityRef> OpenSchedules { get; set; }
         
         
         
@@ -299,7 +299,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The schedules defining the hours an organization is closed.</value>
         [DataMember(Name="closedSchedules", EmitDefaultValue=false)]
-        public List<UriReference> ClosedSchedules { get; set; }
+        public List<DomainEntityRef> ClosedSchedules { get; set; }
         
         
         
@@ -308,7 +308,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The schedules defining the hours an organization is closed for the holidays.</value>
         [DataMember(Name="holidaySchedules", EmitDefaultValue=false)]
-        public List<UriReference> HolidaySchedules { get; set; }
+        public List<DomainEntityRef> HolidaySchedules { get; set; }
         
         
         

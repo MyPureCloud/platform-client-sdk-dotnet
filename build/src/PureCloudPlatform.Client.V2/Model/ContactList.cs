@@ -121,7 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AttemptLimits">AttemptLimits for this ContactList..</param>
         /// <param name="AutomaticTimeZoneMapping">Indicates if automatic time zone mapping is to be used for this ContactList..</param>
         /// <param name="ZipCodeColumnName">The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true..</param>
-        public ContactList(string Name = null, int? Version = null, UriReference Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, UriReference AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null)
+        public ContactList(string Name = null, int? Version = null, DomainEntityRef Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, DomainEntityRef AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -188,7 +188,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The division this entity belongs to.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public UriReference Division { get; set; }
+        public DomainEntityRef Division { get; set; }
         
         
         
@@ -251,7 +251,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>AttemptLimits for this ContactList.</value>
         [DataMember(Name="attemptLimits", EmitDefaultValue=false)]
-        public UriReference AttemptLimits { get; set; }
+        public DomainEntityRef AttemptLimits { get; set; }
         
         
         

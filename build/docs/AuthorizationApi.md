@@ -781,7 +781,7 @@ This endpoint does require any parameters.
 
 <a name="getauthorizationrole"></a>
 
-## [**DomainOrganizationRole**](DomainOrganizationRole.html) GetAuthorizationRole (string roleId)
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) GetAuthorizationRole (string roleId, List<string> expand = null)
 
 
 
@@ -812,11 +812,12 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var roleId = roleId_example;  // string | Role ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             { 
                 // Get a single organization role.
-                DomainOrganizationRole result = apiInstance.GetAuthorizationRole(roleId);
+                DomainOrganizationRole result = apiInstance.GetAuthorizationRole(roleId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -834,6 +835,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: unusedPermissions |
 {: class="table table-striped"}
 
 ### Return type

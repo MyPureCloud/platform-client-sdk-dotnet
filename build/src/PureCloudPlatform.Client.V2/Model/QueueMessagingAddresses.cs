@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="QueueMessagingAddresses" /> class.
         /// </summary>
         /// <param name="SmsAddress">SmsAddress.</param>
-        public QueueMessagingAddresses(UriReference SmsAddress = null)
+        public QueueMessagingAddresses(DomainEntityRef SmsAddress = null)
         {
             this.SmsAddress = SmsAddress;
             
@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets SmsAddress
         /// </summary>
         [DataMember(Name="smsAddress", EmitDefaultValue=false)]
-        public UriReference SmsAddress { get; set; }
+        public DomainEntityRef SmsAddress { get; set; }
         
         
         /// <summary>

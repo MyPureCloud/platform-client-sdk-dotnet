@@ -18,7 +18,7 @@ title: LineBase
 | **State** | **string** | Indicates if the resource is active, inactive, or deleted. | [optional] |
 | **ModifiedByApp** | **string** | The application that last modified the resource. | [optional] |
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
-| **LineMetaBase** | [**UriReference**](UriReference.html) |  | [optional] |
+| **LineMetaBase** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

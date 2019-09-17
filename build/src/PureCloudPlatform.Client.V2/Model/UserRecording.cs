@@ -100,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DurationMilliseconds">DurationMilliseconds.</param>
         /// <param name="Thumbnails">Thumbnails.</param>
         /// <param name="Read">Read.</param>
-        public UserRecording(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, Conversation Conversation = null, long? ContentLength = null, long? DurationMilliseconds = null, List<DocumentThumbnail> Thumbnails = null, bool? Read = null)
+        public UserRecording(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, DomainEntityRef Workspace = null, DomainEntityRef CreatedBy = null, Conversation Conversation = null, long? ContentLength = null, long? DurationMilliseconds = null, List<DocumentThumbnail> Thumbnails = null, bool? Read = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -165,7 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
-        public UriReference Workspace { get; set; }
+        public DomainEntityRef Workspace { get; set; }
         
         
         
@@ -173,7 +173,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UriReference CreatedBy { get; set; }
+        public DomainEntityRef CreatedBy { get; set; }
         
         
         

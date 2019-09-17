@@ -164,7 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Lines">The list of linebases associated with the phone base. (required).</param>
         /// <param name="Properties">Properties.</param>
         /// <param name="Capabilities">Capabilities.</param>
-        public PhoneBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference PhoneMetaBase = null, List<LineBase> Lines = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null)
+        public PhoneBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DomainEntityRef PhoneMetaBase = null, List<LineBase> Lines = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -281,7 +281,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A phone metabase is essentially a database for storing phone configuration settings, which simplifies the configuration process.</value>
         [DataMember(Name="phoneMetaBase", EmitDefaultValue=false)]
-        public UriReference PhoneMetaBase { get; set; }
+        public DomainEntityRef PhoneMetaBase { get; set; }
         
         
         

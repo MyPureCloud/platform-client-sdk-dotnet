@@ -41,6 +41,39 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive.
+        /// </summary>
+        /// <value>Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Active for "active"
+            /// </summary>
+            [EnumMember(Value = "active")]
+            Active,
+            
+            /// <summary>
+            /// Enum Inactive for "inactive"
+            /// </summary>
+            [EnumMember(Value = "inactive")]
+            Inactive,
+            
+            /// <summary>
+            /// Enum Deleted for "deleted"
+            /// </summary>
+            [EnumMember(Value = "deleted")]
+            Deleted
+        }
         
         
         
@@ -53,6 +86,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive.
+        /// </summary>
+        /// <value>Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive.</value>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
         
         
     
@@ -72,7 +118,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Title">Title.</param>
         /// <param name="Password">User&#39;s password (required).</param>
         /// <param name="DivisionId">The division to which this user will belong (required).</param>
-        public CreateUser(string Name = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Password = null, string DivisionId = null)
+        /// <param name="State">Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive..</param>
+        public CreateUser(string Name = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Password = null, string DivisionId = null, StateEnum? State = null)
         {
             this.Name = Name;
             this.Department = Department;
@@ -81,6 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Title = Title;
             this.Password = Password;
             this.DivisionId = DivisionId;
+            this.State = State;
             
         }
         
@@ -146,6 +194,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public string DivisionId { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -162,6 +212,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -232,6 +283,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DivisionId == other.DivisionId ||
                     this.DivisionId != null &&
                     this.DivisionId.Equals(other.DivisionId)
+                ) &&
+                (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
                 );
         }
 
@@ -267,6 +323,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DivisionId != null)
                     hash = hash * 59 + this.DivisionId.GetHashCode();
+                
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 return hash;
             }

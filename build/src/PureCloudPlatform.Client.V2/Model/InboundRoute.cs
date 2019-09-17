@@ -112,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ReplyEmailAddress">The route to use for email replies..</param>
         /// <param name="AutoBcc">The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute..</param>
         /// <param name="SpamFlow">The flow to use for processing inbound emails that have been marked as spam..</param>
-        public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null, UriReference Flow = null, QueueEmailAddress ReplyEmailAddress = null, List<EmailAddress> AutoBcc = null, UriReference SpamFlow = null)
+        public InboundRoute(string Name = null, string Pattern = null, DomainEntityRef Queue = null, int? Priority = null, List<DomainEntityRef> Skills = null, DomainEntityRef Language = null, string FromName = null, string FromEmail = null, DomainEntityRef Flow = null, QueueEmailAddress ReplyEmailAddress = null, List<EmailAddress> AutoBcc = null, DomainEntityRef SpamFlow = null)
         {
             this.Name = Name;
             this.Pattern = Pattern;
@@ -162,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The queue to route the emails to.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
-        public UriReference Queue { get; set; }
+        public DomainEntityRef Queue { get; set; }
         
         
         
@@ -180,7 +180,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The skills to use for routing.</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
-        public List<UriReference> Skills { get; set; }
+        public List<DomainEntityRef> Skills { get; set; }
         
         
         
@@ -189,7 +189,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The language to use for routing.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
-        public UriReference Language { get; set; }
+        public DomainEntityRef Language { get; set; }
         
         
         
@@ -216,7 +216,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The flow to use for processing the email.</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
-        public UriReference Flow { get; set; }
+        public DomainEntityRef Flow { get; set; }
         
         
         
@@ -243,7 +243,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The flow to use for processing inbound emails that have been marked as spam.</value>
         [DataMember(Name="spamFlow", EmitDefaultValue=false)]
-        public UriReference SpamFlow { get; set; }
+        public DomainEntityRef SpamFlow { get; set; }
         
         
         

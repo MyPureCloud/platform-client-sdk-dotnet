@@ -48,7 +48,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DncLists">Do not call lists for the campaign.</param>
         /// <param name="CallableTimeSet">Callable time sets for the campaign.</param>
         /// <param name="RuleSets">Rule sets for the campaign.</param>
-        public CallableContactsDiagnostic(UriReference AttemptLimits = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, List<UriReference> RuleSets = null)
+        public CallableContactsDiagnostic(DomainEntityRef AttemptLimits = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, List<DomainEntityRef> RuleSets = null)
         {
             this.AttemptLimits = AttemptLimits;
             this.DncLists = DncLists;
@@ -64,7 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Attempt limits for the campaign&#39;s contact list</value>
         [DataMember(Name="attemptLimits", EmitDefaultValue=false)]
-        public UriReference AttemptLimits { get; set; }
+        public DomainEntityRef AttemptLimits { get; set; }
         
         
         
@@ -73,7 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Do not call lists for the campaign</value>
         [DataMember(Name="dncLists", EmitDefaultValue=false)]
-        public List<UriReference> DncLists { get; set; }
+        public List<DomainEntityRef> DncLists { get; set; }
         
         
         
@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Callable time sets for the campaign</value>
         [DataMember(Name="callableTimeSet", EmitDefaultValue=false)]
-        public UriReference CallableTimeSet { get; set; }
+        public DomainEntityRef CallableTimeSet { get; set; }
         
         
         
@@ -91,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Rule sets for the campaign</value>
         [DataMember(Name="ruleSets", EmitDefaultValue=false)]
-        public List<UriReference> RuleSets { get; set; }
+        public List<DomainEntityRef> RuleSets { get; set; }
         
         
         /// <summary>

@@ -135,7 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InteractionType">The interaction type for this response..</param>
         /// <param name="Substitutions">Details about any text substitutions used in the texts for this response..</param>
         /// <param name="SubstitutionsSchema">Metadata about the text substitutions in json schema format..</param>
-        public Response(string Name = null, int? Version = null, List<UriReference> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, DateTime? DateCreated = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null)
+        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, DateTime? DateCreated = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -182,7 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>One or more libraries response is associated with.</value>
         [DataMember(Name="libraries", EmitDefaultValue=false)]
-        public List<UriReference> Libraries { get; set; }
+        public List<DomainEntityRef> Libraries { get; set; }
         
         
         

@@ -115,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactList">The contact list the filter is based on. (required).</param>
         /// <param name="Clauses">Groups of conditions to filter the contacts by..</param>
         /// <param name="FilterType">How to join clauses together..</param>
-        public ContactListFilter(string Name = null, int? Version = null, UriReference ContactList = null, List<ContactListFilterClause> Clauses = null, FilterTypeEnum? FilterType = null)
+        public ContactListFilter(string Name = null, int? Version = null, DomainEntityRef ContactList = null, List<ContactListFilterClause> Clauses = null, FilterTypeEnum? FilterType = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -177,7 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The contact list the filter is based on.</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
-        public UriReference ContactList { get; set; }
+        public DomainEntityRef ContactList { get; set; }
         
         
         

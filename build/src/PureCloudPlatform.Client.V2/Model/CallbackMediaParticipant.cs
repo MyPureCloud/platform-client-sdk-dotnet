@@ -512,7 +512,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeoutSeconds">Duration in seconds before the callback will be auto-dialed..</param>
         /// <param name="AutomatedCallbackConfigId">The id of the config for automatically placing the callback (and handling the disposition). If absent, the callback will not be placed automatically but routed to an agent as per normal..</param>
         /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DialerPreview OutboundPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string AutomatedCallbackConfigId = null, DateTime? CallbackScheduledTime = null)
+        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DomainEntityRef User = null, DomainEntityRef Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DialerPreview OutboundPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string AutomatedCallbackConfigId = null, DateTime? CallbackScheduledTime = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -667,7 +667,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The PureCloud user for this participant.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public UriReference User { get; set; }
+        public DomainEntityRef User { get; set; }
         
         
         
@@ -676,7 +676,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The PureCloud queue for this participant.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
-        public UriReference Queue { get; set; }
+        public DomainEntityRef Queue { get; set; }
         
         
         
@@ -703,7 +703,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The Engage script that should be used by this participant.</value>
         [DataMember(Name="script", EmitDefaultValue=false)]
-        public UriReference Script { get; set; }
+        public DomainEntityRef Script { get; set; }
         
         
         
@@ -748,7 +748,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>If this participant represents an external contact, then this will be the reference for the external contact.</value>
         [DataMember(Name="externalContact", EmitDefaultValue=false)]
-        public UriReference ExternalContact { get; set; }
+        public DomainEntityRef ExternalContact { get; set; }
         
         
         
@@ -757,7 +757,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>If this participant represents an external org, then this will be the reference for the external org.</value>
         [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
-        public UriReference ExternalOrganization { get; set; }
+        public DomainEntityRef ExternalOrganization { get; set; }
         
         
         

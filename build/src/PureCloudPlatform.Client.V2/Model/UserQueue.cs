@@ -194,7 +194,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundMessagingAddresses">The messaging addresses for the queue..</param>
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="Joined">Joined.</param>
-        public UserQueue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference WhisperPrompt = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, bool? Joined = null)
+        public UserQueue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, DomainEntityRef QueueFlow = null, DomainEntityRef WhisperPrompt = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, bool? Joined = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -334,7 +334,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The in-queue flow to use for conversations waiting in queue.</value>
         [DataMember(Name="queueFlow", EmitDefaultValue=false)]
-        public UriReference QueueFlow { get; set; }
+        public DomainEntityRef QueueFlow { get; set; }
         
         
         
@@ -343,7 +343,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The prompt used for whisper on the queue, if configured.</value>
         [DataMember(Name="whisperPrompt", EmitDefaultValue=false)]
-        public UriReference WhisperPrompt { get; set; }
+        public DomainEntityRef WhisperPrompt { get; set; }
         
         
         

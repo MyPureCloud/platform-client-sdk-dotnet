@@ -111,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateExpires">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Action">Action.</param>
-        public LockInfo(UriReference LockedBy = null, DateTime? DateCreated = null, DateTime? DateExpires = null, ActionEnum? Action = null)
+        public LockInfo(DomainEntityRef LockedBy = null, DateTime? DateCreated = null, DateTime? DateExpires = null, ActionEnum? Action = null)
         {
             this.LockedBy = LockedBy;
             this.DateCreated = DateCreated;
@@ -126,7 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LockedBy
         /// </summary>
         [DataMember(Name="lockedBy", EmitDefaultValue=false)]
-        public UriReference LockedBy { get; set; }
+        public DomainEntityRef LockedBy { get; set; }
         
         
         

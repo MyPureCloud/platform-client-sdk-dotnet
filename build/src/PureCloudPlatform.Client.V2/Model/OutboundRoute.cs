@@ -208,7 +208,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Distribution">Distribution.</param>
         /// <param name="ExternalTrunkBases">Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing..</param>
         /// <param name="Site">The site associated to the outbound route..</param>
-        public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, List<UriReference> ExternalTrunkBases = null, Site Site = null)
+        public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, List<DomainEntityRef> ExternalTrunkBases = null, Site Site = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -345,7 +345,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing.</value>
         [DataMember(Name="externalTrunkBases", EmitDefaultValue=false)]
-        public List<UriReference> ExternalTrunkBases { get; set; }
+        public List<DomainEntityRef> ExternalTrunkBases { get; set; }
         
         
         

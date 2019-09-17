@@ -170,7 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ClosedHoursFlow">The Architect flow to execute during the hours an organization is closed..</param>
         /// <param name="HolidayHoursFlow">The Architect flow to execute during an organization&#39;s holiday hours..</param>
         /// <param name="ScheduleGroup">The schedule group defining the open and closed hours for an organization.  If this is provided, an open flow and a closed flow must be specified as well..</param>
-        public IVR(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> Dnis = null, UriReference OpenHoursFlow = null, UriReference ClosedHoursFlow = null, UriReference HolidayHoursFlow = null, UriReference ScheduleGroup = null)
+        public IVR(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> Dnis = null, DomainEntityRef OpenHoursFlow = null, DomainEntityRef ClosedHoursFlow = null, DomainEntityRef HolidayHoursFlow = null, DomainEntityRef ScheduleGroup = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -297,7 +297,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The Architect flow to execute during the hours an organization is open.</value>
         [DataMember(Name="openHoursFlow", EmitDefaultValue=false)]
-        public UriReference OpenHoursFlow { get; set; }
+        public DomainEntityRef OpenHoursFlow { get; set; }
         
         
         
@@ -306,7 +306,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The Architect flow to execute during the hours an organization is closed.</value>
         [DataMember(Name="closedHoursFlow", EmitDefaultValue=false)]
-        public UriReference ClosedHoursFlow { get; set; }
+        public DomainEntityRef ClosedHoursFlow { get; set; }
         
         
         
@@ -315,7 +315,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The Architect flow to execute during an organization&#39;s holiday hours.</value>
         [DataMember(Name="holidayHoursFlow", EmitDefaultValue=false)]
-        public UriReference HolidayHoursFlow { get; set; }
+        public DomainEntityRef HolidayHoursFlow { get; set; }
         
         
         
@@ -324,7 +324,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The schedule group defining the open and closed hours for an organization.  If this is provided, an open flow and a closed flow must be specified as well.</value>
         [DataMember(Name="scheduleGroup", EmitDefaultValue=false)]
-        public UriReference ScheduleGroup { get; set; }
+        public DomainEntityRef ScheduleGroup { get; set; }
         
         
         

@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Campaigns">The list of campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a campaign..</param>
         /// <param name="Sequences">The list of sequences for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a sequence..</param>
         /// <param name="UseTriggeringEntity">If true, the CampaignRuleAction will apply to the same entity that triggered the CampaignRuleCondition..</param>
-        public CampaignRuleActionEntities(List<UriReference> Campaigns = null, List<UriReference> Sequences = null, bool? UseTriggeringEntity = null)
+        public CampaignRuleActionEntities(List<DomainEntityRef> Campaigns = null, List<DomainEntityRef> Sequences = null, bool? UseTriggeringEntity = null)
         {
             this.Campaigns = Campaigns;
             this.Sequences = Sequences;
@@ -57,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a campaign.</value>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
-        public List<UriReference> Campaigns { get; set; }
+        public List<DomainEntityRef> Campaigns { get; set; }
         
         
         
@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of sequences for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a sequence.</value>
         [DataMember(Name="sequences", EmitDefaultValue=false)]
-        public List<UriReference> Sequences { get; set; }
+        public List<DomainEntityRef> Sequences { get; set; }
         
         
         

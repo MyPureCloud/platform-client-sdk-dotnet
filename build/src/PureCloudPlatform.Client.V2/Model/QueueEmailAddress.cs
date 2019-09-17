@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Domain">Domain.</param>
         /// <param name="Route">Route.</param>
-        public QueueEmailAddress(UriReference Domain = null, InboundRoute Route = null)
+        public QueueEmailAddress(DomainEntityRef Domain = null, InboundRoute Route = null)
         {
             this.Domain = Domain;
             this.Route = Route;
@@ -49,7 +49,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
-        public UriReference Domain { get; set; }
+        public DomainEntityRef Domain { get; set; }
         
         
         

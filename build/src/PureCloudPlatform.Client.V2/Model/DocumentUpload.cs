@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Workspace">The workspace the document will be uploaded to (required).</param>
         /// <param name="Tags">Tags.</param>
         /// <param name="TagIds">TagIds.</param>
-        public DocumentUpload(string Name = null, UriReference Workspace = null, List<string> Tags = null, List<string> TagIds = null)
+        public DocumentUpload(string Name = null, DomainEntityRef Workspace = null, List<string> Tags = null, List<string> TagIds = null)
         {
             this.Name = Name;
             this.Workspace = Workspace;
@@ -79,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The workspace the document will be uploaded to</value>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
-        public UriReference Workspace { get; set; }
+        public DomainEntityRef Workspace { get; set; }
         
         
         

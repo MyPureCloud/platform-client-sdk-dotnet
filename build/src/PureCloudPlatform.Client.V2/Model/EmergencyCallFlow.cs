@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="EmergencyFlow">The call flow to execute in an emergency..</param>
         /// <param name="Ivrs">The IVR(s) to route to the call flow during an emergency..</param>
-        public EmergencyCallFlow(UriReference EmergencyFlow = null, List<UriReference> Ivrs = null)
+        public EmergencyCallFlow(DomainEntityRef EmergencyFlow = null, List<DomainEntityRef> Ivrs = null)
         {
             this.EmergencyFlow = EmergencyFlow;
             this.Ivrs = Ivrs;
@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The call flow to execute in an emergency.</value>
         [DataMember(Name="emergencyFlow", EmitDefaultValue=false)]
-        public UriReference EmergencyFlow { get; set; }
+        public DomainEntityRef EmergencyFlow { get; set; }
         
         
         
@@ -59,7 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The IVR(s) to route to the call flow during an emergency.</value>
         [DataMember(Name="ivrs", EmitDefaultValue=false)]
-        public List<UriReference> Ivrs { get; set; }
+        public List<DomainEntityRef> Ivrs { get; set; }
         
         
         /// <summary>

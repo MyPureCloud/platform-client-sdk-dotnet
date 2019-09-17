@@ -130,7 +130,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Thumbnails">Thumbnails.</param>
         /// <param name="SharingUri">SharingUri.</param>
         /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
-        public FaxDocument(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, string ContentType = null, long? ContentLength = null, string Filename = null, bool? Read = null, long? PageCount = null, string CallerAddress = null, string ReceiverAddress = null, List<DocumentThumbnail> Thumbnails = null, string SharingUri = null, string DownloadSharingUri = null)
+        public FaxDocument(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, DomainEntityRef Workspace = null, DomainEntityRef CreatedBy = null, string ContentType = null, long? ContentLength = null, string Filename = null, bool? Read = null, long? PageCount = null, string CallerAddress = null, string ReceiverAddress = null, List<DocumentThumbnail> Thumbnails = null, string SharingUri = null, string DownloadSharingUri = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -200,7 +200,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
-        public UriReference Workspace { get; set; }
+        public DomainEntityRef Workspace { get; set; }
         
         
         
@@ -208,7 +208,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UriReference CreatedBy { get; set; }
+        public DomainEntityRef CreatedBy { get; set; }
         
         
         

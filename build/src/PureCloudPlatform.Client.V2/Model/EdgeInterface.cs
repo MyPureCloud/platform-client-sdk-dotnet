@@ -113,7 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Endpoints">Endpoints.</param>
         /// <param name="LineTypes">LineTypes.</param>
         /// <param name="AddressFamilyId">AddressFamilyId.</param>
-        public EdgeInterface(string Type = null, string IpAddress = null, string Name = null, string MacAddress = null, string IfName = null, List<UriReference> Endpoints = null, List<LineTypesEnum> LineTypes = null, string AddressFamilyId = null)
+        public EdgeInterface(string Type = null, string IpAddress = null, string Name = null, string MacAddress = null, string IfName = null, List<DomainEntityRef> Endpoints = null, List<LineTypesEnum> LineTypes = null, string AddressFamilyId = null)
         {
             this.Type = Type;
             this.IpAddress = IpAddress;
@@ -172,7 +172,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Endpoints
         /// </summary>
         [DataMember(Name="endpoints", EmitDefaultValue=false)]
-        public List<UriReference> Endpoints { get; set; }
+        public List<DomainEntityRef> Endpoints { get; set; }
         
         
         

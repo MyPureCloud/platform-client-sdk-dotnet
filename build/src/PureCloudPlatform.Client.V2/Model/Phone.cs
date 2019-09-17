@@ -218,7 +218,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WebRtcUser">This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones..</param>
         /// <param name="PrimaryEdge">PrimaryEdge.</param>
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
-        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, UserAgentInfo UserAgentInfo = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, UriReference WebRtcUser = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null)
+        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DomainEntityRef Site = null, DomainEntityRef PhoneBaseSettings = null, DomainEntityRef LineBaseSettings = null, DomainEntityRef PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, UserAgentInfo UserAgentInfo = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, DomainEntityRef WebRtcUser = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -344,7 +344,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The site associated to the phone.</value>
         [DataMember(Name="site", EmitDefaultValue=false)]
-        public UriReference Site { get; set; }
+        public DomainEntityRef Site { get; set; }
         
         
         
@@ -353,7 +353,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Phone Base Settings</value>
         [DataMember(Name="phoneBaseSettings", EmitDefaultValue=false)]
-        public UriReference PhoneBaseSettings { get; set; }
+        public DomainEntityRef PhoneBaseSettings { get; set; }
         
         
         
@@ -361,7 +361,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LineBaseSettings
         /// </summary>
         [DataMember(Name="lineBaseSettings", EmitDefaultValue=false)]
-        public UriReference LineBaseSettings { get; set; }
+        public DomainEntityRef LineBaseSettings { get; set; }
         
         
         
@@ -369,7 +369,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PhoneMetaBase
         /// </summary>
         [DataMember(Name="phoneMetaBase", EmitDefaultValue=false)]
-        public UriReference PhoneMetaBase { get; set; }
+        public DomainEntityRef PhoneMetaBase { get; set; }
         
         
         
@@ -430,7 +430,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones.</value>
         [DataMember(Name="webRtcUser", EmitDefaultValue=false)]
-        public UriReference WebRtcUser { get; set; }
+        public DomainEntityRef WebRtcUser { get; set; }
         
         
         

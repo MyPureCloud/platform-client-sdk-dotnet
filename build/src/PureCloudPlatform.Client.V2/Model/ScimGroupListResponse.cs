@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ScimGroupListResponse" /> class.
         /// </summary>
         /// <param name="Resources">Resources.</param>
-        /// <param name="Schemas">schemas supported.</param>
+        /// <param name="Schemas">The list of supported schemas..</param>
         public ScimGroupListResponse(List<ScimV2Group> Resources = null, List<string> Schemas = null)
         {
             this.Resources = Resources;
@@ -61,27 +61,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Total Results
+        /// The total number of results.
         /// </summary>
-        /// <value>Total Results</value>
+        /// <value>The total number of results.</value>
         [DataMember(Name="totalResults", EmitDefaultValue=false)]
         public long? TotalResults { get; private set; }
         
         
         
         /// <summary>
-        /// Start index
+        /// The 1-based index of the first result returned by this request. Add this to itemsPerPage when requesting the next page of results.
         /// </summary>
-        /// <value>Start index</value>
+        /// <value>The 1-based index of the first result returned by this request. Add this to itemsPerPage when requesting the next page of results.</value>
         [DataMember(Name="startIndex", EmitDefaultValue=false)]
         public long? StartIndex { get; private set; }
         
         
         
         /// <summary>
-        /// Items per Page
+        /// The number of resources returned per page.
         /// </summary>
-        /// <value>Items per Page</value>
+        /// <value>The number of resources returned per page.</value>
         [DataMember(Name="itemsPerPage", EmitDefaultValue=false)]
         public long? ItemsPerPage { get; private set; }
         
@@ -97,9 +97,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// schemas supported
+        /// The list of supported schemas.
         /// </summary>
-        /// <value>schemas supported</value>
+        /// <value>The list of supported schemas.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
         public List<string> Schemas { get; set; }
         

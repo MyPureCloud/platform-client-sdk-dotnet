@@ -57,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Campaign">Identifier of the campaign (required).</param>
         /// <param name="ContactList">Identifier of the contact list (required).</param>
-        public CampaignProgress(UriReference Campaign = null, UriReference ContactList = null)
+        public CampaignProgress(DomainEntityRef Campaign = null, DomainEntityRef ContactList = null)
         {
             this.Campaign = Campaign;
             this.ContactList = ContactList;
@@ -71,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Identifier of the campaign</value>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
-        public UriReference Campaign { get; set; }
+        public DomainEntityRef Campaign { get; set; }
         
         
         
@@ -80,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Identifier of the contact list</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
-        public UriReference ContactList { get; set; }
+        public DomainEntityRef ContactList { get; set; }
         
         
         

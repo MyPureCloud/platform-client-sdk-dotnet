@@ -14,7 +14,7 @@ title: CampaignSchedule
 | **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
 | **Intervals** | [**List&lt;ScheduleInterval&gt;**](ScheduleInterval.html) | A list of intervals during which to run the associated Campaign. | |
 | **TimeZone** | **string** | The time zone for this CampaignSchedule. For example, Africa/Abidjan. | |
-| **Campaign** | [**UriReference**](UriReference.html) | The Campaign that this CampaignSchedule is for. | |
+| **Campaign** | [**DomainEntityRef**](DomainEntityRef.html) | The Campaign that this CampaignSchedule is for. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

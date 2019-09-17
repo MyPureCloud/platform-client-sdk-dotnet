@@ -7,7 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetBillingReportsBillableusage**](BillingApi.html#getbillingreportsbillableusage) | **GET** /api/v2/billing/reports/billableusage | Get a report of the billable usages (e.g. licenses and devices utilized) for a given period. |
+| [**GetBillingReportsBillableusage**](BillingApi.html#getbillingreportsbillableusage) | **GET** /api/v2/billing/reports/billableusage | Get a report of the billable license usages |
 | [**GetBillingTrusteebillingoverviewTrustorOrgId**](BillingApi.html#getbillingtrusteebillingoverviewtrustororgid) | **GET** /api/v2/billing/trusteebillingoverview/{trustorOrgId} | Get the billing overview for an organization that is managed by a partner. |
 {: class="table table-striped"}
 
@@ -17,9 +17,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 
-Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
+Get a report of the billable license usages
 
-
+Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response's status is InProgress, wait a few seconds, then try the same request again.
 
 Requires ANY permissions: 
 
@@ -51,7 +51,7 @@ namespace Example
 
             try
             { 
-                // Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
+                // Get a report of the billable license usages
                 BillingUsageReport result = apiInstance.GetBillingReportsBillableusage(startDate, endDate);
                 Debug.WriteLine(result);
             }

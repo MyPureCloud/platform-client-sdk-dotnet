@@ -129,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AllowedDomains">The list of domains that are approved to use this Deployment; the list will be added to CORS headers for ease of web use..</param>
         /// <param name="ClientType">The type of display widget for which this Deployment is configured, which controls the administrator settings shown..</param>
         /// <param name="ClientConfig">The client configuration options that should be made available to the clients of this Deployment..</param>
-        public WidgetDeployment(string Name = null, string Description = null, bool? AuthenticationRequired = null, bool? Disabled = null, UriReference Flow = null, List<string> AllowedDomains = null, ClientTypeEnum? ClientType = null, WidgetClientConfig ClientConfig = null)
+        public WidgetDeployment(string Name = null, string Description = null, bool? AuthenticationRequired = null, bool? Disabled = null, DomainEntityRef Flow = null, List<string> AllowedDomains = null, ClientTypeEnum? ClientType = null, WidgetClientConfig ClientConfig = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -193,7 +193,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The URI of the Inbound Chat Flow to run when new chats are initiated under this Deployment.</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
-        public UriReference Flow { get; set; }
+        public DomainEntityRef Flow { get; set; }
         
         
         

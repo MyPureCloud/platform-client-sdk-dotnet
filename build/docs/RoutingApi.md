@@ -1496,7 +1496,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, authorization.unusedRoles, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
 | **joined** | **bool?**| Filter by joined status | [optional]  |
 | **name** | **string**| Filter by queue member name | [optional]  |
 | **profileSkills** | [**List<string>**](string.html)| Filter by profile skill | [optional]  |
@@ -1577,7 +1577,7 @@ namespace Example
 
 <a name="getroutingqueues"></a>
 
-## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> divisionId = null)
+## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> id = null, List<string> divisionId = null)
 
 
 
@@ -1612,12 +1612,13 @@ namespace Example
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
             var name = name_example;  // string | Name (optional) 
             var active = true;  // bool? | Active (optional) 
+            var id = new List<string>(); // List<string> | ID(s) (optional) 
             var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
 
             try
             { 
                 // Get list of queues.
-                QueueEntityListing result = apiInstance.GetRoutingQueues(pageSize, pageNumber, sortBy, name, active, divisionId);
+                QueueEntityListing result = apiInstance.GetRoutingQueues(pageSize, pageNumber, sortBy, name, active, id, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1639,6 +1640,7 @@ namespace Example
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
 | **name** | **string**| Name | [optional]  |
 | **active** | **bool?**| Active | [optional]  |
+| **id** | [**List<string>**](string.html)| ID(s) | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
 {: class="table table-striped"}
 

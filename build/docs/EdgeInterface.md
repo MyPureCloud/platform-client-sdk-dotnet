@@ -12,7 +12,7 @@ title: EdgeInterface
 | **Name** | **string** |  | [optional] |
 | **MacAddress** | **string** |  | [optional] |
 | **IfName** | **string** |  | [optional] |
-| **Endpoints** | [**List&lt;UriReference&gt;**](UriReference.html) |  | [optional] |
+| **Endpoints** | [**List&lt;DomainEntityRef&gt;**](DomainEntityRef.html) |  | [optional] |
 | **LineTypes** | **List&lt;string&gt;** |  | [optional] |
 | **AddressFamilyId** | **string** |  | [optional] |
 {: class="table table-striped"}

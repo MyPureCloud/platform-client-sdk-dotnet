@@ -70,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="QueueUtilizationDiagnostic" /> class.
         /// </summary>
         /// <param name="Queue">Identifier of the queue.</param>
-        public QueueUtilizationDiagnostic(UriReference Queue = null)
+        public QueueUtilizationDiagnostic(DomainEntityRef Queue = null)
         {
             this.Queue = Queue;
             
@@ -83,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Identifier of the queue</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
-        public UriReference Queue { get; set; }
+        public DomainEntityRef Queue { get; set; }
         
         
         

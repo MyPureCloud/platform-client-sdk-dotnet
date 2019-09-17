@@ -319,7 +319,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SharingStatus">SharingStatus.</param>
         /// <param name="SharingUri">SharingUri.</param>
         /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
-        public Document(string Name = null, int? ChangeNumber = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateUploaded = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, UriReference UploadedBy = null, string ContentType = null, long? ContentLength = null, SystemTypeEnum? SystemType = null, string Filename = null, long? PageCount = null, bool? Read = null, string CallerAddress = null, string ReceiverAddress = null, List<string> Tags = null, List<TagValue> TagValues = null, List<DocumentAttribute> Attributes = null, List<DocumentThumbnail> Thumbnails = null, UriReference UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null, LockInfo LockInfo = null, List<string> Acl = null, SharingStatusEnum? SharingStatus = null, string SharingUri = null, string DownloadSharingUri = null)
+        public Document(string Name = null, int? ChangeNumber = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateUploaded = null, string ContentUri = null, DomainEntityRef Workspace = null, DomainEntityRef CreatedBy = null, DomainEntityRef UploadedBy = null, string ContentType = null, long? ContentLength = null, SystemTypeEnum? SystemType = null, string Filename = null, long? PageCount = null, bool? Read = null, string CallerAddress = null, string ReceiverAddress = null, List<string> Tags = null, List<TagValue> TagValues = null, List<DocumentAttribute> Attributes = null, List<DocumentThumbnail> Thumbnails = null, DomainEntityRef UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null, LockInfo LockInfo = null, List<string> Acl = null, SharingStatusEnum? SharingStatus = null, string SharingUri = null, string DownloadSharingUri = null)
         {
             this.Name = Name;
             this.ChangeNumber = ChangeNumber;
@@ -419,7 +419,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
-        public UriReference Workspace { get; set; }
+        public DomainEntityRef Workspace { get; set; }
         
         
         
@@ -427,7 +427,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UriReference CreatedBy { get; set; }
+        public DomainEntityRef CreatedBy { get; set; }
         
         
         
@@ -435,7 +435,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets UploadedBy
         /// </summary>
         [DataMember(Name="uploadedBy", EmitDefaultValue=false)]
-        public UriReference UploadedBy { get; set; }
+        public DomainEntityRef UploadedBy { get; set; }
         
         
         
@@ -533,7 +533,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets UploadStatus
         /// </summary>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
-        public UriReference UploadStatus { get; set; }
+        public DomainEntityRef UploadStatus { get; set; }
         
         
         

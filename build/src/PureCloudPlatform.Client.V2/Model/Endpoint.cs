@@ -176,7 +176,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">Enabled.</param>
         /// <param name="Site">Site.</param>
         /// <param name="Dids">Dids.</param>
-        public Endpoint(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, int? Count = null, Dictionary<string, Object> Properties = null, UriReference Schema = null, bool? Enabled = null, UriReference Site = null, List<string> Dids = null)
+        public Endpoint(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, int? Count = null, Dictionary<string, Object> Properties = null, DomainEntityRef Schema = null, bool? Enabled = null, DomainEntityRef Site = null, List<string> Dids = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -311,7 +311,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Schema</value>
         [DataMember(Name="schema", EmitDefaultValue=false)]
-        public UriReference Schema { get; set; }
+        public DomainEntityRef Schema { get; set; }
         
         
         
@@ -327,7 +327,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Site
         /// </summary>
         [DataMember(Name="site", EmitDefaultValue=false)]
-        public UriReference Site { get; set; }
+        public DomainEntityRef Site { get; set; }
         
         
         

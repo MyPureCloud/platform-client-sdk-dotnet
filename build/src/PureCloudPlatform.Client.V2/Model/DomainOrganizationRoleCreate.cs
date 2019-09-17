@@ -75,6 +75,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainOrganizationRoleCreate" /> class.
@@ -89,17 +94,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Description.</param>
         /// <param name="DefaultRoleId">DefaultRoleId.</param>
         /// <param name="Permissions">Permissions.</param>
+        /// <param name="UnusedPermissions">UnusedPermissions.</param>
         /// <param name="PermissionPolicies">PermissionPolicies.</param>
         /// <param name="UserCount">UserCount.</param>
         /// <param name="RoleNeedsUpdate">Optional unless patch operation..</param>
         /// <param name="_Default">_Default.</param>
         /// <param name="_Base">_Base.</param>
-        public DomainOrganizationRoleCreate(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null, bool? _Base = null)
+        public DomainOrganizationRoleCreate(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<string> UnusedPermissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null, bool? _Base = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.DefaultRoleId = DefaultRoleId;
             this.Permissions = Permissions;
+            this.UnusedPermissions = UnusedPermissions;
             this.PermissionPolicies = PermissionPolicies;
             this.UserCount = UserCount;
             this.RoleNeedsUpdate = RoleNeedsUpdate;
@@ -149,6 +156,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<string> Permissions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets UnusedPermissions
+        /// </summary>
+        [DataMember(Name="unusedPermissions", EmitDefaultValue=false)]
+        public List<string> UnusedPermissions { get; set; }
         
         
         
@@ -215,6 +230,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  DefaultRoleId: ").Append(DefaultRoleId).Append("\n");
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
+            sb.Append("  UnusedPermissions: ").Append(UnusedPermissions).Append("\n");
             sb.Append("  PermissionPolicies: ").Append(PermissionPolicies).Append("\n");
             sb.Append("  UserCount: ").Append(UserCount).Append("\n");
             sb.Append("  RoleNeedsUpdate: ").Append(RoleNeedsUpdate).Append("\n");
@@ -283,6 +299,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Permissions.SequenceEqual(other.Permissions)
                 ) &&
                 (
+                    this.UnusedPermissions == other.UnusedPermissions ||
+                    this.UnusedPermissions != null &&
+                    this.UnusedPermissions.SequenceEqual(other.UnusedPermissions)
+                ) &&
+                (
                     this.PermissionPolicies == other.PermissionPolicies ||
                     this.PermissionPolicies != null &&
                     this.PermissionPolicies.SequenceEqual(other.PermissionPolicies)
@@ -340,6 +361,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Permissions != null)
                     hash = hash * 59 + this.Permissions.GetHashCode();
+                
+                if (this.UnusedPermissions != null)
+                    hash = hash * 59 + this.UnusedPermissions.GetHashCode();
                 
                 if (this.PermissionPolicies != null)
                     hash = hash * 59 + this.PermissionPolicies.GetHashCode();

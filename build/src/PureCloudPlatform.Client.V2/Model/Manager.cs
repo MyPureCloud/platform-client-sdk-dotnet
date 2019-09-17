@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// User&#39;s Manager
+    /// The user&#39;s manager.
     /// </summary>
     [DataContract]
     public partial class Manager :  IEquatable<Manager>
@@ -53,9 +53,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// URI for Manager User record.
+        /// The URI of the manager&#39;s user record.
         /// </summary>
-        /// <value>URI for Manager User record.</value>
+        /// <value>The URI of the manager&#39;s user record.</value>
         [DataMember(Name="$ref", EmitDefaultValue=false)]
         public string _Ref { get; private set; }
         

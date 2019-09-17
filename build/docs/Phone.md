@@ -18,17 +18,17 @@ title: Phone
 | **State** | **string** | Indicates if the resource is active, inactive, or deleted. | [optional] |
 | **ModifiedByApp** | **string** | The application that last modified the resource. | [optional] |
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
-| **Site** | [**UriReference**](UriReference.html) | The site associated to the phone. | |
-| **PhoneBaseSettings** | [**UriReference**](UriReference.html) | Phone Base Settings | |
-| **LineBaseSettings** | [**UriReference**](UriReference.html) |  | [optional] |
-| **PhoneMetaBase** | [**UriReference**](UriReference.html) |  | [optional] |
+| **Site** | [**DomainEntityRef**](DomainEntityRef.html) | The site associated to the phone. | |
+| **PhoneBaseSettings** | [**DomainEntityRef**](DomainEntityRef.html) | Phone Base Settings | |
+| **LineBaseSettings** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **PhoneMetaBase** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **Lines** | [**List&lt;Line&gt;**](Line.html) | Lines | |
 | **Status** | [**PhoneStatus**](PhoneStatus.html) | The status of the phone and lines from the primary Edge. | [optional] |
 | **SecondaryStatus** | [**PhoneStatus**](PhoneStatus.html) | The status of the phone and lines from the secondary Edge. | [optional] |
 | **UserAgentInfo** | [**UserAgentInfo**](UserAgentInfo.html) | User Agent Information for this phone. This includes model, firmware version, and manufacturer. | [optional] |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **Capabilities** | [**PhoneCapabilities**](PhoneCapabilities.html) |  | [optional] |
-| **WebRtcUser** | [**UriReference**](UriReference.html) | This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones. | [optional] |
+| **WebRtcUser** | [**DomainEntityRef**](DomainEntityRef.html) | This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones. | [optional] |
 | **PrimaryEdge** | [**Edge**](Edge.html) |  | [optional] |
 | **SecondaryEdge** | [**Edge**](Edge.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

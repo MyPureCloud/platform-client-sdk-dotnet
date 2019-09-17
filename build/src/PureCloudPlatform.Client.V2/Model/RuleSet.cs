@@ -80,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactList">A ContactList to provide user-interface suggestions for contact columns on relevant conditions and actions..</param>
         /// <param name="Queue">A Queue to provide user-interface suggestions for wrap-up codes on relevant conditions and actions..</param>
         /// <param name="Rules">The list of rules. (required).</param>
-        public RuleSet(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, List<DialerRule> Rules = null)
+        public RuleSet(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, List<DialerRule> Rules = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -142,7 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A ContactList to provide user-interface suggestions for contact columns on relevant conditions and actions.</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
-        public UriReference ContactList { get; set; }
+        public DomainEntityRef ContactList { get; set; }
         
         
         
@@ -151,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A Queue to provide user-interface suggestions for wrap-up codes on relevant conditions and actions.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
-        public UriReference Queue { get; set; }
+        public DomainEntityRef Queue { get; set; }
         
         
         

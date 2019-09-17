@@ -110,7 +110,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">The schema&#39;s current enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists.</param>
         /// <param name="CreatedBy">The URI of the user that created this schema..</param>
         /// <param name="JsonSchema">A JSON schema defining the extension to the built-in entity type. (required).</param>
-        public DataSchema(string Name = null, int? Version = null, List<AppliesToEnum> AppliesTo = null, bool? Enabled = null, UriReference CreatedBy = null, JsonSchemaDocument JsonSchema = null)
+        public DataSchema(string Name = null, int? Version = null, List<AppliesToEnum> AppliesTo = null, bool? Enabled = null, DomainEntityRef CreatedBy = null, JsonSchemaDocument JsonSchema = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -172,7 +172,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The URI of the user that created this schema.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UriReference CreatedBy { get; set; }
+        public DomainEntityRef CreatedBy { get; set; }
         
         
         

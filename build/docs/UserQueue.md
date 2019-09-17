@@ -20,8 +20,8 @@ title: UserQueue
 | **Bullseye** | [**Bullseye**](Bullseye.html) | The bulls-eye settings for the queue. | [optional] |
 | **AcwSettings** | [**AcwSettings**](AcwSettings.html) | The ACW settings for the queue. | [optional] |
 | **SkillEvaluationMethod** | **string** | The skill evaluation method to use when routing conversations. | [optional] |
-| **QueueFlow** | [**UriReference**](UriReference.html) | The in-queue flow to use for conversations waiting in queue. | [optional] |
-| **WhisperPrompt** | [**UriReference**](UriReference.html) | The prompt used for whisper on the queue, if configured. | [optional] |
+| **QueueFlow** | [**DomainEntityRef**](DomainEntityRef.html) | The in-queue flow to use for conversations waiting in queue. | [optional] |
+| **WhisperPrompt** | [**DomainEntityRef**](DomainEntityRef.html) | The prompt used for whisper on the queue, if configured. | [optional] |
 | **CallingPartyName** | **string** | The name to use for caller identification for outbound calls from this queue. | [optional] |
 | **CallingPartyNumber** | **string** | The phone number to use for caller identification for outbound calls from this queue. | [optional] |
 | **DefaultScripts** | [**Dictionary&lt;string, Script&gt;**](Script.html) | The default script Ids for the communication types. | [optional] |

@@ -19,8 +19,8 @@ title: DID
 | **ModifiedByApp** | **string** | The application that last modified the resource. | [optional] |
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
 | **PhoneNumber** | **string** |  | [optional] |
-| **DidPool** | [**UriReference**](UriReference.html) |  | [optional] |
-| **Owner** | [**UriReference**](UriReference.html) | A Uri reference to the owner of this DID, which is either a User or an IVR | [optional] |
+| **DidPool** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **Owner** | [**DomainEntityRef**](DomainEntityRef.html) | A Uri reference to the owner of this DID, which is either a User or an IVR | [optional] |
 | **OwnerType** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
