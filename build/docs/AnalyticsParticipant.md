@@ -9,6 +9,7 @@ title: AnalyticsParticipant
 |------------ | ------------- | ------------- | -------------|
 | **ParticipantId** | **string** | Unique identifier for the participant | [optional] |
 | **ParticipantName** | **string** | A human readable name identifying the participant | [optional] |
+| **Attributes** | **Dictionary&lt;string, string&gt;** | List of attributes associated to this participant | [optional] |
 | **UserId** | **string** | If a user, then this will be the unique identifier for the user | [optional] |
 | **Purpose** | **string** | The participant&#39;s purpose | [optional] |
 | **ExternalContactId** | **string** | External Contact Identifier | [optional] |

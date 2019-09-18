@@ -25,6 +25,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets MediaTypes
         /// </summary>
@@ -84,9 +87,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueMediaAssociation" /> class.
@@ -101,6 +101,15 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Delete = Delete;
             
         }
+        
+        
+        
+        /// <summary>
+        /// The reference ID for this QueueMediaAssociation
+        /// </summary>
+        /// <value>The reference ID for this QueueMediaAssociation</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
         
         
         
@@ -123,15 +132,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The reference ID for this QueueMediaAssociation
-        /// </summary>
-        /// <value>The reference ID for this QueueMediaAssociation</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
-        
-        
-        
-        /// <summary>
         /// If marked true on a PATCH, this QueueMediaAssociation will be permanently deleted
         /// </summary>
         /// <value>If marked true on a PATCH, this QueueMediaAssociation will be permanently deleted</value>
@@ -148,9 +148,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class QueueMediaAssociation {\n");
             
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  MediaTypes: ").Append(MediaTypes).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Delete: ").Append(Delete).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -189,6 +189,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
@@ -197,11 +202,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaTypes == other.MediaTypes ||
                     this.MediaTypes != null &&
                     this.MediaTypes.SequenceEqual(other.MediaTypes)
-                ) &&
-                (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
                 ) &&
                 (
                     this.Delete == other.Delete ||
@@ -222,14 +222,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
                 
                 if (this.MediaTypes != null)
                     hash = hash * 59 + this.MediaTypes.GetHashCode();
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Delete != null)
                     hash = hash * 59 + this.Delete.GetHashCode();

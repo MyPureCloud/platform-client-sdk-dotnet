@@ -11,10 +11,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteScimV2User**](SCIMApi.html#deletescimv2user) | **DELETE** /api/v2/scim/v2/users/{userId} | Delete a user |
 | [**GetScimGroup**](SCIMApi.html#getscimgroup) | **GET** /api/v2/scim/groups/{groupId} | Get a group |
 | [**GetScimGroups**](SCIMApi.html#getscimgroups) | **GET** /api/v2/scim/groups | Get a list of groups |
+| [**GetScimResourcetype**](SCIMApi.html#getscimresourcetype) | **GET** /api/v2/scim/resourcetypes/{resourceType} | Get the SCIM configuration |
+| [**GetScimResourcetypes**](SCIMApi.html#getscimresourcetypes) | **GET** /api/v2/scim/resourcetypes | Get the SCIM resource types |
+| [**GetScimServiceproviderconfig**](SCIMApi.html#getscimserviceproviderconfig) | **GET** /api/v2/scim/serviceproviderconfig | Get the SCIM configuration |
 | [**GetScimUser**](SCIMApi.html#getscimuser) | **GET** /api/v2/scim/users/{userId} | Get a user |
 | [**GetScimUsers**](SCIMApi.html#getscimusers) | **GET** /api/v2/scim/users | Get a list of users |
 | [**GetScimV2Group**](SCIMApi.html#getscimv2group) | **GET** /api/v2/scim/v2/groups/{groupId} | Get a group |
 | [**GetScimV2Groups**](SCIMApi.html#getscimv2groups) | **GET** /api/v2/scim/v2/groups | Get a list of groups |
+| [**GetScimV2Resourcetype**](SCIMApi.html#getscimv2resourcetype) | **GET** /api/v2/scim/v2/resourcetypes/{resourceType} | Get the SCIM configuration |
+| [**GetScimV2Resourcetypes**](SCIMApi.html#getscimv2resourcetypes) | **GET** /api/v2/scim/v2/resourcetypes | Get the SCIM resource types |
 | [**GetScimV2Serviceproviderconfig**](SCIMApi.html#getscimv2serviceproviderconfig) | **GET** /api/v2/scim/v2/serviceproviderconfig | Get the SCIM configuration |
 | [**GetScimV2User**](SCIMApi.html#getscimv2user) | **GET** /api/v2/scim/v2/users/{userId} | Get a user |
 | [**GetScimV2Users**](SCIMApi.html#getscimv2users) | **GET** /api/v2/scim/v2/users | Get a list of users |
@@ -284,6 +289,180 @@ namespace Example
 
 [**ScimGroupListResponse**](ScimGroupListResponse.html)
 
+<a name="getscimresourcetype"></a>
+
+## [**ScimConfigResourceType**](ScimConfigResourceType.html) GetScimResourcetype (string resourceType)
+
+
+
+Get the SCIM configuration
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetScimResourcetypeExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new SCIMApi();
+            var resourceType = resourceType_example;  // string | The ID of a resource.
+
+            try
+            { 
+                // Get the SCIM configuration
+                ScimConfigResourceType result = apiInstance.GetScimResourcetype(resourceType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SCIMApi.GetScimResourcetype: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **resourceType** | **string**| The ID of a resource. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScimConfigResourceType**](ScimConfigResourceType.html)
+
+<a name="getscimresourcetypes"></a>
+
+## [**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html) GetScimResourcetypes (string filter = null)
+
+
+
+Get the SCIM resource types
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetScimResourcetypesExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new SCIMApi();
+            var filter = displayName eq groupName;  // string | Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional) 
+
+            try
+            { 
+                // Get the SCIM resource types
+                ScimConfigResourceTypesListResponse result = apiInstance.GetScimResourcetypes(filter);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SCIMApi.GetScimResourcetypes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **string**| Filtered results are invalid and will result in a 403 (Unauthorized) return. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html)
+
+<a name="getscimserviceproviderconfig"></a>
+
+## [**ScimServiceProviderConfig**](ScimServiceProviderConfig.html) GetScimServiceproviderconfig (string ifNoneMatch = null)
+
+
+
+Get the SCIM configuration
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetScimServiceproviderconfigExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new SCIMApi();
+            var ifNoneMatch = ifNoneMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional) 
+
+            try
+            { 
+                // Get the SCIM configuration
+                ScimServiceProviderConfig result = apiInstance.GetScimServiceproviderconfig(ifNoneMatch);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SCIMApi.GetScimServiceproviderconfig: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ifNoneMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScimServiceProviderConfig**](ScimServiceProviderConfig.html)
+
 <a name="getscimuser"></a>
 
 ## [**ScimV2User**](ScimV2User.html) GetScimUser (string userId, string ifNoneMatch = null)
@@ -541,6 +720,122 @@ namespace Example
 ### Return type
 
 [**ScimGroupListResponse**](ScimGroupListResponse.html)
+
+<a name="getscimv2resourcetype"></a>
+
+## [**ScimConfigResourceType**](ScimConfigResourceType.html) GetScimV2Resourcetype (string resourceType)
+
+
+
+Get the SCIM configuration
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetScimV2ResourcetypeExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new SCIMApi();
+            var resourceType = resourceType_example;  // string | The ID of a resource.
+
+            try
+            { 
+                // Get the SCIM configuration
+                ScimConfigResourceType result = apiInstance.GetScimV2Resourcetype(resourceType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SCIMApi.GetScimV2Resourcetype: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **resourceType** | **string**| The ID of a resource. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScimConfigResourceType**](ScimConfigResourceType.html)
+
+<a name="getscimv2resourcetypes"></a>
+
+## [**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html) GetScimV2Resourcetypes (string filter = null)
+
+
+
+Get the SCIM resource types
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetScimV2ResourcetypesExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new SCIMApi();
+            var filter = displayName eq groupName;  // string | Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional) 
+
+            try
+            { 
+                // Get the SCIM resource types
+                ScimConfigResourceTypesListResponse result = apiInstance.GetScimV2Resourcetypes(filter);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SCIMApi.GetScimV2Resourcetypes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **string**| Filtered results are invalid and will result in a 403 (Unauthorized) return. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html)
 
 <a name="getscimv2serviceproviderconfig"></a>
 

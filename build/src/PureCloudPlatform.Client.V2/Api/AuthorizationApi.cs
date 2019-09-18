@@ -312,7 +312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>DomainOrganizationRole</returns>
         DomainOrganizationRole GetAuthorizationRole (string roleId, List<string> expand = null);
 
@@ -324,7 +324,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
         ApiResponse<DomainOrganizationRole> GetAuthorizationRoleWithHttpInfo (string roleId, List<string> expand = null);
         
@@ -621,7 +621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)</param>
         /// <returns></returns>
         void PostAuthorizationRole (string roleId, SubjectDivisions body, string subjectType = null);
 
@@ -634,7 +634,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostAuthorizationRoleWithHttpInfo (string roleId, SubjectDivisions body, string subjectType = null);
         
@@ -718,7 +718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="divisionId">the id of the division to which to make the grant</param>
         /// <param name="roleId">the id of the role to grant</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to PC_USER)</param>
         /// <returns></returns>
         void PostAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId, string subjectType = null);
 
@@ -732,7 +732,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="divisionId">the id of the division to which to make the grant</param>
         /// <param name="roleId">the id of the role to grant</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to PC_USER)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null);
         
@@ -1178,7 +1178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of DomainOrganizationRole</returns>
         System.Threading.Tasks.Task<DomainOrganizationRole> GetAuthorizationRoleAsync (string roleId, List<string> expand = null);
 
@@ -1190,7 +1190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
         System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> GetAuthorizationRoleAsyncWithHttpInfo (string roleId, List<string> expand = null);
         
@@ -1487,7 +1487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PostAuthorizationRoleAsync (string roleId, SubjectDivisions body, string subjectType = null);
 
@@ -1500,7 +1500,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationRoleAsyncWithHttpInfo (string roleId, SubjectDivisions body, string subjectType = null);
         
@@ -1584,7 +1584,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="divisionId">the id of the division to which to make the grant</param>
         /// <param name="roleId">the id of the role to grant</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to PC_USER)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PostAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId, string subjectType = null);
 
@@ -1598,7 +1598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="divisionId">the id of the division to which to make the grant</param>
         /// <param name="roleId">the id of the role to grant</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to PC_USER)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null);
         
@@ -4207,7 +4207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>DomainOrganizationRole</returns>
         public DomainOrganizationRole GetAuthorizationRole (string roleId, List<string> expand = null)
         {
@@ -4220,7 +4220,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
         public ApiResponse< DomainOrganizationRole > GetAuthorizationRoleWithHttpInfo (string roleId, List<string> expand = null)
         { 
@@ -4305,7 +4305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of DomainOrganizationRole</returns>
         public async System.Threading.Tasks.Task<DomainOrganizationRole> GetAuthorizationRoleAsync (string roleId, List<string> expand = null)
         {
@@ -4319,7 +4319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> GetAuthorizationRoleAsyncWithHttpInfo (string roleId, List<string> expand = null)
         { 
@@ -6685,7 +6685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)</param>
         /// <returns></returns>
         public void PostAuthorizationRole (string roleId, SubjectDivisions body, string subjectType = null)
         {
@@ -6698,7 +6698,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostAuthorizationRoleWithHttpInfo (string roleId, SubjectDivisions body, string subjectType = null)
         { 
@@ -6792,7 +6792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PostAuthorizationRoleAsync (string roleId, SubjectDivisions body, string subjectType = null)
         {
@@ -6806,7 +6806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Subjects and Divisions</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationRoleAsyncWithHttpInfo (string roleId, SubjectDivisions body, string subjectType = null)
         { 
@@ -7518,7 +7518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="divisionId">the id of the division to which to make the grant</param>
         /// <param name="roleId">the id of the role to grant</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to PC_USER)</param>
         /// <returns></returns>
         public void PostAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId, string subjectType = null)
         {
@@ -7532,7 +7532,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="divisionId">the id of the division to which to make the grant</param>
         /// <param name="roleId">the id of the role to grant</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to PC_USER)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null)
         { 
@@ -7627,7 +7627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="divisionId">the id of the division to which to make the grant</param>
         /// <param name="roleId">the id of the role to grant</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to PC_USER)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PostAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId, string subjectType = null)
         {
@@ -7642,7 +7642,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="divisionId">the id of the division to which to make the grant</param>
         /// <param name="roleId">the id of the role to grant</param>
-        /// <param name="subjectType">what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)</param>
+        /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to PC_USER)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null)
         { 

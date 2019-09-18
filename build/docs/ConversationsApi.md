@@ -36,6 +36,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsCallsHistory**](ConversationsApi.html#getconversationscallshistory) | **GET** /api/v2/conversations/calls/history | Get call history |
 | [**GetConversationsCallsMaximumconferenceparties**](ConversationsApi.html#getconversationscallsmaximumconferenceparties) | **GET** /api/v2/conversations/calls/maximumconferenceparties | Get the maximum number of participants that this user can have on a conference |
 | [**GetConversationsChat**](ConversationsApi.html#getconversationschat) | **GET** /api/v2/conversations/chats/{conversationId} | Get chat conversation |
+| [**GetConversationsChatMessage**](ConversationsApi.html#getconversationschatmessage) | **GET** /api/v2/conversations/chats/{conversationId}/messages/{messageId} | Get a web chat conversation message |
+| [**GetConversationsChatMessages**](ConversationsApi.html#getconversationschatmessages) | **GET** /api/v2/conversations/chats/{conversationId}/messages | Get the messages of a chat conversation. |
 | [**GetConversationsChatParticipantWrapup**](ConversationsApi.html#getconversationschatparticipantwrapup) | **GET** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationsChatParticipantWrapupcodes**](ConversationsApi.html#getconversationschatparticipantwrapupcodes) | **GET** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversationsChats**](ConversationsApi.html#getconversationschats) | **GET** /api/v2/conversations/chats | Get active chat conversations for the logged in user |
@@ -111,6 +113,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsCallbackParticipantReplace**](ConversationsApi.html#postconversationscallbackparticipantreplace) | **POST** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsCallbacks**](ConversationsApi.html#postconversationscallbacks) | **POST** /api/v2/conversations/callbacks | Create a Callback |
 | [**PostConversationsCalls**](ConversationsApi.html#postconversationscalls) | **POST** /api/v2/conversations/calls | Create a call conversation |
+| [**PostConversationsChatCommunicationMessages**](ConversationsApi.html#postconversationschatcommunicationmessages) | **POST** /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages | Send a message on behalf of a communication in a chat conversation. |
+| [**PostConversationsChatCommunicationTyping**](ConversationsApi.html#postconversationschatcommunicationtyping) | **POST** /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing | Send a typing-indicator on behalf of a communication in a chat conversation. |
 | [**PostConversationsChatParticipantReplace**](ConversationsApi.html#postconversationschatparticipantreplace) | **POST** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsChats**](ConversationsApi.html#postconversationschats) | **POST** /api/v2/conversations/chats | Create a web chat conversation |
 | [**PostConversationsCobrowsesessionParticipantReplace**](ConversationsApi.html#postconversationscobrowsesessionparticipantreplace) | **POST** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
@@ -1900,6 +1904,136 @@ namespace Example
 ### Return type
 
 [**ChatConversation**](ChatConversation.html)
+
+<a name="getconversationschatmessage"></a>
+
+## [**WebChatMessage**](WebChatMessage.html) GetConversationsChatMessage (string conversationId, string messageId)
+
+
+
+Get a web chat conversation message
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsChatMessageExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var messageId = messageId_example;  // string | messageId
+
+            try
+            { 
+                // Get a web chat conversation message
+                WebChatMessage result = apiInstance.GetConversationsChatMessage(conversationId, messageId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsChatMessage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **messageId** | **string**| messageId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WebChatMessage**](WebChatMessage.html)
+
+<a name="getconversationschatmessages"></a>
+
+## [**WebChatMessageEntityList**](WebChatMessageEntityList.html) GetConversationsChatMessages (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
+
+
+
+Get the messages of a chat conversation.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsChatMessagesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var after = after_example;  // string | If specified, get the messages chronologically after the id of this message (optional) 
+            var before = before_example;  // string | If specified, get the messages chronologically before the id of this message (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
+            var maxResults = 56;  // int? | Limit the returned number of messages, up to a maximum of 100 (optional)  (default to 100)
+
+            try
+            { 
+                // Get the messages of a chat conversation.
+                WebChatMessageEntityList result = apiInstance.GetConversationsChatMessages(conversationId, after, before, sortOrder, maxResults);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsChatMessages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **after** | **string**| If specified, get the messages chronologically after the id of this message | [optional]  |
+| **before** | **string**| If specified, get the messages chronologically before the id of this message | [optional]  |
+| **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
+| **maxResults** | **int?**| Limit the returned number of messages, up to a maximum of 100 | [optional] [default to 100] |
+{: class="table table-striped"}
+
+### Return type
+
+[**WebChatMessageEntityList**](WebChatMessageEntityList.html)
 
 <a name="getconversationschatparticipantwrapup"></a>
 
@@ -5587,7 +5721,7 @@ namespace Example
 
 <a name="postanalyticsconversationsaggregatesquery"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostAnalyticsConversationsAggregatesQuery (AggregationQuery body)
+## [**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse.html) PostAnalyticsConversationsAggregatesQuery (ConversationAggregationQuery body)
 
 
 
@@ -5617,12 +5751,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ConversationsApi();
-            var body = new AggregationQuery(); // AggregationQuery | query
+            var body = new ConversationAggregationQuery(); // ConversationAggregationQuery | query
 
             try
             { 
                 // Query for conversation aggregates
-                AggregateQueryResponse result = apiInstance.PostAnalyticsConversationsAggregatesQuery(body);
+                ConversationAggregateQueryResponse result = apiInstance.PostAnalyticsConversationsAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5639,12 +5773,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+| **body** | [**ConversationAggregationQuery**](ConversationAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse.html)
 
 <a name="postanalyticsconversationsdetailsjobs"></a>
 
@@ -6580,6 +6714,132 @@ namespace Example
 ### Return type
 
 [**CreateCallResponse**](CreateCallResponse.html)
+
+<a name="postconversationschatcommunicationmessages"></a>
+
+## [**WebChatMessage**](WebChatMessage.html) PostConversationsChatCommunicationMessages (string conversationId, string communicationId, CreateWebChatMessageRequest body)
+
+
+
+Send a message on behalf of a communication in a chat conversation.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsChatCommunicationMessagesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var communicationId = communicationId_example;  // string | communicationId
+            var body = new CreateWebChatMessageRequest(); // CreateWebChatMessageRequest | Message
+
+            try
+            { 
+                // Send a message on behalf of a communication in a chat conversation.
+                WebChatMessage result = apiInstance.PostConversationsChatCommunicationMessages(conversationId, communicationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsChatCommunicationMessages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **communicationId** | **string**| communicationId |  |
+| **body** | [**CreateWebChatMessageRequest**](CreateWebChatMessageRequest.html)| Message |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WebChatMessage**](WebChatMessage.html)
+
+<a name="postconversationschatcommunicationtyping"></a>
+
+## [**WebChatTyping**](WebChatTyping.html) PostConversationsChatCommunicationTyping (string conversationId, string communicationId)
+
+
+
+Send a typing-indicator on behalf of a communication in a chat conversation.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsChatCommunicationTypingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var communicationId = communicationId_example;  // string | communicationId
+
+            try
+            { 
+                // Send a typing-indicator on behalf of a communication in a chat conversation.
+                WebChatTyping result = apiInstance.PostConversationsChatCommunicationTyping(conversationId, communicationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsChatCommunicationTyping: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **communicationId** | **string**| communicationId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WebChatTyping**](WebChatTyping.html)
 
 <a name="postconversationschatparticipantreplace"></a>
 

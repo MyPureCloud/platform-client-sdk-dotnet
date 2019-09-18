@@ -153,21 +153,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Interval">Specifies the date and time range of data being queried. Results will include conversations that both started on a day touched by the interval AND either started, ended, or any activity during the interval. Conversations that started before the earliest day of the interval will not be searched. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         /// <param name="ConversationFilters">Filters that target conversation-level data.</param>
-        /// <param name="EvaluationFilters">Filters that target quality management evaluation-level data.</param>
-        /// <param name="SurveyFilters">Filters that target quality management survey-level data.</param>
-        /// <param name="MediaEndpointStatFilters">Filters that target call quality of service data.</param>
         /// <param name="SegmentFilters">Filters that target individual segments within a conversation.</param>
+        /// <param name="EvaluationFilters">Filters that target evaluations.</param>
+        /// <param name="MediaEndpointStatFilters">Filters that target mediaEndpointStats.</param>
+        /// <param name="SurveyFilters">Filters that target surveys.</param>
         /// <param name="Order">Sort the result set in ascending/descending order. Default is ascending.</param>
         /// <param name="OrderBy">Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart.</param>
         /// <param name="Limit">Specify number of results to be returned.</param>
-        public AsyncConversationQuery(string Interval = null, List<AnalyticsQueryFilter> ConversationFilters = null, List<AnalyticsQueryFilter> EvaluationFilters = null, List<AnalyticsQueryFilter> SurveyFilters = null, List<AnalyticsQueryFilter> MediaEndpointStatFilters = null, List<AnalyticsQueryFilter> SegmentFilters = null, OrderEnum? Order = null, OrderByEnum? OrderBy = null, int? Limit = null)
+        public AsyncConversationQuery(string Interval = null, List<ConversationDetailQueryFilter> ConversationFilters = null, List<SegmentDetailQueryFilter> SegmentFilters = null, List<EvaluationDetailQueryFilter> EvaluationFilters = null, List<MediaEndpointStatDetailQueryFilter> MediaEndpointStatFilters = null, List<SurveyDetailQueryFilter> SurveyFilters = null, OrderEnum? Order = null, OrderByEnum? OrderBy = null, int? Limit = null)
         {
             this.Interval = Interval;
             this.ConversationFilters = ConversationFilters;
-            this.EvaluationFilters = EvaluationFilters;
-            this.SurveyFilters = SurveyFilters;
-            this.MediaEndpointStatFilters = MediaEndpointStatFilters;
             this.SegmentFilters = SegmentFilters;
+            this.EvaluationFilters = EvaluationFilters;
+            this.MediaEndpointStatFilters = MediaEndpointStatFilters;
+            this.SurveyFilters = SurveyFilters;
             this.Order = Order;
             this.OrderBy = OrderBy;
             this.Limit = Limit;
@@ -190,34 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Filters that target conversation-level data</value>
         [DataMember(Name="conversationFilters", EmitDefaultValue=false)]
-        public List<AnalyticsQueryFilter> ConversationFilters { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Filters that target quality management evaluation-level data
-        /// </summary>
-        /// <value>Filters that target quality management evaluation-level data</value>
-        [DataMember(Name="evaluationFilters", EmitDefaultValue=false)]
-        public List<AnalyticsQueryFilter> EvaluationFilters { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Filters that target quality management survey-level data
-        /// </summary>
-        /// <value>Filters that target quality management survey-level data</value>
-        [DataMember(Name="surveyFilters", EmitDefaultValue=false)]
-        public List<AnalyticsQueryFilter> SurveyFilters { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Filters that target call quality of service data
-        /// </summary>
-        /// <value>Filters that target call quality of service data</value>
-        [DataMember(Name="mediaEndpointStatFilters", EmitDefaultValue=false)]
-        public List<AnalyticsQueryFilter> MediaEndpointStatFilters { get; set; }
+        public List<ConversationDetailQueryFilter> ConversationFilters { get; set; }
         
         
         
@@ -226,7 +199,34 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Filters that target individual segments within a conversation</value>
         [DataMember(Name="segmentFilters", EmitDefaultValue=false)]
-        public List<AnalyticsQueryFilter> SegmentFilters { get; set; }
+        public List<SegmentDetailQueryFilter> SegmentFilters { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Filters that target evaluations
+        /// </summary>
+        /// <value>Filters that target evaluations</value>
+        [DataMember(Name="evaluationFilters", EmitDefaultValue=false)]
+        public List<EvaluationDetailQueryFilter> EvaluationFilters { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Filters that target mediaEndpointStats
+        /// </summary>
+        /// <value>Filters that target mediaEndpointStats</value>
+        [DataMember(Name="mediaEndpointStatFilters", EmitDefaultValue=false)]
+        public List<MediaEndpointStatDetailQueryFilter> MediaEndpointStatFilters { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Filters that target surveys
+        /// </summary>
+        /// <value>Filters that target surveys</value>
+        [DataMember(Name="surveyFilters", EmitDefaultValue=false)]
+        public List<SurveyDetailQueryFilter> SurveyFilters { get; set; }
         
         
         
@@ -253,10 +253,10 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  ConversationFilters: ").Append(ConversationFilters).Append("\n");
-            sb.Append("  EvaluationFilters: ").Append(EvaluationFilters).Append("\n");
-            sb.Append("  SurveyFilters: ").Append(SurveyFilters).Append("\n");
-            sb.Append("  MediaEndpointStatFilters: ").Append(MediaEndpointStatFilters).Append("\n");
             sb.Append("  SegmentFilters: ").Append(SegmentFilters).Append("\n");
+            sb.Append("  EvaluationFilters: ").Append(EvaluationFilters).Append("\n");
+            sb.Append("  MediaEndpointStatFilters: ").Append(MediaEndpointStatFilters).Append("\n");
+            sb.Append("  SurveyFilters: ").Append(SurveyFilters).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  OrderBy: ").Append(OrderBy).Append("\n");
             sb.Append("  Limit: ").Append(Limit).Append("\n");
@@ -307,14 +307,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationFilters.SequenceEqual(other.ConversationFilters)
                 ) &&
                 (
+                    this.SegmentFilters == other.SegmentFilters ||
+                    this.SegmentFilters != null &&
+                    this.SegmentFilters.SequenceEqual(other.SegmentFilters)
+                ) &&
+                (
                     this.EvaluationFilters == other.EvaluationFilters ||
                     this.EvaluationFilters != null &&
                     this.EvaluationFilters.SequenceEqual(other.EvaluationFilters)
-                ) &&
-                (
-                    this.SurveyFilters == other.SurveyFilters ||
-                    this.SurveyFilters != null &&
-                    this.SurveyFilters.SequenceEqual(other.SurveyFilters)
                 ) &&
                 (
                     this.MediaEndpointStatFilters == other.MediaEndpointStatFilters ||
@@ -322,9 +322,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaEndpointStatFilters.SequenceEqual(other.MediaEndpointStatFilters)
                 ) &&
                 (
-                    this.SegmentFilters == other.SegmentFilters ||
-                    this.SegmentFilters != null &&
-                    this.SegmentFilters.SequenceEqual(other.SegmentFilters)
+                    this.SurveyFilters == other.SurveyFilters ||
+                    this.SurveyFilters != null &&
+                    this.SurveyFilters.SequenceEqual(other.SurveyFilters)
                 ) &&
                 (
                     this.Order == other.Order ||
@@ -361,17 +361,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ConversationFilters != null)
                     hash = hash * 59 + this.ConversationFilters.GetHashCode();
                 
+                if (this.SegmentFilters != null)
+                    hash = hash * 59 + this.SegmentFilters.GetHashCode();
+                
                 if (this.EvaluationFilters != null)
                     hash = hash * 59 + this.EvaluationFilters.GetHashCode();
-                
-                if (this.SurveyFilters != null)
-                    hash = hash * 59 + this.SurveyFilters.GetHashCode();
                 
                 if (this.MediaEndpointStatFilters != null)
                     hash = hash * 59 + this.MediaEndpointStatFilters.GetHashCode();
                 
-                if (this.SegmentFilters != null)
-                    hash = hash * 59 + this.SegmentFilters.GetHashCode();
+                if (this.SurveyFilters != null)
+                    hash = hash * 59 + this.SurveyFilters.GetHashCode();
                 
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();

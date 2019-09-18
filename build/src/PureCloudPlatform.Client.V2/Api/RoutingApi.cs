@@ -1166,8 +1166,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>QualifierMappingObservationQueryResponse</returns>
-        QualifierMappingObservationQueryResponse PostAnalyticsQueuesObservationsQuery (ObservationQuery body);
+        /// <returns>QueueObservationQueryResponse</returns>
+        QueueObservationQueryResponse PostAnalyticsQueuesObservationsQuery (QueueObservationQuery body);
 
         /// <summary>
         /// Query for queue observations
@@ -1177,8 +1177,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of QualifierMappingObservationQueryResponse</returns>
-        ApiResponse<QualifierMappingObservationQueryResponse> PostAnalyticsQueuesObservationsQueryWithHttpInfo (ObservationQuery body);
+        /// <returns>ApiResponse of QueueObservationQueryResponse</returns>
+        ApiResponse<QueueObservationQueryResponse> PostAnalyticsQueuesObservationsQueryWithHttpInfo (QueueObservationQuery body);
         
         /// <summary>
         /// Create a route
@@ -2804,8 +2804,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of QualifierMappingObservationQueryResponse</returns>
-        System.Threading.Tasks.Task<QualifierMappingObservationQueryResponse> PostAnalyticsQueuesObservationsQueryAsync (ObservationQuery body);
+        /// <returns>Task of QueueObservationQueryResponse</returns>
+        System.Threading.Tasks.Task<QueueObservationQueryResponse> PostAnalyticsQueuesObservationsQueryAsync (QueueObservationQuery body);
 
         /// <summary>
         /// Query for queue observations
@@ -2815,8 +2815,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (QualifierMappingObservationQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QualifierMappingObservationQueryResponse>> PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body);
+        /// <returns>Task of ApiResponse (QueueObservationQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueueObservationQueryResponse>> PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo (QueueObservationQuery body);
         
         /// <summary>
         /// Create a route
@@ -12551,10 +12551,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>QualifierMappingObservationQueryResponse</returns>
-        public QualifierMappingObservationQueryResponse PostAnalyticsQueuesObservationsQuery (ObservationQuery body)
+        /// <returns>QueueObservationQueryResponse</returns>
+        public QueueObservationQueryResponse PostAnalyticsQueuesObservationsQuery (QueueObservationQuery body)
         {
-             ApiResponse<QualifierMappingObservationQueryResponse> localVarResponse = PostAnalyticsQueuesObservationsQueryWithHttpInfo(body);
+             ApiResponse<QueueObservationQueryResponse> localVarResponse = PostAnalyticsQueuesObservationsQueryWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -12563,8 +12563,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of QualifierMappingObservationQueryResponse</returns>
-        public ApiResponse< QualifierMappingObservationQueryResponse > PostAnalyticsQueuesObservationsQueryWithHttpInfo (ObservationQuery body)
+        /// <returns>ApiResponse of QueueObservationQueryResponse</returns>
+        public ApiResponse< QueueObservationQueryResponse > PostAnalyticsQueuesObservationsQueryWithHttpInfo (QueueObservationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -12637,9 +12637,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsQueuesObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QualifierMappingObservationQueryResponse>(localVarStatusCode,
+            return new ApiResponse<QueueObservationQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (QualifierMappingObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualifierMappingObservationQueryResponse)),
+                (QueueObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueObservationQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -12650,10 +12650,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of QualifierMappingObservationQueryResponse</returns>
-        public async System.Threading.Tasks.Task<QualifierMappingObservationQueryResponse> PostAnalyticsQueuesObservationsQueryAsync (ObservationQuery body)
+        /// <returns>Task of QueueObservationQueryResponse</returns>
+        public async System.Threading.Tasks.Task<QueueObservationQueryResponse> PostAnalyticsQueuesObservationsQueryAsync (QueueObservationQuery body)
         {
-             ApiResponse<QualifierMappingObservationQueryResponse> localVarResponse = await PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo(body);
+             ApiResponse<QueueObservationQueryResponse> localVarResponse = await PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -12663,8 +12663,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (QualifierMappingObservationQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QualifierMappingObservationQueryResponse>> PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body)
+        /// <returns>Task of ApiResponse (QueueObservationQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueueObservationQueryResponse>> PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo (QueueObservationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -12738,9 +12738,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsQueuesObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QualifierMappingObservationQueryResponse>(localVarStatusCode,
+            return new ApiResponse<QueueObservationQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (QualifierMappingObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualifierMappingObservationQueryResponse)),
+                (QueueObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueObservationQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

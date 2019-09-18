@@ -2949,7 +2949,7 @@ namespace Example
 
 <a name="postanalyticsqueuesobservationsquery"></a>
 
-## [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) PostAnalyticsQueuesObservationsQuery (ObservationQuery body)
+## [**QueueObservationQueryResponse**](QueueObservationQueryResponse.html) PostAnalyticsQueuesObservationsQuery (QueueObservationQuery body)
 
 
 
@@ -2979,12 +2979,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RoutingApi();
-            var body = new ObservationQuery(); // ObservationQuery | query
+            var body = new QueueObservationQuery(); // QueueObservationQuery | query
 
             try
             { 
                 // Query for queue observations
-                QualifierMappingObservationQueryResponse result = apiInstance.PostAnalyticsQueuesObservationsQuery(body);
+                QueueObservationQueryResponse result = apiInstance.PostAnalyticsQueuesObservationsQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3001,12 +3001,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
+| **body** | [**QueueObservationQuery**](QueueObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
+[**QueueObservationQueryResponse**](QueueObservationQueryResponse.html)
 
 <a name="postroutingemaildomainroutes"></a>
 

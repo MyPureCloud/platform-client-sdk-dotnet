@@ -38,9 +38,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
@@ -87,6 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
@@ -95,28 +93,30 @@ namespace PureCloudPlatform.Client.V2.Model
         public OrderEnum? Order { get; set; }
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserDetailsQuery" /> class.
         /// </summary>
         /// <param name="Interval">Specifies the date and time range of data being queried. Conversations MUST have started within this time range to potentially be included within the result set. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         /// <param name="UserFilters">Filters that target the users to retrieve data for.</param>
-        /// <param name="PresenceFilters">Filters that target system and organization presence-level data.</param>
         /// <param name="RoutingStatusFilters">Filters that target agent routing status-level data.</param>
         /// <param name="PresenceAggregations">Include faceted search and aggregate roll-ups of presence data in your search results. This does not function as a filter, but rather, summary data about the presence results matching your filters.</param>
         /// <param name="RoutingStatusAggregations">Include faceted search and aggregate roll-ups of agent routing status data in your search results. This does not function as a filter, but rather, summary data about the agent routing status results matching your filters.</param>
         /// <param name="Paging">Page size and number to control iterating through large result sets. Default page size is 25.</param>
         /// <param name="Order">Sort the result set in ascending/descending order. Default is ascending.</param>
-        public UserDetailsQuery(string Interval = null, List<AnalyticsQueryFilter> UserFilters = null, List<AnalyticsQueryFilter> PresenceFilters = null, List<AnalyticsQueryFilter> RoutingStatusFilters = null, List<AnalyticsQueryAggregation> PresenceAggregations = null, List<AnalyticsQueryAggregation> RoutingStatusAggregations = null, PagingSpec Paging = null, OrderEnum? Order = null)
+        /// <param name="PresenceDetailFilters">PresenceDetailFilters.</param>
+        public UserDetailsQuery(string Interval = null, List<UserDetailQueryFilter> UserFilters = null, List<RoutingStatusDetailQueryFilter> RoutingStatusFilters = null, List<AnalyticsQueryAggregation> PresenceAggregations = null, List<AnalyticsQueryAggregation> RoutingStatusAggregations = null, PagingSpec Paging = null, OrderEnum? Order = null, List<PresenceDetailQueryFilter> PresenceDetailFilters = null)
         {
             this.Interval = Interval;
             this.UserFilters = UserFilters;
-            this.PresenceFilters = PresenceFilters;
             this.RoutingStatusFilters = RoutingStatusFilters;
             this.PresenceAggregations = PresenceAggregations;
             this.RoutingStatusAggregations = RoutingStatusAggregations;
             this.Paging = Paging;
             this.Order = Order;
+            this.PresenceDetailFilters = PresenceDetailFilters;
             
         }
         
@@ -136,16 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Filters that target the users to retrieve data for</value>
         [DataMember(Name="userFilters", EmitDefaultValue=false)]
-        public List<AnalyticsQueryFilter> UserFilters { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Filters that target system and organization presence-level data
-        /// </summary>
-        /// <value>Filters that target system and organization presence-level data</value>
-        [DataMember(Name="presenceFilters", EmitDefaultValue=false)]
-        public List<AnalyticsQueryFilter> PresenceFilters { get; set; }
+        public List<UserDetailQueryFilter> UserFilters { get; set; }
         
         
         
@@ -154,7 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Filters that target agent routing status-level data</value>
         [DataMember(Name="routingStatusFilters", EmitDefaultValue=false)]
-        public List<AnalyticsQueryFilter> RoutingStatusFilters { get; set; }
+        public List<RoutingStatusDetailQueryFilter> RoutingStatusFilters { get; set; }
         
         
         
@@ -186,6 +177,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// Gets or Sets PresenceDetailFilters
+        /// </summary>
+        [DataMember(Name="presenceDetailFilters", EmitDefaultValue=false)]
+        public List<PresenceDetailQueryFilter> PresenceDetailFilters { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -197,12 +196,12 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  UserFilters: ").Append(UserFilters).Append("\n");
-            sb.Append("  PresenceFilters: ").Append(PresenceFilters).Append("\n");
             sb.Append("  RoutingStatusFilters: ").Append(RoutingStatusFilters).Append("\n");
             sb.Append("  PresenceAggregations: ").Append(PresenceAggregations).Append("\n");
             sb.Append("  RoutingStatusAggregations: ").Append(RoutingStatusAggregations).Append("\n");
             sb.Append("  Paging: ").Append(Paging).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
+            sb.Append("  PresenceDetailFilters: ").Append(PresenceDetailFilters).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -250,11 +249,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserFilters.SequenceEqual(other.UserFilters)
                 ) &&
                 (
-                    this.PresenceFilters == other.PresenceFilters ||
-                    this.PresenceFilters != null &&
-                    this.PresenceFilters.SequenceEqual(other.PresenceFilters)
-                ) &&
-                (
                     this.RoutingStatusFilters == other.RoutingStatusFilters ||
                     this.RoutingStatusFilters != null &&
                     this.RoutingStatusFilters.SequenceEqual(other.RoutingStatusFilters)
@@ -278,6 +272,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Order == other.Order ||
                     this.Order != null &&
                     this.Order.Equals(other.Order)
+                ) &&
+                (
+                    this.PresenceDetailFilters == other.PresenceDetailFilters ||
+                    this.PresenceDetailFilters != null &&
+                    this.PresenceDetailFilters.SequenceEqual(other.PresenceDetailFilters)
                 );
         }
 
@@ -299,9 +298,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.UserFilters != null)
                     hash = hash * 59 + this.UserFilters.GetHashCode();
                 
-                if (this.PresenceFilters != null)
-                    hash = hash * 59 + this.PresenceFilters.GetHashCode();
-                
                 if (this.RoutingStatusFilters != null)
                     hash = hash * 59 + this.RoutingStatusFilters.GetHashCode();
                 
@@ -316,6 +312,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
+                
+                if (this.PresenceDetailFilters != null)
+                    hash = hash * 59 + this.PresenceDetailFilters.GetHashCode();
                 
                 return hash;
             }

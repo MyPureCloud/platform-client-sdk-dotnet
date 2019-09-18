@@ -17,6 +17,7 @@ title: RecordingJob
 | **PercentProgress** | **int?** | Progress in percentage based on the number of recordings | [optional] |
 | **ErrorMessage** | **string** | Error occurred during the job execution | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
+| **User** | [**AddressableEntityRef**](AddressableEntityRef.html) | Details of the user created the job | [optional] |
 {: class="table table-striped"}
 
 

@@ -92,7 +92,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Action">Operation to perform bulk task (required).</param>
         /// <param name="ActionDate">The date when the action will be performed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        /// <param name="IntegrationId">Integration ID (Required only for EXPORT action).</param>
+        /// <param name="IntegrationId">IntegrationId to Access AWS S3 bucket for bulk recording exports. This field is for EXPORT only.</param>
         /// <param name="IncludeScreenRecordings">Include Screen recordings for export action, default value = true .</param>
         /// <param name="ConversationQuery">Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query. (required).</param>
         public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, string IntegrationId = null, bool? IncludeScreenRecordings = null, AsyncConversationQuery ConversationQuery = null)
@@ -119,9 +119,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Integration ID (Required only for EXPORT action)
+        /// IntegrationId to Access AWS S3 bucket for bulk recording exports. This field is for EXPORT only
         /// </summary>
-        /// <value>Integration ID (Required only for EXPORT action)</value>
+        /// <value>IntegrationId to Access AWS S3 bucket for bulk recording exports. This field is for EXPORT only</value>
         [DataMember(Name="integrationId", EmitDefaultValue=false)]
         public string IntegrationId { get; set; }
         

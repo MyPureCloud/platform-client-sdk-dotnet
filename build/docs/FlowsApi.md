@@ -13,7 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="postanalyticsflowsaggregatesquery"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostAnalyticsFlowsAggregatesQuery (AggregationQuery body)
+## [**FlowAggregateQueryResponse**](FlowAggregateQueryResponse.html) PostAnalyticsFlowsAggregatesQuery (FlowAggregationQuery body)
 
 
 
@@ -43,12 +43,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new FlowsApi();
-            var body = new AggregationQuery(); // AggregationQuery | query
+            var body = new FlowAggregationQuery(); // FlowAggregationQuery | query
 
             try
             { 
                 // Query for flow aggregates
-                AggregateQueryResponse result = apiInstance.PostAnalyticsFlowsAggregatesQuery(body);
+                FlowAggregateQueryResponse result = apiInstance.PostAnalyticsFlowsAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -65,16 +65,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+| **body** | [**FlowAggregationQuery**](FlowAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**FlowAggregateQueryResponse**](FlowAggregateQueryResponse.html)
 
 <a name="postanalyticsflowsobservationsquery"></a>
 
-## [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) PostAnalyticsFlowsObservationsQuery (ObservationQuery body)
+## [**FlowObservationQueryResponse**](FlowObservationQueryResponse.html) PostAnalyticsFlowsObservationsQuery (FlowObservationQuery body)
 
 
 
@@ -104,12 +104,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new FlowsApi();
-            var body = new ObservationQuery(); // ObservationQuery | query
+            var body = new FlowObservationQuery(); // FlowObservationQuery | query
 
             try
             { 
                 // Query for flow observations
-                QualifierMappingObservationQueryResponse result = apiInstance.PostAnalyticsFlowsObservationsQuery(body);
+                FlowObservationQueryResponse result = apiInstance.PostAnalyticsFlowsObservationsQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -126,10 +126,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
+| **body** | [**FlowObservationQuery**](FlowObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
+[**FlowObservationQueryResponse**](FlowObservationQueryResponse.html)
 

@@ -55,6 +55,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowVersions**](ArchitectApi.html#getflowversions) | **GET** /api/v2/flows/{flowId}/versions | Get flow version list |
 | [**GetFlows**](ArchitectApi.html#getflows) | **GET** /api/v2/flows | Get a pageable list of flows, filtered by query parameters |
 | [**GetFlowsDatatable**](ArchitectApi.html#getflowsdatatable) | **GET** /api/v2/flows/datatables/{datatableId} | Returns a specific datatable by id |
+| [**GetFlowsDatatableImportJob**](ArchitectApi.html#getflowsdatatableimportjob) | **GET** /api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId} | Returns the state information about an import job |
 | [**GetFlowsDatatableRow**](ArchitectApi.html#getflowsdatatablerow) | **GET** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Returns a specific row for the datatable |
 | [**GetFlowsDatatableRows**](ArchitectApi.html#getflowsdatatablerows) | **GET** /api/v2/flows/datatables/{datatableId}/rows | Returns the rows for the datatable with the given id |
 | [**GetFlowsDatatables**](ArchitectApi.html#getflowsdatatables) | **GET** /api/v2/flows/datatables | Retrieve a list of datatables for the org |
@@ -3250,6 +3251,69 @@ namespace Example
 ### Return type
 
 [**DataTable**](DataTable.html)
+
+<a name="getflowsdatatableimportjob"></a>
+
+## [**DataTableImportJob**](DataTableImportJob.html) GetFlowsDatatableImportJob (string datatableId, string importJobId)
+
+
+
+Returns the state information about an import job
+
+Returns the state information about an import job.
+
+Requires ANY permissions: 
+
+* architect:datatable:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsDatatableImportJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ArchitectApi();
+            var datatableId = datatableId_example;  // string | id of datatable
+            var importJobId = importJobId_example;  // string | id of import job
+
+            try
+            { 
+                // Returns the state information about an import job
+                DataTableImportJob result = apiInstance.GetFlowsDatatableImportJob(datatableId, importJobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsDatatableImportJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **importJobId** | **string**| id of import job |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DataTableImportJob**](DataTableImportJob.html)
 
 <a name="getflowsdatatablerow"></a>
 

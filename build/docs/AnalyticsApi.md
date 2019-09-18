@@ -1071,7 +1071,7 @@ namespace Example
 
 <a name="postanalyticsconversationsaggregatesquery"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostAnalyticsConversationsAggregatesQuery (AggregationQuery body)
+## [**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse.html) PostAnalyticsConversationsAggregatesQuery (ConversationAggregationQuery body)
 
 
 
@@ -1101,12 +1101,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AnalyticsApi();
-            var body = new AggregationQuery(); // AggregationQuery | query
+            var body = new ConversationAggregationQuery(); // ConversationAggregationQuery | query
 
             try
             { 
                 // Query for conversation aggregates
-                AggregateQueryResponse result = apiInstance.PostAnalyticsConversationsAggregatesQuery(body);
+                ConversationAggregateQueryResponse result = apiInstance.PostAnalyticsConversationsAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1123,12 +1123,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+| **body** | [**ConversationAggregationQuery**](ConversationAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse.html)
 
 <a name="postanalyticsconversationsdetailsjobs"></a>
 
@@ -1254,7 +1254,7 @@ namespace Example
 
 <a name="postanalyticsevaluationsaggregatesquery"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostAnalyticsEvaluationsAggregatesQuery (AggregationQuery body)
+## [**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html) PostAnalyticsEvaluationsAggregatesQuery (EvaluationAggregationQuery body)
 
 
 
@@ -1284,12 +1284,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AnalyticsApi();
-            var body = new AggregationQuery(); // AggregationQuery | query
+            var body = new EvaluationAggregationQuery(); // EvaluationAggregationQuery | query
 
             try
             { 
                 // Query for evaluation aggregates
-                AggregateQueryResponse result = apiInstance.PostAnalyticsEvaluationsAggregatesQuery(body);
+                EvaluationAggregateQueryResponse result = apiInstance.PostAnalyticsEvaluationsAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1306,16 +1306,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+| **body** | [**EvaluationAggregationQuery**](EvaluationAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html)
 
 <a name="postanalyticsflowsaggregatesquery"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostAnalyticsFlowsAggregatesQuery (AggregationQuery body)
+## [**FlowAggregateQueryResponse**](FlowAggregateQueryResponse.html) PostAnalyticsFlowsAggregatesQuery (FlowAggregationQuery body)
 
 
 
@@ -1345,12 +1345,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AnalyticsApi();
-            var body = new AggregationQuery(); // AggregationQuery | query
+            var body = new FlowAggregationQuery(); // FlowAggregationQuery | query
 
             try
             { 
                 // Query for flow aggregates
-                AggregateQueryResponse result = apiInstance.PostAnalyticsFlowsAggregatesQuery(body);
+                FlowAggregateQueryResponse result = apiInstance.PostAnalyticsFlowsAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1367,16 +1367,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+| **body** | [**FlowAggregationQuery**](FlowAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**FlowAggregateQueryResponse**](FlowAggregateQueryResponse.html)
 
 <a name="postanalyticsflowsobservationsquery"></a>
 
-## [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) PostAnalyticsFlowsObservationsQuery (ObservationQuery body)
+## [**FlowObservationQueryResponse**](FlowObservationQueryResponse.html) PostAnalyticsFlowsObservationsQuery (FlowObservationQuery body)
 
 
 
@@ -1406,12 +1406,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AnalyticsApi();
-            var body = new ObservationQuery(); // ObservationQuery | query
+            var body = new FlowObservationQuery(); // FlowObservationQuery | query
 
             try
             { 
                 // Query for flow observations
-                QualifierMappingObservationQueryResponse result = apiInstance.PostAnalyticsFlowsObservationsQuery(body);
+                FlowObservationQueryResponse result = apiInstance.PostAnalyticsFlowsObservationsQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1428,16 +1428,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
+| **body** | [**FlowObservationQuery**](FlowObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
+[**FlowObservationQueryResponse**](FlowObservationQueryResponse.html)
 
 <a name="postanalyticsqueuesobservationsquery"></a>
 
-## [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) PostAnalyticsQueuesObservationsQuery (ObservationQuery body)
+## [**QueueObservationQueryResponse**](QueueObservationQueryResponse.html) PostAnalyticsQueuesObservationsQuery (QueueObservationQuery body)
 
 
 
@@ -1467,12 +1467,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AnalyticsApi();
-            var body = new ObservationQuery(); // ObservationQuery | query
+            var body = new QueueObservationQuery(); // QueueObservationQuery | query
 
             try
             { 
                 // Query for queue observations
-                QualifierMappingObservationQueryResponse result = apiInstance.PostAnalyticsQueuesObservationsQuery(body);
+                QueueObservationQueryResponse result = apiInstance.PostAnalyticsQueuesObservationsQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1489,12 +1489,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
+| **body** | [**QueueObservationQuery**](QueueObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
+[**QueueObservationQueryResponse**](QueueObservationQueryResponse.html)
 
 <a name="postanalyticsreportingexports"></a>
 
@@ -1679,7 +1679,7 @@ namespace Example
 
 <a name="postanalyticssurveysaggregatesquery"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostAnalyticsSurveysAggregatesQuery (AggregationQuery body)
+## [**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html) PostAnalyticsSurveysAggregatesQuery (SurveyAggregationQuery body)
 
 
 
@@ -1709,12 +1709,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AnalyticsApi();
-            var body = new AggregationQuery(); // AggregationQuery | query
+            var body = new SurveyAggregationQuery(); // SurveyAggregationQuery | query
 
             try
             { 
                 // Query for survey aggregates
-                AggregateQueryResponse result = apiInstance.PostAnalyticsSurveysAggregatesQuery(body);
+                SurveyAggregateQueryResponse result = apiInstance.PostAnalyticsSurveysAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1731,16 +1731,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+| **body** | [**SurveyAggregationQuery**](SurveyAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html)
 
 <a name="postanalyticsusersaggregatesquery"></a>
 
-## [**PresenceQueryResponse**](PresenceQueryResponse.html) PostAnalyticsUsersAggregatesQuery (AggregationQuery body)
+## [**UserAggregateQueryResponse**](UserAggregateQueryResponse.html) PostAnalyticsUsersAggregatesQuery (UserAggregationQuery body)
 
 
 
@@ -1770,12 +1770,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AnalyticsApi();
-            var body = new AggregationQuery(); // AggregationQuery | query
+            var body = new UserAggregationQuery(); // UserAggregationQuery | query
 
             try
             { 
                 // Query for user aggregates
-                PresenceQueryResponse result = apiInstance.PostAnalyticsUsersAggregatesQuery(body);
+                UserAggregateQueryResponse result = apiInstance.PostAnalyticsUsersAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1792,12 +1792,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+| **body** | [**UserAggregationQuery**](UserAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**PresenceQueryResponse**](PresenceQueryResponse.html)
+[**UserAggregateQueryResponse**](UserAggregateQueryResponse.html)
 
 <a name="postanalyticsusersdetailsquery"></a>
 
@@ -1862,7 +1862,7 @@ namespace Example
 
 <a name="postanalyticsusersobservationsquery"></a>
 
-## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostAnalyticsUsersObservationsQuery (ObservationQuery body)
+## [**UserObservationQueryResponse**](UserObservationQueryResponse.html) PostAnalyticsUsersObservationsQuery (UserObservationQuery body)
 
 
 
@@ -1892,12 +1892,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AnalyticsApi();
-            var body = new ObservationQuery(); // ObservationQuery | query
+            var body = new UserObservationQuery(); // UserObservationQuery | query
 
             try
             { 
                 // Query for user observations
-                ObservationQueryResponse result = apiInstance.PostAnalyticsUsersObservationsQuery(body);
+                UserObservationQueryResponse result = apiInstance.PostAnalyticsUsersObservationsQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1914,12 +1914,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
+| **body** | [**UserObservationQuery**](UserObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ObservationQueryResponse**](ObservationQueryResponse.html)
+[**UserObservationQueryResponse**](UserObservationQueryResponse.html)
 
 <a name="putanalyticsreportingschedule"></a>
 

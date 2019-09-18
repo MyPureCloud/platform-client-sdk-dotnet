@@ -51,7 +51,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Serviceproviderconfig for "ServiceProviderConfig"
             /// </summary>
             [EnumMember(Value = "ServiceProviderConfig")]
-            Serviceproviderconfig
+            Serviceproviderconfig,
+            
+            /// <summary>
+            /// Enum Resourcetype for "ResourceType"
+            /// </summary>
+            [EnumMember(Value = "ResourceType")]
+            Resourcetype
         }
         
         

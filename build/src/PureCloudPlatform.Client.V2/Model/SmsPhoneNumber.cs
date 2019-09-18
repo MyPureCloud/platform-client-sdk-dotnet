@@ -179,6 +179,37 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// BillingType of this phone number, if the phoneNumberType is shortcode.
+        /// </summary>
+        /// <value>BillingType of this phone number, if the phoneNumberType is shortcode.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ShortCodeBillingTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Basic for "Basic"
+            /// </summary>
+            [EnumMember(Value = "Basic")]
+            Basic,
+            
+            /// <summary>
+            /// Enum Vanity for "Vanity"
+            /// </summary>
+            [EnumMember(Value = "Vanity")]
+            Vanity
+        }
+        
+        
+        
+        
         
         
         
@@ -238,6 +269,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// BillingType of this phone number, if the phoneNumberType is shortcode.
+        /// </summary>
+        /// <value>BillingType of this phone number, if the phoneNumberType is shortcode.</value>
+        [DataMember(Name="shortCodeBillingType", EmitDefaultValue=false)]
+        public ShortCodeBillingTypeEnum? ShortCodeBillingType { get; set; }
+        
+        
+        
         
     
         /// <summary>
@@ -264,7 +304,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RenewalDate">Contract renewal date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="AutoRenewable">Renewal time period of this phone number, if the phoneNumberType is shortcode..</param>
         /// <param name="AddressId">The id of an address attached to this phone number..</param>
-        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null)
+        /// <param name="ShortCodeBillingType">BillingType of this phone number, if the phoneNumberType is shortcode..</param>
+        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null)
         {
             this.Name = Name;
             this.PhoneNumber = PhoneNumber;
@@ -281,6 +322,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RenewalDate = RenewalDate;
             this.AutoRenewable = AutoRenewable;
             this.AddressId = AddressId;
+            this.ShortCodeBillingType = ShortCodeBillingType;
             
         }
         
@@ -417,6 +459,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -451,6 +495,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RenewalDate: ").Append(RenewalDate).Append("\n");
             sb.Append("  AutoRenewable: ").Append(AutoRenewable).Append("\n");
             sb.Append("  AddressId: ").Append(AddressId).Append("\n");
+            sb.Append("  ShortCodeBillingType: ").Append(ShortCodeBillingType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -574,6 +619,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AddressId.Equals(other.AddressId)
                 ) &&
                 (
+                    this.ShortCodeBillingType == other.ShortCodeBillingType ||
+                    this.ShortCodeBillingType != null &&
+                    this.ShortCodeBillingType.Equals(other.ShortCodeBillingType)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -642,6 +692,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AddressId != null)
                     hash = hash * 59 + this.AddressId.GetHashCode();
+                
+                if (this.ShortCodeBillingType != null)
+                    hash = hash * 59 + this.ShortCodeBillingType.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

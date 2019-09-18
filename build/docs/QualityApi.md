@@ -2521,7 +2521,7 @@ namespace Example
 
 <a name="postanalyticsevaluationsaggregatesquery"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostAnalyticsEvaluationsAggregatesQuery (AggregationQuery body)
+## [**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html) PostAnalyticsEvaluationsAggregatesQuery (EvaluationAggregationQuery body)
 
 
 
@@ -2551,12 +2551,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            var body = new AggregationQuery(); // AggregationQuery | query
+            var body = new EvaluationAggregationQuery(); // EvaluationAggregationQuery | query
 
             try
             { 
                 // Query for evaluation aggregates
-                AggregateQueryResponse result = apiInstance.PostAnalyticsEvaluationsAggregatesQuery(body);
+                EvaluationAggregateQueryResponse result = apiInstance.PostAnalyticsEvaluationsAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2573,16 +2573,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+| **body** | [**EvaluationAggregationQuery**](EvaluationAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html)
 
 <a name="postanalyticssurveysaggregatesquery"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostAnalyticsSurveysAggregatesQuery (AggregationQuery body)
+## [**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html) PostAnalyticsSurveysAggregatesQuery (SurveyAggregationQuery body)
 
 
 
@@ -2612,12 +2612,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new QualityApi();
-            var body = new AggregationQuery(); // AggregationQuery | query
+            var body = new SurveyAggregationQuery(); // SurveyAggregationQuery | query
 
             try
             { 
                 // Query for survey aggregates
-                AggregateQueryResponse result = apiInstance.PostAnalyticsSurveysAggregatesQuery(body);
+                SurveyAggregateQueryResponse result = apiInstance.PostAnalyticsSurveysAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2634,12 +2634,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+| **body** | [**SurveyAggregationQuery**](SurveyAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html)
 
 <a name="postqualitycalibrations"></a>
 

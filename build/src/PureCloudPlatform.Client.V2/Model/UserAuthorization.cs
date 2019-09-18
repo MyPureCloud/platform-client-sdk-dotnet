@@ -45,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="UserAuthorization" /> class.
         /// </summary>
         /// <param name="Roles">Roles.</param>
-        /// <param name="UnusedRoles">UnusedRoles.</param>
+        /// <param name="UnusedRoles">A collection of the roles the user is not using.</param>
         /// <param name="Permissions">A collection of the permissions granted by all assigned roles.</param>
         /// <param name="PermissionPolicies">The policies configured for assigned permissions..</param>
         public UserAuthorization(List<DomainRole> Roles = null, List<DomainRole> UnusedRoles = null, List<string> Permissions = null, List<ResourcePermissionPolicy> PermissionPolicies = null)
@@ -68,8 +68,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets UnusedRoles
+        /// A collection of the roles the user is not using
         /// </summary>
+        /// <value>A collection of the roles the user is not using</value>
         [DataMember(Name="unusedRoles", EmitDefaultValue=false)]
         public List<DomainRole> UnusedRoles { get; set; }
         

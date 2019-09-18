@@ -691,6 +691,60 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ChatConversation> GetConversationsChatWithHttpInfo (string conversationId);
         
         /// <summary>
+        /// Get a web chat conversation message
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="messageId">messageId</param>
+        /// <returns>WebChatMessage</returns>
+        WebChatMessage GetConversationsChatMessage (string conversationId, string messageId);
+
+        /// <summary>
+        /// Get a web chat conversation message
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="messageId">messageId</param>
+        /// <returns>ApiResponse of WebChatMessage</returns>
+        ApiResponse<WebChatMessage> GetConversationsChatMessageWithHttpInfo (string conversationId, string messageId);
+        
+        /// <summary>
+        /// Get the messages of a chat conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="after">If specified, get the messages chronologically after the id of this message (optional)</param>
+        /// <param name="before">If specified, get the messages chronologically before the id of this message (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
+        /// <returns>WebChatMessageEntityList</returns>
+        WebChatMessageEntityList GetConversationsChatMessages (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null);
+
+        /// <summary>
+        /// Get the messages of a chat conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="after">If specified, get the messages chronologically after the id of this message (optional)</param>
+        /// <param name="before">If specified, get the messages chronologically before the id of this message (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
+        /// <returns>ApiResponse of WebChatMessageEntityList</returns>
+        ApiResponse<WebChatMessageEntityList> GetConversationsChatMessagesWithHttpInfo (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null);
+        
+        /// <summary>
         /// Get the wrap-up for this conversation participant. 
         /// </summary>
         /// <remarks>
@@ -2146,8 +2200,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>AggregateQueryResponse</returns>
-        AggregateQueryResponse PostAnalyticsConversationsAggregatesQuery (AggregationQuery body);
+        /// <returns>ConversationAggregateQueryResponse</returns>
+        ConversationAggregateQueryResponse PostAnalyticsConversationsAggregatesQuery (ConversationAggregationQuery body);
 
         /// <summary>
         /// Query for conversation aggregates
@@ -2157,8 +2211,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        ApiResponse<AggregateQueryResponse> PostAnalyticsConversationsAggregatesQueryWithHttpInfo (AggregationQuery body);
+        /// <returns>ApiResponse of ConversationAggregateQueryResponse</returns>
+        ApiResponse<ConversationAggregateQueryResponse> PostAnalyticsConversationsAggregatesQueryWithHttpInfo (ConversationAggregationQuery body);
         
         /// <summary>
         /// Query for conversation details asynchronously
@@ -2523,6 +2577,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Call request</param>
         /// <returns>ApiResponse of CreateCallResponse</returns>
         ApiResponse<CreateCallResponse> PostConversationsCallsWithHttpInfo (CreateCallRequest body);
+        
+        /// <summary>
+        /// Send a message on behalf of a communication in a chat conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Message</param>
+        /// <returns>WebChatMessage</returns>
+        WebChatMessage PostConversationsChatCommunicationMessages (string conversationId, string communicationId, CreateWebChatMessageRequest body);
+
+        /// <summary>
+        /// Send a message on behalf of a communication in a chat conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Message</param>
+        /// <returns>ApiResponse of WebChatMessage</returns>
+        ApiResponse<WebChatMessage> PostConversationsChatCommunicationMessagesWithHttpInfo (string conversationId, string communicationId, CreateWebChatMessageRequest body);
+        
+        /// <summary>
+        /// Send a typing-indicator on behalf of a communication in a chat conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <returns>WebChatTyping</returns>
+        WebChatTyping PostConversationsChatCommunicationTyping (string conversationId, string communicationId);
+
+        /// <summary>
+        /// Send a typing-indicator on behalf of a communication in a chat conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <returns>ApiResponse of WebChatTyping</returns>
+        ApiResponse<WebChatTyping> PostConversationsChatCommunicationTypingWithHttpInfo (string conversationId, string communicationId);
         
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -3681,6 +3785,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of ApiResponse (ChatConversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<ChatConversation>> GetConversationsChatAsyncWithHttpInfo (string conversationId);
+        
+        /// <summary>
+        /// Get a web chat conversation message
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="messageId">messageId</param>
+        /// <returns>Task of WebChatMessage</returns>
+        System.Threading.Tasks.Task<WebChatMessage> GetConversationsChatMessageAsync (string conversationId, string messageId);
+
+        /// <summary>
+        /// Get a web chat conversation message
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="messageId">messageId</param>
+        /// <returns>Task of ApiResponse (WebChatMessage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WebChatMessage>> GetConversationsChatMessageAsyncWithHttpInfo (string conversationId, string messageId);
+        
+        /// <summary>
+        /// Get the messages of a chat conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="after">If specified, get the messages chronologically after the id of this message (optional)</param>
+        /// <param name="before">If specified, get the messages chronologically before the id of this message (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
+        /// <returns>Task of WebChatMessageEntityList</returns>
+        System.Threading.Tasks.Task<WebChatMessageEntityList> GetConversationsChatMessagesAsync (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null);
+
+        /// <summary>
+        /// Get the messages of a chat conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="after">If specified, get the messages chronologically after the id of this message (optional)</param>
+        /// <param name="before">If specified, get the messages chronologically before the id of this message (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (WebChatMessageEntityList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WebChatMessageEntityList>> GetConversationsChatMessagesAsyncWithHttpInfo (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null);
         
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -5138,8 +5296,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of AggregateQueryResponse</returns>
-        System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsConversationsAggregatesQueryAsync (AggregationQuery body);
+        /// <returns>Task of ConversationAggregateQueryResponse</returns>
+        System.Threading.Tasks.Task<ConversationAggregateQueryResponse> PostAnalyticsConversationsAggregatesQueryAsync (ConversationAggregationQuery body);
 
         /// <summary>
         /// Query for conversation aggregates
@@ -5149,8 +5307,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsConversationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
+        /// <returns>Task of ApiResponse (ConversationAggregateQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationAggregateQueryResponse>> PostAnalyticsConversationsAggregatesQueryAsyncWithHttpInfo (ConversationAggregationQuery body);
         
         /// <summary>
         /// Query for conversation details asynchronously
@@ -5515,6 +5673,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Call request</param>
         /// <returns>Task of ApiResponse (CreateCallResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CreateCallResponse>> PostConversationsCallsAsyncWithHttpInfo (CreateCallRequest body);
+        
+        /// <summary>
+        /// Send a message on behalf of a communication in a chat conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Message</param>
+        /// <returns>Task of WebChatMessage</returns>
+        System.Threading.Tasks.Task<WebChatMessage> PostConversationsChatCommunicationMessagesAsync (string conversationId, string communicationId, CreateWebChatMessageRequest body);
+
+        /// <summary>
+        /// Send a message on behalf of a communication in a chat conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Message</param>
+        /// <returns>Task of ApiResponse (WebChatMessage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WebChatMessage>> PostConversationsChatCommunicationMessagesAsyncWithHttpInfo (string conversationId, string communicationId, CreateWebChatMessageRequest body);
+        
+        /// <summary>
+        /// Send a typing-indicator on behalf of a communication in a chat conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <returns>Task of WebChatTyping</returns>
+        System.Threading.Tasks.Task<WebChatTyping> PostConversationsChatCommunicationTypingAsync (string conversationId, string communicationId);
+
+        /// <summary>
+        /// Send a typing-indicator on behalf of a communication in a chat conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <returns>Task of ApiResponse (WebChatTyping)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WebChatTyping>> PostConversationsChatCommunicationTypingAsyncWithHttpInfo (string conversationId, string communicationId);
         
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -11827,6 +12035,429 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ChatConversation>(localVarStatusCode,
                 localVarHeaders,
                 (ChatConversation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatConversation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a web chat conversation message 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="messageId">messageId</param>
+        /// <returns>WebChatMessage</returns>
+        public WebChatMessage GetConversationsChatMessage (string conversationId, string messageId)
+        {
+             ApiResponse<WebChatMessage> localVarResponse = GetConversationsChatMessageWithHttpInfo(conversationId, messageId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a web chat conversation message 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="messageId">messageId</param>
+        /// <returns>ApiResponse of WebChatMessage</returns>
+        public ApiResponse< WebChatMessage > GetConversationsChatMessageWithHttpInfo (string conversationId, string messageId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsChatMessage");
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetConversationsChatMessage");
+
+            var localVarPath = "/api/v2/conversations/chats/{conversationId}/messages/{messageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (messageId != null) localVarPathParams.Add("messageId", this.Configuration.ApiClient.ParameterToString(messageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatMessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WebChatMessage>(localVarStatusCode,
+                localVarHeaders,
+                (WebChatMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a web chat conversation message 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="messageId">messageId</param>
+        /// <returns>Task of WebChatMessage</returns>
+        public async System.Threading.Tasks.Task<WebChatMessage> GetConversationsChatMessageAsync (string conversationId, string messageId)
+        {
+             ApiResponse<WebChatMessage> localVarResponse = await GetConversationsChatMessageAsyncWithHttpInfo(conversationId, messageId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a web chat conversation message 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="messageId">messageId</param>
+        /// <returns>Task of ApiResponse (WebChatMessage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WebChatMessage>> GetConversationsChatMessageAsyncWithHttpInfo (string conversationId, string messageId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsChatMessage");
+            
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetConversationsChatMessage");
+            
+
+            var localVarPath = "/api/v2/conversations/chats/{conversationId}/messages/{messageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (messageId != null) localVarPathParams.Add("messageId", this.Configuration.ApiClient.ParameterToString(messageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatMessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WebChatMessage>(localVarStatusCode,
+                localVarHeaders,
+                (WebChatMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the messages of a chat conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="after">If specified, get the messages chronologically after the id of this message (optional)</param>
+        /// <param name="before">If specified, get the messages chronologically before the id of this message (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
+        /// <returns>WebChatMessageEntityList</returns>
+        public WebChatMessageEntityList GetConversationsChatMessages (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
+        {
+             ApiResponse<WebChatMessageEntityList> localVarResponse = GetConversationsChatMessagesWithHttpInfo(conversationId, after, before, sortOrder, maxResults);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the messages of a chat conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="after">If specified, get the messages chronologically after the id of this message (optional)</param>
+        /// <param name="before">If specified, get the messages chronologically before the id of this message (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
+        /// <returns>ApiResponse of WebChatMessageEntityList</returns>
+        public ApiResponse< WebChatMessageEntityList > GetConversationsChatMessagesWithHttpInfo (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsChatMessages");
+
+            var localVarPath = "/api/v2/conversations/chats/{conversationId}/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (maxResults != null) localVarQueryParams.Add(new Tuple<string, string>("maxResults", this.Configuration.ApiClient.ParameterToString(maxResults)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WebChatMessageEntityList>(localVarStatusCode,
+                localVarHeaders,
+                (WebChatMessageEntityList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatMessageEntityList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the messages of a chat conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="after">If specified, get the messages chronologically after the id of this message (optional)</param>
+        /// <param name="before">If specified, get the messages chronologically before the id of this message (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
+        /// <returns>Task of WebChatMessageEntityList</returns>
+        public async System.Threading.Tasks.Task<WebChatMessageEntityList> GetConversationsChatMessagesAsync (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
+        {
+             ApiResponse<WebChatMessageEntityList> localVarResponse = await GetConversationsChatMessagesAsyncWithHttpInfo(conversationId, after, before, sortOrder, maxResults);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the messages of a chat conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="after">If specified, get the messages chronologically after the id of this message (optional)</param>
+        /// <param name="before">If specified, get the messages chronologically before the id of this message (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
+        /// <returns>Task of ApiResponse (WebChatMessageEntityList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WebChatMessageEntityList>> GetConversationsChatMessagesAsyncWithHttpInfo (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsChatMessages");
+            
+
+            var localVarPath = "/api/v2/conversations/chats/{conversationId}/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (maxResults != null) localVarQueryParams.Add(new Tuple<string, string>("maxResults", this.Configuration.ApiClient.ParameterToString(maxResults)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WebChatMessageEntityList>(localVarStatusCode,
+                localVarHeaders,
+                (WebChatMessageEntityList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatMessageEntityList)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -24264,10 +24895,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>AggregateQueryResponse</returns>
-        public AggregateQueryResponse PostAnalyticsConversationsAggregatesQuery (AggregationQuery body)
+        /// <returns>ConversationAggregateQueryResponse</returns>
+        public ConversationAggregateQueryResponse PostAnalyticsConversationsAggregatesQuery (ConversationAggregationQuery body)
         {
-             ApiResponse<AggregateQueryResponse> localVarResponse = PostAnalyticsConversationsAggregatesQueryWithHttpInfo(body);
+             ApiResponse<ConversationAggregateQueryResponse> localVarResponse = PostAnalyticsConversationsAggregatesQueryWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -24276,8 +24907,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        public ApiResponse< AggregateQueryResponse > PostAnalyticsConversationsAggregatesQueryWithHttpInfo (AggregationQuery body)
+        /// <returns>ApiResponse of ConversationAggregateQueryResponse</returns>
+        public ApiResponse< ConversationAggregateQueryResponse > PostAnalyticsConversationsAggregatesQueryWithHttpInfo (ConversationAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -24350,9 +24981,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+            return new ApiResponse<ConversationAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                (ConversationAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -24363,10 +24994,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of AggregateQueryResponse</returns>
-        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsConversationsAggregatesQueryAsync (AggregationQuery body)
+        /// <returns>Task of ConversationAggregateQueryResponse</returns>
+        public async System.Threading.Tasks.Task<ConversationAggregateQueryResponse> PostAnalyticsConversationsAggregatesQueryAsync (ConversationAggregationQuery body)
         {
-             ApiResponse<AggregateQueryResponse> localVarResponse = await PostAnalyticsConversationsAggregatesQueryAsyncWithHttpInfo(body);
+             ApiResponse<ConversationAggregateQueryResponse> localVarResponse = await PostAnalyticsConversationsAggregatesQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -24376,8 +25007,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsConversationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body)
+        /// <returns>Task of ApiResponse (ConversationAggregateQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationAggregateQueryResponse>> PostAnalyticsConversationsAggregatesQueryAsyncWithHttpInfo (ConversationAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -24451,9 +25082,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+            return new ApiResponse<ConversationAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                (ConversationAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -27641,6 +28272,439 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CreateCallResponse>(localVarStatusCode,
                 localVarHeaders,
                 (CreateCallResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateCallResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Send a message on behalf of a communication in a chat conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Message</param>
+        /// <returns>WebChatMessage</returns>
+        public WebChatMessage PostConversationsChatCommunicationMessages (string conversationId, string communicationId, CreateWebChatMessageRequest body)
+        {
+             ApiResponse<WebChatMessage> localVarResponse = PostConversationsChatCommunicationMessagesWithHttpInfo(conversationId, communicationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Send a message on behalf of a communication in a chat conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Message</param>
+        /// <returns>ApiResponse of WebChatMessage</returns>
+        public ApiResponse< WebChatMessage > PostConversationsChatCommunicationMessagesWithHttpInfo (string conversationId, string communicationId, CreateWebChatMessageRequest body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsChatCommunicationMessages");
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsChatCommunicationMessages");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsChatCommunicationMessages");
+
+            var localVarPath = "/api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatCommunicationMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatCommunicationMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WebChatMessage>(localVarStatusCode,
+                localVarHeaders,
+                (WebChatMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Send a message on behalf of a communication in a chat conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Message</param>
+        /// <returns>Task of WebChatMessage</returns>
+        public async System.Threading.Tasks.Task<WebChatMessage> PostConversationsChatCommunicationMessagesAsync (string conversationId, string communicationId, CreateWebChatMessageRequest body)
+        {
+             ApiResponse<WebChatMessage> localVarResponse = await PostConversationsChatCommunicationMessagesAsyncWithHttpInfo(conversationId, communicationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Send a message on behalf of a communication in a chat conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Message</param>
+        /// <returns>Task of ApiResponse (WebChatMessage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WebChatMessage>> PostConversationsChatCommunicationMessagesAsyncWithHttpInfo (string conversationId, string communicationId, CreateWebChatMessageRequest body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsChatCommunicationMessages");
+            
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsChatCommunicationMessages");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsChatCommunicationMessages");
+            
+
+            var localVarPath = "/api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatCommunicationMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatCommunicationMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WebChatMessage>(localVarStatusCode,
+                localVarHeaders,
+                (WebChatMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Send a typing-indicator on behalf of a communication in a chat conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <returns>WebChatTyping</returns>
+        public WebChatTyping PostConversationsChatCommunicationTyping (string conversationId, string communicationId)
+        {
+             ApiResponse<WebChatTyping> localVarResponse = PostConversationsChatCommunicationTypingWithHttpInfo(conversationId, communicationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Send a typing-indicator on behalf of a communication in a chat conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <returns>ApiResponse of WebChatTyping</returns>
+        public ApiResponse< WebChatTyping > PostConversationsChatCommunicationTypingWithHttpInfo (string conversationId, string communicationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsChatCommunicationTyping");
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsChatCommunicationTyping");
+
+            var localVarPath = "/api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatCommunicationTyping: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatCommunicationTyping: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WebChatTyping>(localVarStatusCode,
+                localVarHeaders,
+                (WebChatTyping) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatTyping)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Send a typing-indicator on behalf of a communication in a chat conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <returns>Task of WebChatTyping</returns>
+        public async System.Threading.Tasks.Task<WebChatTyping> PostConversationsChatCommunicationTypingAsync (string conversationId, string communicationId)
+        {
+             ApiResponse<WebChatTyping> localVarResponse = await PostConversationsChatCommunicationTypingAsyncWithHttpInfo(conversationId, communicationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Send a typing-indicator on behalf of a communication in a chat conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <returns>Task of ApiResponse (WebChatTyping)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WebChatTyping>> PostConversationsChatCommunicationTypingAsyncWithHttpInfo (string conversationId, string communicationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsChatCommunicationTyping");
+            
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsChatCommunicationTyping");
+            
+
+            var localVarPath = "/api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatCommunicationTyping: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatCommunicationTyping: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WebChatTyping>(localVarStatusCode,
+                localVarHeaders,
+                (WebChatTyping) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebChatTyping)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -812,7 +812,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var roleId = roleId_example;  // string | Role ID
-            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. \"unusedPermissions\" returns the permissions not used for the role (optional) 
 
             try
             { 
@@ -835,7 +835,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: unusedPermissions |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role | [optional] <br />**Values**: unusedPermissions |
 {: class="table table-striped"}
 
 ### Return type
@@ -1479,7 +1479,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
-| **objectType** | **string**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, USER |
+| **objectType** | **string**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MESSAGINGCAMPAIGN, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, USER |
 | **body** | **List<string>**| Object Id List |  |
 {: class="table table-striped"}
 
@@ -1583,7 +1583,7 @@ namespace Example
             var apiInstance = new AuthorizationApi();
             var roleId = roleId_example;  // string | Role ID
             var body = new SubjectDivisions(); // SubjectDivisions | Subjects and Divisions
-            var subjectType = subjectType_example;  // string | what the type of the subject is, PC_GROUP or PC_USER (optional)  (default to PC_USER)
+            var subjectType = subjectType_example;  // string | what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional)  (default to PC_USER)
 
             try
             { 
@@ -1606,7 +1606,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
 | **body** | [**SubjectDivisions**](SubjectDivisions.html)| Subjects and Divisions |  |
-| **subjectType** | **string**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
+| **subjectType** | **string**| what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
 {: class="table table-striped"}
 
 ### Return type
@@ -1835,7 +1835,7 @@ namespace Example
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
             var divisionId = divisionId_example;  // string | the id of the division to which to make the grant
             var roleId = roleId_example;  // string | the id of the role to grant
-            var subjectType = subjectType_example;  // string | what the type of the subject is, PC_GROUP or PC_USER (optional)  (default to PC_USER)
+            var subjectType = subjectType_example;  // string | what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional)  (default to PC_USER)
 
             try
             { 
@@ -1859,7 +1859,7 @@ namespace Example
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **divisionId** | **string**| the id of the division to which to make the grant |  |
 | **roleId** | **string**| the id of the role to grant |  |
-| **subjectType** | **string**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
+| **subjectType** | **string**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to PC_USER] |
 {: class="table table-striped"}
 
 ### Return type

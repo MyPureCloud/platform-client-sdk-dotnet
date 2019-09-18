@@ -297,7 +297,7 @@ namespace Example
 
             var apiInstance = new LocationsApi();
             var q64 = q64_example;  // string | q64
-            var expand = new List<string>(); // List<string> | expand (optional) 
+            var expand = new List<string>(); // List<string> | Provides more details about a specified resource (optional) 
 
             try
             { 
@@ -320,7 +320,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-| **expand** | [**List<string>**](string.html)| expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Provides more details about a specified resource | [optional] <br />**Values**: images |
 {: class="table table-striped"}
 
 ### Return type

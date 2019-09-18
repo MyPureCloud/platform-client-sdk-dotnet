@@ -410,8 +410,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>AggregateQueryResponse</returns>
-        AggregateQueryResponse PostAnalyticsConversationsAggregatesQuery (AggregationQuery body);
+        /// <returns>ConversationAggregateQueryResponse</returns>
+        ConversationAggregateQueryResponse PostAnalyticsConversationsAggregatesQuery (ConversationAggregationQuery body);
 
         /// <summary>
         /// Query for conversation aggregates
@@ -421,8 +421,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        ApiResponse<AggregateQueryResponse> PostAnalyticsConversationsAggregatesQueryWithHttpInfo (AggregationQuery body);
+        /// <returns>ApiResponse of ConversationAggregateQueryResponse</returns>
+        ApiResponse<ConversationAggregateQueryResponse> PostAnalyticsConversationsAggregatesQueryWithHttpInfo (ConversationAggregationQuery body);
         
         /// <summary>
         /// Query for conversation details asynchronously
@@ -476,8 +476,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>AggregateQueryResponse</returns>
-        AggregateQueryResponse PostAnalyticsEvaluationsAggregatesQuery (AggregationQuery body);
+        /// <returns>EvaluationAggregateQueryResponse</returns>
+        EvaluationAggregateQueryResponse PostAnalyticsEvaluationsAggregatesQuery (EvaluationAggregationQuery body);
 
         /// <summary>
         /// Query for evaluation aggregates
@@ -487,8 +487,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        ApiResponse<AggregateQueryResponse> PostAnalyticsEvaluationsAggregatesQueryWithHttpInfo (AggregationQuery body);
+        /// <returns>ApiResponse of EvaluationAggregateQueryResponse</returns>
+        ApiResponse<EvaluationAggregateQueryResponse> PostAnalyticsEvaluationsAggregatesQueryWithHttpInfo (EvaluationAggregationQuery body);
         
         /// <summary>
         /// Query for flow aggregates
@@ -498,8 +498,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>AggregateQueryResponse</returns>
-        AggregateQueryResponse PostAnalyticsFlowsAggregatesQuery (AggregationQuery body);
+        /// <returns>FlowAggregateQueryResponse</returns>
+        FlowAggregateQueryResponse PostAnalyticsFlowsAggregatesQuery (FlowAggregationQuery body);
 
         /// <summary>
         /// Query for flow aggregates
@@ -509,8 +509,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        ApiResponse<AggregateQueryResponse> PostAnalyticsFlowsAggregatesQueryWithHttpInfo (AggregationQuery body);
+        /// <returns>ApiResponse of FlowAggregateQueryResponse</returns>
+        ApiResponse<FlowAggregateQueryResponse> PostAnalyticsFlowsAggregatesQueryWithHttpInfo (FlowAggregationQuery body);
         
         /// <summary>
         /// Query for flow observations
@@ -520,8 +520,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>QualifierMappingObservationQueryResponse</returns>
-        QualifierMappingObservationQueryResponse PostAnalyticsFlowsObservationsQuery (ObservationQuery body);
+        /// <returns>FlowObservationQueryResponse</returns>
+        FlowObservationQueryResponse PostAnalyticsFlowsObservationsQuery (FlowObservationQuery body);
 
         /// <summary>
         /// Query for flow observations
@@ -531,8 +531,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of QualifierMappingObservationQueryResponse</returns>
-        ApiResponse<QualifierMappingObservationQueryResponse> PostAnalyticsFlowsObservationsQueryWithHttpInfo (ObservationQuery body);
+        /// <returns>ApiResponse of FlowObservationQueryResponse</returns>
+        ApiResponse<FlowObservationQueryResponse> PostAnalyticsFlowsObservationsQueryWithHttpInfo (FlowObservationQuery body);
         
         /// <summary>
         /// Query for queue observations
@@ -542,8 +542,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>QualifierMappingObservationQueryResponse</returns>
-        QualifierMappingObservationQueryResponse PostAnalyticsQueuesObservationsQuery (ObservationQuery body);
+        /// <returns>QueueObservationQueryResponse</returns>
+        QueueObservationQueryResponse PostAnalyticsQueuesObservationsQuery (QueueObservationQuery body);
 
         /// <summary>
         /// Query for queue observations
@@ -553,8 +553,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of QualifierMappingObservationQueryResponse</returns>
-        ApiResponse<QualifierMappingObservationQueryResponse> PostAnalyticsQueuesObservationsQueryWithHttpInfo (ObservationQuery body);
+        /// <returns>ApiResponse of QueueObservationQueryResponse</returns>
+        ApiResponse<QueueObservationQueryResponse> PostAnalyticsQueuesObservationsQueryWithHttpInfo (QueueObservationQuery body);
         
         /// <summary>
         /// Generate a view export request
@@ -630,8 +630,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>AggregateQueryResponse</returns>
-        AggregateQueryResponse PostAnalyticsSurveysAggregatesQuery (AggregationQuery body);
+        /// <returns>SurveyAggregateQueryResponse</returns>
+        SurveyAggregateQueryResponse PostAnalyticsSurveysAggregatesQuery (SurveyAggregationQuery body);
 
         /// <summary>
         /// Query for survey aggregates
@@ -641,8 +641,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        ApiResponse<AggregateQueryResponse> PostAnalyticsSurveysAggregatesQueryWithHttpInfo (AggregationQuery body);
+        /// <returns>ApiResponse of SurveyAggregateQueryResponse</returns>
+        ApiResponse<SurveyAggregateQueryResponse> PostAnalyticsSurveysAggregatesQueryWithHttpInfo (SurveyAggregationQuery body);
         
         /// <summary>
         /// Query for user aggregates
@@ -652,8 +652,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>PresenceQueryResponse</returns>
-        PresenceQueryResponse PostAnalyticsUsersAggregatesQuery (AggregationQuery body);
+        /// <returns>UserAggregateQueryResponse</returns>
+        UserAggregateQueryResponse PostAnalyticsUsersAggregatesQuery (UserAggregationQuery body);
 
         /// <summary>
         /// Query for user aggregates
@@ -663,8 +663,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of PresenceQueryResponse</returns>
-        ApiResponse<PresenceQueryResponse> PostAnalyticsUsersAggregatesQueryWithHttpInfo (AggregationQuery body);
+        /// <returns>ApiResponse of UserAggregateQueryResponse</returns>
+        ApiResponse<UserAggregateQueryResponse> PostAnalyticsUsersAggregatesQueryWithHttpInfo (UserAggregationQuery body);
         
         /// <summary>
         /// Query for user details
@@ -696,8 +696,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ObservationQueryResponse</returns>
-        ObservationQueryResponse PostAnalyticsUsersObservationsQuery (ObservationQuery body);
+        /// <returns>UserObservationQueryResponse</returns>
+        UserObservationQueryResponse PostAnalyticsUsersObservationsQuery (UserObservationQuery body);
 
         /// <summary>
         /// Query for user observations
@@ -707,8 +707,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of ObservationQueryResponse</returns>
-        ApiResponse<ObservationQueryResponse> PostAnalyticsUsersObservationsQueryWithHttpInfo (ObservationQuery body);
+        /// <returns>ApiResponse of UserObservationQueryResponse</returns>
+        ApiResponse<UserObservationQueryResponse> PostAnalyticsUsersObservationsQueryWithHttpInfo (UserObservationQuery body);
         
         /// <summary>
         /// Update a scheduled report job.
@@ -1132,8 +1132,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of AggregateQueryResponse</returns>
-        System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsConversationsAggregatesQueryAsync (AggregationQuery body);
+        /// <returns>Task of ConversationAggregateQueryResponse</returns>
+        System.Threading.Tasks.Task<ConversationAggregateQueryResponse> PostAnalyticsConversationsAggregatesQueryAsync (ConversationAggregationQuery body);
 
         /// <summary>
         /// Query for conversation aggregates
@@ -1143,8 +1143,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsConversationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
+        /// <returns>Task of ApiResponse (ConversationAggregateQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationAggregateQueryResponse>> PostAnalyticsConversationsAggregatesQueryAsyncWithHttpInfo (ConversationAggregationQuery body);
         
         /// <summary>
         /// Query for conversation details asynchronously
@@ -1198,8 +1198,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of AggregateQueryResponse</returns>
-        System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsEvaluationsAggregatesQueryAsync (AggregationQuery body);
+        /// <returns>Task of EvaluationAggregateQueryResponse</returns>
+        System.Threading.Tasks.Task<EvaluationAggregateQueryResponse> PostAnalyticsEvaluationsAggregatesQueryAsync (EvaluationAggregationQuery body);
 
         /// <summary>
         /// Query for evaluation aggregates
@@ -1209,8 +1209,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsEvaluationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
+        /// <returns>Task of ApiResponse (EvaluationAggregateQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EvaluationAggregateQueryResponse>> PostAnalyticsEvaluationsAggregatesQueryAsyncWithHttpInfo (EvaluationAggregationQuery body);
         
         /// <summary>
         /// Query for flow aggregates
@@ -1220,8 +1220,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of AggregateQueryResponse</returns>
-        System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsFlowsAggregatesQueryAsync (AggregationQuery body);
+        /// <returns>Task of FlowAggregateQueryResponse</returns>
+        System.Threading.Tasks.Task<FlowAggregateQueryResponse> PostAnalyticsFlowsAggregatesQueryAsync (FlowAggregationQuery body);
 
         /// <summary>
         /// Query for flow aggregates
@@ -1231,8 +1231,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsFlowsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
+        /// <returns>Task of ApiResponse (FlowAggregateQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlowAggregateQueryResponse>> PostAnalyticsFlowsAggregatesQueryAsyncWithHttpInfo (FlowAggregationQuery body);
         
         /// <summary>
         /// Query for flow observations
@@ -1242,8 +1242,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of QualifierMappingObservationQueryResponse</returns>
-        System.Threading.Tasks.Task<QualifierMappingObservationQueryResponse> PostAnalyticsFlowsObservationsQueryAsync (ObservationQuery body);
+        /// <returns>Task of FlowObservationQueryResponse</returns>
+        System.Threading.Tasks.Task<FlowObservationQueryResponse> PostAnalyticsFlowsObservationsQueryAsync (FlowObservationQuery body);
 
         /// <summary>
         /// Query for flow observations
@@ -1253,8 +1253,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (QualifierMappingObservationQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QualifierMappingObservationQueryResponse>> PostAnalyticsFlowsObservationsQueryAsyncWithHttpInfo (ObservationQuery body);
+        /// <returns>Task of ApiResponse (FlowObservationQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlowObservationQueryResponse>> PostAnalyticsFlowsObservationsQueryAsyncWithHttpInfo (FlowObservationQuery body);
         
         /// <summary>
         /// Query for queue observations
@@ -1264,8 +1264,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of QualifierMappingObservationQueryResponse</returns>
-        System.Threading.Tasks.Task<QualifierMappingObservationQueryResponse> PostAnalyticsQueuesObservationsQueryAsync (ObservationQuery body);
+        /// <returns>Task of QueueObservationQueryResponse</returns>
+        System.Threading.Tasks.Task<QueueObservationQueryResponse> PostAnalyticsQueuesObservationsQueryAsync (QueueObservationQuery body);
 
         /// <summary>
         /// Query for queue observations
@@ -1275,8 +1275,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (QualifierMappingObservationQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QualifierMappingObservationQueryResponse>> PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body);
+        /// <returns>Task of ApiResponse (QueueObservationQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueueObservationQueryResponse>> PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo (QueueObservationQuery body);
         
         /// <summary>
         /// Generate a view export request
@@ -1352,8 +1352,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of AggregateQueryResponse</returns>
-        System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsSurveysAggregatesQueryAsync (AggregationQuery body);
+        /// <returns>Task of SurveyAggregateQueryResponse</returns>
+        System.Threading.Tasks.Task<SurveyAggregateQueryResponse> PostAnalyticsSurveysAggregatesQueryAsync (SurveyAggregationQuery body);
 
         /// <summary>
         /// Query for survey aggregates
@@ -1363,8 +1363,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsSurveysAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
+        /// <returns>Task of ApiResponse (SurveyAggregateQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SurveyAggregateQueryResponse>> PostAnalyticsSurveysAggregatesQueryAsyncWithHttpInfo (SurveyAggregationQuery body);
         
         /// <summary>
         /// Query for user aggregates
@@ -1374,8 +1374,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of PresenceQueryResponse</returns>
-        System.Threading.Tasks.Task<PresenceQueryResponse> PostAnalyticsUsersAggregatesQueryAsync (AggregationQuery body);
+        /// <returns>Task of UserAggregateQueryResponse</returns>
+        System.Threading.Tasks.Task<UserAggregateQueryResponse> PostAnalyticsUsersAggregatesQueryAsync (UserAggregationQuery body);
 
         /// <summary>
         /// Query for user aggregates
@@ -1385,8 +1385,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (PresenceQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PresenceQueryResponse>> PostAnalyticsUsersAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
+        /// <returns>Task of ApiResponse (UserAggregateQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserAggregateQueryResponse>> PostAnalyticsUsersAggregatesQueryAsyncWithHttpInfo (UserAggregationQuery body);
         
         /// <summary>
         /// Query for user details
@@ -1418,8 +1418,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ObservationQueryResponse</returns>
-        System.Threading.Tasks.Task<ObservationQueryResponse> PostAnalyticsUsersObservationsQueryAsync (ObservationQuery body);
+        /// <returns>Task of UserObservationQueryResponse</returns>
+        System.Threading.Tasks.Task<UserObservationQueryResponse> PostAnalyticsUsersObservationsQueryAsync (UserObservationQuery body);
 
         /// <summary>
         /// Query for user observations
@@ -1429,8 +1429,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (ObservationQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostAnalyticsUsersObservationsQueryAsyncWithHttpInfo (ObservationQuery body);
+        /// <returns>Task of ApiResponse (UserObservationQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserObservationQueryResponse>> PostAnalyticsUsersObservationsQueryAsyncWithHttpInfo (UserObservationQuery body);
         
         /// <summary>
         /// Update a scheduled report job.
@@ -4846,10 +4846,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>AggregateQueryResponse</returns>
-        public AggregateQueryResponse PostAnalyticsConversationsAggregatesQuery (AggregationQuery body)
+        /// <returns>ConversationAggregateQueryResponse</returns>
+        public ConversationAggregateQueryResponse PostAnalyticsConversationsAggregatesQuery (ConversationAggregationQuery body)
         {
-             ApiResponse<AggregateQueryResponse> localVarResponse = PostAnalyticsConversationsAggregatesQueryWithHttpInfo(body);
+             ApiResponse<ConversationAggregateQueryResponse> localVarResponse = PostAnalyticsConversationsAggregatesQueryWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -4858,8 +4858,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        public ApiResponse< AggregateQueryResponse > PostAnalyticsConversationsAggregatesQueryWithHttpInfo (AggregationQuery body)
+        /// <returns>ApiResponse of ConversationAggregateQueryResponse</returns>
+        public ApiResponse< ConversationAggregateQueryResponse > PostAnalyticsConversationsAggregatesQueryWithHttpInfo (ConversationAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4932,9 +4932,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+            return new ApiResponse<ConversationAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                (ConversationAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -4945,10 +4945,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of AggregateQueryResponse</returns>
-        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsConversationsAggregatesQueryAsync (AggregationQuery body)
+        /// <returns>Task of ConversationAggregateQueryResponse</returns>
+        public async System.Threading.Tasks.Task<ConversationAggregateQueryResponse> PostAnalyticsConversationsAggregatesQueryAsync (ConversationAggregationQuery body)
         {
-             ApiResponse<AggregateQueryResponse> localVarResponse = await PostAnalyticsConversationsAggregatesQueryAsyncWithHttpInfo(body);
+             ApiResponse<ConversationAggregateQueryResponse> localVarResponse = await PostAnalyticsConversationsAggregatesQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -4958,8 +4958,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsConversationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body)
+        /// <returns>Task of ApiResponse (ConversationAggregateQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationAggregateQueryResponse>> PostAnalyticsConversationsAggregatesQueryAsyncWithHttpInfo (ConversationAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5033,9 +5033,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+            return new ApiResponse<ConversationAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                (ConversationAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5449,10 +5449,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>AggregateQueryResponse</returns>
-        public AggregateQueryResponse PostAnalyticsEvaluationsAggregatesQuery (AggregationQuery body)
+        /// <returns>EvaluationAggregateQueryResponse</returns>
+        public EvaluationAggregateQueryResponse PostAnalyticsEvaluationsAggregatesQuery (EvaluationAggregationQuery body)
         {
-             ApiResponse<AggregateQueryResponse> localVarResponse = PostAnalyticsEvaluationsAggregatesQueryWithHttpInfo(body);
+             ApiResponse<EvaluationAggregateQueryResponse> localVarResponse = PostAnalyticsEvaluationsAggregatesQueryWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -5461,8 +5461,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        public ApiResponse< AggregateQueryResponse > PostAnalyticsEvaluationsAggregatesQueryWithHttpInfo (AggregationQuery body)
+        /// <returns>ApiResponse of EvaluationAggregateQueryResponse</returns>
+        public ApiResponse< EvaluationAggregateQueryResponse > PostAnalyticsEvaluationsAggregatesQueryWithHttpInfo (EvaluationAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5535,9 +5535,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsEvaluationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+            return new ApiResponse<EvaluationAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                (EvaluationAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5548,10 +5548,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of AggregateQueryResponse</returns>
-        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsEvaluationsAggregatesQueryAsync (AggregationQuery body)
+        /// <returns>Task of EvaluationAggregateQueryResponse</returns>
+        public async System.Threading.Tasks.Task<EvaluationAggregateQueryResponse> PostAnalyticsEvaluationsAggregatesQueryAsync (EvaluationAggregationQuery body)
         {
-             ApiResponse<AggregateQueryResponse> localVarResponse = await PostAnalyticsEvaluationsAggregatesQueryAsyncWithHttpInfo(body);
+             ApiResponse<EvaluationAggregateQueryResponse> localVarResponse = await PostAnalyticsEvaluationsAggregatesQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -5561,8 +5561,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsEvaluationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body)
+        /// <returns>Task of ApiResponse (EvaluationAggregateQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationAggregateQueryResponse>> PostAnalyticsEvaluationsAggregatesQueryAsyncWithHttpInfo (EvaluationAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5636,9 +5636,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsEvaluationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+            return new ApiResponse<EvaluationAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                (EvaluationAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5650,10 +5650,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>AggregateQueryResponse</returns>
-        public AggregateQueryResponse PostAnalyticsFlowsAggregatesQuery (AggregationQuery body)
+        /// <returns>FlowAggregateQueryResponse</returns>
+        public FlowAggregateQueryResponse PostAnalyticsFlowsAggregatesQuery (FlowAggregationQuery body)
         {
-             ApiResponse<AggregateQueryResponse> localVarResponse = PostAnalyticsFlowsAggregatesQueryWithHttpInfo(body);
+             ApiResponse<FlowAggregateQueryResponse> localVarResponse = PostAnalyticsFlowsAggregatesQueryWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -5662,8 +5662,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        public ApiResponse< AggregateQueryResponse > PostAnalyticsFlowsAggregatesQueryWithHttpInfo (AggregationQuery body)
+        /// <returns>ApiResponse of FlowAggregateQueryResponse</returns>
+        public ApiResponse< FlowAggregateQueryResponse > PostAnalyticsFlowsAggregatesQueryWithHttpInfo (FlowAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5736,9 +5736,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsFlowsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+            return new ApiResponse<FlowAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                (FlowAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5749,10 +5749,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of AggregateQueryResponse</returns>
-        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsFlowsAggregatesQueryAsync (AggregationQuery body)
+        /// <returns>Task of FlowAggregateQueryResponse</returns>
+        public async System.Threading.Tasks.Task<FlowAggregateQueryResponse> PostAnalyticsFlowsAggregatesQueryAsync (FlowAggregationQuery body)
         {
-             ApiResponse<AggregateQueryResponse> localVarResponse = await PostAnalyticsFlowsAggregatesQueryAsyncWithHttpInfo(body);
+             ApiResponse<FlowAggregateQueryResponse> localVarResponse = await PostAnalyticsFlowsAggregatesQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -5762,8 +5762,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsFlowsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body)
+        /// <returns>Task of ApiResponse (FlowAggregateQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlowAggregateQueryResponse>> PostAnalyticsFlowsAggregatesQueryAsyncWithHttpInfo (FlowAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5837,9 +5837,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsFlowsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+            return new ApiResponse<FlowAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                (FlowAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5851,10 +5851,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>QualifierMappingObservationQueryResponse</returns>
-        public QualifierMappingObservationQueryResponse PostAnalyticsFlowsObservationsQuery (ObservationQuery body)
+        /// <returns>FlowObservationQueryResponse</returns>
+        public FlowObservationQueryResponse PostAnalyticsFlowsObservationsQuery (FlowObservationQuery body)
         {
-             ApiResponse<QualifierMappingObservationQueryResponse> localVarResponse = PostAnalyticsFlowsObservationsQueryWithHttpInfo(body);
+             ApiResponse<FlowObservationQueryResponse> localVarResponse = PostAnalyticsFlowsObservationsQueryWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -5863,8 +5863,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of QualifierMappingObservationQueryResponse</returns>
-        public ApiResponse< QualifierMappingObservationQueryResponse > PostAnalyticsFlowsObservationsQueryWithHttpInfo (ObservationQuery body)
+        /// <returns>ApiResponse of FlowObservationQueryResponse</returns>
+        public ApiResponse< FlowObservationQueryResponse > PostAnalyticsFlowsObservationsQueryWithHttpInfo (FlowObservationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5937,9 +5937,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsFlowsObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QualifierMappingObservationQueryResponse>(localVarStatusCode,
+            return new ApiResponse<FlowObservationQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (QualifierMappingObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualifierMappingObservationQueryResponse)),
+                (FlowObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowObservationQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5950,10 +5950,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of QualifierMappingObservationQueryResponse</returns>
-        public async System.Threading.Tasks.Task<QualifierMappingObservationQueryResponse> PostAnalyticsFlowsObservationsQueryAsync (ObservationQuery body)
+        /// <returns>Task of FlowObservationQueryResponse</returns>
+        public async System.Threading.Tasks.Task<FlowObservationQueryResponse> PostAnalyticsFlowsObservationsQueryAsync (FlowObservationQuery body)
         {
-             ApiResponse<QualifierMappingObservationQueryResponse> localVarResponse = await PostAnalyticsFlowsObservationsQueryAsyncWithHttpInfo(body);
+             ApiResponse<FlowObservationQueryResponse> localVarResponse = await PostAnalyticsFlowsObservationsQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -5963,8 +5963,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (QualifierMappingObservationQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QualifierMappingObservationQueryResponse>> PostAnalyticsFlowsObservationsQueryAsyncWithHttpInfo (ObservationQuery body)
+        /// <returns>Task of ApiResponse (FlowObservationQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlowObservationQueryResponse>> PostAnalyticsFlowsObservationsQueryAsyncWithHttpInfo (FlowObservationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6038,9 +6038,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsFlowsObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QualifierMappingObservationQueryResponse>(localVarStatusCode,
+            return new ApiResponse<FlowObservationQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (QualifierMappingObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualifierMappingObservationQueryResponse)),
+                (FlowObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowObservationQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6052,10 +6052,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>QualifierMappingObservationQueryResponse</returns>
-        public QualifierMappingObservationQueryResponse PostAnalyticsQueuesObservationsQuery (ObservationQuery body)
+        /// <returns>QueueObservationQueryResponse</returns>
+        public QueueObservationQueryResponse PostAnalyticsQueuesObservationsQuery (QueueObservationQuery body)
         {
-             ApiResponse<QualifierMappingObservationQueryResponse> localVarResponse = PostAnalyticsQueuesObservationsQueryWithHttpInfo(body);
+             ApiResponse<QueueObservationQueryResponse> localVarResponse = PostAnalyticsQueuesObservationsQueryWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -6064,8 +6064,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of QualifierMappingObservationQueryResponse</returns>
-        public ApiResponse< QualifierMappingObservationQueryResponse > PostAnalyticsQueuesObservationsQueryWithHttpInfo (ObservationQuery body)
+        /// <returns>ApiResponse of QueueObservationQueryResponse</returns>
+        public ApiResponse< QueueObservationQueryResponse > PostAnalyticsQueuesObservationsQueryWithHttpInfo (QueueObservationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6138,9 +6138,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsQueuesObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QualifierMappingObservationQueryResponse>(localVarStatusCode,
+            return new ApiResponse<QueueObservationQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (QualifierMappingObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualifierMappingObservationQueryResponse)),
+                (QueueObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueObservationQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6151,10 +6151,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of QualifierMappingObservationQueryResponse</returns>
-        public async System.Threading.Tasks.Task<QualifierMappingObservationQueryResponse> PostAnalyticsQueuesObservationsQueryAsync (ObservationQuery body)
+        /// <returns>Task of QueueObservationQueryResponse</returns>
+        public async System.Threading.Tasks.Task<QueueObservationQueryResponse> PostAnalyticsQueuesObservationsQueryAsync (QueueObservationQuery body)
         {
-             ApiResponse<QualifierMappingObservationQueryResponse> localVarResponse = await PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo(body);
+             ApiResponse<QueueObservationQueryResponse> localVarResponse = await PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -6164,8 +6164,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (QualifierMappingObservationQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QualifierMappingObservationQueryResponse>> PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body)
+        /// <returns>Task of ApiResponse (QueueObservationQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueueObservationQueryResponse>> PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo (QueueObservationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6239,9 +6239,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsQueuesObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QualifierMappingObservationQueryResponse>(localVarStatusCode,
+            return new ApiResponse<QueueObservationQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (QualifierMappingObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualifierMappingObservationQueryResponse)),
+                (QueueObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueObservationQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6848,10 +6848,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>AggregateQueryResponse</returns>
-        public AggregateQueryResponse PostAnalyticsSurveysAggregatesQuery (AggregationQuery body)
+        /// <returns>SurveyAggregateQueryResponse</returns>
+        public SurveyAggregateQueryResponse PostAnalyticsSurveysAggregatesQuery (SurveyAggregationQuery body)
         {
-             ApiResponse<AggregateQueryResponse> localVarResponse = PostAnalyticsSurveysAggregatesQueryWithHttpInfo(body);
+             ApiResponse<SurveyAggregateQueryResponse> localVarResponse = PostAnalyticsSurveysAggregatesQueryWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -6860,8 +6860,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        public ApiResponse< AggregateQueryResponse > PostAnalyticsSurveysAggregatesQueryWithHttpInfo (AggregationQuery body)
+        /// <returns>ApiResponse of SurveyAggregateQueryResponse</returns>
+        public ApiResponse< SurveyAggregateQueryResponse > PostAnalyticsSurveysAggregatesQueryWithHttpInfo (SurveyAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6934,9 +6934,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsSurveysAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+            return new ApiResponse<SurveyAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                (SurveyAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6947,10 +6947,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of AggregateQueryResponse</returns>
-        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostAnalyticsSurveysAggregatesQueryAsync (AggregationQuery body)
+        /// <returns>Task of SurveyAggregateQueryResponse</returns>
+        public async System.Threading.Tasks.Task<SurveyAggregateQueryResponse> PostAnalyticsSurveysAggregatesQueryAsync (SurveyAggregationQuery body)
         {
-             ApiResponse<AggregateQueryResponse> localVarResponse = await PostAnalyticsSurveysAggregatesQueryAsyncWithHttpInfo(body);
+             ApiResponse<SurveyAggregateQueryResponse> localVarResponse = await PostAnalyticsSurveysAggregatesQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -6960,8 +6960,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostAnalyticsSurveysAggregatesQueryAsyncWithHttpInfo (AggregationQuery body)
+        /// <returns>Task of ApiResponse (SurveyAggregateQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SurveyAggregateQueryResponse>> PostAnalyticsSurveysAggregatesQueryAsyncWithHttpInfo (SurveyAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7035,9 +7035,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsSurveysAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+            return new ApiResponse<SurveyAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)),
+                (SurveyAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7049,10 +7049,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>PresenceQueryResponse</returns>
-        public PresenceQueryResponse PostAnalyticsUsersAggregatesQuery (AggregationQuery body)
+        /// <returns>UserAggregateQueryResponse</returns>
+        public UserAggregateQueryResponse PostAnalyticsUsersAggregatesQuery (UserAggregationQuery body)
         {
-             ApiResponse<PresenceQueryResponse> localVarResponse = PostAnalyticsUsersAggregatesQueryWithHttpInfo(body);
+             ApiResponse<UserAggregateQueryResponse> localVarResponse = PostAnalyticsUsersAggregatesQueryWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -7061,8 +7061,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of PresenceQueryResponse</returns>
-        public ApiResponse< PresenceQueryResponse > PostAnalyticsUsersAggregatesQueryWithHttpInfo (AggregationQuery body)
+        /// <returns>ApiResponse of UserAggregateQueryResponse</returns>
+        public ApiResponse< UserAggregateQueryResponse > PostAnalyticsUsersAggregatesQueryWithHttpInfo (UserAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7135,9 +7135,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsUsersAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PresenceQueryResponse>(localVarStatusCode,
+            return new ApiResponse<UserAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (PresenceQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PresenceQueryResponse)),
+                (UserAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7148,10 +7148,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of PresenceQueryResponse</returns>
-        public async System.Threading.Tasks.Task<PresenceQueryResponse> PostAnalyticsUsersAggregatesQueryAsync (AggregationQuery body)
+        /// <returns>Task of UserAggregateQueryResponse</returns>
+        public async System.Threading.Tasks.Task<UserAggregateQueryResponse> PostAnalyticsUsersAggregatesQueryAsync (UserAggregationQuery body)
         {
-             ApiResponse<PresenceQueryResponse> localVarResponse = await PostAnalyticsUsersAggregatesQueryAsyncWithHttpInfo(body);
+             ApiResponse<UserAggregateQueryResponse> localVarResponse = await PostAnalyticsUsersAggregatesQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -7161,8 +7161,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (PresenceQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PresenceQueryResponse>> PostAnalyticsUsersAggregatesQueryAsyncWithHttpInfo (AggregationQuery body)
+        /// <returns>Task of ApiResponse (UserAggregateQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserAggregateQueryResponse>> PostAnalyticsUsersAggregatesQueryAsyncWithHttpInfo (UserAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7236,9 +7236,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsUsersAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PresenceQueryResponse>(localVarStatusCode,
+            return new ApiResponse<UserAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (PresenceQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PresenceQueryResponse)),
+                (UserAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7451,10 +7451,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ObservationQueryResponse</returns>
-        public ObservationQueryResponse PostAnalyticsUsersObservationsQuery (ObservationQuery body)
+        /// <returns>UserObservationQueryResponse</returns>
+        public UserObservationQueryResponse PostAnalyticsUsersObservationsQuery (UserObservationQuery body)
         {
-             ApiResponse<ObservationQueryResponse> localVarResponse = PostAnalyticsUsersObservationsQueryWithHttpInfo(body);
+             ApiResponse<UserObservationQueryResponse> localVarResponse = PostAnalyticsUsersObservationsQueryWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -7463,8 +7463,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of ObservationQueryResponse</returns>
-        public ApiResponse< ObservationQueryResponse > PostAnalyticsUsersObservationsQueryWithHttpInfo (ObservationQuery body)
+        /// <returns>ApiResponse of UserObservationQueryResponse</returns>
+        public ApiResponse< UserObservationQueryResponse > PostAnalyticsUsersObservationsQueryWithHttpInfo (UserObservationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7537,9 +7537,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsUsersObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ObservationQueryResponse>(localVarStatusCode,
+            return new ApiResponse<UserObservationQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (ObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ObservationQueryResponse)),
+                (UserObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserObservationQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7550,10 +7550,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ObservationQueryResponse</returns>
-        public async System.Threading.Tasks.Task<ObservationQueryResponse> PostAnalyticsUsersObservationsQueryAsync (ObservationQuery body)
+        /// <returns>Task of UserObservationQueryResponse</returns>
+        public async System.Threading.Tasks.Task<UserObservationQueryResponse> PostAnalyticsUsersObservationsQueryAsync (UserObservationQuery body)
         {
-             ApiResponse<ObservationQueryResponse> localVarResponse = await PostAnalyticsUsersObservationsQueryAsyncWithHttpInfo(body);
+             ApiResponse<UserObservationQueryResponse> localVarResponse = await PostAnalyticsUsersObservationsQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -7563,8 +7563,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (ObservationQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostAnalyticsUsersObservationsQueryAsyncWithHttpInfo (ObservationQuery body)
+        /// <returns>Task of ApiResponse (UserObservationQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserObservationQueryResponse>> PostAnalyticsUsersObservationsQueryAsyncWithHttpInfo (UserObservationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7638,9 +7638,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsUsersObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ObservationQueryResponse>(localVarStatusCode,
+            return new ApiResponse<UserObservationQueryResponse>(localVarStatusCode,
                 localVarHeaders,
-                (ObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ObservationQueryResponse)),
+                (UserObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserObservationQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

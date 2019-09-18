@@ -2969,7 +2969,7 @@ namespace Example
 
 <a name="postanalyticsusersaggregatesquery"></a>
 
-## [**PresenceQueryResponse**](PresenceQueryResponse.html) PostAnalyticsUsersAggregatesQuery (AggregationQuery body)
+## [**UserAggregateQueryResponse**](UserAggregateQueryResponse.html) PostAnalyticsUsersAggregatesQuery (UserAggregationQuery body)
 
 
 
@@ -2999,12 +2999,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            var body = new AggregationQuery(); // AggregationQuery | query
+            var body = new UserAggregationQuery(); // UserAggregationQuery | query
 
             try
             { 
                 // Query for user aggregates
-                PresenceQueryResponse result = apiInstance.PostAnalyticsUsersAggregatesQuery(body);
+                UserAggregateQueryResponse result = apiInstance.PostAnalyticsUsersAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3021,12 +3021,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+| **body** | [**UserAggregationQuery**](UserAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**PresenceQueryResponse**](PresenceQueryResponse.html)
+[**UserAggregateQueryResponse**](UserAggregateQueryResponse.html)
 
 <a name="postanalyticsusersdetailsquery"></a>
 
@@ -3091,7 +3091,7 @@ namespace Example
 
 <a name="postanalyticsusersobservationsquery"></a>
 
-## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostAnalyticsUsersObservationsQuery (ObservationQuery body)
+## [**UserObservationQueryResponse**](UserObservationQueryResponse.html) PostAnalyticsUsersObservationsQuery (UserObservationQuery body)
 
 
 
@@ -3121,12 +3121,12 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UsersApi();
-            var body = new ObservationQuery(); // ObservationQuery | query
+            var body = new UserObservationQuery(); // UserObservationQuery | query
 
             try
             { 
                 // Query for user observations
-                ObservationQueryResponse result = apiInstance.PostAnalyticsUsersObservationsQuery(body);
+                UserObservationQueryResponse result = apiInstance.PostAnalyticsUsersObservationsQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3143,12 +3143,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
+| **body** | [**UserObservationQuery**](UserObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ObservationQueryResponse**](ObservationQueryResponse.html)
+[**UserObservationQueryResponse**](UserObservationQueryResponse.html)
 
 <a name="postauthorizationsubjectdivisionrole"></a>
 
@@ -3185,7 +3185,7 @@ namespace Example
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
             var divisionId = divisionId_example;  // string | the id of the division to which to make the grant
             var roleId = roleId_example;  // string | the id of the role to grant
-            var subjectType = subjectType_example;  // string | what the type of the subject is, PC_GROUP or PC_USER (optional)  (default to PC_USER)
+            var subjectType = subjectType_example;  // string | what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional)  (default to PC_USER)
 
             try
             { 
@@ -3209,7 +3209,7 @@ namespace Example
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **divisionId** | **string**| the id of the division to which to make the grant |  |
 | **roleId** | **string**| the id of the role to grant |  |
-| **subjectType** | **string**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
+| **subjectType** | **string**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to PC_USER] |
 {: class="table table-striped"}
 
 ### Return type

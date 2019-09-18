@@ -115,6 +115,72 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ScimGroupListResponse> GetScimGroupsWithHttpInfo (int? startIndex = null, int? count = null, string filter = null);
         
         /// <summary>
+        /// Get the SCIM configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>ScimConfigResourceType</returns>
+        ScimConfigResourceType GetScimResourcetype (string resourceType);
+
+        /// <summary>
+        /// Get the SCIM configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>ApiResponse of ScimConfigResourceType</returns>
+        ApiResponse<ScimConfigResourceType> GetScimResourcetypeWithHttpInfo (string resourceType);
+        
+        /// <summary>
+        /// Get the SCIM resource types
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>ScimConfigResourceTypesListResponse</returns>
+        ScimConfigResourceTypesListResponse GetScimResourcetypes (string filter = null);
+
+        /// <summary>
+        /// Get the SCIM resource types
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>ApiResponse of ScimConfigResourceTypesListResponse</returns>
+        ApiResponse<ScimConfigResourceTypesListResponse> GetScimResourcetypesWithHttpInfo (string filter = null);
+        
+        /// <summary>
+        /// Get the SCIM configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <returns>ScimServiceProviderConfig</returns>
+        ScimServiceProviderConfig GetScimServiceproviderconfig (string ifNoneMatch = null);
+
+        /// <summary>
+        /// Get the SCIM configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <returns>ApiResponse of ScimServiceProviderConfig</returns>
+        ApiResponse<ScimServiceProviderConfig> GetScimServiceproviderconfigWithHttpInfo (string ifNoneMatch = null);
+        
+        /// <summary>
         /// Get a user
         /// </summary>
         /// <remarks>
@@ -213,6 +279,50 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>ApiResponse of ScimGroupListResponse</returns>
         ApiResponse<ScimGroupListResponse> GetScimV2GroupsWithHttpInfo (string filter, int? startIndex = null, int? count = null);
+        
+        /// <summary>
+        /// Get the SCIM configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>ScimConfigResourceType</returns>
+        ScimConfigResourceType GetScimV2Resourcetype (string resourceType);
+
+        /// <summary>
+        /// Get the SCIM configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>ApiResponse of ScimConfigResourceType</returns>
+        ApiResponse<ScimConfigResourceType> GetScimV2ResourcetypeWithHttpInfo (string resourceType);
+        
+        /// <summary>
+        /// Get the SCIM resource types
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>ScimConfigResourceTypesListResponse</returns>
+        ScimConfigResourceTypesListResponse GetScimV2Resourcetypes (string filter = null);
+
+        /// <summary>
+        /// Get the SCIM resource types
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>ApiResponse of ScimConfigResourceTypesListResponse</returns>
+        ApiResponse<ScimConfigResourceTypesListResponse> GetScimV2ResourcetypesWithHttpInfo (string filter = null);
         
         /// <summary>
         /// Get the SCIM configuration
@@ -641,6 +751,72 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ScimGroupListResponse>> GetScimGroupsAsyncWithHttpInfo (int? startIndex = null, int? count = null, string filter = null);
         
         /// <summary>
+        /// Get the SCIM configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>Task of ScimConfigResourceType</returns>
+        System.Threading.Tasks.Task<ScimConfigResourceType> GetScimResourcetypeAsync (string resourceType);
+
+        /// <summary>
+        /// Get the SCIM configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>Task of ApiResponse (ScimConfigResourceType)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceType>> GetScimResourcetypeAsyncWithHttpInfo (string resourceType);
+        
+        /// <summary>
+        /// Get the SCIM resource types
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>Task of ScimConfigResourceTypesListResponse</returns>
+        System.Threading.Tasks.Task<ScimConfigResourceTypesListResponse> GetScimResourcetypesAsync (string filter = null);
+
+        /// <summary>
+        /// Get the SCIM resource types
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>Task of ApiResponse (ScimConfigResourceTypesListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceTypesListResponse>> GetScimResourcetypesAsyncWithHttpInfo (string filter = null);
+        
+        /// <summary>
+        /// Get the SCIM configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <returns>Task of ScimServiceProviderConfig</returns>
+        System.Threading.Tasks.Task<ScimServiceProviderConfig> GetScimServiceproviderconfigAsync (string ifNoneMatch = null);
+
+        /// <summary>
+        /// Get the SCIM configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <returns>Task of ApiResponse (ScimServiceProviderConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ScimServiceProviderConfig>> GetScimServiceproviderconfigAsyncWithHttpInfo (string ifNoneMatch = null);
+        
+        /// <summary>
         /// Get a user
         /// </summary>
         /// <remarks>
@@ -739,6 +915,50 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="count">The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ScimGroupListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScimGroupListResponse>> GetScimV2GroupsAsyncWithHttpInfo (string filter, int? startIndex = null, int? count = null);
+        
+        /// <summary>
+        /// Get the SCIM configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>Task of ScimConfigResourceType</returns>
+        System.Threading.Tasks.Task<ScimConfigResourceType> GetScimV2ResourcetypeAsync (string resourceType);
+
+        /// <summary>
+        /// Get the SCIM configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>Task of ApiResponse (ScimConfigResourceType)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceType>> GetScimV2ResourcetypeAsyncWithHttpInfo (string resourceType);
+        
+        /// <summary>
+        /// Get the SCIM resource types
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>Task of ScimConfigResourceTypesListResponse</returns>
+        System.Threading.Tasks.Task<ScimConfigResourceTypesListResponse> GetScimV2ResourcetypesAsync (string filter = null);
+
+        /// <summary>
+        /// Get the SCIM resource types
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>Task of ApiResponse (ScimConfigResourceTypesListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceTypesListResponse>> GetScimV2ResourcetypesAsyncWithHttpInfo (string filter = null);
         
         /// <summary>
         /// Get the SCIM configuration
@@ -1984,6 +2204,559 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get the SCIM configuration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>ScimConfigResourceType</returns>
+        public ScimConfigResourceType GetScimResourcetype (string resourceType)
+        {
+             ApiResponse<ScimConfigResourceType> localVarResponse = GetScimResourcetypeWithHttpInfo(resourceType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the SCIM configuration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>ApiResponse of ScimConfigResourceType</returns>
+        public ApiResponse< ScimConfigResourceType > GetScimResourcetypeWithHttpInfo (string resourceType)
+        { 
+            // verify the required parameter 'resourceType' is set
+            if (resourceType == null)
+                throw new ApiException(400, "Missing required parameter 'resourceType' when calling SCIMApi->GetScimResourcetype");
+
+            var localVarPath = "/api/v2/scim/resourcetypes/{resourceType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (resourceType != null) localVarPathParams.Add("resourceType", this.Configuration.ApiClient.ParameterToString(resourceType));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimResourcetype: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimResourcetype: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScimConfigResourceType>(localVarStatusCode,
+                localVarHeaders,
+                (ScimConfigResourceType) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimConfigResourceType)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the SCIM configuration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>Task of ScimConfigResourceType</returns>
+        public async System.Threading.Tasks.Task<ScimConfigResourceType> GetScimResourcetypeAsync (string resourceType)
+        {
+             ApiResponse<ScimConfigResourceType> localVarResponse = await GetScimResourcetypeAsyncWithHttpInfo(resourceType);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the SCIM configuration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>Task of ApiResponse (ScimConfigResourceType)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceType>> GetScimResourcetypeAsyncWithHttpInfo (string resourceType)
+        { 
+            // verify the required parameter 'resourceType' is set
+            if (resourceType == null)
+                throw new ApiException(400, "Missing required parameter 'resourceType' when calling SCIMApi->GetScimResourcetype");
+            
+
+            var localVarPath = "/api/v2/scim/resourcetypes/{resourceType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (resourceType != null) localVarPathParams.Add("resourceType", this.Configuration.ApiClient.ParameterToString(resourceType));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimResourcetype: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimResourcetype: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScimConfigResourceType>(localVarStatusCode,
+                localVarHeaders,
+                (ScimConfigResourceType) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimConfigResourceType)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the SCIM resource types 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>ScimConfigResourceTypesListResponse</returns>
+        public ScimConfigResourceTypesListResponse GetScimResourcetypes (string filter = null)
+        {
+             ApiResponse<ScimConfigResourceTypesListResponse> localVarResponse = GetScimResourcetypesWithHttpInfo(filter);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the SCIM resource types 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>ApiResponse of ScimConfigResourceTypesListResponse</returns>
+        public ApiResponse< ScimConfigResourceTypesListResponse > GetScimResourcetypesWithHttpInfo (string filter = null)
+        { 
+
+            var localVarPath = "/api/v2/scim/resourcetypes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (filter != null) localVarQueryParams.Add(new Tuple<string, string>("filter", this.Configuration.ApiClient.ParameterToString(filter)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimResourcetypes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimResourcetypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScimConfigResourceTypesListResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ScimConfigResourceTypesListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimConfigResourceTypesListResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the SCIM resource types 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>Task of ScimConfigResourceTypesListResponse</returns>
+        public async System.Threading.Tasks.Task<ScimConfigResourceTypesListResponse> GetScimResourcetypesAsync (string filter = null)
+        {
+             ApiResponse<ScimConfigResourceTypesListResponse> localVarResponse = await GetScimResourcetypesAsyncWithHttpInfo(filter);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the SCIM resource types 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>Task of ApiResponse (ScimConfigResourceTypesListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceTypesListResponse>> GetScimResourcetypesAsyncWithHttpInfo (string filter = null)
+        { 
+
+            var localVarPath = "/api/v2/scim/resourcetypes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (filter != null) localVarQueryParams.Add(new Tuple<string, string>("filter", this.Configuration.ApiClient.ParameterToString(filter)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimResourcetypes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimResourcetypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScimConfigResourceTypesListResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ScimConfigResourceTypesListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimConfigResourceTypesListResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the SCIM configuration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <returns>ScimServiceProviderConfig</returns>
+        public ScimServiceProviderConfig GetScimServiceproviderconfig (string ifNoneMatch = null)
+        {
+             ApiResponse<ScimServiceProviderConfig> localVarResponse = GetScimServiceproviderconfigWithHttpInfo(ifNoneMatch);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the SCIM configuration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <returns>ApiResponse of ScimServiceProviderConfig</returns>
+        public ApiResponse< ScimServiceProviderConfig > GetScimServiceproviderconfigWithHttpInfo (string ifNoneMatch = null)
+        { 
+
+            var localVarPath = "/api/v2/scim/serviceproviderconfig";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+            if (ifNoneMatch != null) localVarHeaderParams.Add("If-None-Match", this.Configuration.ApiClient.ParameterToString(ifNoneMatch)); // header parameter
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimServiceproviderconfig: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimServiceproviderconfig: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScimServiceProviderConfig>(localVarStatusCode,
+                localVarHeaders,
+                (ScimServiceProviderConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimServiceProviderConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the SCIM configuration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <returns>Task of ScimServiceProviderConfig</returns>
+        public async System.Threading.Tasks.Task<ScimServiceProviderConfig> GetScimServiceproviderconfigAsync (string ifNoneMatch = null)
+        {
+             ApiResponse<ScimServiceProviderConfig> localVarResponse = await GetScimServiceproviderconfigAsyncWithHttpInfo(ifNoneMatch);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the SCIM configuration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ifNoneMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)</param>
+        /// <returns>Task of ApiResponse (ScimServiceProviderConfig)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ScimServiceProviderConfig>> GetScimServiceproviderconfigAsyncWithHttpInfo (string ifNoneMatch = null)
+        { 
+
+            var localVarPath = "/api/v2/scim/serviceproviderconfig";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+            if (ifNoneMatch != null) localVarHeaderParams.Add("If-None-Match", this.Configuration.ApiClient.ParameterToString(ifNoneMatch)); // header parameter
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimServiceproviderconfig: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimServiceproviderconfig: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScimServiceProviderConfig>(localVarStatusCode,
+                localVarHeaders,
+                (ScimServiceProviderConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimServiceProviderConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Get a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2817,6 +3590,377 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ScimGroupListResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ScimGroupListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimGroupListResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the SCIM configuration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>ScimConfigResourceType</returns>
+        public ScimConfigResourceType GetScimV2Resourcetype (string resourceType)
+        {
+             ApiResponse<ScimConfigResourceType> localVarResponse = GetScimV2ResourcetypeWithHttpInfo(resourceType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the SCIM configuration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>ApiResponse of ScimConfigResourceType</returns>
+        public ApiResponse< ScimConfigResourceType > GetScimV2ResourcetypeWithHttpInfo (string resourceType)
+        { 
+            // verify the required parameter 'resourceType' is set
+            if (resourceType == null)
+                throw new ApiException(400, "Missing required parameter 'resourceType' when calling SCIMApi->GetScimV2Resourcetype");
+
+            var localVarPath = "/api/v2/scim/v2/resourcetypes/{resourceType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (resourceType != null) localVarPathParams.Add("resourceType", this.Configuration.ApiClient.ParameterToString(resourceType));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimV2Resourcetype: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimV2Resourcetype: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScimConfigResourceType>(localVarStatusCode,
+                localVarHeaders,
+                (ScimConfigResourceType) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimConfigResourceType)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the SCIM configuration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>Task of ScimConfigResourceType</returns>
+        public async System.Threading.Tasks.Task<ScimConfigResourceType> GetScimV2ResourcetypeAsync (string resourceType)
+        {
+             ApiResponse<ScimConfigResourceType> localVarResponse = await GetScimV2ResourcetypeAsyncWithHttpInfo(resourceType);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the SCIM configuration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="resourceType">The ID of a resource.</param>
+        /// <returns>Task of ApiResponse (ScimConfigResourceType)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceType>> GetScimV2ResourcetypeAsyncWithHttpInfo (string resourceType)
+        { 
+            // verify the required parameter 'resourceType' is set
+            if (resourceType == null)
+                throw new ApiException(400, "Missing required parameter 'resourceType' when calling SCIMApi->GetScimV2Resourcetype");
+            
+
+            var localVarPath = "/api/v2/scim/v2/resourcetypes/{resourceType}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (resourceType != null) localVarPathParams.Add("resourceType", this.Configuration.ApiClient.ParameterToString(resourceType));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimV2Resourcetype: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimV2Resourcetype: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScimConfigResourceType>(localVarStatusCode,
+                localVarHeaders,
+                (ScimConfigResourceType) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimConfigResourceType)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the SCIM resource types 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>ScimConfigResourceTypesListResponse</returns>
+        public ScimConfigResourceTypesListResponse GetScimV2Resourcetypes (string filter = null)
+        {
+             ApiResponse<ScimConfigResourceTypesListResponse> localVarResponse = GetScimV2ResourcetypesWithHttpInfo(filter);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the SCIM resource types 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>ApiResponse of ScimConfigResourceTypesListResponse</returns>
+        public ApiResponse< ScimConfigResourceTypesListResponse > GetScimV2ResourcetypesWithHttpInfo (string filter = null)
+        { 
+
+            var localVarPath = "/api/v2/scim/v2/resourcetypes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (filter != null) localVarQueryParams.Add(new Tuple<string, string>("filter", this.Configuration.ApiClient.ParameterToString(filter)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimV2Resourcetypes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimV2Resourcetypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScimConfigResourceTypesListResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ScimConfigResourceTypesListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimConfigResourceTypesListResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the SCIM resource types 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>Task of ScimConfigResourceTypesListResponse</returns>
+        public async System.Threading.Tasks.Task<ScimConfigResourceTypesListResponse> GetScimV2ResourcetypesAsync (string filter = null)
+        {
+             ApiResponse<ScimConfigResourceTypesListResponse> localVarResponse = await GetScimV2ResourcetypesAsyncWithHttpInfo(filter);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the SCIM resource types 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter">Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)</param>
+        /// <returns>Task of ApiResponse (ScimConfigResourceTypesListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ScimConfigResourceTypesListResponse>> GetScimV2ResourcetypesAsyncWithHttpInfo (string filter = null)
+        { 
+
+            var localVarPath = "/api/v2/scim/v2/resourcetypes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json", 
+                
+                "application/scim+json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (filter != null) localVarQueryParams.Add(new Tuple<string, string>("filter", this.Configuration.ApiClient.ParameterToString(filter)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimV2Resourcetypes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScimV2Resourcetypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScimConfigResourceTypesListResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ScimConfigResourceTypesListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScimConfigResourceTypesListResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

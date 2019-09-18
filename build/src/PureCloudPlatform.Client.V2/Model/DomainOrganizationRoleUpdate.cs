@@ -94,7 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Description.</param>
         /// <param name="DefaultRoleId">DefaultRoleId.</param>
         /// <param name="Permissions">Permissions.</param>
-        /// <param name="UnusedPermissions">UnusedPermissions.</param>
+        /// <param name="UnusedPermissions">A collection of the permissions the role is not using.</param>
         /// <param name="PermissionPolicies">PermissionPolicies.</param>
         /// <param name="UserCount">UserCount.</param>
         /// <param name="RoleNeedsUpdate">Optional unless patch operation..</param>
@@ -160,8 +160,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets UnusedPermissions
+        /// A collection of the permissions the role is not using
         /// </summary>
+        /// <value>A collection of the permissions the role is not using</value>
         [DataMember(Name="unusedPermissions", EmitDefaultValue=false)]
         public List<string> UnusedPermissions { get; set; }
         

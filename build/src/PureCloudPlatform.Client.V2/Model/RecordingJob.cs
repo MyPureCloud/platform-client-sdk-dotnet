@@ -105,12 +105,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state of the job.
         /// </summary>
         /// <value>The current state of the job.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -141,10 +146,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="State">The current state of the job. (required).</param>
         /// <param name="RecordingJobsQuery">Original query of the job..</param>
-        public RecordingJob(StateEnum? State = null, RecordingJobsQuery RecordingJobsQuery = null)
+        /// <param name="User">Details of the user created the job.</param>
+        public RecordingJob(StateEnum? State = null, RecordingJobsQuery RecordingJobsQuery = null, AddressableEntityRef User = null)
         {
             this.State = State;
             this.RecordingJobsQuery = RecordingJobsQuery;
+            this.User = User;
             
         }
         
@@ -232,6 +239,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string SelfUri { get; private set; }
         
         
+        
+        /// <summary>
+        /// Details of the user created the job
+        /// </summary>
+        /// <value>Details of the user created the job</value>
+        [DataMember(Name="user", EmitDefaultValue=false)]
+        public AddressableEntityRef User { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -251,6 +267,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PercentProgress: ").Append(PercentProgress).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -336,6 +353,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
+                    this.User == other.User ||
+                    this.User != null &&
+                    this.User.Equals(other.User)
                 );
         }
 
@@ -380,6 +402,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
+                if (this.User != null)
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 return hash;
             }
