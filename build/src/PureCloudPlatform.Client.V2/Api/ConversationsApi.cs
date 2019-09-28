@@ -694,7 +694,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a web chat conversation message
         /// </summary>
         /// <remarks>
-        /// 
+        /// The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -706,7 +706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a web chat conversation message
         /// </summary>
         /// <remarks>
-        /// 
+        /// The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -718,7 +718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the messages of a chat conversation.
         /// </summary>
         /// <remarks>
-        /// 
+        /// The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -733,7 +733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the messages of a chat conversation.
         /// </summary>
         /// <remarks>
-        /// 
+        /// The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -3790,7 +3790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a web chat conversation message
         /// </summary>
         /// <remarks>
-        /// 
+        /// The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -3802,7 +3802,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a web chat conversation message
         /// </summary>
         /// <remarks>
-        /// 
+        /// The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -3814,7 +3814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the messages of a chat conversation.
         /// </summary>
         /// <remarks>
-        /// 
+        /// The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -3829,7 +3829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the messages of a chat conversation.
         /// </summary>
         /// <remarks>
-        /// 
+        /// The current user must be involved with the conversation to get its messages.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -12042,7 +12042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a web chat conversation message 
+        /// Get a web chat conversation message The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -12055,7 +12055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a web chat conversation message 
+        /// Get a web chat conversation message The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -12143,7 +12143,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a web chat conversation message 
+        /// Get a web chat conversation message The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -12157,7 +12157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a web chat conversation message 
+        /// Get a web chat conversation message The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -12248,7 +12248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get the messages of a chat conversation. 
+        /// Get the messages of a chat conversation. The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -12264,7 +12264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the messages of a chat conversation. 
+        /// Get the messages of a chat conversation. The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -12355,7 +12355,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get the messages of a chat conversation. 
+        /// Get the messages of a chat conversation. The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -12372,7 +12372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the messages of a chat conversation. 
+        /// Get the messages of a chat conversation. The current user must be involved with the conversation to get its messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>

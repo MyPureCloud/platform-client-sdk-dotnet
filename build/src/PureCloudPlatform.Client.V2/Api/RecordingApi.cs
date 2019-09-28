@@ -241,8 +241,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <returns>Recording</returns>
-        Recording GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId);
+        /// <returns>RecordingMetadata</returns>
+        RecordingMetadata GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId);
 
         /// <summary>
         /// Get metadata for a specific recording. Does not return playable media.
@@ -253,8 +253,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <returns>ApiResponse of Recording</returns>
-        ApiResponse<Recording> GetConversationRecordingmetadataRecordingIdWithHttpInfo (string conversationId, string recordingId);
+        /// <returns>ApiResponse of RecordingMetadata</returns>
+        ApiResponse<RecordingMetadata> GetConversationRecordingmetadataRecordingIdWithHttpInfo (string conversationId, string recordingId);
         
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
@@ -1265,8 +1265,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <returns>Task of Recording</returns>
-        System.Threading.Tasks.Task<Recording> GetConversationRecordingmetadataRecordingIdAsync (string conversationId, string recordingId);
+        /// <returns>Task of RecordingMetadata</returns>
+        System.Threading.Tasks.Task<RecordingMetadata> GetConversationRecordingmetadataRecordingIdAsync (string conversationId, string recordingId);
 
         /// <summary>
         /// Get metadata for a specific recording. Does not return playable media.
@@ -1277,8 +1277,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <returns>Task of ApiResponse (Recording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationRecordingmetadataRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId);
+        /// <returns>Task of ApiResponse (RecordingMetadata)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RecordingMetadata>> GetConversationRecordingmetadataRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId);
         
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
@@ -3983,10 +3983,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <returns>Recording</returns>
-        public Recording GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId)
+        /// <returns>RecordingMetadata</returns>
+        public RecordingMetadata GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId)
         {
-             ApiResponse<Recording> localVarResponse = GetConversationRecordingmetadataRecordingIdWithHttpInfo(conversationId, recordingId);
+             ApiResponse<RecordingMetadata> localVarResponse = GetConversationRecordingmetadataRecordingIdWithHttpInfo(conversationId, recordingId);
              return localVarResponse.Data;
         }
 
@@ -3996,8 +3996,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <returns>ApiResponse of Recording</returns>
-        public ApiResponse< Recording > GetConversationRecordingmetadataRecordingIdWithHttpInfo (string conversationId, string recordingId)
+        /// <returns>ApiResponse of RecordingMetadata</returns>
+        public ApiResponse< RecordingMetadata > GetConversationRecordingmetadataRecordingIdWithHttpInfo (string conversationId, string recordingId)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -4070,9 +4070,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingmetadataRecordingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Recording>(localVarStatusCode,
+            return new ApiResponse<RecordingMetadata>(localVarStatusCode,
                 localVarHeaders,
-                (Recording) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Recording)),
+                (RecordingMetadata) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingMetadata)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -4084,10 +4084,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <returns>Task of Recording</returns>
-        public async System.Threading.Tasks.Task<Recording> GetConversationRecordingmetadataRecordingIdAsync (string conversationId, string recordingId)
+        /// <returns>Task of RecordingMetadata</returns>
+        public async System.Threading.Tasks.Task<RecordingMetadata> GetConversationRecordingmetadataRecordingIdAsync (string conversationId, string recordingId)
         {
-             ApiResponse<Recording> localVarResponse = await GetConversationRecordingmetadataRecordingIdAsyncWithHttpInfo(conversationId, recordingId);
+             ApiResponse<RecordingMetadata> localVarResponse = await GetConversationRecordingmetadataRecordingIdAsyncWithHttpInfo(conversationId, recordingId);
              return localVarResponse.Data;
 
         }
@@ -4098,8 +4098,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <returns>Task of ApiResponse (Recording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationRecordingmetadataRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId)
+        /// <returns>Task of ApiResponse (RecordingMetadata)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RecordingMetadata>> GetConversationRecordingmetadataRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -4174,9 +4174,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingmetadataRecordingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Recording>(localVarStatusCode,
+            return new ApiResponse<RecordingMetadata>(localVarStatusCode,
                 localVarHeaders,
-                (Recording) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Recording)),
+                (RecordingMetadata) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingMetadata)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

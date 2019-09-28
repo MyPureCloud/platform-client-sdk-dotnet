@@ -10,6 +10,7 @@ title: HistoryListing
 | **Id** | **string** |  | [optional] |
 | **Complete** | **bool?** |  | [optional] |
 | **User** | [**User**](User.html) |  | [optional] |
+| **Client** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **ErrorMessage** | **string** |  | [optional] |
 | **ErrorCode** | **string** |  | [optional] |
 | **ErrorDetails** | [**List&lt;Detail&gt;**](Detail.html) |  | [optional] |

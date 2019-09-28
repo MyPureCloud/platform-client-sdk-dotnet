@@ -251,8 +251,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="ConversationId">ConversationId.</param>
         /// <param name="Path">Path.</param>
-        /// <param name="StartTime">StartTime.</param>
-        /// <param name="EndTime">EndTime.</param>
+        /// <param name="StartTime">The start time of the recording. Null when there is no playable media..</param>
+        /// <param name="EndTime">The end time of the recording. Null when there is no playable media..</param>
         /// <param name="Media">The type of media that the recording is. At the moment that could be audio, chat, or email..</param>
         /// <param name="Annotations">Annotations that belong to the recording..</param>
         /// <param name="Transcript">Represents a chat transcript.</param>
@@ -260,14 +260,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessagingTranscript">Represents a messaging transcript.</param>
         /// <param name="FileState">Represents the current file state for a recording. Examples: Uploading, Archived, etc.</param>
         /// <param name="RestoreExpirationTime">The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="MediaUris">The different mediaUris for the recording..</param>
+        /// <param name="MediaUris">The different mediaUris for the recording. Null when there is no playable media..</param>
         /// <param name="EstimatedTranscodeTimeMs">EstimatedTranscodeTimeMs.</param>
         /// <param name="ActualTranscodeTimeMs">ActualTranscodeTimeMs.</param>
         /// <param name="ArchiveDate">The date the recording will be archived. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ArchiveMedium">The type of archive medium used. Example: CloudArchive.</param>
         /// <param name="DeleteDate">The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="OutputDurationMs">Duration of transcoded media in milliseconds.</param>
-        /// <param name="OutputSizeInBytes">Size of transcoded media in bytes.</param>
+        /// <param name="OutputSizeInBytes">Size of transcoded media in bytes. 0 if there is no transcoded media..</param>
         /// <param name="MaxAllowedRestorationsForOrg">How many archive restorations the organization is allowed to have..</param>
         /// <param name="RemainingRestorationsAllowedForOrg">The remaining archive restorations the organization has..</param>
         /// <param name="SessionId">The session id represents an external resource id, such as email, call, chat, etc.</param>
@@ -337,16 +337,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets StartTime
+        /// The start time of the recording. Null when there is no playable media.
         /// </summary>
+        /// <value>The start time of the recording. Null when there is no playable media.</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets EndTime
+        /// The end time of the recording. Null when there is no playable media.
         /// </summary>
+        /// <value>The end time of the recording. Null when there is no playable media.</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public string EndTime { get; set; }
         
@@ -409,9 +411,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The different mediaUris for the recording.
+        /// The different mediaUris for the recording. Null when there is no playable media.
         /// </summary>
-        /// <value>The different mediaUris for the recording.</value>
+        /// <value>The different mediaUris for the recording. Null when there is no playable media.</value>
         [DataMember(Name="mediaUris", EmitDefaultValue=false)]
         public Dictionary<string, MediaResult> MediaUris { get; set; }
         
@@ -463,9 +465,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Size of transcoded media in bytes
+        /// Size of transcoded media in bytes. 0 if there is no transcoded media.
         /// </summary>
-        /// <value>Size of transcoded media in bytes</value>
+        /// <value>Size of transcoded media in bytes. 0 if there is no transcoded media.</value>
         [DataMember(Name="outputSizeInBytes", EmitDefaultValue=false)]
         public int? OutputSizeInBytes { get; set; }
         

@@ -49,15 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Location" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="FloorplanId">FloorplanId.</param>
-        /// <param name="Coordinates">Coordinates.</param>
-        /// <param name="Notes">Notes.</param>
+        /// <param name="Id">Unique identifier for the location.</param>
+        /// <param name="Coordinates">Users coordinates on the floorplan. Only used when floorplanImage is set.</param>
+        /// <param name="Notes">Optional description on the users location.</param>
         /// <param name="LocationDefinition">LocationDefinition.</param>
-        public Location(string Id = null, string FloorplanId = null, Dictionary<string, double?> Coordinates = null, string Notes = null, LocationDefinition LocationDefinition = null)
+        public Location(string Id = null, Dictionary<string, double?> Coordinates = null, string Notes = null, LocationDefinition LocationDefinition = null)
         {
             this.Id = Id;
-            this.FloorplanId = FloorplanId;
             this.Coordinates = Coordinates;
             this.Notes = Notes;
             this.LocationDefinition = LocationDefinition;
@@ -67,32 +65,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Unique identifier for the location
         /// </summary>
+        /// <value>Unique identifier for the location</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets FloorplanId
+        /// Unique identifier for the location floorplan image
         /// </summary>
+        /// <value>Unique identifier for the location floorplan image</value>
         [DataMember(Name="floorplanId", EmitDefaultValue=false)]
-        public string FloorplanId { get; set; }
+        public string FloorplanId { get; private set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Coordinates
+        /// Users coordinates on the floorplan. Only used when floorplanImage is set
         /// </summary>
+        /// <value>Users coordinates on the floorplan. Only used when floorplanImage is set</value>
         [DataMember(Name="coordinates", EmitDefaultValue=false)]
         public Dictionary<string, double?> Coordinates { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Notes
+        /// Optional description on the users location
         /// </summary>
+        /// <value>Optional description on the users location</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
         

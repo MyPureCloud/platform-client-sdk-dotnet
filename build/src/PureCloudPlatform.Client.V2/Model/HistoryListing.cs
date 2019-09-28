@@ -41,6 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Action name
         /// </summary>
@@ -220,6 +223,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Action name
         /// </summary>
@@ -264,6 +269,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         /// <param name="Complete">Complete.</param>
         /// <param name="User">User.</param>
+        /// <param name="Client">Client.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorDetails">ErrorDetails.</param>
@@ -280,11 +286,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PageSize">PageSize.</param>
         /// <param name="PageNumber">PageNumber.</param>
         /// <param name="PageCount">PageCount.</param>
-        public HistoryListing(string Id = null, bool? Complete = null, User User = null, string ErrorMessage = null, string ErrorCode = null, List<Detail> ErrorDetails = null, Dictionary<string, string> ErrorMessageParams = null, ActionNameEnum? ActionName = null, ActionStatusEnum? ActionStatus = null, string Name = null, string Description = null, bool? System = null, DateTime? Started = null, DateTime? Completed = null, List<HistoryEntry> Entities = null, long? Total = null, int? PageSize = null, int? PageNumber = null, int? PageCount = null)
+        public HistoryListing(string Id = null, bool? Complete = null, User User = null, DomainEntityRef Client = null, string ErrorMessage = null, string ErrorCode = null, List<Detail> ErrorDetails = null, Dictionary<string, string> ErrorMessageParams = null, ActionNameEnum? ActionName = null, ActionStatusEnum? ActionStatus = null, string Name = null, string Description = null, bool? System = null, DateTime? Started = null, DateTime? Completed = null, List<HistoryEntry> Entities = null, long? Total = null, int? PageSize = null, int? PageNumber = null, int? PageCount = null)
         {
             this.Id = Id;
             this.Complete = Complete;
             this.User = User;
+            this.Client = Client;
             this.ErrorMessage = ErrorMessage;
             this.ErrorCode = ErrorCode;
             this.ErrorDetails = ErrorDetails;
@@ -327,6 +334,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Client
+        /// </summary>
+        [DataMember(Name="client", EmitDefaultValue=false)]
+        public DomainEntityRef Client { get; set; }
         
         
         
@@ -459,6 +474,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Complete: ").Append(Complete).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  Client: ").Append(Client).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorDetails: ").Append(ErrorDetails).Append("\n");
@@ -525,6 +541,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
+                ) &&
+                (
+                    this.Client == other.Client ||
+                    this.Client != null &&
+                    this.Client.Equals(other.Client)
                 ) &&
                 (
                     this.ErrorMessage == other.ErrorMessage ||
@@ -628,6 +649,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
+                if (this.Client != null)
+                    hash = hash * 59 + this.Client.GetHashCode();
                 
                 if (this.ErrorMessage != null)
                     hash = hash * 59 + this.ErrorMessage.GetHashCode();

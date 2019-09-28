@@ -155,11 +155,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
         
         
         
@@ -201,7 +206,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Description">Description.</param>
         /// <param name="Type">Type.</param>
-        /// <param name="LockedUser">LockedUser.</param>
+        /// <param name="LockedUser">User that has the flow locked..</param>
+        /// <param name="LockedClient">OAuth client that has the flow locked..</param>
         /// <param name="Active">Active.</param>
         /// <param name="System">System.</param>
         /// <param name="Deleted">Deleted.</param>
@@ -212,7 +218,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CheckedInVersion">CheckedInVersion.</param>
         /// <param name="PublishedBy">PublishedBy.</param>
         /// <param name="CurrentOperation">CurrentOperation.</param>
-        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
+        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -220,6 +226,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Description = Description;
             this.Type = Type;
             this.LockedUser = LockedUser;
+            this.LockedClient = LockedClient;
             this.Active = Active;
             this.System = System;
             this.Deleted = Deleted;
@@ -273,10 +280,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets LockedUser
+        /// User that has the flow locked.
         /// </summary>
+        /// <value>User that has the flow locked.</value>
         [DataMember(Name="lockedUser", EmitDefaultValue=false)]
         public User LockedUser { get; set; }
+        
+        
+        
+        /// <summary>
+        /// OAuth client that has the flow locked.
+        /// </summary>
+        /// <value>OAuth client that has the flow locked.</value>
+        [DataMember(Name="lockedClient", EmitDefaultValue=false)]
+        public DomainEntityRef LockedClient { get; set; }
         
         
         
@@ -385,6 +402,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  LockedUser: ").Append(LockedUser).Append("\n");
+            sb.Append("  LockedClient: ").Append(LockedClient).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  System: ").Append(System).Append("\n");
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
@@ -461,6 +479,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LockedUser == other.LockedUser ||
                     this.LockedUser != null &&
                     this.LockedUser.Equals(other.LockedUser)
+                ) &&
+                (
+                    this.LockedClient == other.LockedClient ||
+                    this.LockedClient != null &&
+                    this.LockedClient.Equals(other.LockedClient)
                 ) &&
                 (
                     this.Active == other.Active ||
@@ -548,6 +571,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LockedUser != null)
                     hash = hash * 59 + this.LockedUser.GetHashCode();
+                
+                if (this.LockedClient != null)
+                    hash = hash * 59 + this.LockedClient.GetHashCode();
                 
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();

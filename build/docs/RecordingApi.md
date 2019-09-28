@@ -611,7 +611,7 @@ namespace Example
 
 <a name="getconversationrecordingmetadatarecordingid"></a>
 
-## [**Recording**](Recording.html) GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId)
+## [**RecordingMetadata**](RecordingMetadata.html) GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId)
 
 
 
@@ -646,7 +646,7 @@ namespace Example
             try
             { 
                 // Get metadata for a specific recording. Does not return playable media.
-                Recording result = apiInstance.GetConversationRecordingmetadataRecordingId(conversationId, recordingId);
+                RecordingMetadata result = apiInstance.GetConversationRecordingmetadataRecordingId(conversationId, recordingId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -669,7 +669,7 @@ namespace Example
 
 ### Return type
 
-[**Recording**](Recording.html)
+[**RecordingMetadata**](RecordingMetadata.html)
 
 <a name="getconversationrecordings"></a>
 

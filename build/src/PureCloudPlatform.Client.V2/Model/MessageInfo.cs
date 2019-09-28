@@ -44,10 +44,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageInfo" /> class.
         /// </summary>
-        /// <param name="LocalizableMessageCode">LocalizableMessageCode.</param>
-        /// <param name="Message">Message.</param>
-        /// <param name="MessageWithParams">MessageWithParams.</param>
-        /// <param name="MessageParams">MessageParams.</param>
+        /// <param name="LocalizableMessageCode">Key that can be used to localize the message..</param>
+        /// <param name="Message">Description of the message..</param>
+        /// <param name="MessageWithParams">Message with template fields for variable replacement..</param>
+        /// <param name="MessageParams">Map with fields for variable replacement..</param>
         public MessageInfo(string LocalizableMessageCode = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null)
         {
             this.LocalizableMessageCode = LocalizableMessageCode;
@@ -60,32 +60,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets LocalizableMessageCode
+        /// Key that can be used to localize the message.
         /// </summary>
+        /// <value>Key that can be used to localize the message.</value>
         [DataMember(Name="localizableMessageCode", EmitDefaultValue=false)]
         public string LocalizableMessageCode { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Message
+        /// Description of the message.
         /// </summary>
+        /// <value>Description of the message.</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MessageWithParams
+        /// Message with template fields for variable replacement.
         /// </summary>
+        /// <value>Message with template fields for variable replacement.</value>
         [DataMember(Name="messageWithParams", EmitDefaultValue=false)]
         public string MessageWithParams { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MessageParams
+        /// Map with fields for variable replacement.
         /// </summary>
+        /// <value>Map with fields for variable replacement.</value>
         [DataMember(Name="messageParams", EmitDefaultValue=false)]
         public Dictionary<string, string> MessageParams { get; set; }
         

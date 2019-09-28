@@ -35,6 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Current activity status of the location.
         /// </summary>
@@ -62,6 +65,8 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
+        
+        
         
         
         
@@ -126,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="LocationDefinition" /> class.
         /// </summary>
         /// <param name="Name">The name of the Location. (required).</param>
+        /// <param name="ContactUser">Site contact for the location.</param>
         /// <param name="EmergencyNumber">EmergencyNumber.</param>
         /// <param name="Address">Address.</param>
         /// <param name="AddressVerified">AddressVerified.</param>
@@ -135,9 +141,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Path">A list of ancestor IDs in order.</param>
         /// <param name="ProfileImage">Profile image set for the location.</param>
         /// <param name="FloorplanImage">FloorplanImage.</param>
-        public LocationDefinition(string Name = null, LocationEmergencyNumber EmergencyNumber = null, LocationAddress Address = null, bool? AddressVerified = null, StateEnum? State = null, string Notes = null, int? Version = null, List<string> Path = null, List<LocationImage> ProfileImage = null, List<LocationImage> FloorplanImage = null)
+        public LocationDefinition(string Name = null, AddressableEntityRef ContactUser = null, LocationEmergencyNumber EmergencyNumber = null, LocationAddress Address = null, bool? AddressVerified = null, StateEnum? State = null, string Notes = null, int? Version = null, List<string> Path = null, List<LocationImage> ProfileImage = null, List<LocationImage> FloorplanImage = null)
         {
             this.Name = Name;
+            this.ContactUser = ContactUser;
             this.EmergencyNumber = EmergencyNumber;
             this.Address = Address;
             this.AddressVerified = AddressVerified;
@@ -167,6 +174,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the Location.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Site contact for the location
+        /// </summary>
+        /// <value>Site contact for the location</value>
+        [DataMember(Name="contactUser", EmitDefaultValue=false)]
+        public AddressableEntityRef ContactUser { get; set; }
         
         
         
@@ -257,6 +273,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  ContactUser: ").Append(ContactUser).Append("\n");
             sb.Append("  EmergencyNumber: ").Append(EmergencyNumber).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  AddressVerified: ").Append(AddressVerified).Append("\n");
@@ -312,6 +329,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.ContactUser == other.ContactUser ||
+                    this.ContactUser != null &&
+                    this.ContactUser.Equals(other.ContactUser)
                 ) &&
                 (
                     this.EmergencyNumber == other.EmergencyNumber ||
@@ -382,6 +404,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.ContactUser != null)
+                    hash = hash * 59 + this.ContactUser.GetHashCode();
                 
                 if (this.EmergencyNumber != null)
                     hash = hash * 59 + this.EmergencyNumber.GetHashCode();

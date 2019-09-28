@@ -98,11 +98,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
         
         
         
@@ -130,11 +135,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         /// <param name="Secure">Secure.</param>
         /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="CreatedByClient">CreatedByClient.</param>
         /// <param name="ConfigurationUri">ConfigurationUri.</param>
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="GenerationId">GenerationId.</param>
         /// <param name="PublishResultUri">PublishResultUri.</param>
-        public FlowVersion(string Id = null, string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, User CreatedBy = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null)
+        public FlowVersion(string Id = null, string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, User CreatedBy = null, DomainEntityRef CreatedByClient = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -143,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Type = Type;
             this.Secure = Secure;
             this.CreatedBy = CreatedBy;
+            this.CreatedByClient = CreatedByClient;
             this.ConfigurationUri = ConfigurationUri;
             this.DateCreated = DateCreated;
             this.GenerationId = GenerationId;
@@ -204,6 +211,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets CreatedByClient
+        /// </summary>
+        [DataMember(Name="createdByClient", EmitDefaultValue=false)]
+        public DomainEntityRef CreatedByClient { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets ConfigurationUri
         /// </summary>
         [DataMember(Name="configurationUri", EmitDefaultValue=false)]
@@ -259,6 +274,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Secure: ").Append(Secure).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            sb.Append("  CreatedByClient: ").Append(CreatedByClient).Append("\n");
             sb.Append("  ConfigurationUri: ").Append(ConfigurationUri).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  GenerationId: ").Append(GenerationId).Append("\n");
@@ -336,6 +352,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CreatedBy.Equals(other.CreatedBy)
                 ) &&
                 (
+                    this.CreatedByClient == other.CreatedByClient ||
+                    this.CreatedByClient != null &&
+                    this.CreatedByClient.Equals(other.CreatedByClient)
+                ) &&
+                (
                     this.ConfigurationUri == other.ConfigurationUri ||
                     this.ConfigurationUri != null &&
                     this.ConfigurationUri.Equals(other.ConfigurationUri)
@@ -394,6 +415,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
+                
+                if (this.CreatedByClient != null)
+                    hash = hash * 59 + this.CreatedByClient.GetHashCode();
                 
                 if (this.ConfigurationUri != null)
                     hash = hash * 59 + this.ConfigurationUri.GetHashCode();

@@ -16,6 +16,7 @@ title: ReportingExportJobRequest
 | **Filter** | [**ViewFilter**](ViewFilter.html) | Filters to apply to create the view | |
 | **Read** | **bool?** | Indicates if the request has been marked as read | [optional] |
 | **Locale** | **string** | The locale use for localization of the exported data, i.e. en-us, es-mx   | |
+| **HasFormatDurations** | **bool?** | Indicates if durations are formatted in hh:mm:ss format instead of ms | [optional] |
 {: class="table table-striped"}
 
 

@@ -1645,7 +1645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<NumberPlan> GetTelephonyProvidersEdgesSiteNumberplanWithHttpInfo (string siteId, string numberPlanId);
         
         /// <summary>
-        /// Get the list of Number Plans for this Site.
+        /// Get the list of Number Plans for this Site. Only fetches the first 200 records.
         /// </summary>
         /// <remarks>
         /// 
@@ -1656,7 +1656,7 @@ namespace PureCloudPlatform.Client.V2.Api
         List<NumberPlan> GetTelephonyProvidersEdgesSiteNumberplans (string siteId);
 
         /// <summary>
-        /// Get the list of Number Plans for this Site.
+        /// Get the list of Number Plans for this Site. Only fetches the first 200 records.
         /// </summary>
         /// <remarks>
         /// 
@@ -2879,7 +2879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Site> PutTelephonyProvidersEdgesSiteWithHttpInfo (string siteId, Site body);
         
         /// <summary>
-        /// Update the list of Number Plans.
+        /// Update the list of Number Plans. A user can update maximum 200 number plans at a time.
         /// </summary>
         /// <remarks>
         /// 
@@ -2891,7 +2891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         List<NumberPlan> PutTelephonyProvidersEdgesSiteNumberplans (string siteId, List<NumberPlan> body);
 
         /// <summary>
-        /// Update the list of Number Plans.
+        /// Update the list of Number Plans. A user can update maximum 200 number plans at a time.
         /// </summary>
         /// <remarks>
         /// 
@@ -4585,7 +4585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<NumberPlan>> GetTelephonyProvidersEdgesSiteNumberplanAsyncWithHttpInfo (string siteId, string numberPlanId);
         
         /// <summary>
-        /// Get the list of Number Plans for this Site.
+        /// Get the list of Number Plans for this Site. Only fetches the first 200 records.
         /// </summary>
         /// <remarks>
         /// 
@@ -4596,7 +4596,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<List<NumberPlan>> GetTelephonyProvidersEdgesSiteNumberplansAsync (string siteId);
 
         /// <summary>
-        /// Get the list of Number Plans for this Site.
+        /// Get the list of Number Plans for this Site. Only fetches the first 200 records.
         /// </summary>
         /// <remarks>
         /// 
@@ -5819,7 +5819,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Site>> PutTelephonyProvidersEdgesSiteAsyncWithHttpInfo (string siteId, Site body);
         
         /// <summary>
-        /// Update the list of Number Plans.
+        /// Update the list of Number Plans. A user can update maximum 200 number plans at a time.
         /// </summary>
         /// <remarks>
         /// 
@@ -5831,7 +5831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<List<NumberPlan>> PutTelephonyProvidersEdgesSiteNumberplansAsync (string siteId, List<NumberPlan> body);
 
         /// <summary>
-        /// Update the list of Number Plans.
+        /// Update the list of Number Plans. A user can update maximum 200 number plans at a time.
         /// </summary>
         /// <remarks>
         /// 
@@ -19218,7 +19218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get the list of Number Plans for this Site. 
+        /// Get the list of Number Plans for this Site. Only fetches the first 200 records. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -19230,7 +19230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Number Plans for this Site. 
+        /// Get the list of Number Plans for this Site. Only fetches the first 200 records. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -19313,7 +19313,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get the list of Number Plans for this Site. 
+        /// Get the list of Number Plans for this Site. Only fetches the first 200 records. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -19326,7 +19326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of Number Plans for this Site. 
+        /// Get the list of Number Plans for this Site. Only fetches the first 200 records. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -29779,7 +29779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update the list of Number Plans. 
+        /// Update the list of Number Plans. A user can update maximum 200 number plans at a time. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -29792,7 +29792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the list of Number Plans. 
+        /// Update the list of Number Plans. A user can update maximum 200 number plans at a time. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -29884,7 +29884,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update the list of Number Plans. 
+        /// Update the list of Number Plans. A user can update maximum 200 number plans at a time. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -29898,7 +29898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the list of Number Plans. 
+        /// Update the list of Number Plans. A user can update maximum 200 number plans at a time. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>

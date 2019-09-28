@@ -38,6 +38,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -105,6 +108,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -121,16 +126,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DependencyStatus" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="User">User.</param>
+        /// <param name="User">User that initiated the build..</param>
+        /// <param name="Client">OAuth client that initiated the build..</param>
         /// <param name="BuildId">BuildId.</param>
         /// <param name="DateStarted">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateCompleted">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Status">Status.</param>
         /// <param name="FailedObjects">FailedObjects.</param>
-        public DependencyStatus(string Name = null, User User = null, string BuildId = null, DateTime? DateStarted = null, DateTime? DateCompleted = null, StatusEnum? Status = null, List<FailedObject> FailedObjects = null)
+        public DependencyStatus(string Name = null, User User = null, DomainEntityRef Client = null, string BuildId = null, DateTime? DateStarted = null, DateTime? DateCompleted = null, StatusEnum? Status = null, List<FailedObject> FailedObjects = null)
         {
             this.Name = Name;
             this.User = User;
+            this.Client = Client;
             this.BuildId = BuildId;
             this.DateStarted = DateStarted;
             this.DateCompleted = DateCompleted;
@@ -159,10 +166,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets User
+        /// User that initiated the build.
         /// </summary>
+        /// <value>User that initiated the build.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
+        
+        
+        
+        /// <summary>
+        /// OAuth client that initiated the build.
+        /// </summary>
+        /// <value>OAuth client that initiated the build.</value>
+        [DataMember(Name="client", EmitDefaultValue=false)]
+        public DomainEntityRef Client { get; set; }
         
         
         
@@ -222,6 +239,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  Client: ").Append(Client).Append("\n");
             sb.Append("  BuildId: ").Append(BuildId).Append("\n");
             sb.Append("  DateStarted: ").Append(DateStarted).Append("\n");
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
@@ -280,6 +298,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.User.Equals(other.User)
                 ) &&
                 (
+                    this.Client == other.Client ||
+                    this.Client != null &&
+                    this.Client.Equals(other.Client)
+                ) &&
+                (
                     this.BuildId == other.BuildId ||
                     this.BuildId != null &&
                     this.BuildId.Equals(other.BuildId)
@@ -331,6 +354,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
+                if (this.Client != null)
+                    hash = hash * 59 + this.Client.GetHashCode();
                 
                 if (this.BuildId != null)
                     hash = hash * 59 + this.BuildId.GetHashCode();

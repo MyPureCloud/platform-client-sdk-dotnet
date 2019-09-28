@@ -47,7 +47,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum SubscriptionChanged for "subscription_changed"
             /// </summary>
             [EnumMember(Value = "subscription_changed")]
-            SubscriptionChanged
+            SubscriptionChanged,
+            
+            /// <summary>
+            /// Enum TokenRevoked for "token_revoked"
+            /// </summary>
+            [EnumMember(Value = "token_revoked")]
+            TokenRevoked
         }
         
         
@@ -83,7 +89,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AnotherChannelSubscribed for "another_channel_subscribed"
             /// </summary>
             [EnumMember(Value = "another_channel_subscribed")]
-            AnotherChannelSubscribed
+            AnotherChannelSubscribed,
+            
+            /// <summary>
+            /// Enum UserTokensRevoked for "user_tokens_revoked"
+            /// </summary>
+            [EnumMember(Value = "user_tokens_revoked")]
+            UserTokensRevoked
         }
         
         

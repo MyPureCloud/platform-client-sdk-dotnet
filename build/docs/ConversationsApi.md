@@ -1913,7 +1913,7 @@ namespace Example
 
 Get a web chat conversation message
 
-
+The current user must be involved with the conversation to get its messages.
 
 Requires NO permissions: 
 
@@ -1975,7 +1975,7 @@ namespace Example
 
 Get the messages of a chat conversation.
 
-
+The current user must be involved with the conversation to get its messages.
 
 Requires NO permissions: 
 

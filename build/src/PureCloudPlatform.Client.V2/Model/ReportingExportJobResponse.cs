@@ -494,6 +494,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current status of the export request
         /// </summary>
@@ -551,6 +554,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobResponse" /> class.
@@ -576,7 +581,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedDateTime">The last modified date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
         /// <param name="Locale">The locale use for localization of the exported data, i.e. en-us, es-mx   (required).</param>
         /// <param name="PercentageComplete">The percentage of the job that has completed processing (required).</param>
-        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null)
+        /// <param name="HasFormatDurations">Indicates if durations are formatted in hh:mm:ss format instead of ms.</param>
+        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null)
         {
             this.Name = Name;
             this.Status = Status;
@@ -593,6 +599,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ModifiedDateTime = ModifiedDateTime;
             this.Locale = Locale;
             this.PercentageComplete = PercentageComplete;
+            this.HasFormatDurations = HasFormatDurations;
             
         }
         
@@ -714,6 +721,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Indicates if durations are formatted in hh:mm:ss format instead of ms
+        /// </summary>
+        /// <value>Indicates if durations are formatted in hh:mm:ss format instead of ms</value>
+        [DataMember(Name="hasFormatDurations", EmitDefaultValue=false)]
+        public bool? HasFormatDurations { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -746,6 +762,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModifiedDateTime: ").Append(ModifiedDateTime).Append("\n");
             sb.Append("  Locale: ").Append(Locale).Append("\n");
             sb.Append("  PercentageComplete: ").Append(PercentageComplete).Append("\n");
+            sb.Append("  HasFormatDurations: ").Append(HasFormatDurations).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -864,6 +881,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PercentageComplete.Equals(other.PercentageComplete)
                 ) &&
                 (
+                    this.HasFormatDurations == other.HasFormatDurations ||
+                    this.HasFormatDurations != null &&
+                    this.HasFormatDurations.Equals(other.HasFormatDurations)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -929,6 +951,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PercentageComplete != null)
                     hash = hash * 59 + this.PercentageComplete.GetHashCode();
+                
+                if (this.HasFormatDurations != null)
+                    hash = hash * 59 + this.HasFormatDurations.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

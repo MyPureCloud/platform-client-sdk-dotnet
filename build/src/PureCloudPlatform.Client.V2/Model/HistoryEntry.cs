@@ -127,12 +127,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The action performed
         /// </summary>
         /// <value>The action performed</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
+        
+        
         
         
         
@@ -152,15 +157,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Action">The action performed.</param>
         /// <param name="Resource">For actions performed not on the item itself, but on a sub-item, this field identifies the sub-item by name.  For example, for actions performed on prompt resources, this will be the prompt resource name..</param>
         /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="User">User.</param>
+        /// <param name="User">User associated with this entry..</param>
+        /// <param name="Client">OAuth client associated with this entry..</param>
         /// <param name="Version">Version.</param>
         /// <param name="Secure">Secure.</param>
-        public HistoryEntry(ActionEnum? Action = null, string Resource = null, DateTime? Timestamp = null, User User = null, string Version = null, bool? Secure = null)
+        public HistoryEntry(ActionEnum? Action = null, string Resource = null, DateTime? Timestamp = null, User User = null, DomainEntityRef Client = null, string Version = null, bool? Secure = null)
         {
             this.Action = Action;
             this.Resource = Resource;
             this.Timestamp = Timestamp;
             this.User = User;
+            this.Client = Client;
             this.Version = Version;
             this.Secure = Secure;
             
@@ -189,10 +196,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets User
+        /// User associated with this entry.
         /// </summary>
+        /// <value>User associated with this entry.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
+        
+        
+        
+        /// <summary>
+        /// OAuth client associated with this entry.
+        /// </summary>
+        /// <value>OAuth client associated with this entry.</value>
+        [DataMember(Name="client", EmitDefaultValue=false)]
+        public DomainEntityRef Client { get; set; }
         
         
         
@@ -224,6 +241,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Resource: ").Append(Resource).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  Client: ").Append(Client).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Secure: ").Append(Secure).Append("\n");
             sb.Append("}\n");
@@ -283,6 +301,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.User.Equals(other.User)
                 ) &&
                 (
+                    this.Client == other.Client ||
+                    this.Client != null &&
+                    this.Client.Equals(other.Client)
+                ) &&
+                (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
@@ -317,6 +340,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
+                if (this.Client != null)
+                    hash = hash * 59 + this.Client.GetHashCode();
                 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();

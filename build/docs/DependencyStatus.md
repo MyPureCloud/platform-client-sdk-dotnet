@@ -9,7 +9,8 @@ title: DependencyStatus
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **User** | [**User**](User.html) |  | [optional] |
+| **User** | [**User**](User.html) | User that initiated the build. | [optional] |
+| **Client** | [**DomainEntityRef**](DomainEntityRef.html) | OAuth client that initiated the build. | [optional] |
 | **BuildId** | **string** |  | [optional] |
 | **DateStarted** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **DateCompleted** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |

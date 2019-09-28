@@ -330,6 +330,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The requested format of the exported data
         /// </summary>
@@ -357,6 +360,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobRequest" /> class.
@@ -376,7 +381,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Filter">Filters to apply to create the view (required).</param>
         /// <param name="Read">Indicates if the request has been marked as read.</param>
         /// <param name="Locale">The locale use for localization of the exported data, i.e. en-us, es-mx   (required).</param>
-        public ReportingExportJobRequest(string Name = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null)
+        /// <param name="HasFormatDurations">Indicates if durations are formatted in hh:mm:ss format instead of ms.</param>
+        public ReportingExportJobRequest(string Name = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null)
         {
             this.Name = Name;
             this.TimeZone = TimeZone;
@@ -387,6 +393,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Filter = Filter;
             this.Read = Read;
             this.Locale = Locale;
+            this.HasFormatDurations = HasFormatDurations;
             
         }
         
@@ -458,6 +465,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Locale { get; set; }
         
         
+        
+        /// <summary>
+        /// Indicates if durations are formatted in hh:mm:ss format instead of ms
+        /// </summary>
+        /// <value>Indicates if durations are formatted in hh:mm:ss format instead of ms</value>
+        [DataMember(Name="hasFormatDurations", EmitDefaultValue=false)]
+        public bool? HasFormatDurations { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -476,6 +492,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("  Read: ").Append(Read).Append("\n");
             sb.Append("  Locale: ").Append(Locale).Append("\n");
+            sb.Append("  HasFormatDurations: ").Append(HasFormatDurations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -556,6 +573,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Locale == other.Locale ||
                     this.Locale != null &&
                     this.Locale.Equals(other.Locale)
+                ) &&
+                (
+                    this.HasFormatDurations == other.HasFormatDurations ||
+                    this.HasFormatDurations != null &&
+                    this.HasFormatDurations.Equals(other.HasFormatDurations)
                 );
         }
 
@@ -597,6 +619,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Locale != null)
                     hash = hash * 59 + this.Locale.GetHashCode();
+                
+                if (this.HasFormatDurations != null)
+                    hash = hash * 59 + this.HasFormatDurations.GetHashCode();
                 
                 return hash;
             }
