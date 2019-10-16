@@ -70,6 +70,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Divisionid,
             
             /// <summary>
+            /// Enum Evaluationcreateddate for "evaluationCreatedDate"
+            /// </summary>
+            [EnumMember(Value = "evaluationCreatedDate")]
+            Evaluationcreateddate,
+            
+            /// <summary>
             /// Enum Evaluationid for "evaluationId"
             /// </summary>
             [EnumMember(Value = "evaluationId")]
@@ -98,6 +104,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "rescind")]
             Rescind,
+            
+            /// <summary>
+            /// Enum Rescored for "rescored"
+            /// </summary>
+            [EnumMember(Value = "rescored")]
+            Rescored,
             
             /// <summary>
             /// Enum Userid for "userId"
@@ -133,6 +145,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "nEvaluations")]
             Nevaluations,
+            
+            /// <summary>
+            /// Enum Nevaluationsdeleted for "nEvaluationsDeleted"
+            /// </summary>
+            [EnumMember(Value = "nEvaluationsDeleted")]
+            Nevaluationsdeleted,
+            
+            /// <summary>
+            /// Enum Nevaluationsrescored for "nEvaluationsRescored"
+            /// </summary>
+            [EnumMember(Value = "nEvaluationsRescored")]
+            Nevaluationsrescored,
             
             /// <summary>
             /// Enum Ototalcriticalscore for "oTotalCriticalScore"

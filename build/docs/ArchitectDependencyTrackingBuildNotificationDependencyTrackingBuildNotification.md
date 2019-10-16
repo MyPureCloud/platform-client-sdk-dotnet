@@ -9,6 +9,7 @@ title: ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotifi
 |------------ | ------------- | ------------- | -------------|
 | **Status** | **string** |  | [optional] |
 | **User** | [**ArchitectDependencyTrackingBuildNotificationUser**](ArchitectDependencyTrackingBuildNotificationUser.html) |  | [optional] |
+| **Client** | [**ArchitectDependencyTrackingBuildNotificationClient**](ArchitectDependencyTrackingBuildNotificationClient.html) |  | [optional] |
 | **StartTime** | **DateTime?** |  | [optional] |
 {: class="table table-striped"}
 

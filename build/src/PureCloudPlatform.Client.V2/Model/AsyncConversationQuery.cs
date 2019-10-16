@@ -128,6 +128,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
@@ -147,6 +150,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AsyncConversationQuery" /> class.
@@ -160,7 +165,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Order">Sort the result set in ascending/descending order. Default is ascending.</param>
         /// <param name="OrderBy">Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart.</param>
         /// <param name="Limit">Specify number of results to be returned.</param>
-        public AsyncConversationQuery(string Interval = null, List<ConversationDetailQueryFilter> ConversationFilters = null, List<SegmentDetailQueryFilter> SegmentFilters = null, List<EvaluationDetailQueryFilter> EvaluationFilters = null, List<MediaEndpointStatDetailQueryFilter> MediaEndpointStatFilters = null, List<SurveyDetailQueryFilter> SurveyFilters = null, OrderEnum? Order = null, OrderByEnum? OrderBy = null, int? Limit = null)
+        /// <param name="StartOfDayIntervalMatching">Add a filter to only include conversations that started after the beginning of the interval start date (UTC).</param>
+        public AsyncConversationQuery(string Interval = null, List<ConversationDetailQueryFilter> ConversationFilters = null, List<SegmentDetailQueryFilter> SegmentFilters = null, List<EvaluationDetailQueryFilter> EvaluationFilters = null, List<MediaEndpointStatDetailQueryFilter> MediaEndpointStatFilters = null, List<SurveyDetailQueryFilter> SurveyFilters = null, OrderEnum? Order = null, OrderByEnum? OrderBy = null, int? Limit = null, bool? StartOfDayIntervalMatching = null)
         {
             this.Interval = Interval;
             this.ConversationFilters = ConversationFilters;
@@ -171,6 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Order = Order;
             this.OrderBy = OrderBy;
             this.Limit = Limit;
+            this.StartOfDayIntervalMatching = StartOfDayIntervalMatching;
             
         }
         
@@ -242,6 +249,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? Limit { get; set; }
         
         
+        
+        /// <summary>
+        /// Add a filter to only include conversations that started after the beginning of the interval start date (UTC)
+        /// </summary>
+        /// <value>Add a filter to only include conversations that started after the beginning of the interval start date (UTC)</value>
+        [DataMember(Name="startOfDayIntervalMatching", EmitDefaultValue=false)]
+        public bool? StartOfDayIntervalMatching { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -260,6 +276,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  OrderBy: ").Append(OrderBy).Append("\n");
             sb.Append("  Limit: ").Append(Limit).Append("\n");
+            sb.Append("  StartOfDayIntervalMatching: ").Append(StartOfDayIntervalMatching).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -340,6 +357,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Limit == other.Limit ||
                     this.Limit != null &&
                     this.Limit.Equals(other.Limit)
+                ) &&
+                (
+                    this.StartOfDayIntervalMatching == other.StartOfDayIntervalMatching ||
+                    this.StartOfDayIntervalMatching != null &&
+                    this.StartOfDayIntervalMatching.Equals(other.StartOfDayIntervalMatching)
                 );
         }
 
@@ -381,6 +403,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Limit != null)
                     hash = hash * 59 + this.Limit.GetHashCode();
+                
+                if (this.StartOfDayIntervalMatching != null)
+                    hash = hash * 59 + this.StartOfDayIntervalMatching.GetHashCode();
                 
                 return hash;
             }

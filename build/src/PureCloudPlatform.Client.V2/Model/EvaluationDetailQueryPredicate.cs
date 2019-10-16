@@ -85,6 +85,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Contextid,
             
             /// <summary>
+            /// Enum Deleted for "deleted"
+            /// </summary>
+            [EnumMember(Value = "deleted")]
+            Deleted,
+            
+            /// <summary>
             /// Enum Evaluationid for "evaluationId"
             /// </summary>
             [EnumMember(Value = "evaluationId")]
@@ -119,6 +125,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "queueId")]
             Queueid,
+            
+            /// <summary>
+            /// Enum Rescored for "rescored"
+            /// </summary>
+            [EnumMember(Value = "rescored")]
+            Rescored,
             
             /// <summary>
             /// Enum Userid for "userId"

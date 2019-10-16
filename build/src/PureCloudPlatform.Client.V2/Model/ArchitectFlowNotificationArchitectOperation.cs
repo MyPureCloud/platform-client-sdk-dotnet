@@ -29,6 +29,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActionName
         /// </summary>
@@ -180,6 +183,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets ActionName
         /// </summary>
@@ -210,17 +215,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         /// <param name="Complete">Complete.</param>
         /// <param name="User">User.</param>
+        /// <param name="Client">Client.</param>
         /// <param name="ActionName">ActionName.</param>
         /// <param name="ActionStatus">ActionStatus.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessageParams">ErrorMessageParams.</param>
         /// <param name="ErrorDetails">ErrorDetails.</param>
-        public ArchitectFlowNotificationArchitectOperation(string Id = null, bool? Complete = null, ArchitectFlowNotificationUser User = null, ActionNameEnum? ActionName = null, ActionStatusEnum? ActionStatus = null, string ErrorMessage = null, string ErrorCode = null, ArchitectFlowNotificationErrorMessageParams ErrorMessageParams = null, List<ArchitectFlowNotificationErrorDetail> ErrorDetails = null)
+        public ArchitectFlowNotificationArchitectOperation(string Id = null, bool? Complete = null, ArchitectFlowNotificationUser User = null, ArchitectFlowNotificationClient Client = null, ActionNameEnum? ActionName = null, ActionStatusEnum? ActionStatus = null, string ErrorMessage = null, string ErrorCode = null, ArchitectFlowNotificationErrorMessageParams ErrorMessageParams = null, List<ArchitectFlowNotificationErrorDetail> ErrorDetails = null)
         {
             this.Id = Id;
             this.Complete = Complete;
             this.User = User;
+            this.Client = Client;
             this.ActionName = ActionName;
             this.ActionStatus = ActionStatus;
             this.ErrorMessage = ErrorMessage;
@@ -253,6 +260,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public ArchitectFlowNotificationUser User { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Client
+        /// </summary>
+        [DataMember(Name="client", EmitDefaultValue=false)]
+        public ArchitectFlowNotificationClient Client { get; set; }
         
         
         
@@ -303,6 +318,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Complete: ").Append(Complete).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  Client: ").Append(Client).Append("\n");
             sb.Append("  ActionName: ").Append(ActionName).Append("\n");
             sb.Append("  ActionStatus: ").Append(ActionStatus).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -361,6 +377,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.User.Equals(other.User)
                 ) &&
                 (
+                    this.Client == other.Client ||
+                    this.Client != null &&
+                    this.Client.Equals(other.Client)
+                ) &&
+                (
                     this.ActionName == other.ActionName ||
                     this.ActionName != null &&
                     this.ActionName.Equals(other.ActionName)
@@ -412,6 +433,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
+                if (this.Client != null)
+                    hash = hash * 59 + this.Client.GetHashCode();
                 
                 if (this.ActionName != null)
                     hash = hash * 59 + this.ActionName.GetHashCode();

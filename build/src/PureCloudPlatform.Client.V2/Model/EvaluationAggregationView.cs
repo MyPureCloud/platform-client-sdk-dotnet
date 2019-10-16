@@ -42,6 +42,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Nevaluations,
             
             /// <summary>
+            /// Enum Nevaluationsdeleted for "nEvaluationsDeleted"
+            /// </summary>
+            [EnumMember(Value = "nEvaluationsDeleted")]
+            Nevaluationsdeleted,
+            
+            /// <summary>
+            /// Enum Nevaluationsrescored for "nEvaluationsRescored"
+            /// </summary>
+            [EnumMember(Value = "nEvaluationsRescored")]
+            Nevaluationsrescored,
+            
+            /// <summary>
             /// Enum Ototalcriticalscore for "oTotalCriticalScore"
             /// </summary>
             [EnumMember(Value = "oTotalCriticalScore")]

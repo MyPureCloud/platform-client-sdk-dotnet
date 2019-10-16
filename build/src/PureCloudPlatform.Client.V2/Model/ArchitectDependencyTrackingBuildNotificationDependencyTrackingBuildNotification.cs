@@ -35,17 +35,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification" /> class.
         /// </summary>
         /// <param name="Status">Status.</param>
         /// <param name="User">User.</param>
+        /// <param name="Client">Client.</param>
         /// <param name="StartTime">StartTime.</param>
-        public ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification(string Status = null, ArchitectDependencyTrackingBuildNotificationUser User = null, DateTime? StartTime = null)
+        public ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification(string Status = null, ArchitectDependencyTrackingBuildNotificationUser User = null, ArchitectDependencyTrackingBuildNotificationClient Client = null, DateTime? StartTime = null)
         {
             this.Status = Status;
             this.User = User;
+            this.Client = Client;
             this.StartTime = StartTime;
             
         }
@@ -69,6 +76,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Client
+        /// </summary>
+        [DataMember(Name="client", EmitDefaultValue=false)]
+        public ArchitectDependencyTrackingBuildNotificationClient Client { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets StartTime
         /// </summary>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
@@ -86,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  Client: ").Append(Client).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -134,6 +150,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.User.Equals(other.User)
                 ) &&
                 (
+                    this.Client == other.Client ||
+                    this.Client != null &&
+                    this.Client.Equals(other.Client)
+                ) &&
+                (
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
                     this.StartTime.Equals(other.StartTime)
@@ -157,6 +178,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
+                if (this.Client != null)
+                    hash = hash * 59 + this.Client.GetHashCode();
                 
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();

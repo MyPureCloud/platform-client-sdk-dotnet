@@ -131,6 +131,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ContactListFilterEvaluationFailed,
             
             /// <summary>
+            /// Enum ContactListFilterInternalError for "CONTACT_LIST_FILTER_INTERNAL_ERROR"
+            /// </summary>
+            [EnumMember(Value = "CONTACT_LIST_FILTER_INTERNAL_ERROR")]
+            ContactListFilterInternalError,
+            
+            /// <summary>
             /// Enum ContactColumnsLimitExceeded for "CONTACT_COLUMNS_LIMIT_EXCEEDED"
             /// </summary>
             [EnumMember(Value = "CONTACT_COLUMNS_LIMIT_EXCEEDED")]

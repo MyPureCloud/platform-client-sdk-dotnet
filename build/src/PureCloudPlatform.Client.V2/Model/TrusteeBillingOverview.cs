@@ -137,12 +137,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The subscription type.
         /// </summary>
         /// <value>The subscription type.</value>
         [DataMember(Name="subscriptionType", EmitDefaultValue=false)]
         public SubscriptionTypeEnum? SubscriptionType { get; set; }
+        
+        
         
         
         
@@ -188,8 +193,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContractAmendmentDate">Date-time the contract was last amended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ContractEffectiveDate">Date-time the contract became effective. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ContractEndDate">Date-time the contract ends. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="MinimumMonthlyAmount">Minimum amount that will be charged for the month.</param>
         /// <param name="InRampPeriod">InRampPeriod.</param>
-        public TrusteeBillingOverview(string Name = null, Entity Organization = null, string Currency = null, List<string> EnabledProducts = null, SubscriptionTypeEnum? SubscriptionType = null, DateTime? RampPeriodStartDate = null, DateTime? RampPeriodEndDate = null, DateTime? BillingPeriodStartDate = null, DateTime? BillingPeriodEndDate = null, List<SubscriptionOverviewUsage> Usages = null, DateTime? ContractAmendmentDate = null, DateTime? ContractEffectiveDate = null, DateTime? ContractEndDate = null, bool? InRampPeriod = null)
+        public TrusteeBillingOverview(string Name = null, Entity Organization = null, string Currency = null, List<string> EnabledProducts = null, SubscriptionTypeEnum? SubscriptionType = null, DateTime? RampPeriodStartDate = null, DateTime? RampPeriodEndDate = null, DateTime? BillingPeriodStartDate = null, DateTime? BillingPeriodEndDate = null, List<SubscriptionOverviewUsage> Usages = null, DateTime? ContractAmendmentDate = null, DateTime? ContractEffectiveDate = null, DateTime? ContractEndDate = null, string MinimumMonthlyAmount = null, bool? InRampPeriod = null)
         {
             this.Name = Name;
             this.Organization = Organization;
@@ -204,6 +210,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ContractAmendmentDate = ContractAmendmentDate;
             this.ContractEffectiveDate = ContractEffectiveDate;
             this.ContractEndDate = ContractEndDate;
+            this.MinimumMonthlyAmount = MinimumMonthlyAmount;
             this.InRampPeriod = InRampPeriod;
             
         }
@@ -329,6 +336,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Minimum amount that will be charged for the month
+        /// </summary>
+        /// <value>Minimum amount that will be charged for the month</value>
+        [DataMember(Name="minimumMonthlyAmount", EmitDefaultValue=false)]
+        public string MinimumMonthlyAmount { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets InRampPeriod
         /// </summary>
         [DataMember(Name="inRampPeriod", EmitDefaultValue=false)]
@@ -367,6 +383,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContractAmendmentDate: ").Append(ContractAmendmentDate).Append("\n");
             sb.Append("  ContractEffectiveDate: ").Append(ContractEffectiveDate).Append("\n");
             sb.Append("  ContractEndDate: ").Append(ContractEndDate).Append("\n");
+            sb.Append("  MinimumMonthlyAmount: ").Append(MinimumMonthlyAmount).Append("\n");
             sb.Append("  InRampPeriod: ").Append(InRampPeriod).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -476,6 +493,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContractEndDate.Equals(other.ContractEndDate)
                 ) &&
                 (
+                    this.MinimumMonthlyAmount == other.MinimumMonthlyAmount ||
+                    this.MinimumMonthlyAmount != null &&
+                    this.MinimumMonthlyAmount.Equals(other.MinimumMonthlyAmount)
+                ) &&
+                (
                     this.InRampPeriod == other.InRampPeriod ||
                     this.InRampPeriod != null &&
                     this.InRampPeriod.Equals(other.InRampPeriod)
@@ -540,6 +562,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ContractEndDate != null)
                     hash = hash * 59 + this.ContractEndDate.GetHashCode();
+                
+                if (this.MinimumMonthlyAmount != null)
+                    hash = hash * 59 + this.MinimumMonthlyAmount.GetHashCode();
                 
                 if (this.InRampPeriod != null)
                     hash = hash * 59 + this.InRampPeriod.GetHashCode();

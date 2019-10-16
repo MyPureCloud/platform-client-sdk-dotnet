@@ -137,12 +137,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
         /// <value>Indicates if the resource is active, inactive, or deleted.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -197,10 +202,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Addresses">Addresses.</param>
         /// <param name="Edges">Edges.</param>
         /// <param name="EdgeAutoUpdateConfig">Recurrance rule, time zone, and start/end settings for automatic edge updates for this site.</param>
+        /// <param name="MediaRegionsUseLatencyBased">MediaRegionsUseLatencyBased.</param>
         /// <param name="Location">Location (required).</param>
         /// <param name="Managed">Managed.</param>
         /// <param name="NtpSettings">Network Time Protocol settings for the site.</param>
-        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<DomainEntityRef> PrimarySites = null, List<DomainEntityRef> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, LocationDefinition Location = null, bool? Managed = null, NTPSettings NtpSettings = null)
+        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<DomainEntityRef> PrimarySites = null, List<DomainEntityRef> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, bool? MediaRegionsUseLatencyBased = null, LocationDefinition Location = null, bool? Managed = null, NTPSettings NtpSettings = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -218,6 +224,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Addresses = Addresses;
             this.Edges = Edges;
             this.EdgeAutoUpdateConfig = EdgeAutoUpdateConfig;
+            this.MediaRegionsUseLatencyBased = MediaRegionsUseLatencyBased;
             this.Location = Location;
             this.Managed = Managed;
             this.NtpSettings = NtpSettings;
@@ -376,6 +383,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets MediaRegionsUseLatencyBased
+        /// </summary>
+        [DataMember(Name="mediaRegionsUseLatencyBased", EmitDefaultValue=false)]
+        public bool? MediaRegionsUseLatencyBased { get; set; }
+        
+        
+        
+        /// <summary>
         /// Location
         /// </summary>
         /// <value>Location</value>
@@ -436,6 +451,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
             sb.Append("  Edges: ").Append(Edges).Append("\n");
             sb.Append("  EdgeAutoUpdateConfig: ").Append(EdgeAutoUpdateConfig).Append("\n");
+            sb.Append("  MediaRegionsUseLatencyBased: ").Append(MediaRegionsUseLatencyBased).Append("\n");
             sb.Append("  Location: ").Append(Location).Append("\n");
             sb.Append("  Managed: ").Append(Managed).Append("\n");
             sb.Append("  NtpSettings: ").Append(NtpSettings).Append("\n");
@@ -567,6 +583,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EdgeAutoUpdateConfig.Equals(other.EdgeAutoUpdateConfig)
                 ) &&
                 (
+                    this.MediaRegionsUseLatencyBased == other.MediaRegionsUseLatencyBased ||
+                    this.MediaRegionsUseLatencyBased != null &&
+                    this.MediaRegionsUseLatencyBased.Equals(other.MediaRegionsUseLatencyBased)
+                ) &&
+                (
                     this.Location == other.Location ||
                     this.Location != null &&
                     this.Location.Equals(other.Location)
@@ -653,6 +674,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.EdgeAutoUpdateConfig != null)
                     hash = hash * 59 + this.EdgeAutoUpdateConfig.GetHashCode();
+                
+                if (this.MediaRegionsUseLatencyBased != null)
+                    hash = hash * 59 + this.MediaRegionsUseLatencyBased.GetHashCode();
                 
                 if (this.Location != null)
                     hash = hash * 59 + this.Location.GetHashCode();
