@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Extension schemas supported by PureCloud SCIM.
+    /// Schema extensions supported by PureCloud SCIM.
     /// </summary>
     [DataContract]
     public partial class ScimConfigResourceTypeSchemaExtension :  IEquatable<ScimConfigResourceTypeSchemaExtension>
@@ -42,18 +42,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The URI of an extended schema, e.g., \&quot;urn:edu:2.0:Staff\&quot;.  This MUST be equal to the \&quot;id\&quot; attribute of a \&quot;Schema\&quot;
+        /// The URI of an extended schema, for example, \&quot;urn:edu:2.0:Staff\&quot;. Must be equal to the \&quot;id\&quot; attribute of a schema. 
         /// </summary>
-        /// <value>The URI of an extended schema, e.g., \&quot;urn:edu:2.0:Staff\&quot;.  This MUST be equal to the \&quot;id\&quot; attribute of a \&quot;Schema\&quot;</value>
+        /// <value>The URI of an extended schema, for example, \&quot;urn:edu:2.0:Staff\&quot;. Must be equal to the \&quot;id\&quot; attribute of a schema. </value>
         [DataMember(Name="schema", EmitDefaultValue=false)]
         public string Schema { get; private set; }
         
         
         
         /// <summary>
-        /// True if schema extension must be included in resource.
+        /// Indicates whether a schema extension is required.
         /// </summary>
-        /// <value>True if schema extension must be included in resource.</value>
+        /// <value>Indicates whether a schema extension is required.</value>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public bool? Required { get; private set; }
         

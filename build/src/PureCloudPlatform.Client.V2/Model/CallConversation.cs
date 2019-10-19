@@ -80,11 +80,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
+        
+        
         
         
         
@@ -97,12 +102,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Participants">The list of participants involved in the conversation..</param>
         /// <param name="OtherMediaUris">The list of other media channels involved in the conversation..</param>
         /// <param name="RecordingState">RecordingState.</param>
-        public CallConversation(string Name = null, List<CallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null)
+        /// <param name="MaxParticipants">If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference..</param>
+        public CallConversation(string Name = null, List<CallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null, int? MaxParticipants = null)
         {
             this.Name = Name;
             this.Participants = Participants;
             this.OtherMediaUris = OtherMediaUris;
             this.RecordingState = RecordingState;
+            this.MaxParticipants = MaxParticipants;
             
         }
         
@@ -146,6 +153,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference.
+        /// </summary>
+        /// <value>If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference.</value>
+        [DataMember(Name="maxParticipants", EmitDefaultValue=false)]
+        public int? MaxParticipants { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -167,6 +183,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
+            sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -230,6 +247,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecordingState.Equals(other.RecordingState)
                 ) &&
                 (
+                    this.MaxParticipants == other.MaxParticipants ||
+                    this.MaxParticipants != null &&
+                    this.MaxParticipants.Equals(other.MaxParticipants)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -262,6 +284,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
+                
+                if (this.MaxParticipants != null)
+                    hash = hash * 59 + this.MaxParticipants.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

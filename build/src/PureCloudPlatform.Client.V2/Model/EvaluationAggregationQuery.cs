@@ -180,6 +180,93 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.
+        /// </summary>
+        /// <value>Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AlternateTimeDimensionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Calibrationid for "calibrationId"
+            /// </summary>
+            [EnumMember(Value = "calibrationId")]
+            Calibrationid,
+            
+            /// <summary>
+            /// Enum Contextid for "contextId"
+            /// </summary>
+            [EnumMember(Value = "contextId")]
+            Contextid,
+            
+            /// <summary>
+            /// Enum Conversationid for "conversationId"
+            /// </summary>
+            [EnumMember(Value = "conversationId")]
+            Conversationid,
+            
+            /// <summary>
+            /// Enum Divisionid for "divisionId"
+            /// </summary>
+            [EnumMember(Value = "divisionId")]
+            Divisionid,
+            
+            /// <summary>
+            /// Enum Evaluationcreateddate for "evaluationCreatedDate"
+            /// </summary>
+            [EnumMember(Value = "evaluationCreatedDate")]
+            Evaluationcreateddate,
+            
+            /// <summary>
+            /// Enum Evaluationid for "evaluationId"
+            /// </summary>
+            [EnumMember(Value = "evaluationId")]
+            Evaluationid,
+            
+            /// <summary>
+            /// Enum Evaluatorid for "evaluatorId"
+            /// </summary>
+            [EnumMember(Value = "evaluatorId")]
+            Evaluatorid,
+            
+            /// <summary>
+            /// Enum Formid for "formId"
+            /// </summary>
+            [EnumMember(Value = "formId")]
+            Formid,
+            
+            /// <summary>
+            /// Enum Queueid for "queueId"
+            /// </summary>
+            [EnumMember(Value = "queueId")]
+            Queueid,
+            
+            /// <summary>
+            /// Enum Rescind for "rescind"
+            /// </summary>
+            [EnumMember(Value = "rescind")]
+            Rescind,
+            
+            /// <summary>
+            /// Enum Rescored for "rescored"
+            /// </summary>
+            [EnumMember(Value = "rescored")]
+            Rescored,
+            
+            /// <summary>
+            /// Enum Userid for "userId"
+            /// </summary>
+            [EnumMember(Value = "userId")]
+            Userid
+        }
         
         
         
@@ -194,6 +281,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.
+        /// </summary>
+        /// <value>Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.</value>
+        [DataMember(Name="alternateTimeDimension", EmitDefaultValue=false)]
+        public AlternateTimeDimensionEnum? AlternateTimeDimension { get; set; }
         
         
     
@@ -208,7 +308,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Metrics">Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *)..</param>
         /// <param name="FlattenMultivaluedDimensions">Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;).</param>
         /// <param name="Views">Custom derived metric views.</param>
-        public EvaluationAggregationQuery(string Interval = null, string Granularity = null, string TimeZone = null, List<GroupByEnum> GroupBy = null, EvaluationAggregateQueryFilter Filter = null, List<MetricsEnum> Metrics = null, bool? FlattenMultivaluedDimensions = null, List<EvaluationAggregationView> Views = null)
+        /// <param name="AlternateTimeDimension">Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event..</param>
+        public EvaluationAggregationQuery(string Interval = null, string Granularity = null, string TimeZone = null, List<GroupByEnum> GroupBy = null, EvaluationAggregateQueryFilter Filter = null, List<MetricsEnum> Metrics = null, bool? FlattenMultivaluedDimensions = null, List<EvaluationAggregationView> Views = null, AlternateTimeDimensionEnum? AlternateTimeDimension = null)
         {
             this.Interval = Interval;
             this.Granularity = Granularity;
@@ -218,6 +319,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Metrics = Metrics;
             this.FlattenMultivaluedDimensions = FlattenMultivaluedDimensions;
             this.Views = Views;
+            this.AlternateTimeDimension = AlternateTimeDimension;
             
         }
         
@@ -294,6 +396,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<EvaluationAggregationView> Views { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -311,6 +415,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
             sb.Append("  FlattenMultivaluedDimensions: ").Append(FlattenMultivaluedDimensions).Append("\n");
             sb.Append("  Views: ").Append(Views).Append("\n");
+            sb.Append("  AlternateTimeDimension: ").Append(AlternateTimeDimension).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -386,6 +491,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Views == other.Views ||
                     this.Views != null &&
                     this.Views.SequenceEqual(other.Views)
+                ) &&
+                (
+                    this.AlternateTimeDimension == other.AlternateTimeDimension ||
+                    this.AlternateTimeDimension != null &&
+                    this.AlternateTimeDimension.Equals(other.AlternateTimeDimension)
                 );
         }
 
@@ -424,6 +534,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Views != null)
                     hash = hash * 59 + this.Views.GetHashCode();
+                
+                if (this.AlternateTimeDimension != null)
+                    hash = hash * 59 + this.AlternateTimeDimension.GetHashCode();
                 
                 return hash;
             }

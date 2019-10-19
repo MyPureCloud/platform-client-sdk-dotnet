@@ -11,16 +11,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteScimV2User**](SCIMApi.html#deletescimv2user) | **DELETE** /api/v2/scim/v2/users/{userId} | Delete a user |
 | [**GetScimGroup**](SCIMApi.html#getscimgroup) | **GET** /api/v2/scim/groups/{groupId} | Get a group |
 | [**GetScimGroups**](SCIMApi.html#getscimgroups) | **GET** /api/v2/scim/groups | Get a list of groups |
-| [**GetScimResourcetype**](SCIMApi.html#getscimresourcetype) | **GET** /api/v2/scim/resourcetypes/{resourceType} | Get the SCIM configuration |
-| [**GetScimResourcetypes**](SCIMApi.html#getscimresourcetypes) | **GET** /api/v2/scim/resourcetypes | Get the SCIM resource types |
-| [**GetScimServiceproviderconfig**](SCIMApi.html#getscimserviceproviderconfig) | **GET** /api/v2/scim/serviceproviderconfig | Get the SCIM configuration |
+| [**GetScimResourcetype**](SCIMApi.html#getscimresourcetype) | **GET** /api/v2/scim/resourcetypes/{resourceType} | Get a resource type |
+| [**GetScimResourcetypes**](SCIMApi.html#getscimresourcetypes) | **GET** /api/v2/scim/resourcetypes | Get a list of resource types |
+| [**GetScimServiceproviderconfig**](SCIMApi.html#getscimserviceproviderconfig) | **GET** /api/v2/scim/serviceproviderconfig | Get a service provider&#39;s configuration |
 | [**GetScimUser**](SCIMApi.html#getscimuser) | **GET** /api/v2/scim/users/{userId} | Get a user |
 | [**GetScimUsers**](SCIMApi.html#getscimusers) | **GET** /api/v2/scim/users | Get a list of users |
 | [**GetScimV2Group**](SCIMApi.html#getscimv2group) | **GET** /api/v2/scim/v2/groups/{groupId} | Get a group |
 | [**GetScimV2Groups**](SCIMApi.html#getscimv2groups) | **GET** /api/v2/scim/v2/groups | Get a list of groups |
-| [**GetScimV2Resourcetype**](SCIMApi.html#getscimv2resourcetype) | **GET** /api/v2/scim/v2/resourcetypes/{resourceType} | Get the SCIM configuration |
-| [**GetScimV2Resourcetypes**](SCIMApi.html#getscimv2resourcetypes) | **GET** /api/v2/scim/v2/resourcetypes | Get the SCIM resource types |
-| [**GetScimV2Serviceproviderconfig**](SCIMApi.html#getscimv2serviceproviderconfig) | **GET** /api/v2/scim/v2/serviceproviderconfig | Get the SCIM configuration |
+| [**GetScimV2Resourcetype**](SCIMApi.html#getscimv2resourcetype) | **GET** /api/v2/scim/v2/resourcetypes/{resourceType} | Get a resource type |
+| [**GetScimV2Resourcetypes**](SCIMApi.html#getscimv2resourcetypes) | **GET** /api/v2/scim/v2/resourcetypes | Get a list of resource types |
+| [**GetScimV2Serviceproviderconfig**](SCIMApi.html#getscimv2serviceproviderconfig) | **GET** /api/v2/scim/v2/serviceproviderconfig | Get a service provider&#39;s configuration |
 | [**GetScimV2User**](SCIMApi.html#getscimv2user) | **GET** /api/v2/scim/v2/users/{userId} | Get a user |
 | [**GetScimV2Users**](SCIMApi.html#getscimv2users) | **GET** /api/v2/scim/v2/users | Get a list of users |
 | [**PatchScimGroup**](SCIMApi.html#patchscimgroup) | **PATCH** /api/v2/scim/groups/{groupId} | Modify a group |
@@ -68,7 +68,7 @@ namespace Example
 
             var apiInstance = new SCIMApi();
             var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/users.
-            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\". (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
 
             try
             { 
@@ -91,7 +91,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/users. |  |
-| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -131,7 +131,7 @@ namespace Example
 
             var apiInstance = new SCIMApi();
             var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/v2/users.
-            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\". (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
 
             try
             { 
@@ -154,7 +154,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/v2/users. |  |
-| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -257,7 +257,7 @@ namespace Example
 
             var apiInstance = new SCIMApi();
             var startIndex = 56;  // int? | The 1-based index of the first query result. (optional)  (default to 1)
-            var count = 56;  // int? | The requested number of items per page. A value of 0 returns totalResults. (optional)  (default to 25)
+            var count = 56;  // int? | The requested number of items per page. A value of 0 returns \"totalResults\". (optional)  (default to 25)
             var filter = displayName eq groupName;  // string | Filters results. (optional) 
 
             try
@@ -281,7 +281,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **startIndex** | **int?**| The 1-based index of the first query result. | [optional] [default to 1] |
-| **count** | **int?**| The requested number of items per page. A value of 0 returns totalResults. | [optional] [default to 25] |
+| **count** | **int?**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
 | **filter** | **string**| Filters results. | [optional]  |
 {: class="table table-striped"}
 
@@ -295,7 +295,7 @@ namespace Example
 
 
 
-Get the SCIM configuration
+Get a resource type
 
 
 
@@ -318,11 +318,11 @@ namespace Example
         { 
 
             var apiInstance = new SCIMApi();
-            var resourceType = resourceType_example;  // string | The ID of a resource.
+            var resourceType = resourceType_example;  // string | The type of resource. Returned with GET /api/v2/scim/resourcetypes.
 
             try
             { 
-                // Get the SCIM configuration
+                // Get a resource type
                 ScimConfigResourceType result = apiInstance.GetScimResourcetype(resourceType);
                 Debug.WriteLine(result);
             }
@@ -340,7 +340,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **resourceType** | **string**| The ID of a resource. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType |
+| **resourceType** | **string**| The type of resource. Returned with GET /api/v2/scim/resourcetypes. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType |
 {: class="table table-striped"}
 
 ### Return type
@@ -349,11 +349,11 @@ namespace Example
 
 <a name="getscimresourcetypes"></a>
 
-## [**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html) GetScimResourcetypes (string filter = null)
+## [**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html) GetScimResourcetypes ()
 
 
 
-Get the SCIM resource types
+Get a list of resource types
 
 
 
@@ -376,12 +376,11 @@ namespace Example
         { 
 
             var apiInstance = new SCIMApi();
-            var filter = displayName eq groupName;  // string | Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional) 
 
             try
             { 
-                // Get the SCIM resource types
-                ScimConfigResourceTypesListResponse result = apiInstance.GetScimResourcetypes(filter);
+                // Get a list of resource types
+                ScimConfigResourceTypesListResponse result = apiInstance.GetScimResourcetypes();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -394,11 +393,7 @@ namespace Example
 ```
 
 ### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filter** | **string**| Filtered results are invalid and will result in a 403 (Unauthorized) return. | [optional]  |
+This endpoint does require any parameters.
 {: class="table table-striped"}
 
 ### Return type
@@ -411,7 +406,7 @@ namespace Example
 
 
 
-Get the SCIM configuration
+Get a service provider's configuration
 
 
 
@@ -434,11 +429,11 @@ namespace Example
         { 
 
             var apiInstance = new SCIMApi();
-            var ifNoneMatch = ifNoneMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional) 
 
             try
             { 
-                // Get the SCIM configuration
+                // Get a service provider's configuration
                 ScimServiceProviderConfig result = apiInstance.GetScimServiceproviderconfig(ifNoneMatch);
                 Debug.WriteLine(result);
             }
@@ -456,7 +451,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ifNoneMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  | [optional]  |
+| **ifNoneMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -562,7 +557,7 @@ namespace Example
             var apiInstance = new SCIMApi();
             var filter = filter_example;  // string | Filters results.
             var startIndex = 56;  // int? | The 1-based index of the first query result. (optional)  (default to 1)
-            var count = 56;  // int? | The requested number of items per page. A value of 0 returns totalResults. (optional)  (default to 25)
+            var count = 56;  // int? | The requested number of items per page. A value of 0 returns \"totalResults\". (optional)  (default to 25)
 
             try
             { 
@@ -586,7 +581,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **filter** | **string**| Filters results. |  |
 | **startIndex** | **int?**| The 1-based index of the first query result. | [optional] [default to 1] |
-| **count** | **int?**| The requested number of items per page. A value of 0 returns totalResults. | [optional] [default to 25] |
+| **count** | **int?**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
 {: class="table table-striped"}
 
 ### Return type
@@ -690,7 +685,7 @@ namespace Example
             var apiInstance = new SCIMApi();
             var filter = displayName eq groupName;  // string | Filters results.
             var startIndex = 56;  // int? | The 1-based index of the first query result. (optional)  (default to 1)
-            var count = 56;  // int? | The requested number of items per page. A value of 0 returns totalResults. (optional)  (default to 25)
+            var count = 56;  // int? | The requested number of items per page. A value of 0 returns \"totalResults\". (optional)  (default to 25)
 
             try
             { 
@@ -714,7 +709,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **filter** | **string**| Filters results. |  |
 | **startIndex** | **int?**| The 1-based index of the first query result. | [optional] [default to 1] |
-| **count** | **int?**| The requested number of items per page. A value of 0 returns totalResults. | [optional] [default to 25] |
+| **count** | **int?**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
 {: class="table table-striped"}
 
 ### Return type
@@ -727,7 +722,7 @@ namespace Example
 
 
 
-Get the SCIM configuration
+Get a resource type
 
 
 
@@ -750,11 +745,11 @@ namespace Example
         { 
 
             var apiInstance = new SCIMApi();
-            var resourceType = resourceType_example;  // string | The ID of a resource.
+            var resourceType = resourceType_example;  // string | The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes.
 
             try
             { 
-                // Get the SCIM configuration
+                // Get a resource type
                 ScimConfigResourceType result = apiInstance.GetScimV2Resourcetype(resourceType);
                 Debug.WriteLine(result);
             }
@@ -772,7 +767,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **resourceType** | **string**| The ID of a resource. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType |
+| **resourceType** | **string**| The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType |
 {: class="table table-striped"}
 
 ### Return type
@@ -781,11 +776,11 @@ namespace Example
 
 <a name="getscimv2resourcetypes"></a>
 
-## [**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html) GetScimV2Resourcetypes (string filter = null)
+## [**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html) GetScimV2Resourcetypes ()
 
 
 
-Get the SCIM resource types
+Get a list of resource types
 
 
 
@@ -808,12 +803,11 @@ namespace Example
         { 
 
             var apiInstance = new SCIMApi();
-            var filter = displayName eq groupName;  // string | Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional) 
 
             try
             { 
-                // Get the SCIM resource types
-                ScimConfigResourceTypesListResponse result = apiInstance.GetScimV2Resourcetypes(filter);
+                // Get a list of resource types
+                ScimConfigResourceTypesListResponse result = apiInstance.GetScimV2Resourcetypes();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -826,11 +820,7 @@ namespace Example
 ```
 
 ### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filter** | **string**| Filtered results are invalid and will result in a 403 (Unauthorized) return. | [optional]  |
+This endpoint does require any parameters.
 {: class="table table-striped"}
 
 ### Return type
@@ -843,7 +833,7 @@ namespace Example
 
 
 
-Get the SCIM configuration
+Get a service provider's configuration
 
 
 
@@ -870,7 +860,7 @@ namespace Example
 
             try
             { 
-                // Get the SCIM configuration
+                // Get a service provider's configuration
                 ScimServiceProviderConfig result = apiInstance.GetScimV2Serviceproviderconfig(ifNoneMatch);
                 Debug.WriteLine(result);
             }
@@ -994,7 +984,7 @@ namespace Example
             var apiInstance = new SCIMApi();
             var filter = filter_example;  // string | Filters results.
             var startIndex = 56;  // int? | The 1-based index of the first query result. (optional)  (default to 1)
-            var count = 56;  // int? | The requested number of items per page. A value of 0 returns totalResults. (optional)  (default to 25)
+            var count = 56;  // int? | The requested number of items per page. A value of 0 returns \"totalResults\". (optional)  (default to 25)
 
             try
             { 
@@ -1018,7 +1008,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **filter** | **string**| Filters results. |  |
 | **startIndex** | **int?**| The 1-based index of the first query result. | [optional] [default to 1] |
-| **count** | **int?**| The requested number of items per page. A value of 0 returns totalResults. | [optional] [default to 25] |
+| **count** | **int?**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
 {: class="table table-striped"}
 
 ### Return type
@@ -1059,7 +1049,7 @@ namespace Example
             var apiInstance = new SCIMApi();
             var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/groups.
             var body = new ScimV2PatchRequest(); // ScimV2PatchRequest | The information used to modify a group.
-            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\". (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
 
             try
             { 
@@ -1083,7 +1073,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/groups. |  |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| The information used to modify a group. |  |
-| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1125,7 +1115,7 @@ namespace Example
             var apiInstance = new SCIMApi();
             var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/users.
             var body = new ScimV2PatchRequest(); // ScimV2PatchRequest | The information used to modify a user.
-            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\". (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
 
             try
             { 
@@ -1149,7 +1139,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/users. |  |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| The information used to modify a user. |  |
-| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1190,7 +1180,7 @@ namespace Example
             var apiInstance = new SCIMApi();
             var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/v2/groups.
             var body = new ScimV2PatchRequest(); // ScimV2PatchRequest | The information used to modify a group.
-            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\". (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
 
             try
             { 
@@ -1214,7 +1204,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. |  |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| The information used to modify a group. |  |
-| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1256,7 +1246,7 @@ namespace Example
             var apiInstance = new SCIMApi();
             var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/v2/users.
             var body = new ScimV2PatchRequest(); // ScimV2PatchRequest | The information used to modify a user.
-            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\". (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
 
             try
             { 
@@ -1280,7 +1270,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/v2/users. |  |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| The information used to modify a user. |  |
-| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1443,7 +1433,7 @@ namespace Example
             var apiInstance = new SCIMApi();
             var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/groups.
             var body = new ScimV2Group(); // ScimV2Group | The information used to replace a group.
-            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\". (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
 
             try
             { 
@@ -1467,7 +1457,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/groups. |  |
 | **body** | [**ScimV2Group**](ScimV2Group.html)| The information used to replace a group. |  |
-| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1509,7 +1499,7 @@ namespace Example
             var apiInstance = new SCIMApi();
             var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/users.
             var body = new ScimV2User(); // ScimV2User | The information used to replace a user.
-            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\". (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
 
             try
             { 
@@ -1533,7 +1523,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/users. |  |
 | **body** | [**ScimV2User**](ScimV2User.html)| The information used to replace a user. |  |
-| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1574,7 +1564,7 @@ namespace Example
             var apiInstance = new SCIMApi();
             var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/v2/groups.
             var body = new ScimV2Group(); // ScimV2Group | The information used to replace a group.
-            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\". (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
 
             try
             { 
@@ -1598,7 +1588,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. |  |
 | **body** | [**ScimV2Group**](ScimV2Group.html)| The information used to replace a group. |  |
-| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1640,7 +1630,7 @@ namespace Example
             var apiInstance = new SCIMApi();
             var userId = userId_example;  // string | The ID of a user. Returned with GET /api/v2/scim/v2/users.
             var body = new ScimV2User(); // ScimV2User | The information used to replace a user.
-            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\". (optional) 
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
 
             try
             { 
@@ -1664,7 +1654,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/v2/users. |  |
 | **body** | [**ScimV2User**](ScimV2User.html)| The information used to replace a user. |  |
-| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional]  |
+| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

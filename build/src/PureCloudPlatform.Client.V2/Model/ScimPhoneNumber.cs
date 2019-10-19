@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM V2 ScimEmail
+    /// SCIM V2 phone number
     /// </summary>
     [DataContract]
     public partial class ScimPhoneNumber :  IEquatable<ScimPhoneNumber>
@@ -104,7 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimPhoneNumber" /> class.
         /// </summary>
-        /// <param name="Value">A phone number in E.164 format..</param>
+        /// <param name="Value">The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext=xxxxx..</param>
         /// <param name="Type">The type of phone number..</param>
         /// <param name="Primary">Indicates whether the phone number is the primary phone number..</param>
         public ScimPhoneNumber(string Value = null, TypeEnum? Type = null, bool? Primary = null)
@@ -118,9 +118,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// A phone number in E.164 format.
+        /// The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext=xxxxx.
         /// </summary>
-        /// <value>A phone number in E.164 format.</value>
+        /// <value>The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext=xxxxx.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         

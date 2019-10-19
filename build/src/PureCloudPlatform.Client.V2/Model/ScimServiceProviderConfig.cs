@@ -74,14 +74,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfig" /> class.
         /// </summary>
-        /// <param name="Schemas">schemas supported.</param>
-        /// <param name="Patch">Patch support.</param>
-        /// <param name="Filter">Filter support. Additional properties: maxResults.</param>
-        /// <param name="Etag">Entity Tag support.</param>
-        /// <param name="Sort">Sort support.</param>
-        /// <param name="Bulk">Bulk support.</param>
-        /// <param name="ChangePassword">Change password.</param>
-        /// <param name="AuthenticationSchemes">Authentication schemes supported..</param>
+        /// <param name="Schemas">The list of supported schemas..</param>
+        /// <param name="Patch">\&quot;patch\&quot; configuration options..</param>
+        /// <param name="Filter">\&quot;filter\&quot; configuration options..</param>
+        /// <param name="Etag">\&quot;ETag\&quot; configuration options..</param>
+        /// <param name="Sort">\&quot;sort\&quot; configuration options..</param>
+        /// <param name="Bulk">\&quot;bulk\&quot; configuration options..</param>
+        /// <param name="ChangePassword">\&quot;changePassword\&quot; configuration options..</param>
+        /// <param name="AuthenticationSchemes">The list of supported authentication schemes..</param>
         /// <param name="Meta">Resource SCIM meta.</param>
         public ScimServiceProviderConfig(List<string> Schemas = null, ScimServiceProviderConfigSimpleFeature Patch = null, ScimServiceProviderConfigFilterFeature Filter = null, ScimServiceProviderConfigSimpleFeature Etag = null, ScimServiceProviderConfigSimpleFeature Sort = null, ScimServiceProviderConfigBulkFeature Bulk = null, ScimServiceProviderConfigSimpleFeature ChangePassword = null, List<ScimServiceProviderConfigAuthenticationScheme> AuthenticationSchemes = null, ScimMetadata Meta = null)
         {
@@ -100,81 +100,81 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// schemas supported
+        /// The list of supported schemas.
         /// </summary>
-        /// <value>schemas supported</value>
+        /// <value>The list of supported schemas.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
         public List<string> Schemas { get; set; }
         
         
         
         /// <summary>
-        /// Documentation
+        /// The HTTP-addressable URL that points to the service provider&#39;s documentation.
         /// </summary>
-        /// <value>Documentation</value>
+        /// <value>The HTTP-addressable URL that points to the service provider&#39;s documentation.</value>
         [DataMember(Name="documentationUri", EmitDefaultValue=false)]
         public string DocumentationUri { get; private set; }
         
         
         
         /// <summary>
-        /// Patch support
+        /// \&quot;patch\&quot; configuration options.
         /// </summary>
-        /// <value>Patch support</value>
+        /// <value>\&quot;patch\&quot; configuration options.</value>
         [DataMember(Name="patch", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature Patch { get; set; }
         
         
         
         /// <summary>
-        /// Filter support. Additional properties: maxResults
+        /// \&quot;filter\&quot; configuration options.
         /// </summary>
-        /// <value>Filter support. Additional properties: maxResults</value>
+        /// <value>\&quot;filter\&quot; configuration options.</value>
         [DataMember(Name="filter", EmitDefaultValue=false)]
         public ScimServiceProviderConfigFilterFeature Filter { get; set; }
         
         
         
         /// <summary>
-        /// Entity Tag support
+        /// \&quot;ETag\&quot; configuration options.
         /// </summary>
-        /// <value>Entity Tag support</value>
+        /// <value>\&quot;ETag\&quot; configuration options.</value>
         [DataMember(Name="etag", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature Etag { get; set; }
         
         
         
         /// <summary>
-        /// Sort support
+        /// \&quot;sort\&quot; configuration options.
         /// </summary>
-        /// <value>Sort support</value>
+        /// <value>\&quot;sort\&quot; configuration options.</value>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature Sort { get; set; }
         
         
         
         /// <summary>
-        /// Bulk support
+        /// \&quot;bulk\&quot; configuration options.
         /// </summary>
-        /// <value>Bulk support</value>
+        /// <value>\&quot;bulk\&quot; configuration options.</value>
         [DataMember(Name="bulk", EmitDefaultValue=false)]
         public ScimServiceProviderConfigBulkFeature Bulk { get; set; }
         
         
         
         /// <summary>
-        /// Change password
+        /// \&quot;changePassword\&quot; configuration options.
         /// </summary>
-        /// <value>Change password</value>
+        /// <value>\&quot;changePassword\&quot; configuration options.</value>
         [DataMember(Name="changePassword", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature ChangePassword { get; set; }
         
         
         
         /// <summary>
-        /// Authentication schemes supported.
+        /// The list of supported authentication schemes.
         /// </summary>
-        /// <value>Authentication schemes supported.</value>
+        /// <value>The list of supported authentication schemes.</value>
         [DataMember(Name="authenticationSchemes", EmitDefaultValue=false)]
         public List<ScimServiceProviderConfigAuthenticationScheme> AuthenticationSchemes { get; set; }
         

@@ -7,8 +7,8 @@ title: ScimConfigResourceTypeSchemaExtension
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Schema** | **string** | The URI of an extended schema, e.g., \&quot;urn:edu:2.0:Staff\&quot;.  This MUST be equal to the \&quot;id\&quot; attribute of a \&quot;Schema\&quot; | [optional] |
-| **Required** | **bool?** | True if schema extension must be included in resource. | [optional] |
+| **Schema** | **string** | The URI of an extended schema, for example, \&quot;urn:edu:2.0:Staff\&quot;. Must be equal to the \&quot;id\&quot; attribute of a schema.  | [optional] |
+| **Required** | **bool?** | Indicates whether a schema extension is required. | [optional] |
 {: class="table table-striped"}
 
 

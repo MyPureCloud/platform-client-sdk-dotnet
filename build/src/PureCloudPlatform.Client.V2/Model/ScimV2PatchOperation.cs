@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Represents an individual patch operation. Path and value have very specific rules based on operation type. See https://tools.ietf.org/html/rfc7644#section-3.5.2 for details.
+    /// Represents an individual PATCH operation. Path and value have very specific rules based on operation type. See https://tools.ietf.org/html/rfc7644#section-3.5.2 for details.
     /// </summary>
     [DataContract]
     public partial class ScimV2PatchOperation :  IEquatable<ScimV2PatchOperation>
@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The patch operation to perform.
+        /// The PATCH operation to perform.
         /// </summary>
-        /// <value>The patch operation to perform.</value>
+        /// <value>The PATCH operation to perform.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OpEnum
         {
@@ -65,9 +65,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The patch operation to perform.
+        /// The PATCH operation to perform.
         /// </summary>
-        /// <value>The patch operation to perform.</value>
+        /// <value>The PATCH operation to perform.</value>
         [DataMember(Name="op", EmitDefaultValue=false)]
         public OpEnum? Op { get; set; }
         
@@ -86,8 +86,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2PatchOperation" /> class.
         /// </summary>
-        /// <param name="Op">The patch operation to perform. (required).</param>
-        /// <param name="Path">The attribute path that describes the target of the operation. Required for a &#39;remove&#39; operation..</param>
+        /// <param name="Op">The PATCH operation to perform. (required).</param>
+        /// <param name="Path">The attribute path that describes the target of the operation. Required for a \&quot;remove\&quot; operation..</param>
         /// <param name="Value">The value to set in the path..</param>
         public ScimV2PatchOperation(OpEnum? Op = null, string Path = null, JsonNode Value = null)
         {
@@ -102,9 +102,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The attribute path that describes the target of the operation. Required for a &#39;remove&#39; operation.
+        /// The attribute path that describes the target of the operation. Required for a \&quot;remove\&quot; operation.
         /// </summary>
-        /// <value>The attribute path that describes the target of the operation. Required for a &#39;remove&#39; operation.</value>
+        /// <value>The attribute path that describes the target of the operation. Required for a \&quot;remove\&quot; operation.</value>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public string Path { get; set; }
         

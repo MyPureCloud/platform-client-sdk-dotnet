@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of the resource.
+        /// The type of SCIM resource.
         /// </summary>
-        /// <value>The type of the resource.</value>
+        /// <value>The type of SCIM resource.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ResourceTypeEnum
         {
@@ -74,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of the resource.
+        /// The type of SCIM resource.
         /// </summary>
-        /// <value>The type of the resource.</value>
+        /// <value>The type of SCIM resource.</value>
         [DataMember(Name="resourceType", EmitDefaultValue=false)]
         public ResourceTypeEnum? ResourceType { get; set; }
         
@@ -101,9 +101,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The last time that the resource was modified. Time in ISO 6501 (UTC) format. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The last time that the resource was modified. Date time is represented as an ISO-8601 string, for example, yyyy-MM-ddTHH:mm:ss.SSSZ.
         /// </summary>
-        /// <value>The last time that the resource was modified. Time in ISO 6501 (UTC) format. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The last time that the resource was modified. Date time is represented as an ISO-8601 string, for example, yyyy-MM-ddTHH:mm:ss.SSSZ.</value>
         [DataMember(Name="lastModified", EmitDefaultValue=false)]
         public DateTime? LastModified { get; private set; }
         

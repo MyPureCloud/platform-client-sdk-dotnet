@@ -339,6 +339,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The requested format of the exported data
         /// </summary>
@@ -358,6 +361,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The type of view export job to be created</value>
         [DataMember(Name="viewType", EmitDefaultValue=false)]
         public ViewTypeEnum? ViewType { get; set; }
+        
+        
         
         
         
@@ -388,7 +393,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Read">Indicates if the request has been marked as read.</param>
         /// <param name="Locale">The locale use for localization of the exported data, i.e. en-us, es-mx   (required).</param>
         /// <param name="HasFormatDurations">Indicates if durations are formatted in hh:mm:ss format instead of ms.</param>
-        public ReportingExportJobRequest(string Name = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null)
+        /// <param name="HasSplitFilters">Indicates if filters will be split in aggregate detail exports.</param>
+        public ReportingExportJobRequest(string Name = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null)
         {
             this.Name = Name;
             this.TimeZone = TimeZone;
@@ -400,6 +406,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Read = Read;
             this.Locale = Locale;
             this.HasFormatDurations = HasFormatDurations;
+            this.HasSplitFilters = HasSplitFilters;
             
         }
         
@@ -480,6 +487,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? HasFormatDurations { get; set; }
         
         
+        
+        /// <summary>
+        /// Indicates if filters will be split in aggregate detail exports
+        /// </summary>
+        /// <value>Indicates if filters will be split in aggregate detail exports</value>
+        [DataMember(Name="hasSplitFilters", EmitDefaultValue=false)]
+        public bool? HasSplitFilters { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -499,6 +515,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Read: ").Append(Read).Append("\n");
             sb.Append("  Locale: ").Append(Locale).Append("\n");
             sb.Append("  HasFormatDurations: ").Append(HasFormatDurations).Append("\n");
+            sb.Append("  HasSplitFilters: ").Append(HasSplitFilters).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -584,6 +601,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HasFormatDurations == other.HasFormatDurations ||
                     this.HasFormatDurations != null &&
                     this.HasFormatDurations.Equals(other.HasFormatDurations)
+                ) &&
+                (
+                    this.HasSplitFilters == other.HasSplitFilters ||
+                    this.HasSplitFilters != null &&
+                    this.HasSplitFilters.Equals(other.HasSplitFilters)
                 );
         }
 
@@ -628,6 +650,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.HasFormatDurations != null)
                     hash = hash * 59 + this.HasFormatDurations.GetHashCode();
+                
+                if (this.HasSplitFilters != null)
+                    hash = hash * 59 + this.HasSplitFilters.GetHashCode();
                 
                 return hash;
             }

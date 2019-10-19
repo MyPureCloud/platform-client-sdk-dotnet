@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Filter support configuration.
+    /// \&quot;filter\&quot; configuration options.
     /// </summary>
     [DataContract]
     public partial class ScimServiceProviderConfigFilterFeature :  IEquatable<ScimServiceProviderConfigFilterFeature>
@@ -42,18 +42,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Indicates if configuration options is supported.
+        /// Indicates whether configuration options are supported.
         /// </summary>
-        /// <value>Indicates if configuration options is supported.</value>
+        /// <value>Indicates whether configuration options are supported.</value>
         [DataMember(Name="supported", EmitDefaultValue=false)]
         public bool? Supported { get; private set; }
         
         
         
         /// <summary>
-        /// Maximum results returned from filtered query.
+        /// The maximum number of results returned from a filtered query.
         /// </summary>
-        /// <value>Maximum results returned from filtered query.</value>
+        /// <value>The maximum number of results returned from a filtered query.</value>
         [DataMember(Name="maxResults", EmitDefaultValue=false)]
         public int? MaxResults { get; private set; }
         

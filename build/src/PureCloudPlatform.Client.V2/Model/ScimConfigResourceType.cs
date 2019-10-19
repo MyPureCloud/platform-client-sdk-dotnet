@@ -64,8 +64,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimConfigResourceType" /> class.
         /// </summary>
-        /// <param name="Schemas">schemas supported.</param>
-        /// <param name="SchemaExtensions">Resource extension schemas.</param>
+        /// <param name="Schemas">The list of supported schemas..</param>
+        /// <param name="SchemaExtensions">The list of schema extensions for the resource type..</param>
         /// <param name="Meta">Resource SCIM meta.</param>
         public ScimConfigResourceType(List<string> Schemas = null, List<ScimConfigResourceTypeSchemaExtension> SchemaExtensions = null, ScimMetadata Meta = null)
         {
@@ -78,63 +78,63 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always.
+        /// The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;Mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;Returned\&quot; is set to \&quot;always\&quot;.
         /// </summary>
-        /// <value>The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always.</value>
+        /// <value>The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;Mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;Returned\&quot; is set to \&quot;always\&quot;.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         
         
         
         /// <summary>
-        /// schemas supported
+        /// The list of supported schemas.
         /// </summary>
-        /// <value>schemas supported</value>
+        /// <value>The list of supported schemas.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
         public List<string> Schemas { get; set; }
         
         
         
         /// <summary>
-        /// Resource name.
+        /// The name of the resource type.
         /// </summary>
-        /// <value>Resource name.</value>
+        /// <value>The name of the resource type.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
         
         
         
         /// <summary>
-        /// Resource description.
+        /// The description of the resource type.
         /// </summary>
-        /// <value>Resource description.</value>
+        /// <value>The description of the resource type.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
         
         
         
         /// <summary>
-        /// The resource type&#39;s primary/base schema URI.
+        /// The URI of the primary or base schema for the resource type.
         /// </summary>
-        /// <value>The resource type&#39;s primary/base schema URI.</value>
+        /// <value>The URI of the primary or base schema for the resource type.</value>
         [DataMember(Name="schema", EmitDefaultValue=false)]
         public string Schema { get; private set; }
         
         
         
         /// <summary>
-        /// Resource extension schemas
+        /// The list of schema extensions for the resource type.
         /// </summary>
-        /// <value>Resource extension schemas</value>
+        /// <value>The list of schema extensions for the resource type.</value>
         [DataMember(Name="schemaExtensions", EmitDefaultValue=false)]
         public List<ScimConfigResourceTypeSchemaExtension> SchemaExtensions { get; set; }
         
         
         
         /// <summary>
-        /// Resource HTTP endpoint.
+        /// The HTTP-addressable endpoint of the resource type. Appears after the base URL.
         /// </summary>
-        /// <value>Resource HTTP endpoint.</value>
+        /// <value>The HTTP-addressable endpoint of the resource type. Appears after the base URL.</value>
         [DataMember(Name="endpoint", EmitDefaultValue=false)]
         public string Endpoint { get; private set; }
         

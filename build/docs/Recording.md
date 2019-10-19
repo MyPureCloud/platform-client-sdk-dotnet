@@ -26,6 +26,7 @@ title: Recording
 | **ArchiveDate** | **DateTime?** | The date the recording will be archived. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **ArchiveMedium** | **string** | The type of archive medium used. Example: CloudArchive | [optional] |
 | **DeleteDate** | **DateTime?** | The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **ExportDate** | **DateTime?** | The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **OutputDurationMs** | **int?** | Duration of transcoded media in milliseconds | [optional] |
 | **OutputSizeInBytes** | **int?** | Size of transcoded media in bytes. 0 if there is no transcoded media. | [optional] |
 | **MaxAllowedRestorationsForOrg** | **int?** | How many archive restorations the organization is allowed to have. | [optional] |

@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ScimV2Group" /> class.
         /// </summary>
         /// <param name="Schemas">The list of supported schemas..</param>
-        /// <param name="Members">A list of members in a SCIM group..</param>
+        /// <param name="Members">The list of members in the group..</param>
         /// <param name="Meta">Resource SCIM meta.</param>
         public ScimV2Group(List<string> Schemas = null, List<ScimV2MemberReference> Members = null, ScimMetadata Meta = null)
         {
@@ -63,9 +63,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always.
+        /// The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;Mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;Returned\&quot; is set to \&quot;always\&quot;.
         /// </summary>
-        /// <value>The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always.</value>
+        /// <value>The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;Mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;Returned\&quot; is set to \&quot;always\&quot;.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         
@@ -81,18 +81,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The display name for the group.
+        /// The display name of the group.
         /// </summary>
-        /// <value>The display name for the group.</value>
+        /// <value>The display name of the group.</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; private set; }
         
         
         
         /// <summary>
-        /// A list of members in a SCIM group.
+        /// The list of members in the group.
         /// </summary>
-        /// <value>A list of members in a SCIM group.</value>
+        /// <value>The list of members in the group.</value>
         [DataMember(Name="members", EmitDefaultValue=false)]
         public List<ScimV2MemberReference> Members { get; set; }
         

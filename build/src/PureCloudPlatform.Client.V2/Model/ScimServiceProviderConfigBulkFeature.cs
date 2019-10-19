@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Bulk feature configuration
+    /// Bulk configuration options.
     /// </summary>
     [DataContract]
     public partial class ScimServiceProviderConfigBulkFeature :  IEquatable<ScimServiceProviderConfigBulkFeature>
@@ -47,27 +47,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Indicates if configuration options is supported.
+        /// Indicates whether configuration options are supported.
         /// </summary>
-        /// <value>Indicates if configuration options is supported.</value>
+        /// <value>Indicates whether configuration options are supported.</value>
         [DataMember(Name="supported", EmitDefaultValue=false)]
         public bool? Supported { get; private set; }
         
         
         
         /// <summary>
-        /// Maximum operations per bulk request.
+        /// The maximum number of operations for each bulk request.
         /// </summary>
-        /// <value>Maximum operations per bulk request.</value>
+        /// <value>The maximum number of operations for each bulk request.</value>
         [DataMember(Name="maxOperations", EmitDefaultValue=false)]
         public int? MaxOperations { get; private set; }
         
         
         
         /// <summary>
-        /// Maximum payload size.
+        /// The maximum payload size.
         /// </summary>
-        /// <value>Maximum payload size.</value>
+        /// <value>The maximum payload size.</value>
         [DataMember(Name="maxPayloadSize", EmitDefaultValue=false)]
         public int? MaxPayloadSize { get; private set; }
         

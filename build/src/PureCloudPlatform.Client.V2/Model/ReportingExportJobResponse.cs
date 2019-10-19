@@ -503,6 +503,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current status of the export request
         /// </summary>
@@ -562,6 +565,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobResponse" /> class.
@@ -588,7 +593,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Locale">The locale use for localization of the exported data, i.e. en-us, es-mx   (required).</param>
         /// <param name="PercentageComplete">The percentage of the job that has completed processing (required).</param>
         /// <param name="HasFormatDurations">Indicates if durations are formatted in hh:mm:ss format instead of ms.</param>
-        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null)
+        /// <param name="HasSplitFilters">Indicates if filters will be split in aggregate detail exports.</param>
+        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null)
         {
             this.Name = Name;
             this.Status = Status;
@@ -606,6 +612,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Locale = Locale;
             this.PercentageComplete = PercentageComplete;
             this.HasFormatDurations = HasFormatDurations;
+            this.HasSplitFilters = HasSplitFilters;
             
         }
         
@@ -736,6 +743,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Indicates if filters will be split in aggregate detail exports
+        /// </summary>
+        /// <value>Indicates if filters will be split in aggregate detail exports</value>
+        [DataMember(Name="hasSplitFilters", EmitDefaultValue=false)]
+        public bool? HasSplitFilters { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -769,6 +785,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Locale: ").Append(Locale).Append("\n");
             sb.Append("  PercentageComplete: ").Append(PercentageComplete).Append("\n");
             sb.Append("  HasFormatDurations: ").Append(HasFormatDurations).Append("\n");
+            sb.Append("  HasSplitFilters: ").Append(HasSplitFilters).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -892,6 +909,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HasFormatDurations.Equals(other.HasFormatDurations)
                 ) &&
                 (
+                    this.HasSplitFilters == other.HasSplitFilters ||
+                    this.HasSplitFilters != null &&
+                    this.HasSplitFilters.Equals(other.HasSplitFilters)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -960,6 +982,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.HasFormatDurations != null)
                     hash = hash * 59 + this.HasFormatDurations.GetHashCode();
+                
+                if (this.HasSplitFilters != null)
+                    hash = hash * 59 + this.HasSplitFilters.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

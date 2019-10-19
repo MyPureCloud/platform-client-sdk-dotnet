@@ -17,6 +17,7 @@ title: ReportingExportJobRequest
 | **Read** | **bool?** | Indicates if the request has been marked as read | [optional] |
 | **Locale** | **string** | The locale use for localization of the exported data, i.e. en-us, es-mx   | |
 | **HasFormatDurations** | **bool?** | Indicates if durations are formatted in hh:mm:ss format instead of ms | [optional] |
+| **HasSplitFilters** | **bool?** | Indicates if filters will be split in aggregate detail exports | [optional] |
 {: class="table table-striped"}
 
 

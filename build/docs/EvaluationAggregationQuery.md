@@ -15,6 +15,7 @@ title: EvaluationAggregationQuery
 | **Metrics** | **List&lt;string&gt;** | Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *). | [optional] |
 | **FlattenMultivaluedDimensions** | **bool?** | Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;) | [optional] |
 | **Views** | [**List&lt;EvaluationAggregationView&gt;**](EvaluationAggregationView.html) | Custom derived metric views | [optional] |
+| **AlternateTimeDimension** | **string** | Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event. | [optional] |
 {: class="table table-striped"}
 
 

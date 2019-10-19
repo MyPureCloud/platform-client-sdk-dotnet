@@ -49,7 +49,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimConfigResourceTypesListResponse" /> class.
         /// </summary>
-        /// <param name="Resources">Resources.</param>
+        /// <param name="Resources">The list of requested resources..</param>
         /// <param name="Schemas">The list of supported schemas..</param>
         public ScimConfigResourceTypesListResponse(List<ScimConfigResourceType> Resources = null, List<string> Schemas = null)
         {
@@ -70,9 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The 1-based index of the first result returned by this request. Add this to itemsPerPage when requesting the next page of results.
+        /// The 1-based index of the first result returned by this request. Add this to \&quot;itemsPerPage\&quot; when requesting the next page of results.
         /// </summary>
-        /// <value>The 1-based index of the first result returned by this request. Add this to itemsPerPage when requesting the next page of results.</value>
+        /// <value>The 1-based index of the first result returned by this request. Add this to \&quot;itemsPerPage\&quot; when requesting the next page of results.</value>
         [DataMember(Name="startIndex", EmitDefaultValue=false)]
         public long? StartIndex { get; private set; }
         
@@ -88,9 +88,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Resources
+        /// The list of requested resources.
         /// </summary>
-        /// <value>Resources</value>
+        /// <value>The list of requested resources.</value>
         [DataMember(Name="Resources", EmitDefaultValue=false)]
         public List<ScimConfigResourceType> Resources { get; set; }
         

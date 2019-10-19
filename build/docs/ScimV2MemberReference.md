@@ -7,8 +7,8 @@ title: ScimV2MemberReference
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Type** | **string** | The SCIM resource type. Can be user or group. | [optional] |
-| **Value** | **string** | The ID of the group member. Can be userId or groupId. | [optional] |
+| **Type** | **string** | The type of SCIM resource. | [optional] |
+| **Value** | **string** | The ID of the group member. Can be \&quot;userId\&quot; or \&quot;groupId\&quot;. | [optional] |
 | **_Ref** | **string** | The reference URI of the SCIM resource. | [optional] |
 {: class="table table-striped"}
 

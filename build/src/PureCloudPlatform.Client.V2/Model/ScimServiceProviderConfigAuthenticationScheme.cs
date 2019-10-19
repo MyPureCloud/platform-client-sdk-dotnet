@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Authentication Schema
+    /// Authentication schema.
     /// </summary>
     [DataContract]
     public partial class ScimServiceProviderConfigAuthenticationScheme :  IEquatable<ScimServiceProviderConfigAuthenticationScheme>
@@ -33,9 +33,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The authentication type.
+        /// The type of authentication scheme.
         /// </summary>
-        /// <value>The authentication type.</value>
+        /// <value>The type of authentication scheme.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -94,9 +94,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The authentication type.
+        /// The type of authentication scheme.
         /// </summary>
-        /// <value>The authentication type.</value>
+        /// <value>The type of authentication scheme.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
@@ -115,36 +115,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Name
+        /// The name of the authentication scheme, for example, HTTP Basic.
         /// </summary>
-        /// <value>Name</value>
+        /// <value>The name of the authentication scheme, for example, HTTP Basic.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
         
         
         
         /// <summary>
-        /// Description
+        /// The description of the authentication scheme.
         /// </summary>
-        /// <value>Description</value>
+        /// <value>The description of the authentication scheme.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
         
         
         
         /// <summary>
-        /// An HTTP-addressable URL pointing to the authentication scheme&#39;s specification.
+        /// The HTTP-addressable URL that points to the authentication scheme&#39;s specification.
         /// </summary>
-        /// <value>An HTTP-addressable URL pointing to the authentication scheme&#39;s specification.</value>
+        /// <value>The HTTP-addressable URL that points to the authentication scheme&#39;s specification.</value>
         [DataMember(Name="specUri", EmitDefaultValue=false)]
         public string SpecUri { get; private set; }
         
         
         
         /// <summary>
-        /// An HTTP-addressable URL pointing to the authentication scheme&#39;s usage documentation
+        /// The HTTP-addressable URL that points to the authentication scheme&#39;s usage documentation.
         /// </summary>
-        /// <value>An HTTP-addressable URL pointing to the authentication scheme&#39;s usage documentation</value>
+        /// <value>The HTTP-addressable URL that points to the authentication scheme&#39;s usage documentation.</value>
         [DataMember(Name="documentationUri", EmitDefaultValue=false)]
         public string DocumentationUri { get; private set; }
         
@@ -153,9 +153,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Indication of primary method of authentication.
+        /// Indicates the primary method of authentication.
         /// </summary>
-        /// <value>Indication of primary method of authentication.</value>
+        /// <value>Indicates the primary method of authentication.</value>
         [DataMember(Name="primary", EmitDefaultValue=false)]
         public bool? Primary { get; private set; }
         
