@@ -80,6 +80,67 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// This constraint ensures that an agent starts each workday within a user-defined time threshold. Used if synchronizeAgentsSchedules == true
+        /// </summary>
+        /// <value>This constraint ensures that an agent starts each workday within a user-defined time threshold. Used if synchronizeAgentsSchedules == true</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SynchronizationTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Shiftstart for "ShiftStart"
+            /// </summary>
+            [EnumMember(Value = "ShiftStart")]
+            Shiftstart,
+            
+            /// <summary>
+            /// Enum Shiftstartandpaidduration for "ShiftStartAndPaidDuration"
+            /// </summary>
+            [EnumMember(Value = "ShiftStartAndPaidDuration")]
+            Shiftstartandpaidduration
+        }
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The day off rule for agents to have next day off or previous day off. used if constrainDayOff = true
+        /// </summary>
+        /// <value>The day off rule for agents to have next day off or previous day off. used if constrainDayOff = true</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DayOffRuleEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Nextdayoff for "NextDayOff"
+            /// </summary>
+            [EnumMember(Value = "NextDayOff")]
+            Nextdayoff,
+            
+            /// <summary>
+            /// Enum Previousdayoff for "PreviousDayOff"
+            /// </summary>
+            [EnumMember(Value = "PreviousDayOff")]
+            Previousdayoff
+        }
         
         
         
@@ -101,6 +162,50 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// This constraint ensures that an agent starts each workday within a user-defined time threshold. Used if synchronizeAgentsSchedules == true
+        /// </summary>
+        /// <value>This constraint ensures that an agent starts each workday within a user-defined time threshold. Used if synchronizeAgentsSchedules == true</value>
+        [DataMember(Name="synchronizationType", EmitDefaultValue=false)]
+        public SynchronizationTypeEnum? SynchronizationType { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The day off rule for agents to have next day off or previous day off. used if constrainDayOff = true
+        /// </summary>
+        /// <value>The day off rule for agents to have next day off or previous day off. used if constrainDayOff = true</value>
+        [DataMember(Name="dayOffRule", EmitDefaultValue=false)]
+        public DayOffRuleEnum? DayOffRule { get; set; }
         
         
         
@@ -122,7 +227,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EarliestStartTimeMinutesFromMidnight">Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true.</param>
         /// <param name="LatestStartTimeMinutesFromMidnight">Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true.</param>
         /// <param name="ConstrainStopTime">Whether the latest stop time constraint for the shift is enabled.</param>
+        /// <param name="ConstrainLatestStopTime">Whether the latest stop time constraint for the shift is enabled.</param>
         /// <param name="LatestStopTimeMinutesFromMidnight">Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true.</param>
+        /// <param name="ConstrainEarliestStopTime">Whether the earliest stop time constraint for the shift is enabled.</param>
+        /// <param name="EarliestStopTimeMinutesFromMidnight">This is the earliest time a shift can end.</param>
         /// <param name="StartIncrementMinutes">Increment in offset minutes that would contribute to different possible start times for the shift. Used if flexibleStartTime == true.</param>
         /// <param name="FlexiblePaidTime">Whether the paid time setting for the shift is flexible.</param>
         /// <param name="ExactPaidTimeMinutes">Exact paid time in minutes configured for the shift. Used if flexiblePaidTime == false.</param>
@@ -131,8 +239,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConstrainContiguousWorkTime">Whether the contiguous time constraint for the shift is enabled.</param>
         /// <param name="MinimumContiguousWorkTimeMinutes">Minimum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime == true.</param>
         /// <param name="MaximumContiguousWorkTimeMinutes">Maximum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime == true.</param>
+        /// <param name="SynchronizeAgentsSchedules">Whether synchronization for agent is enabled.</param>
+        /// <param name="SynchronizationType">This constraint ensures that an agent starts each workday within a user-defined time threshold. Used if synchronizeAgentsSchedules == true.</param>
+        /// <param name="ConstrainDayOff">Whether day off rule is enabled.</param>
+        /// <param name="DayOffRule">The day off rule for agents to have next day off or previous day off. used if constrainDayOff = true.</param>
         /// <param name="Activities">Activities configured for this shift.</param>
-        public CreateWorkPlanShift(string Name = null, SetWrapperDayOfWeek Days = null, bool? FlexibleStartTime = null, int? ExactStartTimeMinutesFromMidnight = null, int? EarliestStartTimeMinutesFromMidnight = null, int? LatestStartTimeMinutesFromMidnight = null, bool? ConstrainStopTime = null, int? LatestStopTimeMinutesFromMidnight = null, int? StartIncrementMinutes = null, bool? FlexiblePaidTime = null, int? ExactPaidTimeMinutes = null, int? MinimumPaidTimeMinutes = null, int? MaximumPaidTimeMinutes = null, bool? ConstrainContiguousWorkTime = null, int? MinimumContiguousWorkTimeMinutes = null, int? MaximumContiguousWorkTimeMinutes = null, List<CreateWorkPlanActivity> Activities = null)
+        public CreateWorkPlanShift(string Name = null, SetWrapperDayOfWeek Days = null, bool? FlexibleStartTime = null, int? ExactStartTimeMinutesFromMidnight = null, int? EarliestStartTimeMinutesFromMidnight = null, int? LatestStartTimeMinutesFromMidnight = null, bool? ConstrainStopTime = null, bool? ConstrainLatestStopTime = null, int? LatestStopTimeMinutesFromMidnight = null, bool? ConstrainEarliestStopTime = null, int? EarliestStopTimeMinutesFromMidnight = null, int? StartIncrementMinutes = null, bool? FlexiblePaidTime = null, int? ExactPaidTimeMinutes = null, int? MinimumPaidTimeMinutes = null, int? MaximumPaidTimeMinutes = null, bool? ConstrainContiguousWorkTime = null, int? MinimumContiguousWorkTimeMinutes = null, int? MaximumContiguousWorkTimeMinutes = null, bool? SynchronizeAgentsSchedules = null, SynchronizationTypeEnum? SynchronizationType = null, bool? ConstrainDayOff = null, DayOffRuleEnum? DayOffRule = null, List<CreateWorkPlanActivity> Activities = null)
         {
             this.Name = Name;
             this.Days = Days;
@@ -141,7 +253,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EarliestStartTimeMinutesFromMidnight = EarliestStartTimeMinutesFromMidnight;
             this.LatestStartTimeMinutesFromMidnight = LatestStartTimeMinutesFromMidnight;
             this.ConstrainStopTime = ConstrainStopTime;
+            this.ConstrainLatestStopTime = ConstrainLatestStopTime;
             this.LatestStopTimeMinutesFromMidnight = LatestStopTimeMinutesFromMidnight;
+            this.ConstrainEarliestStopTime = ConstrainEarliestStopTime;
+            this.EarliestStopTimeMinutesFromMidnight = EarliestStopTimeMinutesFromMidnight;
             this.StartIncrementMinutes = StartIncrementMinutes;
             this.FlexiblePaidTime = FlexiblePaidTime;
             this.ExactPaidTimeMinutes = ExactPaidTimeMinutes;
@@ -150,6 +265,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConstrainContiguousWorkTime = ConstrainContiguousWorkTime;
             this.MinimumContiguousWorkTimeMinutes = MinimumContiguousWorkTimeMinutes;
             this.MaximumContiguousWorkTimeMinutes = MaximumContiguousWorkTimeMinutes;
+            this.SynchronizeAgentsSchedules = SynchronizeAgentsSchedules;
+            this.SynchronizationType = SynchronizationType;
+            this.ConstrainDayOff = ConstrainDayOff;
+            this.DayOffRule = DayOffRule;
             this.Activities = Activities;
             
         }
@@ -220,11 +339,38 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Whether the latest stop time constraint for the shift is enabled
+        /// </summary>
+        /// <value>Whether the latest stop time constraint for the shift is enabled</value>
+        [DataMember(Name="constrainLatestStopTime", EmitDefaultValue=false)]
+        public bool? ConstrainLatestStopTime { get; set; }
+        
+        
+        
+        /// <summary>
         /// Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true
         /// </summary>
         /// <value>Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true</value>
         [DataMember(Name="latestStopTimeMinutesFromMidnight", EmitDefaultValue=false)]
         public int? LatestStopTimeMinutesFromMidnight { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether the earliest stop time constraint for the shift is enabled
+        /// </summary>
+        /// <value>Whether the earliest stop time constraint for the shift is enabled</value>
+        [DataMember(Name="constrainEarliestStopTime", EmitDefaultValue=false)]
+        public bool? ConstrainEarliestStopTime { get; set; }
+        
+        
+        
+        /// <summary>
+        /// This is the earliest time a shift can end
+        /// </summary>
+        /// <value>This is the earliest time a shift can end</value>
+        [DataMember(Name="earliestStopTimeMinutesFromMidnight", EmitDefaultValue=false)]
+        public int? EarliestStopTimeMinutesFromMidnight { get; set; }
         
         
         
@@ -301,6 +447,28 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Whether synchronization for agent is enabled
+        /// </summary>
+        /// <value>Whether synchronization for agent is enabled</value>
+        [DataMember(Name="synchronizeAgentsSchedules", EmitDefaultValue=false)]
+        public bool? SynchronizeAgentsSchedules { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Whether day off rule is enabled
+        /// </summary>
+        /// <value>Whether day off rule is enabled</value>
+        [DataMember(Name="constrainDayOff", EmitDefaultValue=false)]
+        public bool? ConstrainDayOff { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
         /// Activities configured for this shift
         /// </summary>
         /// <value>Activities configured for this shift</value>
@@ -324,7 +492,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EarliestStartTimeMinutesFromMidnight: ").Append(EarliestStartTimeMinutesFromMidnight).Append("\n");
             sb.Append("  LatestStartTimeMinutesFromMidnight: ").Append(LatestStartTimeMinutesFromMidnight).Append("\n");
             sb.Append("  ConstrainStopTime: ").Append(ConstrainStopTime).Append("\n");
+            sb.Append("  ConstrainLatestStopTime: ").Append(ConstrainLatestStopTime).Append("\n");
             sb.Append("  LatestStopTimeMinutesFromMidnight: ").Append(LatestStopTimeMinutesFromMidnight).Append("\n");
+            sb.Append("  ConstrainEarliestStopTime: ").Append(ConstrainEarliestStopTime).Append("\n");
+            sb.Append("  EarliestStopTimeMinutesFromMidnight: ").Append(EarliestStopTimeMinutesFromMidnight).Append("\n");
             sb.Append("  StartIncrementMinutes: ").Append(StartIncrementMinutes).Append("\n");
             sb.Append("  FlexiblePaidTime: ").Append(FlexiblePaidTime).Append("\n");
             sb.Append("  ExactPaidTimeMinutes: ").Append(ExactPaidTimeMinutes).Append("\n");
@@ -333,6 +504,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConstrainContiguousWorkTime: ").Append(ConstrainContiguousWorkTime).Append("\n");
             sb.Append("  MinimumContiguousWorkTimeMinutes: ").Append(MinimumContiguousWorkTimeMinutes).Append("\n");
             sb.Append("  MaximumContiguousWorkTimeMinutes: ").Append(MaximumContiguousWorkTimeMinutes).Append("\n");
+            sb.Append("  SynchronizeAgentsSchedules: ").Append(SynchronizeAgentsSchedules).Append("\n");
+            sb.Append("  SynchronizationType: ").Append(SynchronizationType).Append("\n");
+            sb.Append("  ConstrainDayOff: ").Append(ConstrainDayOff).Append("\n");
+            sb.Append("  DayOffRule: ").Append(DayOffRule).Append("\n");
             sb.Append("  Activities: ").Append(Activities).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -406,9 +581,24 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConstrainStopTime.Equals(other.ConstrainStopTime)
                 ) &&
                 (
+                    this.ConstrainLatestStopTime == other.ConstrainLatestStopTime ||
+                    this.ConstrainLatestStopTime != null &&
+                    this.ConstrainLatestStopTime.Equals(other.ConstrainLatestStopTime)
+                ) &&
+                (
                     this.LatestStopTimeMinutesFromMidnight == other.LatestStopTimeMinutesFromMidnight ||
                     this.LatestStopTimeMinutesFromMidnight != null &&
                     this.LatestStopTimeMinutesFromMidnight.Equals(other.LatestStopTimeMinutesFromMidnight)
+                ) &&
+                (
+                    this.ConstrainEarliestStopTime == other.ConstrainEarliestStopTime ||
+                    this.ConstrainEarliestStopTime != null &&
+                    this.ConstrainEarliestStopTime.Equals(other.ConstrainEarliestStopTime)
+                ) &&
+                (
+                    this.EarliestStopTimeMinutesFromMidnight == other.EarliestStopTimeMinutesFromMidnight ||
+                    this.EarliestStopTimeMinutesFromMidnight != null &&
+                    this.EarliestStopTimeMinutesFromMidnight.Equals(other.EarliestStopTimeMinutesFromMidnight)
                 ) &&
                 (
                     this.StartIncrementMinutes == other.StartIncrementMinutes ||
@@ -451,6 +641,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaximumContiguousWorkTimeMinutes.Equals(other.MaximumContiguousWorkTimeMinutes)
                 ) &&
                 (
+                    this.SynchronizeAgentsSchedules == other.SynchronizeAgentsSchedules ||
+                    this.SynchronizeAgentsSchedules != null &&
+                    this.SynchronizeAgentsSchedules.Equals(other.SynchronizeAgentsSchedules)
+                ) &&
+                (
+                    this.SynchronizationType == other.SynchronizationType ||
+                    this.SynchronizationType != null &&
+                    this.SynchronizationType.Equals(other.SynchronizationType)
+                ) &&
+                (
+                    this.ConstrainDayOff == other.ConstrainDayOff ||
+                    this.ConstrainDayOff != null &&
+                    this.ConstrainDayOff.Equals(other.ConstrainDayOff)
+                ) &&
+                (
+                    this.DayOffRule == other.DayOffRule ||
+                    this.DayOffRule != null &&
+                    this.DayOffRule.Equals(other.DayOffRule)
+                ) &&
+                (
                     this.Activities == other.Activities ||
                     this.Activities != null &&
                     this.Activities.SequenceEqual(other.Activities)
@@ -490,8 +700,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ConstrainStopTime != null)
                     hash = hash * 59 + this.ConstrainStopTime.GetHashCode();
                 
+                if (this.ConstrainLatestStopTime != null)
+                    hash = hash * 59 + this.ConstrainLatestStopTime.GetHashCode();
+                
                 if (this.LatestStopTimeMinutesFromMidnight != null)
                     hash = hash * 59 + this.LatestStopTimeMinutesFromMidnight.GetHashCode();
+                
+                if (this.ConstrainEarliestStopTime != null)
+                    hash = hash * 59 + this.ConstrainEarliestStopTime.GetHashCode();
+                
+                if (this.EarliestStopTimeMinutesFromMidnight != null)
+                    hash = hash * 59 + this.EarliestStopTimeMinutesFromMidnight.GetHashCode();
                 
                 if (this.StartIncrementMinutes != null)
                     hash = hash * 59 + this.StartIncrementMinutes.GetHashCode();
@@ -516,6 +735,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MaximumContiguousWorkTimeMinutes != null)
                     hash = hash * 59 + this.MaximumContiguousWorkTimeMinutes.GetHashCode();
+                
+                if (this.SynchronizeAgentsSchedules != null)
+                    hash = hash * 59 + this.SynchronizeAgentsSchedules.GetHashCode();
+                
+                if (this.SynchronizationType != null)
+                    hash = hash * 59 + this.SynchronizationType.GetHashCode();
+                
+                if (this.ConstrainDayOff != null)
+                    hash = hash * 59 + this.ConstrainDayOff.GetHashCode();
+                
+                if (this.DayOffRule != null)
+                    hash = hash * 59 + this.DayOffRule.GetHashCode();
                 
                 if (this.Activities != null)
                     hash = hash * 59 + this.Activities.GetHashCode();

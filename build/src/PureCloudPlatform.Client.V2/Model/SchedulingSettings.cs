@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulingSettings" /> class.
@@ -42,11 +47,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaxOccupancyPercentForDeferredWork">Max occupancy percent for deferred work.</param>
         /// <param name="DefaultShrinkagePercent">Default shrinkage percent for scheduling.</param>
         /// <param name="ShrinkageOverrides">Shrinkage overrides for scheduling.</param>
-        public SchedulingSettings(int? MaxOccupancyPercentForDeferredWork = null, double? DefaultShrinkagePercent = null, ShrinkageOverrides ShrinkageOverrides = null)
+        /// <param name="PlanningPeriod">Planning period settings for scheduling.</param>
+        public SchedulingSettings(int? MaxOccupancyPercentForDeferredWork = null, double? DefaultShrinkagePercent = null, ShrinkageOverrides ShrinkageOverrides = null, PlanningPeriodSettings PlanningPeriod = null)
         {
             this.MaxOccupancyPercentForDeferredWork = MaxOccupancyPercentForDeferredWork;
             this.DefaultShrinkagePercent = DefaultShrinkagePercent;
             this.ShrinkageOverrides = ShrinkageOverrides;
+            this.PlanningPeriod = PlanningPeriod;
             
         }
         
@@ -78,6 +85,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ShrinkageOverrides ShrinkageOverrides { get; set; }
         
         
+        
+        /// <summary>
+        /// Planning period settings for scheduling
+        /// </summary>
+        /// <value>Planning period settings for scheduling</value>
+        [DataMember(Name="planningPeriod", EmitDefaultValue=false)]
+        public PlanningPeriodSettings PlanningPeriod { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MaxOccupancyPercentForDeferredWork: ").Append(MaxOccupancyPercentForDeferredWork).Append("\n");
             sb.Append("  DefaultShrinkagePercent: ").Append(DefaultShrinkagePercent).Append("\n");
             sb.Append("  ShrinkageOverrides: ").Append(ShrinkageOverrides).Append("\n");
+            sb.Append("  PlanningPeriod: ").Append(PlanningPeriod).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,6 +157,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ShrinkageOverrides == other.ShrinkageOverrides ||
                     this.ShrinkageOverrides != null &&
                     this.ShrinkageOverrides.Equals(other.ShrinkageOverrides)
+                ) &&
+                (
+                    this.PlanningPeriod == other.PlanningPeriod ||
+                    this.PlanningPeriod != null &&
+                    this.PlanningPeriod.Equals(other.PlanningPeriod)
                 );
         }
 
@@ -163,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ShrinkageOverrides != null)
                     hash = hash * 59 + this.ShrinkageOverrides.GetHashCode();
+                
+                if (this.PlanningPeriod != null)
+                    hash = hash * 59 + this.PlanningPeriod.GetHashCode();
                 
                 return hash;
             }

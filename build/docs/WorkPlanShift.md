@@ -14,7 +14,10 @@ title: WorkPlanShift
 | **EarliestStartTimeMinutesFromMidnight** | **int?** | Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true | [optional] |
 | **LatestStartTimeMinutesFromMidnight** | **int?** | Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true | [optional] |
 | **ConstrainStopTime** | **bool?** | Whether the latest stop time constraint for the shift is enabled | [optional] |
+| **ConstrainLatestStopTime** | **bool?** | Whether the latest stop time constraint for the shift is enabled | [optional] |
 | **LatestStopTimeMinutesFromMidnight** | **int?** | Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true | [optional] |
+| **ConstrainEarliestStopTime** | **bool?** | Whether the earliest stop time constraint for the shift is enabled | [optional] |
+| **EarliestStopTimeMinutesFromMidnight** | **int?** | This is the earliest time a shift can end | [optional] |
 | **StartIncrementMinutes** | **int?** | Increment in offset minutes that would contribute to different possible start times for the shift. Used if flexibleStartTime == true | [optional] |
 | **FlexiblePaidTime** | **bool?** | Whether the paid time setting for the shift is flexible | [optional] |
 | **ExactPaidTimeMinutes** | **int?** | Exact paid time in minutes configured for the shift. Used if flexiblePaidTime == false | [optional] |
@@ -23,6 +26,10 @@ title: WorkPlanShift
 | **ConstrainContiguousWorkTime** | **bool?** | Whether the contiguous time constraint for the shift is enabled | [optional] |
 | **MinimumContiguousWorkTimeMinutes** | **int?** | Minimum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime == true | [optional] |
 | **MaximumContiguousWorkTimeMinutes** | **int?** | Maximum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime == true | [optional] |
+| **SynchronizeAgentsSchedules** | **bool?** | Whether synchronization for agent is enabled | [optional] |
+| **SynchronizationType** | **string** | This constraint ensures that an agent starts each workday within a user-defined time threshold. Used if synchronizeAgentsSchedules == true | [optional] |
+| **ConstrainDayOff** | **bool?** | Whether day off rule is enabled | [optional] |
+| **DayOffRule** | **string** | The day off rule for agents to have next day off or previous day off. used if constrainDayOff = true | [optional] |
 | **Activities** | [**List&lt;WorkPlanActivity&gt;**](WorkPlanActivity.html) | Activities configured for this shift | [optional] |
 | **Id** | **string** | ID of the shift. This is required only for the case of updating an existing shift | [optional] |
 | **Delete** | **bool?** | If marked true for updating an existing shift, the shift will be permanently deleted | [optional] |
