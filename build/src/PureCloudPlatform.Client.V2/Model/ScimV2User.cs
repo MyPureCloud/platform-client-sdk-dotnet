@@ -111,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalId">The external ID of the user. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;..</param>
         /// <param name="Groups">The list of groups that the user is a member of..</param>
         /// <param name="Roles">The list of roles assigned to the user..</param>
-        /// <param name="Urnietfparamsscimschemasextensionenterprise20User">Urnietfparamsscimschemasextensionenterprise20User.</param>
+        /// <param name="Urnietfparamsscimschemasextensionenterprise20User">SCIM enterprise user attributes.</param>
         /// <param name="Meta">Resource SCIM meta.</param>
         public ScimV2User(List<string> Schemas = null, bool? Active = null, string UserName = null, string DisplayName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, List<Photo> Photos = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, List<string> Roles = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null, ScimMetadata Meta = null)
         {
@@ -252,8 +252,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Urnietfparamsscimschemasextensionenterprise20User
+        /// SCIM enterprise user attributes
         /// </summary>
+        /// <value>SCIM enterprise user attributes</value>
         [DataMember(Name="urn:ietf:params:scim:schemas:extension:enterprise:2.0:User", EmitDefaultValue=false)]
         public ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User { get; set; }
         

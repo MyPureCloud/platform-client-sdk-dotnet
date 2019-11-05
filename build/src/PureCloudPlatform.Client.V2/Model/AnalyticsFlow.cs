@@ -102,7 +102,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Surveyinvite for "SURVEYINVITE"
             /// </summary>
             [EnumMember(Value = "SURVEYINVITE")]
-            Surveyinvite
+            Surveyinvite,
+            
+            /// <summary>
+            /// Enum Workflow for "WORKFLOW"
+            /// </summary>
+            [EnumMember(Value = "WORKFLOW")]
+            Workflow
         }
         
         

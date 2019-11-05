@@ -135,6 +135,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationType" /> class.
@@ -151,7 +156,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HelpLinks">List of links to additional help resources.</param>
         /// <param name="Credentials">Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration..</param>
         /// <param name="UserPermissions">List of permissions required to permit user access to the integration type..</param>
-        public IntegrationType(string Id = null, string Name = null, List<UserImage> Images = null, List<HelpLink> HelpLinks = null, Dictionary<string, CredentialSpecification> Credentials = null, List<string> UserPermissions = null)
+        /// <param name="VendorOAuthClientIds">List of OAuth Client IDs that must be authorized when the integration is created..</param>
+        public IntegrationType(string Id = null, string Name = null, List<UserImage> Images = null, List<HelpLink> HelpLinks = null, Dictionary<string, CredentialSpecification> Credentials = null, List<string> UserPermissions = null, List<string> VendorOAuthClientIds = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -159,6 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.HelpLinks = HelpLinks;
             this.Credentials = Credentials;
             this.UserPermissions = UserPermissions;
+            this.VendorOAuthClientIds = VendorOAuthClientIds;
             
         }
         
@@ -362,6 +369,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// List of OAuth Client IDs that must be authorized when the integration is created.
+        /// </summary>
+        /// <value>List of OAuth Client IDs that must be authorized when the integration is created.</value>
+        [DataMember(Name="vendorOAuthClientIds", EmitDefaultValue=false)]
+        public List<string> VendorOAuthClientIds { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -400,6 +416,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NonInstallable: ").Append(NonInstallable).Append("\n");
             sb.Append("  MaxInstances: ").Append(MaxInstances).Append("\n");
             sb.Append("  UserPermissions: ").Append(UserPermissions).Append("\n");
+            sb.Append("  VendorOAuthClientIds: ").Append(VendorOAuthClientIds).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -548,6 +565,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserPermissions.SequenceEqual(other.UserPermissions)
                 ) &&
                 (
+                    this.VendorOAuthClientIds == other.VendorOAuthClientIds ||
+                    this.VendorOAuthClientIds != null &&
+                    this.VendorOAuthClientIds.SequenceEqual(other.VendorOAuthClientIds)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -631,6 +653,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.UserPermissions != null)
                     hash = hash * 59 + this.UserPermissions.GetHashCode();
+                
+                if (this.VendorOAuthClientIds != null)
+                    hash = hash * 59 + this.VendorOAuthClientIds.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

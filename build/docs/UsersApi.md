@@ -56,6 +56,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsUsersAggregatesQuery**](UsersApi.html#postanalyticsusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
 | [**PostAnalyticsUsersDetailsQuery**](UsersApi.html#postanalyticsusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
 | [**PostAnalyticsUsersObservationsQuery**](UsersApi.html#postanalyticsusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
+| [**PostAuthorizationSubjectBulkadd**](UsersApi.html#postauthorizationsubjectbulkadd) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkadd | Bulk-grant roles and divisions to a subject. |
+| [**PostAuthorizationSubjectBulkremove**](UsersApi.html#postauthorizationsubjectbulkremove) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkremove | Bulk-remove grants from a subject. |
 | [**PostAuthorizationSubjectDivisionRole**](UsersApi.html#postauthorizationsubjectdivisionrole) | **POST** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Make a grant of a role in a division |
 | [**PostUserExternalid**](UsersApi.html#postuserexternalid) | **POST** /api/v2/users/{userId}/externalid | Create mapping between external identifier and user. Limit 100 per entity. |
 | [**PostUserInvite**](UsersApi.html#postuserinvite) | **POST** /api/v2/users/{userId}/invite | Send an activation email to the user |
@@ -3149,6 +3151,132 @@ namespace Example
 ### Return type
 
 [**UserObservationQueryResponse**](UserObservationQueryResponse.html)
+
+<a name="postauthorizationsubjectbulkadd"></a>
+
+## void PostAuthorizationSubjectBulkadd (string subjectId, RoleDivisionGrants body, string subjectType = null)
+
+
+
+Bulk-grant roles and divisions to a subject.
+
+
+
+Requires ANY permissions: 
+
+* authorization:grant:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuthorizationSubjectBulkaddExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            var body = new RoleDivisionGrants(); // RoleDivisionGrants | Pairs of role and division IDs
+            var subjectType = subjectType_example;  // string | what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional)  (default to PC_USER)
+
+            try
+            { 
+                // Bulk-grant roles and divisions to a subject.
+                apiInstance.PostAuthorizationSubjectBulkadd(subjectId, body, subjectType);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostAuthorizationSubjectBulkadd: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| Subject ID (user or group) |  |
+| **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs |  |
+| **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postauthorizationsubjectbulkremove"></a>
+
+## void PostAuthorizationSubjectBulkremove (string subjectId, RoleDivisionGrants body)
+
+
+
+Bulk-remove grants from a subject.
+
+
+
+Requires ANY permissions: 
+
+* authorization:grant:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuthorizationSubjectBulkremoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            var body = new RoleDivisionGrants(); // RoleDivisionGrants | Pairs of role and division IDs
+
+            try
+            { 
+                // Bulk-remove grants from a subject.
+                apiInstance.PostAuthorizationSubjectBulkremove(subjectId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostAuthorizationSubjectBulkremove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| Subject ID (user or group) |  |
+| **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postauthorizationsubjectdivisionrole"></a>
 

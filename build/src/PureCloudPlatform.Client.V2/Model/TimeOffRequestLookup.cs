@@ -35,6 +35,118 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The status of this time off request
+        /// </summary>
+        /// <value>The status of this time off request</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Pending for "PENDING"
+            /// </summary>
+            [EnumMember(Value = "PENDING")]
+            Pending,
+            
+            /// <summary>
+            /// Enum Approved for "APPROVED"
+            /// </summary>
+            [EnumMember(Value = "APPROVED")]
+            Approved,
+            
+            /// <summary>
+            /// Enum Denied for "DENIED"
+            /// </summary>
+            [EnumMember(Value = "DENIED")]
+            Denied,
+            
+            /// <summary>
+            /// Enum Canceled for "CANCELED"
+            /// </summary>
+            [EnumMember(Value = "CANCELED")]
+            Canceled
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The status of this time off request
+        /// </summary>
+        /// <value>The status of this time off request</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestLookup" /> class.
@@ -47,10 +159,36 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The id of the time off request (required).</param>
         /// <param name="User">The user that the time off request belongs to (required).</param>
-        public TimeOffRequestLookup(string Id = null, User User = null)
+        /// <param name="IsFullDayRequest">Whether this is a full day request (false means partial day).</param>
+        /// <param name="MarkedAsRead">Whether this request has been marked as read by the agent.</param>
+        /// <param name="ActivityCodeId">The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category.</param>
+        /// <param name="Status">The status of this time off request.</param>
+        /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false.</param>
+        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest == true.</param>
+        /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes.</param>
+        /// <param name="Notes">Notes about the time off request.</param>
+        /// <param name="SubmittedBy">The user who submitted this time off request.</param>
+        /// <param name="SubmittedDate">The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ReviewedBy">The user who reviewed this time off request.</param>
+        /// <param name="ReviewedDate">The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Metadata">The version metadata of the time off request.</param>
+        public TimeOffRequestLookup(string Id = null, User User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, StatusEnum? Status = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, string Notes = null, User SubmittedBy = null, DateTime? SubmittedDate = null, User ReviewedBy = null, DateTime? ReviewedDate = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Id = Id;
             this.User = User;
+            this.IsFullDayRequest = IsFullDayRequest;
+            this.MarkedAsRead = MarkedAsRead;
+            this.ActivityCodeId = ActivityCodeId;
+            this.Status = Status;
+            this.PartialDayStartDateTimes = PartialDayStartDateTimes;
+            this.FullDayManagementUnitDates = FullDayManagementUnitDates;
+            this.DailyDurationMinutes = DailyDurationMinutes;
+            this.Notes = Notes;
+            this.SubmittedBy = SubmittedBy;
+            this.SubmittedDate = SubmittedDate;
+            this.ReviewedBy = ReviewedBy;
+            this.ReviewedDate = ReviewedDate;
+            this.Metadata = Metadata;
             
         }
         
@@ -75,6 +213,116 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Whether this is a full day request (false means partial day)
+        /// </summary>
+        /// <value>Whether this is a full day request (false means partial day)</value>
+        [DataMember(Name="isFullDayRequest", EmitDefaultValue=false)]
+        public bool? IsFullDayRequest { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether this request has been marked as read by the agent
+        /// </summary>
+        /// <value>Whether this request has been marked as read by the agent</value>
+        [DataMember(Name="markedAsRead", EmitDefaultValue=false)]
+        public bool? MarkedAsRead { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category
+        /// </summary>
+        /// <value>The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category</value>
+        [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
+        public string ActivityCodeId { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false
+        /// </summary>
+        /// <value>A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false</value>
+        [DataMember(Name="partialDayStartDateTimes", EmitDefaultValue=false)]
+        public List<DateTime?> PartialDayStartDateTimes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest == true
+        /// </summary>
+        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest == true</value>
+        [DataMember(Name="fullDayManagementUnitDates", EmitDefaultValue=false)]
+        public List<string> FullDayManagementUnitDates { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The daily duration of this time off request in minutes
+        /// </summary>
+        /// <value>The daily duration of this time off request in minutes</value>
+        [DataMember(Name="dailyDurationMinutes", EmitDefaultValue=false)]
+        public int? DailyDurationMinutes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Notes about the time off request
+        /// </summary>
+        /// <value>Notes about the time off request</value>
+        [DataMember(Name="notes", EmitDefaultValue=false)]
+        public string Notes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The user who submitted this time off request
+        /// </summary>
+        /// <value>The user who submitted this time off request</value>
+        [DataMember(Name="submittedBy", EmitDefaultValue=false)]
+        public User SubmittedBy { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="submittedDate", EmitDefaultValue=false)]
+        public DateTime? SubmittedDate { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The user who reviewed this time off request
+        /// </summary>
+        /// <value>The user who reviewed this time off request</value>
+        [DataMember(Name="reviewedBy", EmitDefaultValue=false)]
+        public User ReviewedBy { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="reviewedDate", EmitDefaultValue=false)]
+        public DateTime? ReviewedDate { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The version metadata of the time off request
+        /// </summary>
+        /// <value>The version metadata of the time off request</value>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public WfmVersionedEntityMetadata Metadata { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -93,6 +341,19 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  IsFullDayRequest: ").Append(IsFullDayRequest).Append("\n");
+            sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
+            sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
+            sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
+            sb.Append("  DailyDurationMinutes: ").Append(DailyDurationMinutes).Append("\n");
+            sb.Append("  Notes: ").Append(Notes).Append("\n");
+            sb.Append("  SubmittedBy: ").Append(SubmittedBy).Append("\n");
+            sb.Append("  SubmittedDate: ").Append(SubmittedDate).Append("\n");
+            sb.Append("  ReviewedBy: ").Append(ReviewedBy).Append("\n");
+            sb.Append("  ReviewedDate: ").Append(ReviewedDate).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -141,6 +402,71 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.User.Equals(other.User)
                 ) &&
                 (
+                    this.IsFullDayRequest == other.IsFullDayRequest ||
+                    this.IsFullDayRequest != null &&
+                    this.IsFullDayRequest.Equals(other.IsFullDayRequest)
+                ) &&
+                (
+                    this.MarkedAsRead == other.MarkedAsRead ||
+                    this.MarkedAsRead != null &&
+                    this.MarkedAsRead.Equals(other.MarkedAsRead)
+                ) &&
+                (
+                    this.ActivityCodeId == other.ActivityCodeId ||
+                    this.ActivityCodeId != null &&
+                    this.ActivityCodeId.Equals(other.ActivityCodeId)
+                ) &&
+                (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
+                    this.PartialDayStartDateTimes == other.PartialDayStartDateTimes ||
+                    this.PartialDayStartDateTimes != null &&
+                    this.PartialDayStartDateTimes.SequenceEqual(other.PartialDayStartDateTimes)
+                ) &&
+                (
+                    this.FullDayManagementUnitDates == other.FullDayManagementUnitDates ||
+                    this.FullDayManagementUnitDates != null &&
+                    this.FullDayManagementUnitDates.SequenceEqual(other.FullDayManagementUnitDates)
+                ) &&
+                (
+                    this.DailyDurationMinutes == other.DailyDurationMinutes ||
+                    this.DailyDurationMinutes != null &&
+                    this.DailyDurationMinutes.Equals(other.DailyDurationMinutes)
+                ) &&
+                (
+                    this.Notes == other.Notes ||
+                    this.Notes != null &&
+                    this.Notes.Equals(other.Notes)
+                ) &&
+                (
+                    this.SubmittedBy == other.SubmittedBy ||
+                    this.SubmittedBy != null &&
+                    this.SubmittedBy.Equals(other.SubmittedBy)
+                ) &&
+                (
+                    this.SubmittedDate == other.SubmittedDate ||
+                    this.SubmittedDate != null &&
+                    this.SubmittedDate.Equals(other.SubmittedDate)
+                ) &&
+                (
+                    this.ReviewedBy == other.ReviewedBy ||
+                    this.ReviewedBy != null &&
+                    this.ReviewedBy.Equals(other.ReviewedBy)
+                ) &&
+                (
+                    this.ReviewedDate == other.ReviewedDate ||
+                    this.ReviewedDate != null &&
+                    this.ReviewedDate.Equals(other.ReviewedDate)
+                ) &&
+                (
+                    this.Metadata == other.Metadata ||
+                    this.Metadata != null &&
+                    this.Metadata.Equals(other.Metadata)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -164,6 +490,45 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
+                if (this.IsFullDayRequest != null)
+                    hash = hash * 59 + this.IsFullDayRequest.GetHashCode();
+                
+                if (this.MarkedAsRead != null)
+                    hash = hash * 59 + this.MarkedAsRead.GetHashCode();
+                
+                if (this.ActivityCodeId != null)
+                    hash = hash * 59 + this.ActivityCodeId.GetHashCode();
+                
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
+                
+                if (this.PartialDayStartDateTimes != null)
+                    hash = hash * 59 + this.PartialDayStartDateTimes.GetHashCode();
+                
+                if (this.FullDayManagementUnitDates != null)
+                    hash = hash * 59 + this.FullDayManagementUnitDates.GetHashCode();
+                
+                if (this.DailyDurationMinutes != null)
+                    hash = hash * 59 + this.DailyDurationMinutes.GetHashCode();
+                
+                if (this.Notes != null)
+                    hash = hash * 59 + this.Notes.GetHashCode();
+                
+                if (this.SubmittedBy != null)
+                    hash = hash * 59 + this.SubmittedBy.GetHashCode();
+                
+                if (this.SubmittedDate != null)
+                    hash = hash * 59 + this.SubmittedDate.GetHashCode();
+                
+                if (this.ReviewedBy != null)
+                    hash = hash * 59 + this.ReviewedBy.GetHashCode();
+                
+                if (this.ReviewedDate != null)
+                    hash = hash * 59 + this.ReviewedDate.GetHashCode();
+                
+                if (this.Metadata != null)
+                    hash = hash * 59 + this.Metadata.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

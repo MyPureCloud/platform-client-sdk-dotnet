@@ -269,7 +269,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Widget for "WIDGET"
             /// </summary>
             [EnumMember(Value = "WIDGET")]
-            Widget
+            Widget,
+            
+            /// <summary>
+            /// Enum Workflow for "WORKFLOW"
+            /// </summary>
+            [EnumMember(Value = "WORKFLOW")]
+            Workflow
         }
         
         

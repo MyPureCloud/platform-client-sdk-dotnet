@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="IntervalIndex">The number of 15 minute intervals past referenceStartDate to which to apply this modification (required).</param>
         /// <param name="Value">The value to set for the given interval (required).</param>
-        public WfmForecastModificationIntervalOffsetValue(int? IntervalIndex = null, int? Value = null)
+        public WfmForecastModificationIntervalOffsetValue(int? IntervalIndex = null, double? Value = null)
         {
             this.IntervalIndex = IntervalIndex;
             this.Value = Value;
@@ -65,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The value to set for the given interval</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
-        public int? Value { get; set; }
+        public double? Value { get; set; }
         
         
         /// <summary>

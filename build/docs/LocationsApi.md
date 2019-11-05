@@ -132,7 +132,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **locationId** | **string**| Location ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: images |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: images, addressVerificationDetails |
 {: class="table table-striped"}
 
 ### Return type
@@ -320,7 +320,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-| **expand** | [**List<string>**](string.html)| Provides more details about a specified resource | [optional] <br />**Values**: images |
+| **expand** | [**List<string>**](string.html)| Provides more details about a specified resource | [optional] <br />**Values**: images, addressVerificationDetails |
 {: class="table table-striped"}
 
 ### Return type

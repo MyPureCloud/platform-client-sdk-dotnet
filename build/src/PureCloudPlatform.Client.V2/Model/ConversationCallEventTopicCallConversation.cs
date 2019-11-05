@@ -77,11 +77,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
+        
+        
         
         
     
@@ -93,13 +98,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Participants">Participants.</param>
         /// <param name="OtherMediaUris">OtherMediaUris.</param>
         /// <param name="RecordingState">RecordingState.</param>
-        public ConversationCallEventTopicCallConversation(string Id = null, string Name = null, List<ConversationCallEventTopicCallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null)
+        /// <param name="MaxParticipants">MaxParticipants.</param>
+        public ConversationCallEventTopicCallConversation(string Id = null, string Name = null, List<ConversationCallEventTopicCallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null, int? MaxParticipants = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Participants = Participants;
             this.OtherMediaUris = OtherMediaUris;
             this.RecordingState = RecordingState;
+            this.MaxParticipants = MaxParticipants;
             
         }
         
@@ -138,6 +145,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// Gets or Sets MaxParticipants
+        /// </summary>
+        [DataMember(Name="maxParticipants", EmitDefaultValue=false)]
+        public int? MaxParticipants { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
+            sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -212,6 +228,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecordingState == other.RecordingState ||
                     this.RecordingState != null &&
                     this.RecordingState.Equals(other.RecordingState)
+                ) &&
+                (
+                    this.MaxParticipants == other.MaxParticipants ||
+                    this.MaxParticipants != null &&
+                    this.MaxParticipants.Equals(other.MaxParticipants)
                 );
         }
 
@@ -241,6 +262,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
+                
+                if (this.MaxParticipants != null)
+                    hash = hash * 59 + this.MaxParticipants.GetHashCode();
                 
                 return hash;
             }

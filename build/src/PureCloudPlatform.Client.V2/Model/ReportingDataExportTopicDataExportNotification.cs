@@ -104,7 +104,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Csv for "CSV"
             /// </summary>
             [EnumMember(Value = "CSV")]
-            Csv
+            Csv,
+            
+            /// <summary>
+            /// Enum Pdf for "PDF"
+            /// </summary>
+            [EnumMember(Value = "PDF")]
+            Pdf
         }
         
         

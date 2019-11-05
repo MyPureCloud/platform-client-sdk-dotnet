@@ -525,6 +525,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Tnotresponding,
             
             /// <summary>
+            /// Enum Tshortabandon for "tShortAbandon"
+            /// </summary>
+            [EnumMember(Value = "tShortAbandon")]
+            Tshortabandon,
+            
+            /// <summary>
             /// Enum Ttalk for "tTalk"
             /// </summary>
             [EnumMember(Value = "tTalk")]
