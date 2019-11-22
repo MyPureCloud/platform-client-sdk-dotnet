@@ -75,12 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfig" /> class.
         /// </summary>
         /// <param name="Schemas">The list of supported schemas..</param>
-        /// <param name="Patch">\&quot;patch\&quot; configuration options..</param>
-        /// <param name="Filter">\&quot;filter\&quot; configuration options..</param>
-        /// <param name="Etag">\&quot;ETag\&quot; configuration options..</param>
-        /// <param name="Sort">\&quot;sort\&quot; configuration options..</param>
-        /// <param name="Bulk">\&quot;bulk\&quot; configuration options..</param>
-        /// <param name="ChangePassword">\&quot;changePassword\&quot; configuration options..</param>
+        /// <param name="Patch">The \&quot;patch\&quot; configuration options..</param>
+        /// <param name="Filter">The \&quot;filter\&quot; configuration options..</param>
+        /// <param name="Etag">The \&quot;etag\&quot; configuration options..</param>
+        /// <param name="Sort">The \&quot;sort\&quot; configuration options..</param>
+        /// <param name="Bulk">The \&quot;bulk\&quot; configuration options..</param>
+        /// <param name="ChangePassword">The \&quot;changePassword\&quot; configuration options..</param>
         /// <param name="AuthenticationSchemes">The list of supported authentication schemes..</param>
         /// <param name="Meta">Resource SCIM meta.</param>
         public ScimServiceProviderConfig(List<string> Schemas = null, ScimServiceProviderConfigSimpleFeature Patch = null, ScimServiceProviderConfigFilterFeature Filter = null, ScimServiceProviderConfigSimpleFeature Etag = null, ScimServiceProviderConfigSimpleFeature Sort = null, ScimServiceProviderConfigBulkFeature Bulk = null, ScimServiceProviderConfigSimpleFeature ChangePassword = null, List<ScimServiceProviderConfigAuthenticationScheme> AuthenticationSchemes = null, ScimMetadata Meta = null)
@@ -118,54 +118,54 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// \&quot;patch\&quot; configuration options.
+        /// The \&quot;patch\&quot; configuration options.
         /// </summary>
-        /// <value>\&quot;patch\&quot; configuration options.</value>
+        /// <value>The \&quot;patch\&quot; configuration options.</value>
         [DataMember(Name="patch", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature Patch { get; set; }
         
         
         
         /// <summary>
-        /// \&quot;filter\&quot; configuration options.
+        /// The \&quot;filter\&quot; configuration options.
         /// </summary>
-        /// <value>\&quot;filter\&quot; configuration options.</value>
+        /// <value>The \&quot;filter\&quot; configuration options.</value>
         [DataMember(Name="filter", EmitDefaultValue=false)]
         public ScimServiceProviderConfigFilterFeature Filter { get; set; }
         
         
         
         /// <summary>
-        /// \&quot;ETag\&quot; configuration options.
+        /// The \&quot;etag\&quot; configuration options.
         /// </summary>
-        /// <value>\&quot;ETag\&quot; configuration options.</value>
+        /// <value>The \&quot;etag\&quot; configuration options.</value>
         [DataMember(Name="etag", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature Etag { get; set; }
         
         
         
         /// <summary>
-        /// \&quot;sort\&quot; configuration options.
+        /// The \&quot;sort\&quot; configuration options.
         /// </summary>
-        /// <value>\&quot;sort\&quot; configuration options.</value>
+        /// <value>The \&quot;sort\&quot; configuration options.</value>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature Sort { get; set; }
         
         
         
         /// <summary>
-        /// \&quot;bulk\&quot; configuration options.
+        /// The \&quot;bulk\&quot; configuration options.
         /// </summary>
-        /// <value>\&quot;bulk\&quot; configuration options.</value>
+        /// <value>The \&quot;bulk\&quot; configuration options.</value>
         [DataMember(Name="bulk", EmitDefaultValue=false)]
         public ScimServiceProviderConfigBulkFeature Bulk { get; set; }
         
         
         
         /// <summary>
-        /// \&quot;changePassword\&quot; configuration options.
+        /// The \&quot;changePassword\&quot; configuration options.
         /// </summary>
-        /// <value>\&quot;changePassword\&quot; configuration options.</value>
+        /// <value>The \&quot;changePassword\&quot; configuration options.</value>
         [DataMember(Name="changePassword", EmitDefaultValue=false)]
         public ScimServiceProviderConfigSimpleFeature ChangePassword { get; set; }
         

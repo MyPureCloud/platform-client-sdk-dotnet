@@ -351,6 +351,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Indicates the type of message platform from which the message originated.
         /// </summary>
@@ -513,6 +519,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
         /// <summary>
         /// Indicates the type of message platform from which the message originated.
         /// </summary>
@@ -559,13 +569,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
         /// <param name="JourneyContext">Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context..</param>
         /// <param name="ConversationRoutingData">Information on how a communication should be routed to an agent..</param>
+        /// <param name="StartAcwTime">The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EndAcwTime">The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ToAddress">Address for the participant on receiving side of the message conversation. If the address is a phone number, E.164 format is recommended..</param>
         /// <param name="FromAddress">Address for the participant on the sending side of the message conversation. If the address is a phone number, E.164 format is recommended..</param>
         /// <param name="Messages">Message instance details on the communication..</param>
         /// <param name="Type">Indicates the type of message platform from which the message originated..</param>
         /// <param name="RecipientCountry">Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format..</param>
         /// <param name="RecipientType">The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type..</param>
-        public MessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DomainEntityRef User = null, DomainEntityRef Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
+        public MessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DomainEntityRef User = null, DomainEntityRef Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -597,6 +609,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FlaggedReason = FlaggedReason;
             this.JourneyContext = JourneyContext;
             this.ConversationRoutingData = ConversationRoutingData;
+            this.StartAcwTime = StartAcwTime;
+            this.EndAcwTime = EndAcwTime;
             this.ToAddress = ToAddress;
             this.FromAddress = FromAddress;
             this.Messages = Messages;
@@ -851,6 +865,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="startAcwTime", EmitDefaultValue=false)]
+        public DateTime? StartAcwTime { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="endAcwTime", EmitDefaultValue=false)]
+        public DateTime? EndAcwTime { get; set; }
+        
+        
+        
+        /// <summary>
         /// Address for the participant on receiving side of the message conversation. If the address is a phone number, E.164 format is recommended.
         /// </summary>
         /// <value>Address for the participant on receiving side of the message conversation. If the address is a phone number, E.164 format is recommended.</value>
@@ -935,6 +967,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  ConversationRoutingData: ").Append(ConversationRoutingData).Append("\n");
+            sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
+            sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
@@ -1128,6 +1162,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationRoutingData.Equals(other.ConversationRoutingData)
                 ) &&
                 (
+                    this.StartAcwTime == other.StartAcwTime ||
+                    this.StartAcwTime != null &&
+                    this.StartAcwTime.Equals(other.StartAcwTime)
+                ) &&
+                (
+                    this.EndAcwTime == other.EndAcwTime ||
+                    this.EndAcwTime != null &&
+                    this.EndAcwTime.Equals(other.EndAcwTime)
+                ) &&
+                (
                     this.ToAddress == other.ToAddress ||
                     this.ToAddress != null &&
                     this.ToAddress.Equals(other.ToAddress)
@@ -1260,6 +1304,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ConversationRoutingData != null)
                     hash = hash * 59 + this.ConversationRoutingData.GetHashCode();
+                
+                if (this.StartAcwTime != null)
+                    hash = hash * 59 + this.StartAcwTime.GetHashCode();
+                
+                if (this.EndAcwTime != null)
+                    hash = hash * 59 + this.EndAcwTime.GetHashCode();
                 
                 if (this.ToAddress != null)
                     hash = hash * 59 + this.ToAddress.GetHashCode();

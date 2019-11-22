@@ -300,6 +300,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// This field controls how the UI prompts the agent for a wrapup.
         /// </summary>
@@ -360,6 +366,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public FlaggedReasonEnum? FlaggedReason { get; set; }
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ParticipantBasic" /> class.
@@ -405,7 +415,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Evaluations">Evaluations.</param>
         /// <param name="ScreenRecordingState">The current screen recording state for this participant..</param>
         /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
-        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null)
+        /// <param name="StartAcwTime">The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EndAcwTime">The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null)
         {
             this.Id = Id;
             this.StartTime = StartTime;
@@ -448,6 +460,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Evaluations = Evaluations;
             this.ScreenRecordingState = ScreenRecordingState;
             this.FlaggedReason = FlaggedReason;
+            this.StartAcwTime = StartAcwTime;
+            this.EndAcwTime = EndAcwTime;
             
         }
         
@@ -790,6 +804,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="startAcwTime", EmitDefaultValue=false)]
+        public DateTime? StartAcwTime { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="endAcwTime", EmitDefaultValue=false)]
+        public DateTime? EndAcwTime { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -840,6 +872,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
+            sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
+            sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1080,6 +1114,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlaggedReason == other.FlaggedReason ||
                     this.FlaggedReason != null &&
                     this.FlaggedReason.Equals(other.FlaggedReason)
+                ) &&
+                (
+                    this.StartAcwTime == other.StartAcwTime ||
+                    this.StartAcwTime != null &&
+                    this.StartAcwTime.Equals(other.StartAcwTime)
+                ) &&
+                (
+                    this.EndAcwTime == other.EndAcwTime ||
+                    this.EndAcwTime != null &&
+                    this.EndAcwTime.Equals(other.EndAcwTime)
                 );
         }
 
@@ -1217,6 +1261,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FlaggedReason != null)
                     hash = hash * 59 + this.FlaggedReason.GetHashCode();
+                
+                if (this.StartAcwTime != null)
+                    hash = hash * 59 + this.StartAcwTime.GetHashCode();
+                
+                if (this.EndAcwTime != null)
+                    hash = hash * 59 + this.EndAcwTime.GetHashCode();
                 
                 return hash;
             }

@@ -126,6 +126,44 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets Capabilities
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CapabilitiesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sms for "sms"
+            /// </summary>
+            [EnumMember(Value = "sms")]
+            Sms,
+            
+            /// <summary>
+            /// Enum Mms for "mms"
+            /// </summary>
+            [EnumMember(Value = "mms")]
+            Mms,
+            
+            /// <summary>
+            /// Enum Voice for "voice"
+            /// </summary>
+            [EnumMember(Value = "voice")]
+            Voice
+        }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -258,6 +296,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Renewal time period of this phone number, if the phoneNumberType is shortcode.
         /// </summary>
@@ -293,6 +333,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhoneNumber">A phone number provisioned for SMS communications in E.164 format. E.g. +13175555555 or +34234234234 (required).</param>
         /// <param name="ProvisionedThroughPureCloud">Is set to false, if the phone number is provisioned through a SMS provider, outside of PureCloud.</param>
         /// <param name="PhoneNumberStatus">Status of the provisioned phone number..</param>
+        /// <param name="Capabilities">The capabilities of the phone number available for provisioning..</param>
         /// <param name="CountryCode">The ISO 3166-1 alpha-2 country code of the country this phone number is associated with..</param>
         /// <param name="DateCreated">Date this phone number was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateModified">Date this phone number was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -305,12 +346,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoRenewable">Renewal time period of this phone number, if the phoneNumberType is shortcode..</param>
         /// <param name="AddressId">The id of an address attached to this phone number..</param>
         /// <param name="ShortCodeBillingType">BillingType of this phone number, if the phoneNumberType is shortcode..</param>
-        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null)
+        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, List<CapabilitiesEnum> Capabilities = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null)
         {
             this.Name = Name;
             this.PhoneNumber = PhoneNumber;
             this.ProvisionedThroughPureCloud = ProvisionedThroughPureCloud;
             this.PhoneNumberStatus = PhoneNumberStatus;
+            this.Capabilities = Capabilities;
             this.CountryCode = CountryCode;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
@@ -364,6 +406,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? ProvisionedThroughPureCloud { get; set; }
         
         
+        
+        
+        
+        /// <summary>
+        /// The capabilities of the phone number available for provisioning.
+        /// </summary>
+        /// <value>The capabilities of the phone number available for provisioning.</value>
+        [DataMember(Name="capabilities", EmitDefaultValue=false)]
+        public List<CapabilitiesEnum> Capabilities { get; set; }
         
         
         
@@ -484,6 +535,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PhoneNumberType: ").Append(PhoneNumberType).Append("\n");
             sb.Append("  ProvisionedThroughPureCloud: ").Append(ProvisionedThroughPureCloud).Append("\n");
             sb.Append("  PhoneNumberStatus: ").Append(PhoneNumberStatus).Append("\n");
+            sb.Append("  Capabilities: ").Append(Capabilities).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
@@ -562,6 +614,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PhoneNumberStatus == other.PhoneNumberStatus ||
                     this.PhoneNumberStatus != null &&
                     this.PhoneNumberStatus.Equals(other.PhoneNumberStatus)
+                ) &&
+                (
+                    this.Capabilities == other.Capabilities ||
+                    this.Capabilities != null &&
+                    this.Capabilities.SequenceEqual(other.Capabilities)
                 ) &&
                 (
                     this.CountryCode == other.CountryCode ||
@@ -659,6 +716,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PhoneNumberStatus != null)
                     hash = hash * 59 + this.PhoneNumberStatus.GetHashCode();
+                
+                if (this.Capabilities != null)
+                    hash = hash * 59 + this.Capabilities.GetHashCode();
                 
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();

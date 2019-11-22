@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// LocationCreateUpdateDefinition
+    /// LocationUpdateDefinition
     /// </summary>
     [DataContract]
-    public partial class LocationCreateUpdateDefinition :  IEquatable<LocationCreateUpdateDefinition>
+    public partial class LocationUpdateDefinition :  IEquatable<LocationUpdateDefinition>
     {
         
         
@@ -77,9 +77,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// Current activity status of the location.
         /// </summary>
@@ -98,34 +95,30 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="LocationCreateUpdateDefinition" /> class.
+        /// Initializes a new instance of the <see cref="LocationUpdateDefinition" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected LocationCreateUpdateDefinition() { }
+        protected LocationUpdateDefinition() { }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="LocationCreateUpdateDefinition" /> class.
+        /// Initializes a new instance of the <see cref="LocationUpdateDefinition" /> class.
         /// </summary>
-        /// <param name="Name">The name of the Location. (required).</param>
-        /// <param name="Version">Current version of the location.</param>
+        /// <param name="Name">The name of the Location. Required for creates, not required for updates (required).</param>
+        /// <param name="Version">Current version of the location (required).</param>
         /// <param name="State">Current activity status of the location..</param>
         /// <param name="Path">A list of ancestor ids.</param>
-        /// <param name="AddressVerified">AddressVerified.</param>
         /// <param name="Notes">Notes for the location.</param>
         /// <param name="ContactUser">The user id of the location contact.</param>
         /// <param name="EmergencyNumber">Emergency number for the location.</param>
         /// <param name="Address">Address of the location.</param>
-        public LocationCreateUpdateDefinition(string Name = null, int? Version = null, StateEnum? State = null, List<string> Path = null, bool? AddressVerified = null, string Notes = null, string ContactUser = null, LocationEmergencyNumber EmergencyNumber = null, LocationAddress Address = null)
+        public LocationUpdateDefinition(string Name = null, int? Version = null, StateEnum? State = null, List<string> Path = null, string Notes = null, string ContactUser = null, LocationEmergencyNumber EmergencyNumber = null, LocationAddress Address = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.State = State;
             this.Path = Path;
-            this.AddressVerified = AddressVerified;
             this.Notes = Notes;
             this.ContactUser = ContactUser;
             this.EmergencyNumber = EmergencyNumber;
@@ -136,9 +129,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The name of the Location.
+        /// The name of the Location. Required for creates, not required for updates
         /// </summary>
-        /// <value>The name of the Location.</value>
+        /// <value>The name of the Location. Required for creates, not required for updates</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
@@ -161,14 +154,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A list of ancestor ids</value>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public List<string> Path { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AddressVerified
-        /// </summary>
-        [DataMember(Name="addressVerified", EmitDefaultValue=false)]
-        public bool? AddressVerified { get; set; }
         
         
         
@@ -214,13 +199,12 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class LocationCreateUpdateDefinition {\n");
+            sb.Append("class LocationUpdateDefinition {\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
-            sb.Append("  AddressVerified: ").Append(AddressVerified).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  ContactUser: ").Append(ContactUser).Append("\n");
             sb.Append("  EmergencyNumber: ").Append(EmergencyNumber).Append("\n");
@@ -246,15 +230,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as LocationCreateUpdateDefinition);
+            return this.Equals(obj as LocationUpdateDefinition);
         }
 
         /// <summary>
-        /// Returns true if LocationCreateUpdateDefinition instances are equal
+        /// Returns true if LocationUpdateDefinition instances are equal
         /// </summary>
-        /// <param name="other">Instance of LocationCreateUpdateDefinition to be compared</param>
+        /// <param name="other">Instance of LocationUpdateDefinition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LocationCreateUpdateDefinition other)
+        public bool Equals(LocationUpdateDefinition other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -280,11 +264,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Path == other.Path ||
                     this.Path != null &&
                     this.Path.SequenceEqual(other.Path)
-                ) &&
-                (
-                    this.AddressVerified == other.AddressVerified ||
-                    this.AddressVerified != null &&
-                    this.AddressVerified.Equals(other.AddressVerified)
                 ) &&
                 (
                     this.Notes == other.Notes ||
@@ -331,9 +310,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Path != null)
                     hash = hash * 59 + this.Path.GetHashCode();
-                
-                if (this.AddressVerified != null)
-                    hash = hash * 59 + this.AddressVerified.GetHashCode();
                 
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();

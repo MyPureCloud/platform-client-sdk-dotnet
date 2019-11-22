@@ -196,76 +196,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Calibrationid for "calibrationId"
-            /// </summary>
-            [EnumMember(Value = "calibrationId")]
-            Calibrationid,
-            
-            /// <summary>
-            /// Enum Contextid for "contextId"
-            /// </summary>
-            [EnumMember(Value = "contextId")]
-            Contextid,
-            
-            /// <summary>
-            /// Enum Conversationid for "conversationId"
-            /// </summary>
-            [EnumMember(Value = "conversationId")]
-            Conversationid,
-            
-            /// <summary>
-            /// Enum Divisionid for "divisionId"
-            /// </summary>
-            [EnumMember(Value = "divisionId")]
-            Divisionid,
-            
-            /// <summary>
             /// Enum Evaluationcreateddate for "evaluationCreatedDate"
             /// </summary>
             [EnumMember(Value = "evaluationCreatedDate")]
             Evaluationcreateddate,
             
             /// <summary>
-            /// Enum Evaluationid for "evaluationId"
+            /// Enum Eventtime for "eventTime"
             /// </summary>
-            [EnumMember(Value = "evaluationId")]
-            Evaluationid,
-            
-            /// <summary>
-            /// Enum Evaluatorid for "evaluatorId"
-            /// </summary>
-            [EnumMember(Value = "evaluatorId")]
-            Evaluatorid,
-            
-            /// <summary>
-            /// Enum Formid for "formId"
-            /// </summary>
-            [EnumMember(Value = "formId")]
-            Formid,
-            
-            /// <summary>
-            /// Enum Queueid for "queueId"
-            /// </summary>
-            [EnumMember(Value = "queueId")]
-            Queueid,
-            
-            /// <summary>
-            /// Enum Rescind for "rescind"
-            /// </summary>
-            [EnumMember(Value = "rescind")]
-            Rescind,
-            
-            /// <summary>
-            /// Enum Rescored for "rescored"
-            /// </summary>
-            [EnumMember(Value = "rescored")]
-            Rescored,
-            
-            /// <summary>
-            /// Enum Userid for "userId"
-            /// </summary>
-            [EnumMember(Value = "userId")]
-            Userid
+            [EnumMember(Value = "eventTime")]
+            Eventtime
         }
         
         

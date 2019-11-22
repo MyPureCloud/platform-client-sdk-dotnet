@@ -123,11 +123,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
+        
         
         
         
@@ -146,12 +156,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The flow name (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Type">Type.</param>
-        public FlowDivisionView(string Id = null, string Name = null, WritableDivision Division = null, TypeEnum? Type = null)
+        /// <param name="InputSchema">json schema describing the inputs for the flow.</param>
+        /// <param name="OutputSchema">json schema describing the outputs for the flow.</param>
+        public FlowDivisionView(string Id = null, string Name = null, WritableDivision Division = null, TypeEnum? Type = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Division = Division;
             this.Type = Type;
+            this.InputSchema = InputSchema;
+            this.OutputSchema = OutputSchema;
             
         }
         
@@ -187,6 +201,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// json schema describing the inputs for the flow
+        /// </summary>
+        /// <value>json schema describing the inputs for the flow</value>
+        [DataMember(Name="inputSchema", EmitDefaultValue=false)]
+        public JsonSchemaDocument InputSchema { get; set; }
+        
+        
+        
+        /// <summary>
+        /// json schema describing the outputs for the flow
+        /// </summary>
+        /// <value>json schema describing the outputs for the flow</value>
+        [DataMember(Name="outputSchema", EmitDefaultValue=false)]
+        public JsonSchemaDocument OutputSchema { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -207,6 +239,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
+            sb.Append("  OutputSchema: ").Append(OutputSchema).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -265,6 +299,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
+                    this.InputSchema == other.InputSchema ||
+                    this.InputSchema != null &&
+                    this.InputSchema.Equals(other.InputSchema)
+                ) &&
+                (
+                    this.OutputSchema == other.OutputSchema ||
+                    this.OutputSchema != null &&
+                    this.OutputSchema.Equals(other.OutputSchema)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -294,6 +338,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
+                if (this.InputSchema != null)
+                    hash = hash * 59 + this.InputSchema.GetHashCode();
+                
+                if (this.OutputSchema != null)
+                    hash = hash * 59 + this.OutputSchema.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

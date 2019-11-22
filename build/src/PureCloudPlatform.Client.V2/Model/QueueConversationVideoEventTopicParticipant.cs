@@ -80,6 +80,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ScreenRecordingState
         /// </summary>
@@ -130,6 +136,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "TIMEOUT")]
             Timeout
         }
+        
+        
+        
+        
         
         
         
@@ -263,6 +273,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapupPrompt">WrapupPrompt.</param>
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
         /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="StartAcwTime">StartAcwTime.</param>
+        /// <param name="EndAcwTime">EndAcwTime.</param>
         /// <param name="ConversationRoutingData">ConversationRoutingData.</param>
         /// <param name="AlertingTimeoutMs">AlertingTimeoutMs.</param>
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
@@ -279,7 +291,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationVideoEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<QueueConversationVideoEventTopicCall> Calls = null, List<QueueConversationVideoEventTopicCallback> Callbacks = null, List<QueueConversationVideoEventTopicChat> Chats = null, List<QueueConversationVideoEventTopicCobrowse> Cobrowsesessions = null, List<QueueConversationVideoEventTopicEmail> Emails = null, List<QueueConversationVideoEventTopicMessage> Messages = null, List<QueueConversationVideoEventTopicScreenshare> Screenshares = null, List<QueueConversationVideoEventTopicSocialExpression> SocialExpressions = null, List<QueueConversationVideoEventTopicVideo> Videos = null, Object AdditionalProperties = null)
+        public QueueConversationVideoEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, QueueConversationVideoEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, QueueConversationVideoEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<QueueConversationVideoEventTopicCall> Calls = null, List<QueueConversationVideoEventTopicCallback> Callbacks = null, List<QueueConversationVideoEventTopicChat> Chats = null, List<QueueConversationVideoEventTopicCobrowse> Cobrowsesessions = null, List<QueueConversationVideoEventTopicEmail> Emails = null, List<QueueConversationVideoEventTopicMessage> Messages = null, List<QueueConversationVideoEventTopicScreenshare> Screenshares = null, List<QueueConversationVideoEventTopicSocialExpression> SocialExpressions = null, List<QueueConversationVideoEventTopicVideo> Videos = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.ConnectedTime = ConnectedTime;
@@ -298,6 +310,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WrapupPrompt = WrapupPrompt;
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.Wrapup = Wrapup;
+            this.StartAcwTime = StartAcwTime;
+            this.EndAcwTime = EndAcwTime;
             this.ConversationRoutingData = ConversationRoutingData;
             this.AlertingTimeoutMs = AlertingTimeoutMs;
             this.MonitoredParticipantId = MonitoredParticipantId;
@@ -456,6 +470,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets StartAcwTime
+        /// </summary>
+        [DataMember(Name="startAcwTime", EmitDefaultValue=false)]
+        public DateTime? StartAcwTime { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets EndAcwTime
+        /// </summary>
+        [DataMember(Name="endAcwTime", EmitDefaultValue=false)]
+        public DateTime? EndAcwTime { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets ConversationRoutingData
         /// </summary>
         [DataMember(Name="conversationRoutingData", EmitDefaultValue=false)]
@@ -602,6 +632,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
+            sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
             sb.Append("  ConversationRoutingData: ").Append(ConversationRoutingData).Append("\n");
             sb.Append("  AlertingTimeoutMs: ").Append(AlertingTimeoutMs).Append("\n");
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
@@ -738,6 +770,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup == other.Wrapup ||
                     this.Wrapup != null &&
                     this.Wrapup.Equals(other.Wrapup)
+                ) &&
+                (
+                    this.StartAcwTime == other.StartAcwTime ||
+                    this.StartAcwTime != null &&
+                    this.StartAcwTime.Equals(other.StartAcwTime)
+                ) &&
+                (
+                    this.EndAcwTime == other.EndAcwTime ||
+                    this.EndAcwTime != null &&
+                    this.EndAcwTime.Equals(other.EndAcwTime)
                 ) &&
                 (
                     this.ConversationRoutingData == other.ConversationRoutingData ||
@@ -883,6 +925,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                
+                if (this.StartAcwTime != null)
+                    hash = hash * 59 + this.StartAcwTime.GetHashCode();
+                
+                if (this.EndAcwTime != null)
+                    hash = hash * 59 + this.EndAcwTime.GetHashCode();
                 
                 if (this.ConversationRoutingData != null)
                     hash = hash * 59 + this.ConversationRoutingData.GetHashCode();

@@ -611,11 +611,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="active">Active (optional)</param>
         /// <param name="id">ID(s) (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>QueueEntityListing</returns>
-        QueueEntityListing GetRoutingQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> id = null, List<string> divisionId = null);
+        QueueEntityListing GetRoutingQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, List<string> id = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get list of queues.
@@ -628,11 +627,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="active">Active (optional)</param>
         /// <param name="id">ID(s) (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
-        ApiResponse<QueueEntityListing> GetRoutingQueuesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> id = null, List<string> divisionId = null);
+        ApiResponse<QueueEntityListing> GetRoutingQueuesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, List<string> id = null, List<string> divisionId = null);
         
         /// <summary>
         /// Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
@@ -2249,11 +2247,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="active">Active (optional)</param>
         /// <param name="id">ID(s) (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of QueueEntityListing</returns>
-        System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> id = null, List<string> divisionId = null);
+        System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, List<string> id = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get list of queues.
@@ -2266,11 +2263,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="active">Active (optional)</param>
         /// <param name="id">ID(s) (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> id = null, List<string> divisionId = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, List<string> id = null, List<string> divisionId = null);
         
         /// <summary>
         /// Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
@@ -8180,13 +8176,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="active">Active (optional)</param>
         /// <param name="id">ID(s) (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>QueueEntityListing</returns>
-        public QueueEntityListing GetRoutingQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> id = null, List<string> divisionId = null)
+        public QueueEntityListing GetRoutingQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, List<string> id = null, List<string> divisionId = null)
         {
-             ApiResponse<QueueEntityListing> localVarResponse = GetRoutingQueuesWithHttpInfo(pageSize, pageNumber, sortBy, name, active, id, divisionId);
+             ApiResponse<QueueEntityListing> localVarResponse = GetRoutingQueuesWithHttpInfo(pageSize, pageNumber, sortBy, name, id, divisionId);
              return localVarResponse.Data;
         }
 
@@ -8198,11 +8193,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="active">Active (optional)</param>
         /// <param name="id">ID(s) (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
-        public ApiResponse< QueueEntityListing > GetRoutingQueuesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> id = null, List<string> divisionId = null)
+        public ApiResponse< QueueEntityListing > GetRoutingQueuesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, List<string> id = null, List<string> divisionId = null)
         { 
 
             var localVarPath = "/api/v2/routing/queues";
@@ -8242,7 +8236,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
-            if (active != null) localVarQueryParams.Add(new Tuple<string, string>("active", this.Configuration.ApiClient.ParameterToString(active)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
@@ -8290,13 +8283,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="active">Active (optional)</param>
         /// <param name="id">ID(s) (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of QueueEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> id = null, List<string> divisionId = null)
+        public async System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, List<string> id = null, List<string> divisionId = null)
         {
-             ApiResponse<QueueEntityListing> localVarResponse = await GetRoutingQueuesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name, active, id, divisionId);
+             ApiResponse<QueueEntityListing> localVarResponse = await GetRoutingQueuesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name, id, divisionId);
              return localVarResponse.Data;
 
         }
@@ -8309,11 +8301,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="active">Active (optional)</param>
         /// <param name="id">ID(s) (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> id = null, List<string> divisionId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, List<string> id = null, List<string> divisionId = null)
         { 
 
             var localVarPath = "/api/v2/routing/queues";
@@ -8353,7 +8344,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
-            if (active != null) localVarQueryParams.Add(new Tuple<string, string>("active", this.Configuration.ApiClient.ParameterToString(active)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 

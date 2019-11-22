@@ -77,8 +77,9 @@ Delete a calibration by id.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:calibration:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -139,8 +140,9 @@ Delete an evaluation
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:evaluation:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -383,8 +385,9 @@ Delete a keywordSet by id.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:keywordset:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -442,8 +445,9 @@ Delete keyword sets
 
 Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:keywordset:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -501,8 +505,9 @@ Gets a list of Agent Activities
 
 Including the number of evaluations and average evaluation score
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:evaluation:view
 
 ### Example
 ```{"language":"csharp"}
@@ -583,8 +588,9 @@ Get a calibration by id.  Requires either calibrator id or conversation id
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:calibration:view
 
 ### Example
 ```{"language":"csharp"}
@@ -647,8 +653,9 @@ Get the list of calibrations
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:calibration:view
 
 ### Example
 ```{"language":"csharp"}
@@ -723,10 +730,16 @@ namespace Example
 
 Get audits for conversation or recording
 
+Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
 
+Requires ANY permissions: 
 
-Requires NO permissions: 
-
+* quality:calibration:viewAudit
+* quality:evaluation:viewAudit
+* quality:survey:viewAudit
+* recording:recording:viewAudit
+* recording:annotation:viewAudit
+* recording:screenRecording:viewAudit
 
 ### Example
 ```{"language":"csharp"}
@@ -801,8 +814,9 @@ Get an evaluation
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:evaluation:view
 
 ### Example
 ```{"language":"csharp"}
@@ -865,8 +879,9 @@ Get the surveys for a conversation
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:survey:view
 
 ### Example
 ```{"language":"csharp"}
@@ -925,8 +940,9 @@ Queries Evaluations and returns a paged list
 
 Query params must include one of conversationId, evaluatorUserId, or agentUserId
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:evaluation:view
 
 ### Example
 ```{"language":"csharp"}
@@ -1019,8 +1035,9 @@ Get an evaluator activity
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:evaluation:view
 
 ### Example
 ```{"language":"csharp"}
@@ -1826,8 +1843,9 @@ Get a keywordSet by id.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:keywordset:view
 
 ### Example
 ```{"language":"csharp"}
@@ -1886,8 +1904,9 @@ Get the list of keyword sets
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:keywordset:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2348,8 +2367,9 @@ Get a survey for a conversation
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:survey:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2651,8 +2671,9 @@ Create a calibration
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:calibration:add
 
 ### Example
 ```{"language":"csharp"}
@@ -2713,8 +2734,9 @@ Create an evaluation
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:evaluation:add
 
 ### Example
 ```{"language":"csharp"}
@@ -3020,8 +3042,9 @@ Create a Keyword Set
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:keywordset:add
 
 ### Example
 ```{"language":"csharp"}
@@ -3385,8 +3408,9 @@ Update a calibration to the specified calibration via PUT.  Editable fields incl
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:calibration:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -3445,10 +3469,13 @@ namespace Example
 
 Update an evaluation
 
+The quality:evaluation:edit permission allows modification of most fields, while the quality:evaluation:editScore permission allows an evaluator to change just the question scores, and the quality:evaluation:editAgentSignoff permission allows an agent to change the agent comments and sign off on the evaluation.
 
+Requires ANY permissions: 
 
-Requires NO permissions: 
-
+* quality:evaluation:edit
+* quality:evaluation:editScore
+* quality:evaluation:editAgentSignoff
 
 ### Example
 ```{"language":"csharp"}
@@ -3702,8 +3729,9 @@ Update a keywordSet to the specified keywordSet via PUT.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:keywordset:edit
 
 ### Example
 ```{"language":"csharp"}

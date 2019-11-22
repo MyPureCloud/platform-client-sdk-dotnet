@@ -3456,7 +3456,7 @@ namespace Example
 
 <a name="getflowsdivisionviews"></a>
 
-## [**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html) GetFlowsDivisionviews (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null)
+## [**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html) GetFlowsDivisionviews (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null)
 
 
 
@@ -3497,11 +3497,12 @@ namespace Example
             var publishedAfter = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01;  // string | Published after (optional) 
             var publishedBefore = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01;  // string | Published before (optional) 
             var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
+            var includeSchemas = true;  // bool? | Include variable schemas (optional)  (default to false)
 
             try
             { 
                 // Get a pageable list of basic flow information objects filterable by query parameters.
-                FlowDivisionViewEntityListing result = apiInstance.GetFlowsDivisionviews(type, pageNumber, pageSize, sortBy, sortOrder, id, name, publishVersionId, publishedAfter, publishedBefore, divisionId);
+                FlowDivisionViewEntityListing result = apiInstance.GetFlowsDivisionviews(type, pageNumber, pageSize, sortBy, sortOrder, id, name, publishVersionId, publishedAfter, publishedBefore, divisionId, includeSchemas);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3529,6 +3530,7 @@ namespace Example
 | **publishedAfter** | **string**| Published after | [optional]  |
 | **publishedBefore** | **string**| Published before | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
+| **includeSchemas** | **bool?**| Include variable schemas | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type

@@ -329,7 +329,7 @@ namespace Example
 
 <a name="patchlocation"></a>
 
-## [**LocationDefinition**](LocationDefinition.html) PatchLocation (string locationId, LocationCreateUpdateDefinition body)
+## [**LocationDefinition**](LocationDefinition.html) PatchLocation (string locationId, LocationUpdateDefinition body)
 
 
 
@@ -360,7 +360,7 @@ namespace Example
 
             var apiInstance = new LocationsApi();
             var locationId = locationId_example;  // string | Location ID
-            var body = new LocationCreateUpdateDefinition(); // LocationCreateUpdateDefinition | Location
+            var body = new LocationUpdateDefinition(); // LocationUpdateDefinition | Location
 
             try
             { 
@@ -383,7 +383,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **locationId** | **string**| Location ID |  |
-| **body** | [**LocationCreateUpdateDefinition**](LocationCreateUpdateDefinition.html)| Location |  |
+| **body** | [**LocationUpdateDefinition**](LocationUpdateDefinition.html)| Location |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -392,7 +392,7 @@ namespace Example
 
 <a name="postlocations"></a>
 
-## [**LocationDefinition**](LocationDefinition.html) PostLocations (LocationCreateUpdateDefinition body)
+## [**LocationDefinition**](LocationDefinition.html) PostLocations (LocationCreateDefinition body)
 
 
 
@@ -422,7 +422,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationsApi();
-            var body = new LocationCreateUpdateDefinition(); // LocationCreateUpdateDefinition | Location
+            var body = new LocationCreateDefinition(); // LocationCreateDefinition | Location
 
             try
             { 
@@ -444,7 +444,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**LocationCreateUpdateDefinition**](LocationCreateUpdateDefinition.html)| Location |  |
+| **body** | [**LocationCreateDefinition**](LocationCreateDefinition.html)| Location |  |
 {: class="table table-striped"}
 
 ### Return type

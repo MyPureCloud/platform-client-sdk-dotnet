@@ -258,6 +258,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
@@ -333,6 +342,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainLogicalInterface" /> class.
@@ -370,12 +385,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InheritPhoneTrunkBasesIPv4">The IPv4 phone trunk base assignment will be inherited from the Edge Group..</param>
         /// <param name="InheritPhoneTrunkBasesIPv6">The IPv6 phone trunk base assignment will be inherited from the Edge Group..</param>
         /// <param name="UseForInternalEdgeCommunication">This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group..</param>
+        /// <param name="UseForIndirectEdgeCommunication">Site Interconnects using the \&quot;Indirect\&quot; method will communicate using the Public IP Address specified on the interface. Use this option when a NAT enabled firewall is between the Edge and the far end..</param>
+        /// <param name="UseForCloudProxyEdgeCommunication">Site Interconnects using the \&quot;Cloud Proxy\&quot; method will broker the connection between them with a Cloud Proxy. This method is required for connections between one or more Sites using Cloud Media, but can optionally be used between two premises Sites if Direct or Indirect are not an option..</param>
+        /// <param name="PublicNatIpAddress">NENT IP Address.</param>
         /// <param name="ExternalTrunkBaseAssignments">External trunk base settings to use for external communication from this interface..</param>
         /// <param name="PhoneTrunkBaseAssignments">Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true..</param>
         /// <param name="TraceEnabled">TraceEnabled.</param>
         /// <param name="StartDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="EndDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null, bool? TraceEnabled = null, DateTime? StartDate = null, DateTime? EndDate = null)
+        public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, bool? UseForIndirectEdgeCommunication = null, bool? UseForCloudProxyEdgeCommunication = null, string PublicNatIpAddress = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null, bool? TraceEnabled = null, DateTime? StartDate = null, DateTime? EndDate = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -404,6 +422,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.InheritPhoneTrunkBasesIPv4 = InheritPhoneTrunkBasesIPv4;
             this.InheritPhoneTrunkBasesIPv6 = InheritPhoneTrunkBasesIPv6;
             this.UseForInternalEdgeCommunication = UseForInternalEdgeCommunication;
+            this.UseForIndirectEdgeCommunication = UseForIndirectEdgeCommunication;
+            this.UseForCloudProxyEdgeCommunication = UseForCloudProxyEdgeCommunication;
+            this.PublicNatIpAddress = PublicNatIpAddress;
             this.ExternalTrunkBaseAssignments = ExternalTrunkBaseAssignments;
             this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
             this.TraceEnabled = TraceEnabled;
@@ -657,6 +678,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Site Interconnects using the \&quot;Indirect\&quot; method will communicate using the Public IP Address specified on the interface. Use this option when a NAT enabled firewall is between the Edge and the far end.
+        /// </summary>
+        /// <value>Site Interconnects using the \&quot;Indirect\&quot; method will communicate using the Public IP Address specified on the interface. Use this option when a NAT enabled firewall is between the Edge and the far end.</value>
+        [DataMember(Name="useForIndirectEdgeCommunication", EmitDefaultValue=false)]
+        public bool? UseForIndirectEdgeCommunication { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Site Interconnects using the \&quot;Cloud Proxy\&quot; method will broker the connection between them with a Cloud Proxy. This method is required for connections between one or more Sites using Cloud Media, but can optionally be used between two premises Sites if Direct or Indirect are not an option.
+        /// </summary>
+        /// <value>Site Interconnects using the \&quot;Cloud Proxy\&quot; method will broker the connection between them with a Cloud Proxy. This method is required for connections between one or more Sites using Cloud Media, but can optionally be used between two premises Sites if Direct or Indirect are not an option.</value>
+        [DataMember(Name="useForCloudProxyEdgeCommunication", EmitDefaultValue=false)]
+        public bool? UseForCloudProxyEdgeCommunication { get; set; }
+        
+        
+        
+        /// <summary>
+        /// NENT IP Address
+        /// </summary>
+        /// <value>NENT IP Address</value>
+        [DataMember(Name="publicNatIpAddress", EmitDefaultValue=false)]
+        public string PublicNatIpAddress { get; set; }
+        
+        
+        
+        /// <summary>
         /// External trunk base settings to use for external communication from this interface.
         /// </summary>
         /// <value>External trunk base settings to use for external communication from this interface.</value>
@@ -747,6 +795,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InheritPhoneTrunkBasesIPv4: ").Append(InheritPhoneTrunkBasesIPv4).Append("\n");
             sb.Append("  InheritPhoneTrunkBasesIPv6: ").Append(InheritPhoneTrunkBasesIPv6).Append("\n");
             sb.Append("  UseForInternalEdgeCommunication: ").Append(UseForInternalEdgeCommunication).Append("\n");
+            sb.Append("  UseForIndirectEdgeCommunication: ").Append(UseForIndirectEdgeCommunication).Append("\n");
+            sb.Append("  UseForCloudProxyEdgeCommunication: ").Append(UseForCloudProxyEdgeCommunication).Append("\n");
+            sb.Append("  PublicNatIpAddress: ").Append(PublicNatIpAddress).Append("\n");
             sb.Append("  ExternalTrunkBaseAssignments: ").Append(ExternalTrunkBaseAssignments).Append("\n");
             sb.Append("  PhoneTrunkBaseAssignments: ").Append(PhoneTrunkBaseAssignments).Append("\n");
             sb.Append("  TraceEnabled: ").Append(TraceEnabled).Append("\n");
@@ -940,6 +991,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UseForInternalEdgeCommunication.Equals(other.UseForInternalEdgeCommunication)
                 ) &&
                 (
+                    this.UseForIndirectEdgeCommunication == other.UseForIndirectEdgeCommunication ||
+                    this.UseForIndirectEdgeCommunication != null &&
+                    this.UseForIndirectEdgeCommunication.Equals(other.UseForIndirectEdgeCommunication)
+                ) &&
+                (
+                    this.UseForCloudProxyEdgeCommunication == other.UseForCloudProxyEdgeCommunication ||
+                    this.UseForCloudProxyEdgeCommunication != null &&
+                    this.UseForCloudProxyEdgeCommunication.Equals(other.UseForCloudProxyEdgeCommunication)
+                ) &&
+                (
+                    this.PublicNatIpAddress == other.PublicNatIpAddress ||
+                    this.PublicNatIpAddress != null &&
+                    this.PublicNatIpAddress.Equals(other.PublicNatIpAddress)
+                ) &&
+                (
                     this.ExternalTrunkBaseAssignments == other.ExternalTrunkBaseAssignments ||
                     this.ExternalTrunkBaseAssignments != null &&
                     this.ExternalTrunkBaseAssignments.SequenceEqual(other.ExternalTrunkBaseAssignments)
@@ -1072,6 +1138,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.UseForInternalEdgeCommunication != null)
                     hash = hash * 59 + this.UseForInternalEdgeCommunication.GetHashCode();
+                
+                if (this.UseForIndirectEdgeCommunication != null)
+                    hash = hash * 59 + this.UseForIndirectEdgeCommunication.GetHashCode();
+                
+                if (this.UseForCloudProxyEdgeCommunication != null)
+                    hash = hash * 59 + this.UseForCloudProxyEdgeCommunication.GetHashCode();
+                
+                if (this.PublicNatIpAddress != null)
+                    hash = hash * 59 + this.PublicNatIpAddress.GetHashCode();
                 
                 if (this.ExternalTrunkBaseAssignments != null)
                     hash = hash * 59 + this.ExternalTrunkBaseAssignments.GetHashCode();

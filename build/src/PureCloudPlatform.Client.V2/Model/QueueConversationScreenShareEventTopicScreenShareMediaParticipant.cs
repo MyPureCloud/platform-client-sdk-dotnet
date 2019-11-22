@@ -385,6 +385,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -460,6 +466,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationScreenShareEventTopicScreenShareMediaParticipant" /> class.
@@ -495,10 +505,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
         /// <param name="FlaggedReason">FlaggedReason.</param>
         /// <param name="JourneyContext">JourneyContext.</param>
+        /// <param name="StartAcwTime">StartAcwTime.</param>
+        /// <param name="EndAcwTime">EndAcwTime.</param>
         /// <param name="Context">Context.</param>
         /// <param name="PeerCount">PeerCount.</param>
         /// <param name="Sharing">Sharing.</param>
-        public QueueConversationScreenShareEventTopicScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationScreenShareEventTopicUriReference User = null, QueueConversationScreenShareEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, QueueConversationScreenShareEventTopicErrorBody ErrorInfo = null, QueueConversationScreenShareEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationScreenShareEventTopicUriReference ExternalContact = null, QueueConversationScreenShareEventTopicUriReference ExternalOrganization = null, QueueConversationScreenShareEventTopicWrapup Wrapup = null, QueueConversationScreenShareEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationScreenShareEventTopicJourneyContext JourneyContext = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
+        public QueueConversationScreenShareEventTopicScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationScreenShareEventTopicUriReference User = null, QueueConversationScreenShareEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, QueueConversationScreenShareEventTopicErrorBody ErrorInfo = null, QueueConversationScreenShareEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationScreenShareEventTopicUriReference ExternalContact = null, QueueConversationScreenShareEventTopicUriReference ExternalOrganization = null, QueueConversationScreenShareEventTopicWrapup Wrapup = null, QueueConversationScreenShareEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationScreenShareEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -531,6 +543,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ScreenRecordingState = ScreenRecordingState;
             this.FlaggedReason = FlaggedReason;
             this.JourneyContext = JourneyContext;
+            this.StartAcwTime = StartAcwTime;
+            this.EndAcwTime = EndAcwTime;
             this.Context = Context;
             this.PeerCount = PeerCount;
             this.Sharing = Sharing;
@@ -764,6 +778,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets StartAcwTime
+        /// </summary>
+        [DataMember(Name="startAcwTime", EmitDefaultValue=false)]
+        public DateTime? StartAcwTime { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets EndAcwTime
+        /// </summary>
+        [DataMember(Name="endAcwTime", EmitDefaultValue=false)]
+        public DateTime? EndAcwTime { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Context
         /// </summary>
         [DataMember(Name="context", EmitDefaultValue=false)]
@@ -826,6 +856,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
+            sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
+            sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  PeerCount: ").Append(PeerCount).Append("\n");
             sb.Append("  Sharing: ").Append(Sharing).Append("\n");
@@ -1021,6 +1053,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.JourneyContext.Equals(other.JourneyContext)
                 ) &&
                 (
+                    this.StartAcwTime == other.StartAcwTime ||
+                    this.StartAcwTime != null &&
+                    this.StartAcwTime.Equals(other.StartAcwTime)
+                ) &&
+                (
+                    this.EndAcwTime == other.EndAcwTime ||
+                    this.EndAcwTime != null &&
+                    this.EndAcwTime.Equals(other.EndAcwTime)
+                ) &&
+                (
                     this.Context == other.Context ||
                     this.Context != null &&
                     this.Context.Equals(other.Context)
@@ -1141,6 +1183,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.JourneyContext != null)
                     hash = hash * 59 + this.JourneyContext.GetHashCode();
+                
+                if (this.StartAcwTime != null)
+                    hash = hash * 59 + this.StartAcwTime.GetHashCode();
+                
+                if (this.EndAcwTime != null)
+                    hash = hash * 59 + this.EndAcwTime.GetHashCode();
                 
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();

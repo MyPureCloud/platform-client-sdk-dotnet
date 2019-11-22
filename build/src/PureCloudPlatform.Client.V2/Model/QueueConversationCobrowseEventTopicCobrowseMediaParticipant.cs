@@ -391,6 +391,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -470,6 +476,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationCobrowseEventTopicCobrowseMediaParticipant" /> class.
@@ -505,12 +515,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
         /// <param name="FlaggedReason">FlaggedReason.</param>
         /// <param name="JourneyContext">JourneyContext.</param>
+        /// <param name="StartAcwTime">StartAcwTime.</param>
+        /// <param name="EndAcwTime">EndAcwTime.</param>
         /// <param name="CobrowseSessionId">CobrowseSessionId.</param>
         /// <param name="CobrowseRole">CobrowseRole.</param>
         /// <param name="ViewerUrl">ViewerUrl.</param>
         /// <param name="ProviderEventTime">ProviderEventTime.</param>
         /// <param name="Controlling">Controlling.</param>
-        public QueueConversationCobrowseEventTopicCobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCobrowseEventTopicUriReference User = null, QueueConversationCobrowseEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, QueueConversationCobrowseEventTopicErrorBody ErrorInfo = null, QueueConversationCobrowseEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationCobrowseEventTopicUriReference ExternalContact = null, QueueConversationCobrowseEventTopicUriReference ExternalOrganization = null, QueueConversationCobrowseEventTopicWrapup Wrapup = null, QueueConversationCobrowseEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCobrowseEventTopicJourneyContext JourneyContext = null, string CobrowseSessionId = null, string CobrowseRole = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, List<string> Controlling = null)
+        public QueueConversationCobrowseEventTopicCobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCobrowseEventTopicUriReference User = null, QueueConversationCobrowseEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, QueueConversationCobrowseEventTopicErrorBody ErrorInfo = null, QueueConversationCobrowseEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationCobrowseEventTopicUriReference ExternalContact = null, QueueConversationCobrowseEventTopicUriReference ExternalOrganization = null, QueueConversationCobrowseEventTopicWrapup Wrapup = null, QueueConversationCobrowseEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCobrowseEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, string CobrowseSessionId = null, string CobrowseRole = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, List<string> Controlling = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -543,6 +555,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ScreenRecordingState = ScreenRecordingState;
             this.FlaggedReason = FlaggedReason;
             this.JourneyContext = JourneyContext;
+            this.StartAcwTime = StartAcwTime;
+            this.EndAcwTime = EndAcwTime;
             this.CobrowseSessionId = CobrowseSessionId;
             this.CobrowseRole = CobrowseRole;
             this.ViewerUrl = ViewerUrl;
@@ -778,6 +792,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets StartAcwTime
+        /// </summary>
+        [DataMember(Name="startAcwTime", EmitDefaultValue=false)]
+        public DateTime? StartAcwTime { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets EndAcwTime
+        /// </summary>
+        [DataMember(Name="endAcwTime", EmitDefaultValue=false)]
+        public DateTime? EndAcwTime { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets CobrowseSessionId
         /// </summary>
         [DataMember(Name="cobrowseSessionId", EmitDefaultValue=false)]
@@ -856,6 +886,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
+            sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
+            sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
             sb.Append("  CobrowseSessionId: ").Append(CobrowseSessionId).Append("\n");
             sb.Append("  CobrowseRole: ").Append(CobrowseRole).Append("\n");
             sb.Append("  ViewerUrl: ").Append(ViewerUrl).Append("\n");
@@ -1053,6 +1085,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.JourneyContext.Equals(other.JourneyContext)
                 ) &&
                 (
+                    this.StartAcwTime == other.StartAcwTime ||
+                    this.StartAcwTime != null &&
+                    this.StartAcwTime.Equals(other.StartAcwTime)
+                ) &&
+                (
+                    this.EndAcwTime == other.EndAcwTime ||
+                    this.EndAcwTime != null &&
+                    this.EndAcwTime.Equals(other.EndAcwTime)
+                ) &&
+                (
                     this.CobrowseSessionId == other.CobrowseSessionId ||
                     this.CobrowseSessionId != null &&
                     this.CobrowseSessionId.Equals(other.CobrowseSessionId)
@@ -1183,6 +1225,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.JourneyContext != null)
                     hash = hash * 59 + this.JourneyContext.GetHashCode();
+                
+                if (this.StartAcwTime != null)
+                    hash = hash * 59 + this.StartAcwTime.GetHashCode();
+                
+                if (this.EndAcwTime != null)
+                    hash = hash * 59 + this.EndAcwTime.GetHashCode();
                 
                 if (this.CobrowseSessionId != null)
                     hash = hash * 59 + this.CobrowseSessionId.GetHashCode();

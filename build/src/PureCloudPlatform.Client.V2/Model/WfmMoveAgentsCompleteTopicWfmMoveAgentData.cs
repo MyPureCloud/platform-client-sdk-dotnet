@@ -38,28 +38,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Movesuccessful for "MoveSuccessful"
-            /// </summary>
-            [EnumMember(Value = "MoveSuccessful")]
-            Movesuccessful,
-            
-            /// <summary>
-            /// Enum Nothingtodo for "NothingToDo"
-            /// </summary>
-            [EnumMember(Value = "NothingToDo")]
-            Nothingtodo,
-            
-            /// <summary>
             /// Enum Alreadymoved for "AlreadyMoved"
             /// </summary>
             [EnumMember(Value = "AlreadyMoved")]
             Alreadymoved,
             
             /// <summary>
-            /// Enum Destinationmanagementunitdoesnotexist for "DestinationManagementUnitDoesNotExist"
+            /// Enum Destinationbusinessunitagentlimitexceeded for "DestinationBusinessUnitAgentLimitExceeded"
             /// </summary>
-            [EnumMember(Value = "DestinationManagementUnitDoesNotExist")]
-            Destinationmanagementunitdoesnotexist,
+            [EnumMember(Value = "DestinationBusinessUnitAgentLimitExceeded")]
+            Destinationbusinessunitagentlimitexceeded,
             
             /// <summary>
             /// Enum Destinationmanagementunitagentlimitexceeded for "DestinationManagementUnitAgentLimitExceeded"
@@ -68,10 +56,34 @@ namespace PureCloudPlatform.Client.V2.Model
             Destinationmanagementunitagentlimitexceeded,
             
             /// <summary>
+            /// Enum Destinationmanagementunitdoesnotexist for "DestinationManagementUnitDoesNotExist"
+            /// </summary>
+            [EnumMember(Value = "DestinationManagementUnitDoesNotExist")]
+            Destinationmanagementunitdoesnotexist,
+            
+            /// <summary>
+            /// Enum Movesuccessful for "MoveSuccessful"
+            /// </summary>
+            [EnumMember(Value = "MoveSuccessful")]
+            Movesuccessful,
+            
+            /// <summary>
             /// Enum Movingtodifferentmanagementunit for "MovingToDifferentManagementUnit"
             /// </summary>
             [EnumMember(Value = "MovingToDifferentManagementUnit")]
-            Movingtodifferentmanagementunit
+            Movingtodifferentmanagementunit,
+            
+            /// <summary>
+            /// Enum Nothingtodo for "NothingToDo"
+            /// </summary>
+            [EnumMember(Value = "NothingToDo")]
+            Nothingtodo,
+            
+            /// <summary>
+            /// Enum Sourcemanagementunitnotauthorized for "SourceManagementUnitNotAuthorized"
+            /// </summary>
+            [EnumMember(Value = "SourceManagementUnitNotAuthorized")]
+            Sourcemanagementunitnotauthorized
         }
         
         

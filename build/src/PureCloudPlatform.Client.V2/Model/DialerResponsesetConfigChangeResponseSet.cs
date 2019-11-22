@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerResponsesetConfigChangeResponseSet" /> class.
@@ -65,8 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">DateModified.</param>
         /// <param name="Version">Version.</param>
         /// <param name="Responses">Responses.</param>
+        /// <param name="BeepDetectionEnabled">BeepDetectionEnabled.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerResponsesetConfigChangeResponseSet(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, Dictionary<string, DialerResponsesetConfigChangeReaction> Responses = null, Object AdditionalProperties = null)
+        public DialerResponsesetConfigChangeResponseSet(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, Dictionary<string, DialerResponsesetConfigChangeReaction> Responses = null, bool? BeepDetectionEnabled = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -74,6 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateModified = DateModified;
             this.Version = Version;
             this.Responses = Responses;
+            this.BeepDetectionEnabled = BeepDetectionEnabled;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -129,6 +136,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets BeepDetectionEnabled
+        /// </summary>
+        [DataMember(Name="beepDetectionEnabled", EmitDefaultValue=false)]
+        public bool? BeepDetectionEnabled { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -150,6 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Responses: ").Append(Responses).Append("\n");
+            sb.Append("  BeepDetectionEnabled: ").Append(BeepDetectionEnabled).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -218,6 +234,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Responses.SequenceEqual(other.Responses)
                 ) &&
                 (
+                    this.BeepDetectionEnabled == other.BeepDetectionEnabled ||
+                    this.BeepDetectionEnabled != null &&
+                    this.BeepDetectionEnabled.Equals(other.BeepDetectionEnabled)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -253,6 +274,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Responses != null)
                     hash = hash * 59 + this.Responses.GetHashCode();
+                
+                if (this.BeepDetectionEnabled != null)
+                    hash = hash * 59 + this.BeepDetectionEnabled.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

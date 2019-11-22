@@ -13,6 +13,7 @@ title: DialerResponsesetConfigChangeResponseSet
 | **DateModified** | **DateTime?** |  | [optional] |
 | **Version** | **int?** |  | [optional] |
 | **Responses** | [**Dictionary&lt;string, DialerResponsesetConfigChangeReaction&gt;**](DialerResponsesetConfigChangeReaction.html) |  | [optional] |
+| **BeepDetectionEnabled** | **bool?** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

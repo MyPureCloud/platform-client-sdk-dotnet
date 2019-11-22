@@ -486,6 +486,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.
+        /// </summary>
+        /// <value>Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AlternateTimeDimensionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Eventtime for "eventTime"
+            /// </summary>
+            [EnumMember(Value = "eventTime")]
+            Eventtime
+        }
         
         
         
@@ -500,6 +521,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.
+        /// </summary>
+        /// <value>Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.</value>
+        [DataMember(Name="alternateTimeDimension", EmitDefaultValue=false)]
+        public AlternateTimeDimensionEnum? AlternateTimeDimension { get; set; }
         
         
     
@@ -514,7 +548,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Metrics">Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *)..</param>
         /// <param name="FlattenMultivaluedDimensions">Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;).</param>
         /// <param name="Views">Custom derived metric views.</param>
-        public FlowAggregationQuery(string Interval = null, string Granularity = null, string TimeZone = null, List<GroupByEnum> GroupBy = null, FlowAggregateQueryFilter Filter = null, List<MetricsEnum> Metrics = null, bool? FlattenMultivaluedDimensions = null, List<FlowAggregationView> Views = null)
+        /// <param name="AlternateTimeDimension">Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event..</param>
+        public FlowAggregationQuery(string Interval = null, string Granularity = null, string TimeZone = null, List<GroupByEnum> GroupBy = null, FlowAggregateQueryFilter Filter = null, List<MetricsEnum> Metrics = null, bool? FlattenMultivaluedDimensions = null, List<FlowAggregationView> Views = null, AlternateTimeDimensionEnum? AlternateTimeDimension = null)
         {
             this.Interval = Interval;
             this.Granularity = Granularity;
@@ -524,6 +559,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Metrics = Metrics;
             this.FlattenMultivaluedDimensions = FlattenMultivaluedDimensions;
             this.Views = Views;
+            this.AlternateTimeDimension = AlternateTimeDimension;
             
         }
         
@@ -600,6 +636,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<FlowAggregationView> Views { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -617,6 +655,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
             sb.Append("  FlattenMultivaluedDimensions: ").Append(FlattenMultivaluedDimensions).Append("\n");
             sb.Append("  Views: ").Append(Views).Append("\n");
+            sb.Append("  AlternateTimeDimension: ").Append(AlternateTimeDimension).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -692,6 +731,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Views == other.Views ||
                     this.Views != null &&
                     this.Views.SequenceEqual(other.Views)
+                ) &&
+                (
+                    this.AlternateTimeDimension == other.AlternateTimeDimension ||
+                    this.AlternateTimeDimension != null &&
+                    this.AlternateTimeDimension.Equals(other.AlternateTimeDimension)
                 );
         }
 
@@ -730,6 +774,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Views != null)
                     hash = hash * 59 + this.Views.GetHashCode();
+                
+                if (this.AlternateTimeDimension != null)
+                    hash = hash * 59 + this.AlternateTimeDimension.GetHashCode();
                 
                 return hash;
             }

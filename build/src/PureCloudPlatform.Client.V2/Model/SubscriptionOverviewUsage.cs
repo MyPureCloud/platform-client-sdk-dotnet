@@ -70,6 +70,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriptionOverviewUsage" /> class.
@@ -90,7 +100,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PrepayPrice">Price for prepay charge.</param>
         /// <param name="UsageNotes">Notes about the usage/charge item.</param>
         /// <param name="IsCancellable">Indicates whether the item is cancellable.</param>
-        public SubscriptionOverviewUsage(string Name = null, string PartNumber = null, string Grouping = null, string UnitOfMeasureType = null, string UsageQuantity = null, string OveragePrice = null, string PrepayQuantity = null, string PrepayPrice = null, string UsageNotes = null, bool? IsCancellable = null)
+        /// <param name="BundleQuantity">Quantity multiplier for this charge.</param>
+        /// <param name="IsThirdParty">A charge from a third party entity.</param>
+        public SubscriptionOverviewUsage(string Name = null, string PartNumber = null, string Grouping = null, string UnitOfMeasureType = null, string UsageQuantity = null, string OveragePrice = null, string PrepayQuantity = null, string PrepayPrice = null, string UsageNotes = null, bool? IsCancellable = null, string BundleQuantity = null, bool? IsThirdParty = null)
         {
             this.Name = Name;
             this.PartNumber = PartNumber;
@@ -102,6 +114,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PrepayPrice = PrepayPrice;
             this.UsageNotes = UsageNotes;
             this.IsCancellable = IsCancellable;
+            this.BundleQuantity = BundleQuantity;
+            this.IsThirdParty = IsThirdParty;
             
         }
         
@@ -196,6 +210,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? IsCancellable { get; set; }
         
         
+        
+        /// <summary>
+        /// Quantity multiplier for this charge
+        /// </summary>
+        /// <value>Quantity multiplier for this charge</value>
+        [DataMember(Name="bundleQuantity", EmitDefaultValue=false)]
+        public string BundleQuantity { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A charge from a third party entity
+        /// </summary>
+        /// <value>A charge from a third party entity</value>
+        [DataMember(Name="isThirdParty", EmitDefaultValue=false)]
+        public bool? IsThirdParty { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -215,6 +247,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PrepayPrice: ").Append(PrepayPrice).Append("\n");
             sb.Append("  UsageNotes: ").Append(UsageNotes).Append("\n");
             sb.Append("  IsCancellable: ").Append(IsCancellable).Append("\n");
+            sb.Append("  BundleQuantity: ").Append(BundleQuantity).Append("\n");
+            sb.Append("  IsThirdParty: ").Append(IsThirdParty).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -300,6 +334,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsCancellable == other.IsCancellable ||
                     this.IsCancellable != null &&
                     this.IsCancellable.Equals(other.IsCancellable)
+                ) &&
+                (
+                    this.BundleQuantity == other.BundleQuantity ||
+                    this.BundleQuantity != null &&
+                    this.BundleQuantity.Equals(other.BundleQuantity)
+                ) &&
+                (
+                    this.IsThirdParty == other.IsThirdParty ||
+                    this.IsThirdParty != null &&
+                    this.IsThirdParty.Equals(other.IsThirdParty)
                 );
         }
 
@@ -344,6 +388,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.IsCancellable != null)
                     hash = hash * 59 + this.IsCancellable.GetHashCode();
+                
+                if (this.BundleQuantity != null)
+                    hash = hash * 59 + this.BundleQuantity.GetHashCode();
+                
+                if (this.IsThirdParty != null)
+                    hash = hash * 59 + this.IsThirdParty.GetHashCode();
                 
                 return hash;
             }

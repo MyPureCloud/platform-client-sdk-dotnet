@@ -217,9 +217,8 @@ Get an organization's StationSettings
 
 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* telephony:plugin:all
 
 ### Example
 ```{"language":"csharp"}

@@ -1577,7 +1577,7 @@ namespace Example
 
 <a name="getroutingqueues"></a>
 
-## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> id = null, List<string> divisionId = null)
+## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, List<string> id = null, List<string> divisionId = null)
 
 
 
@@ -1611,14 +1611,13 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
             var name = name_example;  // string | Name (optional) 
-            var active = true;  // bool? | Active (optional) 
             var id = new List<string>(); // List<string> | ID(s) (optional) 
             var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
 
             try
             { 
                 // Get list of queues.
-                QueueEntityListing result = apiInstance.GetRoutingQueues(pageSize, pageNumber, sortBy, name, active, id, divisionId);
+                QueueEntityListing result = apiInstance.GetRoutingQueues(pageSize, pageNumber, sortBy, name, id, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1639,7 +1638,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
 | **name** | **string**| Name | [optional]  |
-| **active** | **bool?**| Active | [optional]  |
 | **id** | [**List<string>**](string.html)| ID(s) | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
 {: class="table table-striped"}

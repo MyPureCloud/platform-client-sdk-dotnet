@@ -49,52 +49,44 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueUserEventTopicQueueMember" /> class.
         /// </summary>
-        /// <param name="MemberId">MemberId.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="RingNumber">RingNumber.</param>
-        /// <param name="Type">Type.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="User">User.</param>
+        /// <param name="QueueId">QueueId.</param>
         /// <param name="Joined">Joined.</param>
-        public QueueUserEventTopicQueueMember(string MemberId = null, string Name = null, int? RingNumber = null, string Type = null, bool? Joined = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public QueueUserEventTopicQueueMember(string Id = null, QueueUserEventTopicUserReference User = null, string QueueId = null, bool? Joined = null, Object AdditionalProperties = null)
         {
-            this.MemberId = MemberId;
-            this.Name = Name;
-            this.RingNumber = RingNumber;
-            this.Type = Type;
+            this.Id = Id;
+            this.User = User;
+            this.QueueId = QueueId;
             this.Joined = Joined;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets MemberId
+        /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="memberId", EmitDefaultValue=false)]
-        public string MemberId { get; set; }
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets User
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        [DataMember(Name="user", EmitDefaultValue=false)]
+        public QueueUserEventTopicUserReference User { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets RingNumber
+        /// Gets or Sets QueueId
         /// </summary>
-        [DataMember(Name="ringNumber", EmitDefaultValue=false)]
-        public int? RingNumber { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
+        [DataMember(Name="queueId", EmitDefaultValue=false)]
+        public string QueueId { get; set; }
         
         
         
@@ -103,6 +95,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="joined", EmitDefaultValue=false)]
         public bool? Joined { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Object AdditionalProperties { get; set; }
         
         
         /// <summary>
@@ -114,11 +114,11 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class QueueUserEventTopicQueueMember {\n");
             
-            sb.Append("  MemberId: ").Append(MemberId).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  RingNumber: ").Append(RingNumber).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  Joined: ").Append(Joined).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -156,29 +156,29 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.MemberId == other.MemberId ||
-                    this.MemberId != null &&
-                    this.MemberId.Equals(other.MemberId)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.User == other.User ||
+                    this.User != null &&
+                    this.User.Equals(other.User)
                 ) &&
                 (
-                    this.RingNumber == other.RingNumber ||
-                    this.RingNumber != null &&
-                    this.RingNumber.Equals(other.RingNumber)
-                ) &&
-                (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
+                    this.QueueId == other.QueueId ||
+                    this.QueueId != null &&
+                    this.QueueId.Equals(other.QueueId)
                 ) &&
                 (
                     this.Joined == other.Joined ||
                     this.Joined != null &&
                     this.Joined.Equals(other.Joined)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -194,20 +194,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.MemberId != null)
-                    hash = hash * 59 + this.MemberId.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this.User != null)
+                    hash = hash * 59 + this.User.GetHashCode();
                 
-                if (this.RingNumber != null)
-                    hash = hash * 59 + this.RingNumber.GetHashCode();
-                
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
+                if (this.QueueId != null)
+                    hash = hash * 59 + this.QueueId.GetHashCode();
                 
                 if (this.Joined != null)
                     hash = hash * 59 + this.Joined.GetHashCode();
+                
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }
