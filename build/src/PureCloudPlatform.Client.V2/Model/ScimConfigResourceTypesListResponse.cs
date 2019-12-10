@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM Resource Types list response
+    /// Defines a response for a list of SCIM resource types.
     /// </summary>
     [DataContract]
     public partial class ScimConfigResourceTypesListResponse :  IEquatable<ScimConfigResourceTypesListResponse>

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Represents a SCIM V2 Patch Request (See RFC7644 for detailed usage)
+    /// Defines a SCIM PATCH request. See section 3.5.2 \&quot;Modifying with PATCH\&quot; in RFC 7644 for details.
     /// </summary>
     [DataContract]
     public partial class ScimV2PatchRequest :  IEquatable<ScimV2PatchRequest>

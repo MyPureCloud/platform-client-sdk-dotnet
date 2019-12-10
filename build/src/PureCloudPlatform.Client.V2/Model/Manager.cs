@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// The user&#39;s manager.
+    /// Defines a SCIM manager.
     /// </summary>
     [DataContract]
     public partial class Manager :  IEquatable<Manager>

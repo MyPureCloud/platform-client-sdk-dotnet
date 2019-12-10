@@ -345,6 +345,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The requested format of the exported data
         /// </summary>
@@ -364,6 +367,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The type of view export job to be created</value>
         [DataMember(Name="viewType", EmitDefaultValue=false)]
         public ViewTypeEnum? ViewType { get; set; }
+        
+        
         
         
         
@@ -400,7 +405,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HasFormatDurations">Indicates if durations are formatted in hh:mm:ss format instead of ms.</param>
         /// <param name="HasSplitFilters">Indicates if filters will be split in aggregate detail exports.</param>
         /// <param name="SelectedColumns">The list of ordered selected columns from the export view by the user.</param>
-        public ReportingExportJobRequest(string Name = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, List<SelectedColumns> SelectedColumns = null)
+        /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
+        public ReportingExportJobRequest(string Name = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null)
         {
             this.Name = Name;
             this.TimeZone = TimeZone;
@@ -414,6 +420,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.HasFormatDurations = HasFormatDurations;
             this.HasSplitFilters = HasSplitFilters;
             this.SelectedColumns = SelectedColumns;
+            this.HasCustomParticipantAttributes = HasCustomParticipantAttributes;
             
         }
         
@@ -512,6 +519,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<SelectedColumns> SelectedColumns { get; set; }
         
         
+        
+        /// <summary>
+        /// Indicates if custom participant attributes will be exported
+        /// </summary>
+        /// <value>Indicates if custom participant attributes will be exported</value>
+        [DataMember(Name="hasCustomParticipantAttributes", EmitDefaultValue=false)]
+        public bool? HasCustomParticipantAttributes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -533,6 +549,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HasFormatDurations: ").Append(HasFormatDurations).Append("\n");
             sb.Append("  HasSplitFilters: ").Append(HasSplitFilters).Append("\n");
             sb.Append("  SelectedColumns: ").Append(SelectedColumns).Append("\n");
+            sb.Append("  HasCustomParticipantAttributes: ").Append(HasCustomParticipantAttributes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -628,6 +645,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelectedColumns == other.SelectedColumns ||
                     this.SelectedColumns != null &&
                     this.SelectedColumns.SequenceEqual(other.SelectedColumns)
+                ) &&
+                (
+                    this.HasCustomParticipantAttributes == other.HasCustomParticipantAttributes ||
+                    this.HasCustomParticipantAttributes != null &&
+                    this.HasCustomParticipantAttributes.Equals(other.HasCustomParticipantAttributes)
                 );
         }
 
@@ -678,6 +700,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SelectedColumns != null)
                     hash = hash * 59 + this.SelectedColumns.GetHashCode();
+                
+                if (this.HasCustomParticipantAttributes != null)
+                    hash = hash * 59 + this.HasCustomParticipantAttributes.GetHashCode();
                 
                 return hash;
             }

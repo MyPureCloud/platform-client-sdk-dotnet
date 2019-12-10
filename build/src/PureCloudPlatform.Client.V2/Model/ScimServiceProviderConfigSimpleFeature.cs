@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Configuration options.
+    /// Defines a request in the SCIM service provider&#39;s configuration.
     /// </summary>
     [DataContract]
     public partial class ScimServiceProviderConfigSimpleFeature :  IEquatable<ScimServiceProviderConfigSimpleFeature>

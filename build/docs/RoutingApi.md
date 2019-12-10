@@ -35,6 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingQueuesDivisionviews**](RoutingApi.html#getroutingqueuesdivisionviews) | **GET** /api/v2/routing/queues/divisionviews | Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s). |
 | [**GetRoutingQueuesDivisionviewsAll**](RoutingApi.html#getroutingqueuesdivisionviewsall) | **GET** /api/v2/routing/queues/divisionviews/all | Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization. |
 | [**GetRoutingQueuesMe**](RoutingApi.html#getroutingqueuesme) | **GET** /api/v2/routing/queues/me | Get a paged listing of queues the user is a member of. |
+| [**GetRoutingSettingsContactcenter**](RoutingApi.html#getroutingsettingscontactcenter) | **GET** /api/v2/routing/settings/contactcenter | Get Contact Center Settings |
 | [**GetRoutingSkill**](RoutingApi.html#getroutingskill) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
 | [**GetRoutingSkills**](RoutingApi.html#getroutingskills) | **GET** /api/v2/routing/skills | Get the list of routing skills. |
 | [**GetRoutingSmsAddress**](RoutingApi.html#getroutingsmsaddress) | **GET** /api/v2/routing/sms/addresses/{addressId} | Get an Address by Id for SMS |
@@ -49,6 +50,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserRoutingskills**](RoutingApi.html#getuserroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
 | [**PatchRoutingQueueUser**](RoutingApi.html#patchroutingqueueuser) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | Update the ring number OR joined status for a User in a Queue |
 | [**PatchRoutingQueueUsers**](RoutingApi.html#patchroutingqueueusers) | **PATCH** /api/v2/routing/queues/{queueId}/users | Join or unjoin a set of users for a queue |
+| [**PatchRoutingSettingsContactcenter**](RoutingApi.html#patchroutingsettingscontactcenter) | **PATCH** /api/v2/routing/settings/contactcenter | Update Contact Center Settings |
 | [**PatchUserRoutinglanguage**](RoutingApi.html#patchuserroutinglanguage) | **PATCH** /api/v2/users/{userId}/routinglanguages/{languageId} | Update routing language proficiency or state. |
 | [**PatchUserRoutinglanguagesBulk**](RoutingApi.html#patchuserroutinglanguagesbulk) | **PATCH** /api/v2/users/{userId}/routinglanguages/bulk | Add bulk routing language to user. Max limit 50 languages |
 | [**PatchUserRoutingskillsBulk**](RoutingApi.html#patchuserroutingskillsbulk) | **PATCH** /api/v2/users/{userId}/routingskills/bulk | Bulk add routing skills to user |
@@ -1854,6 +1856,61 @@ namespace Example
 
 [**UserQueueEntityListing**](UserQueueEntityListing.html)
 
+<a name="getroutingsettingscontactcenter"></a>
+
+## [**ContactCenterSettings**](ContactCenterSettings.html) GetRoutingSettingsContactcenter ()
+
+
+
+Get Contact Center Settings
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingSettingsContactcenterExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RoutingApi();
+
+            try
+            { 
+                // Get Contact Center Settings
+                ContactCenterSettings result = apiInstance.GetRoutingSettingsContactcenter();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingSettingsContactcenter: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactCenterSettings**](ContactCenterSettings.html)
+
 <a name="getroutingskill"></a>
 
 ## [**RoutingSkill**](RoutingSkill.html) GetRoutingSkill (string skillId)
@@ -2751,6 +2808,66 @@ namespace Example
 ### Return type
 
 [**QueueMemberEntityListing**](QueueMemberEntityListing.html)
+
+<a name="patchroutingsettingscontactcenter"></a>
+
+## void PatchRoutingSettingsContactcenter (ContactCenterSettings body)
+
+
+
+Update Contact Center Settings
+
+
+
+Requires ANY permissions: 
+
+* routing:settings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchRoutingSettingsContactcenterExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RoutingApi();
+            var body = new ContactCenterSettings(); // ContactCenterSettings | Contact Center Settings
+
+            try
+            { 
+                // Update Contact Center Settings
+                apiInstance.PatchRoutingSettingsContactcenter(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PatchRoutingSettingsContactcenter: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContactCenterSettings**](ContactCenterSettings.html)| Contact Center Settings |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="patchuserroutinglanguage"></a>
 

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Authentication schema.
+    /// Defines an authentication scheme in the SCIM service provider&#39;s configuration.
     /// </summary>
     [DataContract]
     public partial class ScimServiceProviderConfigAuthenticationScheme :  IEquatable<ScimServiceProviderConfigAuthenticationScheme>

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Common attributes to all SCIM resources
+    /// Defines a SCIM resource.
     /// </summary>
     [DataContract]
     public partial class ScimConfigResourceType :  IEquatable<ScimConfigResourceType>
@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Schemas">The list of supported schemas..</param>
         /// <param name="SchemaExtensions">The list of schema extensions for the resource type..</param>
-        /// <param name="Meta">Resource SCIM meta.</param>
+        /// <param name="Meta">The metadata of the SCIM resource..</param>
         public ScimConfigResourceType(List<string> Schemas = null, List<ScimConfigResourceTypeSchemaExtension> SchemaExtensions = null, ScimMetadata Meta = null)
         {
             this.Schemas = Schemas;
@@ -141,9 +141,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Resource SCIM meta
+        /// The metadata of the SCIM resource.
         /// </summary>
-        /// <value>Resource SCIM meta</value>
+        /// <value>The metadata of the SCIM resource.</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
         public ScimMetadata Meta { get; set; }
         

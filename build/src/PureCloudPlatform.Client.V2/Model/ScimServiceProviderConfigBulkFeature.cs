@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Bulk configuration options.
+    /// Defines a \&quot;bulk\&quot; request in the SCIM service provider&#39;s configuration.
     /// </summary>
     [DataContract]
     public partial class ScimServiceProviderConfigBulkFeature :  IEquatable<ScimServiceProviderConfigBulkFeature>

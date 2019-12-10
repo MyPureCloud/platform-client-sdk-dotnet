@@ -75,16 +75,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWorkPlanActivity" /> class.
@@ -100,9 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartTimeIncrementMinutes">Increment in offset minutes that would contribute to different possible start times for the activity.</param>
         /// <param name="CountsAsPaidTime">Whether the activity is paid.</param>
         /// <param name="CountsAsContiguousWorkTime">Whether the activity duration is counted towards contiguous work time.</param>
-        /// <param name="MinimumLengthFromShiftStartMinutes">The minimum duration between shift start and shift item (e.g., break or meal) start in minutes.</param>
-        /// <param name="MinimumLengthFromShiftEndMinutes">The minimum duration between shift item (e.g., break or meal) end and shift end in minutes.</param>
-        public CreateWorkPlanActivity(string ActivityCodeId = null, string Description = null, int? LengthMinutes = null, bool? StartTimeIsRelativeToShiftStart = null, bool? FlexibleStartTime = null, int? EarliestStartTimeMinutes = null, int? LatestStartTimeMinutes = null, int? ExactStartTimeMinutes = null, int? StartTimeIncrementMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsContiguousWorkTime = null, int? MinimumLengthFromShiftStartMinutes = null, int? MinimumLengthFromShiftEndMinutes = null)
+        public CreateWorkPlanActivity(string ActivityCodeId = null, string Description = null, int? LengthMinutes = null, bool? StartTimeIsRelativeToShiftStart = null, bool? FlexibleStartTime = null, int? EarliestStartTimeMinutes = null, int? LatestStartTimeMinutes = null, int? ExactStartTimeMinutes = null, int? StartTimeIncrementMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsContiguousWorkTime = null)
         {
             this.ActivityCodeId = ActivityCodeId;
             this.Description = Description;
@@ -115,8 +103,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.StartTimeIncrementMinutes = StartTimeIncrementMinutes;
             this.CountsAsPaidTime = CountsAsPaidTime;
             this.CountsAsContiguousWorkTime = CountsAsContiguousWorkTime;
-            this.MinimumLengthFromShiftStartMinutes = MinimumLengthFromShiftStartMinutes;
-            this.MinimumLengthFromShiftEndMinutes = MinimumLengthFromShiftEndMinutes;
             
         }
         
@@ -220,24 +206,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? CountsAsContiguousWorkTime { get; set; }
         
         
-        
-        /// <summary>
-        /// The minimum duration between shift start and shift item (e.g., break or meal) start in minutes
-        /// </summary>
-        /// <value>The minimum duration between shift start and shift item (e.g., break or meal) start in minutes</value>
-        [DataMember(Name="minimumLengthFromShiftStartMinutes", EmitDefaultValue=false)]
-        public int? MinimumLengthFromShiftStartMinutes { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The minimum duration between shift item (e.g., break or meal) end and shift end in minutes
-        /// </summary>
-        /// <value>The minimum duration between shift item (e.g., break or meal) end and shift end in minutes</value>
-        [DataMember(Name="minimumLengthFromShiftEndMinutes", EmitDefaultValue=false)]
-        public int? MinimumLengthFromShiftEndMinutes { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -258,8 +226,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartTimeIncrementMinutes: ").Append(StartTimeIncrementMinutes).Append("\n");
             sb.Append("  CountsAsPaidTime: ").Append(CountsAsPaidTime).Append("\n");
             sb.Append("  CountsAsContiguousWorkTime: ").Append(CountsAsContiguousWorkTime).Append("\n");
-            sb.Append("  MinimumLengthFromShiftStartMinutes: ").Append(MinimumLengthFromShiftStartMinutes).Append("\n");
-            sb.Append("  MinimumLengthFromShiftEndMinutes: ").Append(MinimumLengthFromShiftEndMinutes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -350,16 +316,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CountsAsContiguousWorkTime == other.CountsAsContiguousWorkTime ||
                     this.CountsAsContiguousWorkTime != null &&
                     this.CountsAsContiguousWorkTime.Equals(other.CountsAsContiguousWorkTime)
-                ) &&
-                (
-                    this.MinimumLengthFromShiftStartMinutes == other.MinimumLengthFromShiftStartMinutes ||
-                    this.MinimumLengthFromShiftStartMinutes != null &&
-                    this.MinimumLengthFromShiftStartMinutes.Equals(other.MinimumLengthFromShiftStartMinutes)
-                ) &&
-                (
-                    this.MinimumLengthFromShiftEndMinutes == other.MinimumLengthFromShiftEndMinutes ||
-                    this.MinimumLengthFromShiftEndMinutes != null &&
-                    this.MinimumLengthFromShiftEndMinutes.Equals(other.MinimumLengthFromShiftEndMinutes)
                 );
         }
 
@@ -407,12 +363,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CountsAsContiguousWorkTime != null)
                     hash = hash * 59 + this.CountsAsContiguousWorkTime.GetHashCode();
-                
-                if (this.MinimumLengthFromShiftStartMinutes != null)
-                    hash = hash * 59 + this.MinimumLengthFromShiftStartMinutes.GetHashCode();
-                
-                if (this.MinimumLengthFromShiftEndMinutes != null)
-                    hash = hash * 59 + this.MinimumLengthFromShiftEndMinutes.GetHashCode();
                 
                 return hash;
             }

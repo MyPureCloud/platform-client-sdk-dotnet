@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM Enterprise User
+    /// Defines an SCIM enterprise user.
     /// </summary>
     [DataContract]
     public partial class ScimV2EnterpriseUser :  IEquatable<ScimV2EnterpriseUser>

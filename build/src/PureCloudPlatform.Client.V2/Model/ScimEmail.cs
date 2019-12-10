@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM V2 ScimEmail
+    /// Defines a SCIM email address.
     /// </summary>
     [DataContract]
     public partial class ScimEmail :  IEquatable<ScimEmail>

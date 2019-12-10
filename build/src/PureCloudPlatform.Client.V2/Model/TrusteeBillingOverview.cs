@@ -81,6 +81,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Prepay,
             
             /// <summary>
+            /// Enum DevOrgMonthToMonth for "DEV_ORG_MONTH_TO_MONTH"
+            /// </summary>
+            [EnumMember(Value = "DEV_ORG_MONTH_TO_MONTH")]
+            DevOrgMonthToMonth,
+            
+            /// <summary>
             /// Enum DevOrgPrepayMonthlyCommitment for "DEV_ORG_PREPAY_MONTHLY_COMMITMENT"
             /// </summary>
             [EnumMember(Value = "DEV_ORG_PREPAY_MONTHLY_COMMITMENT")]

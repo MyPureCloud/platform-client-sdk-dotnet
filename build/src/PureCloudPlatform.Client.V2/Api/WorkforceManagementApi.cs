@@ -472,8 +472,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>ManagementUnitSettings</returns>
-        ManagementUnitSettings GetWorkforcemanagementManagementunitSettings (string muId);
+        /// <returns>ManagementUnitSettingsResponse</returns>
+        ManagementUnitSettingsResponse GetWorkforcemanagementManagementunitSettings (string muId);
 
         /// <summary>
         /// Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
@@ -483,8 +483,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>ApiResponse of ManagementUnitSettings</returns>
-        ApiResponse<ManagementUnitSettings> GetWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId);
+        /// <returns>ApiResponse of ManagementUnitSettingsResponse</returns>
+        ApiResponse<ManagementUnitSettingsResponse> GetWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId);
         
         /// <summary>
         /// Gets a summary of all shift trades in the matched state
@@ -1059,8 +1059,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">config (optional)</param>
-        /// <returns>ManagementUnitSettings</returns>
-        ManagementUnitSettings PatchWorkforcemanagementManagementunitSettings (string muId, ManagementUnitSettings body = null);
+        /// <returns>ManagementUnitSettingsResponse</returns>
+        ManagementUnitSettingsResponse PatchWorkforcemanagementManagementunitSettings (string muId, ManagementUnitSettingsRequest body = null);
 
         /// <summary>
         /// Update the settings for the requested management unit
@@ -1071,8 +1071,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">config (optional)</param>
-        /// <returns>ApiResponse of ManagementUnitSettings</returns>
-        ApiResponse<ManagementUnitSettings> PatchWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId, ManagementUnitSettings body = null);
+        /// <returns>ApiResponse of ManagementUnitSettingsResponse</returns>
+        ApiResponse<ManagementUnitSettingsResponse> PatchWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId, ManagementUnitSettingsRequest body = null);
         
         /// <summary>
         /// Update a time off request
@@ -2274,8 +2274,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>Task of ManagementUnitSettings</returns>
-        System.Threading.Tasks.Task<ManagementUnitSettings> GetWorkforcemanagementManagementunitSettingsAsync (string muId);
+        /// <returns>Task of ManagementUnitSettingsResponse</returns>
+        System.Threading.Tasks.Task<ManagementUnitSettingsResponse> GetWorkforcemanagementManagementunitSettingsAsync (string muId);
 
         /// <summary>
         /// Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
@@ -2285,8 +2285,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>Task of ApiResponse (ManagementUnitSettings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ManagementUnitSettings>> GetWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId);
+        /// <returns>Task of ApiResponse (ManagementUnitSettingsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ManagementUnitSettingsResponse>> GetWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId);
         
         /// <summary>
         /// Gets a summary of all shift trades in the matched state
@@ -2861,8 +2861,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">config (optional)</param>
-        /// <returns>Task of ManagementUnitSettings</returns>
-        System.Threading.Tasks.Task<ManagementUnitSettings> PatchWorkforcemanagementManagementunitSettingsAsync (string muId, ManagementUnitSettings body = null);
+        /// <returns>Task of ManagementUnitSettingsResponse</returns>
+        System.Threading.Tasks.Task<ManagementUnitSettingsResponse> PatchWorkforcemanagementManagementunitSettingsAsync (string muId, ManagementUnitSettingsRequest body = null);
 
         /// <summary>
         /// Update the settings for the requested management unit
@@ -2873,8 +2873,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">config (optional)</param>
-        /// <returns>Task of ApiResponse (ManagementUnitSettings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ManagementUnitSettings>> PatchWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId, ManagementUnitSettings body = null);
+        /// <returns>Task of ApiResponse (ManagementUnitSettingsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ManagementUnitSettingsResponse>> PatchWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId, ManagementUnitSettingsRequest body = null);
         
         /// <summary>
         /// Update a time off request
@@ -7554,10 +7554,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>ManagementUnitSettings</returns>
-        public ManagementUnitSettings GetWorkforcemanagementManagementunitSettings (string muId)
+        /// <returns>ManagementUnitSettingsResponse</returns>
+        public ManagementUnitSettingsResponse GetWorkforcemanagementManagementunitSettings (string muId)
         {
-             ApiResponse<ManagementUnitSettings> localVarResponse = GetWorkforcemanagementManagementunitSettingsWithHttpInfo(muId);
+             ApiResponse<ManagementUnitSettingsResponse> localVarResponse = GetWorkforcemanagementManagementunitSettingsWithHttpInfo(muId);
              return localVarResponse.Data;
         }
 
@@ -7566,8 +7566,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>ApiResponse of ManagementUnitSettings</returns>
-        public ApiResponse< ManagementUnitSettings > GetWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId)
+        /// <returns>ApiResponse of ManagementUnitSettingsResponse</returns>
+        public ApiResponse< ManagementUnitSettingsResponse > GetWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -7636,9 +7636,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ManagementUnitSettings>(localVarStatusCode,
+            return new ApiResponse<ManagementUnitSettingsResponse>(localVarStatusCode,
                 localVarHeaders,
-                (ManagementUnitSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitSettings)),
+                (ManagementUnitSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitSettingsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7649,10 +7649,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>Task of ManagementUnitSettings</returns>
-        public async System.Threading.Tasks.Task<ManagementUnitSettings> GetWorkforcemanagementManagementunitSettingsAsync (string muId)
+        /// <returns>Task of ManagementUnitSettingsResponse</returns>
+        public async System.Threading.Tasks.Task<ManagementUnitSettingsResponse> GetWorkforcemanagementManagementunitSettingsAsync (string muId)
         {
-             ApiResponse<ManagementUnitSettings> localVarResponse = await GetWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo(muId);
+             ApiResponse<ManagementUnitSettingsResponse> localVarResponse = await GetWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo(muId);
              return localVarResponse.Data;
 
         }
@@ -7662,8 +7662,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
-        /// <returns>Task of ApiResponse (ManagementUnitSettings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitSettings>> GetWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId)
+        /// <returns>Task of ApiResponse (ManagementUnitSettingsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitSettingsResponse>> GetWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -7733,9 +7733,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ManagementUnitSettings>(localVarStatusCode,
+            return new ApiResponse<ManagementUnitSettingsResponse>(localVarStatusCode,
                 localVarHeaders,
-                (ManagementUnitSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitSettings)),
+                (ManagementUnitSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitSettingsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -12463,10 +12463,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">config (optional)</param>
-        /// <returns>ManagementUnitSettings</returns>
-        public ManagementUnitSettings PatchWorkforcemanagementManagementunitSettings (string muId, ManagementUnitSettings body = null)
+        /// <returns>ManagementUnitSettingsResponse</returns>
+        public ManagementUnitSettingsResponse PatchWorkforcemanagementManagementunitSettings (string muId, ManagementUnitSettingsRequest body = null)
         {
-             ApiResponse<ManagementUnitSettings> localVarResponse = PatchWorkforcemanagementManagementunitSettingsWithHttpInfo(muId, body);
+             ApiResponse<ManagementUnitSettingsResponse> localVarResponse = PatchWorkforcemanagementManagementunitSettingsWithHttpInfo(muId, body);
              return localVarResponse.Data;
         }
 
@@ -12476,8 +12476,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">config (optional)</param>
-        /// <returns>ApiResponse of ManagementUnitSettings</returns>
-        public ApiResponse< ManagementUnitSettings > PatchWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId, ManagementUnitSettings body = null)
+        /// <returns>ApiResponse of ManagementUnitSettingsResponse</returns>
+        public ApiResponse< ManagementUnitSettingsResponse > PatchWorkforcemanagementManagementunitSettingsWithHttpInfo (string muId, ManagementUnitSettingsRequest body = null)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -12551,9 +12551,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ManagementUnitSettings>(localVarStatusCode,
+            return new ApiResponse<ManagementUnitSettingsResponse>(localVarStatusCode,
                 localVarHeaders,
-                (ManagementUnitSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitSettings)),
+                (ManagementUnitSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitSettingsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -12565,10 +12565,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">config (optional)</param>
-        /// <returns>Task of ManagementUnitSettings</returns>
-        public async System.Threading.Tasks.Task<ManagementUnitSettings> PatchWorkforcemanagementManagementunitSettingsAsync (string muId, ManagementUnitSettings body = null)
+        /// <returns>Task of ManagementUnitSettingsResponse</returns>
+        public async System.Threading.Tasks.Task<ManagementUnitSettingsResponse> PatchWorkforcemanagementManagementunitSettingsAsync (string muId, ManagementUnitSettingsRequest body = null)
         {
-             ApiResponse<ManagementUnitSettings> localVarResponse = await PatchWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo(muId, body);
+             ApiResponse<ManagementUnitSettingsResponse> localVarResponse = await PatchWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo(muId, body);
              return localVarResponse.Data;
 
         }
@@ -12579,8 +12579,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">config (optional)</param>
-        /// <returns>Task of ApiResponse (ManagementUnitSettings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitSettings>> PatchWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId, ManagementUnitSettings body = null)
+        /// <returns>Task of ApiResponse (ManagementUnitSettingsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitSettingsResponse>> PatchWorkforcemanagementManagementunitSettingsAsyncWithHttpInfo (string muId, ManagementUnitSettingsRequest body = null)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -12655,9 +12655,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ManagementUnitSettings>(localVarStatusCode,
+            return new ApiResponse<ManagementUnitSettingsResponse>(localVarStatusCode,
                 localVarHeaders,
-                (ManagementUnitSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitSettings)),
+                (ManagementUnitSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagementUnitSettingsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The new name of the management unit.</param>
         /// <param name="DivisionId">The new division id for the management unit.</param>
         /// <param name="Settings">Updated settings for the management unit.</param>
-        public UpdateManagementUnitRequest(string Name = null, string DivisionId = null, ManagementUnitSettings Settings = null)
+        public UpdateManagementUnitRequest(string Name = null, string DivisionId = null, ManagementUnitSettingsRequest Settings = null)
         {
             this.Name = Name;
             this.DivisionId = DivisionId;
@@ -75,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Updated settings for the management unit</value>
         [DataMember(Name="settings", EmitDefaultValue=false)]
-        public ManagementUnitSettings Settings { get; set; }
+        public ManagementUnitSettingsRequest Settings { get; set; }
         
         
         /// <summary>

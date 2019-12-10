@@ -16,7 +16,7 @@ namespace PureCloudPlatform.Client.V2.Model
     /// Management Unit Settings
     /// </summary>
     [DataContract]
-    public partial class ManagementUnitSettings :  IEquatable<ManagementUnitSettings>
+    public partial class ManagementUnitSettingsRequest :  IEquatable<ManagementUnitSettingsRequest>
     {
         
         
@@ -52,13 +52,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ManagementUnitSettings" /> class.
+        /// Initializes a new instance of the <see cref="ManagementUnitSettingsRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected ManagementUnitSettings() { }
+        protected ManagementUnitSettingsRequest() { }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ManagementUnitSettings" /> class.
+        /// Initializes a new instance of the <see cref="ManagementUnitSettingsRequest" /> class.
         /// </summary>
         /// <param name="Adherence">Adherence settings for this management unit.</param>
         /// <param name="ShortTermForecasting">Short term forecasting settings for this management unit.</param>
@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Scheduling">Scheduling settings for this management unit.</param>
         /// <param name="ShiftTrading">Shift trade settings for this management unit.</param>
         /// <param name="Metadata">Version info metadata for the associated management unit (required).</param>
-        public ManagementUnitSettings(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffRequestSettings TimeOff = null, SchedulingSettings Scheduling = null, ShiftTradeSettings ShiftTrading = null, WfmVersionedEntityMetadata Metadata = null)
+        public ManagementUnitSettingsRequest(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffRequestSettings TimeOff = null, SchedulingSettingsRequest Scheduling = null, ShiftTradeSettings ShiftTrading = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Adherence = Adherence;
             this.ShortTermForecasting = ShortTermForecasting;
@@ -111,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Scheduling settings for this management unit</value>
         [DataMember(Name="scheduling", EmitDefaultValue=false)]
-        public SchedulingSettings Scheduling { get; set; }
+        public SchedulingSettingsRequest Scheduling { get; set; }
         
         
         
@@ -139,7 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ManagementUnitSettings {\n");
+            sb.Append("class ManagementUnitSettingsRequest {\n");
             
             sb.Append("  Adherence: ").Append(Adherence).Append("\n");
             sb.Append("  ShortTermForecasting: ").Append(ShortTermForecasting).Append("\n");
@@ -168,15 +168,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ManagementUnitSettings);
+            return this.Equals(obj as ManagementUnitSettingsRequest);
         }
 
         /// <summary>
-        /// Returns true if ManagementUnitSettings instances are equal
+        /// Returns true if ManagementUnitSettingsRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of ManagementUnitSettings to be compared</param>
+        /// <param name="other">Instance of ManagementUnitSettingsRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ManagementUnitSettings other)
+        public bool Equals(ManagementUnitSettingsRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

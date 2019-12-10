@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Represents a SCIM V2 Create User
+    /// Defines the creation of a SCIM user.
     /// </summary>
     [DataContract]
     public partial class ScimV2CreateUser :  IEquatable<ScimV2CreateUser>
@@ -107,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalId">The external ID of the user. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;..</param>
         /// <param name="Groups">The list of groups that the user is a member of..</param>
         /// <param name="Roles">The list of roles assigned to the user..</param>
-        /// <param name="Urnietfparamsscimschemasextensionenterprise20User">SCIM enterprise user attributes.</param>
+        /// <param name="Urnietfparamsscimschemasextensionenterprise20User">The URI of the schema for the enterprise user..</param>
         public ScimV2CreateUser(List<string> Schemas = null, bool? Active = null, string UserName = null, string DisplayName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, List<Photo> Photos = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, List<string> Roles = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null)
         {
             this.Schemas = Schemas;
@@ -237,9 +237,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// SCIM enterprise user attributes
+        /// The URI of the schema for the enterprise user.
         /// </summary>
-        /// <value>SCIM enterprise user attributes</value>
+        /// <value>The URI of the schema for the enterprise user.</value>
         [DataMember(Name="urn:ietf:params:scim:schemas:extension:enterprise:2.0:User", EmitDefaultValue=false)]
         public ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User { get; set; }
         

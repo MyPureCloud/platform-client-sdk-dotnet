@@ -16,7 +16,7 @@ namespace PureCloudPlatform.Client.V2.Model
     /// Management Unit Settings
     /// </summary>
     [DataContract]
-    public partial class CreateManagementUnitSettings :  IEquatable<CreateManagementUnitSettings>
+    public partial class CreateManagementUnitSettingsRequest :  IEquatable<CreateManagementUnitSettingsRequest>
     {
         
         
@@ -47,14 +47,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateManagementUnitSettings" /> class.
+        /// Initializes a new instance of the <see cref="CreateManagementUnitSettingsRequest" /> class.
         /// </summary>
         /// <param name="Adherence">Adherence settings for this management unit.</param>
         /// <param name="ShortTermForecasting">Short term forecasting settings for this management unit.</param>
         /// <param name="TimeOff">Time off request settings for this management unit.</param>
         /// <param name="Scheduling">Scheduling settings for this management unit.</param>
         /// <param name="ShiftTrading">Shift trade settings for this management unit.</param>
-        public CreateManagementUnitSettings(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffRequestSettings TimeOff = null, SchedulingSettings Scheduling = null, ShiftTradeSettings ShiftTrading = null)
+        public CreateManagementUnitSettingsRequest(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffRequestSettings TimeOff = null, SchedulingSettingsRequest Scheduling = null, ShiftTradeSettings ShiftTrading = null)
         {
             this.Adherence = Adherence;
             this.ShortTermForecasting = ShortTermForecasting;
@@ -98,7 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Scheduling settings for this management unit</value>
         [DataMember(Name="scheduling", EmitDefaultValue=false)]
-        public SchedulingSettings Scheduling { get; set; }
+        public SchedulingSettingsRequest Scheduling { get; set; }
         
         
         
@@ -117,7 +117,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CreateManagementUnitSettings {\n");
+            sb.Append("class CreateManagementUnitSettingsRequest {\n");
             
             sb.Append("  Adherence: ").Append(Adherence).Append("\n");
             sb.Append("  ShortTermForecasting: ").Append(ShortTermForecasting).Append("\n");
@@ -145,15 +145,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CreateManagementUnitSettings);
+            return this.Equals(obj as CreateManagementUnitSettingsRequest);
         }
 
         /// <summary>
-        /// Returns true if CreateManagementUnitSettings instances are equal
+        /// Returns true if CreateManagementUnitSettingsRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of CreateManagementUnitSettings to be compared</param>
+        /// <param name="other">Instance of CreateManagementUnitSettingsRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CreateManagementUnitSettings other)
+        public bool Equals(CreateManagementUnitSettingsRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

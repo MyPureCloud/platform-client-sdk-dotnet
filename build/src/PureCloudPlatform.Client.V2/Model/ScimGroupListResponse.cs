@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM Group List Response
+    /// Defines a response for a list of SCIM groups.
     /// </summary>
     [DataContract]
     public partial class ScimGroupListResponse :  IEquatable<ScimGroupListResponse>

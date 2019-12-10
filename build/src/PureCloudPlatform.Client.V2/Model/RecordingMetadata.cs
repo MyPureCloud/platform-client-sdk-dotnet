@@ -171,6 +171,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>
@@ -204,6 +207,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingMetadata" /> class.
@@ -221,10 +226,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ArchiveMedium">The type of archive medium used. Example: CloudArchive.</param>
         /// <param name="DeleteDate">The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ExportDate">The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ExportedDate">The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="MaxAllowedRestorationsForOrg">How many archive restorations the organization is allowed to have..</param>
         /// <param name="RemainingRestorationsAllowedForOrg">The remaining archive restorations the organization has..</param>
         /// <param name="SessionId">The session id represents an external resource id, such as email, call, chat, etc.</param>
-        public RecordingMetadata(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null)
+        public RecordingMetadata(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, DateTime? ExportedDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null)
         {
             this.Name = Name;
             this.ConversationId = ConversationId;
@@ -239,6 +245,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ArchiveMedium = ArchiveMedium;
             this.DeleteDate = DeleteDate;
             this.ExportDate = ExportDate;
+            this.ExportedDate = ExportedDate;
             this.MaxAllowedRestorationsForOrg = MaxAllowedRestorationsForOrg;
             this.RemainingRestorationsAllowedForOrg = RemainingRestorationsAllowedForOrg;
             this.SessionId = SessionId;
@@ -356,6 +363,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="exportedDate", EmitDefaultValue=false)]
+        public DateTime? ExportedDate { get; set; }
+        
+        
+        
+        /// <summary>
         /// How many archive restorations the organization is allowed to have.
         /// </summary>
         /// <value>How many archive restorations the organization is allowed to have.</value>
@@ -413,6 +429,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ArchiveMedium: ").Append(ArchiveMedium).Append("\n");
             sb.Append("  DeleteDate: ").Append(DeleteDate).Append("\n");
             sb.Append("  ExportDate: ").Append(ExportDate).Append("\n");
+            sb.Append("  ExportedDate: ").Append(ExportedDate).Append("\n");
             sb.Append("  MaxAllowedRestorationsForOrg: ").Append(MaxAllowedRestorationsForOrg).Append("\n");
             sb.Append("  RemainingRestorationsAllowedForOrg: ").Append(RemainingRestorationsAllowedForOrg).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
@@ -524,6 +541,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExportDate.Equals(other.ExportDate)
                 ) &&
                 (
+                    this.ExportedDate == other.ExportedDate ||
+                    this.ExportedDate != null &&
+                    this.ExportedDate.Equals(other.ExportedDate)
+                ) &&
+                (
                     this.MaxAllowedRestorationsForOrg == other.MaxAllowedRestorationsForOrg ||
                     this.MaxAllowedRestorationsForOrg != null &&
                     this.MaxAllowedRestorationsForOrg.Equals(other.MaxAllowedRestorationsForOrg)
@@ -598,6 +620,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ExportDate != null)
                     hash = hash * 59 + this.ExportDate.GetHashCode();
+                
+                if (this.ExportedDate != null)
+                    hash = hash * 59 + this.ExportedDate.GetHashCode();
                 
                 if (this.MaxAllowedRestorationsForOrg != null)
                     hash = hash * 59 + this.MaxAllowedRestorationsForOrg.GetHashCode();

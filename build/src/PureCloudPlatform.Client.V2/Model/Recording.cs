@@ -204,6 +204,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>
@@ -249,6 +252,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Recording" /> class.
@@ -272,13 +277,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ArchiveMedium">The type of archive medium used. Example: CloudArchive.</param>
         /// <param name="DeleteDate">The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ExportDate">The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ExportedDate">The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="OutputDurationMs">Duration of transcoded media in milliseconds.</param>
         /// <param name="OutputSizeInBytes">Size of transcoded media in bytes. 0 if there is no transcoded media..</param>
         /// <param name="MaxAllowedRestorationsForOrg">How many archive restorations the organization is allowed to have..</param>
         /// <param name="RemainingRestorationsAllowedForOrg">The remaining archive restorations the organization has..</param>
         /// <param name="SessionId">The session id represents an external resource id, such as email, call, chat, etc.</param>
         /// <param name="Users">The users participating in the conversation.</param>
-        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, List<RecordingMessagingMessage> MessagingTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, int? OutputDurationMs = null, int? OutputSizeInBytes = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null)
+        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, List<RecordingMessagingMessage> MessagingTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, DateTime? ExportedDate = null, int? OutputDurationMs = null, int? OutputSizeInBytes = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null)
         {
             this.Name = Name;
             this.ConversationId = ConversationId;
@@ -299,6 +305,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ArchiveMedium = ArchiveMedium;
             this.DeleteDate = DeleteDate;
             this.ExportDate = ExportDate;
+            this.ExportedDate = ExportedDate;
             this.OutputDurationMs = OutputDurationMs;
             this.OutputSizeInBytes = OutputSizeInBytes;
             this.MaxAllowedRestorationsForOrg = MaxAllowedRestorationsForOrg;
@@ -472,6 +479,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="exportedDate", EmitDefaultValue=false)]
+        public DateTime? ExportedDate { get; set; }
+        
+        
+        
+        /// <summary>
         /// Duration of transcoded media in milliseconds
         /// </summary>
         /// <value>Duration of transcoded media in milliseconds</value>
@@ -562,6 +578,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ArchiveMedium: ").Append(ArchiveMedium).Append("\n");
             sb.Append("  DeleteDate: ").Append(DeleteDate).Append("\n");
             sb.Append("  ExportDate: ").Append(ExportDate).Append("\n");
+            sb.Append("  ExportedDate: ").Append(ExportedDate).Append("\n");
             sb.Append("  OutputDurationMs: ").Append(OutputDurationMs).Append("\n");
             sb.Append("  OutputSizeInBytes: ").Append(OutputSizeInBytes).Append("\n");
             sb.Append("  MaxAllowedRestorationsForOrg: ").Append(MaxAllowedRestorationsForOrg).Append("\n");
@@ -706,6 +723,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExportDate.Equals(other.ExportDate)
                 ) &&
                 (
+                    this.ExportedDate == other.ExportedDate ||
+                    this.ExportedDate != null &&
+                    this.ExportedDate.Equals(other.ExportedDate)
+                ) &&
+                (
                     this.OutputDurationMs == other.OutputDurationMs ||
                     this.OutputDurationMs != null &&
                     this.OutputDurationMs.Equals(other.OutputDurationMs)
@@ -813,6 +835,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ExportDate != null)
                     hash = hash * 59 + this.ExportDate.GetHashCode();
+                
+                if (this.ExportedDate != null)
+                    hash = hash * 59 + this.ExportedDate.GetHashCode();
                 
                 if (this.OutputDurationMs != null)
                     hash = hash * 59 + this.OutputDurationMs.GetHashCode();

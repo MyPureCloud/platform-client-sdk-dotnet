@@ -151,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Settings">The configuration settings for this management unit.</param>
         /// <param name="Metadata">Version info metadata for this management unit. Deprecated, use settings.metadata.</param>
         /// <param name="ModifiedBy">The user who last modified this entity.  Deprecated, use field from settings.metadata instead.</param>
-        public ManagementUnit(string Name = null, Division Division = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, ManagementUnitSettings Settings = null, WfmVersionedEntityMetadata Metadata = null, UserReference ModifiedBy = null)
+        public ManagementUnit(string Name = null, Division Division = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, ManagementUnitSettingsResponse Settings = null, WfmVersionedEntityMetadata Metadata = null, UserReference ModifiedBy = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -207,7 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The configuration settings for this management unit</value>
         [DataMember(Name="settings", EmitDefaultValue=false)]
-        public ManagementUnitSettings Settings { get; set; }
+        public ManagementUnitSettingsResponse Settings { get; set; }
         
         
         

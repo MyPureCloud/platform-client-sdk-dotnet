@@ -325,7 +325,7 @@ namespace Example
 
 Create a new channel
 
-There is a limit of 10 channels per user/app combination. Creating an 11th channel will remove the channel with oldest last used date.
+There is a limit of 20 channels per user/app combination. Creating a 21st channel will remove the channel with oldest last used date.
 
 Requires NO permissions: 
 

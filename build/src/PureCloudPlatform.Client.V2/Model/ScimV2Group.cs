@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM version 2 Group
+    /// Defines a SCIM group.
     /// </summary>
     [DataContract]
     public partial class ScimV2Group :  IEquatable<ScimV2Group>
@@ -51,7 +51,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Schemas">The list of supported schemas..</param>
         /// <param name="Members">The list of members in the group..</param>
-        /// <param name="Meta">Resource SCIM meta.</param>
+        /// <param name="Meta">The metadata of the SCIM resource..</param>
         public ScimV2Group(List<string> Schemas = null, List<ScimV2MemberReference> Members = null, ScimMetadata Meta = null)
         {
             this.Schemas = Schemas;
@@ -99,9 +99,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Resource SCIM meta
+        /// The metadata of the SCIM resource.
         /// </summary>
-        /// <value>Resource SCIM meta</value>
+        /// <value>The metadata of the SCIM resource.</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
         public ScimMetadata Meta { get; set; }
         

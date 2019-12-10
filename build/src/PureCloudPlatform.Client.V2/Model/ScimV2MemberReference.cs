@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM Members of Group Reference
+    /// Defines a reference to SCIM group members.
     /// </summary>
     [DataContract]
     public partial class ScimV2MemberReference :  IEquatable<ScimV2MemberReference>

@@ -125,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartDayOfWeek">The configured first day of the week for scheduling and forecasting purposes (required).</param>
         /// <param name="Settings">The configuration for the management unit.  If omitted, reasonable defaults will be assigned.</param>
         /// <param name="DivisionId">The id of the division to which this management unit belongs.  Defaults to home division ID.</param>
-        public CreateManagementUnitApiRequest(string Name = null, string TimeZone = null, StartDayOfWeekEnum? StartDayOfWeek = null, CreateManagementUnitSettings Settings = null, string DivisionId = null)
+        public CreateManagementUnitApiRequest(string Name = null, string TimeZone = null, StartDayOfWeekEnum? StartDayOfWeek = null, CreateManagementUnitSettingsRequest Settings = null, string DivisionId = null)
         {
             this.Name = Name;
             this.TimeZone = TimeZone;
@@ -162,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The configuration for the management unit.  If omitted, reasonable defaults will be assigned</value>
         [DataMember(Name="settings", EmitDefaultValue=false)]
-        public CreateManagementUnitSettings Settings { get; set; }
+        public CreateManagementUnitSettingsRequest Settings { get; set; }
         
         
         

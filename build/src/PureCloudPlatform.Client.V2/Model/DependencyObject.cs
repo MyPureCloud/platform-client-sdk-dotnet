@@ -98,6 +98,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Datatable,
             
             /// <summary>
+            /// Enum Dialogenginebot for "DIALOGENGINEBOT"
+            /// </summary>
+            [EnumMember(Value = "DIALOGENGINEBOT")]
+            Dialogenginebot,
+            
+            /// <summary>
+            /// Enum Dialogenginebotversion for "DIALOGENGINEBOTVERSION"
+            /// </summary>
+            [EnumMember(Value = "DIALOGENGINEBOTVERSION")]
+            Dialogenginebotversion,
+            
+            /// <summary>
             /// Enum Dialogflowagent for "DIALOGFLOWAGENT"
             /// </summary>
             [EnumMember(Value = "DIALOGFLOWAGENT")]

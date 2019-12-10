@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM Error
+    /// Defines a SCIM error.
     /// </summary>
     [DataContract]
     public partial class ScimError :  IEquatable<ScimError>
@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Optional SCIM Error Type when httpStatus is 400 error
+        /// The type of SCIM error when httpStatus is a \"400\" error.
         /// </summary>
-        /// <value>Optional SCIM Error Type when httpStatus is 400 error</value>
+        /// <value>The type of SCIM error when httpStatus is a \"400\" error.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ScimTypeEnum
         {
@@ -112,9 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Optional SCIM Error Type when httpStatus is 400 error
+        /// The type of SCIM error when httpStatus is a \"400\" error.
         /// </summary>
-        /// <value>Optional SCIM Error Type when httpStatus is 400 error</value>
+        /// <value>The type of SCIM error when httpStatus is a \"400\" error.</value>
         [DataMember(Name="scimType", EmitDefaultValue=false)]
         public ScimTypeEnum? ScimType { get; set; }
         
@@ -127,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimError" /> class.
         /// </summary>
-        /// <param name="Schemas">Schemas for the SCIM Error.</param>
+        /// <param name="Schemas">The list of schemas for the SCIM error..</param>
         public ScimError(List<string> Schemas = null)
         {
             this.Schemas = Schemas;
@@ -137,9 +137,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// HTTP Status Code
+        /// The HTTP status code returned for the SCIM error.
         /// </summary>
-        /// <value>HTTP Status Code</value>
+        /// <value>The HTTP status code returned for the SCIM error.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; private set; }
         
@@ -148,18 +148,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Optional detailed error description
+        /// The detailed description of the SCIM error.
         /// </summary>
-        /// <value>Optional detailed error description</value>
+        /// <value>The detailed description of the SCIM error.</value>
         [DataMember(Name="detail", EmitDefaultValue=false)]
         public string Detail { get; private set; }
         
         
         
         /// <summary>
-        /// Schemas for the SCIM Error
+        /// The list of schemas for the SCIM error.
         /// </summary>
-        /// <value>Schemas for the SCIM Error</value>
+        /// <value>The list of schemas for the SCIM error.</value>
         [DataMember(Name="schemas", EmitDefaultValue=false)]
         public List<string> Schemas { get; set; }
         

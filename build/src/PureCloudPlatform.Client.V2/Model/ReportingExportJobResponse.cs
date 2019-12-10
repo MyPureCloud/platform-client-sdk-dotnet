@@ -509,6 +509,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current status of the export request
         /// </summary>
@@ -572,6 +575,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobResponse" /> class.
@@ -600,7 +605,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HasFormatDurations">Indicates if durations are formatted in hh:mm:ss format instead of ms.</param>
         /// <param name="HasSplitFilters">Indicates if filters will be split in aggregate detail exports.</param>
         /// <param name="SelectedColumns">The list of ordered selected columns from the export view by the user.</param>
-        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, List<SelectedColumns> SelectedColumns = null)
+        /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
+        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null)
         {
             this.Name = Name;
             this.Status = Status;
@@ -620,6 +626,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.HasFormatDurations = HasFormatDurations;
             this.HasSplitFilters = HasSplitFilters;
             this.SelectedColumns = SelectedColumns;
+            this.HasCustomParticipantAttributes = HasCustomParticipantAttributes;
             
         }
         
@@ -768,6 +775,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Indicates if custom participant attributes will be exported
+        /// </summary>
+        /// <value>Indicates if custom participant attributes will be exported</value>
+        [DataMember(Name="hasCustomParticipantAttributes", EmitDefaultValue=false)]
+        public bool? HasCustomParticipantAttributes { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -803,6 +819,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HasFormatDurations: ").Append(HasFormatDurations).Append("\n");
             sb.Append("  HasSplitFilters: ").Append(HasSplitFilters).Append("\n");
             sb.Append("  SelectedColumns: ").Append(SelectedColumns).Append("\n");
+            sb.Append("  HasCustomParticipantAttributes: ").Append(HasCustomParticipantAttributes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -936,6 +953,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelectedColumns.SequenceEqual(other.SelectedColumns)
                 ) &&
                 (
+                    this.HasCustomParticipantAttributes == other.HasCustomParticipantAttributes ||
+                    this.HasCustomParticipantAttributes != null &&
+                    this.HasCustomParticipantAttributes.Equals(other.HasCustomParticipantAttributes)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -1010,6 +1032,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SelectedColumns != null)
                     hash = hash * 59 + this.SelectedColumns.GetHashCode();
+                
+                if (this.HasCustomParticipantAttributes != null)
+                    hash = hash * 59 + this.HasCustomParticipantAttributes.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

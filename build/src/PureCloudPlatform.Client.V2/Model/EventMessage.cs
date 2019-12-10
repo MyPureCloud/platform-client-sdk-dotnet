@@ -71,6 +71,12 @@ namespace PureCloudPlatform.Client.V2.Model
             CampaignSetDialingModeError,
             
             /// <summary>
+            /// Enum CampaignStopped for "CAMPAIGN_STOPPED"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_STOPPED")]
+            CampaignStopped,
+            
+            /// <summary>
             /// Enum CampaignThrottled for "CAMPAIGN_THROTTLED"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_THROTTLED")]

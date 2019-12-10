@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// The meta object of the SCIM V2 implementation.
+    /// Defines the SCIM metadata.
     /// </summary>
     [DataContract]
     public partial class ScimMetadata :  IEquatable<ScimMetadata>

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM V2 phone number
+    /// Defines a SCIM phone number.
     /// </summary>
     [DataContract]
     public partial class ScimPhoneNumber :  IEquatable<ScimPhoneNumber>

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SCIM Provider Config for PureCloud.
+    /// Defines a SCIM service provider&#39;s configuration.
     /// </summary>
     [DataContract]
     public partial class ScimServiceProviderConfig :  IEquatable<ScimServiceProviderConfig>
@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Bulk">The \&quot;bulk\&quot; configuration options..</param>
         /// <param name="ChangePassword">The \&quot;changePassword\&quot; configuration options..</param>
         /// <param name="AuthenticationSchemes">The list of supported authentication schemes..</param>
-        /// <param name="Meta">Resource SCIM meta.</param>
+        /// <param name="Meta">The metadata of the SCIM resource..</param>
         public ScimServiceProviderConfig(List<string> Schemas = null, ScimServiceProviderConfigSimpleFeature Patch = null, ScimServiceProviderConfigFilterFeature Filter = null, ScimServiceProviderConfigSimpleFeature Etag = null, ScimServiceProviderConfigSimpleFeature Sort = null, ScimServiceProviderConfigBulkFeature Bulk = null, ScimServiceProviderConfigSimpleFeature ChangePassword = null, List<ScimServiceProviderConfigAuthenticationScheme> AuthenticationSchemes = null, ScimMetadata Meta = null)
         {
             this.Schemas = Schemas;
@@ -181,9 +181,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Resource SCIM meta
+        /// The metadata of the SCIM resource.
         /// </summary>
-        /// <value>Resource SCIM meta</value>
+        /// <value>The metadata of the SCIM resource.</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
         public ScimMetadata Meta { get; set; }
         

@@ -146,6 +146,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ImportError,
             
             /// <summary>
+            /// Enum MessagingCampaign for "MESSAGING_CAMPAIGN"
+            /// </summary>
+            [EnumMember(Value = "MESSAGING_CAMPAIGN")]
+            MessagingCampaign,
+            
+            /// <summary>
             /// Enum OrganizationConfiguration for "ORGANIZATION_CONFIGURATION"
             /// </summary>
             [EnumMember(Value = "ORGANIZATION_CONFIGURATION")]

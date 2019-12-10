@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// \&quot;filter\&quot; configuration options.
+    /// Defines a \&quot;filter\&quot; request in the SCIM service provider&#39;s configuration.
     /// </summary>
     [DataContract]
     public partial class ScimServiceProviderConfigFilterFeature :  IEquatable<ScimServiceProviderConfigFilterFeature>

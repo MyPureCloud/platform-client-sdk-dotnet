@@ -1348,7 +1348,7 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunitsettings"></a>
 
-## [**ManagementUnitSettings**](ManagementUnitSettings.html) GetWorkforcemanagementManagementunitSettings (string muId)
+## [**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html) GetWorkforcemanagementManagementunitSettings (string muId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1383,7 +1383,7 @@ namespace Example
             try
             { 
                 // Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
-                ManagementUnitSettings result = apiInstance.GetWorkforcemanagementManagementunitSettings(muId);
+                ManagementUnitSettingsResponse result = apiInstance.GetWorkforcemanagementManagementunitSettings(muId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1405,7 +1405,7 @@ namespace Example
 
 ### Return type
 
-[**ManagementUnitSettings**](ManagementUnitSettings.html)
+[**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html)
 
 <a name="getworkforcemanagementmanagementunitshifttradesmatched"></a>
 
@@ -2881,7 +2881,7 @@ namespace Example
 
 <a name="patchworkforcemanagementmanagementunitsettings"></a>
 
-## [**ManagementUnitSettings**](ManagementUnitSettings.html) PatchWorkforcemanagementManagementunitSettings (string muId, ManagementUnitSettings body = null)
+## [**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html) PatchWorkforcemanagementManagementunitSettings (string muId, ManagementUnitSettingsRequest body = null)
 
 
 
@@ -2912,12 +2912,12 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var muId = muId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var body = new ManagementUnitSettings(); // ManagementUnitSettings | config (optional) 
+            var body = new ManagementUnitSettingsRequest(); // ManagementUnitSettingsRequest | config (optional) 
 
             try
             { 
                 // Update the settings for the requested management unit
-                ManagementUnitSettings result = apiInstance.PatchWorkforcemanagementManagementunitSettings(muId, body);
+                ManagementUnitSettingsResponse result = apiInstance.PatchWorkforcemanagementManagementunitSettings(muId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2935,12 +2935,12 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **muId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **body** | [**ManagementUnitSettings**](ManagementUnitSettings.html)| config | [optional]  |
+| **body** | [**ManagementUnitSettingsRequest**](ManagementUnitSettingsRequest.html)| config | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ManagementUnitSettings**](ManagementUnitSettings.html)
+[**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html)
 
 <a name="patchworkforcemanagementmanagementunitusertimeoffrequest"></a>
 
