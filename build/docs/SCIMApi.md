@@ -7,7 +7,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteScimGroup**](SCIMApi.html#deletescimgroup) | **DELETE** /api/v2/scim/groups/{groupId} | Delete a group. |
 | [**DeleteScimUser**](SCIMApi.html#deletescimuser) | **DELETE** /api/v2/scim/users/{userId} | Delete a user |
+| [**DeleteScimV2Group**](SCIMApi.html#deletescimv2group) | **DELETE** /api/v2/scim/v2/groups/{groupId} | Delete a group. |
 | [**DeleteScimV2User**](SCIMApi.html#deletescimv2user) | **DELETE** /api/v2/scim/v2/users/{userId} | Delete a user |
 | [**GetScimGroup**](SCIMApi.html#getscimgroup) | **GET** /api/v2/scim/groups/{groupId} | Get a group |
 | [**GetScimGroups**](SCIMApi.html#getscimgroups) | **GET** /api/v2/scim/groups | Get a list of groups |
@@ -27,13 +29,77 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchScimUser**](SCIMApi.html#patchscimuser) | **PATCH** /api/v2/scim/users/{userId} | Modify a user |
 | [**PatchScimV2Group**](SCIMApi.html#patchscimv2group) | **PATCH** /api/v2/scim/v2/groups/{groupId} | Modify a group |
 | [**PatchScimV2User**](SCIMApi.html#patchscimv2user) | **PATCH** /api/v2/scim/v2/users/{userId} | Modify a user |
+| [**PostScimGroups**](SCIMApi.html#postscimgroups) | **POST** /api/v2/scim/groups | The information used to create a group. |
 | [**PostScimUsers**](SCIMApi.html#postscimusers) | **POST** /api/v2/scim/users | Create a user |
+| [**PostScimV2Groups**](SCIMApi.html#postscimv2groups) | **POST** /api/v2/scim/v2/groups | The information used to create a group. |
 | [**PostScimV2Users**](SCIMApi.html#postscimv2users) | **POST** /api/v2/scim/v2/users | Create a user |
 | [**PutScimGroup**](SCIMApi.html#putscimgroup) | **PUT** /api/v2/scim/groups/{groupId} | Replace a group |
 | [**PutScimUser**](SCIMApi.html#putscimuser) | **PUT** /api/v2/scim/users/{userId} | Replace a user |
 | [**PutScimV2Group**](SCIMApi.html#putscimv2group) | **PUT** /api/v2/scim/v2/groups/{groupId} | Replace a group |
 | [**PutScimV2User**](SCIMApi.html#putscimv2user) | **PUT** /api/v2/scim/v2/users/{userId} | Replace a user |
 {: class="table table-striped"}
+
+<a name="deletescimgroup"></a>
+
+## void DeleteScimGroup (string groupId, string ifMatch = null)
+
+
+
+Delete a group.
+
+
+
+Requires ANY permissions: 
+
+* directory:group:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteScimGroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new SCIMApi();
+            var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/v2/groups.
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
+
+            try
+            { 
+                // Delete a group.
+                apiInstance.DeleteScimGroup(groupId, ifMatch);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SCIMApi.DeleteScimGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. |  |
+| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deletescimuser"></a>
 
@@ -97,6 +163,68 @@ namespace Example
 ### Return type
 
 [**Empty**](Empty.html)
+
+<a name="deletescimv2group"></a>
+
+## void DeleteScimV2Group (string groupId, string ifMatch = null)
+
+
+
+Delete a group.
+
+
+
+Requires ANY permissions: 
+
+* directory:group:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteScimV2GroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new SCIMApi();
+            var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/v2/groups.
+            var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
+
+            try
+            { 
+                // Delete a group.
+                apiInstance.DeleteScimV2Group(groupId, ifMatch);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SCIMApi.DeleteScimV2Group: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. |  |
+| **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deletescimv2user"></a>
 
@@ -1285,6 +1413,67 @@ namespace Example
 
 [**ScimV2User**](ScimV2User.html)
 
+<a name="postscimgroups"></a>
+
+## [**ScimV2Group**](ScimV2Group.html) PostScimGroups (ScimV2Group body)
+
+
+
+The information used to create a group.
+
+PureCloud group will be created as \"Official\" group with visibility set \"Public\", and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+
+Requires ANY permissions: 
+
+* directory:group:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostScimGroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new SCIMApi();
+            var body = new ScimV2Group(); // ScimV2Group | The information used to create a group.
+
+            try
+            { 
+                // The information used to create a group.
+                ScimV2Group result = apiInstance.PostScimGroups(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SCIMApi.PostScimGroups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ScimV2Group**](ScimV2Group.html)| The information used to create a group. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScimV2Group**](ScimV2Group.html)
+
 <a name="postscimusers"></a>
 
 ## [**ScimV2User**](ScimV2User.html) PostScimUsers (ScimV2CreateUser body)
@@ -1345,6 +1534,67 @@ namespace Example
 ### Return type
 
 [**ScimV2User**](ScimV2User.html)
+
+<a name="postscimv2groups"></a>
+
+## [**ScimV2Group**](ScimV2Group.html) PostScimV2Groups (ScimV2Group body)
+
+
+
+The information used to create a group.
+
+PureCloud group will be created as \"Official\" group with visibility set \"Public\", and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+
+Requires ANY permissions: 
+
+* directory:group:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostScimV2GroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new SCIMApi();
+            var body = new ScimV2Group(); // ScimV2Group | The information used to create a group.
+
+            try
+            { 
+                // The information used to create a group.
+                ScimV2Group result = apiInstance.PostScimV2Groups(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SCIMApi.PostScimV2Groups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ScimV2Group**](ScimV2Group.html)| The information used to create a group. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScimV2Group**](ScimV2Group.html)
 
 <a name="postscimv2users"></a>
 

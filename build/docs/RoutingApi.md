@@ -36,6 +36,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingQueuesDivisionviewsAll**](RoutingApi.html#getroutingqueuesdivisionviewsall) | **GET** /api/v2/routing/queues/divisionviews/all | Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization. |
 | [**GetRoutingQueuesMe**](RoutingApi.html#getroutingqueuesme) | **GET** /api/v2/routing/queues/me | Get a paged listing of queues the user is a member of. |
 | [**GetRoutingSettingsContactcenter**](RoutingApi.html#getroutingsettingscontactcenter) | **GET** /api/v2/routing/settings/contactcenter | Get Contact Center Settings |
+| [**GetRoutingSettingsTranscription**](RoutingApi.html#getroutingsettingstranscription) | **GET** /api/v2/routing/settings/transcription | Get Transcription Settings |
 | [**GetRoutingSkill**](RoutingApi.html#getroutingskill) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
 | [**GetRoutingSkills**](RoutingApi.html#getroutingskills) | **GET** /api/v2/routing/skills | Get the list of routing skills. |
 | [**GetRoutingSmsAddress**](RoutingApi.html#getroutingsmsaddress) | **GET** /api/v2/routing/sms/addresses/{addressId} | Get an Address by Id for SMS |
@@ -70,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutRoutingEmailDomainRoute**](RoutingApi.html#putroutingemaildomainroute) | **PUT** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
 | [**PutRoutingMessageRecipient**](RoutingApi.html#putroutingmessagerecipient) | **PUT** /api/v2/routing/message/recipients/{recipientId} | Update a recipient |
 | [**PutRoutingQueue**](RoutingApi.html#putroutingqueue) | **PUT** /api/v2/routing/queues/{queueId} | Update a queue |
+| [**PutRoutingSettingsTranscription**](RoutingApi.html#putroutingsettingstranscription) | **PUT** /api/v2/routing/settings/transcription | Update Transcription Settings |
 | [**PutRoutingSmsPhonenumber**](RoutingApi.html#putroutingsmsphonenumber) | **PUT** /api/v2/routing/sms/phonenumbers/{addressId} | Update a phone number provisioned for SMS. |
 | [**PutRoutingUtilization**](RoutingApi.html#putroutingutilization) | **PUT** /api/v2/routing/utilization | Update the utilization settings. |
 | [**PutRoutingWrapupcode**](RoutingApi.html#putroutingwrapupcode) | **PUT** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
@@ -1910,6 +1912,62 @@ This endpoint does require any parameters.
 ### Return type
 
 [**ContactCenterSettings**](ContactCenterSettings.html)
+
+<a name="getroutingsettingstranscription"></a>
+
+## [**TranscriptionSettings**](TranscriptionSettings.html) GetRoutingSettingsTranscription ()
+
+
+
+Get Transcription Settings
+
+
+
+Requires ANY permissions: 
+
+* routing:transcriptionSettings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingSettingsTranscriptionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RoutingApi();
+
+            try
+            { 
+                // Get Transcription Settings
+                TranscriptionSettings result = apiInstance.GetRoutingSettingsTranscription();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingSettingsTranscription: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**TranscriptionSettings**](TranscriptionSettings.html)
 
 <a name="getroutingskill"></a>
 
@@ -4058,6 +4116,67 @@ namespace Example
 ### Return type
 
 [**Queue**](Queue.html)
+
+<a name="putroutingsettingstranscription"></a>
+
+## [**TranscriptionSettings**](TranscriptionSettings.html) PutRoutingSettingsTranscription (TranscriptionSettings body)
+
+
+
+Update Transcription Settings
+
+
+
+Requires ANY permissions: 
+
+* routing:transcriptionSettings:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRoutingSettingsTranscriptionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RoutingApi();
+            var body = new TranscriptionSettings(); // TranscriptionSettings | Organization Settings
+
+            try
+            { 
+                // Update Transcription Settings
+                TranscriptionSettings result = apiInstance.PutRoutingSettingsTranscription(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PutRoutingSettingsTranscription: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**TranscriptionSettings**](TranscriptionSettings.html)| Organization Settings |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TranscriptionSettings**](TranscriptionSettings.html)
 
 <a name="putroutingsmsphonenumber"></a>
 

@@ -57,6 +57,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementTimeoffrequest**](WorkforceManagementApi.html#patchworkforcemanagementtimeoffrequest) | **PATCH** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Update a time off request for the current user |
 | [**PostWorkforcemanagementAdherenceHistorical**](WorkforceManagementApi.html#postworkforcemanagementadherencehistorical) | **POST** /api/v2/workforcemanagement/adherence/historical | Request a historical adherence report for users across management units |
 | [**PostWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitactivitycodes) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes | Create a new activity code |
+| [**PostWorkforcemanagementManagementunitAgentschedulesSearch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitagentschedulessearch) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/agentschedules/search | Query published schedules for given given time range for set of users |
 | [**PostWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunithistoricaladherencequery) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/historicaladherencequery | Request a historical adherence report |
 | [**PostWorkforcemanagementManagementunitIntraday**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitintraday) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/intraday | Get intraday data for the given date for the requested queueIds |
 | [**PostWorkforcemanagementManagementunitMove**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitmove) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/move | Move the requested management unit to a new business unit |
@@ -1109,7 +1110,7 @@ Gets the result of a specific scheduling run
 
 Requires ANY permissions: 
 
-* wfm:schedule:generate
+* wfm:schedule:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -2761,7 +2762,7 @@ Marks a specific scheduling run as applied, allowing a new rescheduling run to b
 
 Requires ANY permissions: 
 
-* wfm:schedule:generate
+* wfm:schedule:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -3331,6 +3332,70 @@ namespace Example
 ### Return type
 
 [**ActivityCode**](ActivityCode.html)
+
+<a name="postworkforcemanagementmanagementunitagentschedulessearch"></a>
+
+## [**UserScheduleContainer**](UserScheduleContainer.html) PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null)
+
+
+
+Query published schedules for given given time range for set of users
+
+
+
+Requires ANY permissions: 
+
+* wfm:publishedSchedule:view
+* wfm:schedule:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementManagementunitAgentschedulesSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new WorkforceManagementApi();
+            var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var body = new BuSearchAgentSchedulesRequest(); // BuSearchAgentSchedulesRequest | body (optional) 
+
+            try
+            { 
+                // Query published schedules for given given time range for set of users
+                UserScheduleContainer result = apiInstance.PostWorkforcemanagementManagementunitAgentschedulesSearch(muId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitAgentschedulesSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **muId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserScheduleContainer**](UserScheduleContainer.html)
 
 <a name="postworkforcemanagementmanagementunithistoricaladherencequery"></a>
 
@@ -3920,7 +3985,7 @@ Start a scheduling run to compute the reschedule. When the scheduling run finish
 
 Requires ANY permissions: 
 
-* wfm:schedule:edit
+* wfm:schedule:generate
 
 ### Example
 ```{"language":"csharp"}

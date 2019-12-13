@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// WorkPlanReference
+    /// Work plan information
     /// </summary>
     [DataContract]
     public partial class WorkPlanReference :  IEquatable<WorkPlanReference>
@@ -25,31 +25,53 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanReference" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected WorkPlanReference() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WorkPlanReference" /> class.
-        /// </summary>
-        /// <param name="Id">The ID of the work plan (required).</param>
-        public WorkPlanReference(string Id = null)
+        /// <param name="ManagementUnit">The management unit to which this work plan belongs.  Nullable in some routes.</param>
+        public WorkPlanReference(ManagementUnitReference ManagementUnit = null)
         {
-            this.Id = Id;
+            this.ManagementUnit = ManagementUnit;
             
         }
         
         
         
         /// <summary>
-        /// The ID of the work plan
+        /// The globally unique identifier for the object.
         /// </summary>
-        /// <value>The ID of the work plan</value>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public string Id { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The management unit to which this work plan belongs.  Nullable in some routes
+        /// </summary>
+        /// <value>The management unit to which this work plan belongs.  Nullable in some routes</value>
+        [DataMember(Name="managementUnit", EmitDefaultValue=false)]
+        public ManagementUnitReference ManagementUnit { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
         
         
         /// <summary>
@@ -62,6 +84,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class WorkPlanReference {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,6 +126,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.ManagementUnit == other.ManagementUnit ||
+                    this.ManagementUnit != null &&
+                    this.ManagementUnit.Equals(other.ManagementUnit)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -119,6 +153,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.ManagementUnit != null)
+                    hash = hash * 59 + this.ManagementUnit.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

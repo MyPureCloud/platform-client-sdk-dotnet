@@ -445,6 +445,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Queueid,
             
             /// <summary>
+            /// Enum Remote for "remote"
+            /// </summary>
+            [EnumMember(Value = "remote")]
+            Remote,
+            
+            /// <summary>
             /// Enum Recording for "recording"
             /// </summary>
             [EnumMember(Value = "recording")]

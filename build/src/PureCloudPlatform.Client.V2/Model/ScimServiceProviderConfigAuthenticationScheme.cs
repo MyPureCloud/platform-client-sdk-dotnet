@@ -153,9 +153,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Indicates the primary method of authentication.
+        /// Indicates whether this authentication scheme is the primary method of authentication.
         /// </summary>
-        /// <value>Indicates the primary method of authentication.</value>
+        /// <value>Indicates whether this authentication scheme is the primary method of authentication.</value>
         [DataMember(Name="primary", EmitDefaultValue=false)]
         public bool? Primary { get; private set; }
         

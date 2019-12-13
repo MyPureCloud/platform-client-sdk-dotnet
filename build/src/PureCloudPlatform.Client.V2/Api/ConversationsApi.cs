@@ -203,6 +203,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId);
         
         /// <summary>
+        /// Delete a WhatsApp messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>WhatsAppIntegration</returns>
+        WhatsAppIntegration DeleteConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId);
+
+        /// <summary>
+        /// Delete a WhatsApp messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>ApiResponse of WhatsAppIntegration</returns>
+        ApiResponse<WhatsAppIntegration> DeleteConversationsMessagingIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId);
+        
+        /// <summary>
         /// Get a conversation by id
         /// </summary>
         /// <remarks>
@@ -2943,6 +2965,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<MessageConversation> PostConversationsMessagesWithHttpInfo (CreateOutboundMessagingConversationRequest body);
         
         /// <summary>
+        /// Send an agentless outbound message
+        /// </summary>
+        /// <remarks>
+        /// Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless outbound messaging request</param>
+        /// <returns>SendAgentlessOutboundMessageResponse</returns>
+        SendAgentlessOutboundMessageResponse PostConversationsMessagesAgentless (SendAgentlessOutboundMessageRequest body);
+
+        /// <summary>
+        /// Send an agentless outbound message
+        /// </summary>
+        /// <remarks>
+        /// Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless outbound messaging request</param>
+        /// <returns>ApiResponse of SendAgentlessOutboundMessageResponse</returns>
+        ApiResponse<SendAgentlessOutboundMessageResponse> PostConversationsMessagesAgentlessWithHttpInfo (SendAgentlessOutboundMessageRequest body);
+        
+        /// <summary>
         /// Create a Facebook Integration
         /// </summary>
         /// <remarks>
@@ -3007,6 +3051,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>ApiResponse of TwitterIntegration</returns>
         ApiResponse<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterWithHttpInfo (TwitterIntegrationRequest body);
+        
+        /// <summary>
+        /// Create a WhatsApp Integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <returns>WhatsAppIntegration</returns>
+        WhatsAppIntegration PostConversationsMessagingIntegrationsWhatsapp (WhatsAppIntegrationRequest body);
+
+        /// <summary>
+        /// Create a WhatsApp Integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <returns>ApiResponse of WhatsAppIntegration</returns>
+        ApiResponse<WhatsAppIntegration> PostConversationsMessagingIntegrationsWhatsappWithHttpInfo (WhatsAppIntegrationRequest body);
         
         /// <summary>
         /// Set flagged reason on conversation participant to indicate bad conversation quality.
@@ -3297,6 +3363,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Integration ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId);
+        
+        /// <summary>
+        /// Delete a WhatsApp messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of WhatsAppIntegration</returns>
+        System.Threading.Tasks.Task<WhatsAppIntegration> DeleteConversationsMessagingIntegrationsWhatsappIntegrationIdAsync (string integrationId);
+
+        /// <summary>
+        /// Delete a WhatsApp messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of ApiResponse (WhatsAppIntegration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> DeleteConversationsMessagingIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId);
         
         /// <summary>
         /// Get a conversation by id
@@ -6039,6 +6127,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<MessageConversation>> PostConversationsMessagesAsyncWithHttpInfo (CreateOutboundMessagingConversationRequest body);
         
         /// <summary>
+        /// Send an agentless outbound message
+        /// </summary>
+        /// <remarks>
+        /// Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless outbound messaging request</param>
+        /// <returns>Task of SendAgentlessOutboundMessageResponse</returns>
+        System.Threading.Tasks.Task<SendAgentlessOutboundMessageResponse> PostConversationsMessagesAgentlessAsync (SendAgentlessOutboundMessageRequest body);
+
+        /// <summary>
+        /// Send an agentless outbound message
+        /// </summary>
+        /// <remarks>
+        /// Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless outbound messaging request</param>
+        /// <returns>Task of ApiResponse (SendAgentlessOutboundMessageResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SendAgentlessOutboundMessageResponse>> PostConversationsMessagesAgentlessAsyncWithHttpInfo (SendAgentlessOutboundMessageRequest body);
+        
+        /// <summary>
         /// Create a Facebook Integration
         /// </summary>
         /// <remarks>
@@ -6103,6 +6213,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
         System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (TwitterIntegrationRequest body);
+        
+        /// <summary>
+        /// Create a WhatsApp Integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <returns>Task of WhatsAppIntegration</returns>
+        System.Threading.Tasks.Task<WhatsAppIntegration> PostConversationsMessagingIntegrationsWhatsappAsync (WhatsAppIntegrationRequest body);
+
+        /// <summary>
+        /// Create a WhatsApp Integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <returns>Task of ApiResponse (WhatsAppIntegration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> PostConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo (WhatsAppIntegrationRequest body);
         
         /// <summary>
         /// Set flagged reason on conversation participant to indicate bad conversation quality.
@@ -7883,6 +8015,199 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete a WhatsApp messaging integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>WhatsAppIntegration</returns>
+        public WhatsAppIntegration DeleteConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId)
+        {
+             ApiResponse<WhatsAppIntegration> localVarResponse = DeleteConversationsMessagingIntegrationsWhatsappIntegrationIdWithHttpInfo(integrationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete a WhatsApp messaging integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>ApiResponse of WhatsAppIntegration</returns>
+        public ApiResponse< WhatsAppIntegration > DeleteConversationsMessagingIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsWhatsappIntegrationId");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsWhatsappIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsWhatsappIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WhatsAppIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (WhatsAppIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete a WhatsApp messaging integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of WhatsAppIntegration</returns>
+        public async System.Threading.Tasks.Task<WhatsAppIntegration> DeleteConversationsMessagingIntegrationsWhatsappIntegrationIdAsync (string integrationId)
+        {
+             ApiResponse<WhatsAppIntegration> localVarResponse = await DeleteConversationsMessagingIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo(integrationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete a WhatsApp messaging integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of ApiResponse (WhatsAppIntegration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> DeleteConversationsMessagingIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsWhatsappIntegrationId");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsWhatsappIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsWhatsappIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WhatsAppIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (WhatsAppIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppIntegration)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -31477,6 +31802,207 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Send an agentless outbound message Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless outbound messaging request</param>
+        /// <returns>SendAgentlessOutboundMessageResponse</returns>
+        public SendAgentlessOutboundMessageResponse PostConversationsMessagesAgentless (SendAgentlessOutboundMessageRequest body)
+        {
+             ApiResponse<SendAgentlessOutboundMessageResponse> localVarResponse = PostConversationsMessagesAgentlessWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Send an agentless outbound message Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless outbound messaging request</param>
+        /// <returns>ApiResponse of SendAgentlessOutboundMessageResponse</returns>
+        public ApiResponse< SendAgentlessOutboundMessageResponse > PostConversationsMessagesAgentlessWithHttpInfo (SendAgentlessOutboundMessageRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagesAgentless");
+
+            var localVarPath = "/api/v2/conversations/messages/agentless";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagesAgentless: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagesAgentless: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SendAgentlessOutboundMessageResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SendAgentlessOutboundMessageResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SendAgentlessOutboundMessageResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Send an agentless outbound message Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless outbound messaging request</param>
+        /// <returns>Task of SendAgentlessOutboundMessageResponse</returns>
+        public async System.Threading.Tasks.Task<SendAgentlessOutboundMessageResponse> PostConversationsMessagesAgentlessAsync (SendAgentlessOutboundMessageRequest body)
+        {
+             ApiResponse<SendAgentlessOutboundMessageResponse> localVarResponse = await PostConversationsMessagesAgentlessAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Send an agentless outbound message Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless outbound messaging request</param>
+        /// <returns>Task of ApiResponse (SendAgentlessOutboundMessageResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SendAgentlessOutboundMessageResponse>> PostConversationsMessagesAgentlessAsyncWithHttpInfo (SendAgentlessOutboundMessageRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagesAgentless");
+            
+
+            var localVarPath = "/api/v2/conversations/messages/agentless";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagesAgentless: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagesAgentless: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SendAgentlessOutboundMessageResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SendAgentlessOutboundMessageResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SendAgentlessOutboundMessageResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Create a Facebook Integration 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -32073,6 +32599,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TwitterIntegration>(localVarStatusCode,
                 localVarHeaders,
                 (TwitterIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Create a WhatsApp Integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <returns>WhatsAppIntegration</returns>
+        public WhatsAppIntegration PostConversationsMessagingIntegrationsWhatsapp (WhatsAppIntegrationRequest body)
+        {
+             ApiResponse<WhatsAppIntegration> localVarResponse = PostConversationsMessagingIntegrationsWhatsappWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a WhatsApp Integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <returns>ApiResponse of WhatsAppIntegration</returns>
+        public ApiResponse< WhatsAppIntegration > PostConversationsMessagingIntegrationsWhatsappWithHttpInfo (WhatsAppIntegrationRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsWhatsapp");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsWhatsapp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsWhatsapp: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WhatsAppIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (WhatsAppIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Create a WhatsApp Integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <returns>Task of WhatsAppIntegration</returns>
+        public async System.Threading.Tasks.Task<WhatsAppIntegration> PostConversationsMessagingIntegrationsWhatsappAsync (WhatsAppIntegrationRequest body)
+        {
+             ApiResponse<WhatsAppIntegration> localVarResponse = await PostConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a WhatsApp Integration 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WhatsAppIntegrationRequest</param>
+        /// <returns>Task of ApiResponse (WhatsAppIntegration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> PostConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo (WhatsAppIntegrationRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsWhatsapp");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsWhatsapp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsWhatsapp: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WhatsAppIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (WhatsAppIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppIntegration)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

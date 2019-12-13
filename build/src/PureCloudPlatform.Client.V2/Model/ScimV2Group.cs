@@ -45,16 +45,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2Group" /> class.
         /// </summary>
         /// <param name="Schemas">The list of supported schemas..</param>
+        /// <param name="ExternalId">The external ID of the group. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;..</param>
         /// <param name="Members">The list of members in the group..</param>
         /// <param name="Meta">The metadata of the SCIM resource..</param>
-        public ScimV2Group(List<string> Schemas = null, List<ScimV2MemberReference> Members = null, ScimMetadata Meta = null)
+        public ScimV2Group(List<string> Schemas = null, string ExternalId = null, List<ScimV2MemberReference> Members = null, ScimMetadata Meta = null)
         {
             this.Schemas = Schemas;
+            this.ExternalId = ExternalId;
             this.Members = Members;
             this.Meta = Meta;
             
@@ -90,6 +97,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The external ID of the group. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;.
+        /// </summary>
+        /// <value>The external ID of the group. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;.</value>
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
+        
+        
+        
+        /// <summary>
         /// The list of members in the group.
         /// </summary>
         /// <value>The list of members in the group.</value>
@@ -118,6 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Schemas: ").Append(Schemas).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  Members: ").Append(Members).Append("\n");
             sb.Append("  Meta: ").Append(Meta).Append("\n");
             sb.Append("}\n");
@@ -172,6 +189,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisplayName.Equals(other.DisplayName)
                 ) &&
                 (
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
                     this.Members == other.Members ||
                     this.Members != null &&
                     this.Members.SequenceEqual(other.Members)
@@ -203,6 +225,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
+                
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
                 
                 if (this.Members != null)
                     hash = hash * 59 + this.Members.GetHashCode();

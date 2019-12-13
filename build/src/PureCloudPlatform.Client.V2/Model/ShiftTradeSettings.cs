@@ -201,6 +201,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// How to handle shift trades which involve unequal paid times
         /// </summary>
@@ -244,6 +247,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradeSettings" /> class.
@@ -259,8 +264,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RequiresMatchingQueues">Whether to constrain shift trades to agents with matching queues.</param>
         /// <param name="RequiresMatchingLanguages">Whether to constrain shift trades to agents with matching languages.</param>
         /// <param name="RequiresMatchingSkills">Whether to constrain shift trades to agents with matching skills.</param>
+        /// <param name="RequiresMatchingPlanningGroups">Whether to constrain shift trades to agents with matching planning groups.</param>
         /// <param name="ActivityCategoryRules">Rules that specify what to do with activity categories that are part of a shift defined in a trade.</param>
-        public ShiftTradeSettings(bool? Enabled = null, bool? AutoReview = null, bool? AllowDirectTrades = null, int? MinHoursInFuture = null, UnequalPaidEnum? UnequalPaid = null, OneSidedEnum? OneSided = null, WeeklyMinPaidViolationsEnum? WeeklyMinPaidViolations = null, WeeklyMaxPaidViolationsEnum? WeeklyMaxPaidViolations = null, bool? RequiresMatchingQueues = null, bool? RequiresMatchingLanguages = null, bool? RequiresMatchingSkills = null, List<ShiftTradeActivityRule> ActivityCategoryRules = null)
+        public ShiftTradeSettings(bool? Enabled = null, bool? AutoReview = null, bool? AllowDirectTrades = null, int? MinHoursInFuture = null, UnequalPaidEnum? UnequalPaid = null, OneSidedEnum? OneSided = null, WeeklyMinPaidViolationsEnum? WeeklyMinPaidViolations = null, WeeklyMaxPaidViolationsEnum? WeeklyMaxPaidViolations = null, bool? RequiresMatchingQueues = null, bool? RequiresMatchingLanguages = null, bool? RequiresMatchingSkills = null, bool? RequiresMatchingPlanningGroups = null, List<ShiftTradeActivityRule> ActivityCategoryRules = null)
         {
             this.Enabled = Enabled;
             this.AutoReview = AutoReview;
@@ -273,6 +279,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RequiresMatchingQueues = RequiresMatchingQueues;
             this.RequiresMatchingLanguages = RequiresMatchingLanguages;
             this.RequiresMatchingSkills = RequiresMatchingSkills;
+            this.RequiresMatchingPlanningGroups = RequiresMatchingPlanningGroups;
             this.ActivityCategoryRules = ActivityCategoryRules;
             
         }
@@ -351,6 +358,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Whether to constrain shift trades to agents with matching planning groups
+        /// </summary>
+        /// <value>Whether to constrain shift trades to agents with matching planning groups</value>
+        [DataMember(Name="requiresMatchingPlanningGroups", EmitDefaultValue=false)]
+        public bool? RequiresMatchingPlanningGroups { get; set; }
+        
+        
+        
+        /// <summary>
         /// Rules that specify what to do with activity categories that are part of a shift defined in a trade
         /// </summary>
         /// <value>Rules that specify what to do with activity categories that are part of a shift defined in a trade</value>
@@ -378,6 +394,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RequiresMatchingQueues: ").Append(RequiresMatchingQueues).Append("\n");
             sb.Append("  RequiresMatchingLanguages: ").Append(RequiresMatchingLanguages).Append("\n");
             sb.Append("  RequiresMatchingSkills: ").Append(RequiresMatchingSkills).Append("\n");
+            sb.Append("  RequiresMatchingPlanningGroups: ").Append(RequiresMatchingPlanningGroups).Append("\n");
             sb.Append("  ActivityCategoryRules: ").Append(ActivityCategoryRules).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -471,6 +488,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RequiresMatchingSkills.Equals(other.RequiresMatchingSkills)
                 ) &&
                 (
+                    this.RequiresMatchingPlanningGroups == other.RequiresMatchingPlanningGroups ||
+                    this.RequiresMatchingPlanningGroups != null &&
+                    this.RequiresMatchingPlanningGroups.Equals(other.RequiresMatchingPlanningGroups)
+                ) &&
+                (
                     this.ActivityCategoryRules == other.ActivityCategoryRules ||
                     this.ActivityCategoryRules != null &&
                     this.ActivityCategoryRules.SequenceEqual(other.ActivityCategoryRules)
@@ -521,6 +543,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RequiresMatchingSkills != null)
                     hash = hash * 59 + this.RequiresMatchingSkills.GetHashCode();
+                
+                if (this.RequiresMatchingPlanningGroups != null)
+                    hash = hash * 59 + this.RequiresMatchingPlanningGroups.GetHashCode();
                 
                 if (this.ActivityCategoryRules != null)
                     hash = hash * 59 + this.ActivityCategoryRules.GetHashCode();
