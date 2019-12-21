@@ -155,8 +155,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedBy">The ID of the user that created the resource..</param>
         /// <param name="ModifiedByApp">The application that last modified the resource..</param>
         /// <param name="CreatedByApp">The application that created the resource..</param>
-        /// <param name="Start">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS.</param>
-        /// <param name="End">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS.</param>
+        /// <param name="Start">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS (required).</param>
+        /// <param name="End">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS (required).</param>
         /// <param name="Rrule">An iCal Recurrence Rule (RRULE) string. (required).</param>
         public Schedule(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, DateTime? Start = null, DateTime? End = null, string Rrule = null)
         {

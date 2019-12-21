@@ -1,0 +1,15 @@
+---
+title: WfmBuScheduleTopicBuScheduleGenerationResultSummary
+---
+## ININ.PureCloudApi.Model.WfmBuScheduleTopicBuScheduleGenerationResultSummary
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Failed** | **bool?** |  | [optional] |
+| **RunId** | **string** |  | [optional] |
+| **MessageCount** | **int?** |  | [optional] |
+{: class="table table-striped"}
+
+

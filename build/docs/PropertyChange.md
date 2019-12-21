@@ -1,0 +1,15 @@
+---
+title: PropertyChange
+---
+## ININ.PureCloudApi.Model.PropertyChange
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Property** | **string** | The property that was changed | [optional] |
+| **OldValues** | **List&lt;string&gt;** | Previous values for the property. | [optional] |
+| **NewValues** | **List&lt;string&gt;** | New values for the property. | [optional] |
+{: class="table table-striped"}
+
+

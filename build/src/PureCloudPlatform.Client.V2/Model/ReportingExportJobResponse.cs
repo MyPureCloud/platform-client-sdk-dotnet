@@ -589,13 +589,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Status">The current status of the export request (required).</param>
-        /// <param name="TimeZone">The requested timezone of the exported data (required).</param>
+        /// <param name="TimeZone">The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London (required).</param>
         /// <param name="ExportFormat">The requested format of the exported data (required).</param>
-        /// <param name="Interval">The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
+        /// <param name="Interval">The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="DownloadUrl">The url to download the request if it&#39;s status is completed.</param>
         /// <param name="ViewType">The type of view export job to be created (required).</param>
         /// <param name="ExportErrorMessagesType">The error message in case the export request failed.</param>
-        /// <param name="Period">The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
+        /// <param name="Period">The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H (required).</param>
         /// <param name="Filter">Filters to apply to create the view (required).</param>
         /// <param name="Read">Indicates if the request has been marked as read (required).</param>
         /// <param name="CreatedDateTime">The created date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
@@ -606,7 +606,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HasSplitFilters">Indicates if filters will be split in aggregate detail exports.</param>
         /// <param name="SelectedColumns">The list of ordered selected columns from the export view by the user.</param>
         /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
-        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null)
+        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null)
         {
             this.Name = Name;
             this.Status = Status;
@@ -652,11 +652,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The requested timezone of the exported data
+        /// The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
         /// </summary>
-        /// <value>The requested timezone of the exported data</value>
+        /// <value>The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
-        public TimeZone TimeZone { get; set; }
+        public string TimeZone { get; set; }
         
         
         

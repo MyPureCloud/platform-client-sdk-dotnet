@@ -12,10 +12,10 @@ title: TrustUserEntityListing
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
-| **SelfUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
+| **SelfUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

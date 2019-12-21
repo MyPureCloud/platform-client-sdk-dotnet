@@ -1,7 +1,7 @@
 ---
-title: QueueUserEventTopicUserReference
+title: WfmBuScheduleRunTopicUserReference
 ---
-## ININ.PureCloudApi.Model.QueueUserEventTopicUserReference
+## ININ.PureCloudApi.Model.WfmBuScheduleRunTopicUserReference
 
 ## Properties
 

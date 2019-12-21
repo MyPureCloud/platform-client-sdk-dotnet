@@ -1,16 +1,13 @@
 ---
-title: TimeZone
+title: WfmBuScheduleTopicManagementUnit
 ---
-## ININ.PureCloudApi.Model.TimeZone
+## ININ.PureCloudApi.Model.WfmBuScheduleTopicManagementUnit
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **DisplayName** | **string** |  | [optional] |
 | **Id** | **string** |  | [optional] |
-| **RawOffset** | **int?** |  | [optional] |
-| **Dstsavings** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
 

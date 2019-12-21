@@ -36,6 +36,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Queued for "QUEUED"
+            /// </summary>
+            [EnumMember(Value = "QUEUED")]
+            Queued,
+            
+            /// <summary>
             /// Enum Pending for "PENDING"
             /// </summary>
             [EnumMember(Value = "PENDING")]

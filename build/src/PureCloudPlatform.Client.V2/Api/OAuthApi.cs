@@ -39,6 +39,48 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteOauthClientWithHttpInfo (string clientId);
         
         /// <summary>
+        /// Get a client that is authorized by the resource owner
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">The ID of client</param>
+        /// <returns>OAuthAuthorization</returns>
+        OAuthAuthorization GetOauthAuthorization (string clientId);
+
+        /// <summary>
+        /// Get a client that is authorized by the resource owner
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">The ID of client</param>
+        /// <returns>ApiResponse of OAuthAuthorization</returns>
+        ApiResponse<OAuthAuthorization> GetOauthAuthorizationWithHttpInfo (string clientId);
+        
+        /// <summary>
+        /// List clients that are authorized by the resource owner
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>OAuthAuthorizationListing</returns>
+        OAuthAuthorizationListing GetOauthAuthorizations ();
+
+        /// <summary>
+        /// List clients that are authorized by the resource owner
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of OAuthAuthorizationListing</returns>
+        ApiResponse<OAuthAuthorizationListing> GetOauthAuthorizationsWithHttpInfo ();
+        
+        /// <summary>
         /// Get OAuth Client
         /// </summary>
         /// <remarks>
@@ -79,6 +121,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OAuthClientEntityListing</returns>
         ApiResponse<OAuthClientEntityListing> GetOauthClientsWithHttpInfo ();
+        
+        /// <summary>
+        /// An OAuth scope
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scopeId">Scope ID</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <returns>OAuthScope</returns>
+        OAuthScope GetOauthScope (string scopeId, string acceptLanguage = null);
+
+        /// <summary>
+        /// An OAuth scope
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scopeId">Scope ID</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <returns>ApiResponse of OAuthScope</returns>
+        ApiResponse<OAuthScope> GetOauthScopeWithHttpInfo (string scopeId, string acceptLanguage = null);
+        
+        /// <summary>
+        /// The list of OAuth scopes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <returns>OAuthScopeListing</returns>
+        OAuthScopeListing GetOauthScopes (string acceptLanguage = null);
+
+        /// <summary>
+        /// The list of OAuth scopes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <returns>ApiResponse of OAuthScopeListing</returns>
+        ApiResponse<OAuthScopeListing> GetOauthScopesWithHttpInfo (string acceptLanguage = null);
         
         /// <summary>
         /// Regenerate Client Secret
@@ -175,6 +263,48 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOauthClientAsyncWithHttpInfo (string clientId);
         
         /// <summary>
+        /// Get a client that is authorized by the resource owner
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">The ID of client</param>
+        /// <returns>Task of OAuthAuthorization</returns>
+        System.Threading.Tasks.Task<OAuthAuthorization> GetOauthAuthorizationAsync (string clientId);
+
+        /// <summary>
+        /// Get a client that is authorized by the resource owner
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">The ID of client</param>
+        /// <returns>Task of ApiResponse (OAuthAuthorization)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OAuthAuthorization>> GetOauthAuthorizationAsyncWithHttpInfo (string clientId);
+        
+        /// <summary>
+        /// List clients that are authorized by the resource owner
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of OAuthAuthorizationListing</returns>
+        System.Threading.Tasks.Task<OAuthAuthorizationListing> GetOauthAuthorizationsAsync ();
+
+        /// <summary>
+        /// List clients that are authorized by the resource owner
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (OAuthAuthorizationListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OAuthAuthorizationListing>> GetOauthAuthorizationsAsyncWithHttpInfo ();
+        
+        /// <summary>
         /// Get OAuth Client
         /// </summary>
         /// <remarks>
@@ -215,6 +345,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OAuthClientEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthClientEntityListing>> GetOauthClientsAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// An OAuth scope
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scopeId">Scope ID</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <returns>Task of OAuthScope</returns>
+        System.Threading.Tasks.Task<OAuthScope> GetOauthScopeAsync (string scopeId, string acceptLanguage = null);
+
+        /// <summary>
+        /// An OAuth scope
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scopeId">Scope ID</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <returns>Task of ApiResponse (OAuthScope)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OAuthScope>> GetOauthScopeAsyncWithHttpInfo (string scopeId, string acceptLanguage = null);
+        
+        /// <summary>
+        /// The list of OAuth scopes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <returns>Task of OAuthScopeListing</returns>
+        System.Threading.Tasks.Task<OAuthScopeListing> GetOauthScopesAsync (string acceptLanguage = null);
+
+        /// <summary>
+        /// The list of OAuth scopes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <returns>Task of ApiResponse (OAuthScopeListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OAuthScopeListing>> GetOauthScopesAsyncWithHttpInfo (string acceptLanguage = null);
         
         /// <summary>
         /// Regenerate Client Secret
@@ -561,6 +737,379 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get a client that is authorized by the resource owner 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">The ID of client</param>
+        /// <returns>OAuthAuthorization</returns>
+        public OAuthAuthorization GetOauthAuthorization (string clientId)
+        {
+             ApiResponse<OAuthAuthorization> localVarResponse = GetOauthAuthorizationWithHttpInfo(clientId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a client that is authorized by the resource owner 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">The ID of client</param>
+        /// <returns>ApiResponse of OAuthAuthorization</returns>
+        public ApiResponse< OAuthAuthorization > GetOauthAuthorizationWithHttpInfo (string clientId)
+        { 
+            // verify the required parameter 'clientId' is set
+            if (clientId == null)
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetOauthAuthorization");
+
+            var localVarPath = "/api/v2/oauth/authorizations/{clientId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthAuthorization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthAuthorization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthAuthorization>(localVarStatusCode,
+                localVarHeaders,
+                (OAuthAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthAuthorization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get a client that is authorized by the resource owner 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">The ID of client</param>
+        /// <returns>Task of OAuthAuthorization</returns>
+        public async System.Threading.Tasks.Task<OAuthAuthorization> GetOauthAuthorizationAsync (string clientId)
+        {
+             ApiResponse<OAuthAuthorization> localVarResponse = await GetOauthAuthorizationAsyncWithHttpInfo(clientId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a client that is authorized by the resource owner 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">The ID of client</param>
+        /// <returns>Task of ApiResponse (OAuthAuthorization)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthAuthorization>> GetOauthAuthorizationAsyncWithHttpInfo (string clientId)
+        { 
+            // verify the required parameter 'clientId' is set
+            if (clientId == null)
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetOauthAuthorization");
+            
+
+            var localVarPath = "/api/v2/oauth/authorizations/{clientId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthAuthorization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthAuthorization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthAuthorization>(localVarStatusCode,
+                localVarHeaders,
+                (OAuthAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthAuthorization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// List clients that are authorized by the resource owner 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>OAuthAuthorizationListing</returns>
+        public OAuthAuthorizationListing GetOauthAuthorizations ()
+        {
+             ApiResponse<OAuthAuthorizationListing> localVarResponse = GetOauthAuthorizationsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List clients that are authorized by the resource owner 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of OAuthAuthorizationListing</returns>
+        public ApiResponse< OAuthAuthorizationListing > GetOauthAuthorizationsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/oauth/authorizations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthAuthorizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthAuthorizations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthAuthorizationListing>(localVarStatusCode,
+                localVarHeaders,
+                (OAuthAuthorizationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthAuthorizationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// List clients that are authorized by the resource owner 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of OAuthAuthorizationListing</returns>
+        public async System.Threading.Tasks.Task<OAuthAuthorizationListing> GetOauthAuthorizationsAsync ()
+        {
+             ApiResponse<OAuthAuthorizationListing> localVarResponse = await GetOauthAuthorizationsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List clients that are authorized by the resource owner 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (OAuthAuthorizationListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthAuthorizationListing>> GetOauthAuthorizationsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/oauth/authorizations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthAuthorizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthAuthorizations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthAuthorizationListing>(localVarStatusCode,
+                localVarHeaders,
+                (OAuthAuthorizationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthAuthorizationListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -934,6 +1483,391 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<OAuthClientEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (OAuthClientEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthClientEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// An OAuth scope 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scopeId">Scope ID</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <returns>OAuthScope</returns>
+        public OAuthScope GetOauthScope (string scopeId, string acceptLanguage = null)
+        {
+             ApiResponse<OAuthScope> localVarResponse = GetOauthScopeWithHttpInfo(scopeId, acceptLanguage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// An OAuth scope 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scopeId">Scope ID</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <returns>ApiResponse of OAuthScope</returns>
+        public ApiResponse< OAuthScope > GetOauthScopeWithHttpInfo (string scopeId, string acceptLanguage = null)
+        { 
+            // verify the required parameter 'scopeId' is set
+            if (scopeId == null)
+                throw new ApiException(400, "Missing required parameter 'scopeId' when calling OAuthApi->GetOauthScope");
+
+            var localVarPath = "/api/v2/oauth/scopes/{scopeId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scopeId != null) localVarPathParams.Add("scopeId", this.Configuration.ApiClient.ParameterToString(scopeId));
+
+            // Query params
+
+            // Header params
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthScope: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthScope: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthScope>(localVarStatusCode,
+                localVarHeaders,
+                (OAuthScope) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthScope)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// An OAuth scope 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scopeId">Scope ID</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <returns>Task of OAuthScope</returns>
+        public async System.Threading.Tasks.Task<OAuthScope> GetOauthScopeAsync (string scopeId, string acceptLanguage = null)
+        {
+             ApiResponse<OAuthScope> localVarResponse = await GetOauthScopeAsyncWithHttpInfo(scopeId, acceptLanguage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// An OAuth scope 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scopeId">Scope ID</param>
+        /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to en-us)</param>
+        /// <returns>Task of ApiResponse (OAuthScope)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthScope>> GetOauthScopeAsyncWithHttpInfo (string scopeId, string acceptLanguage = null)
+        { 
+            // verify the required parameter 'scopeId' is set
+            if (scopeId == null)
+                throw new ApiException(400, "Missing required parameter 'scopeId' when calling OAuthApi->GetOauthScope");
+            
+
+            var localVarPath = "/api/v2/oauth/scopes/{scopeId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scopeId != null) localVarPathParams.Add("scopeId", this.Configuration.ApiClient.ParameterToString(scopeId));
+
+            // Query params
+
+            // Header params
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthScope: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthScope: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthScope>(localVarStatusCode,
+                localVarHeaders,
+                (OAuthScope) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthScope)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// The list of OAuth scopes 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <returns>OAuthScopeListing</returns>
+        public OAuthScopeListing GetOauthScopes (string acceptLanguage = null)
+        {
+             ApiResponse<OAuthScopeListing> localVarResponse = GetOauthScopesWithHttpInfo(acceptLanguage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// The list of OAuth scopes 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <returns>ApiResponse of OAuthScopeListing</returns>
+        public ApiResponse< OAuthScopeListing > GetOauthScopesWithHttpInfo (string acceptLanguage = null)
+        { 
+
+            var localVarPath = "/api/v2/oauth/scopes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthScopes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthScopes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthScopeListing>(localVarStatusCode,
+                localVarHeaders,
+                (OAuthScopeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthScopeListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// The list of OAuth scopes 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <returns>Task of OAuthScopeListing</returns>
+        public async System.Threading.Tasks.Task<OAuthScopeListing> GetOauthScopesAsync (string acceptLanguage = null)
+        {
+             ApiResponse<OAuthScopeListing> localVarResponse = await GetOauthScopesAsyncWithHttpInfo(acceptLanguage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// The list of OAuth scopes 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to en-us)</param>
+        /// <returns>Task of ApiResponse (OAuthScopeListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthScopeListing>> GetOauthScopesAsyncWithHttpInfo (string acceptLanguage = null)
+        { 
+
+            var localVarPath = "/api/v2/oauth/scopes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+            if (acceptLanguage != null) localVarHeaderParams.Add("Accept-Language", this.Configuration.ApiClient.ParameterToString(acceptLanguage)); // header parameter
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthScopes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOauthScopes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthScopeListing>(localVarStatusCode,
+                localVarHeaders,
+                (OAuthScopeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthScopeListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -123,7 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Description.</param>
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="TimePeriod">TimePeriod.</param>
-        /// <param name="Interval">Interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
+        /// <param name="Interval">Interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="ReportFormat">ReportFormat.</param>
         /// <param name="Locale">Locale.</param>
         /// <param name="Enabled">Enabled.</param>

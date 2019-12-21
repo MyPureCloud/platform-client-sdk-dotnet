@@ -394,10 +394,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ReportingExportJobRequest" /> class.
         /// </summary>
         /// <param name="Name">The user supplied name of the export request (required).</param>
-        /// <param name="TimeZone">The requested timezone of the exported data (required).</param>
+        /// <param name="TimeZone">The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London (required).</param>
         /// <param name="ExportFormat">The requested format of the exported data (required).</param>
-        /// <param name="Interval">The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
-        /// <param name="Period">The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
+        /// <param name="Interval">The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
+        /// <param name="Period">The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H (required).</param>
         /// <param name="ViewType">The type of view export job to be created (required).</param>
         /// <param name="Filter">Filters to apply to create the view (required).</param>
         /// <param name="Read">Indicates if the request has been marked as read.</param>
@@ -406,7 +406,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HasSplitFilters">Indicates if filters will be split in aggregate detail exports.</param>
         /// <param name="SelectedColumns">The list of ordered selected columns from the export view by the user.</param>
         /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
-        public ReportingExportJobRequest(string Name = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null)
+        public ReportingExportJobRequest(string Name = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null)
         {
             this.Name = Name;
             this.TimeZone = TimeZone;
@@ -436,11 +436,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The requested timezone of the exported data
+        /// The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
         /// </summary>
-        /// <value>The requested timezone of the exported data</value>
+        /// <value>The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
-        public TimeZone TimeZone { get; set; }
+        public string TimeZone { get; set; }
         
         
         

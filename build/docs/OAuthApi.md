@@ -8,8 +8,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteOauthClient**](OAuthApi.html#deleteoauthclient) | **DELETE** /api/v2/oauth/clients/{clientId} | Delete OAuth Client |
+| [**GetOauthAuthorization**](OAuthApi.html#getoauthauthorization) | **GET** /api/v2/oauth/authorizations/{clientId} | Get a client that is authorized by the resource owner |
+| [**GetOauthAuthorizations**](OAuthApi.html#getoauthauthorizations) | **GET** /api/v2/oauth/authorizations | List clients that are authorized by the resource owner |
 | [**GetOauthClient**](OAuthApi.html#getoauthclient) | **GET** /api/v2/oauth/clients/{clientId} | Get OAuth Client |
 | [**GetOauthClients**](OAuthApi.html#getoauthclients) | **GET** /api/v2/oauth/clients | The list of OAuth clients |
+| [**GetOauthScope**](OAuthApi.html#getoauthscope) | **GET** /api/v2/oauth/scopes/{scopeId} | An OAuth scope |
+| [**GetOauthScopes**](OAuthApi.html#getoauthscopes) | **GET** /api/v2/oauth/scopes | The list of OAuth scopes |
 | [**PostOauthClientSecret**](OAuthApi.html#postoauthclientsecret) | **POST** /api/v2/oauth/clients/{clientId}/secret | Regenerate Client Secret |
 | [**PostOauthClients**](OAuthApi.html#postoauthclients) | **POST** /api/v2/oauth/clients | Create OAuth client |
 | [**PutOauthClient**](OAuthApi.html#putoauthclient) | **PUT** /api/v2/oauth/clients/{clientId} | Update OAuth Client |
@@ -74,6 +78,123 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="getoauthauthorization"></a>
+
+## [**OAuthAuthorization**](OAuthAuthorization.html) GetOauthAuthorization (string clientId)
+
+
+
+Get a client that is authorized by the resource owner
+
+
+
+Requires ANY permissions: 
+
+* oauth:client:authorize
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOauthAuthorizationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OAuthApi();
+            var clientId = clientId_example;  // string | The ID of client
+
+            try
+            { 
+                // Get a client that is authorized by the resource owner
+                OAuthAuthorization result = apiInstance.GetOauthAuthorization(clientId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OAuthApi.GetOauthAuthorization: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **clientId** | **string**| The ID of client |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OAuthAuthorization**](OAuthAuthorization.html)
+
+<a name="getoauthauthorizations"></a>
+
+## [**OAuthAuthorizationListing**](OAuthAuthorizationListing.html) GetOauthAuthorizations ()
+
+
+
+List clients that are authorized by the resource owner
+
+
+
+Requires ANY permissions: 
+
+* oauth:client:authorize
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOauthAuthorizationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OAuthApi();
+
+            try
+            { 
+                // List clients that are authorized by the resource owner
+                OAuthAuthorizationListing result = apiInstance.GetOauthAuthorizations();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OAuthApi.GetOauthAuthorizations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**OAuthAuthorizationListing**](OAuthAuthorizationListing.html)
 
 <a name="getoauthclient"></a>
 
@@ -191,6 +312,128 @@ This endpoint does require any parameters.
 ### Return type
 
 [**OAuthClientEntityListing**](OAuthClientEntityListing.html)
+
+<a name="getoauthscope"></a>
+
+## [**OAuthScope**](OAuthScope.html) GetOauthScope (string scopeId, string acceptLanguage = null)
+
+
+
+An OAuth scope
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOauthScopeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OAuthApi();
+            var scopeId = scopeId_example;  // string | Scope ID
+            var acceptLanguage = acceptLanguage_example;  // string | The language with which to display the scope description. (optional)  (default to en-us)
+
+            try
+            { 
+                // An OAuth scope
+                OAuthScope result = apiInstance.GetOauthScope(scopeId, acceptLanguage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OAuthApi.GetOauthScope: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scopeId** | **string**| Scope ID |  |
+| **acceptLanguage** | **string**| The language with which to display the scope description. | [optional] [default to en-us] |
+{: class="table table-striped"}
+
+### Return type
+
+[**OAuthScope**](OAuthScope.html)
+
+<a name="getoauthscopes"></a>
+
+## [**OAuthScopeListing**](OAuthScopeListing.html) GetOauthScopes (string acceptLanguage = null)
+
+
+
+The list of OAuth scopes
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOauthScopesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OAuthApi();
+            var acceptLanguage = acceptLanguage_example;  // string | The language with which to display the scope descriptions. (optional)  (default to en-us)
+
+            try
+            { 
+                // The list of OAuth scopes
+                OAuthScopeListing result = apiInstance.GetOauthScopes(acceptLanguage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OAuthApi.GetOauthScopes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **acceptLanguage** | **string**| The language with which to display the scope descriptions. | [optional] [default to en-us] |
+{: class="table table-striped"}
+
+### Return type
+
+[**OAuthScopeListing**](OAuthScopeListing.html)
 
 <a name="postoauthclientsecret"></a>
 

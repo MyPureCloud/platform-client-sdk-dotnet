@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// TimeZone
+    /// WfmBuScheduleRunTopicLocalDate
     /// </summary>
     [DataContract]
-    public partial class TimeZone :  IEquatable<TimeZone>
+    public partial class WfmBuScheduleRunTopicLocalDate :  IEquatable<WfmBuScheduleRunTopicLocalDate>
     {
         
         
@@ -42,52 +42,52 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="TimeZone" /> class.
+        /// Initializes a new instance of the <see cref="WfmBuScheduleRunTopicLocalDate" /> class.
         /// </summary>
-        /// <param name="DisplayName">DisplayName.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="RawOffset">RawOffset.</param>
-        /// <param name="Dstsavings">Dstsavings.</param>
-        public TimeZone(string DisplayName = null, string Id = null, int? RawOffset = null, int? Dstsavings = null)
+        /// <param name="Year">Year.</param>
+        /// <param name="Month">Month.</param>
+        /// <param name="Day">Day.</param>
+        /// <param name="LeapYear">LeapYear.</param>
+        public WfmBuScheduleRunTopicLocalDate(int? Year = null, int? Month = null, int? Day = null, bool? LeapYear = null)
         {
-            this.DisplayName = DisplayName;
-            this.Id = Id;
-            this.RawOffset = RawOffset;
-            this.Dstsavings = Dstsavings;
+            this.Year = Year;
+            this.Month = Month;
+            this.Day = Day;
+            this.LeapYear = LeapYear;
             
         }
         
         
         
         /// <summary>
-        /// Gets or Sets DisplayName
+        /// Gets or Sets Year
         /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
-        public string DisplayName { get; set; }
+        [DataMember(Name="year", EmitDefaultValue=false)]
+        public int? Year { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Gets or Sets Month
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        [DataMember(Name="month", EmitDefaultValue=false)]
+        public int? Month { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets RawOffset
+        /// Gets or Sets Day
         /// </summary>
-        [DataMember(Name="rawOffset", EmitDefaultValue=false)]
-        public int? RawOffset { get; set; }
+        [DataMember(Name="day", EmitDefaultValue=false)]
+        public int? Day { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Dstsavings
+        /// Gets or Sets LeapYear
         /// </summary>
-        [DataMember(Name="dstsavings", EmitDefaultValue=false)]
-        public int? Dstsavings { get; set; }
+        [DataMember(Name="leapYear", EmitDefaultValue=false)]
+        public bool? LeapYear { get; set; }
         
         
         /// <summary>
@@ -97,12 +97,12 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TimeZone {\n");
+            sb.Append("class WfmBuScheduleRunTopicLocalDate {\n");
             
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  RawOffset: ").Append(RawOffset).Append("\n");
-            sb.Append("  Dstsavings: ").Append(Dstsavings).Append("\n");
+            sb.Append("  Year: ").Append(Year).Append("\n");
+            sb.Append("  Month: ").Append(Month).Append("\n");
+            sb.Append("  Day: ").Append(Day).Append("\n");
+            sb.Append("  LeapYear: ").Append(LeapYear).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,15 +124,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TimeZone);
+            return this.Equals(obj as WfmBuScheduleRunTopicLocalDate);
         }
 
         /// <summary>
-        /// Returns true if TimeZone instances are equal
+        /// Returns true if WfmBuScheduleRunTopicLocalDate instances are equal
         /// </summary>
-        /// <param name="other">Instance of TimeZone to be compared</param>
+        /// <param name="other">Instance of WfmBuScheduleRunTopicLocalDate to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TimeZone other)
+        public bool Equals(WfmBuScheduleRunTopicLocalDate other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -140,24 +140,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.DisplayName == other.DisplayName ||
-                    this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.Year == other.Year ||
+                    this.Year != null &&
+                    this.Year.Equals(other.Year)
                 ) &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Month == other.Month ||
+                    this.Month != null &&
+                    this.Month.Equals(other.Month)
                 ) &&
                 (
-                    this.RawOffset == other.RawOffset ||
-                    this.RawOffset != null &&
-                    this.RawOffset.Equals(other.RawOffset)
+                    this.Day == other.Day ||
+                    this.Day != null &&
+                    this.Day.Equals(other.Day)
                 ) &&
                 (
-                    this.Dstsavings == other.Dstsavings ||
-                    this.Dstsavings != null &&
-                    this.Dstsavings.Equals(other.Dstsavings)
+                    this.LeapYear == other.LeapYear ||
+                    this.LeapYear != null &&
+                    this.LeapYear.Equals(other.LeapYear)
                 );
         }
 
@@ -173,17 +173,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.DisplayName != null)
-                    hash = hash * 59 + this.DisplayName.GetHashCode();
+                if (this.Year != null)
+                    hash = hash * 59 + this.Year.GetHashCode();
                 
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                if (this.Month != null)
+                    hash = hash * 59 + this.Month.GetHashCode();
                 
-                if (this.RawOffset != null)
-                    hash = hash * 59 + this.RawOffset.GetHashCode();
+                if (this.Day != null)
+                    hash = hash * 59 + this.Day.GetHashCode();
                 
-                if (this.Dstsavings != null)
-                    hash = hash * 59 + this.Dstsavings.GetHashCode();
+                if (this.LeapYear != null)
+                    hash = hash * 59 + this.LeapYear.GetHashCode();
                 
                 return hash;
             }

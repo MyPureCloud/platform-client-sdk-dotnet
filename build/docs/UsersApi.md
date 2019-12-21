@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteAnalyticsUsersDetailsJob**](UsersApi.html#deleteanalyticsusersdetailsjob) | **DELETE** /api/v2/analytics/users/details/jobs/{jobId} | Delete/cancel an async request |
 | [**DeleteAuthorizationSubjectDivisionRole**](UsersApi.html#deleteauthorizationsubjectdivisionrole) | **DELETE** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
 | [**DeleteUser**](UsersApi.html#deleteuser) | **DELETE** /api/v2/users/{userId} | Delete user |
 | [**DeleteUserRoles**](UsersApi.html#deleteuserroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
@@ -14,6 +15,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteUserRoutingskill**](UsersApi.html#deleteuserroutingskill) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
 | [**DeleteUserStationAssociatedstation**](UsersApi.html#deleteuserstationassociatedstation) | **DELETE** /api/v2/users/{userId}/station/associatedstation | Clear associated station |
 | [**DeleteUserStationDefaultstation**](UsersApi.html#deleteuserstationdefaultstation) | **DELETE** /api/v2/users/{userId}/station/defaultstation | Clear default station |
+| [**GetAnalyticsUsersDetailsJob**](UsersApi.html#getanalyticsusersdetailsjob) | **GET** /api/v2/analytics/users/details/jobs/{jobId} | Get status for async query for user details |
+| [**GetAnalyticsUsersDetailsJobResults**](UsersApi.html#getanalyticsusersdetailsjobresults) | **GET** /api/v2/analytics/users/details/jobs/{jobId}/results | Fetch a page of results for an async query |
 | [**GetAuthorizationDivisionspermittedMe**](UsersApi.html#getauthorizationdivisionspermittedme) | **GET** /api/v2/authorization/divisionspermitted/me | Returns whether or not current user can perform the specified action(s). |
 | [**GetAuthorizationDivisionspermittedSubjectId**](UsersApi.html#getauthorizationdivisionspermittedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/{subjectId} | Returns whether or not specified user can perform the specified action(s). |
 | [**GetAuthorizationSubject**](UsersApi.html#getauthorizationsubject) | **GET** /api/v2/authorization/subjects/{subjectId} | Returns a listing of roles and permissions for a user. |
@@ -50,6 +53,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchUserRoutingskillsBulk**](UsersApi.html#patchuserroutingskillsbulk) | **PATCH** /api/v2/users/{userId}/routingskills/bulk | Bulk add routing skills to user |
 | [**PatchUsersBulk**](UsersApi.html#patchusersbulk) | **PATCH** /api/v2/users/bulk | Update bulk acd autoanswer on users |
 | [**PostAnalyticsUsersAggregatesQuery**](UsersApi.html#postanalyticsusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
+| [**PostAnalyticsUsersDetailsJobs**](UsersApi.html#postanalyticsusersdetailsjobs) | **POST** /api/v2/analytics/users/details/jobs | Query for user details asynchronously |
 | [**PostAnalyticsUsersDetailsQuery**](UsersApi.html#postanalyticsusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
 | [**PostAnalyticsUsersObservationsQuery**](UsersApi.html#postanalyticsusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
 | [**PostAuthorizationSubjectBulkadd**](UsersApi.html#postauthorizationsubjectbulkadd) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkadd | Bulk-grant roles and divisions to a subject. |
@@ -72,6 +76,66 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutUserStationAssociatedstationStationId**](UsersApi.html#putuserstationassociatedstationstationid) | **PUT** /api/v2/users/{userId}/station/associatedstation/{stationId} | Set associated station |
 | [**PutUserStationDefaultstationStationId**](UsersApi.html#putuserstationdefaultstationstationid) | **PUT** /api/v2/users/{userId}/station/defaultstation/{stationId} | Set default station |
 {: class="table table-striped"}
+
+<a name="deleteanalyticsusersdetailsjob"></a>
+
+## void DeleteAnalyticsUsersDetailsJob (string jobId)
+
+
+
+Delete/cancel an async request
+
+
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteAnalyticsUsersDetailsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Delete/cancel an async request
+                apiInstance.DeleteAnalyticsUsersDetailsJob(jobId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.DeleteAnalyticsUsersDetailsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deleteauthorizationsubjectdivisionrole"></a>
 
@@ -502,6 +566,130 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="getanalyticsusersdetailsjob"></a>
+
+## [**AsyncQueryStatus**](AsyncQueryStatus.html) GetAnalyticsUsersDetailsJob (string jobId)
+
+
+
+Get status for async query for user details
+
+
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsUsersDetailsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Get status for async query for user details
+                AsyncQueryStatus result = apiInstance.GetAnalyticsUsersDetailsJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetAnalyticsUsersDetailsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus.html)
+
+<a name="getanalyticsusersdetailsjobresults"></a>
+
+## [**AnalyticsUserDetailsAsyncQueryResponse**](AnalyticsUserDetailsAsyncQueryResponse.html) GetAnalyticsUsersDetailsJobResults (string jobId, string cursor = null)
+
+
+
+Fetch a page of results for an async query
+
+
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsUsersDetailsJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var jobId = jobId_example;  // string | jobId
+            var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page) (optional) 
+
+            try
+            { 
+                // Fetch a page of results for an async query
+                AnalyticsUserDetailsAsyncQueryResponse result = apiInstance.GetAnalyticsUsersDetailsJobResults(jobId, cursor);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetAnalyticsUsersDetailsJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+| **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AnalyticsUserDetailsAsyncQueryResponse**](AnalyticsUserDetailsAsyncQueryResponse.html)
 
 <a name="getauthorizationdivisionspermittedme"></a>
 
@@ -2774,6 +2962,67 @@ namespace Example
 ### Return type
 
 [**UserAggregateQueryResponse**](UserAggregateQueryResponse.html)
+
+<a name="postanalyticsusersdetailsjobs"></a>
+
+## [**AsyncQueryResponse**](AsyncQueryResponse.html) PostAnalyticsUsersDetailsJobs (AsyncUserDetailsQuery body)
+
+
+
+Query for user details asynchronously
+
+
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsUsersDetailsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var body = new AsyncUserDetailsQuery(); // AsyncUserDetailsQuery | query
+
+            try
+            { 
+                // Query for user details asynchronously
+                AsyncQueryResponse result = apiInstance.PostAnalyticsUsersDetailsJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostAnalyticsUsersDetailsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AsyncUserDetailsQuery**](AsyncUserDetailsQuery.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse.html)
 
 <a name="postanalyticsusersdetailsquery"></a>
 

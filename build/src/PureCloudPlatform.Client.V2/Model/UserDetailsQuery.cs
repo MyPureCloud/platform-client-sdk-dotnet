@@ -99,7 +99,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserDetailsQuery" /> class.
         /// </summary>
-        /// <param name="Interval">Specifies the date and time range of data being queried. Conversations MUST have started within this time range to potentially be included within the result set. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
+        [JsonConstructorAttribute]
+        protected UserDetailsQuery() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserDetailsQuery" /> class.
+        /// </summary>
+        /// <param name="Interval">Specifies the date and time range of data being queried. Conversations MUST have started within this time range to potentially be included within the result set. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="UserFilters">Filters that target the users to retrieve data for.</param>
         /// <param name="PresenceFilters">Filters that target system and organization presence-level data.</param>
         /// <param name="RoutingStatusFilters">Filters that target agent routing status-level data.</param>

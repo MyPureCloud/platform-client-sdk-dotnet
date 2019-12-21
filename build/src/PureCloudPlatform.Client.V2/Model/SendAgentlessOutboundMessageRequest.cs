@@ -103,7 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SendAgentlessOutboundMessageRequest" /> class.
         /// </summary>
-        /// <param name="FromAddress">The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned sms phone number. The phone number address must be in E.164 format. E.g. +13175555555 or +34234234234 (required).</param>
+        /// <param name="FromAddress">The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned sms phone number. (required).</param>
         /// <param name="ToAddress">The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234 (required).</param>
         /// <param name="ToAddressMessengerType">The recipient messaging address messenger type. (required).</param>
         /// <param name="TextBody">The text of the message to send (required).</param>
@@ -119,9 +119,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned sms phone number. The phone number address must be in E.164 format. E.g. +13175555555 or +34234234234
+        /// The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned sms phone number.
         /// </summary>
-        /// <value>The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned sms phone number. The phone number address must be in E.164 format. E.g. +13175555555 or +34234234234</value>
+        /// <value>The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned sms phone number.</value>
         [DataMember(Name="fromAddress", EmitDefaultValue=false)]
         public string FromAddress { get; set; }
         

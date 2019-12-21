@@ -156,7 +156,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AsyncConversationQuery" /> class.
         /// </summary>
-        /// <param name="Interval">Specifies the date and time range of data being queried. Results will include conversations that both started on a day touched by the interval AND either started, ended, or any activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
+        [JsonConstructorAttribute]
+        protected AsyncConversationQuery() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AsyncConversationQuery" /> class.
+        /// </summary>
+        /// <param name="Interval">Specifies the date and time range of data being queried. Results will include conversations that both started on a day touched by the interval AND either started, ended, or any activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="ConversationFilters">Filters that target conversation-level data.</param>
         /// <param name="SegmentFilters">Filters that target individual segments within a conversation.</param>
         /// <param name="EvaluationFilters">Filters that target evaluations.</param>

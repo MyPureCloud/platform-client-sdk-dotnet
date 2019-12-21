@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ConversationDeletionProtectionQuery
+    /// WfmBuScheduleRunTopicBuScheduleReference
     /// </summary>
     [DataContract]
-    public partial class ConversationDeletionProtectionQuery :  IEquatable<ConversationDeletionProtectionQuery>
+    public partial class WfmBuScheduleRunTopicBuScheduleReference :  IEquatable<WfmBuScheduleRunTopicBuScheduleReference>
     {
         
         
@@ -25,31 +25,39 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationDeletionProtectionQuery" /> class.
+        /// Initializes a new instance of the <see cref="WfmBuScheduleRunTopicBuScheduleReference" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected ConversationDeletionProtectionQuery() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationDeletionProtectionQuery" /> class.
-        /// </summary>
-        /// <param name="ConversationIds">list of ConversationIds (required).</param>
-        public ConversationDeletionProtectionQuery(List<string> ConversationIds = null)
+        /// <param name="Id">Id.</param>
+        /// <param name="WeekDate">WeekDate.</param>
+        public WfmBuScheduleRunTopicBuScheduleReference(string Id = null, WfmBuScheduleRunTopicLocalDate WeekDate = null)
         {
-            this.ConversationIds = ConversationIds;
+            this.Id = Id;
+            this.WeekDate = WeekDate;
             
         }
         
         
         
         /// <summary>
-        /// list of ConversationIds
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>list of ConversationIds</value>
-        [DataMember(Name="conversationIds", EmitDefaultValue=false)]
-        public List<string> ConversationIds { get; set; }
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets WeekDate
+        /// </summary>
+        [DataMember(Name="weekDate", EmitDefaultValue=false)]
+        public WfmBuScheduleRunTopicLocalDate WeekDate { get; set; }
         
         
         /// <summary>
@@ -59,9 +67,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ConversationDeletionProtectionQuery {\n");
+            sb.Append("class WfmBuScheduleRunTopicBuScheduleReference {\n");
             
-            sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -83,15 +92,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ConversationDeletionProtectionQuery);
+            return this.Equals(obj as WfmBuScheduleRunTopicBuScheduleReference);
         }
 
         /// <summary>
-        /// Returns true if ConversationDeletionProtectionQuery instances are equal
+        /// Returns true if WfmBuScheduleRunTopicBuScheduleReference instances are equal
         /// </summary>
-        /// <param name="other">Instance of ConversationDeletionProtectionQuery to be compared</param>
+        /// <param name="other">Instance of WfmBuScheduleRunTopicBuScheduleReference to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ConversationDeletionProtectionQuery other)
+        public bool Equals(WfmBuScheduleRunTopicBuScheduleReference other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -99,9 +108,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.ConversationIds == other.ConversationIds ||
-                    this.ConversationIds != null &&
-                    this.ConversationIds.SequenceEqual(other.ConversationIds)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.WeekDate == other.WeekDate ||
+                    this.WeekDate != null &&
+                    this.WeekDate.Equals(other.WeekDate)
                 );
         }
 
@@ -117,8 +131,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.ConversationIds != null)
-                    hash = hash * 59 + this.ConversationIds.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.WeekDate != null)
+                    hash = hash * 59 + this.WeekDate.GetHashCode();
                 
                 return hash;
             }

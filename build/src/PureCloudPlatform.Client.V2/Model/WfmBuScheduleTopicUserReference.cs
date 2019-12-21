@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// QueueUserEventTopicUserReference
+    /// WfmBuScheduleTopicUserReference
     /// </summary>
     [DataContract]
-    public partial class QueueUserEventTopicUserReference :  IEquatable<QueueUserEventTopicUserReference>
+    public partial class WfmBuScheduleTopicUserReference :  IEquatable<WfmBuScheduleTopicUserReference>
     {
         
         
@@ -27,10 +27,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="QueueUserEventTopicUserReference" /> class.
+        /// Initializes a new instance of the <see cref="WfmBuScheduleTopicUserReference" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        public QueueUserEventTopicUserReference(string Id = null)
+        public WfmBuScheduleTopicUserReference(string Id = null)
         {
             this.Id = Id;
             
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class QueueUserEventTopicUserReference {\n");
+            sb.Append("class WfmBuScheduleTopicUserReference {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("}\n");
@@ -76,15 +76,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as QueueUserEventTopicUserReference);
+            return this.Equals(obj as WfmBuScheduleTopicUserReference);
         }
 
         /// <summary>
-        /// Returns true if QueueUserEventTopicUserReference instances are equal
+        /// Returns true if WfmBuScheduleTopicUserReference instances are equal
         /// </summary>
-        /// <param name="other">Instance of QueueUserEventTopicUserReference to be compared</param>
+        /// <param name="other">Instance of WfmBuScheduleTopicUserReference to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(QueueUserEventTopicUserReference other)
+        public bool Equals(WfmBuScheduleTopicUserReference other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
