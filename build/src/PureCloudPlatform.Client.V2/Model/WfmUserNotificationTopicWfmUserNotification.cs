@@ -78,11 +78,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
         
         
         
@@ -105,7 +110,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeOffRequest">TimeOffRequest.</param>
         /// <param name="AgentNotification">AgentNotification.</param>
         /// <param name="OtherNotificationIdsInGroup">OtherNotificationIdsInGroup.</param>
-        public WfmUserNotificationTopicWfmUserNotification(string Id = null, string MutableGroupId = null, DateTime? Timestamp = null, TypeEnum? Type = null, WfmUserNotificationTopicShiftTradeNotification ShiftTrade = null, WfmUserNotificationTopicTimeOffRequestNotification TimeOffRequest = null, bool? AgentNotification = null, List<string> OtherNotificationIdsInGroup = null)
+        /// <param name="MarkedAsRead">MarkedAsRead.</param>
+        public WfmUserNotificationTopicWfmUserNotification(string Id = null, string MutableGroupId = null, DateTime? Timestamp = null, TypeEnum? Type = null, WfmUserNotificationTopicShiftTradeNotification ShiftTrade = null, WfmUserNotificationTopicTimeOffRequestNotification TimeOffRequest = null, bool? AgentNotification = null, List<string> OtherNotificationIdsInGroup = null, bool? MarkedAsRead = null)
         {
             this.Id = Id;
             this.MutableGroupId = MutableGroupId;
@@ -115,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TimeOffRequest = TimeOffRequest;
             this.AgentNotification = AgentNotification;
             this.OtherNotificationIdsInGroup = OtherNotificationIdsInGroup;
+            this.MarkedAsRead = MarkedAsRead;
             
         }
         
@@ -177,6 +184,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> OtherNotificationIdsInGroup { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets MarkedAsRead
+        /// </summary>
+        [DataMember(Name="markedAsRead", EmitDefaultValue=false)]
+        public bool? MarkedAsRead { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -194,6 +209,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TimeOffRequest: ").Append(TimeOffRequest).Append("\n");
             sb.Append("  AgentNotification: ").Append(AgentNotification).Append("\n");
             sb.Append("  OtherNotificationIdsInGroup: ").Append(OtherNotificationIdsInGroup).Append("\n");
+            sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -269,6 +285,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OtherNotificationIdsInGroup == other.OtherNotificationIdsInGroup ||
                     this.OtherNotificationIdsInGroup != null &&
                     this.OtherNotificationIdsInGroup.SequenceEqual(other.OtherNotificationIdsInGroup)
+                ) &&
+                (
+                    this.MarkedAsRead == other.MarkedAsRead ||
+                    this.MarkedAsRead != null &&
+                    this.MarkedAsRead.Equals(other.MarkedAsRead)
                 );
         }
 
@@ -307,6 +328,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.OtherNotificationIdsInGroup != null)
                     hash = hash * 59 + this.OtherNotificationIdsInGroup.GetHashCode();
+                
+                if (this.MarkedAsRead != null)
+                    hash = hash * 59 + this.MarkedAsRead.GetHashCode();
                 
                 return hash;
             }

@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Entity
+    /// WfmBulkShiftTradeStateUpdateNotificationTopicUserReference
     /// </summary>
     [DataContract]
-    public partial class Entity :  IEquatable<Entity>
+    public partial class WfmBulkShiftTradeStateUpdateNotificationTopicUserReference :  IEquatable<WfmBulkShiftTradeStateUpdateNotificationTopicUserReference>
     {
         
         
@@ -27,21 +27,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Entity" /> class.
+        /// Initializes a new instance of the <see cref="WfmBulkShiftTradeStateUpdateNotificationTopicUserReference" /> class.
         /// </summary>
-        public Entity()
+        /// <param name="Id">Id.</param>
+        public WfmBulkShiftTradeStateUpdateNotificationTopicUserReference(string Id = null)
         {
+            this.Id = Id;
             
         }
         
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         /// <summary>
@@ -51,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Entity {\n");
+            sb.Append("class WfmBulkShiftTradeStateUpdateNotificationTopicUserReference {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("}\n");
@@ -75,15 +76,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Entity);
+            return this.Equals(obj as WfmBulkShiftTradeStateUpdateNotificationTopicUserReference);
         }
 
         /// <summary>
-        /// Returns true if Entity instances are equal
+        /// Returns true if WfmBulkShiftTradeStateUpdateNotificationTopicUserReference instances are equal
         /// </summary>
-        /// <param name="other">Instance of Entity to be compared</param>
+        /// <param name="other">Instance of WfmBulkShiftTradeStateUpdateNotificationTopicUserReference to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Entity other)
+        public bool Equals(WfmBulkShiftTradeStateUpdateNotificationTopicUserReference other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

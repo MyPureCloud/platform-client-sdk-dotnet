@@ -113,17 +113,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// The user's system presence
         /// </summary>
         /// <value>The user's system presence</value>
         [DataMember(Name="systemPresence", EmitDefaultValue=false)]
         public SystemPresenceEnum? SystemPresence { get; set; }
-        
-        
         
         
         
@@ -136,14 +131,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndTime">The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="SystemPresence">The user&#39;s system presence.</param>
         /// <param name="OrganizationPresenceId">The identifier for the user&#39;s organization presence.</param>
-        /// <param name="DurationMilliseconds">The duration of the status (in milliseconds).</param>
-        public AnalyticsUserPresenceRecord(DateTime? StartTime = null, DateTime? EndTime = null, SystemPresenceEnum? SystemPresence = null, string OrganizationPresenceId = null, long? DurationMilliseconds = null)
+        public AnalyticsUserPresenceRecord(DateTime? StartTime = null, DateTime? EndTime = null, SystemPresenceEnum? SystemPresence = null, string OrganizationPresenceId = null)
         {
             this.StartTime = StartTime;
             this.EndTime = EndTime;
             this.SystemPresence = SystemPresence;
             this.OrganizationPresenceId = OrganizationPresenceId;
-            this.DurationMilliseconds = DurationMilliseconds;
             
         }
         
@@ -177,15 +170,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string OrganizationPresenceId { get; set; }
         
         
-        
-        /// <summary>
-        /// The duration of the status (in milliseconds)
-        /// </summary>
-        /// <value>The duration of the status (in milliseconds)</value>
-        [DataMember(Name="durationMilliseconds", EmitDefaultValue=false)]
-        public long? DurationMilliseconds { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -199,7 +183,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
             sb.Append("  OrganizationPresenceId: ").Append(OrganizationPresenceId).Append("\n");
-            sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -255,11 +238,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OrganizationPresenceId == other.OrganizationPresenceId ||
                     this.OrganizationPresenceId != null &&
                     this.OrganizationPresenceId.Equals(other.OrganizationPresenceId)
-                ) &&
-                (
-                    this.DurationMilliseconds == other.DurationMilliseconds ||
-                    this.DurationMilliseconds != null &&
-                    this.DurationMilliseconds.Equals(other.DurationMilliseconds)
                 );
         }
 
@@ -286,9 +264,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.OrganizationPresenceId != null)
                     hash = hash * 59 + this.OrganizationPresenceId.GetHashCode();
-                
-                if (this.DurationMilliseconds != null)
-                    hash = hash * 59 + this.DurationMilliseconds.GetHashCode();
                 
                 return hash;
             }

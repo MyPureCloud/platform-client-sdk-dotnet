@@ -141,7 +141,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Tie for "TIE"
             /// </summary>
             [EnumMember(Value = "TIE")]
-            Tie
+            Tie,
+            
+            /// <summary>
+            /// Enum TieDirect for "TIE_DIRECT"
+            /// </summary>
+            [EnumMember(Value = "TIE_DIRECT")]
+            TieDirect,
+            
+            /// <summary>
+            /// Enum TieIndirect for "TIE_INDIRECT"
+            /// </summary>
+            [EnumMember(Value = "TIE_INDIRECT")]
+            TieIndirect,
+            
+            /// <summary>
+            /// Enum TieCloudProxy for "TIE_CLOUD_PROXY"
+            /// </summary>
+            [EnumMember(Value = "TIE_CLOUD_PROXY")]
+            TieCloudProxy
         }
         
         

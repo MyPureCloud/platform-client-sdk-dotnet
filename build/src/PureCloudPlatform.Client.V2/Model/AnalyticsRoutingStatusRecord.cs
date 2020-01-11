@@ -80,17 +80,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// The user's ACD routing status
         /// </summary>
         /// <value>The user's ACD routing status</value>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public RoutingStatusEnum? RoutingStatus { get; set; }
-        
-        
         
         
     
@@ -100,13 +95,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartTime">The start time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="EndTime">The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="RoutingStatus">The user&#39;s ACD routing status.</param>
-        /// <param name="DurationMilliseconds">The duration of the status (in milliseconds).</param>
-        public AnalyticsRoutingStatusRecord(DateTime? StartTime = null, DateTime? EndTime = null, RoutingStatusEnum? RoutingStatus = null, long? DurationMilliseconds = null)
+        public AnalyticsRoutingStatusRecord(DateTime? StartTime = null, DateTime? EndTime = null, RoutingStatusEnum? RoutingStatus = null)
         {
             this.StartTime = StartTime;
             this.EndTime = EndTime;
             this.RoutingStatus = RoutingStatus;
-            this.DurationMilliseconds = DurationMilliseconds;
             
         }
         
@@ -131,15 +124,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        /// <summary>
-        /// The duration of the status (in milliseconds)
-        /// </summary>
-        /// <value>The duration of the status (in milliseconds)</value>
-        [DataMember(Name="durationMilliseconds", EmitDefaultValue=false)]
-        public long? DurationMilliseconds { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,7 +136,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
-            sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -203,11 +186,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoutingStatus == other.RoutingStatus ||
                     this.RoutingStatus != null &&
                     this.RoutingStatus.Equals(other.RoutingStatus)
-                ) &&
-                (
-                    this.DurationMilliseconds == other.DurationMilliseconds ||
-                    this.DurationMilliseconds != null &&
-                    this.DurationMilliseconds.Equals(other.DurationMilliseconds)
                 );
         }
 
@@ -231,9 +209,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
-                
-                if (this.DurationMilliseconds != null)
-                    hash = hash * 59 + this.DurationMilliseconds.GetHashCode();
                 
                 return hash;
             }

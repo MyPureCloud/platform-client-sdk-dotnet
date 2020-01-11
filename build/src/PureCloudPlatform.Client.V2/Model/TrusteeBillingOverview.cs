@@ -201,7 +201,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContractEndDate">Date-time the contract ends. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="MinimumMonthlyAmount">Minimum amount that will be charged for the month.</param>
         /// <param name="InRampPeriod">InRampPeriod.</param>
-        public TrusteeBillingOverview(string Name = null, Entity Organization = null, string Currency = null, List<string> EnabledProducts = null, SubscriptionTypeEnum? SubscriptionType = null, DateTime? RampPeriodStartDate = null, DateTime? RampPeriodEndDate = null, DateTime? BillingPeriodStartDate = null, DateTime? BillingPeriodEndDate = null, List<SubscriptionOverviewUsage> Usages = null, DateTime? ContractAmendmentDate = null, DateTime? ContractEffectiveDate = null, DateTime? ContractEndDate = null, string MinimumMonthlyAmount = null, bool? InRampPeriod = null)
+        public TrusteeBillingOverview(string Name = null, NamedEntity Organization = null, string Currency = null, List<string> EnabledProducts = null, SubscriptionTypeEnum? SubscriptionType = null, DateTime? RampPeriodStartDate = null, DateTime? RampPeriodEndDate = null, DateTime? BillingPeriodStartDate = null, DateTime? BillingPeriodEndDate = null, List<SubscriptionOverviewUsage> Usages = null, DateTime? ContractAmendmentDate = null, DateTime? ContractEffectiveDate = null, DateTime? ContractEndDate = null, string MinimumMonthlyAmount = null, bool? InRampPeriod = null)
         {
             this.Name = Name;
             this.Organization = Organization;
@@ -245,7 +245,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Organization</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
-        public Entity Organization { get; set; }
+        public NamedEntity Organization { get; set; }
         
         
         

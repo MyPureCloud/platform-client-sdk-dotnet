@@ -163,6 +163,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Read,
             
             /// <summary>
+            /// Enum Readall for "ReadAll"
+            /// </summary>
+            [EnumMember(Value = "ReadAll")]
+            Readall,
+            
+            /// <summary>
             /// Enum Execute for "Execute"
             /// </summary>
             [EnumMember(Value = "Execute")]

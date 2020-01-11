@@ -536,8 +536,9 @@ Get list of reporting metadata.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
 
 ### Example
 ```{"language":"csharp"}
@@ -600,8 +601,9 @@ Get a reporting metadata.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
 
 ### Example
 ```{"language":"csharp"}
@@ -1815,8 +1817,9 @@ Create a scheduled report job
 
 Create a scheduled report job.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
 
 ### Example
 ```{"language":"csharp"}
@@ -2180,8 +2183,9 @@ Update a scheduled report job.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
 
 ### Example
 ```{"language":"csharp"}

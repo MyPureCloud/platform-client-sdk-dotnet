@@ -1239,8 +1239,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>UserScheduleContainer</returns>
-        UserScheduleContainer PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null);
+        UserScheduleContainer PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -1251,8 +1253,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
-        ApiResponse<UserScheduleContainer> PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null);
+        ApiResponse<UserScheduleContainer> PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
         
         /// <summary>
         /// Request a historical adherence report
@@ -3065,8 +3069,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of UserScheduleContainer</returns>
-        System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string muId, BuSearchAgentSchedulesRequest body = null);
+        System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -3077,8 +3083,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
         
         /// <summary>
         /// Request a historical adherence report
@@ -14024,10 +14032,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>UserScheduleContainer</returns>
-        public UserScheduleContainer PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null)
+        public UserScheduleContainer PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
         {
-             ApiResponse<UserScheduleContainer> localVarResponse = PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo(muId, body);
+             ApiResponse<UserScheduleContainer> localVarResponse = PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo(muId, body, forceAsync, forceDownloadService);
              return localVarResponse.Data;
         }
 
@@ -14037,8 +14047,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
-        public ApiResponse< UserScheduleContainer > PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null)
+        public ApiResponse< UserScheduleContainer > PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -14078,6 +14090,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
 
             // Query params
+            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -14126,10 +14140,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of UserScheduleContainer</returns>
-        public async System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string muId, BuSearchAgentSchedulesRequest body = null)
+        public async System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
         {
-             ApiResponse<UserScheduleContainer> localVarResponse = await PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo(muId, body);
+             ApiResponse<UserScheduleContainer> localVarResponse = await PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo(muId, body, forceAsync, forceDownloadService);
              return localVarResponse.Data;
 
         }
@@ -14140,8 +14156,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
+        /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -14182,6 +14200,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (muId != null) localVarPathParams.Add("muId", this.Configuration.ApiClient.ParameterToString(muId));
 
             // Query params
+            if (forceAsync != null) localVarQueryParams.Add(new Tuple<string, string>("forceAsync", this.Configuration.ApiClient.ParameterToString(forceAsync)));
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 

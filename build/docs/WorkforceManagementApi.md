@@ -3335,7 +3335,7 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitagentschedulessearch"></a>
 
-## [**UserScheduleContainer**](UserScheduleContainer.html) PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null)
+## [**UserScheduleContainer**](UserScheduleContainer.html) PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
 
 
 
@@ -3368,11 +3368,13 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var body = new BuSearchAgentSchedulesRequest(); // BuSearchAgentSchedulesRequest | body (optional) 
+            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
+            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service.  For testing/app development purposes (optional) 
 
             try
             { 
                 // Query published schedules for given given time range for set of users
-                UserScheduleContainer result = apiInstance.PostWorkforcemanagementManagementunitAgentschedulesSearch(muId, body);
+                UserScheduleContainer result = apiInstance.PostWorkforcemanagementManagementunitAgentschedulesSearch(muId, body, forceAsync, forceDownloadService);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3391,6 +3393,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **muId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional]  |
+| **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
+| **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

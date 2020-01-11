@@ -15,6 +15,7 @@ title: WfmUserNotificationTopicWfmUserNotification
 | **TimeOffRequest** | [**WfmUserNotificationTopicTimeOffRequestNotification**](WfmUserNotificationTopicTimeOffRequestNotification.html) |  | [optional] |
 | **AgentNotification** | **bool?** |  | [optional] |
 | **OtherNotificationIdsInGroup** | **List&lt;string&gt;** |  | [optional] |
+| **MarkedAsRead** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 
