@@ -12,7 +12,7 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
     /// <summary>
     /// A helper class for handling PureCloud notifications
     /// </summary>
-    public class NotificationHandler : IDisposable
+    public class NotificationHandler : INotificationHandler
     {
         private readonly NotificationsApi _notificationsApi = new NotificationsApi();
         private readonly Dictionary<string, Type> _typeMap = new Dictionary<string, Type>(); 
