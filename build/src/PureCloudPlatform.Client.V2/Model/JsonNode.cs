@@ -207,8 +207,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NodeType">NodeType.</param>
         /// <param name="_Float">_Float.</param>
         /// <param name="Number">Number.</param>
-        /// <param name="_Object">_Object.</param>
         /// <param name="Boolean">Boolean.</param>
+        /// <param name="_Object">_Object.</param>
         /// <param name="ValueNode">ValueNode.</param>
         /// <param name="ContainerNode">ContainerNode.</param>
         /// <param name="MissingNode">MissingNode.</param>
@@ -225,13 +225,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Binary">Binary.</param>
         /// <param name="Array">Array.</param>
         /// <param name="_Null">_Null.</param>
-        public JsonNode(NodeTypeEnum? NodeType = null, bool? _Float = null, bool? Number = null, bool? _Object = null, bool? Boolean = null, bool? ValueNode = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? FloatingPointNumber = null, bool? IntegralNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null, bool? Array = null, bool? _Null = null)
+        public JsonNode(NodeTypeEnum? NodeType = null, bool? _Float = null, bool? Number = null, bool? Boolean = null, bool? _Object = null, bool? ValueNode = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? FloatingPointNumber = null, bool? IntegralNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null, bool? Array = null, bool? _Null = null)
         {
             this.NodeType = NodeType;
             this._Float = _Float;
             this.Number = Number;
-            this._Object = _Object;
             this.Boolean = Boolean;
+            this._Object = _Object;
             this.ValueNode = ValueNode;
             this.ContainerNode = ContainerNode;
             this.MissingNode = MissingNode;
@@ -272,18 +272,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets _Object
-        /// </summary>
-        [DataMember(Name="object", EmitDefaultValue=false)]
-        public bool? _Object { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets Boolean
         /// </summary>
         [DataMember(Name="boolean", EmitDefaultValue=false)]
         public bool? Boolean { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets _Object
+        /// </summary>
+        [DataMember(Name="object", EmitDefaultValue=false)]
+        public bool? _Object { get; set; }
         
         
         
@@ -426,8 +426,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NodeType: ").Append(NodeType).Append("\n");
             sb.Append("  _Float: ").Append(_Float).Append("\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
-            sb.Append("  _Object: ").Append(_Object).Append("\n");
             sb.Append("  Boolean: ").Append(Boolean).Append("\n");
+            sb.Append("  _Object: ").Append(_Object).Append("\n");
             sb.Append("  ValueNode: ").Append(ValueNode).Append("\n");
             sb.Append("  ContainerNode: ").Append(ContainerNode).Append("\n");
             sb.Append("  MissingNode: ").Append(MissingNode).Append("\n");
@@ -496,14 +496,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Number.Equals(other.Number)
                 ) &&
                 (
-                    this._Object == other._Object ||
-                    this._Object != null &&
-                    this._Object.Equals(other._Object)
-                ) &&
-                (
                     this.Boolean == other.Boolean ||
                     this.Boolean != null &&
                     this.Boolean.Equals(other.Boolean)
+                ) &&
+                (
+                    this._Object == other._Object ||
+                    this._Object != null &&
+                    this._Object.Equals(other._Object)
                 ) &&
                 (
                     this.ValueNode == other.ValueNode ||
@@ -608,11 +608,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Number != null)
                     hash = hash * 59 + this.Number.GetHashCode();
                 
-                if (this._Object != null)
-                    hash = hash * 59 + this._Object.GetHashCode();
-                
                 if (this.Boolean != null)
                     hash = hash * 59 + this.Boolean.GetHashCode();
+                
+                if (this._Object != null)
+                    hash = hash * 59 + this._Object.GetHashCode();
                 
                 if (this.ValueNode != null)
                     hash = hash * 59 + this.ValueNode.GetHashCode();

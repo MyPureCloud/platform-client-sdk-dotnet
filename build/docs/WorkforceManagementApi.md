@@ -2255,7 +2255,7 @@ namespace Example
 | **pageSize** | **int?**|  | [optional]  |
 | **pageNumber** | **int?**|  | [optional]  |
 | **expand** | **string**|  | [optional] <br />**Values**: details |
-| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BusinessUnitActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlans |
+| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BusinessUnitActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlans |
 | **divisionId** | **string**|  | [optional]  |
 {: class="table table-striped"}
 

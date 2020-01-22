@@ -326,6 +326,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Tivr,
             
             /// <summary>
+            /// Enum Tmonitoring for "tMonitoring"
+            /// </summary>
+            [EnumMember(Value = "tMonitoring")]
+            Tmonitoring,
+            
+            /// <summary>
             /// Enum Tnotresponding for "tNotResponding"
             /// </summary>
             [EnumMember(Value = "tNotResponding")]

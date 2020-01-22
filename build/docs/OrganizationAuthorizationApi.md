@@ -28,6 +28,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOrgauthorizationTrusteesAudits**](OrganizationAuthorizationApi.html#postorgauthorizationtrusteesaudits) | **POST** /api/v2/orgauthorization/trustees/audits | Get Org Trustee Audits |
 | [**PostOrgauthorizationTrustorAudits**](OrganizationAuthorizationApi.html#postorgauthorizationtrustoraudits) | **POST** /api/v2/orgauthorization/trustor/audits | Get Org Trustor Audits |
 | [**PutOrgauthorizationTrustee**](OrganizationAuthorizationApi.html#putorgauthorizationtrustee) | **PUT** /api/v2/orgauthorization/trustees/{trusteeOrgId} | Update Org Trust |
+| [**PutOrgauthorizationTrusteeUserRoledivisions**](OrganizationAuthorizationApi.html#putorgauthorizationtrusteeuserroledivisions) | **PUT** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions | Update Trustee User Roles |
 | [**PutOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationApi.html#putorgauthorizationtrusteeuserroles) | **PUT** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles | Update Trustee User Roles |
 | [**PutOrgauthorizationTrustorUser**](OrganizationAuthorizationApi.html#putorgauthorizationtrustoruser) | **PUT** /api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId} | Add a Trustee user to the trust. |
 {: class="table table-striped"}
@@ -1353,6 +1354,71 @@ namespace Example
 ### Return type
 
 [**Trustee**](Trustee.html)
+
+<a name="putorgauthorizationtrusteeuserroledivisions"></a>
+
+## [**UserAuthorization**](UserAuthorization.html) PutOrgauthorizationTrusteeUserRoledivisions (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body)
+
+
+
+Update Trustee User Roles
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOrgauthorizationTrusteeUserRoledivisionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
+            var trusteeUserId = trusteeUserId_example;  // string | Trustee User Id
+            var body = new RoleDivisionGrants(); // RoleDivisionGrants | Set of roles with corresponding divisions to apply
+
+            try
+            { 
+                // Update Trustee User Roles
+                UserAuthorization result = apiInstance.PutOrgauthorizationTrusteeUserRoledivisions(trusteeOrgId, trusteeUserId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.PutOrgauthorizationTrusteeUserRoledivisions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trusteeOrgId** | **string**| Trustee Organization Id |  |
+| **trusteeUserId** | **string**| Trustee User Id |  |
+| **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Set of roles with corresponding divisions to apply |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserAuthorization**](UserAuthorization.html)
 
 <a name="putorgauthorizationtrusteeuserroles"></a>
 

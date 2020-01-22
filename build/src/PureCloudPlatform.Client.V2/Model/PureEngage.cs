@@ -66,16 +66,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="AutoProvisionUsers">AutoProvisionUsers.</param>
-        /// <param name="IssuerURI">IssuerURI.</param>
         /// <param name="Certificate">Certificate.</param>
+        /// <param name="IssuerURI">IssuerURI.</param>
         /// <param name="SsoTargetURI">SsoTargetURI.</param>
         /// <param name="Disabled">Disabled.</param>
-        public PureEngage(string Name = null, bool? AutoProvisionUsers = null, string IssuerURI = null, string Certificate = null, string SsoTargetURI = null, bool? Disabled = null)
+        public PureEngage(string Name = null, bool? AutoProvisionUsers = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null, bool? Disabled = null)
         {
             this.Name = Name;
             this.AutoProvisionUsers = AutoProvisionUsers;
-            this.IssuerURI = IssuerURI;
             this.Certificate = Certificate;
+            this.IssuerURI = IssuerURI;
             this.SsoTargetURI = SsoTargetURI;
             this.Disabled = Disabled;
             
@@ -109,18 +109,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets IssuerURI
-        /// </summary>
-        [DataMember(Name="issuerURI", EmitDefaultValue=false)]
-        public string IssuerURI { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets Certificate
         /// </summary>
         [DataMember(Name="certificate", EmitDefaultValue=false)]
         public string Certificate { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets IssuerURI
+        /// </summary>
+        [DataMember(Name="issuerURI", EmitDefaultValue=false)]
+        public string IssuerURI { get; set; }
         
         
         
@@ -160,8 +160,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  AutoProvisionUsers: ").Append(AutoProvisionUsers).Append("\n");
-            sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
+            sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
             sb.Append("  SsoTargetURI: ").Append(SsoTargetURI).Append("\n");
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -217,14 +217,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AutoProvisionUsers.Equals(other.AutoProvisionUsers)
                 ) &&
                 (
-                    this.IssuerURI == other.IssuerURI ||
-                    this.IssuerURI != null &&
-                    this.IssuerURI.Equals(other.IssuerURI)
-                ) &&
-                (
                     this.Certificate == other.Certificate ||
                     this.Certificate != null &&
                     this.Certificate.Equals(other.Certificate)
+                ) &&
+                (
+                    this.IssuerURI == other.IssuerURI ||
+                    this.IssuerURI != null &&
+                    this.IssuerURI.Equals(other.IssuerURI)
                 ) &&
                 (
                     this.SsoTargetURI == other.SsoTargetURI ||
@@ -264,11 +264,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.AutoProvisionUsers != null)
                     hash = hash * 59 + this.AutoProvisionUsers.GetHashCode();
                 
-                if (this.IssuerURI != null)
-                    hash = hash * 59 + this.IssuerURI.GetHashCode();
-                
                 if (this.Certificate != null)
                     hash = hash * 59 + this.Certificate.GetHashCode();
+                
+                if (this.IssuerURI != null)
+                    hash = hash * 59 + this.IssuerURI.GetHashCode();
                 
                 if (this.SsoTargetURI != null)
                     hash = hash * 59 + this.SsoTargetURI.GetHashCode();

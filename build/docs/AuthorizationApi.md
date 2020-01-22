@@ -48,7 +48,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deleteauthorizationdivision"></a>
 
-## void DeleteAuthorizationDivision (string divisionId)
+## void DeleteAuthorizationDivision (string divisionId, bool? force = null)
 
 
 
@@ -79,11 +79,12 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var divisionId = divisionId_example;  // string | Division ID
+            var force = true;  // bool? | Force delete this division as well as the grants and objects associated with it (optional)  (default to false)
 
             try
             { 
                 // Delete a division.
-                apiInstance.DeleteAuthorizationDivision(divisionId);
+                apiInstance.DeleteAuthorizationDivision(divisionId, force);
             }
             catch (Exception e)
             {
@@ -100,6 +101,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
+| **force** | **bool?**| Force delete this division as well as the grants and objects associated with it | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -604,7 +606,7 @@ namespace Example
 
 ## [**List&lt;AuthzDivision&gt;**](AuthzDivision.html) GetAuthorizationDivisionspermittedSubjectId (string subjectId, string permission, string name = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Returns whether or not specified user can perform the specified action(s).
 

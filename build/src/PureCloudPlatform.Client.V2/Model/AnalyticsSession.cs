@@ -306,6 +306,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The session media type
         /// </summary>
@@ -342,6 +345,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Direction</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
         
         
         
@@ -483,7 +488,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ProtocolCallId">The original voice protocol call ID, e.g. a SIP call ID.</param>
         /// <param name="Provider">The source provider for the communication.</param>
         /// <param name="Remote">Name, phone number, or email address of the remote party..</param>
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null, string ProtocolCallId = null, string Provider = null, string Remote = null)
+        /// <param name="MediaCount">Count of any media (images, files, etc) included in this session.</param>
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string SessionDnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null, AnalyticsFlow Flow = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, bool? Recording = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string JourneyActionId = null, string JourneyActionMapId = null, string JourneyActionMapVersion = null, string ProtocolCallId = null, string Provider = null, string Remote = null, int? MediaCount = null)
         {
             this.MediaType = MediaType;
             this.SessionId = SessionId;
@@ -536,6 +542,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ProtocolCallId = ProtocolCallId;
             this.Provider = Provider;
             this.Remote = Remote;
+            this.MediaCount = MediaCount;
             
         }
         
@@ -971,6 +978,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Remote { get; set; }
         
         
+        
+        /// <summary>
+        /// Count of any media (images, files, etc) included in this session
+        /// </summary>
+        /// <value>Count of any media (images, files, etc) included in this session</value>
+        [DataMember(Name="mediaCount", EmitDefaultValue=false)]
+        public int? MediaCount { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1031,6 +1047,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ProtocolCallId: ").Append(ProtocolCallId).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  Remote: ").Append(Remote).Append("\n");
+            sb.Append("  MediaCount: ").Append(MediaCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1321,6 +1338,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Remote == other.Remote ||
                     this.Remote != null &&
                     this.Remote.Equals(other.Remote)
+                ) &&
+                (
+                    this.MediaCount == other.MediaCount ||
+                    this.MediaCount != null &&
+                    this.MediaCount.Equals(other.MediaCount)
                 );
         }
 
@@ -1488,6 +1510,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Remote != null)
                     hash = hash * 59 + this.Remote.GetHashCode();
+                
+                if (this.MediaCount != null)
+                    hash = hash * 59 + this.MediaCount.GetHashCode();
                 
                 return hash;
             }

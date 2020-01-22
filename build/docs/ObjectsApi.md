@@ -19,7 +19,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deleteauthorizationdivision"></a>
 
-## void DeleteAuthorizationDivision (string divisionId)
+## void DeleteAuthorizationDivision (string divisionId, bool? force = null)
 
 
 
@@ -50,11 +50,12 @@ namespace Example
 
             var apiInstance = new ObjectsApi();
             var divisionId = divisionId_example;  // string | Division ID
+            var force = true;  // bool? | Force delete this division as well as the grants and objects associated with it (optional)  (default to false)
 
             try
             { 
                 // Delete a division.
-                apiInstance.DeleteAuthorizationDivision(divisionId);
+                apiInstance.DeleteAuthorizationDivision(divisionId, force);
             }
             catch (Exception e)
             {
@@ -71,6 +72,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
+| **force** | **bool?**| Force delete this division as well as the grants and objects associated with it | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type

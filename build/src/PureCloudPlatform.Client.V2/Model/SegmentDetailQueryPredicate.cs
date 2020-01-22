@@ -361,6 +361,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Mediabridgeid,
             
             /// <summary>
+            /// Enum Mediacount for "mediaCount"
+            /// </summary>
+            [EnumMember(Value = "mediaCount")]
+            Mediacount,
+            
+            /// <summary>
             /// Enum Mediatype for "mediaType"
             /// </summary>
             [EnumMember(Value = "mediaType")]
@@ -445,16 +451,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Queueid,
             
             /// <summary>
-            /// Enum Remote for "remote"
-            /// </summary>
-            [EnumMember(Value = "remote")]
-            Remote,
-            
-            /// <summary>
             /// Enum Recording for "recording"
             /// </summary>
             [EnumMember(Value = "recording")]
             Recording,
+            
+            /// <summary>
+            /// Enum Remote for "remote"
+            /// </summary>
+            [EnumMember(Value = "remote")]
+            Remote,
             
             /// <summary>
             /// Enum Remotenamedisplayable for "remoteNameDisplayable"

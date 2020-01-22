@@ -169,6 +169,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Exitreason,
             
             /// <summary>
+            /// Enum Externalmediacount for "externalMediaCount"
+            /// </summary>
+            [EnumMember(Value = "externalMediaCount")]
+            Externalmediacount,
+            
+            /// <summary>
             /// Enum Externalorganizationid for "externalOrganizationId"
             /// </summary>
             [EnumMember(Value = "externalOrganizationId")]
@@ -281,6 +287,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "journeyCustomerSessionIdType")]
             Journeycustomersessionidtype,
+            
+            /// <summary>
+            /// Enum Mediacount for "mediaCount"
+            /// </summary>
+            [EnumMember(Value = "mediaCount")]
+            Mediacount,
             
             /// <summary>
             /// Enum Mediatype for "mediaType"

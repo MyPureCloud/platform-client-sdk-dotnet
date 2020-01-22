@@ -30,6 +30,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustMemberCreate" /> class.
@@ -41,11 +46,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TrustMemberCreate" /> class.
         /// </summary>
         /// <param name="Id">Trustee User or Group Id (required).</param>
-        /// <param name="RoleIds">The list of trustor organization roles granting this user or group access. (required).</param>
-        public TrustMemberCreate(string Id = null, List<string> RoleIds = null)
+        /// <param name="RoleIds">The list of roles to be granted to this user or group. Roles will be granted in all divisions..</param>
+        /// <param name="RoleDivisions">The list of trustor organization roles granting this user or group access paired with the divisions for those roles..</param>
+        public TrustMemberCreate(string Id = null, List<string> RoleIds = null, RoleDivisionGrants RoleDivisions = null)
         {
             this.Id = Id;
             this.RoleIds = RoleIds;
+            this.RoleDivisions = RoleDivisions;
             
         }
         
@@ -61,11 +68,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The list of trustor organization roles granting this user or group access.
+        /// The list of roles to be granted to this user or group. Roles will be granted in all divisions.
         /// </summary>
-        /// <value>The list of trustor organization roles granting this user or group access.</value>
+        /// <value>The list of roles to be granted to this user or group. Roles will be granted in all divisions.</value>
         [DataMember(Name="roleIds", EmitDefaultValue=false)]
         public List<string> RoleIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of trustor organization roles granting this user or group access paired with the divisions for those roles.
+        /// </summary>
+        /// <value>The list of trustor organization roles granting this user or group access paired with the divisions for those roles.</value>
+        [DataMember(Name="roleDivisions", EmitDefaultValue=false)]
+        public RoleDivisionGrants RoleDivisions { get; set; }
         
         
         /// <summary>
@@ -79,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RoleIds: ").Append(RoleIds).Append("\n");
+            sb.Append("  RoleDivisions: ").Append(RoleDivisions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,6 +141,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoleIds == other.RoleIds ||
                     this.RoleIds != null &&
                     this.RoleIds.SequenceEqual(other.RoleIds)
+                ) &&
+                (
+                    this.RoleDivisions == other.RoleDivisions ||
+                    this.RoleDivisions != null &&
+                    this.RoleDivisions.Equals(other.RoleDivisions)
                 );
         }
 
@@ -144,6 +166,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.RoleIds != null)
                     hash = hash * 59 + this.RoleIds.GetHashCode();
+                
+                if (this.RoleDivisions != null)
+                    hash = hash * 59 + this.RoleDivisions.GetHashCode();
                 
                 return hash;
             }

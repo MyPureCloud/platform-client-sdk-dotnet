@@ -531,6 +531,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>UserAuthorization</returns>
+        UserAuthorization PutOrgauthorizationTrusteeUserRoledivisions (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body);
+
+        /// <summary>
+        /// Update Trustee User Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeUserId">Trustee User Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>ApiResponse of UserAuthorization</returns>
+        ApiResponse<UserAuthorization> PutOrgauthorizationTrusteeUserRoledivisionsWithHttpInfo (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body);
+        
+        /// <summary>
+        /// Update Trustee User Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
         UserAuthorization PutOrgauthorizationTrusteeUserRoles (string trusteeOrgId, string trusteeUserId, List<string> body);
@@ -1081,6 +1107,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
         System.Threading.Tasks.Task<ApiResponse<Trustee>> PutOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId, Trustee body);
+        
+        /// <summary>
+        /// Update Trustee User Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeUserId">Trustee User Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>Task of UserAuthorization</returns>
+        System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeUserRoledivisionsAsync (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body);
+
+        /// <summary>
+        /// Update Trustee User Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeUserId">Trustee User Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeUserRoledivisionsAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body);
         
         /// <summary>
         /// Update Trustee User Roles
@@ -5483,6 +5535,233 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Trustee>(localVarStatusCode,
                 localVarHeaders,
                 (Trustee) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Trustee)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update Trustee User Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeUserId">Trustee User Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>UserAuthorization</returns>
+        public UserAuthorization PutOrgauthorizationTrusteeUserRoledivisions (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body)
+        {
+             ApiResponse<UserAuthorization> localVarResponse = PutOrgauthorizationTrusteeUserRoledivisionsWithHttpInfo(trusteeOrgId, trusteeUserId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Trustee User Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeUserId">Trustee User Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>ApiResponse of UserAuthorization</returns>
+        public ApiResponse< UserAuthorization > PutOrgauthorizationTrusteeUserRoledivisionsWithHttpInfo (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeUserRoledivisions");
+            // verify the required parameter 'trusteeUserId' is set
+            if (trusteeUserId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeUserRoledivisions");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeUserRoledivisions");
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeUserId != null) localVarPathParams.Add("trusteeUserId", this.Configuration.ApiClient.ParameterToString(trusteeUserId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrusteeUserRoledivisions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrusteeUserRoledivisions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserAuthorization>(localVarStatusCode,
+                localVarHeaders,
+                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update Trustee User Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeUserId">Trustee User Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>Task of UserAuthorization</returns>
+        public async System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeUserRoledivisionsAsync (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body)
+        {
+             ApiResponse<UserAuthorization> localVarResponse = await PutOrgauthorizationTrusteeUserRoledivisionsAsyncWithHttpInfo(trusteeOrgId, trusteeUserId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update Trustee User Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeUserId">Trustee User Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeUserRoledivisionsAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeUserRoledivisions");
+            
+            // verify the required parameter 'trusteeUserId' is set
+            if (trusteeUserId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeUserRoledivisions");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeUserRoledivisions");
+            
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeUserId != null) localVarPathParams.Add("trusteeUserId", this.Configuration.ApiClient.ParameterToString(trusteeUserId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrusteeUserRoledivisions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrusteeUserRoledivisions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserAuthorization>(localVarStatusCode,
+                localVarHeaders,
+                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

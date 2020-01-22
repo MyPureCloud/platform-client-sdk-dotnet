@@ -24,8 +24,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
+        /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns></returns>
-        void DeleteAuthorizationDivision (string divisionId);
+        void DeleteAuthorizationDivision (string divisionId, bool? force = null);
 
         /// <summary>
         /// Delete a division.
@@ -35,8 +36,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
+        /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteAuthorizationDivisionWithHttpInfo (string divisionId);
+        ApiResponse<Object> DeleteAuthorizationDivisionWithHttpInfo (string divisionId, bool? force = null);
         
         /// <summary>
         /// Delete an organization role.
@@ -940,8 +942,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
+        /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteAuthorizationDivisionAsync (string divisionId);
+        System.Threading.Tasks.Task DeleteAuthorizationDivisionAsync (string divisionId, bool? force = null);
 
         /// <summary>
         /// Delete a division.
@@ -951,8 +954,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
+        /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationDivisionAsyncWithHttpInfo (string divisionId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? force = null);
         
         /// <summary>
         /// Delete an organization role.
@@ -1941,10 +1945,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
+        /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns></returns>
-        public void DeleteAuthorizationDivision (string divisionId)
+        public void DeleteAuthorizationDivision (string divisionId, bool? force = null)
         {
-             DeleteAuthorizationDivisionWithHttpInfo(divisionId);
+             DeleteAuthorizationDivisionWithHttpInfo(divisionId, force);
         }
 
         /// <summary>
@@ -1952,8 +1957,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
+        /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteAuthorizationDivisionWithHttpInfo (string divisionId)
+        public ApiResponse<Object> DeleteAuthorizationDivisionWithHttpInfo (string divisionId, bool? force = null)
         { 
             // verify the required parameter 'divisionId' is set
             if (divisionId == null)
@@ -1993,6 +1999,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
 
             // Query params
+            if (force != null) localVarQueryParams.Add(new Tuple<string, string>("force", this.Configuration.ApiClient.ParameterToString(force)));
 
             // Header params
 
@@ -2035,10 +2042,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
+        /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteAuthorizationDivisionAsync (string divisionId)
+        public async System.Threading.Tasks.Task DeleteAuthorizationDivisionAsync (string divisionId, bool? force = null)
         {
-             await DeleteAuthorizationDivisionAsyncWithHttpInfo(divisionId);
+             await DeleteAuthorizationDivisionAsyncWithHttpInfo(divisionId, force);
 
         }
 
@@ -2047,8 +2055,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
+        /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationDivisionAsyncWithHttpInfo (string divisionId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? force = null)
         { 
             // verify the required parameter 'divisionId' is set
             if (divisionId == null)
@@ -2089,6 +2098,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (divisionId != null) localVarPathParams.Add("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId));
 
             // Query params
+            if (force != null) localVarQueryParams.Add(new Tuple<string, string>("force", this.Configuration.ApiClient.ParameterToString(force)));
 
             // Header params
 

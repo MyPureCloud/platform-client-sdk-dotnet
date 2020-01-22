@@ -428,6 +428,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Activity for which the user is scheduled
         /// </summary>
@@ -483,6 +486,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The impact of the user's current adherenceState</value>
         [DataMember(Name="impact", EmitDefaultValue=false)]
         public ImpactEnum? Impact { get; set; }
+        
+        
         
         
         
@@ -616,6 +621,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// For notification purposes. Used to indicate that a user was removed from the management unit
+        /// </summary>
+        /// <value>For notification purposes. Used to indicate that a user was removed from the management unit</value>
+        [DataMember(Name="removedFromManagementUnit", EmitDefaultValue=false)]
+        public bool? RemovedFromManagementUnit { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -648,6 +662,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PresenceUpdateTime: ").Append(PresenceUpdateTime).Append("\n");
             sb.Append("  ActiveQueues: ").Append(ActiveQueues).Append("\n");
             sb.Append("  ActiveQueuesModifiedTime: ").Append(ActiveQueuesModifiedTime).Append("\n");
+            sb.Append("  RemovedFromManagementUnit: ").Append(RemovedFromManagementUnit).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -766,6 +781,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActiveQueuesModifiedTime.Equals(other.ActiveQueuesModifiedTime)
                 ) &&
                 (
+                    this.RemovedFromManagementUnit == other.RemovedFromManagementUnit ||
+                    this.RemovedFromManagementUnit != null &&
+                    this.RemovedFromManagementUnit.Equals(other.RemovedFromManagementUnit)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -831,6 +851,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ActiveQueuesModifiedTime != null)
                     hash = hash * 59 + this.ActiveQueuesModifiedTime.GetHashCode();
+                
+                if (this.RemovedFromManagementUnit != null)
+                    hash = hash * 59 + this.RemovedFromManagementUnit.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

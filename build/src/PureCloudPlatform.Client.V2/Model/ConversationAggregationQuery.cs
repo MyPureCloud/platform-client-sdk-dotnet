@@ -118,6 +118,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Edgeid,
             
             /// <summary>
+            /// Enum Externalmediacount for "externalMediaCount"
+            /// </summary>
+            [EnumMember(Value = "externalMediaCount")]
+            Externalmediacount,
+            
+            /// <summary>
             /// Enum Externalorganizationid for "externalOrganizationId"
             /// </summary>
             [EnumMember(Value = "externalOrganizationId")]
@@ -188,6 +194,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "journeyCustomerSessionIdType")]
             Journeycustomersessionidtype,
+            
+            /// <summary>
+            /// Enum Mediacount for "mediaCount"
+            /// </summary>
+            [EnumMember(Value = "mediaCount")]
+            Mediacount,
             
             /// <summary>
             /// Enum Mediatype for "mediaType"
@@ -523,6 +535,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "tIvr")]
             Tivr,
+            
+            /// <summary>
+            /// Enum Tmonitoring for "tMonitoring"
+            /// </summary>
+            [EnumMember(Value = "tMonitoring")]
+            Tmonitoring,
             
             /// <summary>
             /// Enum Tnotresponding for "tNotResponding"

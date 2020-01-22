@@ -175,6 +175,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets RoutingStatus
         /// </summary>
@@ -192,6 +195,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="adherenceState", EmitDefaultValue=false)]
         public AdherenceStateEnum? AdherenceState { get; set; }
+        
+        
         
         
         
@@ -222,7 +227,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PresenceUpdateTime">PresenceUpdateTime.</param>
         /// <param name="ActiveQueues">ActiveQueues.</param>
         /// <param name="ActiveQueuesModifiedTime">ActiveQueuesModifiedTime.</param>
-        public WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate(WfmUserScheduleAdherenceUpdatedTopicUserReference User = null, string ManagementUnitId = null, string ScheduledActivityCategory = null, string SystemPresence = null, string OrganizationSecondaryPresenceId = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, DateTime? AdherenceChangeTime = null, DateTime? PresenceUpdateTime = null, List<WfmUserScheduleAdherenceUpdatedTopicQueueReference> ActiveQueues = null, DateTime? ActiveQueuesModifiedTime = null)
+        /// <param name="RemovedFromManagementUnit">RemovedFromManagementUnit.</param>
+        public WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate(WfmUserScheduleAdherenceUpdatedTopicUserReference User = null, string ManagementUnitId = null, string ScheduledActivityCategory = null, string SystemPresence = null, string OrganizationSecondaryPresenceId = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, DateTime? AdherenceChangeTime = null, DateTime? PresenceUpdateTime = null, List<WfmUserScheduleAdherenceUpdatedTopicQueueReference> ActiveQueues = null, DateTime? ActiveQueuesModifiedTime = null, bool? RemovedFromManagementUnit = null)
         {
             this.User = User;
             this.ManagementUnitId = ManagementUnitId;
@@ -238,6 +244,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PresenceUpdateTime = PresenceUpdateTime;
             this.ActiveQueues = ActiveQueues;
             this.ActiveQueuesModifiedTime = ActiveQueuesModifiedTime;
+            this.RemovedFromManagementUnit = RemovedFromManagementUnit;
             
         }
         
@@ -342,6 +349,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? ActiveQueuesModifiedTime { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets RemovedFromManagementUnit
+        /// </summary>
+        [DataMember(Name="removedFromManagementUnit", EmitDefaultValue=false)]
+        public bool? RemovedFromManagementUnit { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -365,6 +380,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PresenceUpdateTime: ").Append(PresenceUpdateTime).Append("\n");
             sb.Append("  ActiveQueues: ").Append(ActiveQueues).Append("\n");
             sb.Append("  ActiveQueuesModifiedTime: ").Append(ActiveQueuesModifiedTime).Append("\n");
+            sb.Append("  RemovedFromManagementUnit: ").Append(RemovedFromManagementUnit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -470,6 +486,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActiveQueuesModifiedTime == other.ActiveQueuesModifiedTime ||
                     this.ActiveQueuesModifiedTime != null &&
                     this.ActiveQueuesModifiedTime.Equals(other.ActiveQueuesModifiedTime)
+                ) &&
+                (
+                    this.RemovedFromManagementUnit == other.RemovedFromManagementUnit ||
+                    this.RemovedFromManagementUnit != null &&
+                    this.RemovedFromManagementUnit.Equals(other.RemovedFromManagementUnit)
                 );
         }
 
@@ -526,6 +547,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ActiveQueuesModifiedTime != null)
                     hash = hash * 59 + this.ActiveQueuesModifiedTime.GetHashCode();
+                
+                if (this.RemovedFromManagementUnit != null)
+                    hash = hash * 59 + this.RemovedFromManagementUnit.GetHashCode();
                 
                 return hash;
             }

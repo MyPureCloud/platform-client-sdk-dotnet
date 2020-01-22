@@ -20,14 +20,11 @@ namespace PureCloudPlatform.Client.V2.Model
     {
         
         
-        
-        
-        
         /// <summary>
-        /// Gets or Sets State
+        /// Gets or Sets Status
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum StateEnum
+        public enum StatusEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -38,22 +35,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum None for "None"
+            /// Enum Processing for "Processing"
             /// </summary>
-            [EnumMember(Value = "None")]
-            None,
+            [EnumMember(Value = "Processing")]
+            Processing,
             
             /// <summary>
-            /// Enum Queued for "Queued"
+            /// Enum Complete for "Complete"
             /// </summary>
-            [EnumMember(Value = "Queued")]
-            Queued,
-            
-            /// <summary>
-            /// Enum Scheduling for "Scheduling"
-            /// </summary>
-            [EnumMember(Value = "Scheduling")]
-            Scheduling,
+            [EnumMember(Value = "Complete")]
+            Complete,
             
             /// <summary>
             /// Enum Canceled for "Canceled"
@@ -62,16 +53,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Canceled,
             
             /// <summary>
-            /// Enum Failed for "Failed"
+            /// Enum Error for "Error"
             /// </summary>
-            [EnumMember(Value = "Failed")]
-            Failed,
-            
-            /// <summary>
-            /// Enum Complete for "Complete"
-            /// </summary>
-            [EnumMember(Value = "Complete")]
-            Complete
+            [EnumMember(Value = "Error")]
+            Error
         }
         
         
@@ -84,18 +69,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
         /// <summary>
-        /// Gets or Sets State
+        /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-        
-        
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
         
         
         
@@ -106,20 +84,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmBuScheduleRunTopicBuSchedulingRunProgressNotification" /> class.
         /// </summary>
+        /// <param name="Status">Status.</param>
         /// <param name="OperationId">OperationId.</param>
-        /// <param name="State">State.</param>
-        /// <param name="PercentComplete">PercentComplete.</param>
-        /// <param name="IntradayRescheduling">IntradayRescheduling.</param>
-        /// <param name="Run">Run.</param>
-        public WfmBuScheduleRunTopicBuSchedulingRunProgressNotification(string OperationId = null, StateEnum? State = null, double? PercentComplete = null, bool? IntradayRescheduling = null, WfmBuScheduleRunTopicBuScheduleRun Run = null)
+        /// <param name="Result">Result.</param>
+        public WfmBuScheduleRunTopicBuSchedulingRunProgressNotification(StatusEnum? Status = null, string OperationId = null, WfmBuScheduleRunTopicBuScheduleRun Result = null)
         {
+            this.Status = Status;
             this.OperationId = OperationId;
-            this.State = State;
-            this.PercentComplete = PercentComplete;
-            this.IntradayRescheduling = IntradayRescheduling;
-            this.Run = Run;
+            this.Result = Result;
             
         }
+        
+        
         
         
         
@@ -131,29 +107,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
-        /// Gets or Sets PercentComplete
+        /// Gets or Sets Result
         /// </summary>
-        [DataMember(Name="percentComplete", EmitDefaultValue=false)]
-        public double? PercentComplete { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets IntradayRescheduling
-        /// </summary>
-        [DataMember(Name="intradayRescheduling", EmitDefaultValue=false)]
-        public bool? IntradayRescheduling { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Run
-        /// </summary>
-        [DataMember(Name="run", EmitDefaultValue=false)]
-        public WfmBuScheduleRunTopicBuScheduleRun Run { get; set; }
+        [DataMember(Name="result", EmitDefaultValue=false)]
+        public WfmBuScheduleRunTopicBuScheduleRun Result { get; set; }
         
         
         /// <summary>
@@ -165,11 +123,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class WfmBuScheduleRunTopicBuSchedulingRunProgressNotification {\n");
             
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  OperationId: ").Append(OperationId).Append("\n");
-            sb.Append("  State: ").Append(State).Append("\n");
-            sb.Append("  PercentComplete: ").Append(PercentComplete).Append("\n");
-            sb.Append("  IntradayRescheduling: ").Append(IntradayRescheduling).Append("\n");
-            sb.Append("  Run: ").Append(Run).Append("\n");
+            sb.Append("  Result: ").Append(Result).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -207,29 +163,19 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
                     this.OperationId == other.OperationId ||
                     this.OperationId != null &&
                     this.OperationId.Equals(other.OperationId)
                 ) &&
                 (
-                    this.State == other.State ||
-                    this.State != null &&
-                    this.State.Equals(other.State)
-                ) &&
-                (
-                    this.PercentComplete == other.PercentComplete ||
-                    this.PercentComplete != null &&
-                    this.PercentComplete.Equals(other.PercentComplete)
-                ) &&
-                (
-                    this.IntradayRescheduling == other.IntradayRescheduling ||
-                    this.IntradayRescheduling != null &&
-                    this.IntradayRescheduling.Equals(other.IntradayRescheduling)
-                ) &&
-                (
-                    this.Run == other.Run ||
-                    this.Run != null &&
-                    this.Run.Equals(other.Run)
+                    this.Result == other.Result ||
+                    this.Result != null &&
+                    this.Result.Equals(other.Result)
                 );
         }
 
@@ -245,20 +191,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
+                
                 if (this.OperationId != null)
                     hash = hash * 59 + this.OperationId.GetHashCode();
                 
-                if (this.State != null)
-                    hash = hash * 59 + this.State.GetHashCode();
-                
-                if (this.PercentComplete != null)
-                    hash = hash * 59 + this.PercentComplete.GetHashCode();
-                
-                if (this.IntradayRescheduling != null)
-                    hash = hash * 59 + this.IntradayRescheduling.GetHashCode();
-                
-                if (this.Run != null)
-                    hash = hash * 59 + this.Run.GetHashCode();
+                if (this.Result != null)
+                    hash = hash * 59 + this.Result.GetHashCode();
                 
                 return hash;
             }
