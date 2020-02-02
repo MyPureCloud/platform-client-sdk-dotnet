@@ -115,11 +115,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaStatsMinConversationMos">The lowest estimated average MOS among all the audio streams belonging to this conversation.</param>
         /// <param name="MediaStatsMinConversationRFactor">The lowest R-factor value among all of the audio streams belonging to this conversation.</param>
         /// <param name="OriginatingDirection">The original direction of the conversation.</param>
-        /// <param name="Participants">Participants in the conversation.</param>
         /// <param name="Evaluations">Evaluations tied to this conversation.</param>
         /// <param name="Surveys">Surveys tied to this conversation.</param>
         /// <param name="DivisionIds">Identifiers of divisions associated with this conversation.</param>
-        public AnalyticsConversation(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, List<AnalyticsParticipant> Participants = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<string> DivisionIds = null)
+        /// <param name="Participants">Participants in the conversation.</param>
+        public AnalyticsConversation(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<string> DivisionIds = null, List<AnalyticsParticipant> Participants = null)
         {
             this.ConversationId = ConversationId;
             this.ConversationStart = ConversationStart;
@@ -127,10 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MediaStatsMinConversationMos = MediaStatsMinConversationMos;
             this.MediaStatsMinConversationRFactor = MediaStatsMinConversationRFactor;
             this.OriginatingDirection = OriginatingDirection;
-            this.Participants = Participants;
             this.Evaluations = Evaluations;
             this.Surveys = Surveys;
             this.DivisionIds = DivisionIds;
+            this.Participants = Participants;
             
         }
         
@@ -184,15 +184,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Participants in the conversation
-        /// </summary>
-        /// <value>Participants in the conversation</value>
-        [DataMember(Name="participants", EmitDefaultValue=false)]
-        public List<AnalyticsParticipant> Participants { get; set; }
-        
-        
-        
-        /// <summary>
         /// Evaluations tied to this conversation
         /// </summary>
         /// <value>Evaluations tied to this conversation</value>
@@ -218,6 +209,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> DivisionIds { get; set; }
         
         
+        
+        /// <summary>
+        /// Participants in the conversation
+        /// </summary>
+        /// <value>Participants in the conversation</value>
+        [DataMember(Name="participants", EmitDefaultValue=false)]
+        public List<AnalyticsParticipant> Participants { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -233,10 +233,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MediaStatsMinConversationMos: ").Append(MediaStatsMinConversationMos).Append("\n");
             sb.Append("  MediaStatsMinConversationRFactor: ").Append(MediaStatsMinConversationRFactor).Append("\n");
             sb.Append("  OriginatingDirection: ").Append(OriginatingDirection).Append("\n");
-            sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
             sb.Append("  Surveys: ").Append(Surveys).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
+            sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -304,11 +304,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OriginatingDirection.Equals(other.OriginatingDirection)
                 ) &&
                 (
-                    this.Participants == other.Participants ||
-                    this.Participants != null &&
-                    this.Participants.SequenceEqual(other.Participants)
-                ) &&
-                (
                     this.Evaluations == other.Evaluations ||
                     this.Evaluations != null &&
                     this.Evaluations.SequenceEqual(other.Evaluations)
@@ -322,6 +317,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DivisionIds == other.DivisionIds ||
                     this.DivisionIds != null &&
                     this.DivisionIds.SequenceEqual(other.DivisionIds)
+                ) &&
+                (
+                    this.Participants == other.Participants ||
+                    this.Participants != null &&
+                    this.Participants.SequenceEqual(other.Participants)
                 );
         }
 
@@ -355,9 +355,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.OriginatingDirection != null)
                     hash = hash * 59 + this.OriginatingDirection.GetHashCode();
                 
-                if (this.Participants != null)
-                    hash = hash * 59 + this.Participants.GetHashCode();
-                
                 if (this.Evaluations != null)
                     hash = hash * 59 + this.Evaluations.GetHashCode();
                 
@@ -366,6 +363,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DivisionIds != null)
                     hash = hash * 59 + this.DivisionIds.GetHashCode();
+                
+                if (this.Participants != null)
+                    hash = hash * 59 + this.Participants.GetHashCode();
                 
                 return hash;
             }

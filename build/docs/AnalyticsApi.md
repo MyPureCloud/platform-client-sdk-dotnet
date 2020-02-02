@@ -226,7 +226,7 @@ void (empty response body)
 
 <a name="getanalyticsconversationdetails"></a>
 
-## [**AnalyticsConversation**](AnalyticsConversation.html) GetAnalyticsConversationDetails (string conversationId)
+## [**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes.html) GetAnalyticsConversationDetails (string conversationId)
 
 
 
@@ -261,7 +261,7 @@ namespace Example
             try
             { 
                 // Get a conversation by id
-                AnalyticsConversation result = apiInstance.GetAnalyticsConversationDetails(conversationId);
+                AnalyticsConversationWithoutAttributes result = apiInstance.GetAnalyticsConversationDetails(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -283,11 +283,11 @@ namespace Example
 
 ### Return type
 
-[**AnalyticsConversation**](AnalyticsConversation.html)
+[**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes.html)
 
 <a name="getanalyticsconversationsdetails"></a>
 
-## [**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html) GetAnalyticsConversationsDetails (List<string> id = null)
+## [**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse.html) GetAnalyticsConversationsDetails (List<string> id = null)
 
 
 
@@ -322,7 +322,7 @@ namespace Example
             try
             { 
                 // Gets multiple conversations by id
-                AnalyticsConversationMultiGetResponse result = apiInstance.GetAnalyticsConversationsDetails(id);
+                AnalyticsConversationWithoutAttributesMultiGetResponse result = apiInstance.GetAnalyticsConversationsDetails(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -344,7 +344,7 @@ namespace Example
 
 ### Return type
 
-[**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html)
+[**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse.html)
 
 <a name="getanalyticsconversationsdetailsjob"></a>
 

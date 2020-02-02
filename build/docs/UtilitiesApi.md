@@ -11,7 +11,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIpranges**](UtilitiesApi.html#getipranges) | **GET** /api/v2/ipranges | Get public ip address ranges for PureCloud |
 | [**GetTimezones**](UtilitiesApi.html#gettimezones) | **GET** /api/v2/timezones | Get time zones list |
 | [**PostCertificateDetails**](UtilitiesApi.html#postcertificatedetails) | **POST** /api/v2/certificate/details | Returns the information about an X509 PEM encoded certificate or certificate chain. |
-| [**PostGmscTokens**](UtilitiesApi.html#postgmsctokens) | **POST** /api/v2/gmsc/tokens | Generate a JWT for use with common cloud. |
 {: class="table table-striped"}
 
 <a name="getdate"></a>
@@ -245,59 +244,4 @@ namespace Example
 ### Return type
 
 [**ParsedCertificate**](ParsedCertificate.html)
-
-<a name="postgmsctokens"></a>
-
-## [**Token**](Token.html) PostGmscTokens ()
-
-
-
-Generate a JWT for use with common cloud.
-
-
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostGmscTokensExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new UtilitiesApi();
-
-            try
-            { 
-                // Generate a JWT for use with common cloud.
-                Token result = apiInstance.PostGmscTokens();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UtilitiesApi.PostGmscTokens: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-[**Token**](Token.html)
 

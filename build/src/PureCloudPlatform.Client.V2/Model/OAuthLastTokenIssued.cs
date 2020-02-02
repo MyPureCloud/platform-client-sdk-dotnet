@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Token
+    /// OAuthLastTokenIssued
     /// </summary>
     [DataContract]
-    public partial class Token :  IEquatable<Token>
+    public partial class OAuthLastTokenIssued :  IEquatable<OAuthLastTokenIssued>
     {
         
         
@@ -27,21 +27,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Token" /> class.
+        /// Initializes a new instance of the <see cref="OAuthLastTokenIssued" /> class.
         /// </summary>
-        public Token()
+        /// <param name="DateIssued">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        public OAuthLastTokenIssued(DateTime? DateIssued = null)
         {
+            this.DateIssued = DateIssued;
             
         }
         
         
         
         /// <summary>
-        /// Token for use with common api
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Token for use with common api</value>
-        [DataMember(Name="jwt", EmitDefaultValue=false)]
-        public string Jwt { get; private set; }
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="dateIssued", EmitDefaultValue=false)]
+        public DateTime? DateIssued { get; set; }
         
         
         /// <summary>
@@ -51,9 +53,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Token {\n");
+            sb.Append("class OAuthLastTokenIssued {\n");
             
-            sb.Append("  Jwt: ").Append(Jwt).Append("\n");
+            sb.Append("  DateIssued: ").Append(DateIssued).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,15 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Token);
+            return this.Equals(obj as OAuthLastTokenIssued);
         }
 
         /// <summary>
-        /// Returns true if Token instances are equal
+        /// Returns true if OAuthLastTokenIssued instances are equal
         /// </summary>
-        /// <param name="other">Instance of Token to be compared</param>
+        /// <param name="other">Instance of OAuthLastTokenIssued to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Token other)
+        public bool Equals(OAuthLastTokenIssued other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -91,9 +93,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Jwt == other.Jwt ||
-                    this.Jwt != null &&
-                    this.Jwt.Equals(other.Jwt)
+                    this.DateIssued == other.DateIssued ||
+                    this.DateIssued != null &&
+                    this.DateIssued.Equals(other.DateIssued)
                 );
         }
 
@@ -109,8 +111,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Jwt != null)
-                    hash = hash * 59 + this.Jwt.GetHashCode();
+                if (this.DateIssued != null)
+                    hash = hash * 59 + this.DateIssued.GetHashCode();
                 
                 return hash;
             }

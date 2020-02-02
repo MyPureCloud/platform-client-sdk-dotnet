@@ -167,12 +167,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -259,8 +264,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Skills">Routing (ACD) skills possessed by the user.</param>
         /// <param name="Languages">Routing (ACD) languages possessed by the user.</param>
         /// <param name="AcdAutoAnswer">acd auto answer.</param>
+        /// <param name="LastTokenIssued">LastTokenIssued.</param>
         /// <param name="TrustUserDetails">TrustUserDetails.</param>
-        public TrustUser(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, List<UserRoutingSkill> Skills = null, List<UserRoutingLanguage> Languages = null, bool? AcdAutoAnswer = null, TrustUserDetails TrustUserDetails = null)
+        public TrustUser(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, List<UserRoutingSkill> Skills = null, List<UserRoutingLanguage> Languages = null, bool? AcdAutoAnswer = null, OAuthLastTokenIssued LastTokenIssued = null, TrustUserDetails TrustUserDetails = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -290,6 +296,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Skills = Skills;
             this.Languages = Languages;
             this.AcdAutoAnswer = AcdAutoAnswer;
+            this.LastTokenIssued = LastTokenIssued;
             this.TrustUserDetails = TrustUserDetails;
             
         }
@@ -558,6 +565,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets LastTokenIssued
+        /// </summary>
+        [DataMember(Name="lastTokenIssued", EmitDefaultValue=false)]
+        public OAuthLastTokenIssued LastTokenIssued { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets TrustUserDetails
         /// </summary>
         [DataMember(Name="trustUserDetails", EmitDefaultValue=false)]
@@ -604,6 +619,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
             sb.Append("  LanguagePreference: ").Append(LanguagePreference).Append("\n");
+            sb.Append("  LastTokenIssued: ").Append(LastTokenIssued).Append("\n");
             sb.Append("  TrustUserDetails: ").Append(TrustUserDetails).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -797,6 +813,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LanguagePreference.Equals(other.LanguagePreference)
                 ) &&
                 (
+                    this.LastTokenIssued == other.LastTokenIssued ||
+                    this.LastTokenIssued != null &&
+                    this.LastTokenIssued.Equals(other.LastTokenIssued)
+                ) &&
+                (
                     this.TrustUserDetails == other.TrustUserDetails ||
                     this.TrustUserDetails != null &&
                     this.TrustUserDetails.Equals(other.TrustUserDetails)
@@ -907,6 +928,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LanguagePreference != null)
                     hash = hash * 59 + this.LanguagePreference.GetHashCode();
+                
+                if (this.LastTokenIssued != null)
+                    hash = hash * 59 + this.LastTokenIssued.GetHashCode();
                 
                 if (this.TrustUserDetails != null)
                     hash = hash * 59 + this.TrustUserDetails.GetHashCode();

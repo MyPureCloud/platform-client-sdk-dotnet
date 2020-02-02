@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// AnalyticsConversationMultiGetResponse
+    /// AnalyticsConversationWithoutAttributesMultiGetResponse
     /// </summary>
     [DataContract]
-    public partial class AnalyticsConversationMultiGetResponse :  IEquatable<AnalyticsConversationMultiGetResponse>
+    public partial class AnalyticsConversationWithoutAttributesMultiGetResponse :  IEquatable<AnalyticsConversationWithoutAttributesMultiGetResponse>
     {
         
         
@@ -27,10 +27,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AnalyticsConversationMultiGetResponse" /> class.
+        /// Initializes a new instance of the <see cref="AnalyticsConversationWithoutAttributesMultiGetResponse" /> class.
         /// </summary>
         /// <param name="Conversations">Conversations.</param>
-        public AnalyticsConversationMultiGetResponse(List<AnalyticsConversation> Conversations = null)
+        public AnalyticsConversationWithoutAttributesMultiGetResponse(List<AnalyticsConversationWithoutAttributes> Conversations = null)
         {
             this.Conversations = Conversations;
             
@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Conversations
         /// </summary>
         [DataMember(Name="conversations", EmitDefaultValue=false)]
-        public List<AnalyticsConversation> Conversations { get; set; }
+        public List<AnalyticsConversationWithoutAttributes> Conversations { get; set; }
         
         
         /// <summary>
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AnalyticsConversationMultiGetResponse {\n");
+            sb.Append("class AnalyticsConversationWithoutAttributesMultiGetResponse {\n");
             
             sb.Append("  Conversations: ").Append(Conversations).Append("\n");
             sb.Append("}\n");
@@ -76,15 +76,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AnalyticsConversationMultiGetResponse);
+            return this.Equals(obj as AnalyticsConversationWithoutAttributesMultiGetResponse);
         }
 
         /// <summary>
-        /// Returns true if AnalyticsConversationMultiGetResponse instances are equal
+        /// Returns true if AnalyticsConversationWithoutAttributesMultiGetResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of AnalyticsConversationMultiGetResponse to be compared</param>
+        /// <param name="other">Instance of AnalyticsConversationWithoutAttributesMultiGetResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AnalyticsConversationMultiGetResponse other)
+        public bool Equals(AnalyticsConversationWithoutAttributesMultiGetResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

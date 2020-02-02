@@ -212,12 +212,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -334,6 +339,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Skills">Routing (ACD) skills possessed by the user.</param>
         /// <param name="Languages">Routing (ACD) languages possessed by the user.</param>
         /// <param name="AcdAutoAnswer">acd auto answer.</param>
+        /// <param name="LastTokenIssued">LastTokenIssued.</param>
         /// <param name="Date">The PureCloud system date time..</param>
         /// <param name="GeolocationSettings">Geolocation settings for user&#39;s organization..</param>
         /// <param name="Organization">Organization details for this user..</param>
@@ -349,7 +355,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Token">Information about the current token.</param>
         /// <param name="Trustors">Organizations having this user as a trustee.</param>
         /// <param name="OrgProducts">Products enabled in this organization.</param>
-        public UserMe(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, List<UserRoutingSkill> Skills = null, List<UserRoutingLanguage> Languages = null, bool? AcdAutoAnswer = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null, FieldConfigs FieldConfigs = null, TokenInfo Token = null, List<Trustor> Trustors = null, List<DomainOrganizationProduct> OrgProducts = null)
+        public UserMe(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, List<UserRoutingSkill> Skills = null, List<UserRoutingLanguage> Languages = null, bool? AcdAutoAnswer = null, OAuthLastTokenIssued LastTokenIssued = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null, FieldConfigs FieldConfigs = null, TokenInfo Token = null, List<Trustor> Trustors = null, List<DomainOrganizationProduct> OrgProducts = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -379,6 +385,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Skills = Skills;
             this.Languages = Languages;
             this.AcdAutoAnswer = AcdAutoAnswer;
+            this.LastTokenIssued = LastTokenIssued;
             this.Date = Date;
             this.GeolocationSettings = GeolocationSettings;
             this.Organization = Organization;
@@ -661,6 +668,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets LastTokenIssued
+        /// </summary>
+        [DataMember(Name="lastTokenIssued", EmitDefaultValue=false)]
+        public OAuthLastTokenIssued LastTokenIssued { get; set; }
+        
+        
+        
+        /// <summary>
         /// The PureCloud system date time.
         /// </summary>
         /// <value>The PureCloud system date time.</value>
@@ -843,6 +858,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
             sb.Append("  LanguagePreference: ").Append(LanguagePreference).Append("\n");
+            sb.Append("  LastTokenIssued: ").Append(LastTokenIssued).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
             sb.Append("  GeolocationSettings: ").Append(GeolocationSettings).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
@@ -1051,6 +1067,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LanguagePreference.Equals(other.LanguagePreference)
                 ) &&
                 (
+                    this.LastTokenIssued == other.LastTokenIssued ||
+                    this.LastTokenIssued != null &&
+                    this.LastTokenIssued.Equals(other.LastTokenIssued)
+                ) &&
+                (
                     this.Date == other.Date ||
                     this.Date != null &&
                     this.Date.Equals(other.Date)
@@ -1236,6 +1257,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LanguagePreference != null)
                     hash = hash * 59 + this.LanguagePreference.GetHashCode();
+                
+                if (this.LastTokenIssued != null)
+                    hash = hash * 59 + this.LastTokenIssued.GetHashCode();
                 
                 if (this.Date != null)
                     hash = hash * 59 + this.Date.GetHashCode();

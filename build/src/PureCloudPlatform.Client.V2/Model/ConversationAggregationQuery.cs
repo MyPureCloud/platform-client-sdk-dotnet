@@ -435,10 +435,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Ntransferred,
             
             /// <summary>
+            /// Enum Oexternalmediacount for "oExternalMediaCount"
+            /// </summary>
+            [EnumMember(Value = "oExternalMediaCount")]
+            Oexternalmediacount,
+            
+            /// <summary>
             /// Enum Ointeracting for "oInteracting"
             /// </summary>
             [EnumMember(Value = "oInteracting")]
             Ointeracting,
+            
+            /// <summary>
+            /// Enum Omediacount for "oMediaCount"
+            /// </summary>
+            [EnumMember(Value = "oMediaCount")]
+            Omediacount,
             
             /// <summary>
             /// Enum Oservicelevel for "oServiceLevel"

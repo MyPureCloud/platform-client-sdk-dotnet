@@ -229,6 +229,30 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets MessageTypes
         /// </summary>
@@ -827,6 +851,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Provides the agent duration sort order
         /// </summary>
@@ -948,8 +988,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundCampaignIds">The outbound campaign ids are used to filter the view.</param>
         /// <param name="OutboundContactListIds">The outbound contact list ids are used to filter the view.</param>
         /// <param name="ContactIds">The contact ids are used to filter the view.</param>
+        /// <param name="ExternalContactIds">The external contact ids are used to filter the view.</param>
+        /// <param name="ExternalOrgIds">The external org ids are used to filter the view.</param>
         /// <param name="AniList">The ani list ids are used to filter the view.</param>
         /// <param name="DurationsMilliseconds">The durations in milliseconds used to filter the view.</param>
+        /// <param name="AcdDurationsMilliseconds">The acd durations in milliseconds used to filter the view.</param>
+        /// <param name="TalkDurationsMilliseconds">The talk durations in milliseconds used to filter the view.</param>
+        /// <param name="AcwDurationsMilliseconds">The acw durations in milliseconds used to filter the view.</param>
+        /// <param name="HandleDurationsMilliseconds">The handle durations in milliseconds used to filter the view.</param>
+        /// <param name="HoldDurationsMilliseconds">The hold durations in milliseconds used to filter the view.</param>
+        /// <param name="AbandonDurationsMilliseconds">The abandon durations in milliseconds used to filter the view.</param>
         /// <param name="EvaluationScore">The evaluationScore is used to filter the view.</param>
         /// <param name="EvaluationCriticalScore">The evaluationCriticalScore is used to filter the view.</param>
         /// <param name="EvaluationFormIds">The evaluation form ids are used to filter the view.</param>
@@ -1002,7 +1050,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HasJourneyVisitId">Indicates filtering for Journey visit id.</param>
         /// <param name="OauthClientIds">A list of OAuth client IDs.</param>
         /// <param name="ApiOperations">A list of API operations (ex: [\&quot;GET /api/v2/users/{userId}/queues\&quot;]).</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> StatusList = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, List<string> OauthClientIds = null, List<string> ApiOperations = null)
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> StatusList = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, List<string> OauthClientIds = null, List<string> ApiOperations = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -1023,8 +1071,16 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OutboundCampaignIds = OutboundCampaignIds;
             this.OutboundContactListIds = OutboundContactListIds;
             this.ContactIds = ContactIds;
+            this.ExternalContactIds = ExternalContactIds;
+            this.ExternalOrgIds = ExternalOrgIds;
             this.AniList = AniList;
             this.DurationsMilliseconds = DurationsMilliseconds;
+            this.AcdDurationsMilliseconds = AcdDurationsMilliseconds;
+            this.TalkDurationsMilliseconds = TalkDurationsMilliseconds;
+            this.AcwDurationsMilliseconds = AcwDurationsMilliseconds;
+            this.HandleDurationsMilliseconds = HandleDurationsMilliseconds;
+            this.HoldDurationsMilliseconds = HoldDurationsMilliseconds;
+            this.AbandonDurationsMilliseconds = AbandonDurationsMilliseconds;
             this.EvaluationScore = EvaluationScore;
             this.EvaluationCriticalScore = EvaluationCriticalScore;
             this.EvaluationFormIds = EvaluationFormIds;
@@ -1254,6 +1310,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The external contact ids are used to filter the view
+        /// </summary>
+        /// <value>The external contact ids are used to filter the view</value>
+        [DataMember(Name="externalContactIds", EmitDefaultValue=false)]
+        public List<string> ExternalContactIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The external org ids are used to filter the view
+        /// </summary>
+        /// <value>The external org ids are used to filter the view</value>
+        [DataMember(Name="externalOrgIds", EmitDefaultValue=false)]
+        public List<string> ExternalOrgIds { get; set; }
+        
+        
+        
+        /// <summary>
         /// The ani list ids are used to filter the view
         /// </summary>
         /// <value>The ani list ids are used to filter the view</value>
@@ -1268,6 +1342,60 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The durations in milliseconds used to filter the view</value>
         [DataMember(Name="durationsMilliseconds", EmitDefaultValue=false)]
         public List<NumericRange> DurationsMilliseconds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The acd durations in milliseconds used to filter the view
+        /// </summary>
+        /// <value>The acd durations in milliseconds used to filter the view</value>
+        [DataMember(Name="acdDurationsMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> AcdDurationsMilliseconds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The talk durations in milliseconds used to filter the view
+        /// </summary>
+        /// <value>The talk durations in milliseconds used to filter the view</value>
+        [DataMember(Name="talkDurationsMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> TalkDurationsMilliseconds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The acw durations in milliseconds used to filter the view
+        /// </summary>
+        /// <value>The acw durations in milliseconds used to filter the view</value>
+        [DataMember(Name="acwDurationsMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> AcwDurationsMilliseconds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The handle durations in milliseconds used to filter the view
+        /// </summary>
+        /// <value>The handle durations in milliseconds used to filter the view</value>
+        [DataMember(Name="handleDurationsMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> HandleDurationsMilliseconds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The hold durations in milliseconds used to filter the view
+        /// </summary>
+        /// <value>The hold durations in milliseconds used to filter the view</value>
+        [DataMember(Name="holdDurationsMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> HoldDurationsMilliseconds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The abandon durations in milliseconds used to filter the view
+        /// </summary>
+        /// <value>The abandon durations in milliseconds used to filter the view</value>
+        [DataMember(Name="abandonDurationsMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> AbandonDurationsMilliseconds { get; set; }
         
         
         
@@ -1745,8 +1873,16 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OutboundCampaignIds: ").Append(OutboundCampaignIds).Append("\n");
             sb.Append("  OutboundContactListIds: ").Append(OutboundContactListIds).Append("\n");
             sb.Append("  ContactIds: ").Append(ContactIds).Append("\n");
+            sb.Append("  ExternalContactIds: ").Append(ExternalContactIds).Append("\n");
+            sb.Append("  ExternalOrgIds: ").Append(ExternalOrgIds).Append("\n");
             sb.Append("  AniList: ").Append(AniList).Append("\n");
             sb.Append("  DurationsMilliseconds: ").Append(DurationsMilliseconds).Append("\n");
+            sb.Append("  AcdDurationsMilliseconds: ").Append(AcdDurationsMilliseconds).Append("\n");
+            sb.Append("  TalkDurationsMilliseconds: ").Append(TalkDurationsMilliseconds).Append("\n");
+            sb.Append("  AcwDurationsMilliseconds: ").Append(AcwDurationsMilliseconds).Append("\n");
+            sb.Append("  HandleDurationsMilliseconds: ").Append(HandleDurationsMilliseconds).Append("\n");
+            sb.Append("  HoldDurationsMilliseconds: ").Append(HoldDurationsMilliseconds).Append("\n");
+            sb.Append("  AbandonDurationsMilliseconds: ").Append(AbandonDurationsMilliseconds).Append("\n");
             sb.Append("  EvaluationScore: ").Append(EvaluationScore).Append("\n");
             sb.Append("  EvaluationCriticalScore: ").Append(EvaluationCriticalScore).Append("\n");
             sb.Append("  EvaluationFormIds: ").Append(EvaluationFormIds).Append("\n");
@@ -1931,6 +2067,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContactIds.SequenceEqual(other.ContactIds)
                 ) &&
                 (
+                    this.ExternalContactIds == other.ExternalContactIds ||
+                    this.ExternalContactIds != null &&
+                    this.ExternalContactIds.SequenceEqual(other.ExternalContactIds)
+                ) &&
+                (
+                    this.ExternalOrgIds == other.ExternalOrgIds ||
+                    this.ExternalOrgIds != null &&
+                    this.ExternalOrgIds.SequenceEqual(other.ExternalOrgIds)
+                ) &&
+                (
                     this.AniList == other.AniList ||
                     this.AniList != null &&
                     this.AniList.SequenceEqual(other.AniList)
@@ -1939,6 +2085,36 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DurationsMilliseconds == other.DurationsMilliseconds ||
                     this.DurationsMilliseconds != null &&
                     this.DurationsMilliseconds.SequenceEqual(other.DurationsMilliseconds)
+                ) &&
+                (
+                    this.AcdDurationsMilliseconds == other.AcdDurationsMilliseconds ||
+                    this.AcdDurationsMilliseconds != null &&
+                    this.AcdDurationsMilliseconds.SequenceEqual(other.AcdDurationsMilliseconds)
+                ) &&
+                (
+                    this.TalkDurationsMilliseconds == other.TalkDurationsMilliseconds ||
+                    this.TalkDurationsMilliseconds != null &&
+                    this.TalkDurationsMilliseconds.SequenceEqual(other.TalkDurationsMilliseconds)
+                ) &&
+                (
+                    this.AcwDurationsMilliseconds == other.AcwDurationsMilliseconds ||
+                    this.AcwDurationsMilliseconds != null &&
+                    this.AcwDurationsMilliseconds.SequenceEqual(other.AcwDurationsMilliseconds)
+                ) &&
+                (
+                    this.HandleDurationsMilliseconds == other.HandleDurationsMilliseconds ||
+                    this.HandleDurationsMilliseconds != null &&
+                    this.HandleDurationsMilliseconds.SequenceEqual(other.HandleDurationsMilliseconds)
+                ) &&
+                (
+                    this.HoldDurationsMilliseconds == other.HoldDurationsMilliseconds ||
+                    this.HoldDurationsMilliseconds != null &&
+                    this.HoldDurationsMilliseconds.SequenceEqual(other.HoldDurationsMilliseconds)
+                ) &&
+                (
+                    this.AbandonDurationsMilliseconds == other.AbandonDurationsMilliseconds ||
+                    this.AbandonDurationsMilliseconds != null &&
+                    this.AbandonDurationsMilliseconds.SequenceEqual(other.AbandonDurationsMilliseconds)
                 ) &&
                 (
                     this.EvaluationScore == other.EvaluationScore ||
@@ -2271,11 +2447,35 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ContactIds != null)
                     hash = hash * 59 + this.ContactIds.GetHashCode();
                 
+                if (this.ExternalContactIds != null)
+                    hash = hash * 59 + this.ExternalContactIds.GetHashCode();
+                
+                if (this.ExternalOrgIds != null)
+                    hash = hash * 59 + this.ExternalOrgIds.GetHashCode();
+                
                 if (this.AniList != null)
                     hash = hash * 59 + this.AniList.GetHashCode();
                 
                 if (this.DurationsMilliseconds != null)
                     hash = hash * 59 + this.DurationsMilliseconds.GetHashCode();
+                
+                if (this.AcdDurationsMilliseconds != null)
+                    hash = hash * 59 + this.AcdDurationsMilliseconds.GetHashCode();
+                
+                if (this.TalkDurationsMilliseconds != null)
+                    hash = hash * 59 + this.TalkDurationsMilliseconds.GetHashCode();
+                
+                if (this.AcwDurationsMilliseconds != null)
+                    hash = hash * 59 + this.AcwDurationsMilliseconds.GetHashCode();
+                
+                if (this.HandleDurationsMilliseconds != null)
+                    hash = hash * 59 + this.HandleDurationsMilliseconds.GetHashCode();
+                
+                if (this.HoldDurationsMilliseconds != null)
+                    hash = hash * 59 + this.HoldDurationsMilliseconds.GetHashCode();
+                
+                if (this.AbandonDurationsMilliseconds != null)
+                    hash = hash * 59 + this.AbandonDurationsMilliseconds.GetHashCode();
                 
                 if (this.EvaluationScore != null)
                     hash = hash * 59 + this.EvaluationScore.GetHashCode();

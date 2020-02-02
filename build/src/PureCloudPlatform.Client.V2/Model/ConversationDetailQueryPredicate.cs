@@ -206,6 +206,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Noutboundconnected,
             
             /// <summary>
+            /// Enum Noversla for "nOverSla"
+            /// </summary>
+            [EnumMember(Value = "nOverSla")]
+            Noversla,
+            
+            /// <summary>
             /// Enum Nstatetransitionerror for "nStateTransitionError"
             /// </summary>
             [EnumMember(Value = "nStateTransitionError")]
@@ -216,6 +222,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "nTransferred")]
             Ntransferred,
+            
+            /// <summary>
+            /// Enum Oexternalmediacount for "oExternalMediaCount"
+            /// </summary>
+            [EnumMember(Value = "oExternalMediaCount")]
+            Oexternalmediacount,
+            
+            /// <summary>
+            /// Enum Omediacount for "oMediaCount"
+            /// </summary>
+            [EnumMember(Value = "oMediaCount")]
+            Omediacount,
             
             /// <summary>
             /// Enum Tabandon for "tAbandon"
@@ -336,6 +354,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "tNotResponding")]
             Tnotresponding,
+            
+            /// <summary>
+            /// Enum Tshortabandon for "tShortAbandon"
+            /// </summary>
+            [EnumMember(Value = "tShortAbandon")]
+            Tshortabandon,
             
             /// <summary>
             /// Enum Ttalk for "tTalk"

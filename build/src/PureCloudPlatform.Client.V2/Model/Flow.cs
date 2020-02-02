@@ -164,11 +164,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
         
         
         
@@ -222,9 +227,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InputSchema">json schema describing the inputs for the flow.</param>
         /// <param name="OutputSchema">json schema describing the outputs for the flow.</param>
         /// <param name="CheckedInVersion">CheckedInVersion.</param>
+        /// <param name="DebugVersion">DebugVersion.</param>
         /// <param name="PublishedBy">PublishedBy.</param>
         /// <param name="CurrentOperation">CurrentOperation.</param>
-        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
+        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, FlowVersion DebugVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -241,6 +247,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.InputSchema = InputSchema;
             this.OutputSchema = OutputSchema;
             this.CheckedInVersion = CheckedInVersion;
+            this.DebugVersion = DebugVersion;
             this.PublishedBy = PublishedBy;
             this.CurrentOperation = CurrentOperation;
             
@@ -370,6 +377,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets DebugVersion
+        /// </summary>
+        [DataMember(Name="debugVersion", EmitDefaultValue=false)]
+        public FlowVersion DebugVersion { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets PublishedBy
         /// </summary>
         [DataMember(Name="publishedBy", EmitDefaultValue=false)]
@@ -417,6 +432,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
             sb.Append("  OutputSchema: ").Append(OutputSchema).Append("\n");
             sb.Append("  CheckedInVersion: ").Append(CheckedInVersion).Append("\n");
+            sb.Append("  DebugVersion: ").Append(DebugVersion).Append("\n");
             sb.Append("  PublishedBy: ").Append(PublishedBy).Append("\n");
             sb.Append("  CurrentOperation: ").Append(CurrentOperation).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -532,6 +548,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CheckedInVersion.Equals(other.CheckedInVersion)
                 ) &&
                 (
+                    this.DebugVersion == other.DebugVersion ||
+                    this.DebugVersion != null &&
+                    this.DebugVersion.Equals(other.DebugVersion)
+                ) &&
+                (
                     this.PublishedBy == other.PublishedBy ||
                     this.PublishedBy != null &&
                     this.PublishedBy.Equals(other.PublishedBy)
@@ -604,6 +625,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CheckedInVersion != null)
                     hash = hash * 59 + this.CheckedInVersion.GetHashCode();
+                
+                if (this.DebugVersion != null)
+                    hash = hash * 59 + this.DebugVersion.GetHashCode();
                 
                 if (this.PublishedBy != null)
                     hash = hash * 59 + this.PublishedBy.GetHashCode();

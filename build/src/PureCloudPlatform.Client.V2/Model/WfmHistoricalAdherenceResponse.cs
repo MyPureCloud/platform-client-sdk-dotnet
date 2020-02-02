@@ -26,6 +26,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The state of the adherence query
         /// </summary>
@@ -68,6 +71,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The state of the adherence query
         /// </summary>
@@ -81,12 +86,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WfmHistoricalAdherenceResponse" /> class.
         /// </summary>
         /// <param name="Id">The query ID to listen for.</param>
-        /// <param name="DownloadUrl">The uri to query to GET the results of the Historical Adherence query. This will return unpopulated but will be populated in the notification.</param>
+        /// <param name="DownloadUrl">Deprecated. Use downloadUrls instead..</param>
+        /// <param name="DownloadUrls">The uri list to GET the results of the Historical Adherence query. For notification purposes only.</param>
         /// <param name="QueryState">The state of the adherence query.</param>
-        public WfmHistoricalAdherenceResponse(string Id = null, string DownloadUrl = null, QueryStateEnum? QueryState = null)
+        public WfmHistoricalAdherenceResponse(string Id = null, string DownloadUrl = null, List<string> DownloadUrls = null, QueryStateEnum? QueryState = null)
         {
             this.Id = Id;
             this.DownloadUrl = DownloadUrl;
+            this.DownloadUrls = DownloadUrls;
             this.QueryState = QueryState;
             
         }
@@ -103,11 +110,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The uri to query to GET the results of the Historical Adherence query. This will return unpopulated but will be populated in the notification
+        /// Deprecated. Use downloadUrls instead.
         /// </summary>
-        /// <value>The uri to query to GET the results of the Historical Adherence query. This will return unpopulated but will be populated in the notification</value>
+        /// <value>Deprecated. Use downloadUrls instead.</value>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The uri list to GET the results of the Historical Adherence query. For notification purposes only
+        /// </summary>
+        /// <value>The uri list to GET the results of the Historical Adherence query. For notification purposes only</value>
+        [DataMember(Name="downloadUrls", EmitDefaultValue=false)]
+        public List<string> DownloadUrls { get; set; }
         
         
         
@@ -123,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
+            sb.Append("  DownloadUrls: ").Append(DownloadUrls).Append("\n");
             sb.Append("  QueryState: ").Append(QueryState).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -171,6 +188,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DownloadUrl.Equals(other.DownloadUrl)
                 ) &&
                 (
+                    this.DownloadUrls == other.DownloadUrls ||
+                    this.DownloadUrls != null &&
+                    this.DownloadUrls.SequenceEqual(other.DownloadUrls)
+                ) &&
+                (
                     this.QueryState == other.QueryState ||
                     this.QueryState != null &&
                     this.QueryState.Equals(other.QueryState)
@@ -194,6 +216,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
+                
+                if (this.DownloadUrls != null)
+                    hash = hash * 59 + this.DownloadUrls.GetHashCode();
                 
                 if (this.QueryState != null)
                     hash = hash * 59 + this.QueryState.GetHashCode();

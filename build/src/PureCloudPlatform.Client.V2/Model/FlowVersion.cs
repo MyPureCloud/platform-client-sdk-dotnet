@@ -101,11 +101,26 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -134,13 +149,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConfigurationVersion">ConfigurationVersion.</param>
         /// <param name="Type">Type.</param>
         /// <param name="Secure">Secure.</param>
+        /// <param name="Debug">Debug.</param>
         /// <param name="CreatedBy">CreatedBy.</param>
         /// <param name="CreatedByClient">CreatedByClient.</param>
         /// <param name="ConfigurationUri">ConfigurationUri.</param>
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="GenerationId">GenerationId.</param>
         /// <param name="PublishResultUri">PublishResultUri.</param>
-        public FlowVersion(string Id = null, string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, User CreatedBy = null, DomainEntityRef CreatedByClient = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null)
+        /// <param name="InputSchema">InputSchema.</param>
+        /// <param name="OutputSchema">OutputSchema.</param>
+        public FlowVersion(string Id = null, string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, bool? Debug = null, User CreatedBy = null, DomainEntityRef CreatedByClient = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -148,12 +166,15 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConfigurationVersion = ConfigurationVersion;
             this.Type = Type;
             this.Secure = Secure;
+            this.Debug = Debug;
             this.CreatedBy = CreatedBy;
             this.CreatedByClient = CreatedByClient;
             this.ConfigurationUri = ConfigurationUri;
             this.DateCreated = DateCreated;
             this.GenerationId = GenerationId;
             this.PublishResultUri = PublishResultUri;
+            this.InputSchema = InputSchema;
+            this.OutputSchema = OutputSchema;
             
         }
         
@@ -199,6 +220,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="secure", EmitDefaultValue=false)]
         public bool? Secure { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Debug
+        /// </summary>
+        [DataMember(Name="debug", EmitDefaultValue=false)]
+        public bool? Debug { get; set; }
         
         
         
@@ -251,6 +280,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets InputSchema
+        /// </summary>
+        [DataMember(Name="inputSchema", EmitDefaultValue=false)]
+        public JsonSchemaDocument InputSchema { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets OutputSchema
+        /// </summary>
+        [DataMember(Name="outputSchema", EmitDefaultValue=false)]
+        public JsonSchemaDocument OutputSchema { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -273,12 +318,15 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConfigurationVersion: ").Append(ConfigurationVersion).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Secure: ").Append(Secure).Append("\n");
+            sb.Append("  Debug: ").Append(Debug).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  CreatedByClient: ").Append(CreatedByClient).Append("\n");
             sb.Append("  ConfigurationUri: ").Append(ConfigurationUri).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  GenerationId: ").Append(GenerationId).Append("\n");
             sb.Append("  PublishResultUri: ").Append(PublishResultUri).Append("\n");
+            sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
+            sb.Append("  OutputSchema: ").Append(OutputSchema).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -347,6 +395,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Secure.Equals(other.Secure)
                 ) &&
                 (
+                    this.Debug == other.Debug ||
+                    this.Debug != null &&
+                    this.Debug.Equals(other.Debug)
+                ) &&
+                (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
@@ -375,6 +428,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PublishResultUri == other.PublishResultUri ||
                     this.PublishResultUri != null &&
                     this.PublishResultUri.Equals(other.PublishResultUri)
+                ) &&
+                (
+                    this.InputSchema == other.InputSchema ||
+                    this.InputSchema != null &&
+                    this.InputSchema.Equals(other.InputSchema)
+                ) &&
+                (
+                    this.OutputSchema == other.OutputSchema ||
+                    this.OutputSchema != null &&
+                    this.OutputSchema.Equals(other.OutputSchema)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -413,6 +476,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Secure != null)
                     hash = hash * 59 + this.Secure.GetHashCode();
                 
+                if (this.Debug != null)
+                    hash = hash * 59 + this.Debug.GetHashCode();
+                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
                 
@@ -430,6 +496,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.PublishResultUri != null)
                     hash = hash * 59 + this.PublishResultUri.GetHashCode();
+                
+                if (this.InputSchema != null)
+                    hash = hash * 59 + this.InputSchema.GetHashCode();
+                
+                if (this.OutputSchema != null)
+                    hash = hash * 59 + this.OutputSchema.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

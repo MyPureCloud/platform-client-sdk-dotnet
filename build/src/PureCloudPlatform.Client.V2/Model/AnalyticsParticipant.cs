@@ -29,9 +29,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// The participant's purpose
         /// </summary>
@@ -196,6 +193,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
         /// <summary>
         /// The participant's purpose
         /// </summary>
@@ -219,30 +217,32 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsParticipant" /> class.
         /// </summary>
         /// <param name="ParticipantId">Unique identifier for the participant.</param>
         /// <param name="ParticipantName">A human readable name identifying the participant.</param>
-        /// <param name="Attributes">List of attributes associated to this participant.</param>
         /// <param name="UserId">If a user, then this will be the unique identifier for the user.</param>
         /// <param name="Purpose">The participant&#39;s purpose.</param>
         /// <param name="ExternalContactId">External Contact Identifier.</param>
         /// <param name="ExternalOrganizationId">External Organization Identifier.</param>
         /// <param name="FlaggedReason">Reason for which participant flagged conversation.</param>
         /// <param name="Sessions">List of sessions associated to this participant.</param>
-        public AnalyticsParticipant(string ParticipantId = null, string ParticipantName = null, Dictionary<string, string> Attributes = null, string UserId = null, PurposeEnum? Purpose = null, string ExternalContactId = null, string ExternalOrganizationId = null, FlaggedReasonEnum? FlaggedReason = null, List<AnalyticsSession> Sessions = null)
+        /// <param name="Attributes">List of attributes associated to this participant.</param>
+        public AnalyticsParticipant(string ParticipantId = null, string ParticipantName = null, string UserId = null, PurposeEnum? Purpose = null, string ExternalContactId = null, string ExternalOrganizationId = null, FlaggedReasonEnum? FlaggedReason = null, List<AnalyticsSession> Sessions = null, Dictionary<string, string> Attributes = null)
         {
             this.ParticipantId = ParticipantId;
             this.ParticipantName = ParticipantName;
-            this.Attributes = Attributes;
             this.UserId = UserId;
             this.Purpose = Purpose;
             this.ExternalContactId = ExternalContactId;
             this.ExternalOrganizationId = ExternalOrganizationId;
             this.FlaggedReason = FlaggedReason;
             this.Sessions = Sessions;
+            this.Attributes = Attributes;
             
         }
         
@@ -263,15 +263,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A human readable name identifying the participant</value>
         [DataMember(Name="participantName", EmitDefaultValue=false)]
         public string ParticipantName { get; set; }
-        
-        
-        
-        /// <summary>
-        /// List of attributes associated to this participant
-        /// </summary>
-        /// <value>List of attributes associated to this participant</value>
-        [DataMember(Name="attributes", EmitDefaultValue=false)]
-        public Dictionary<string, string> Attributes { get; set; }
         
         
         
@@ -314,6 +305,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<AnalyticsSession> Sessions { get; set; }
         
         
+        
+        /// <summary>
+        /// List of attributes associated to this participant
+        /// </summary>
+        /// <value>List of attributes associated to this participant</value>
+        [DataMember(Name="attributes", EmitDefaultValue=false)]
+        public Dictionary<string, string> Attributes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -325,13 +325,13 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
             sb.Append("  ParticipantName: ").Append(ParticipantName).Append("\n");
-            sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
+            sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -379,11 +379,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ParticipantName.Equals(other.ParticipantName)
                 ) &&
                 (
-                    this.Attributes == other.Attributes ||
-                    this.Attributes != null &&
-                    this.Attributes.SequenceEqual(other.Attributes)
-                ) &&
-                (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
@@ -412,6 +407,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Sessions == other.Sessions ||
                     this.Sessions != null &&
                     this.Sessions.SequenceEqual(other.Sessions)
+                ) &&
+                (
+                    this.Attributes == other.Attributes ||
+                    this.Attributes != null &&
+                    this.Attributes.SequenceEqual(other.Attributes)
                 );
         }
 
@@ -433,9 +433,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ParticipantName != null)
                     hash = hash * 59 + this.ParticipantName.GetHashCode();
                 
-                if (this.Attributes != null)
-                    hash = hash * 59 + this.Attributes.GetHashCode();
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
                 
@@ -453,6 +450,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Sessions != null)
                     hash = hash * 59 + this.Sessions.GetHashCode();
+                
+                if (this.Attributes != null)
+                    hash = hash * 59 + this.Attributes.GetHashCode();
                 
                 return hash;
             }

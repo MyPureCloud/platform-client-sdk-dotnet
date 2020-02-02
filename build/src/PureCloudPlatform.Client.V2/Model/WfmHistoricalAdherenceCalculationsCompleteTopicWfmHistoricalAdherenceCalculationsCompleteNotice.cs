@@ -26,6 +26,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets QueryState
         /// </summary>
@@ -73,6 +76,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets QueryState
         /// </summary>
@@ -86,11 +91,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="DownloadUrl">DownloadUrl.</param>
+        /// <param name="DownloadUrls">DownloadUrls.</param>
         /// <param name="QueryState">QueryState.</param>
-        public WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdherenceCalculationsCompleteNotice(string Id = null, string DownloadUrl = null, QueryStateEnum? QueryState = null)
+        public WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdherenceCalculationsCompleteNotice(string Id = null, string DownloadUrl = null, List<string> DownloadUrls = null, QueryStateEnum? QueryState = null)
         {
             this.Id = Id;
             this.DownloadUrl = DownloadUrl;
+            this.DownloadUrls = DownloadUrls;
             this.QueryState = QueryState;
             
         }
@@ -113,6 +120,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets DownloadUrls
+        /// </summary>
+        [DataMember(Name="downloadUrls", EmitDefaultValue=false)]
+        public List<string> DownloadUrls { get; set; }
+        
+        
+        
         
         /// <summary>
         /// Returns the string presentation of the object
@@ -125,6 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
+            sb.Append("  DownloadUrls: ").Append(DownloadUrls).Append("\n");
             sb.Append("  QueryState: ").Append(QueryState).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -173,6 +189,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DownloadUrl.Equals(other.DownloadUrl)
                 ) &&
                 (
+                    this.DownloadUrls == other.DownloadUrls ||
+                    this.DownloadUrls != null &&
+                    this.DownloadUrls.SequenceEqual(other.DownloadUrls)
+                ) &&
+                (
                     this.QueryState == other.QueryState ||
                     this.QueryState != null &&
                     this.QueryState.Equals(other.QueryState)
@@ -196,6 +217,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
+                
+                if (this.DownloadUrls != null)
+                    hash = hash * 59 + this.DownloadUrls.GetHashCode();
                 
                 if (this.QueryState != null)
                     hash = hash * 59 + this.QueryState.GetHashCode();

@@ -9,6 +9,7 @@ title: WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdherenceCalc
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **DownloadUrl** | **string** |  | [optional] |
+| **DownloadUrls** | **List&lt;string&gt;** |  | [optional] |
 | **QueryState** | **string** |  | [optional] |
 {: class="table table-striped"}
 

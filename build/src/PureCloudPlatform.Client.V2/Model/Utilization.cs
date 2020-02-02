@@ -29,8 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Utilization" /> class.
         /// </summary>
-        /// <param name="_Utilization">Map of media types to utilization settings.  Valid media types include call, callback, chat, email, and message..</param>
-        public Utilization(Dictionary<string, OrgMediaUtilization> _Utilization = null)
+        /// <param name="_Utilization">Map of media type to utilization settings.  Valid media types include call, callback, chat, email, and message..</param>
+        public Utilization(Dictionary<string, MediaUtilization> _Utilization = null)
         {
             this._Utilization = _Utilization;
             
@@ -39,11 +39,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Map of media types to utilization settings.  Valid media types include call, callback, chat, email, and message.
+        /// Map of media type to utilization settings.  Valid media types include call, callback, chat, email, and message.
         /// </summary>
-        /// <value>Map of media types to utilization settings.  Valid media types include call, callback, chat, email, and message.</value>
+        /// <value>Map of media type to utilization settings.  Valid media types include call, callback, chat, email, and message.</value>
         [DataMember(Name="utilization", EmitDefaultValue=false)]
-        public Dictionary<string, OrgMediaUtilization> _Utilization { get; set; }
+        public Dictionary<string, MediaUtilization> _Utilization { get; set; }
         
         
         /// <summary>

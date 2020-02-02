@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// OrgMediaUtilization
+    /// MediaUtilization
     /// </summary>
     [DataContract]
-    public partial class OrgMediaUtilization :  IEquatable<OrgMediaUtilization>
+    public partial class MediaUtilization :  IEquatable<MediaUtilization>
     {
         
         
@@ -37,12 +37,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrgMediaUtilization" /> class.
+        /// Initializes a new instance of the <see cref="MediaUtilization" /> class.
         /// </summary>
         /// <param name="MaximumCapacity">Defines the maximum number of conversations of this type that an agent can handle at one time..</param>
-        /// <param name="InterruptableMediaTypes">Defines the list of other media types that can interrupt a conversation of this media type.  Values can be: call, chat, email, or socialExpression.</param>
+        /// <param name="InterruptableMediaTypes">Defines the list of other media types that can interrupt a conversation of this media type.  Values include call, chat, email, callback, and message..</param>
         /// <param name="IncludeNonAcd">If true, then track non-ACD conversations against utilization.</param>
-        public OrgMediaUtilization(int? MaximumCapacity = null, List<string> InterruptableMediaTypes = null, bool? IncludeNonAcd = null)
+        public MediaUtilization(int? MaximumCapacity = null, List<string> InterruptableMediaTypes = null, bool? IncludeNonAcd = null)
         {
             this.MaximumCapacity = MaximumCapacity;
             this.InterruptableMediaTypes = InterruptableMediaTypes;
@@ -62,9 +62,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Defines the list of other media types that can interrupt a conversation of this media type.  Values can be: call, chat, email, or socialExpression
+        /// Defines the list of other media types that can interrupt a conversation of this media type.  Values include call, chat, email, callback, and message.
         /// </summary>
-        /// <value>Defines the list of other media types that can interrupt a conversation of this media type.  Values can be: call, chat, email, or socialExpression</value>
+        /// <value>Defines the list of other media types that can interrupt a conversation of this media type.  Values include call, chat, email, callback, and message.</value>
         [DataMember(Name="interruptableMediaTypes", EmitDefaultValue=false)]
         public List<string> InterruptableMediaTypes { get; set; }
         
@@ -85,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class OrgMediaUtilization {\n");
+            sb.Append("class MediaUtilization {\n");
             
             sb.Append("  MaximumCapacity: ").Append(MaximumCapacity).Append("\n");
             sb.Append("  InterruptableMediaTypes: ").Append(InterruptableMediaTypes).Append("\n");
@@ -111,15 +111,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as OrgMediaUtilization);
+            return this.Equals(obj as MediaUtilization);
         }
 
         /// <summary>
-        /// Returns true if OrgMediaUtilization instances are equal
+        /// Returns true if MediaUtilization instances are equal
         /// </summary>
-        /// <param name="other">Instance of OrgMediaUtilization to be compared</param>
+        /// <param name="other">Instance of MediaUtilization to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OrgMediaUtilization other)
+        public bool Equals(MediaUtilization other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

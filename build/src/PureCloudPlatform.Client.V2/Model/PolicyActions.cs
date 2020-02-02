@@ -75,6 +75,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyActions" /> class.
@@ -90,7 +95,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RetentionDuration">RetentionDuration.</param>
         /// <param name="InitiateScreenRecording">InitiateScreenRecording.</param>
         /// <param name="MediaTranscriptions">MediaTranscriptions.</param>
-        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<MeteredAssignmentByAgent> AssignMeteredAssignmentByAgent = null, List<CalibrationAssignment> AssignCalibrations = null, List<SurveyAssignment> AssignSurveys = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null, List<MediaTranscription> MediaTranscriptions = null)
+        /// <param name="IntegrationExport">Policy action for exporting recordings using an integration to 3rd party s3..</param>
+        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<MeteredAssignmentByAgent> AssignMeteredAssignmentByAgent = null, List<CalibrationAssignment> AssignCalibrations = null, List<SurveyAssignment> AssignSurveys = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null, List<MediaTranscription> MediaTranscriptions = null, IntegrationExport IntegrationExport = null)
         {
             this.RetainRecording = RetainRecording;
             this.DeleteRecording = DeleteRecording;
@@ -103,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RetentionDuration = RetentionDuration;
             this.InitiateScreenRecording = InitiateScreenRecording;
             this.MediaTranscriptions = MediaTranscriptions;
+            this.IntegrationExport = IntegrationExport;
             
         }
         
@@ -198,6 +205,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<MediaTranscription> MediaTranscriptions { get; set; }
         
         
+        
+        /// <summary>
+        /// Policy action for exporting recordings using an integration to 3rd party s3.
+        /// </summary>
+        /// <value>Policy action for exporting recordings using an integration to 3rd party s3.</value>
+        [DataMember(Name="integrationExport", EmitDefaultValue=false)]
+        public IntegrationExport IntegrationExport { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -218,6 +234,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RetentionDuration: ").Append(RetentionDuration).Append("\n");
             sb.Append("  InitiateScreenRecording: ").Append(InitiateScreenRecording).Append("\n");
             sb.Append("  MediaTranscriptions: ").Append(MediaTranscriptions).Append("\n");
+            sb.Append("  IntegrationExport: ").Append(IntegrationExport).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -308,6 +325,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaTranscriptions == other.MediaTranscriptions ||
                     this.MediaTranscriptions != null &&
                     this.MediaTranscriptions.SequenceEqual(other.MediaTranscriptions)
+                ) &&
+                (
+                    this.IntegrationExport == other.IntegrationExport ||
+                    this.IntegrationExport != null &&
+                    this.IntegrationExport.Equals(other.IntegrationExport)
                 );
         }
 
@@ -355,6 +377,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MediaTranscriptions != null)
                     hash = hash * 59 + this.MediaTranscriptions.GetHashCode();
+                
+                if (this.IntegrationExport != null)
+                    hash = hash * 59 + this.IntegrationExport.GetHashCode();
                 
                 return hash;
             }
