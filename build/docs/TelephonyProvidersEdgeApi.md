@@ -26,6 +26,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId**](TelephonyProvidersEdgeApi.html#getconfigurationschemasedgesvnextschemacategoryschematypeschemaid) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId} | Get a json schema (Deprecated) |
 | [**GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId**](TelephonyProvidersEdgeApi.html#getconfigurationschemasedgesvnextschemacategoryschematypeschemaidextensiontypemetadataid) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extensionType}/{metadataId} | Get metadata for a schema (Deprecated) |
 | [**GetTelephonyProvidersEdge**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedge) | **GET** /api/v2/telephony/providers/edges/{edgeId} | Get edge. |
+| [**GetTelephonyProvidersEdgeDiagnosticNslookup**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgediagnosticnslookup) | **GET** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup | Get networking-related information from an Edge for a target IP or host. |
+| [**GetTelephonyProvidersEdgeDiagnosticPing**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgediagnosticping) | **GET** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping | Get networking-related information from an Edge for a target IP or host. |
+| [**GetTelephonyProvidersEdgeDiagnosticRoute**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgediagnosticroute) | **GET** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/route | Get networking-related information from an Edge for a target IP or host. |
+| [**GetTelephonyProvidersEdgeDiagnosticTracepath**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgediagnostictracepath) | **GET** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath | Get networking-related information from an Edge for a target IP or host. |
 | [**GetTelephonyProvidersEdgeLine**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgeline) | **GET** /api/v2/telephony/providers/edges/{edgeId}/lines/{lineId} | Get line |
 | [**GetTelephonyProvidersEdgeLines**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgelines) | **GET** /api/v2/telephony/providers/edges/{edgeId}/lines | Get the list of lines. |
 | [**GetTelephonyProvidersEdgeLogicalinterface**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgelogicalinterface) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Get an edge logical interface |
@@ -88,6 +92,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesTrunks**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgestrunks) | **GET** /api/v2/telephony/providers/edges/trunks | Get the list of available trunks. |
 | [**GetTelephonyProvidersEdgesTrunksMetrics**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgestrunksmetrics) | **GET** /api/v2/telephony/providers/edges/trunks/metrics | Get the metrics for a list of trunks. |
 | [**GetTelephonyProvidersEdgesTrunkswithrecording**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgestrunkswithrecording) | **GET** /api/v2/telephony/providers/edges/trunkswithrecording | Get Counts of trunks that have recording disabled or enabled |
+| [**PostTelephonyProvidersEdgeDiagnosticNslookup**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgediagnosticnslookup) | **POST** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup | Nslookup request command to collect networking-related information from an Edge for a target IP or host. |
+| [**PostTelephonyProvidersEdgeDiagnosticPing**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgediagnosticping) | **POST** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping | Ping Request command to collect networking-related information from an Edge for a target IP or host. |
+| [**PostTelephonyProvidersEdgeDiagnosticRoute**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgediagnosticroute) | **POST** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/route | Route request command to collect networking-related information from an Edge for a target IP or host. |
+| [**PostTelephonyProvidersEdgeDiagnosticTracepath**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgediagnostictracepath) | **POST** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath | Tracepath request command to collect networking-related information from an Edge for a target IP or host. |
 | [**PostTelephonyProvidersEdgeLogicalinterfaces**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgelogicalinterfaces) | **POST** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces | Create an edge logical interface. |
 | [**PostTelephonyProvidersEdgeLogsJobUpload**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgelogsjobupload) | **POST** /api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}/upload | Request that the specified fileIds be uploaded from the Edge. |
 | [**PostTelephonyProvidersEdgeLogsJobs**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgelogsjobs) | **POST** /api/v2/telephony/providers/edges/{edgeId}/logs/jobs | Create a job to upload a list of Edge logs. |
@@ -1300,6 +1308,250 @@ namespace Example
 ### Return type
 
 [**Edge**](Edge.html)
+
+<a name="gettelephonyprovidersedgediagnosticnslookup"></a>
+
+## [**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html) GetTelephonyProvidersEdgeDiagnosticNslookup (string edgeId)
+
+
+
+Get networking-related information from an Edge for a target IP or host.
+
+
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgeDiagnosticNslookupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge Id
+
+            try
+            { 
+                // Get networking-related information from an Edge for a target IP or host.
+                EdgeNetworkDiagnosticResponse result = apiInstance.GetTelephonyProvidersEdgeDiagnosticNslookup(edgeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgeDiagnosticNslookup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
+
+<a name="gettelephonyprovidersedgediagnosticping"></a>
+
+## [**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html) GetTelephonyProvidersEdgeDiagnosticPing (string edgeId)
+
+
+
+Get networking-related information from an Edge for a target IP or host.
+
+
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgeDiagnosticPingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge Id
+
+            try
+            { 
+                // Get networking-related information from an Edge for a target IP or host.
+                EdgeNetworkDiagnosticResponse result = apiInstance.GetTelephonyProvidersEdgeDiagnosticPing(edgeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgeDiagnosticPing: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
+
+<a name="gettelephonyprovidersedgediagnosticroute"></a>
+
+## [**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html) GetTelephonyProvidersEdgeDiagnosticRoute (string edgeId)
+
+
+
+Get networking-related information from an Edge for a target IP or host.
+
+
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgeDiagnosticRouteExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge Id
+
+            try
+            { 
+                // Get networking-related information from an Edge for a target IP or host.
+                EdgeNetworkDiagnosticResponse result = apiInstance.GetTelephonyProvidersEdgeDiagnosticRoute(edgeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgeDiagnosticRoute: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
+
+<a name="gettelephonyprovidersedgediagnostictracepath"></a>
+
+## [**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html) GetTelephonyProvidersEdgeDiagnosticTracepath (string edgeId)
+
+
+
+Get networking-related information from an Edge for a target IP or host.
+
+
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgeDiagnosticTracepathExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge Id
+
+            try
+            { 
+                // Get networking-related information from an Edge for a target IP or host.
+                EdgeNetworkDiagnosticResponse result = apiInstance.GetTelephonyProvidersEdgeDiagnosticTracepath(edgeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgeDiagnosticTracepath: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
 
 <a name="gettelephonyprovidersedgeline"></a>
 
@@ -5275,6 +5527,258 @@ namespace Example
 ### Return type
 
 [**TrunkRecordingEnabledCount**](TrunkRecordingEnabledCount.html)
+
+<a name="posttelephonyprovidersedgediagnosticnslookup"></a>
+
+## [**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html) PostTelephonyProvidersEdgeDiagnosticNslookup (string edgeId, EdgeNetworkDiagnosticRequest body)
+
+
+
+Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+
+
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyProvidersEdgeDiagnosticNslookupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge Id
+            var body = new EdgeNetworkDiagnosticRequest(); // EdgeNetworkDiagnosticRequest | request payload to get network diagnostic
+
+            try
+            { 
+                // Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+                EdgeNetworkDiagnostic result = apiInstance.PostTelephonyProvidersEdgeDiagnosticNslookup(edgeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostTelephonyProvidersEdgeDiagnosticNslookup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge Id |  |
+| **body** | [**EdgeNetworkDiagnosticRequest**](EdgeNetworkDiagnosticRequest.html)| request payload to get network diagnostic |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html)
+
+<a name="posttelephonyprovidersedgediagnosticping"></a>
+
+## [**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html) PostTelephonyProvidersEdgeDiagnosticPing (string edgeId, EdgeNetworkDiagnosticRequest body)
+
+
+
+Ping Request command to collect networking-related information from an Edge for a target IP or host.
+
+
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyProvidersEdgeDiagnosticPingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge Id
+            var body = new EdgeNetworkDiagnosticRequest(); // EdgeNetworkDiagnosticRequest | request payload to get network diagnostic
+
+            try
+            { 
+                // Ping Request command to collect networking-related information from an Edge for a target IP or host.
+                EdgeNetworkDiagnostic result = apiInstance.PostTelephonyProvidersEdgeDiagnosticPing(edgeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostTelephonyProvidersEdgeDiagnosticPing: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge Id |  |
+| **body** | [**EdgeNetworkDiagnosticRequest**](EdgeNetworkDiagnosticRequest.html)| request payload to get network diagnostic |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html)
+
+<a name="posttelephonyprovidersedgediagnosticroute"></a>
+
+## [**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html) PostTelephonyProvidersEdgeDiagnosticRoute (string edgeId, EdgeNetworkDiagnosticRequest body)
+
+
+
+Route request command to collect networking-related information from an Edge for a target IP or host.
+
+
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyProvidersEdgeDiagnosticRouteExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge Id
+            var body = new EdgeNetworkDiagnosticRequest(); // EdgeNetworkDiagnosticRequest | request payload to get network diagnostic
+
+            try
+            { 
+                // Route request command to collect networking-related information from an Edge for a target IP or host.
+                EdgeNetworkDiagnostic result = apiInstance.PostTelephonyProvidersEdgeDiagnosticRoute(edgeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostTelephonyProvidersEdgeDiagnosticRoute: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge Id |  |
+| **body** | [**EdgeNetworkDiagnosticRequest**](EdgeNetworkDiagnosticRequest.html)| request payload to get network diagnostic |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html)
+
+<a name="posttelephonyprovidersedgediagnostictracepath"></a>
+
+## [**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html) PostTelephonyProvidersEdgeDiagnosticTracepath (string edgeId, EdgeNetworkDiagnosticRequest body)
+
+
+
+Tracepath request command to collect networking-related information from an Edge for a target IP or host.
+
+
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyProvidersEdgeDiagnosticTracepathExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge Id
+            var body = new EdgeNetworkDiagnosticRequest(); // EdgeNetworkDiagnosticRequest | request payload to get network diagnostic
+
+            try
+            { 
+                // Tracepath request command to collect networking-related information from an Edge for a target IP or host.
+                EdgeNetworkDiagnostic result = apiInstance.PostTelephonyProvidersEdgeDiagnosticTracepath(edgeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostTelephonyProvidersEdgeDiagnosticTracepath: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge Id |  |
+| **body** | [**EdgeNetworkDiagnosticRequest**](EdgeNetworkDiagnosticRequest.html)| request payload to get network diagnostic |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html)
 
 <a name="posttelephonyprovidersedgelogicalinterfaces"></a>
 

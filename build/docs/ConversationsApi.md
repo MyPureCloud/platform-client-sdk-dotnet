@@ -7536,7 +7536,7 @@ namespace Example
 
 Get messages in batch
 
-
+The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\"a3069a33b-bbb1-4703-9d68-061d9e9db96e\", \"55bc6be3-078c-4a49-a4e6-1e05776ed7e8\"]
 
 Requires ANY permissions: 
 
@@ -7560,7 +7560,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ConversationsApi();
-            var conversationId = conversationId_example;  // string | conversationId
+            var conversationId = conversationId_example;  // string | 
             var body = ;  // List<string> | messageIds (optional) 
 
             try
@@ -7583,7 +7583,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**| conversationId |  |
+| **conversationId** | **string**|  |  |
 | **body** | **List<string>**| messageIds | [optional]  |
 {: class="table table-striped"}
 

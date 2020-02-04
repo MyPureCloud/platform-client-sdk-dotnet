@@ -2896,10 +2896,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get messages in batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\&quot;a3069a33b-bbb1-4703-9d68-061d9e9db96e\&quot;, \&quot;55bc6be3-078c-4a49-a4e6-1e05776ed7e8\&quot;]
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
+        /// <param name="conversationId"></param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>TextMessageListing</returns>
         TextMessageListing PostConversationsMessageMessagesBulk (string conversationId, List<string> body = null);
@@ -2908,10 +2908,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get messages in batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\&quot;a3069a33b-bbb1-4703-9d68-061d9e9db96e\&quot;, \&quot;55bc6be3-078c-4a49-a4e6-1e05776ed7e8\&quot;]
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
+        /// <param name="conversationId"></param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>ApiResponse of TextMessageListing</returns>
         ApiResponse<TextMessageListing> PostConversationsMessageMessagesBulkWithHttpInfo (string conversationId, List<string> body = null);
@@ -6058,10 +6058,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get messages in batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\&quot;a3069a33b-bbb1-4703-9d68-061d9e9db96e\&quot;, \&quot;55bc6be3-078c-4a49-a4e6-1e05776ed7e8\&quot;]
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
+        /// <param name="conversationId"></param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>Task of TextMessageListing</returns>
         System.Threading.Tasks.Task<TextMessageListing> PostConversationsMessageMessagesBulkAsync (string conversationId, List<string> body = null);
@@ -6070,10 +6070,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get messages in batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\&quot;a3069a33b-bbb1-4703-9d68-061d9e9db96e\&quot;, \&quot;55bc6be3-078c-4a49-a4e6-1e05776ed7e8\&quot;]
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
+        /// <param name="conversationId"></param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>Task of ApiResponse (TextMessageListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TextMessageListing>> PostConversationsMessageMessagesBulkAsyncWithHttpInfo (string conversationId, List<string> body = null);
@@ -31169,10 +31169,10 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get messages in batch 
+        /// Get messages in batch The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\&quot;a3069a33b-bbb1-4703-9d68-061d9e9db96e\&quot;, \&quot;55bc6be3-078c-4a49-a4e6-1e05776ed7e8\&quot;]
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
+        /// <param name="conversationId"></param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>TextMessageListing</returns>
         public TextMessageListing PostConversationsMessageMessagesBulk (string conversationId, List<string> body = null)
@@ -31182,10 +31182,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get messages in batch 
+        /// Get messages in batch The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\&quot;a3069a33b-bbb1-4703-9d68-061d9e9db96e\&quot;, \&quot;55bc6be3-078c-4a49-a4e6-1e05776ed7e8\&quot;]
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
+        /// <param name="conversationId"></param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>ApiResponse of TextMessageListing</returns>
         public ApiResponse< TextMessageListing > PostConversationsMessageMessagesBulkWithHttpInfo (string conversationId, List<string> body = null)
@@ -31271,10 +31271,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get messages in batch 
+        /// Get messages in batch The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\&quot;a3069a33b-bbb1-4703-9d68-061d9e9db96e\&quot;, \&quot;55bc6be3-078c-4a49-a4e6-1e05776ed7e8\&quot;]
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
+        /// <param name="conversationId"></param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>Task of TextMessageListing</returns>
         public async System.Threading.Tasks.Task<TextMessageListing> PostConversationsMessageMessagesBulkAsync (string conversationId, List<string> body = null)
@@ -31285,10 +31285,10 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get messages in batch 
+        /// Get messages in batch The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\&quot;a3069a33b-bbb1-4703-9d68-061d9e9db96e\&quot;, \&quot;55bc6be3-078c-4a49-a4e6-1e05776ed7e8\&quot;]
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
+        /// <param name="conversationId"></param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>Task of ApiResponse (TextMessageListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TextMessageListing>> PostConversationsMessageMessagesBulkAsyncWithHttpInfo (string conversationId, List<string> body = null)

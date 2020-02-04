@@ -467,6 +467,94 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Edge> GetTelephonyProvidersEdgeWithHttpInfo (string edgeId, List<string> expand = null);
         
         /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>EdgeNetworkDiagnosticResponse</returns>
+        EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticNslookup (string edgeId);
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
+        ApiResponse<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticNslookupWithHttpInfo (string edgeId);
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>EdgeNetworkDiagnosticResponse</returns>
+        EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticPing (string edgeId);
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
+        ApiResponse<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticPingWithHttpInfo (string edgeId);
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>EdgeNetworkDiagnosticResponse</returns>
+        EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticRoute (string edgeId);
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
+        ApiResponse<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticRouteWithHttpInfo (string edgeId);
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>EdgeNetworkDiagnosticResponse</returns>
+        EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticTracepath (string edgeId);
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
+        ApiResponse<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticTracepathWithHttpInfo (string edgeId);
+        
+        /// <summary>
         /// Get line
         /// </summary>
         /// <remarks>
@@ -2037,6 +2125,102 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TrunkRecordingEnabledCount> GetTelephonyProvidersEdgesTrunkswithrecordingWithHttpInfo (string trunkType = null);
         
         /// <summary>
+        /// Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>EdgeNetworkDiagnostic</returns>
+        EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticNslookup (string edgeId, EdgeNetworkDiagnosticRequest body);
+
+        /// <summary>
+        /// Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        ApiResponse<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticNslookupWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
+        
+        /// <summary>
+        /// Ping Request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>EdgeNetworkDiagnostic</returns>
+        EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticPing (string edgeId, EdgeNetworkDiagnosticRequest body);
+
+        /// <summary>
+        /// Ping Request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        ApiResponse<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticPingWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
+        
+        /// <summary>
+        /// Route request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>EdgeNetworkDiagnostic</returns>
+        EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticRoute (string edgeId, EdgeNetworkDiagnosticRequest body);
+
+        /// <summary>
+        /// Route request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        ApiResponse<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticRouteWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
+        
+        /// <summary>
+        /// Tracepath request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>EdgeNetworkDiagnostic</returns>
+        EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticTracepath (string edgeId, EdgeNetworkDiagnosticRequest body);
+
+        /// <summary>
+        /// Tracepath request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        ApiResponse<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticTracepathWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
+        
+        /// <summary>
         /// Create an edge logical interface.
         /// </summary>
         /// <remarks>
@@ -3405,6 +3589,94 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
         System.Threading.Tasks.Task<ApiResponse<Edge>> GetTelephonyProvidersEdgeAsyncWithHttpInfo (string edgeId, List<string> expand = null);
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
+        System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticNslookupAsync (string edgeId);
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticNslookupAsyncWithHttpInfo (string edgeId);
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
+        System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticPingAsync (string edgeId);
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticPingAsyncWithHttpInfo (string edgeId);
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
+        System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticRouteAsync (string edgeId);
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticRouteAsyncWithHttpInfo (string edgeId);
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
+        System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticTracepathAsync (string edgeId);
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticTracepathAsyncWithHttpInfo (string edgeId);
         
         /// <summary>
         /// Get line
@@ -4975,6 +5247,102 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">The type of this trunk base. (optional)</param>
         /// <returns>Task of ApiResponse (TrunkRecordingEnabledCount)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrunkRecordingEnabledCount>> GetTelephonyProvidersEdgesTrunkswithrecordingAsyncWithHttpInfo (string trunkType = null);
+        
+        /// <summary>
+        /// Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of EdgeNetworkDiagnostic</returns>
+        System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticNslookupAsync (string edgeId, EdgeNetworkDiagnosticRequest body);
+
+        /// <summary>
+        /// Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticNslookupAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
+        
+        /// <summary>
+        /// Ping Request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of EdgeNetworkDiagnostic</returns>
+        System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticPingAsync (string edgeId, EdgeNetworkDiagnosticRequest body);
+
+        /// <summary>
+        /// Ping Request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticPingAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
+        
+        /// <summary>
+        /// Route request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of EdgeNetworkDiagnostic</returns>
+        System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticRouteAsync (string edgeId, EdgeNetworkDiagnosticRequest body);
+
+        /// <summary>
+        /// Route request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticRouteAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
+        
+        /// <summary>
+        /// Tracepath request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of EdgeNetworkDiagnostic</returns>
+        System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticTracepathAsync (string edgeId, EdgeNetworkDiagnosticRequest body);
+
+        /// <summary>
+        /// Tracepath request command to collect networking-related information from an Edge for a target IP or host.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticTracepathAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
         
         /// <summary>
         /// Create an edge logical interface.
@@ -9771,6 +10139,778 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Edge>(localVarStatusCode,
                 localVarHeaders,
                 (Edge) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Edge)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>EdgeNetworkDiagnosticResponse</returns>
+        public EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticNslookup (string edgeId)
+        {
+             ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = GetTelephonyProvidersEdgeDiagnosticNslookupWithHttpInfo(edgeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
+        public ApiResponse< EdgeNetworkDiagnosticResponse > GetTelephonyProvidersEdgeDiagnosticNslookupWithHttpInfo (string edgeId)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticNslookup");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticNslookup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticNslookup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnosticResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnosticResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnosticResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
+        public async System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticNslookupAsync (string edgeId)
+        {
+             ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = await GetTelephonyProvidersEdgeDiagnosticNslookupAsyncWithHttpInfo(edgeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticNslookupAsyncWithHttpInfo (string edgeId)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticNslookup");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticNslookup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticNslookup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnosticResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnosticResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnosticResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>EdgeNetworkDiagnosticResponse</returns>
+        public EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticPing (string edgeId)
+        {
+             ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = GetTelephonyProvidersEdgeDiagnosticPingWithHttpInfo(edgeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
+        public ApiResponse< EdgeNetworkDiagnosticResponse > GetTelephonyProvidersEdgeDiagnosticPingWithHttpInfo (string edgeId)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticPing");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticPing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticPing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnosticResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnosticResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnosticResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
+        public async System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticPingAsync (string edgeId)
+        {
+             ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = await GetTelephonyProvidersEdgeDiagnosticPingAsyncWithHttpInfo(edgeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticPingAsyncWithHttpInfo (string edgeId)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticPing");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticPing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticPing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnosticResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnosticResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnosticResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>EdgeNetworkDiagnosticResponse</returns>
+        public EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticRoute (string edgeId)
+        {
+             ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = GetTelephonyProvidersEdgeDiagnosticRouteWithHttpInfo(edgeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
+        public ApiResponse< EdgeNetworkDiagnosticResponse > GetTelephonyProvidersEdgeDiagnosticRouteWithHttpInfo (string edgeId)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticRoute");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticRoute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticRoute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnosticResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnosticResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnosticResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
+        public async System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticRouteAsync (string edgeId)
+        {
+             ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = await GetTelephonyProvidersEdgeDiagnosticRouteAsyncWithHttpInfo(edgeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticRouteAsyncWithHttpInfo (string edgeId)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticRoute");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticRoute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticRoute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnosticResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnosticResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnosticResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>EdgeNetworkDiagnosticResponse</returns>
+        public EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticTracepath (string edgeId)
+        {
+             ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = GetTelephonyProvidersEdgeDiagnosticTracepathWithHttpInfo(edgeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
+        public ApiResponse< EdgeNetworkDiagnosticResponse > GetTelephonyProvidersEdgeDiagnosticTracepathWithHttpInfo (string edgeId)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticTracepath");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticTracepath: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticTracepath: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnosticResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnosticResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnosticResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
+        public async System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticTracepathAsync (string edgeId)
+        {
+             ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = await GetTelephonyProvidersEdgeDiagnosticTracepathAsyncWithHttpInfo(edgeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticTracepathAsyncWithHttpInfo (string edgeId)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticTracepath");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticTracepath: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeDiagnosticTracepath: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnosticResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnosticResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnosticResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -22257,6 +23397,862 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TrunkRecordingEnabledCount>(localVarStatusCode,
                 localVarHeaders,
                 (TrunkRecordingEnabledCount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkRecordingEnabledCount)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Nslookup request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>EdgeNetworkDiagnostic</returns>
+        public EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticNslookup (string edgeId, EdgeNetworkDiagnosticRequest body)
+        {
+             ApiResponse<EdgeNetworkDiagnostic> localVarResponse = PostTelephonyProvidersEdgeDiagnosticNslookupWithHttpInfo(edgeId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Nslookup request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        public ApiResponse< EdgeNetworkDiagnostic > PostTelephonyProvidersEdgeDiagnosticNslookupWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticNslookup");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticNslookup");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticNslookup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticNslookup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnostic>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnostic) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnostic)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Nslookup request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of EdgeNetworkDiagnostic</returns>
+        public async System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticNslookupAsync (string edgeId, EdgeNetworkDiagnosticRequest body)
+        {
+             ApiResponse<EdgeNetworkDiagnostic> localVarResponse = await PostTelephonyProvidersEdgeDiagnosticNslookupAsyncWithHttpInfo(edgeId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Nslookup request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticNslookupAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticNslookup");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticNslookup");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticNslookup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticNslookup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnostic>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnostic) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnostic)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Ping Request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>EdgeNetworkDiagnostic</returns>
+        public EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticPing (string edgeId, EdgeNetworkDiagnosticRequest body)
+        {
+             ApiResponse<EdgeNetworkDiagnostic> localVarResponse = PostTelephonyProvidersEdgeDiagnosticPingWithHttpInfo(edgeId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Ping Request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        public ApiResponse< EdgeNetworkDiagnostic > PostTelephonyProvidersEdgeDiagnosticPingWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticPing");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticPing");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticPing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticPing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnostic>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnostic) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnostic)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Ping Request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of EdgeNetworkDiagnostic</returns>
+        public async System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticPingAsync (string edgeId, EdgeNetworkDiagnosticRequest body)
+        {
+             ApiResponse<EdgeNetworkDiagnostic> localVarResponse = await PostTelephonyProvidersEdgeDiagnosticPingAsyncWithHttpInfo(edgeId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Ping Request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticPingAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticPing");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticPing");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticPing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticPing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnostic>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnostic) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnostic)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Route request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>EdgeNetworkDiagnostic</returns>
+        public EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticRoute (string edgeId, EdgeNetworkDiagnosticRequest body)
+        {
+             ApiResponse<EdgeNetworkDiagnostic> localVarResponse = PostTelephonyProvidersEdgeDiagnosticRouteWithHttpInfo(edgeId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Route request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        public ApiResponse< EdgeNetworkDiagnostic > PostTelephonyProvidersEdgeDiagnosticRouteWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticRoute");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticRoute");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticRoute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticRoute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnostic>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnostic) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnostic)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Route request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of EdgeNetworkDiagnostic</returns>
+        public async System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticRouteAsync (string edgeId, EdgeNetworkDiagnosticRequest body)
+        {
+             ApiResponse<EdgeNetworkDiagnostic> localVarResponse = await PostTelephonyProvidersEdgeDiagnosticRouteAsyncWithHttpInfo(edgeId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Route request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticRouteAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticRoute");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticRoute");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticRoute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticRoute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnostic>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnostic) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnostic)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Tracepath request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>EdgeNetworkDiagnostic</returns>
+        public EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticTracepath (string edgeId, EdgeNetworkDiagnosticRequest body)
+        {
+             ApiResponse<EdgeNetworkDiagnostic> localVarResponse = PostTelephonyProvidersEdgeDiagnosticTracepathWithHttpInfo(edgeId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Tracepath request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        public ApiResponse< EdgeNetworkDiagnostic > PostTelephonyProvidersEdgeDiagnosticTracepathWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticTracepath");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticTracepath");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticTracepath: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticTracepath: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnostic>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnostic) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnostic)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Tracepath request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of EdgeNetworkDiagnostic</returns>
+        public async System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticTracepathAsync (string edgeId, EdgeNetworkDiagnosticRequest body)
+        {
+             ApiResponse<EdgeNetworkDiagnostic> localVarResponse = await PostTelephonyProvidersEdgeDiagnosticTracepathAsyncWithHttpInfo(edgeId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Tracepath request command to collect networking-related information from an Edge for a target IP or host. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">request payload to get network diagnostic</param>
+        /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticTracepathAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticTracepath");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticTracepath");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticTracepath: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeDiagnosticTracepath: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeNetworkDiagnostic>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeNetworkDiagnostic) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnostic)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
