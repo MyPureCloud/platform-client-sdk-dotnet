@@ -84,6 +84,34 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The response type represented by the response
+        /// </summary>
+        /// <value>The response type represented by the response</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ResponseTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Messagingtemplate for "MessagingTemplate"
+            /// </summary>
+            [EnumMember(Value = "MessagingTemplate")]
+            Messagingtemplate
+        }
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -115,6 +143,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The response type represented by the response
+        /// </summary>
+        /// <value>The response type represented by the response</value>
+        [DataMember(Name="responseType", EmitDefaultValue=false)]
+        public ResponseTypeEnum? ResponseType { get; set; }
+        
+        
+        
+        
+        
         
     
         /// <summary>
@@ -131,21 +170,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Libraries">One or more libraries response is associated with. (required).</param>
         /// <param name="Texts">One or more texts associated with the response. (required).</param>
         /// <param name="CreatedBy">User that created the response.</param>
-        /// <param name="DateCreated">The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="InteractionType">The interaction type for this response..</param>
         /// <param name="Substitutions">Details about any text substitutions used in the texts for this response..</param>
         /// <param name="SubstitutionsSchema">Metadata about the text substitutions in json schema format..</param>
-        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, DateTime? DateCreated = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null)
+        /// <param name="MessagingTemplate">The messaging template definition. This is required when adding to a library with responseType set to MessagingTemplate..</param>
+        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, MessagingTemplate MessagingTemplate = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.Libraries = Libraries;
             this.Texts = Texts;
             this.CreatedBy = CreatedBy;
-            this.DateCreated = DateCreated;
             this.InteractionType = InteractionType;
             this.Substitutions = Substitutions;
             this.SubstitutionsSchema = SubstitutionsSchema;
+            this.MessagingTemplate = MessagingTemplate;
             
         }
         
@@ -209,7 +248,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
+        public DateTime? DateCreated { get; private set; }
         
         
         
@@ -230,6 +269,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Metadata about the text substitutions in json schema format.</value>
         [DataMember(Name="substitutionsSchema", EmitDefaultValue=false)]
         public JsonSchemaDocument SubstitutionsSchema { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The messaging template definition. This is required when adding to a library with responseType set to MessagingTemplate.
+        /// </summary>
+        /// <value>The messaging template definition. This is required when adding to a library with responseType set to MessagingTemplate.</value>
+        [DataMember(Name="messagingTemplate", EmitDefaultValue=false)]
+        public MessagingTemplate MessagingTemplate { get; set; }
         
         
         
@@ -260,6 +310,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InteractionType: ").Append(InteractionType).Append("\n");
             sb.Append("  Substitutions: ").Append(Substitutions).Append("\n");
             sb.Append("  SubstitutionsSchema: ").Append(SubstitutionsSchema).Append("\n");
+            sb.Append("  ResponseType: ").Append(ResponseType).Append("\n");
+            sb.Append("  MessagingTemplate: ").Append(MessagingTemplate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -348,6 +400,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SubstitutionsSchema.Equals(other.SubstitutionsSchema)
                 ) &&
                 (
+                    this.ResponseType == other.ResponseType ||
+                    this.ResponseType != null &&
+                    this.ResponseType.Equals(other.ResponseType)
+                ) &&
+                (
+                    this.MessagingTemplate == other.MessagingTemplate ||
+                    this.MessagingTemplate != null &&
+                    this.MessagingTemplate.Equals(other.MessagingTemplate)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -395,6 +457,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SubstitutionsSchema != null)
                     hash = hash * 59 + this.SubstitutionsSchema.GetHashCode();
+                
+                if (this.ResponseType != null)
+                    hash = hash * 59 + this.ResponseType.GetHashCode();
+                
+                if (this.MessagingTemplate != null)
+                    hash = hash * 59 + this.MessagingTemplate.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

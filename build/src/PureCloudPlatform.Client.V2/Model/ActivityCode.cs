@@ -32,6 +32,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The activity code's category.
         /// </summary>
@@ -131,15 +134,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
         /// <summary>
         /// The activity code's category.
         /// </summary>
         /// <value>The activity code's category.</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
-        
-        
         
         
         
@@ -193,6 +193,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
         
         
         
@@ -269,15 +278,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public WfmVersionedEntityMetadata Metadata { get; set; }
         
         
-        
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -288,6 +288,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ActivityCode {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  IsDefault: ").Append(IsDefault).Append("\n");
@@ -297,7 +298,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CountsAsWorkTime: ").Append(CountsAsWorkTime).Append("\n");
             sb.Append("  AgentTimeOffSelectable: ").Append(AgentTimeOffSelectable).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -338,6 +338,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 ) &&
                 (
                     this.Name == other.Name ||
@@ -383,11 +388,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -405,6 +405,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
@@ -432,9 +435,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
-                
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

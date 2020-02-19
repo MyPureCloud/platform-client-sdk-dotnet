@@ -50,12 +50,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShortTermForecastReference" /> class.
         /// </summary>
-        /// <param name="Id">The id of the short term forecast (required).</param>
         /// <param name="WeekDate">The weekDate of the short term forecast in yyyy-MM-dd format (required).</param>
         /// <param name="Description">The description of the short term forecast.</param>
-        public ShortTermForecastReference(string Id = null, string WeekDate = null, string Description = null)
+        public ShortTermForecastReference(string WeekDate = null, string Description = null)
         {
-            this.Id = Id;
             this.WeekDate = WeekDate;
             this.Description = Description;
             
@@ -64,11 +62,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The id of the short term forecast
+        /// The globally unique identifier for the object.
         /// </summary>
-        /// <value>The id of the short term forecast</value>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public string Id { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
         
         
         
@@ -89,15 +96,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Description { get; set; }
         
         
-        
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,9 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ShortTermForecastReference {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -153,6 +151,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
                     this.WeekDate == other.WeekDate ||
                     this.WeekDate != null &&
                     this.WeekDate.Equals(other.WeekDate)
@@ -161,11 +164,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -184,14 +182,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 if (this.WeekDate != null)
                     hash = hash * 59 + this.WeekDate.GetHashCode();
                 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

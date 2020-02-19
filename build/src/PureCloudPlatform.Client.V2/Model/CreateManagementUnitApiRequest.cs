@@ -27,9 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The configured first day of the week for scheduling and forecasting purposes
+        /// The configured first day of the week for scheduling and forecasting purposes. Moving to Business Unit
         /// </summary>
-        /// <value>The configured first day of the week for scheduling and forecasting purposes</value>
+        /// <value>The configured first day of the week for scheduling and forecasting purposes. Moving to Business Unit</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StartDayOfWeekEnum
         {
@@ -98,12 +98,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
-        /// The configured first day of the week for scheduling and forecasting purposes
+        /// The configured first day of the week for scheduling and forecasting purposes. Moving to Business Unit
         /// </summary>
-        /// <value>The configured first day of the week for scheduling and forecasting purposes</value>
+        /// <value>The configured first day of the week for scheduling and forecasting purposes. Moving to Business Unit</value>
         [DataMember(Name="startDayOfWeek", EmitDefaultValue=false)]
         public StartDayOfWeekEnum? StartDayOfWeek { get; set; }
+        
+        
         
         
         
@@ -121,17 +126,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CreateManagementUnitApiRequest" /> class.
         /// </summary>
         /// <param name="Name">The name of the management unit (required).</param>
-        /// <param name="TimeZone">The default time zone to use for this management unit (required).</param>
-        /// <param name="StartDayOfWeek">The configured first day of the week for scheduling and forecasting purposes (required).</param>
+        /// <param name="TimeZone">The default time zone to use for this management unit.  Moving to Business Unit.</param>
+        /// <param name="StartDayOfWeek">The configured first day of the week for scheduling and forecasting purposes. Moving to Business Unit.</param>
         /// <param name="Settings">The configuration for the management unit.  If omitted, reasonable defaults will be assigned.</param>
         /// <param name="DivisionId">The id of the division to which this management unit belongs.  Defaults to home division ID.</param>
-        public CreateManagementUnitApiRequest(string Name = null, string TimeZone = null, StartDayOfWeekEnum? StartDayOfWeek = null, CreateManagementUnitSettingsRequest Settings = null, string DivisionId = null)
+        /// <param name="BusinessUnitId">The id of the business unit to which this management unit belongs.  Required after business unit launch (required).</param>
+        public CreateManagementUnitApiRequest(string Name = null, string TimeZone = null, StartDayOfWeekEnum? StartDayOfWeek = null, CreateManagementUnitSettingsRequest Settings = null, string DivisionId = null, string BusinessUnitId = null)
         {
             this.Name = Name;
             this.TimeZone = TimeZone;
             this.StartDayOfWeek = StartDayOfWeek;
             this.Settings = Settings;
             this.DivisionId = DivisionId;
+            this.BusinessUnitId = BusinessUnitId;
             
         }
         
@@ -147,9 +154,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The default time zone to use for this management unit
+        /// The default time zone to use for this management unit.  Moving to Business Unit
         /// </summary>
-        /// <value>The default time zone to use for this management unit</value>
+        /// <value>The default time zone to use for this management unit.  Moving to Business Unit</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
         
@@ -174,6 +181,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string DivisionId { get; set; }
         
         
+        
+        /// <summary>
+        /// The id of the business unit to which this management unit belongs.  Required after business unit launch
+        /// </summary>
+        /// <value>The id of the business unit to which this management unit belongs.  Required after business unit launch</value>
+        [DataMember(Name="businessUnitId", EmitDefaultValue=false)]
+        public string BusinessUnitId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,6 +204,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartDayOfWeek: ").Append(StartDayOfWeek).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
+            sb.Append("  BusinessUnitId: ").Append(BusinessUnitId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -248,6 +265,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DivisionId == other.DivisionId ||
                     this.DivisionId != null &&
                     this.DivisionId.Equals(other.DivisionId)
+                ) &&
+                (
+                    this.BusinessUnitId == other.BusinessUnitId ||
+                    this.BusinessUnitId != null &&
+                    this.BusinessUnitId.Equals(other.BusinessUnitId)
                 );
         }
 
@@ -277,6 +299,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DivisionId != null)
                     hash = hash * 59 + this.DivisionId.GetHashCode();
+                
+                if (this.BusinessUnitId != null)
+                    hash = hash * 59 + this.BusinessUnitId.GetHashCode();
                 
                 return hash;
             }

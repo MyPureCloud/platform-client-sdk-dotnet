@@ -177,7 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">The user who last modified this TimeOffRequestResponse.</param>
         /// <param name="ModifiedDate">The timestamp when this request was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Metadata">The version metadata of the time off request.</param>
-        public TimeOffRequestResponse(User User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, StatusEnum? Status = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, string Notes = null, User SubmittedBy = null, DateTime? SubmittedDate = null, User ReviewedBy = null, DateTime? ReviewedDate = null, UserReference ModifiedBy = null, DateTime? ModifiedDate = null, WfmVersionedEntityMetadata Metadata = null)
+        public TimeOffRequestResponse(UserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, StatusEnum? Status = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, string Notes = null, UserReference SubmittedBy = null, DateTime? SubmittedDate = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, UserReference ModifiedBy = null, DateTime? ModifiedDate = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.User = User;
             this.IsFullDayRequest = IsFullDayRequest;
@@ -214,7 +214,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user associated with this time off request</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public User User { get; set; }
+        public UserReference User { get; set; }
         
         
         
@@ -288,7 +288,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user who submitted this time off request</value>
         [DataMember(Name="submittedBy", EmitDefaultValue=false)]
-        public User SubmittedBy { get; set; }
+        public UserReference SubmittedBy { get; set; }
         
         
         
@@ -306,7 +306,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user who reviewed this time off request</value>
         [DataMember(Name="reviewedBy", EmitDefaultValue=false)]
-        public User ReviewedBy { get; set; }
+        public UserReference ReviewedBy { get; set; }
         
         
         

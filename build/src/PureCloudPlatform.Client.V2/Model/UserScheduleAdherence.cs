@@ -508,7 +508,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">The user for whom this status applies.</param>
         /// <param name="ManagementUnit">The management unit to which this user belongs.</param>
         /// <param name="ActiveQueues">The list of queues to which this user is joined.</param>
-        public UserScheduleAdherence(string Name = null, User User = null, ManagementUnit ManagementUnit = null, List<QueueReference> ActiveQueues = null)
+        public UserScheduleAdherence(string Name = null, UserReference User = null, ManagementUnit ManagementUnit = null, List<QueueReference> ActiveQueues = null)
         {
             this.Name = Name;
             this.User = User;
@@ -541,7 +541,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user for whom this status applies</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public User User { get; set; }
+        public UserReference User { get; set; }
         
         
         

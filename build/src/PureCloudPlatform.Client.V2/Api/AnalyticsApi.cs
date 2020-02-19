@@ -193,6 +193,26 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ReportingExportJobListing> GetAnalyticsReportingExportsWithHttpInfo ();
         
         /// <summary>
+        /// Get all export metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ReportingExportMetadataJobListing</returns>
+        ReportingExportMetadataJobListing GetAnalyticsReportingExportsMetadata ();
+
+        /// <summary>
+        /// Get all export metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ReportingExportMetadataJobListing</returns>
+        ApiResponse<ReportingExportMetadataJobListing> GetAnalyticsReportingExportsMetadataWithHttpInfo ();
+        
+        /// <summary>
         /// Get list of reporting metadata.
         /// </summary>
         /// <remarks>
@@ -1003,6 +1023,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ReportingExportJobListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ReportingExportJobListing>> GetAnalyticsReportingExportsAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Get all export metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ReportingExportMetadataJobListing</returns>
+        System.Threading.Tasks.Task<ReportingExportMetadataJobListing> GetAnalyticsReportingExportsMetadataAsync ();
+
+        /// <summary>
+        /// Get all export metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ReportingExportMetadataJobListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ReportingExportMetadataJobListing>> GetAnalyticsReportingExportsMetadataAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get list of reporting metadata.
@@ -3246,6 +3286,186 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ReportingExportJobListing>(localVarStatusCode,
                 localVarHeaders,
                 (ReportingExportJobListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportingExportJobListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get all export metadata 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ReportingExportMetadataJobListing</returns>
+        public ReportingExportMetadataJobListing GetAnalyticsReportingExportsMetadata ()
+        {
+             ApiResponse<ReportingExportMetadataJobListing> localVarResponse = GetAnalyticsReportingExportsMetadataWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all export metadata 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ReportingExportMetadataJobListing</returns>
+        public ApiResponse< ReportingExportMetadataJobListing > GetAnalyticsReportingExportsMetadataWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/analytics/reporting/exports/metadata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingExportsMetadata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingExportsMetadata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportingExportMetadataJobListing>(localVarStatusCode,
+                localVarHeaders,
+                (ReportingExportMetadataJobListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportingExportMetadataJobListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get all export metadata 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ReportingExportMetadataJobListing</returns>
+        public async System.Threading.Tasks.Task<ReportingExportMetadataJobListing> GetAnalyticsReportingExportsMetadataAsync ()
+        {
+             ApiResponse<ReportingExportMetadataJobListing> localVarResponse = await GetAnalyticsReportingExportsMetadataAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all export metadata 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ReportingExportMetadataJobListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ReportingExportMetadataJobListing>> GetAnalyticsReportingExportsMetadataAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/analytics/reporting/exports/metadata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingExportsMetadata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingExportsMetadata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportingExportMetadataJobListing>(localVarStatusCode,
+                localVarHeaders,
+                (ReportingExportMetadataJobListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportingExportMetadataJobListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

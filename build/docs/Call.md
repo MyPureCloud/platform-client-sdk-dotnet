@@ -17,7 +17,7 @@ title: Call
 | **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] |
 | **RecordingId** | **string** | A globally unique identifier for the recording associated with this call. | [optional] |
 | **Segments** | [**List&lt;Segment&gt;**](Segment.html) | The time line of the participant&#39;s call, divided into activity segments. | [optional] |
-| **ErrorInfo** | [**ErrorBody**](ErrorBody.html) |  | [optional] |
+| **ErrorInfo** | [**ErrorInfo**](ErrorInfo.html) |  | [optional] |
 | **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
 | **StartHoldTime** | **DateTime?** | The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **DocumentId** | **string** | If call is an outbound fax of a document from content management, then this is the id in content management. | [optional] |

@@ -74,12 +74,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Mx Record Status
         /// </summary>
         /// <value>Mx Record Status</value>
         [DataMember(Name="mxRecordStatus", EmitDefaultValue=false)]
         public MxRecordStatusEnum? MxRecordStatus { get; set; }
+        
+        
+        
+        
         
         
         
@@ -100,12 +110,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="MxRecordStatus">Mx Record Status (required).</param>
         /// <param name="SubDomain">Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email..</param>
-        public InboundDomain(string Id = null, string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null)
+        /// <param name="MailFromSettings">The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false..</param>
+        /// <param name="CustomSMTPServer">The custom SMTP server integration to use when sending outbound emails from this domain..</param>
+        public InboundDomain(string Id = null, string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null, MailFromResult MailFromSettings = null, DomainEntityRef CustomSMTPServer = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.MxRecordStatus = MxRecordStatus;
             this.SubDomain = SubDomain;
+            this.MailFromSettings = MailFromSettings;
+            this.CustomSMTPServer = CustomSMTPServer;
             
         }
         
@@ -140,6 +154,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false.
+        /// </summary>
+        /// <value>The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false.</value>
+        [DataMember(Name="mailFromSettings", EmitDefaultValue=false)]
+        public MailFromResult MailFromSettings { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The custom SMTP server integration to use when sending outbound emails from this domain.
+        /// </summary>
+        /// <value>The custom SMTP server integration to use when sending outbound emails from this domain.</value>
+        [DataMember(Name="customSMTPServer", EmitDefaultValue=false)]
+        public DomainEntityRef CustomSMTPServer { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -160,6 +192,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  MxRecordStatus: ").Append(MxRecordStatus).Append("\n");
             sb.Append("  SubDomain: ").Append(SubDomain).Append("\n");
+            sb.Append("  MailFromSettings: ").Append(MailFromSettings).Append("\n");
+            sb.Append("  CustomSMTPServer: ").Append(CustomSMTPServer).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -218,6 +252,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SubDomain.Equals(other.SubDomain)
                 ) &&
                 (
+                    this.MailFromSettings == other.MailFromSettings ||
+                    this.MailFromSettings != null &&
+                    this.MailFromSettings.Equals(other.MailFromSettings)
+                ) &&
+                (
+                    this.CustomSMTPServer == other.CustomSMTPServer ||
+                    this.CustomSMTPServer != null &&
+                    this.CustomSMTPServer.Equals(other.CustomSMTPServer)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -247,6 +291,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.SubDomain != null)
                     hash = hash * 59 + this.SubDomain.GetHashCode();
+                
+                if (this.MailFromSettings != null)
+                    hash = hash * 59 + this.MailFromSettings.GetHashCode();
+                
+                if (this.CustomSMTPServer != null)
+                    hash = hash * 59 + this.CustomSMTPServer.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

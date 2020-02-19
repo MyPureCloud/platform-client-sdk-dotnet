@@ -58,20 +58,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// First day of this week schedule in yyyy-MM-dd format
-        /// </summary>
-        /// <value>First day of this week schedule in yyyy-MM-dd format</value>
-        [DataMember(Name="weekDate", EmitDefaultValue=false)]
-        public string WeekDate { get; set; }
-        
-        
-        
-        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// First day of this week schedule in yyyy-MM-dd format
+        /// </summary>
+        /// <value>First day of this week schedule in yyyy-MM-dd format</value>
+        [DataMember(Name="weekDate", EmitDefaultValue=false)]
+        public string WeekDate { get; set; }
         
         
         /// <summary>
@@ -84,8 +84,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class WeekScheduleReference {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -128,14 +128,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.WeekDate == other.WeekDate ||
-                    this.WeekDate != null &&
-                    this.WeekDate.Equals(other.WeekDate)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
+                    this.WeekDate == other.WeekDate ||
+                    this.WeekDate != null &&
+                    this.WeekDate.Equals(other.WeekDate)
                 );
         }
 
@@ -154,11 +154,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.WeekDate != null)
-                    hash = hash * 59 + this.WeekDate.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
+                if (this.WeekDate != null)
+                    hash = hash * 59 + this.WeekDate.GetHashCode();
                 
                 return hash;
             }

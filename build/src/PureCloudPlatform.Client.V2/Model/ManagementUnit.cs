@@ -30,9 +30,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Start day of week for scheduling and forecasting purposes
+        /// Start day of week for scheduling and forecasting purposes. Moving to Business Unit
         /// </summary>
-        /// <value>Start day of week for scheduling and forecasting purposes</value>
+        /// <value>Start day of week for scheduling and forecasting purposes. Moving to Business Unit</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StartDayOfWeekEnum
         {
@@ -119,9 +119,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Start day of week for scheduling and forecasting purposes
+        /// Start day of week for scheduling and forecasting purposes. Moving to Business Unit
         /// </summary>
-        /// <value>Start day of week for scheduling and forecasting purposes</value>
+        /// <value>Start day of week for scheduling and forecasting purposes. Moving to Business Unit</value>
         [DataMember(Name="startDayOfWeek", EmitDefaultValue=false)]
         public StartDayOfWeekEnum? StartDayOfWeek { get; set; }
         
@@ -146,8 +146,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Division">The division to which this entity belongs..</param>
-        /// <param name="StartDayOfWeek">Start day of week for scheduling and forecasting purposes.</param>
-        /// <param name="TimeZone">The time zone for the management unit in standard Olson format.</param>
+        /// <param name="StartDayOfWeek">Start day of week for scheduling and forecasting purposes. Moving to Business Unit.</param>
+        /// <param name="TimeZone">The time zone for the management unit in standard Olson format.  Moving to Business Unit.</param>
         /// <param name="Settings">The configuration settings for this management unit.</param>
         /// <param name="Metadata">Version info metadata for this management unit. Deprecated, use settings.metadata.</param>
         /// <param name="ModifiedBy">The user who last modified this entity.  Deprecated, use field from settings.metadata instead.</param>
@@ -194,9 +194,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The time zone for the management unit in standard Olson format
+        /// The time zone for the management unit in standard Olson format.  Moving to Business Unit
         /// </summary>
-        /// <value>The time zone for the management unit in standard Olson format</value>
+        /// <value>The time zone for the management unit in standard Olson format.  Moving to Business Unit</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
         

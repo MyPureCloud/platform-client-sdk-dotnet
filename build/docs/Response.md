@@ -17,6 +17,8 @@ title: Response
 | **InteractionType** | **string** | The interaction type for this response. | [optional] |
 | **Substitutions** | [**List&lt;ResponseSubstitution&gt;**](ResponseSubstitution.html) | Details about any text substitutions used in the texts for this response. | [optional] |
 | **SubstitutionsSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | Metadata about the text substitutions in json schema format. | [optional] |
+| **ResponseType** | **string** | The response type represented by the response | [optional] |
+| **MessagingTemplate** | [**MessagingTemplate**](MessagingTemplate.html) | The messaging template definition. This is required when adding to a library with responseType set to MessagingTemplate. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

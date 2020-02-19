@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingQueue**](RoutingApi.html#deleteroutingqueue) | **DELETE** /api/v2/routing/queues/{queueId} | Delete a queue |
 | [**DeleteRoutingQueueUser**](RoutingApi.html#deleteroutingqueueuser) | **DELETE** /api/v2/routing/queues/{queueId}/users/{memberId} | Delete queue member |
 | [**DeleteRoutingQueueWrapupcode**](RoutingApi.html#deleteroutingqueuewrapupcode) | **DELETE** /api/v2/routing/queues/{queueId}/wrapupcodes/{codeId} | Delete a wrap-up code from a queue |
+| [**DeleteRoutingSettings**](RoutingApi.html#deleteroutingsettings) | **DELETE** /api/v2/routing/settings | Delete an organization&#39;s routing settings |
 | [**DeleteRoutingSkill**](RoutingApi.html#deleteroutingskill) | **DELETE** /api/v2/routing/skills/{skillId} | Delete Routing Skill |
 | [**DeleteRoutingSmsPhonenumber**](RoutingApi.html#deleteroutingsmsphonenumber) | **DELETE** /api/v2/routing/sms/phonenumbers/{addressId} | Delete a phone number provisioned for SMS. |
 | [**DeleteRoutingUtilization**](RoutingApi.html#deleteroutingutilization) | **DELETE** /api/v2/routing/utilization | Delete the organization-wide max utilization settings and revert to the system default. |
@@ -35,6 +36,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingQueuesDivisionviews**](RoutingApi.html#getroutingqueuesdivisionviews) | **GET** /api/v2/routing/queues/divisionviews | Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s). |
 | [**GetRoutingQueuesDivisionviewsAll**](RoutingApi.html#getroutingqueuesdivisionviewsall) | **GET** /api/v2/routing/queues/divisionviews/all | Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization. |
 | [**GetRoutingQueuesMe**](RoutingApi.html#getroutingqueuesme) | **GET** /api/v2/routing/queues/me | Get a paged listing of queues the user is a member of. |
+| [**GetRoutingSettings**](RoutingApi.html#getroutingsettings) | **GET** /api/v2/routing/settings | Get an organization&#39;s routing settings |
 | [**GetRoutingSettingsContactcenter**](RoutingApi.html#getroutingsettingscontactcenter) | **GET** /api/v2/routing/settings/contactcenter | Get Contact Center Settings |
 | [**GetRoutingSettingsTranscription**](RoutingApi.html#getroutingsettingstranscription) | **GET** /api/v2/routing/settings/transcription | Get Transcription Settings |
 | [**GetRoutingSkill**](RoutingApi.html#getroutingskill) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
@@ -74,6 +76,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutRoutingEmailDomainRoute**](RoutingApi.html#putroutingemaildomainroute) | **PUT** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
 | [**PutRoutingMessageRecipient**](RoutingApi.html#putroutingmessagerecipient) | **PUT** /api/v2/routing/message/recipients/{recipientId} | Update a recipient |
 | [**PutRoutingQueue**](RoutingApi.html#putroutingqueue) | **PUT** /api/v2/routing/queues/{queueId} | Update a queue |
+| [**PutRoutingSettings**](RoutingApi.html#putroutingsettings) | **PUT** /api/v2/routing/settings | Update an organization&#39;s routing settings |
 | [**PutRoutingSettingsTranscription**](RoutingApi.html#putroutingsettingstranscription) | **PUT** /api/v2/routing/settings/transcription | Update Transcription Settings |
 | [**PutRoutingSmsPhonenumber**](RoutingApi.html#putroutingsmsphonenumber) | **PUT** /api/v2/routing/sms/phonenumbers/{addressId} | Update a phone number provisioned for SMS. |
 | [**PutRoutingUtilization**](RoutingApi.html#putroutingutilization) | **PUT** /api/v2/routing/utilization | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
@@ -384,6 +387,61 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **codeId** | **string**| Code ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteroutingsettings"></a>
+
+## void DeleteRoutingSettings ()
+
+
+
+Delete an organization's routing settings
+
+
+
+Requires ANY permissions: 
+
+* routing:settings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RoutingApi();
+
+            try
+            { 
+                // Delete an organization's routing settings
+                apiInstance.DeleteRoutingSettings();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteRoutingSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
 {: class="table table-striped"}
 
 ### Return type
@@ -1860,6 +1918,61 @@ namespace Example
 ### Return type
 
 [**UserQueueEntityListing**](UserQueueEntityListing.html)
+
+<a name="getroutingsettings"></a>
+
+## [**RoutingSettings**](RoutingSettings.html) GetRoutingSettings ()
+
+
+
+Get an organization's routing settings
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RoutingApi();
+
+            try
+            { 
+                // Get an organization's routing settings
+                RoutingSettings result = apiInstance.GetRoutingSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**RoutingSettings**](RoutingSettings.html)
 
 <a name="getroutingsettingscontactcenter"></a>
 
@@ -4319,6 +4432,67 @@ namespace Example
 ### Return type
 
 [**Queue**](Queue.html)
+
+<a name="putroutingsettings"></a>
+
+## [**RoutingSettings**](RoutingSettings.html) PutRoutingSettings (RoutingSettings body)
+
+
+
+Update an organization's routing settings
+
+
+
+Requires ANY permissions: 
+
+* routing:settings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRoutingSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RoutingApi();
+            var body = new RoutingSettings(); // RoutingSettings | Organization Settings
+
+            try
+            { 
+                // Update an organization's routing settings
+                RoutingSettings result = apiInstance.PutRoutingSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PutRoutingSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**RoutingSettings**](RoutingSettings.html)| Organization Settings |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RoutingSettings**](RoutingSettings.html)
 
 <a name="putroutingsettingstranscription"></a>
 

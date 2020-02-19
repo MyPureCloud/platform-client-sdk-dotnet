@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CreateManagementUnitSettingsRequest" /> class.
         /// </summary>
         /// <param name="Adherence">Adherence settings for this management unit.</param>
-        /// <param name="ShortTermForecasting">Short term forecasting settings for this management unit.</param>
+        /// <param name="ShortTermForecasting">Short term forecasting settings for this management unit.  Moving to Business Unit.</param>
         /// <param name="TimeOff">Time off request settings for this management unit.</param>
         /// <param name="Scheduling">Scheduling settings for this management unit.</param>
         /// <param name="ShiftTrading">Shift trade settings for this management unit.</param>
@@ -76,9 +76,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Short term forecasting settings for this management unit
+        /// Short term forecasting settings for this management unit.  Moving to Business Unit
         /// </summary>
-        /// <value>Short term forecasting settings for this management unit</value>
+        /// <value>Short term forecasting settings for this management unit.  Moving to Business Unit</value>
         [DataMember(Name="shortTermForecasting", EmitDefaultValue=false)]
         public ShortTermForecastingSettings ShortTermForecasting { get; set; }
         

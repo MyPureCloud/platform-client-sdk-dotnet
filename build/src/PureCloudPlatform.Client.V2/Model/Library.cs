@@ -35,6 +35,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The response type for the library. If set, only response's of this type may be added to this library.
+        /// </summary>
+        /// <value>The response type for the library. If set, only response's of this type may be added to this library.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ResponseTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Messagingtemplate for "MessagingTemplate"
+            /// </summary>
+            [EnumMember(Value = "MessagingTemplate")]
+            Messagingtemplate
+        }
         
         
         
@@ -46,6 +67,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The response type for the library. If set, only response's of this type may be added to this library.
+        /// </summary>
+        /// <value>The response type for the library. If set, only response's of this type may be added to this library.</value>
+        [DataMember(Name="responseType", EmitDefaultValue=false)]
+        public ResponseTypeEnum? ResponseType { get; set; }
         
         
         
@@ -61,15 +95,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Library" /> class.
         /// </summary>
         /// <param name="Name">The library name. (required).</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="CreatedBy">CreatedBy.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public Library(string Name = null, int? Version = null, User CreatedBy = null, DateTime? DateCreated = null)
+        /// <param name="CreatedBy">User that created the library..</param>
+        /// <param name="ResponseType">The response type for the library. If set, only response&#39;s of this type may be added to this library..</param>
+        public Library(string Name = null, User CreatedBy = null, ResponseTypeEnum? ResponseType = null)
         {
             this.Name = Name;
-            this.Version = Version;
             this.CreatedBy = CreatedBy;
-            this.DateCreated = DateCreated;
+            this.ResponseType = ResponseType;
             
         }
         
@@ -94,27 +126,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Version
+        /// Current version for this resource.
         /// </summary>
+        /// <value>Current version for this resource.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
+        public int? Version { get; private set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CreatedBy
+        /// User that created the library.
         /// </summary>
+        /// <value>User that created the library.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public User CreatedBy { get; set; }
         
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
+        public DateTime? DateCreated { get; private set; }
+        
+        
         
         
         
@@ -140,6 +176,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  ResponseType: ").Append(ResponseType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -203,6 +240,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.ResponseType == other.ResponseType ||
+                    this.ResponseType != null &&
+                    this.ResponseType.Equals(other.ResponseType)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -235,6 +277,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
+                if (this.ResponseType != null)
+                    hash = hash * 59 + this.ResponseType.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -114,6 +114,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
+        
+        
+        
+        /// <summary>
         /// First day of this week schedule in yyyy-MM-dd format
         /// </summary>
         /// <value>First day of this week schedule in yyyy-MM-dd format</value>
@@ -193,15 +202,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? AgentSchedulesVersion { get; set; }
         
         
-        
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -212,6 +212,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class WeekSchedule {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Published: ").Append(Published).Append("\n");
@@ -221,7 +222,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UserSchedules: ").Append(UserSchedules).Append("\n");
             sb.Append("  HeadcountForecast: ").Append(HeadcountForecast).Append("\n");
             sb.Append("  AgentSchedulesVersion: ").Append(AgentSchedulesVersion).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -262,6 +262,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 ) &&
                 (
                     this.WeekDate == other.WeekDate ||
@@ -307,11 +312,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentSchedulesVersion == other.AgentSchedulesVersion ||
                     this.AgentSchedulesVersion != null &&
                     this.AgentSchedulesVersion.Equals(other.AgentSchedulesVersion)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -329,6 +329,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 if (this.WeekDate != null)
                     hash = hash * 59 + this.WeekDate.GetHashCode();
@@ -356,9 +359,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.AgentSchedulesVersion != null)
                     hash = hash * 59 + this.AgentSchedulesVersion.GetHashCode();
-                
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

@@ -2773,6 +2773,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EmailMessage> PostConversationsEmailMessagesWithHttpInfo (string conversationId, EmailMessage body);
         
         /// <summary>
+        /// Copy attachments from an email message to the current draft.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Copy Attachment Request</param>
+        /// <returns>EmailMessage</returns>
+        EmailMessage PostConversationsEmailMessagesDraftAttachmentsCopy (string conversationId, CopyAttachmentsRequest body);
+
+        /// <summary>
+        /// Copy attachments from an email message to the current draft.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Copy Attachment Request</param>
+        /// <returns>ApiResponse of EmailMessage</returns>
+        ApiResponse<EmailMessage> PostConversationsEmailMessagesDraftAttachmentsCopyWithHttpInfo (string conversationId, CopyAttachmentsRequest body);
+        
+        /// <summary>
         /// Replace this participant with the specified user and/or address
         /// </summary>
         /// <remarks>
@@ -5933,6 +5957,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Reply</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmailMessage>> PostConversationsEmailMessagesAsyncWithHttpInfo (string conversationId, EmailMessage body);
+        
+        /// <summary>
+        /// Copy attachments from an email message to the current draft.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Copy Attachment Request</param>
+        /// <returns>Task of EmailMessage</returns>
+        System.Threading.Tasks.Task<EmailMessage> PostConversationsEmailMessagesDraftAttachmentsCopyAsync (string conversationId, CopyAttachmentsRequest body);
+
+        /// <summary>
+        /// Copy attachments from an email message to the current draft.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Copy Attachment Request</param>
+        /// <returns>Task of ApiResponse (EmailMessage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> PostConversationsEmailMessagesDraftAttachmentsCopyAsyncWithHttpInfo (string conversationId, CopyAttachmentsRequest body);
         
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -30098,6 +30146,220 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailMessage>(localVarStatusCode,
+                localVarHeaders,
+                (EmailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Copy attachments from an email message to the current draft. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Copy Attachment Request</param>
+        /// <returns>EmailMessage</returns>
+        public EmailMessage PostConversationsEmailMessagesDraftAttachmentsCopy (string conversationId, CopyAttachmentsRequest body)
+        {
+             ApiResponse<EmailMessage> localVarResponse = PostConversationsEmailMessagesDraftAttachmentsCopyWithHttpInfo(conversationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Copy attachments from an email message to the current draft. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Copy Attachment Request</param>
+        /// <returns>ApiResponse of EmailMessage</returns>
+        public ApiResponse< EmailMessage > PostConversationsEmailMessagesDraftAttachmentsCopyWithHttpInfo (string conversationId, CopyAttachmentsRequest body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsEmailMessagesDraftAttachmentsCopy");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailMessagesDraftAttachmentsCopy");
+
+            var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/draft/attachments/copy";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailMessagesDraftAttachmentsCopy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailMessagesDraftAttachmentsCopy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailMessage>(localVarStatusCode,
+                localVarHeaders,
+                (EmailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Copy attachments from an email message to the current draft. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Copy Attachment Request</param>
+        /// <returns>Task of EmailMessage</returns>
+        public async System.Threading.Tasks.Task<EmailMessage> PostConversationsEmailMessagesDraftAttachmentsCopyAsync (string conversationId, CopyAttachmentsRequest body)
+        {
+             ApiResponse<EmailMessage> localVarResponse = await PostConversationsEmailMessagesDraftAttachmentsCopyAsyncWithHttpInfo(conversationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Copy attachments from an email message to the current draft. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Copy Attachment Request</param>
+        /// <returns>Task of ApiResponse (EmailMessage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> PostConversationsEmailMessagesDraftAttachmentsCopyAsyncWithHttpInfo (string conversationId, CopyAttachmentsRequest body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsEmailMessagesDraftAttachmentsCopy");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailMessagesDraftAttachmentsCopy");
+            
+
+            var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/draft/attachments/copy";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailMessagesDraftAttachmentsCopy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailMessagesDraftAttachmentsCopy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EmailMessage>(localVarStatusCode,
                 localVarHeaders,

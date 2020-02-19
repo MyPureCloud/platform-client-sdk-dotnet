@@ -29,6 +29,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The method used to create this forecast
         /// </summary>
@@ -90,15 +93,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
         /// <summary>
         /// The method used to create this forecast
         /// </summary>
         /// <value>The method used to create this forecast</value>
         [DataMember(Name="creationMethod", EmitDefaultValue=false)]
         public CreationMethodEnum? CreationMethod { get; set; }
-        
-        
         
         
         
@@ -121,16 +121,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShortTermForecast" /> class.
         /// </summary>
-        /// <param name="Id">The id of the short term forecast (required).</param>
         /// <param name="WeekDate">The weekDate of the short term forecast in yyyy-MM-dd format (required).</param>
         /// <param name="Description">The description of the short term forecast.</param>
         /// <param name="Metadata">Metadata for this forecast (required).</param>
         /// <param name="SourceData">The source data references and metadata for this forecast.</param>
         /// <param name="Modifications">The modifications that have been applied to this forecast.</param>
         /// <param name="GenerationResults">Forecast generation results, if applicable.</param>
-        public ShortTermForecast(string Id = null, string WeekDate = null, string Description = null, WfmVersionedEntityMetadata Metadata = null, ListWrapperForecastSourceDayPointer SourceData = null, ListWrapperWfmForecastModification Modifications = null, ForecastGenerationResult GenerationResults = null)
+        public ShortTermForecast(string WeekDate = null, string Description = null, WfmVersionedEntityMetadata Metadata = null, ListWrapperForecastSourceDayPointer SourceData = null, ListWrapperWfmForecastModification Modifications = null, ForecastGenerationResult GenerationResults = null)
         {
-            this.Id = Id;
             this.WeekDate = WeekDate;
             this.Description = Description;
             this.Metadata = Metadata;
@@ -143,11 +141,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The id of the short term forecast
+        /// The globally unique identifier for the object.
         /// </summary>
-        /// <value>The id of the short term forecast</value>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public string Id { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
         
         
         
@@ -215,15 +222,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public ForecastGenerationResult GenerationResults { get; set; }
         
         
-        
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -234,6 +232,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ShortTermForecast {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  CreationMethod: ").Append(CreationMethod).Append("\n");
@@ -242,7 +241,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ReferenceStartDate: ").Append(ReferenceStartDate).Append("\n");
             sb.Append("  Modifications: ").Append(Modifications).Append("\n");
             sb.Append("  GenerationResults: ").Append(GenerationResults).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -285,6 +283,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
                     this.WeekDate == other.WeekDate ||
                     this.WeekDate != null &&
                     this.WeekDate.Equals(other.WeekDate)
@@ -323,11 +326,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.GenerationResults == other.GenerationResults ||
                     this.GenerationResults != null &&
                     this.GenerationResults.Equals(other.GenerationResults)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -345,6 +343,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 if (this.WeekDate != null)
                     hash = hash * 59 + this.WeekDate.GetHashCode();
@@ -369,9 +370,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.GenerationResults != null)
                     hash = hash * 59 + this.GenerationResults.GetHashCode();
-                
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

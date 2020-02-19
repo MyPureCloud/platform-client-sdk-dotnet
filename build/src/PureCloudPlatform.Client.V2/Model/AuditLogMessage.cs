@@ -178,7 +178,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Publish for "Publish"
             /// </summary>
             [EnumMember(Value = "Publish")]
-            Publish
+            Publish,
+            
+            /// <summary>
+            /// Enum Authorize for "Authorize"
+            /// </summary>
+            [EnumMember(Value = "Authorize")]
+            Authorize,
+            
+            /// <summary>
+            /// Enum Deauthorize for "Deauthorize"
+            /// </summary>
+            [EnumMember(Value = "Deauthorize")]
+            Deauthorize,
+            
+            /// <summary>
+            /// Enum Authenticate for "Authenticate"
+            /// </summary>
+            [EnumMember(Value = "Authenticate")]
+            Authenticate,
+            
+            /// <summary>
+            /// Enum Changepassword for "ChangePassword"
+            /// </summary>
+            [EnumMember(Value = "ChangePassword")]
+            Changepassword
         }
         
         
@@ -243,6 +267,24 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "AccessToken")]
             Accesstoken,
+            
+            /// <summary>
+            /// Enum Oauthclient for "OAuthClient"
+            /// </summary>
+            [EnumMember(Value = "OAuthClient")]
+            Oauthclient,
+            
+            /// <summary>
+            /// Enum Authorganization for "AuthOrganization"
+            /// </summary>
+            [EnumMember(Value = "AuthOrganization")]
+            Authorganization,
+            
+            /// <summary>
+            /// Enum Authuser for "AuthUser"
+            /// </summary>
+            [EnumMember(Value = "AuthUser")]
+            Authuser,
             
             /// <summary>
             /// Enum Bulkactions for "BulkActions"

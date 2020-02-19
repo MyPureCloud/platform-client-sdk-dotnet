@@ -136,7 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExactStartTimeMinutesFromMidnight">Exact start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == false.</param>
         /// <param name="EarliestStartTimeMinutesFromMidnight">Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true.</param>
         /// <param name="LatestStartTimeMinutesFromMidnight">Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true.</param>
-        /// <param name="ConstrainStopTime">Whether the latest stop time constraint for the shift is enabled.</param>
+        /// <param name="ConstrainStopTime">Whether the latest stop time constraint for the shift is enabled.  Deprecated, use constrainLatestStopTime instead.</param>
         /// <param name="ConstrainLatestStopTime">Whether the latest stop time constraint for the shift is enabled.</param>
         /// <param name="LatestStopTimeMinutesFromMidnight">Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true.</param>
         /// <param name="StartIncrementMinutes">Increment in offset minutes that would contribute to different possible start times for the shift. Used if flexibleStartTime == true.</param>
@@ -232,9 +232,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Whether the latest stop time constraint for the shift is enabled
+        /// Whether the latest stop time constraint for the shift is enabled.  Deprecated, use constrainLatestStopTime instead
         /// </summary>
-        /// <value>Whether the latest stop time constraint for the shift is enabled</value>
+        /// <value>Whether the latest stop time constraint for the shift is enabled.  Deprecated, use constrainLatestStopTime instead</value>
         [DataMember(Name="constrainStopTime", EmitDefaultValue=false)]
         public bool? ConstrainStopTime { get; set; }
         

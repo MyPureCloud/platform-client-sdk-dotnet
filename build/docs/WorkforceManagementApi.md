@@ -147,7 +147,7 @@ void (empty response body)
 
 ## void DeleteWorkforcemanagementManagementunitActivitycode (string muId, string acId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Deletes an activity code
 
@@ -209,7 +209,7 @@ void (empty response body)
 
 ## void DeleteWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Cancel a schedule run
 
@@ -271,7 +271,7 @@ void (empty response body)
 
 ## void DeleteWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete a service goal group
 
@@ -333,7 +333,7 @@ void (empty response body)
 
 ## void DeleteWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete a schedule
 
@@ -397,7 +397,7 @@ void (empty response body)
 
 ## void DeleteWorkforcemanagementManagementunitWeekShorttermforecast (string managementUnitId, string weekDateId, string forecastId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete a short term forecast
 
@@ -750,7 +750,7 @@ namespace Example
 
 ## [**ActivityCode**](ActivityCode.html) GetWorkforcemanagementManagementunitActivitycode (string muId, string acId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get an activity code
 
@@ -813,7 +813,7 @@ namespace Example
 
 ## [**ActivityCodeContainer**](ActivityCodeContainer.html) GetWorkforcemanagementManagementunitActivitycodes (string muId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get activity codes
 
@@ -976,7 +976,7 @@ namespace Example
 
 ## [**WfmIntradayQueueListing**](WfmIntradayQueueListing.html) GetWorkforcemanagementManagementunitIntradayQueues (string muId, string date)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get intraday queues for the given date
 
@@ -1039,7 +1039,7 @@ namespace Example
 
 ## [**SchedulingRunResponse**](SchedulingRunResponse.html) GetWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Gets the status for a specific scheduling run
 
@@ -1102,7 +1102,7 @@ namespace Example
 
 ## [**RescheduleResult**](RescheduleResult.html) GetWorkforcemanagementManagementunitSchedulingRunResult (string managementUnitId, string runId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Gets the result of a specific scheduling run
 
@@ -1165,7 +1165,7 @@ namespace Example
 
 ## [**SchedulingRunListResponse**](SchedulingRunListResponse.html) GetWorkforcemanagementManagementunitSchedulingRuns (string managementUnitId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get the status of all the ongoing schedule runs
 
@@ -1226,7 +1226,7 @@ namespace Example
 
 ## [**ServiceGoalGroup**](ServiceGoalGroup.html) GetWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a service goal group
 
@@ -1289,7 +1289,7 @@ namespace Example
 
 ## [**ServiceGoalGroupList**](ServiceGoalGroupList.html) GetWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get service goal groups
 
@@ -1732,7 +1732,7 @@ namespace Example
 
 ## [**WeekScheduleResponse**](WeekScheduleResponse.html) GetWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a week schedule
 
@@ -1802,7 +1802,7 @@ namespace Example
 
 ## [**WeekScheduleGenerationResult**](WeekScheduleGenerationResult.html) GetWorkforcemanagementManagementunitWeekScheduleGenerationresults (string managementUnitId, string weekId, string scheduleId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get week schedule generation results
 
@@ -1868,7 +1868,7 @@ namespace Example
 
 ## [**WeekScheduleListResponse**](WeekScheduleListResponse.html) GetWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get the list of schedules in a week in management unit
 
@@ -1938,7 +1938,7 @@ namespace Example
 
 ## [**ForecastResultResponse**](ForecastResultResponse.html) GetWorkforcemanagementManagementunitWeekShorttermforecastFinal (string managementUnitId, string weekDateId, string forecastId, bool? forceDownloadService = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get the final result of a short term forecast calculation with modifications applied
 
@@ -2005,7 +2005,7 @@ namespace Example
 
 ## [**ShortTermForecastListResponse**](ShortTermForecastListResponse.html) GetWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get short term forecasts
 
@@ -2689,7 +2689,7 @@ namespace Example
 
 ## [**ActivityCode**](ActivityCode.html) PatchWorkforcemanagementManagementunitActivitycode (string muId, string acId, UpdateActivityCodeRequest body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update an activity code
 
@@ -2754,7 +2754,7 @@ namespace Example
 
 ## [**RescheduleResult**](RescheduleResult.html) PatchWorkforcemanagementManagementunitSchedulingRun (string managementUnitId, string runId, UpdateSchedulingRunRequest body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
 
@@ -2819,7 +2819,7 @@ namespace Example
 
 ## [**ServiceGoalGroup**](ServiceGoalGroup.html) PatchWorkforcemanagementManagementunitServicegoalgroup (string managementUnitId, string serviceGoalGroupId, ServiceGoalGroup body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update a service goal group
 
@@ -2884,7 +2884,7 @@ namespace Example
 
 ## [**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html) PatchWorkforcemanagementManagementunitSettings (string muId, ManagementUnitSettingsRequest body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update the settings for the requested management unit
 
@@ -3014,7 +3014,7 @@ namespace Example
 
 ## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) PatchWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, UpdateWeekScheduleRequest body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update a week schedule
 
@@ -3274,7 +3274,7 @@ namespace Example
 
 ## [**ActivityCode**](ActivityCode.html) PostWorkforcemanagementManagementunitActivitycodes (string muId, CreateActivityCodeRequest body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create a new activity code
 
@@ -3468,7 +3468,7 @@ namespace Example
 
 ## [**IntradayResponse**](IntradayResponse.html) PostWorkforcemanagementManagementunitIntraday (string muId, IntradayQueryDataCommand body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get intraday data for the given date for the requested queueIds
 
@@ -3594,7 +3594,7 @@ namespace Example
 
 ## [**UserScheduleContainer**](UserScheduleContainer.html) PostWorkforcemanagementManagementunitSchedulesSearch (string muId, UserListScheduleRequestBody body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Query published schedules for given given time range for set of users
 
@@ -3658,7 +3658,7 @@ namespace Example
 
 ## [**ServiceGoalGroup**](ServiceGoalGroup.html) PostWorkforcemanagementManagementunitServicegoalgroups (string managementUnitId, CreateServiceGoalGroupRequest body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create a new service goal group
 
@@ -3784,7 +3784,7 @@ namespace Example
 
 ## [**TimeOffRequestEntityList**](TimeOffRequestEntityList.html) PostWorkforcemanagementManagementunitTimeoffrequestsFetchdetails (string muId, TimeOffRequestLookupList body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Gets a list of time off requests from lookup ids
 
@@ -3910,7 +3910,7 @@ namespace Example
 
 ## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) PostWorkforcemanagementManagementunitWeekScheduleCopy (string managementUnitId, string weekId, string scheduleId, bool? forceAsync = null, bool? forceDownloadService = null, CopyWeekScheduleRequest body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Copy a week schedule
 
@@ -3981,7 +3981,7 @@ namespace Example
 
 ## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) PostWorkforcemanagementManagementunitWeekScheduleReschedule (string managementUnitId, string weekId, string scheduleId, RescheduleRequest body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
 
@@ -4048,7 +4048,7 @@ namespace Example
 
 ## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) PostWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId, bool? forceAsync = null, bool? forceDownloadService = null, ImportWeekScheduleRequest body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
 
@@ -4117,7 +4117,7 @@ namespace Example
 
 ## [**GenerateWeekScheduleResponse**](GenerateWeekScheduleResponse.html) PostWorkforcemanagementManagementunitWeekSchedulesGenerate (string managementUnitId, string weekId, GenerateWeekScheduleRequest body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Generate a week schedule
 
@@ -4182,7 +4182,7 @@ namespace Example
 
 ## [**PartialUploadResponse**](PartialUploadResponse.html) PostWorkforcemanagementManagementunitWeekSchedulesPartialupload (string managementUnitId, string weekId, UserSchedulesPartialUploadRequest body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Partial upload of user schedules where activity count is greater than 17500
 
@@ -4248,7 +4248,7 @@ namespace Example
 
 ## [**ShortTermForecastResponse**](ShortTermForecastResponse.html) PostWorkforcemanagementManagementunitWeekShorttermforecastCopy (string managementUnitId, string weekDateId, string forecastId, CopyShortTermForecastRequest body, bool? forceAsync = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Copy a short term forecast
 
@@ -4317,7 +4317,7 @@ namespace Example
 
 ## [**ShortTermForecastResponse**](ShortTermForecastResponse.html) PostWorkforcemanagementManagementunitWeekShorttermforecasts (string managementUnitId, string weekDateId, ImportShortTermForecastRequest body, bool? forceAsync = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Import a short term forecast
 
@@ -4384,7 +4384,7 @@ namespace Example
 
 ## [**GenerateShortTermForecastResponse**](GenerateShortTermForecastResponse.html) PostWorkforcemanagementManagementunitWeekShorttermforecastsGenerate (string managementUnitId, string weekDateId, GenerateShortTermForecastRequest body, bool? forceAsync = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Generate a short term forecast
 
@@ -4451,7 +4451,7 @@ namespace Example
 
 ## [**PartialUploadResponse**](PartialUploadResponse.html) PostWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload (string managementUnitId, string weekDateId, RouteGroupList body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Import a short term forecast
 
@@ -4765,7 +4765,7 @@ namespace Example
 
 ## [**UserScheduleContainer**](UserScheduleContainer.html) PostWorkforcemanagementSchedules (CurrentUserScheduleRequestBody body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get published schedule for the current user
 
@@ -4774,7 +4774,6 @@ Get published schedule for the current user
 Requires ANY permissions: 
 
 * wfm:agentSchedule:view
-* wfm:publishedSchedule:view
 
 ### Example
 ```{"language":"csharp"}

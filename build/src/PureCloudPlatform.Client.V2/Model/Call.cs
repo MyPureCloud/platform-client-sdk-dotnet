@@ -458,7 +458,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
         /// <param name="Self">Address and name data for a call endpoint..</param>
         /// <param name="Other">Address and name data for a call endpoint..</param>
-        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null)
+        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null)
         {
             this.State = State;
             this.Id = Id;
@@ -563,7 +563,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
-        public ErrorBody ErrorInfo { get; set; }
+        public ErrorInfo ErrorInfo { get; set; }
         
         
         

@@ -85,6 +85,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2CreateUser" /> class.
@@ -108,7 +113,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Groups">The list of groups that the user is a member of..</param>
         /// <param name="Roles">The list of roles assigned to the user..</param>
         /// <param name="Urnietfparamsscimschemasextensionenterprise20User">The URI of the schema for the enterprise user..</param>
-        public ScimV2CreateUser(List<string> Schemas = null, bool? Active = null, string UserName = null, string DisplayName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, List<Photo> Photos = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, List<string> Roles = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null)
+        /// <param name="Urnietfparamsscimschemasextensiongenesyspurecloud20User">Urnietfparamsscimschemasextensiongenesyspurecloud20User.</param>
+        public ScimV2CreateUser(List<string> Schemas = null, bool? Active = null, string UserName = null, string DisplayName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, List<Photo> Photos = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, List<ScimUserRole> Roles = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null, ScimUserExtensions Urnietfparamsscimschemasextensiongenesyspurecloud20User = null)
         {
             this.Schemas = Schemas;
             this.Active = Active;
@@ -123,6 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Groups = Groups;
             this.Roles = Roles;
             this.Urnietfparamsscimschemasextensionenterprise20User = Urnietfparamsscimschemasextensionenterprise20User;
+            this.Urnietfparamsscimschemasextensiongenesyspurecloud20User = Urnietfparamsscimschemasextensiongenesyspurecloud20User;
             
         }
         
@@ -232,7 +239,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of roles assigned to the user.</value>
         [DataMember(Name="roles", EmitDefaultValue=false)]
-        public List<string> Roles { get; set; }
+        public List<ScimUserRole> Roles { get; set; }
         
         
         
@@ -242,6 +249,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The URI of the schema for the enterprise user.</value>
         [DataMember(Name="urn:ietf:params:scim:schemas:extension:enterprise:2.0:User", EmitDefaultValue=false)]
         public ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Urnietfparamsscimschemasextensiongenesyspurecloud20User
+        /// </summary>
+        [DataMember(Name="urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User", EmitDefaultValue=false)]
+        public ScimUserExtensions Urnietfparamsscimschemasextensiongenesyspurecloud20User { get; set; }
         
         
         /// <summary>
@@ -266,6 +281,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Groups: ").Append(Groups).Append("\n");
             sb.Append("  Roles: ").Append(Roles).Append("\n");
             sb.Append("  Urnietfparamsscimschemasextensionenterprise20User: ").Append(Urnietfparamsscimschemasextensionenterprise20User).Append("\n");
+            sb.Append("  Urnietfparamsscimschemasextensiongenesyspurecloud20User: ").Append(Urnietfparamsscimschemasextensiongenesyspurecloud20User).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -366,6 +382,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Urnietfparamsscimschemasextensionenterprise20User == other.Urnietfparamsscimschemasextensionenterprise20User ||
                     this.Urnietfparamsscimschemasextensionenterprise20User != null &&
                     this.Urnietfparamsscimschemasextensionenterprise20User.Equals(other.Urnietfparamsscimschemasextensionenterprise20User)
+                ) &&
+                (
+                    this.Urnietfparamsscimschemasextensiongenesyspurecloud20User == other.Urnietfparamsscimschemasextensiongenesyspurecloud20User ||
+                    this.Urnietfparamsscimschemasextensiongenesyspurecloud20User != null &&
+                    this.Urnietfparamsscimschemasextensiongenesyspurecloud20User.Equals(other.Urnietfparamsscimschemasextensiongenesyspurecloud20User)
                 );
         }
 
@@ -419,6 +440,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Urnietfparamsscimschemasextensionenterprise20User != null)
                     hash = hash * 59 + this.Urnietfparamsscimschemasextensionenterprise20User.GetHashCode();
+                
+                if (this.Urnietfparamsscimschemasextensiongenesyspurecloud20User != null)
+                    hash = hash * 59 + this.Urnietfparamsscimschemasextensiongenesyspurecloud20User.GetHashCode();
                 
                 return hash;
             }

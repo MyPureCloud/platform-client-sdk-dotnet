@@ -57,7 +57,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Resourcetype for "ResourceType"
             /// </summary>
             [EnumMember(Value = "ResourceType")]
-            Resourcetype
+            Resourcetype,
+            
+            /// <summary>
+            /// Enum Schema for "Schema"
+            /// </summary>
+            [EnumMember(Value = "Schema")]
+            Schema
         }
         
         

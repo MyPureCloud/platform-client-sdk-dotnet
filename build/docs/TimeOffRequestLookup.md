@@ -8,7 +8,7 @@ title: TimeOffRequestLookup
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The id of the time off request | |
-| **User** | [**User**](User.html) | The user that the time off request belongs to | |
+| **User** | [**UserReference**](UserReference.html) | The user that the time off request belongs to | |
 | **IsFullDayRequest** | **bool?** | Whether this is a full day request (false means partial day) | [optional] |
 | **MarkedAsRead** | **bool?** | Whether this request has been marked as read by the agent | [optional] |
 | **ActivityCodeId** | **string** | The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category | [optional] |
@@ -17,9 +17,9 @@ title: TimeOffRequestLookup
 | **FullDayManagementUnitDates** | **List&lt;string&gt;** | A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest == true | [optional] |
 | **DailyDurationMinutes** | **int?** | The daily duration of this time off request in minutes | [optional] |
 | **Notes** | **string** | Notes about the time off request | [optional] |
-| **SubmittedBy** | [**User**](User.html) | The user who submitted this time off request | [optional] |
+| **SubmittedBy** | [**UserReference**](UserReference.html) | The user who submitted this time off request | [optional] |
 | **SubmittedDate** | **DateTime?** | The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **ReviewedBy** | [**User**](User.html) | The user who reviewed this time off request | [optional] |
+| **ReviewedBy** | [**UserReference**](UserReference.html) | The user who reviewed this time off request | [optional] |
 | **ReviewedDate** | **DateTime?** | The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | The version metadata of the time off request | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

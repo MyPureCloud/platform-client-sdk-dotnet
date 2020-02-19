@@ -867,6 +867,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Provides the agent duration sort order
         /// </summary>
@@ -891,6 +903,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Provides the interacting duration sort order</value>
         [DataMember(Name="interactingDurationSortOrder", EmitDefaultValue=false)]
         public InteractingDurationSortOrderEnum? InteractingDurationSortOrder { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1050,7 +1070,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HasJourneyVisitId">Indicates filtering for Journey visit id.</param>
         /// <param name="OauthClientIds">A list of OAuth client IDs.</param>
         /// <param name="ApiOperations">A list of API operations (ex: [\&quot;GET /api/v2/users/{userId}/queues\&quot;]).</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> StatusList = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, List<string> OauthClientIds = null, List<string> ApiOperations = null)
+        /// <param name="HasMedia">Indicates filtering for presence of MMS media.</param>
+        /// <param name="RoleIds">The role Ids used to filter the view.</param>
+        /// <param name="ReportsTos">The report to user IDs used to filter the view.</param>
+        /// <param name="LocationIds">The location Ids used to filter the view.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, bool? ShowSecondaryStatus = null, AgentDurationSortOrderEnum? AgentDurationSortOrder = null, WaitingDurationSortOrderEnum? WaitingDurationSortOrder = null, InteractingDurationSortOrderEnum? InteractingDurationSortOrder = null, string AgentName = null, List<string> SkillsList = null, List<string> LanguageList = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> StatusList = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, List<string> OauthClientIds = null, List<string> ApiOperations = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -1133,6 +1157,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.HasJourneyVisitId = HasJourneyVisitId;
             this.OauthClientIds = OauthClientIds;
             this.ApiOperations = ApiOperations;
+            this.HasMedia = HasMedia;
+            this.RoleIds = RoleIds;
+            this.ReportsTos = ReportsTos;
+            this.LocationIds = LocationIds;
             
         }
         
@@ -1845,6 +1873,42 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> ApiOperations { get; set; }
         
         
+        
+        /// <summary>
+        /// Indicates filtering for presence of MMS media
+        /// </summary>
+        /// <value>Indicates filtering for presence of MMS media</value>
+        [DataMember(Name="hasMedia", EmitDefaultValue=false)]
+        public bool? HasMedia { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The role Ids used to filter the view
+        /// </summary>
+        /// <value>The role Ids used to filter the view</value>
+        [DataMember(Name="roleIds", EmitDefaultValue=false)]
+        public List<string> RoleIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The report to user IDs used to filter the view
+        /// </summary>
+        /// <value>The report to user IDs used to filter the view</value>
+        [DataMember(Name="reportsTos", EmitDefaultValue=false)]
+        public List<string> ReportsTos { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The location Ids used to filter the view
+        /// </summary>
+        /// <value>The location Ids used to filter the view</value>
+        [DataMember(Name="locationIds", EmitDefaultValue=false)]
+        public List<string> LocationIds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1935,6 +1999,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HasJourneyVisitId: ").Append(HasJourneyVisitId).Append("\n");
             sb.Append("  OauthClientIds: ").Append(OauthClientIds).Append("\n");
             sb.Append("  ApiOperations: ").Append(ApiOperations).Append("\n");
+            sb.Append("  HasMedia: ").Append(HasMedia).Append("\n");
+            sb.Append("  RoleIds: ").Append(RoleIds).Append("\n");
+            sb.Append("  ReportsTos: ").Append(ReportsTos).Append("\n");
+            sb.Append("  LocationIds: ").Append(LocationIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -2375,6 +2443,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ApiOperations == other.ApiOperations ||
                     this.ApiOperations != null &&
                     this.ApiOperations.SequenceEqual(other.ApiOperations)
+                ) &&
+                (
+                    this.HasMedia == other.HasMedia ||
+                    this.HasMedia != null &&
+                    this.HasMedia.Equals(other.HasMedia)
+                ) &&
+                (
+                    this.RoleIds == other.RoleIds ||
+                    this.RoleIds != null &&
+                    this.RoleIds.SequenceEqual(other.RoleIds)
+                ) &&
+                (
+                    this.ReportsTos == other.ReportsTos ||
+                    this.ReportsTos != null &&
+                    this.ReportsTos.SequenceEqual(other.ReportsTos)
+                ) &&
+                (
+                    this.LocationIds == other.LocationIds ||
+                    this.LocationIds != null &&
+                    this.LocationIds.SequenceEqual(other.LocationIds)
                 );
         }
 
@@ -2632,6 +2720,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ApiOperations != null)
                     hash = hash * 59 + this.ApiOperations.GetHashCode();
+                
+                if (this.HasMedia != null)
+                    hash = hash * 59 + this.HasMedia.GetHashCode();
+                
+                if (this.RoleIds != null)
+                    hash = hash * 59 + this.RoleIds.GetHashCode();
+                
+                if (this.ReportsTos != null)
+                    hash = hash * 59 + this.ReportsTos.GetHashCode();
+                
+                if (this.LocationIds != null)
+                    hash = hash * 59 + this.LocationIds.GetHashCode();
                 
                 return hash;
             }
