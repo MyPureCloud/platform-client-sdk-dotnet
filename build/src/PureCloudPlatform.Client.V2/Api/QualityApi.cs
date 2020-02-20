@@ -1009,9 +1009,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl</param>
         /// <returns>ScorableSurvey</returns>
-        ScorableSurvey GetQualitySurveysScorable (string customerSurveyUrl = null);
+        ScorableSurvey GetQualitySurveysScorable (string customerSurveyUrl);
 
         /// <summary>
         /// Get a survey as an end-customer, for the purposes of scoring it.
@@ -1020,9 +1020,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl</param>
         /// <returns>ApiResponse of ScorableSurvey</returns>
-        ApiResponse<ScorableSurvey> GetQualitySurveysScorableWithHttpInfo (string customerSurveyUrl = null);
+        ApiResponse<ScorableSurvey> GetQualitySurveysScorableWithHttpInfo (string customerSurveyUrl);
         
         /// <summary>
         /// Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
@@ -2533,9 +2533,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl</param>
         /// <returns>Task of ScorableSurvey</returns>
-        System.Threading.Tasks.Task<ScorableSurvey> GetQualitySurveysScorableAsync (string customerSurveyUrl = null);
+        System.Threading.Tasks.Task<ScorableSurvey> GetQualitySurveysScorableAsync (string customerSurveyUrl);
 
         /// <summary>
         /// Get a survey as an end-customer, for the purposes of scoring it.
@@ -2544,9 +2544,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl</param>
         /// <returns>Task of ApiResponse (ScorableSurvey)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScorableSurvey>> GetQualitySurveysScorableAsyncWithHttpInfo (string customerSurveyUrl = null);
+        System.Threading.Tasks.Task<ApiResponse<ScorableSurvey>> GetQualitySurveysScorableAsyncWithHttpInfo (string customerSurveyUrl);
         
         /// <summary>
         /// Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
@@ -10500,9 +10500,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a survey as an end-customer, for the purposes of scoring it. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl</param>
         /// <returns>ScorableSurvey</returns>
-        public ScorableSurvey GetQualitySurveysScorable (string customerSurveyUrl = null)
+        public ScorableSurvey GetQualitySurveysScorable (string customerSurveyUrl)
         {
              ApiResponse<ScorableSurvey> localVarResponse = GetQualitySurveysScorableWithHttpInfo(customerSurveyUrl);
              return localVarResponse.Data;
@@ -10512,10 +10512,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a survey as an end-customer, for the purposes of scoring it. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl</param>
         /// <returns>ApiResponse of ScorableSurvey</returns>
-        public ApiResponse< ScorableSurvey > GetQualitySurveysScorableWithHttpInfo (string customerSurveyUrl = null)
+        public ApiResponse< ScorableSurvey > GetQualitySurveysScorableWithHttpInfo (string customerSurveyUrl)
         { 
+            // verify the required parameter 'customerSurveyUrl' is set
+            if (customerSurveyUrl == null)
+                throw new ApiException(400, "Missing required parameter 'customerSurveyUrl' when calling QualityApi->GetQualitySurveysScorable");
 
             var localVarPath = "/api/v2/quality/surveys/scorable";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10586,9 +10589,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a survey as an end-customer, for the purposes of scoring it. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl</param>
         /// <returns>Task of ScorableSurvey</returns>
-        public async System.Threading.Tasks.Task<ScorableSurvey> GetQualitySurveysScorableAsync (string customerSurveyUrl = null)
+        public async System.Threading.Tasks.Task<ScorableSurvey> GetQualitySurveysScorableAsync (string customerSurveyUrl)
         {
              ApiResponse<ScorableSurvey> localVarResponse = await GetQualitySurveysScorableAsyncWithHttpInfo(customerSurveyUrl);
              return localVarResponse.Data;
@@ -10599,10 +10602,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a survey as an end-customer, for the purposes of scoring it. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerSurveyUrl">customerSurveyUrl (optional)</param>
+        /// <param name="customerSurveyUrl">customerSurveyUrl</param>
         /// <returns>Task of ApiResponse (ScorableSurvey)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScorableSurvey>> GetQualitySurveysScorableAsyncWithHttpInfo (string customerSurveyUrl = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScorableSurvey>> GetQualitySurveysScorableAsyncWithHttpInfo (string customerSurveyUrl)
         { 
+            // verify the required parameter 'customerSurveyUrl' is set
+            if (customerSurveyUrl == null)
+                throw new ApiException(400, "Missing required parameter 'customerSurveyUrl' when calling QualityApi->GetQualitySurveysScorable");
+            
 
             var localVarPath = "/api/v2/quality/surveys/scorable";
             var localVarPathParams = new Dictionary<String, String>();

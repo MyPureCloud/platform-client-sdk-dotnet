@@ -2420,7 +2420,7 @@ namespace Example
 
 <a name="getqualitysurveysscorable"></a>
 
-## [**ScorableSurvey**](ScorableSurvey.html) GetQualitySurveysScorable (string customerSurveyUrl = null)
+## [**ScorableSurvey**](ScorableSurvey.html) GetQualitySurveysScorable (string customerSurveyUrl)
 
 
 
@@ -2447,7 +2447,7 @@ namespace Example
         { 
 
             var apiInstance = new QualityApi();
-            var customerSurveyUrl = customerSurveyUrl_example;  // string | customerSurveyUrl (optional) 
+            var customerSurveyUrl = customerSurveyUrl_example;  // string | customerSurveyUrl
 
             try
             { 
@@ -2469,7 +2469,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customerSurveyUrl** | **string**| customerSurveyUrl | [optional]  |
+| **customerSurveyUrl** | **string**| customerSurveyUrl |  |
 {: class="table table-striped"}
 
 ### Return type
