@@ -157,8 +157,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>AnalyticsConversationAsyncQueryResponse</returns>
-        AnalyticsConversationAsyncQueryResponse GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null);
+        AnalyticsConversationAsyncQueryResponse GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null, int? pageSize = null);
 
         /// <summary>
         /// Fetch a page of results for an async query
@@ -169,8 +170,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>ApiResponse of AnalyticsConversationAsyncQueryResponse</returns>
-        ApiResponse<AnalyticsConversationAsyncQueryResponse> GetAnalyticsConversationsDetailsJobResultsWithHttpInfo (string jobId, string cursor = null);
+        ApiResponse<AnalyticsConversationAsyncQueryResponse> GetAnalyticsConversationsDetailsJobResultsWithHttpInfo (string jobId, string cursor = null, int? pageSize = null);
         
         /// <summary>
         /// Get all view export requests for a user
@@ -451,8 +453,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>AnalyticsUserDetailsAsyncQueryResponse</returns>
-        AnalyticsUserDetailsAsyncQueryResponse GetAnalyticsUsersDetailsJobResults (string jobId, string cursor = null);
+        AnalyticsUserDetailsAsyncQueryResponse GetAnalyticsUsersDetailsJobResults (string jobId, string cursor = null, int? pageSize = null);
 
         /// <summary>
         /// Fetch a page of results for an async query
@@ -463,8 +466,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>ApiResponse of AnalyticsUserDetailsAsyncQueryResponse</returns>
-        ApiResponse<AnalyticsUserDetailsAsyncQueryResponse> GetAnalyticsUsersDetailsJobResultsWithHttpInfo (string jobId, string cursor = null);
+        ApiResponse<AnalyticsUserDetailsAsyncQueryResponse> GetAnalyticsUsersDetailsJobResultsWithHttpInfo (string jobId, string cursor = null, int? pageSize = null);
         
         /// <summary>
         /// Index conversation properties
@@ -989,8 +993,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>Task of AnalyticsConversationAsyncQueryResponse</returns>
-        System.Threading.Tasks.Task<AnalyticsConversationAsyncQueryResponse> GetAnalyticsConversationsDetailsJobResultsAsync (string jobId, string cursor = null);
+        System.Threading.Tasks.Task<AnalyticsConversationAsyncQueryResponse> GetAnalyticsConversationsDetailsJobResultsAsync (string jobId, string cursor = null, int? pageSize = null);
 
         /// <summary>
         /// Fetch a page of results for an async query
@@ -1001,8 +1006,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>Task of ApiResponse (AnalyticsConversationAsyncQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationAsyncQueryResponse>> GetAnalyticsConversationsDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null);
+        System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationAsyncQueryResponse>> GetAnalyticsConversationsDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null, int? pageSize = null);
         
         /// <summary>
         /// Get all view export requests for a user
@@ -1283,8 +1289,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>Task of AnalyticsUserDetailsAsyncQueryResponse</returns>
-        System.Threading.Tasks.Task<AnalyticsUserDetailsAsyncQueryResponse> GetAnalyticsUsersDetailsJobResultsAsync (string jobId, string cursor = null);
+        System.Threading.Tasks.Task<AnalyticsUserDetailsAsyncQueryResponse> GetAnalyticsUsersDetailsJobResultsAsync (string jobId, string cursor = null, int? pageSize = null);
 
         /// <summary>
         /// Fetch a page of results for an async query
@@ -1295,8 +1302,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>Task of ApiResponse (AnalyticsUserDetailsAsyncQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AnalyticsUserDetailsAsyncQueryResponse>> GetAnalyticsUsersDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null);
+        System.Threading.Tasks.Task<ApiResponse<AnalyticsUserDetailsAsyncQueryResponse>> GetAnalyticsUsersDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null, int? pageSize = null);
         
         /// <summary>
         /// Index conversation properties
@@ -2919,10 +2927,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>AnalyticsConversationAsyncQueryResponse</returns>
-        public AnalyticsConversationAsyncQueryResponse GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null)
+        public AnalyticsConversationAsyncQueryResponse GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null, int? pageSize = null)
         {
-             ApiResponse<AnalyticsConversationAsyncQueryResponse> localVarResponse = GetAnalyticsConversationsDetailsJobResultsWithHttpInfo(jobId, cursor);
+             ApiResponse<AnalyticsConversationAsyncQueryResponse> localVarResponse = GetAnalyticsConversationsDetailsJobResultsWithHttpInfo(jobId, cursor, pageSize);
              return localVarResponse.Data;
         }
 
@@ -2932,8 +2941,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>ApiResponse of AnalyticsConversationAsyncQueryResponse</returns>
-        public ApiResponse< AnalyticsConversationAsyncQueryResponse > GetAnalyticsConversationsDetailsJobResultsWithHttpInfo (string jobId, string cursor = null)
+        public ApiResponse< AnalyticsConversationAsyncQueryResponse > GetAnalyticsConversationsDetailsJobResultsWithHttpInfo (string jobId, string cursor = null, int? pageSize = null)
         { 
             // verify the required parameter 'jobId' is set
             if (jobId == null)
@@ -2974,6 +2984,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -3017,10 +3028,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>Task of AnalyticsConversationAsyncQueryResponse</returns>
-        public async System.Threading.Tasks.Task<AnalyticsConversationAsyncQueryResponse> GetAnalyticsConversationsDetailsJobResultsAsync (string jobId, string cursor = null)
+        public async System.Threading.Tasks.Task<AnalyticsConversationAsyncQueryResponse> GetAnalyticsConversationsDetailsJobResultsAsync (string jobId, string cursor = null, int? pageSize = null)
         {
-             ApiResponse<AnalyticsConversationAsyncQueryResponse> localVarResponse = await GetAnalyticsConversationsDetailsJobResultsAsyncWithHttpInfo(jobId, cursor);
+             ApiResponse<AnalyticsConversationAsyncQueryResponse> localVarResponse = await GetAnalyticsConversationsDetailsJobResultsAsyncWithHttpInfo(jobId, cursor, pageSize);
              return localVarResponse.Data;
 
         }
@@ -3031,8 +3043,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>Task of ApiResponse (AnalyticsConversationAsyncQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationAsyncQueryResponse>> GetAnalyticsConversationsDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationAsyncQueryResponse>> GetAnalyticsConversationsDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null, int? pageSize = null)
         { 
             // verify the required parameter 'jobId' is set
             if (jobId == null)
@@ -3074,6 +3087,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -5417,10 +5431,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>AnalyticsUserDetailsAsyncQueryResponse</returns>
-        public AnalyticsUserDetailsAsyncQueryResponse GetAnalyticsUsersDetailsJobResults (string jobId, string cursor = null)
+        public AnalyticsUserDetailsAsyncQueryResponse GetAnalyticsUsersDetailsJobResults (string jobId, string cursor = null, int? pageSize = null)
         {
-             ApiResponse<AnalyticsUserDetailsAsyncQueryResponse> localVarResponse = GetAnalyticsUsersDetailsJobResultsWithHttpInfo(jobId, cursor);
+             ApiResponse<AnalyticsUserDetailsAsyncQueryResponse> localVarResponse = GetAnalyticsUsersDetailsJobResultsWithHttpInfo(jobId, cursor, pageSize);
              return localVarResponse.Data;
         }
 
@@ -5430,8 +5445,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>ApiResponse of AnalyticsUserDetailsAsyncQueryResponse</returns>
-        public ApiResponse< AnalyticsUserDetailsAsyncQueryResponse > GetAnalyticsUsersDetailsJobResultsWithHttpInfo (string jobId, string cursor = null)
+        public ApiResponse< AnalyticsUserDetailsAsyncQueryResponse > GetAnalyticsUsersDetailsJobResultsWithHttpInfo (string jobId, string cursor = null, int? pageSize = null)
         { 
             // verify the required parameter 'jobId' is set
             if (jobId == null)
@@ -5472,6 +5488,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -5515,10 +5532,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>Task of AnalyticsUserDetailsAsyncQueryResponse</returns>
-        public async System.Threading.Tasks.Task<AnalyticsUserDetailsAsyncQueryResponse> GetAnalyticsUsersDetailsJobResultsAsync (string jobId, string cursor = null)
+        public async System.Threading.Tasks.Task<AnalyticsUserDetailsAsyncQueryResponse> GetAnalyticsUsersDetailsJobResultsAsync (string jobId, string cursor = null, int? pageSize = null)
         {
-             ApiResponse<AnalyticsUserDetailsAsyncQueryResponse> localVarResponse = await GetAnalyticsUsersDetailsJobResultsAsyncWithHttpInfo(jobId, cursor);
+             ApiResponse<AnalyticsUserDetailsAsyncQueryResponse> localVarResponse = await GetAnalyticsUsersDetailsJobResultsAsyncWithHttpInfo(jobId, cursor, pageSize);
              return localVarResponse.Data;
 
         }
@@ -5529,8 +5547,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
+        /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>Task of ApiResponse (AnalyticsUserDetailsAsyncQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsUserDetailsAsyncQueryResponse>> GetAnalyticsUsersDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsUserDetailsAsyncQueryResponse>> GetAnalyticsUsersDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null, int? pageSize = null)
         { 
             // verify the required parameter 'jobId' is set
             if (jobId == null)
@@ -5572,6 +5591,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 

@@ -181,6 +181,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.
         /// </summary>
@@ -260,6 +263,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.
         /// </summary>
@@ -294,12 +299,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaType">List of different communication types used in conversation..</param>
         /// <param name="Rescore">Is only true when evaluation is re-scored..</param>
         /// <param name="ConversationDate">Date of conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ConversationEndDate">End date of conversation if it had completed before evaluation creation. Null if created before the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="NeverRelease">Signifies if the evaluation is never to be released. This cannot be set true if release date is also set..</param>
         /// <param name="ResourceId">Only used for email evaluations. Will be null for all other evaluations..</param>
         /// <param name="ResourceType">The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources..</param>
         /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation.</param>
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
-        public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null)
+        public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -317,6 +323,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MediaType = MediaType;
             this.Rescore = Rescore;
             this.ConversationDate = ConversationDate;
+            this.ConversationEndDate = ConversationEndDate;
             this.NeverRelease = NeverRelease;
             this.ResourceId = ResourceId;
             this.ResourceType = ResourceType;
@@ -466,6 +473,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// End date of conversation if it had completed before evaluation creation. Null if created before the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>End date of conversation if it had completed before evaluation creation. Null if created before the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="conversationEndDate", EmitDefaultValue=false)]
+        public DateTime? ConversationEndDate { get; set; }
+        
+        
+        
+        /// <summary>
         /// Signifies if the evaluation is never to be released. This cannot be set true if release date is also set.
         /// </summary>
         /// <value>Signifies if the evaluation is never to be released. This cannot be set true if release date is also set.</value>
@@ -536,6 +552,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Rescore: ").Append(Rescore).Append("\n");
             sb.Append("  ConversationDate: ").Append(ConversationDate).Append("\n");
+            sb.Append("  ConversationEndDate: ").Append(ConversationEndDate).Append("\n");
             sb.Append("  NeverRelease: ").Append(NeverRelease).Append("\n");
             sb.Append("  ResourceId: ").Append(ResourceId).Append("\n");
             sb.Append("  ResourceType: ").Append(ResourceType).Append("\n");
@@ -664,6 +681,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationDate.Equals(other.ConversationDate)
                 ) &&
                 (
+                    this.ConversationEndDate == other.ConversationEndDate ||
+                    this.ConversationEndDate != null &&
+                    this.ConversationEndDate.Equals(other.ConversationEndDate)
+                ) &&
+                (
                     this.NeverRelease == other.NeverRelease ||
                     this.NeverRelease != null &&
                     this.NeverRelease.Equals(other.NeverRelease)
@@ -757,6 +779,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ConversationDate != null)
                     hash = hash * 59 + this.ConversationDate.GetHashCode();
+                
+                if (this.ConversationEndDate != null)
+                    hash = hash * 59 + this.ConversationEndDate.GetHashCode();
                 
                 if (this.NeverRelease != null)
                     hash = hash * 59 + this.NeverRelease.GetHashCode();

@@ -34,14 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GDPRJourneyCustomer" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected GDPRJourneyCustomer() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GDPRJourneyCustomer" /> class.
-        /// </summary>
-        /// <param name="Type">The type of the customerId within the Journey System (e.g. cookie). (required).</param>
-        /// <param name="Id">An ID of a customer within the Journey System at a point-in-time. (required).</param>
+        /// <param name="Type">The type of the customerId within the Journey System (e.g. cookie). Required if `id` is defined..</param>
+        /// <param name="Id">An ID of a customer within the Journey System at a point-in-time. Required if `type` is defined..</param>
         public GDPRJourneyCustomer(string Type = null, string Id = null)
         {
             this.Type = Type;
@@ -52,18 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The type of the customerId within the Journey System (e.g. cookie).
+        /// The type of the customerId within the Journey System (e.g. cookie). Required if `id` is defined.
         /// </summary>
-        /// <value>The type of the customerId within the Journey System (e.g. cookie).</value>
+        /// <value>The type of the customerId within the Journey System (e.g. cookie). Required if `id` is defined.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
         
         
         
         /// <summary>
-        /// An ID of a customer within the Journey System at a point-in-time.
+        /// An ID of a customer within the Journey System at a point-in-time. Required if `type` is defined.
         /// </summary>
-        /// <value>An ID of a customer within the Journey System at a point-in-time.</value>
+        /// <value>An ID of a customer within the Journey System at a point-in-time. Required if `type` is defined.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         

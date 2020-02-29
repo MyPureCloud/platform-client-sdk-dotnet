@@ -74,8 +74,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PageAccessToken">The long-lived Page Access Token of a facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When a pageAccessToken is provided, pageId and userAccessToken are not required..</param>
         /// <param name="UserAccessToken">The short-lived User Access Token of the facebook user logged into the facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When userAccessToken is provided, pageId is mandatory.  When userAccessToken/pageId combination is provided, pageAccessToken is not required..</param>
         /// <param name="PageId">The page Id of a facebook page. The pageId is required when userAccessToken is provided..</param>
-        /// <param name="AppId">The app Id of a facebook app (required).</param>
-        /// <param name="AppSecret">The app Secret of a facebook app.</param>
+        /// <param name="AppId">The app Id of a facebook app. The appId is required when a customer wants to use their own approved facebook app..</param>
+        /// <param name="AppSecret">The app Secret of a facebook app. The appSecret is required when appId is provided..</param>
         public FacebookIntegrationRequest(string Name = null, string PageAccessToken = null, string UserAccessToken = null, string PageId = null, string AppId = null, string AppSecret = null)
         {
             this.Name = Name;
@@ -135,18 +135,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The app Id of a facebook app
+        /// The app Id of a facebook app. The appId is required when a customer wants to use their own approved facebook app.
         /// </summary>
-        /// <value>The app Id of a facebook app</value>
+        /// <value>The app Id of a facebook app. The appId is required when a customer wants to use their own approved facebook app.</value>
         [DataMember(Name="appId", EmitDefaultValue=false)]
         public string AppId { get; set; }
         
         
         
         /// <summary>
-        /// The app Secret of a facebook app
+        /// The app Secret of a facebook app. The appSecret is required when appId is provided.
         /// </summary>
-        /// <value>The app Secret of a facebook app</value>
+        /// <value>The app Secret of a facebook app. The appSecret is required when appId is provided.</value>
         [DataMember(Name="appSecret", EmitDefaultValue=false)]
         public string AppSecret { get; set; }
         

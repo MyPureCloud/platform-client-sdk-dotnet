@@ -410,7 +410,7 @@ namespace Example
 
 <a name="getanalyticsconversationsdetailsjobresults"></a>
 
-## [**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse.html) GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null)
+## [**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse.html) GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null, int? pageSize = null)
 
 
 
@@ -442,11 +442,12 @@ namespace Example
             var apiInstance = new AnalyticsApi();
             var jobId = jobId_example;  // string | jobId
             var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page) (optional) 
+            var pageSize = 56;  // int? | The desired maximum number of results (optional) 
 
             try
             { 
                 // Fetch a page of results for an async query
-                AnalyticsConversationAsyncQueryResponse result = apiInstance.GetAnalyticsConversationsDetailsJobResults(jobId, cursor);
+                AnalyticsConversationAsyncQueryResponse result = apiInstance.GetAnalyticsConversationsDetailsJobResults(jobId, cursor, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -465,6 +466,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
+| **pageSize** | **int?**| The desired maximum number of results | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1192,7 +1194,7 @@ namespace Example
 
 <a name="getanalyticsusersdetailsjobresults"></a>
 
-## [**AnalyticsUserDetailsAsyncQueryResponse**](AnalyticsUserDetailsAsyncQueryResponse.html) GetAnalyticsUsersDetailsJobResults (string jobId, string cursor = null)
+## [**AnalyticsUserDetailsAsyncQueryResponse**](AnalyticsUserDetailsAsyncQueryResponse.html) GetAnalyticsUsersDetailsJobResults (string jobId, string cursor = null, int? pageSize = null)
 
 
 
@@ -1224,11 +1226,12 @@ namespace Example
             var apiInstance = new AnalyticsApi();
             var jobId = jobId_example;  // string | jobId
             var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page) (optional) 
+            var pageSize = 56;  // int? | The desired maximum number of results (optional) 
 
             try
             { 
                 // Fetch a page of results for an async query
-                AnalyticsUserDetailsAsyncQueryResponse result = apiInstance.GetAnalyticsUsersDetailsJobResults(jobId, cursor);
+                AnalyticsUserDetailsAsyncQueryResponse result = apiInstance.GetAnalyticsUsersDetailsJobResults(jobId, cursor, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1247,6 +1250,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
+| **pageSize** | **int?**| The desired maximum number of results | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

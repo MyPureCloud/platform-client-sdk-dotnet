@@ -275,6 +275,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Oauthclient,
             
             /// <summary>
+            /// Enum Oauthclientauthorization for "OAuthClientAuthorization"
+            /// </summary>
+            [EnumMember(Value = "OAuthClientAuthorization")]
+            Oauthclientauthorization,
+            
+            /// <summary>
             /// Enum Authorganization for "AuthOrganization"
             /// </summary>
             [EnumMember(Value = "AuthOrganization")]
