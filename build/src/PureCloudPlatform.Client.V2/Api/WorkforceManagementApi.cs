@@ -1241,8 +1241,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>UserScheduleContainer</returns>
-        UserScheduleContainer PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
+        /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
+        BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -1255,8 +1255,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>ApiResponse of UserScheduleContainer</returns>
-        ApiResponse<UserScheduleContainer> PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
+        /// <returns>ApiResponse of BuAsyncAgentSchedulesSearchResponse</returns>
+        ApiResponse<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
         
         /// <summary>
         /// Request a historical adherence report
@@ -3071,8 +3071,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of UserScheduleContainer</returns>
-        System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
+        /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
+        System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Query published schedules for given given time range for set of users
@@ -3085,8 +3085,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
+        /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesSearchResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null);
         
         /// <summary>
         /// Request a historical adherence report
@@ -14034,10 +14034,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>UserScheduleContainer</returns>
-        public UserScheduleContainer PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
+        public BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
         {
-             ApiResponse<UserScheduleContainer> localVarResponse = PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo(muId, body, forceAsync, forceDownloadService);
+             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo(muId, body, forceAsync, forceDownloadService);
              return localVarResponse.Data;
         }
 
@@ -14049,8 +14049,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>ApiResponse of UserScheduleContainer</returns>
-        public ApiResponse< UserScheduleContainer > PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        /// <returns>ApiResponse of BuAsyncAgentSchedulesSearchResponse</returns>
+        public ApiResponse< BuAsyncAgentSchedulesSearchResponse > PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -14126,9 +14126,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitAgentschedulesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UserScheduleContainer>(localVarStatusCode,
+            return new ApiResponse<BuAsyncAgentSchedulesSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (UserScheduleContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserScheduleContainer)),
+                (BuAsyncAgentSchedulesSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAsyncAgentSchedulesSearchResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -14142,10 +14142,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of UserScheduleContainer</returns>
-        public async System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
+        public async System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
         {
-             ApiResponse<UserScheduleContainer> localVarResponse = await PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo(muId, body, forceAsync, forceDownloadService);
+             ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = await PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo(muId, body, forceAsync, forceDownloadService);
              return localVarResponse.Data;
 
         }
@@ -14158,8 +14158,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
-        /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+        /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesSearchResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'muId' is set
             if (muId == null)
@@ -14236,9 +14236,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitAgentschedulesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UserScheduleContainer>(localVarStatusCode,
+            return new ApiResponse<BuAsyncAgentSchedulesSearchResponse>(localVarStatusCode,
                 localVarHeaders,
-                (UserScheduleContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserScheduleContainer)),
+                (BuAsyncAgentSchedulesSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAsyncAgentSchedulesSearchResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

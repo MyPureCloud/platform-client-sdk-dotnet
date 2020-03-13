@@ -387,7 +387,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EntityType">Type of the entity that was impacted..</param>
         /// <param name="PropertyChanges">List of properties that were changed and changes made to those properties..</param>
         /// <param name="Context">Additional context for this message..</param>
-        public AuditLogMessage(string Id = null, AddressableEntityRef User = null, AddressableEntityRef Client = null, List<string> RemoteIp = null, ServiceNameEnum? ServiceName = null, DateTime? EventDate = null, MessageInfo Message = null, ActionEnum? Action = null, AddressableEntityRef Entity = null, EntityTypeEnum? EntityType = null, List<PropertyChange> PropertyChanges = null, Dictionary<string, string> Context = null)
+        public AuditLogMessage(string Id = null, DomainEntityRef User = null, AddressableEntityRef Client = null, List<string> RemoteIp = null, ServiceNameEnum? ServiceName = null, DateTime? EventDate = null, MessageInfo Message = null, ActionEnum? Action = null, AddressableEntityRef Entity = null, EntityTypeEnum? EntityType = null, List<PropertyChange> PropertyChanges = null, Dictionary<string, string> Context = null)
         {
             this.Id = Id;
             this.User = User;
@@ -420,7 +420,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>User associated with this audit message.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public AddressableEntityRef User { get; set; }
+        public DomainEntityRef User { get; set; }
         
         
         

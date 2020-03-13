@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignProgress" /> class.
@@ -85,11 +90,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Number of contacts processed during the campaign
+        /// Number of contacts called during the campaign
         /// </summary>
-        /// <value>Number of contacts processed during the campaign</value>
+        /// <value>Number of contacts called during the campaign</value>
         [DataMember(Name="numberOfContactsCalled", EmitDefaultValue=false)]
         public long? NumberOfContactsCalled { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Number of contacts messaged during the campaign
+        /// </summary>
+        /// <value>Number of contacts messaged during the campaign</value>
+        [DataMember(Name="numberOfContactsMessaged", EmitDefaultValue=false)]
+        public long? NumberOfContactsMessaged { get; private set; }
         
         
         
@@ -122,6 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Campaign: ").Append(Campaign).Append("\n");
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
             sb.Append("  NumberOfContactsCalled: ").Append(NumberOfContactsCalled).Append("\n");
+            sb.Append("  NumberOfContactsMessaged: ").Append(NumberOfContactsMessaged).Append("\n");
             sb.Append("  TotalNumberOfContacts: ").Append(TotalNumberOfContacts).Append("\n");
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
             sb.Append("}\n");
@@ -176,6 +191,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NumberOfContactsCalled.Equals(other.NumberOfContactsCalled)
                 ) &&
                 (
+                    this.NumberOfContactsMessaged == other.NumberOfContactsMessaged ||
+                    this.NumberOfContactsMessaged != null &&
+                    this.NumberOfContactsMessaged.Equals(other.NumberOfContactsMessaged)
+                ) &&
+                (
                     this.TotalNumberOfContacts == other.TotalNumberOfContacts ||
                     this.TotalNumberOfContacts != null &&
                     this.TotalNumberOfContacts.Equals(other.TotalNumberOfContacts)
@@ -207,6 +227,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.NumberOfContactsCalled != null)
                     hash = hash * 59 + this.NumberOfContactsCalled.GetHashCode();
+                
+                if (this.NumberOfContactsMessaged != null)
+                    hash = hash * 59 + this.NumberOfContactsMessaged.GetHashCode();
                 
                 if (this.TotalNumberOfContacts != null)
                     hash = hash * 59 + this.TotalNumberOfContacts.GetHashCode();

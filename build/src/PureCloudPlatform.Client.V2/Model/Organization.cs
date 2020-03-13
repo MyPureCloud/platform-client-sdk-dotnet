@@ -90,6 +90,61 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Organizations Originating Platform.
+        /// </summary>
+        /// <value>Organizations Originating Platform.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ProductPlatformEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Purecloud for "PureCloud"
+            /// </summary>
+            [EnumMember(Value = "PureCloud")]
+            Purecloud,
+            
+            /// <summary>
+            /// Enum Pureengage for "PureEngage"
+            /// </summary>
+            [EnumMember(Value = "PureEngage")]
+            Pureengage,
+            
+            /// <summary>
+            /// Enum Pureengagecloud for "PureEngageCloud"
+            /// </summary>
+            [EnumMember(Value = "PureEngageCloud")]
+            Pureengagecloud,
+            
+            /// <summary>
+            /// Enum Pureconnect for "PureConnect"
+            /// </summary>
+            [EnumMember(Value = "PureConnect")]
+            Pureconnect,
+            
+            /// <summary>
+            /// Enum Pureconnectcloud for "PureConnectCloud"
+            /// </summary>
+            [EnumMember(Value = "PureConnectCloud")]
+            Pureconnectcloud,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
+        }
+        
+        
+        
+        
         
         
         
@@ -125,6 +180,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        /// <summary>
+        /// Organizations Originating Platform.
+        /// </summary>
+        /// <value>Organizations Originating Platform.</value>
+        [DataMember(Name="productPlatform", EmitDefaultValue=false)]
+        public ProductPlatformEnum? ProductPlatform { get; set; }
         
         
         
@@ -266,6 +330,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -304,6 +370,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DefaultSiteId: ").Append(DefaultSiteId).Append("\n");
             sb.Append("  SupportURI: ").Append(SupportURI).Append("\n");
             sb.Append("  VoicemailEnabled: ").Append(VoicemailEnabled).Append("\n");
+            sb.Append("  ProductPlatform: ").Append(ProductPlatform).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Features: ").Append(Features).Append("\n");
             sb.Append("}\n");
@@ -403,6 +470,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.VoicemailEnabled.Equals(other.VoicemailEnabled)
                 ) &&
                 (
+                    this.ProductPlatform == other.ProductPlatform ||
+                    this.ProductPlatform != null &&
+                    this.ProductPlatform.Equals(other.ProductPlatform)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -461,6 +533,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.VoicemailEnabled != null)
                     hash = hash * 59 + this.VoicemailEnabled.GetHashCode();
+                
+                if (this.ProductPlatform != null)
+                    hash = hash * 59 + this.ProductPlatform.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

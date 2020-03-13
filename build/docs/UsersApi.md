@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteAnalyticsUsersDetailsJob**](UsersApi.html#deleteanalyticsusersdetailsjob) | **DELETE** /api/v2/analytics/users/details/jobs/{jobId} | Delete/cancel an async request |
 | [**DeleteAuthorizationSubjectDivisionRole**](UsersApi.html#deleteauthorizationsubjectdivisionrole) | **DELETE** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
+| [**DeleteRoutingUserUtilization**](UsersApi.html#deleteroutinguserutilization) | **DELETE** /api/v2/routing/users/{userId}/utilization | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**DeleteUser**](UsersApi.html#deleteuser) | **DELETE** /api/v2/users/{userId} | Delete user |
 | [**DeleteUserRoles**](UsersApi.html#deleteuserroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
 | [**DeleteUserRoutinglanguage**](UsersApi.html#deleteuserroutinglanguage) | **DELETE** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
@@ -17,12 +18,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteUserStationDefaultstation**](UsersApi.html#deleteuserstationdefaultstation) | **DELETE** /api/v2/users/{userId}/station/defaultstation | Clear default station |
 | [**GetAnalyticsUsersDetailsJob**](UsersApi.html#getanalyticsusersdetailsjob) | **GET** /api/v2/analytics/users/details/jobs/{jobId} | Get status for async query for user details |
 | [**GetAnalyticsUsersDetailsJobResults**](UsersApi.html#getanalyticsusersdetailsjobresults) | **GET** /api/v2/analytics/users/details/jobs/{jobId}/results | Fetch a page of results for an async query |
-| [**GetAuthorizationDivisionspermittedMe**](UsersApi.html#getauthorizationdivisionspermittedme) | **GET** /api/v2/authorization/divisionspermitted/me | Returns whether or not current user can perform the specified action(s). |
-| [**GetAuthorizationDivisionspermittedSubjectId**](UsersApi.html#getauthorizationdivisionspermittedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/{subjectId} | Returns whether or not specified user can perform the specified action(s). |
+| [**GetAuthorizationDivisionspermittedMe**](UsersApi.html#getauthorizationdivisionspermittedme) | **GET** /api/v2/authorization/divisionspermitted/me | Returns which divisions the current user has the given permission in. |
+| [**GetAuthorizationDivisionspermittedPagedMe**](UsersApi.html#getauthorizationdivisionspermittedpagedme) | **GET** /api/v2/authorization/divisionspermitted/paged/me | Returns which divisions the current user has the given permission in. |
+| [**GetAuthorizationDivisionspermittedPagedSubjectId**](UsersApi.html#getauthorizationdivisionspermittedpagedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/paged/{subjectId} | Returns which divisions the specified user has the given permission in. |
+| [**GetAuthorizationDivisionspermittedSubjectId**](UsersApi.html#getauthorizationdivisionspermittedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/{subjectId} | Returns which divisions the specified user has the given permission in. |
 | [**GetAuthorizationSubject**](UsersApi.html#getauthorizationsubject) | **GET** /api/v2/authorization/subjects/{subjectId} | Returns a listing of roles and permissions for a user. |
 | [**GetAuthorizationSubjectsMe**](UsersApi.html#getauthorizationsubjectsme) | **GET** /api/v2/authorization/subjects/me | Returns a listing of roles and permissions for the currently authenticated user. |
 | [**GetFieldconfig**](UsersApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
 | [**GetProfilesUsers**](UsersApi.html#getprofilesusers) | **GET** /api/v2/profiles/users | Get a user profile listing |
+| [**GetRoutingUserUtilization**](UsersApi.html#getroutinguserutilization) | **GET** /api/v2/routing/users/{userId}/utilization | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
 | [**GetUser**](UsersApi.html#getuser) | **GET** /api/v2/users/{userId} | Get user. |
 | [**GetUserAdjacents**](UsersApi.html#getuseradjacents) | **GET** /api/v2/users/{userId}/adjacents | Get adjacents |
 | [**GetUserCallforwarding**](UsersApi.html#getusercallforwarding) | **GET** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
@@ -66,6 +70,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUsers**](UsersApi.html#postusers) | **POST** /api/v2/users | Create user |
 | [**PostUsersMePassword**](UsersApi.html#postusersmepassword) | **POST** /api/v2/users/me/password | Change your password |
 | [**PostUsersSearch**](UsersApi.html#postuserssearch) | **POST** /api/v2/users/search | Search users |
+| [**PutRoutingUserUtilization**](UsersApi.html#putroutinguserutilization) | **PUT** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**PutUserCallforwarding**](UsersApi.html#putusercallforwarding) | **PUT** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
 | [**PutUserOutofoffice**](UsersApi.html#putuseroutofoffice) | **PUT** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
 | [**PutUserProfileskills**](UsersApi.html#putuserprofileskills) | **PUT** /api/v2/users/{userId}/profileskills | Update profile skills for a user |
@@ -195,6 +200,66 @@ namespace Example
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **divisionId** | **string**| the id of the division of the grant |  |
 | **roleId** | **string**| the id of the role of the grant |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteroutinguserutilization"></a>
+
+## void DeleteRoutingUserUtilization (string userId)
+
+
+
+Delete the user's max utilization settings and revert to the organization-wide default.
+
+
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingUserUtilizationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+
+            try
+            { 
+                // Delete the user's max utilization settings and revert to the organization-wide default.
+                apiInstance.DeleteRoutingUserUtilization(userId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.DeleteRoutingUserUtilization: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -697,11 +762,11 @@ namespace Example
 
 ## [**List&lt;AuthzDivision&gt;**](AuthzDivision.html) GetAuthorizationDivisionspermittedMe (string permission, string name = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
+Returns which divisions the current user has the given permission in.
 
-Returns whether or not current user can perform the specified action(s).
-
-
+This route is deprecated, use authorization/divisionspermitted/paged/me instead.
 
 Requires NO permissions: 
 
@@ -729,7 +794,7 @@ namespace Example
 
             try
             { 
-                // Returns whether or not current user can perform the specified action(s).
+                // Returns which divisions the current user has the given permission in.
                 List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedMe(permission, name);
                 Debug.WriteLine(result);
             }
@@ -755,15 +820,145 @@ namespace Example
 
 [**List<AuthzDivision>**](AuthzDivision.html)
 
+<a name="getauthorizationdivisionspermittedpagedme"></a>
+
+## [**DivsPermittedEntityListing**](DivsPermittedEntityListing.html) GetAuthorizationDivisionspermittedPagedMe (string permission, int? pageNumber = null, int? pageSize = null)
+
+
+
+Returns which divisions the current user has the given permission in.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionspermittedPagedMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var permission = permission_example;  // string | The permission string, including the object to access, e.g. routing:queue:view
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Returns which divisions the current user has the given permission in.
+                DivsPermittedEntityListing result = apiInstance.GetAuthorizationDivisionspermittedPagedMe(permission, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetAuthorizationDivisionspermittedPagedMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DivsPermittedEntityListing**](DivsPermittedEntityListing.html)
+
+<a name="getauthorizationdivisionspermittedpagedsubjectid"></a>
+
+## [**DivsPermittedEntityListing**](DivsPermittedEntityListing.html) GetAuthorizationDivisionspermittedPagedSubjectId (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
+
+
+
+Returns which divisions the specified user has the given permission in.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionspermittedPagedSubjectIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            var permission = permission_example;  // string | The permission string, including the object to access, e.g. routing:queue:view
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Returns which divisions the specified user has the given permission in.
+                DivsPermittedEntityListing result = apiInstance.GetAuthorizationDivisionspermittedPagedSubjectId(subjectId, permission, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetAuthorizationDivisionspermittedPagedSubjectId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| Subject ID (user or group) |  |
+| **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DivsPermittedEntityListing**](DivsPermittedEntityListing.html)
+
 <a name="getauthorizationdivisionspermittedsubjectid"></a>
 
 ## [**List&lt;AuthzDivision&gt;**](AuthzDivision.html) GetAuthorizationDivisionspermittedSubjectId (string subjectId, string permission, string name = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Returns whether or not specified user can perform the specified action(s).
+Returns which divisions the specified user has the given permission in.
 
-
+This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
 
 Requires NO permissions: 
 
@@ -792,7 +987,7 @@ namespace Example
 
             try
             { 
-                // Returns whether or not specified user can perform the specified action(s).
+                // Returns which divisions the specified user has the given permission in.
                 List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedSubjectId(subjectId, permission, name);
                 Debug.WriteLine(result);
             }
@@ -1064,6 +1259,68 @@ namespace Example
 ### Return type
 
 [**UserProfileEntityListing**](UserProfileEntityListing.html)
+
+<a name="getroutinguserutilization"></a>
+
+## [**Utilization**](Utilization.html) GetRoutingUserUtilization (string userId)
+
+
+
+Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+
+
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+* routing:utilization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingUserUtilizationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+
+            try
+            { 
+                // Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+                Utilization result = apiInstance.GetRoutingUserUtilization(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetRoutingUserUtilization: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Utilization**](Utilization.html)
 
 <a name="getuser"></a>
 
@@ -3770,6 +4027,69 @@ namespace Example
 ### Return type
 
 [**UsersSearchResponse**](UsersSearchResponse.html)
+
+<a name="putroutinguserutilization"></a>
+
+## [**Utilization**](Utilization.html) PutRoutingUserUtilization (string userId, Utilization body)
+
+
+
+Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+
+
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRoutingUserUtilizationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var body = new Utilization(); // Utilization | utilization
+
+            try
+            { 
+                // Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+                Utilization result = apiInstance.PutRoutingUserUtilization(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PutRoutingUserUtilization: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**Utilization**](Utilization.html)| utilization |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Utilization**](Utilization.html)
 
 <a name="putusercallforwarding"></a>
 

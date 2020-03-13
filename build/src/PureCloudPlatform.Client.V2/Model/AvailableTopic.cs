@@ -40,20 +40,34 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTopic" /> class.
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="Id">Id.</param>
-        /// <param name="RequiresPermissions">RequiresPermissions.</param>
+        /// <param name="RequiresPermissions">Permissions required to subscribe to the topic.</param>
         /// <param name="Schema">Schema.</param>
-        public AvailableTopic(string Description = null, string Id = null, List<string> RequiresPermissions = null, Dictionary<string, Object> Schema = null)
+        /// <param name="RequiresCurrentUser">True if the topic user ID is required to match the subscribing user ID.</param>
+        /// <param name="RequiresCurrentUserOrPermission">True if permissions are only required when the topic user ID does not match the subscribing user ID.</param>
+        public AvailableTopic(string Description = null, string Id = null, List<string> RequiresPermissions = null, Dictionary<string, Object> Schema = null, bool? RequiresCurrentUser = null, bool? RequiresCurrentUserOrPermission = null)
         {
             this.Description = Description;
             this.Id = Id;
             this.RequiresPermissions = RequiresPermissions;
             this.Schema = Schema;
+            this.RequiresCurrentUser = RequiresCurrentUser;
+            this.RequiresCurrentUserOrPermission = RequiresCurrentUserOrPermission;
             
         }
         
@@ -76,8 +90,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets RequiresPermissions
+        /// Permissions required to subscribe to the topic
         /// </summary>
+        /// <value>Permissions required to subscribe to the topic</value>
         [DataMember(Name="requiresPermissions", EmitDefaultValue=false)]
         public List<string> RequiresPermissions { get; set; }
         
@@ -88,6 +103,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="schema", EmitDefaultValue=false)]
         public Dictionary<string, Object> Schema { get; set; }
+        
+        
+        
+        /// <summary>
+        /// True if the topic user ID is required to match the subscribing user ID
+        /// </summary>
+        /// <value>True if the topic user ID is required to match the subscribing user ID</value>
+        [DataMember(Name="requiresCurrentUser", EmitDefaultValue=false)]
+        public bool? RequiresCurrentUser { get; set; }
+        
+        
+        
+        /// <summary>
+        /// True if permissions are only required when the topic user ID does not match the subscribing user ID
+        /// </summary>
+        /// <value>True if permissions are only required when the topic user ID does not match the subscribing user ID</value>
+        [DataMember(Name="requiresCurrentUserOrPermission", EmitDefaultValue=false)]
+        public bool? RequiresCurrentUserOrPermission { get; set; }
         
         
         /// <summary>
@@ -103,6 +136,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RequiresPermissions: ").Append(RequiresPermissions).Append("\n");
             sb.Append("  Schema: ").Append(Schema).Append("\n");
+            sb.Append("  RequiresCurrentUser: ").Append(RequiresCurrentUser).Append("\n");
+            sb.Append("  RequiresCurrentUserOrPermission: ").Append(RequiresCurrentUserOrPermission).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,6 +193,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Schema == other.Schema ||
                     this.Schema != null &&
                     this.Schema.SequenceEqual(other.Schema)
+                ) &&
+                (
+                    this.RequiresCurrentUser == other.RequiresCurrentUser ||
+                    this.RequiresCurrentUser != null &&
+                    this.RequiresCurrentUser.Equals(other.RequiresCurrentUser)
+                ) &&
+                (
+                    this.RequiresCurrentUserOrPermission == other.RequiresCurrentUserOrPermission ||
+                    this.RequiresCurrentUserOrPermission != null &&
+                    this.RequiresCurrentUserOrPermission.Equals(other.RequiresCurrentUserOrPermission)
                 );
         }
 
@@ -184,6 +229,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();
+                
+                if (this.RequiresCurrentUser != null)
+                    hash = hash * 59 + this.RequiresCurrentUser.GetHashCode();
+                
+                if (this.RequiresCurrentUserOrPermission != null)
+                    hash = hash * 59 + this.RequiresCurrentUserOrPermission.GetHashCode();
                 
                 return hash;
             }

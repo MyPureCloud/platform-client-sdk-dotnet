@@ -3335,7 +3335,7 @@ namespace Example
 
 <a name="postworkforcemanagementmanagementunitagentschedulessearch"></a>
 
-## [**UserScheduleContainer**](UserScheduleContainer.html) PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
+## [**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse.html) PostWorkforcemanagementManagementunitAgentschedulesSearch (string muId, BuSearchAgentSchedulesRequest body = null, bool? forceAsync = null, bool? forceDownloadService = null)
 
 
 
@@ -3374,7 +3374,7 @@ namespace Example
             try
             { 
                 // Query published schedules for given given time range for set of users
-                UserScheduleContainer result = apiInstance.PostWorkforcemanagementManagementunitAgentschedulesSearch(muId, body, forceAsync, forceDownloadService);
+                BuAsyncAgentSchedulesSearchResponse result = apiInstance.PostWorkforcemanagementManagementunitAgentschedulesSearch(muId, body, forceAsync, forceDownloadService);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3399,7 +3399,7 @@ namespace Example
 
 ### Return type
 
-[**UserScheduleContainer**](UserScheduleContainer.html)
+[**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse.html)
 
 <a name="postworkforcemanagementmanagementunithistoricaladherencequery"></a>
 

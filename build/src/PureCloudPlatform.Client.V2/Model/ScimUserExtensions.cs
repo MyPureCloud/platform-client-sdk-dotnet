@@ -34,8 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimUserExtensions" /> class.
         /// </summary>
-        /// <param name="RoutingSkills">Routing Skills assigned to user..</param>
-        /// <param name="RoutingLanguages">Routing Languages assigned to user.</param>
+        /// <param name="RoutingSkills">Routing Skills assigned to user. No more than 50 skills may be assigned to a user..</param>
+        /// <param name="RoutingLanguages">Routing Languages assigned to user. No more than 50 languages may be assigned to a user..</param>
         public ScimUserExtensions(List<ScimUserRoutingSkill> RoutingSkills = null, List<ScimUserRoutingLanguage> RoutingLanguages = null)
         {
             this.RoutingSkills = RoutingSkills;
@@ -46,18 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Routing Skills assigned to user.
+        /// Routing Skills assigned to user. No more than 50 skills may be assigned to a user.
         /// </summary>
-        /// <value>Routing Skills assigned to user.</value>
+        /// <value>Routing Skills assigned to user. No more than 50 skills may be assigned to a user.</value>
         [DataMember(Name="routingSkills", EmitDefaultValue=false)]
         public List<ScimUserRoutingSkill> RoutingSkills { get; set; }
         
         
         
         /// <summary>
-        /// Routing Languages assigned to user
+        /// Routing Languages assigned to user. No more than 50 languages may be assigned to a user.
         /// </summary>
-        /// <value>Routing Languages assigned to user</value>
+        /// <value>Routing Languages assigned to user. No more than 50 languages may be assigned to a user.</value>
         [DataMember(Name="routingLanguages", EmitDefaultValue=false)]
         public List<ScimUserRoutingLanguage> RoutingLanguages { get; set; }
         

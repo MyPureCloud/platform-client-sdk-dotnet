@@ -1317,6 +1317,80 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataTable> GetFlowsDatatableWithHttpInfo (string datatableId, string expand = null);
         
         /// <summary>
+        /// Returns the state information about an export job
+        /// </summary>
+        /// <remarks>
+        /// Returns the state information about an export job.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="exportJobId">id of export job</param>
+        /// <returns>DataTableExportJob</returns>
+        DataTableExportJob GetFlowsDatatableExportJob (string datatableId, string exportJobId);
+
+        /// <summary>
+        /// Returns the state information about an export job
+        /// </summary>
+        /// <remarks>
+        /// Returns the state information about an export job.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="exportJobId">id of export job</param>
+        /// <returns>ApiResponse of DataTableExportJob</returns>
+        ApiResponse<DataTableExportJob> GetFlowsDatatableExportJobWithHttpInfo (string datatableId, string exportJobId);
+        
+        /// <summary>
+        /// Returns the state information about an import job
+        /// </summary>
+        /// <remarks>
+        /// Returns the state information about an import job.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="importJobId">id of import job</param>
+        /// <returns>DataTableImportJob</returns>
+        DataTableImportJob GetFlowsDatatableImportJob (string datatableId, string importJobId);
+
+        /// <summary>
+        /// Returns the state information about an import job
+        /// </summary>
+        /// <remarks>
+        /// Returns the state information about an import job.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="importJobId">id of import job</param>
+        /// <returns>ApiResponse of DataTableImportJob</returns>
+        ApiResponse<DataTableImportJob> GetFlowsDatatableImportJobWithHttpInfo (string datatableId, string importJobId);
+        
+        /// <summary>
+        /// Get all recent import jobs
+        /// </summary>
+        /// <remarks>
+        /// Get all recent import jobs
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>EntityListing</returns>
+        EntityListing GetFlowsDatatableImportJobs (string datatableId, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get all recent import jobs
+        /// </summary>
+        /// <remarks>
+        /// Get all recent import jobs
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of EntityListing</returns>
+        ApiResponse<EntityListing> GetFlowsDatatableImportJobsWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null);
+        
+        /// <summary>
         /// Returns a specific row for the datatable
         /// </summary>
         /// <remarks>
@@ -1903,6 +1977,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
         ApiResponse<Flow> PostFlowsActionsUnlockWithHttpInfo (string flow);
+        
+        /// <summary>
+        /// Begin an export process for exporting all rows from a datatable
+        /// </summary>
+        /// <remarks>
+        /// Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>DataTableExportJob</returns>
+        DataTableExportJob PostFlowsDatatableExportJobs (string datatableId);
+
+        /// <summary>
+        /// Begin an export process for exporting all rows from a datatable
+        /// </summary>
+        /// <remarks>
+        /// Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>ApiResponse of DataTableExportJob</returns>
+        ApiResponse<DataTableExportJob> PostFlowsDatatableExportJobsWithHttpInfo (string datatableId);
+        
+        /// <summary>
+        /// Begin an import process for importing rows into a datatable
+        /// </summary>
+        /// <remarks>
+        /// Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>DataTableImportJob</returns>
+        DataTableImportJob PostFlowsDatatableImportJobs (string datatableId, DataTableImportJob body);
+
+        /// <summary>
+        /// Begin an import process for importing rows into a datatable
+        /// </summary>
+        /// <remarks>
+        /// Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>ApiResponse of DataTableImportJob</returns>
+        ApiResponse<DataTableImportJob> PostFlowsDatatableImportJobsWithHttpInfo (string datatableId, DataTableImportJob body);
         
         /// <summary>
         /// Create a new row entry for the datatable.
@@ -3549,6 +3669,80 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DataTable>> GetFlowsDatatableAsyncWithHttpInfo (string datatableId, string expand = null);
         
         /// <summary>
+        /// Returns the state information about an export job
+        /// </summary>
+        /// <remarks>
+        /// Returns the state information about an export job.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="exportJobId">id of export job</param>
+        /// <returns>Task of DataTableExportJob</returns>
+        System.Threading.Tasks.Task<DataTableExportJob> GetFlowsDatatableExportJobAsync (string datatableId, string exportJobId);
+
+        /// <summary>
+        /// Returns the state information about an export job
+        /// </summary>
+        /// <remarks>
+        /// Returns the state information about an export job.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="exportJobId">id of export job</param>
+        /// <returns>Task of ApiResponse (DataTableExportJob)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataTableExportJob>> GetFlowsDatatableExportJobAsyncWithHttpInfo (string datatableId, string exportJobId);
+        
+        /// <summary>
+        /// Returns the state information about an import job
+        /// </summary>
+        /// <remarks>
+        /// Returns the state information about an import job.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="importJobId">id of import job</param>
+        /// <returns>Task of DataTableImportJob</returns>
+        System.Threading.Tasks.Task<DataTableImportJob> GetFlowsDatatableImportJobAsync (string datatableId, string importJobId);
+
+        /// <summary>
+        /// Returns the state information about an import job
+        /// </summary>
+        /// <remarks>
+        /// Returns the state information about an import job.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="importJobId">id of import job</param>
+        /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> GetFlowsDatatableImportJobAsyncWithHttpInfo (string datatableId, string importJobId);
+        
+        /// <summary>
+        /// Get all recent import jobs
+        /// </summary>
+        /// <remarks>
+        /// Get all recent import jobs
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of EntityListing</returns>
+        System.Threading.Tasks.Task<EntityListing> GetFlowsDatatableImportJobsAsync (string datatableId, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get all recent import jobs
+        /// </summary>
+        /// <remarks>
+        /// Get all recent import jobs
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (EntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null);
+        
+        /// <summary>
         /// Returns a specific row for the datatable
         /// </summary>
         /// <remarks>
@@ -4135,6 +4329,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsUnlockAsyncWithHttpInfo (string flow);
+        
+        /// <summary>
+        /// Begin an export process for exporting all rows from a datatable
+        /// </summary>
+        /// <remarks>
+        /// Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>Task of DataTableExportJob</returns>
+        System.Threading.Tasks.Task<DataTableExportJob> PostFlowsDatatableExportJobsAsync (string datatableId);
+
+        /// <summary>
+        /// Begin an export process for exporting all rows from a datatable
+        /// </summary>
+        /// <remarks>
+        /// Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>Task of ApiResponse (DataTableExportJob)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataTableExportJob>> PostFlowsDatatableExportJobsAsyncWithHttpInfo (string datatableId);
+        
+        /// <summary>
+        /// Begin an import process for importing rows into a datatable
+        /// </summary>
+        /// <remarks>
+        /// Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>Task of DataTableImportJob</returns>
+        System.Threading.Tasks.Task<DataTableImportJob> PostFlowsDatatableImportJobsAsync (string datatableId, DataTableImportJob body);
+
+        /// <summary>
+        /// Begin an import process for importing rows into a datatable
+        /// </summary>
+        /// <remarks>
+        /// Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> PostFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, DataTableImportJob body);
         
         /// <summary>
         /// Create a new row entry for the datatable.
@@ -14564,6 +14804,623 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Returns the state information about an export job Returns the state information about an export job.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="exportJobId">id of export job</param>
+        /// <returns>DataTableExportJob</returns>
+        public DataTableExportJob GetFlowsDatatableExportJob (string datatableId, string exportJobId)
+        {
+             ApiResponse<DataTableExportJob> localVarResponse = GetFlowsDatatableExportJobWithHttpInfo(datatableId, exportJobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the state information about an export job Returns the state information about an export job.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="exportJobId">id of export job</param>
+        /// <returns>ApiResponse of DataTableExportJob</returns>
+        public ApiResponse< DataTableExportJob > GetFlowsDatatableExportJobWithHttpInfo (string datatableId, string exportJobId)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableExportJob");
+            // verify the required parameter 'exportJobId' is set
+            if (exportJobId == null)
+                throw new ApiException(400, "Missing required parameter 'exportJobId' when calling ArchitectApi->GetFlowsDatatableExportJob");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/export/jobs/{exportJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+            if (exportJobId != null) localVarPathParams.Add("exportJobId", this.Configuration.ApiClient.ParameterToString(exportJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableExportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableExportJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTableExportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DataTableExportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableExportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Returns the state information about an export job Returns the state information about an export job.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="exportJobId">id of export job</param>
+        /// <returns>Task of DataTableExportJob</returns>
+        public async System.Threading.Tasks.Task<DataTableExportJob> GetFlowsDatatableExportJobAsync (string datatableId, string exportJobId)
+        {
+             ApiResponse<DataTableExportJob> localVarResponse = await GetFlowsDatatableExportJobAsyncWithHttpInfo(datatableId, exportJobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns the state information about an export job Returns the state information about an export job.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="exportJobId">id of export job</param>
+        /// <returns>Task of ApiResponse (DataTableExportJob)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataTableExportJob>> GetFlowsDatatableExportJobAsyncWithHttpInfo (string datatableId, string exportJobId)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableExportJob");
+            
+            // verify the required parameter 'exportJobId' is set
+            if (exportJobId == null)
+                throw new ApiException(400, "Missing required parameter 'exportJobId' when calling ArchitectApi->GetFlowsDatatableExportJob");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/export/jobs/{exportJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+            if (exportJobId != null) localVarPathParams.Add("exportJobId", this.Configuration.ApiClient.ParameterToString(exportJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableExportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableExportJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTableExportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DataTableExportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableExportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Returns the state information about an import job Returns the state information about an import job.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="importJobId">id of import job</param>
+        /// <returns>DataTableImportJob</returns>
+        public DataTableImportJob GetFlowsDatatableImportJob (string datatableId, string importJobId)
+        {
+             ApiResponse<DataTableImportJob> localVarResponse = GetFlowsDatatableImportJobWithHttpInfo(datatableId, importJobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the state information about an import job Returns the state information about an import job.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="importJobId">id of import job</param>
+        /// <returns>ApiResponse of DataTableImportJob</returns>
+        public ApiResponse< DataTableImportJob > GetFlowsDatatableImportJobWithHttpInfo (string datatableId, string importJobId)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableImportJob");
+            // verify the required parameter 'importJobId' is set
+            if (importJobId == null)
+                throw new ApiException(400, "Missing required parameter 'importJobId' when calling ArchitectApi->GetFlowsDatatableImportJob");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+            if (importJobId != null) localVarPathParams.Add("importJobId", this.Configuration.ApiClient.ParameterToString(importJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableImportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableImportJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTableImportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DataTableImportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableImportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Returns the state information about an import job Returns the state information about an import job.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="importJobId">id of import job</param>
+        /// <returns>Task of DataTableImportJob</returns>
+        public async System.Threading.Tasks.Task<DataTableImportJob> GetFlowsDatatableImportJobAsync (string datatableId, string importJobId)
+        {
+             ApiResponse<DataTableImportJob> localVarResponse = await GetFlowsDatatableImportJobAsyncWithHttpInfo(datatableId, importJobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns the state information about an import job Returns the state information about an import job.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="importJobId">id of import job</param>
+        /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> GetFlowsDatatableImportJobAsyncWithHttpInfo (string datatableId, string importJobId)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableImportJob");
+            
+            // verify the required parameter 'importJobId' is set
+            if (importJobId == null)
+                throw new ApiException(400, "Missing required parameter 'importJobId' when calling ArchitectApi->GetFlowsDatatableImportJob");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+            if (importJobId != null) localVarPathParams.Add("importJobId", this.Configuration.ApiClient.ParameterToString(importJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableImportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableImportJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTableImportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DataTableImportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableImportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get all recent import jobs Get all recent import jobs
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>EntityListing</returns>
+        public EntityListing GetFlowsDatatableImportJobs (string datatableId, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<EntityListing> localVarResponse = GetFlowsDatatableImportJobsWithHttpInfo(datatableId, pageNumber, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all recent import jobs Get all recent import jobs
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of EntityListing</returns>
+        public ApiResponse< EntityListing > GetFlowsDatatableImportJobsWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableImportJobs");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableImportJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableImportJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (EntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get all recent import jobs Get all recent import jobs
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of EntityListing</returns>
+        public async System.Threading.Tasks.Task<EntityListing> GetFlowsDatatableImportJobsAsync (string datatableId, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<EntityListing> localVarResponse = await GetFlowsDatatableImportJobsAsyncWithHttpInfo(datatableId, pageNumber, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all recent import jobs Get all recent import jobs
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (EntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableImportJobs");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableImportJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableImportJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (EntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
         /// Returns a specific row for the datatable Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -19439,6 +20296,413 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
                 (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Begin an export process for exporting all rows from a datatable Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>DataTableExportJob</returns>
+        public DataTableExportJob PostFlowsDatatableExportJobs (string datatableId)
+        {
+             ApiResponse<DataTableExportJob> localVarResponse = PostFlowsDatatableExportJobsWithHttpInfo(datatableId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Begin an export process for exporting all rows from a datatable Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>ApiResponse of DataTableExportJob</returns>
+        public ApiResponse< DataTableExportJob > PostFlowsDatatableExportJobsWithHttpInfo (string datatableId)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PostFlowsDatatableExportJobs");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/export/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableExportJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableExportJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTableExportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DataTableExportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableExportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Begin an export process for exporting all rows from a datatable Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>Task of DataTableExportJob</returns>
+        public async System.Threading.Tasks.Task<DataTableExportJob> PostFlowsDatatableExportJobsAsync (string datatableId)
+        {
+             ApiResponse<DataTableExportJob> localVarResponse = await PostFlowsDatatableExportJobsAsyncWithHttpInfo(datatableId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Begin an export process for exporting all rows from a datatable Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>Task of ApiResponse (DataTableExportJob)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataTableExportJob>> PostFlowsDatatableExportJobsAsyncWithHttpInfo (string datatableId)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PostFlowsDatatableExportJobs");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/export/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableExportJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableExportJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTableExportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DataTableExportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableExportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Begin an import process for importing rows into a datatable Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>DataTableImportJob</returns>
+        public DataTableImportJob PostFlowsDatatableImportJobs (string datatableId, DataTableImportJob body)
+        {
+             ApiResponse<DataTableImportJob> localVarResponse = PostFlowsDatatableImportJobsWithHttpInfo(datatableId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Begin an import process for importing rows into a datatable Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>ApiResponse of DataTableImportJob</returns>
+        public ApiResponse< DataTableImportJob > PostFlowsDatatableImportJobsWithHttpInfo (string datatableId, DataTableImportJob body)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PostFlowsDatatableImportJobs");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsDatatableImportJobs");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableImportJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableImportJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTableImportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DataTableImportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableImportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Begin an import process for importing rows into a datatable Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>Task of DataTableImportJob</returns>
+        public async System.Threading.Tasks.Task<DataTableImportJob> PostFlowsDatatableImportJobsAsync (string datatableId, DataTableImportJob body)
+        {
+             ApiResponse<DataTableImportJob> localVarResponse = await PostFlowsDatatableImportJobsAsyncWithHttpInfo(datatableId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Begin an import process for importing rows into a datatable Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> PostFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, DataTableImportJob body)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PostFlowsDatatableImportJobs");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsDatatableImportJobs");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableImportJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableImportJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTableImportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DataTableImportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableImportJob)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

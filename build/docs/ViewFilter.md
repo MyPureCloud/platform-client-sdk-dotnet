@@ -48,13 +48,6 @@ title: ViewFilter
 | **SurveyFormIds** | **List&lt;string&gt;** | The survey form ids used to filter the view | [optional] |
 | **SurveyTotalScore** | [**NumericRange**](NumericRange.html) | The survey total score used to filter the view | [optional] |
 | **SurveyNpsScore** | [**NumericRange**](NumericRange.html) | The survey NPS score used to filter the view | [optional] |
-| **ShowSecondaryStatus** | **bool?** | Indicates if the Secondary Status should be shown | [optional] |
-| **AgentDurationSortOrder** | **string** | Provides the agent duration sort order | [optional] |
-| **WaitingDurationSortOrder** | **string** | Provides the waiting duration sort order | [optional] |
-| **InteractingDurationSortOrder** | **string** | Provides the interacting duration sort order | [optional] |
-| **AgentName** | **string** | Displays the Agent name as provided by the user | [optional] |
-| **SkillsList** | **List&lt;string&gt;** | The list of skill strings as free form text | [optional] |
-| **LanguageList** | **List&lt;string&gt;** | The list of language strings as free form text | [optional] |
 | **Mos** | [**NumericRange**](NumericRange.html) | The desired range for mos values | [optional] |
 | **SurveyQuestionGroupScore** | [**NumericRange**](NumericRange.html) | The survey question group score used to filter the view | [optional] |
 | **SurveyPromoterScore** | [**NumericRange**](NumericRange.html) | The survey promoter score used to filter the view | [optional] |
@@ -72,7 +65,6 @@ title: ViewFilter
 | **IsConsulted** | **bool?** | Indicates filtering for consulted | [optional] |
 | **IsConsultTransferred** | **bool?** | Indicates filtering for consult transferred | [optional] |
 | **RemoteParticipants** | **List&lt;string&gt;** | The list of remote participants used to filter the view | [optional] |
-| **StatusList** | **List&lt;string&gt;** | A list of status for the configuration view | [optional] |
 | **FlowIds** | **List&lt;string&gt;** | The list of flow Ids | [optional] |
 | **FlowOutcomeIds** | **List&lt;string&gt;** | A list of outcome ids of the flow | [optional] |
 | **FlowOutcomeValues** | **List&lt;string&gt;** | A list of outcome values of the flow | [optional] |
@@ -86,8 +78,6 @@ title: ViewFilter
 | **HasJourneyCustomerId** | **bool?** | Indicates filtering for journey customer id | [optional] |
 | **HasJourneyActionMapId** | **bool?** | Indicates filtering for Journey action map id | [optional] |
 | **HasJourneyVisitId** | **bool?** | Indicates filtering for Journey visit id | [optional] |
-| **OauthClientIds** | **List&lt;string&gt;** | A list of OAuth client IDs | [optional] |
-| **ApiOperations** | **List&lt;string&gt;** | A list of API operations (ex: [\&quot;GET /api/v2/users/{userId}/queues\&quot;]) | [optional] |
 | **HasMedia** | **bool?** | Indicates filtering for presence of MMS media | [optional] |
 | **RoleIds** | **List&lt;string&gt;** | The role Ids used to filter the view | [optional] |
 | **ReportsTos** | **List&lt;string&gt;** | The report to user IDs used to filter the view | [optional] |

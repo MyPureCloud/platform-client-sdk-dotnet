@@ -465,7 +465,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum FailedLongRunningExport for "FAILED_LONG_RUNNING_EXPORT"
             /// </summary>
             [EnumMember(Value = "FAILED_LONG_RUNNING_EXPORT")]
-            FailedLongRunningExport
+            FailedLongRunningExport,
+            
+            /// <summary>
+            /// Enum TooManyRequestsFromAnOrganization for "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION"
+            /// </summary>
+            [EnumMember(Value = "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION")]
+            TooManyRequestsFromAnOrganization
         }
         
         

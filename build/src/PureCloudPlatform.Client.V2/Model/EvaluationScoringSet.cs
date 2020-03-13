@@ -50,20 +50,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationScoringSet" /> class.
         /// </summary>
         /// <param name="TotalScore">TotalScore.</param>
         /// <param name="TotalCriticalScore">TotalCriticalScore.</param>
+        /// <param name="TotalNonCriticalScore">TotalNonCriticalScore.</param>
         /// <param name="QuestionGroupScores">QuestionGroupScores.</param>
         /// <param name="AnyFailedKillQuestions">AnyFailedKillQuestions.</param>
         /// <param name="Comments">Comments.</param>
         /// <param name="AgentComments">AgentComments.</param>
-        public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, List<EvaluationQuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string AgentComments = null)
+        public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, float? TotalNonCriticalScore = null, List<EvaluationQuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string AgentComments = null)
         {
             this.TotalScore = TotalScore;
             this.TotalCriticalScore = TotalCriticalScore;
+            this.TotalNonCriticalScore = TotalNonCriticalScore;
             this.QuestionGroupScores = QuestionGroupScores;
             this.AnyFailedKillQuestions = AnyFailedKillQuestions;
             this.Comments = Comments;
@@ -86,6 +93,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="totalCriticalScore", EmitDefaultValue=false)]
         public float? TotalCriticalScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets TotalNonCriticalScore
+        /// </summary>
+        [DataMember(Name="totalNonCriticalScore", EmitDefaultValue=false)]
+        public float? TotalNonCriticalScore { get; set; }
         
         
         
@@ -131,6 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
             sb.Append("  TotalCriticalScore: ").Append(TotalCriticalScore).Append("\n");
+            sb.Append("  TotalNonCriticalScore: ").Append(TotalNonCriticalScore).Append("\n");
             sb.Append("  QuestionGroupScores: ").Append(QuestionGroupScores).Append("\n");
             sb.Append("  AnyFailedKillQuestions: ").Append(AnyFailedKillQuestions).Append("\n");
             sb.Append("  Comments: ").Append(Comments).Append("\n");
@@ -182,6 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TotalCriticalScore.Equals(other.TotalCriticalScore)
                 ) &&
                 (
+                    this.TotalNonCriticalScore == other.TotalNonCriticalScore ||
+                    this.TotalNonCriticalScore != null &&
+                    this.TotalNonCriticalScore.Equals(other.TotalNonCriticalScore)
+                ) &&
+                (
                     this.QuestionGroupScores == other.QuestionGroupScores ||
                     this.QuestionGroupScores != null &&
                     this.QuestionGroupScores.SequenceEqual(other.QuestionGroupScores)
@@ -220,6 +241,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TotalCriticalScore != null)
                     hash = hash * 59 + this.TotalCriticalScore.GetHashCode();
+                
+                if (this.TotalNonCriticalScore != null)
+                    hash = hash * 59 + this.TotalNonCriticalScore.GetHashCode();
                 
                 if (this.QuestionGroupScores != null)
                     hash = hash * 59 + this.QuestionGroupScores.GetHashCode();

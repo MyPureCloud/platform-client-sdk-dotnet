@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLicenseToggle**](LicenseApi.html#getlicensetoggle) | **GET** /api/v2/license/toggles/{featureName} | Get PureCloud license feature toggle value. |
 | [**GetLicenseUser**](LicenseApi.html#getlicenseuser) | **GET** /api/v2/license/users/{userId} | Get licenses for specified user. |
 | [**GetLicenseUsers**](LicenseApi.html#getlicenseusers) | **GET** /api/v2/license/users | Get a page of users and their licenses |
+| [**PostLicenseInfer**](LicenseApi.html#postlicenseinfer) | **POST** /api/v2/license/infer | Get a list of licenses inferred based on a list of roleIds |
 | [**PostLicenseOrganization**](LicenseApi.html#postlicenseorganization) | **POST** /api/v2/license/organization | Update the organization&#39;s license assignments in a batch. |
 | [**PostLicenseToggle**](LicenseApi.html#postlicensetoggle) | **POST** /api/v2/license/toggles/{featureName} | Switch PureCloud license feature toggle value. |
 | [**PostLicenseUsers**](LicenseApi.html#postlicenseusers) | **POST** /api/v2/license/users | Fetch user licenses in a batch. |
@@ -317,6 +318,66 @@ namespace Example
 ### Return type
 
 [**UserLicensesEntityListing**](UserLicensesEntityListing.html)
+
+<a name="postlicenseinfer"></a>
+
+## **List&lt;string&gt;** PostLicenseInfer (List<string> body = null)
+
+
+
+Get a list of licenses inferred based on a list of roleIds
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLicenseInferExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new LicenseApi();
+            var body = ;  // List<string> | The roleIds to use while inferring licenses (optional) 
+
+            try
+            { 
+                // Get a list of licenses inferred based on a list of roleIds
+                List&lt;string&gt; result = apiInstance.PostLicenseInfer(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LicenseApi.PostLicenseInfer: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | **List<string>**| The roleIds to use while inferring licenses | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+**List<string>**
 
 <a name="postlicenseorganization"></a>
 

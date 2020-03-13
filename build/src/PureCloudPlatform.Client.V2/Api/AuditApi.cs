@@ -48,8 +48,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>AuditQueryExecutionResultsResponse</returns>
-        AuditQueryExecutionResultsResponse GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null);
+        AuditQueryExecutionResultsResponse GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
         /// Get results of audit query
@@ -61,8 +62,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AuditQueryExecutionResultsResponse</returns>
-        ApiResponse<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null);
+        ApiResponse<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
         
         /// <summary>
         /// Create audit query execution
@@ -122,8 +124,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of AuditQueryExecutionResultsResponse</returns>
-        System.Threading.Tasks.Task<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null);
+        System.Threading.Tasks.Task<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
         /// Get results of audit query
@@ -135,8 +138,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionResultsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionResultsResponse>> GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionResultsResponse>> GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
         
         /// <summary>
         /// Create audit query execution
@@ -452,10 +456,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>AuditQueryExecutionResultsResponse</returns>
-        public AuditQueryExecutionResultsResponse GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null)
+        public AuditQueryExecutionResultsResponse GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
         {
-             ApiResponse<AuditQueryExecutionResultsResponse> localVarResponse = GetAuditsQueryTransactionIdResultsWithHttpInfo(transactionId, cursor, pageSize);
+             ApiResponse<AuditQueryExecutionResultsResponse> localVarResponse = GetAuditsQueryTransactionIdResultsWithHttpInfo(transactionId, cursor, pageSize, expand);
              return localVarResponse.Data;
         }
 
@@ -466,8 +471,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AuditQueryExecutionResultsResponse</returns>
-        public ApiResponse< AuditQueryExecutionResultsResponse > GetAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null)
+        public ApiResponse< AuditQueryExecutionResultsResponse > GetAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
         { 
             // verify the required parameter 'transactionId' is set
             if (transactionId == null)
@@ -509,6 +515,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -553,10 +560,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of AuditQueryExecutionResultsResponse</returns>
-        public async System.Threading.Tasks.Task<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
         {
-             ApiResponse<AuditQueryExecutionResultsResponse> localVarResponse = await GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo(transactionId, cursor, pageSize);
+             ApiResponse<AuditQueryExecutionResultsResponse> localVarResponse = await GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo(transactionId, cursor, pageSize, expand);
              return localVarResponse.Data;
 
         }
@@ -568,8 +576,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionResultsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionResultsResponse>> GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionResultsResponse>> GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
         { 
             // verify the required parameter 'transactionId' is set
             if (transactionId == null)
@@ -612,6 +621,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

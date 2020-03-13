@@ -8,7 +8,7 @@ title: AuditLogMessage
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | Id of the audit message. | [optional] |
-| **User** | [**AddressableEntityRef**](AddressableEntityRef.html) | User associated with this audit message. | [optional] |
+| **User** | [**DomainEntityRef**](DomainEntityRef.html) | User associated with this audit message. | [optional] |
 | **Client** | [**AddressableEntityRef**](AddressableEntityRef.html) | Client associated with this audit message. | [optional] |
 | **RemoteIp** | **List&lt;string&gt;** | List of IP addresses of systems that originated or handled the request. | [optional] |
 | **ServiceName** | **string** | Name of the service that logged this audit message. | [optional] |

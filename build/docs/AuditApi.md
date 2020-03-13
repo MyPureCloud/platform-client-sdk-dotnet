@@ -75,7 +75,7 @@ namespace Example
 
 <a name="getauditsquerytransactionidresults"></a>
 
-## [**AuditQueryExecutionResultsResponse**](AuditQueryExecutionResultsResponse.html) GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null)
+## [**AuditQueryExecutionResultsResponse**](AuditQueryExecutionResultsResponse.html) GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
 
 
 
@@ -108,11 +108,12 @@ namespace Example
             var transactionId = transactionId_example;  // string | Transaction ID
             var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page) (optional) 
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             { 
                 // Get results of audit query
-                AuditQueryExecutionResultsResponse result = apiInstance.GetAuditsQueryTransactionIdResults(transactionId, cursor, pageSize);
+                AuditQueryExecutionResultsResponse result = apiInstance.GetAuditsQueryTransactionIdResults(transactionId, cursor, pageSize, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -132,6 +133,7 @@ namespace Example
 | **transactionId** | **string**| Transaction ID |  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: user |
 {: class="table table-striped"}
 
 ### Return type

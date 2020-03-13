@@ -75,6 +75,26 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationQuestionGroupScore" /> class.
@@ -85,12 +105,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MarkedNA">MarkedNA.</param>
         /// <param name="TotalCriticalScore">TotalCriticalScore.</param>
         /// <param name="MaxTotalCriticalScore">MaxTotalCriticalScore.</param>
+        /// <param name="TotalNonCriticalScore">TotalNonCriticalScore.</param>
+        /// <param name="MaxTotalNonCriticalScore">MaxTotalNonCriticalScore.</param>
         /// <param name="TotalScoreUnweighted">TotalScoreUnweighted.</param>
         /// <param name="MaxTotalScoreUnweighted">MaxTotalScoreUnweighted.</param>
         /// <param name="TotalCriticalScoreUnweighted">TotalCriticalScoreUnweighted.</param>
         /// <param name="MaxTotalCriticalScoreUnweighted">MaxTotalCriticalScoreUnweighted.</param>
+        /// <param name="TotalNonCriticalScoreUnweighted">TotalNonCriticalScoreUnweighted.</param>
+        /// <param name="MaxTotalNonCriticalScoreUnweighted">MaxTotalNonCriticalScoreUnweighted.</param>
         /// <param name="QuestionScores">QuestionScores.</param>
-        public EvaluationQuestionGroupScore(string QuestionGroupId = null, float? TotalScore = null, float? MaxTotalScore = null, bool? MarkedNA = null, float? TotalCriticalScore = null, float? MaxTotalCriticalScore = null, float? TotalScoreUnweighted = null, float? MaxTotalScoreUnweighted = null, float? TotalCriticalScoreUnweighted = null, float? MaxTotalCriticalScoreUnweighted = null, List<EvaluationQuestionScore> QuestionScores = null)
+        public EvaluationQuestionGroupScore(string QuestionGroupId = null, float? TotalScore = null, float? MaxTotalScore = null, bool? MarkedNA = null, float? TotalCriticalScore = null, float? MaxTotalCriticalScore = null, float? TotalNonCriticalScore = null, float? MaxTotalNonCriticalScore = null, float? TotalScoreUnweighted = null, float? MaxTotalScoreUnweighted = null, float? TotalCriticalScoreUnweighted = null, float? MaxTotalCriticalScoreUnweighted = null, float? TotalNonCriticalScoreUnweighted = null, float? MaxTotalNonCriticalScoreUnweighted = null, List<EvaluationQuestionScore> QuestionScores = null)
         {
             this.QuestionGroupId = QuestionGroupId;
             this.TotalScore = TotalScore;
@@ -98,10 +122,14 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MarkedNA = MarkedNA;
             this.TotalCriticalScore = TotalCriticalScore;
             this.MaxTotalCriticalScore = MaxTotalCriticalScore;
+            this.TotalNonCriticalScore = TotalNonCriticalScore;
+            this.MaxTotalNonCriticalScore = MaxTotalNonCriticalScore;
             this.TotalScoreUnweighted = TotalScoreUnweighted;
             this.MaxTotalScoreUnweighted = MaxTotalScoreUnweighted;
             this.TotalCriticalScoreUnweighted = TotalCriticalScoreUnweighted;
             this.MaxTotalCriticalScoreUnweighted = MaxTotalCriticalScoreUnweighted;
+            this.TotalNonCriticalScoreUnweighted = TotalNonCriticalScoreUnweighted;
+            this.MaxTotalNonCriticalScoreUnweighted = MaxTotalNonCriticalScoreUnweighted;
             this.QuestionScores = QuestionScores;
             
         }
@@ -157,6 +185,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets TotalNonCriticalScore
+        /// </summary>
+        [DataMember(Name="totalNonCriticalScore", EmitDefaultValue=false)]
+        public float? TotalNonCriticalScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets MaxTotalNonCriticalScore
+        /// </summary>
+        [DataMember(Name="maxTotalNonCriticalScore", EmitDefaultValue=false)]
+        public float? MaxTotalNonCriticalScore { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets TotalScoreUnweighted
         /// </summary>
         [DataMember(Name="totalScoreUnweighted", EmitDefaultValue=false)]
@@ -189,6 +233,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets TotalNonCriticalScoreUnweighted
+        /// </summary>
+        [DataMember(Name="totalNonCriticalScoreUnweighted", EmitDefaultValue=false)]
+        public float? TotalNonCriticalScoreUnweighted { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets MaxTotalNonCriticalScoreUnweighted
+        /// </summary>
+        [DataMember(Name="maxTotalNonCriticalScoreUnweighted", EmitDefaultValue=false)]
+        public float? MaxTotalNonCriticalScoreUnweighted { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets QuestionScores
         /// </summary>
         [DataMember(Name="questionScores", EmitDefaultValue=false)]
@@ -210,10 +270,14 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
             sb.Append("  TotalCriticalScore: ").Append(TotalCriticalScore).Append("\n");
             sb.Append("  MaxTotalCriticalScore: ").Append(MaxTotalCriticalScore).Append("\n");
+            sb.Append("  TotalNonCriticalScore: ").Append(TotalNonCriticalScore).Append("\n");
+            sb.Append("  MaxTotalNonCriticalScore: ").Append(MaxTotalNonCriticalScore).Append("\n");
             sb.Append("  TotalScoreUnweighted: ").Append(TotalScoreUnweighted).Append("\n");
             sb.Append("  MaxTotalScoreUnweighted: ").Append(MaxTotalScoreUnweighted).Append("\n");
             sb.Append("  TotalCriticalScoreUnweighted: ").Append(TotalCriticalScoreUnweighted).Append("\n");
             sb.Append("  MaxTotalCriticalScoreUnweighted: ").Append(MaxTotalCriticalScoreUnweighted).Append("\n");
+            sb.Append("  TotalNonCriticalScoreUnweighted: ").Append(TotalNonCriticalScoreUnweighted).Append("\n");
+            sb.Append("  MaxTotalNonCriticalScoreUnweighted: ").Append(MaxTotalNonCriticalScoreUnweighted).Append("\n");
             sb.Append("  QuestionScores: ").Append(QuestionScores).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -282,6 +346,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxTotalCriticalScore.Equals(other.MaxTotalCriticalScore)
                 ) &&
                 (
+                    this.TotalNonCriticalScore == other.TotalNonCriticalScore ||
+                    this.TotalNonCriticalScore != null &&
+                    this.TotalNonCriticalScore.Equals(other.TotalNonCriticalScore)
+                ) &&
+                (
+                    this.MaxTotalNonCriticalScore == other.MaxTotalNonCriticalScore ||
+                    this.MaxTotalNonCriticalScore != null &&
+                    this.MaxTotalNonCriticalScore.Equals(other.MaxTotalNonCriticalScore)
+                ) &&
+                (
                     this.TotalScoreUnweighted == other.TotalScoreUnweighted ||
                     this.TotalScoreUnweighted != null &&
                     this.TotalScoreUnweighted.Equals(other.TotalScoreUnweighted)
@@ -300,6 +374,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxTotalCriticalScoreUnweighted == other.MaxTotalCriticalScoreUnweighted ||
                     this.MaxTotalCriticalScoreUnweighted != null &&
                     this.MaxTotalCriticalScoreUnweighted.Equals(other.MaxTotalCriticalScoreUnweighted)
+                ) &&
+                (
+                    this.TotalNonCriticalScoreUnweighted == other.TotalNonCriticalScoreUnweighted ||
+                    this.TotalNonCriticalScoreUnweighted != null &&
+                    this.TotalNonCriticalScoreUnweighted.Equals(other.TotalNonCriticalScoreUnweighted)
+                ) &&
+                (
+                    this.MaxTotalNonCriticalScoreUnweighted == other.MaxTotalNonCriticalScoreUnweighted ||
+                    this.MaxTotalNonCriticalScoreUnweighted != null &&
+                    this.MaxTotalNonCriticalScoreUnweighted.Equals(other.MaxTotalNonCriticalScoreUnweighted)
                 ) &&
                 (
                     this.QuestionScores == other.QuestionScores ||
@@ -338,6 +422,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.MaxTotalCriticalScore != null)
                     hash = hash * 59 + this.MaxTotalCriticalScore.GetHashCode();
                 
+                if (this.TotalNonCriticalScore != null)
+                    hash = hash * 59 + this.TotalNonCriticalScore.GetHashCode();
+                
+                if (this.MaxTotalNonCriticalScore != null)
+                    hash = hash * 59 + this.MaxTotalNonCriticalScore.GetHashCode();
+                
                 if (this.TotalScoreUnweighted != null)
                     hash = hash * 59 + this.TotalScoreUnweighted.GetHashCode();
                 
@@ -349,6 +439,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.MaxTotalCriticalScoreUnweighted != null)
                     hash = hash * 59 + this.MaxTotalCriticalScoreUnweighted.GetHashCode();
+                
+                if (this.TotalNonCriticalScoreUnweighted != null)
+                    hash = hash * 59 + this.TotalNonCriticalScoreUnweighted.GetHashCode();
+                
+                if (this.MaxTotalNonCriticalScoreUnweighted != null)
+                    hash = hash * 59 + this.MaxTotalNonCriticalScoreUnweighted.GetHashCode();
                 
                 if (this.QuestionScores != null)
                     hash = hash * 59 + this.QuestionScores.GetHashCode();

@@ -65,6 +65,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId);
         
         /// <summary>
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns></returns>
+        void DeleteRoutingUserUtilization (string userId);
+
+        /// <summary>
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRoutingUserUtilizationWithHttpInfo (string userId);
+        
+        /// <summary>
         /// Delete user
         /// </summary>
         /// <remarks>
@@ -249,10 +271,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AnalyticsUserDetailsAsyncQueryResponse> GetAnalyticsUsersDetailsJobResultsWithHttpInfo (string jobId, string cursor = null, int? pageSize = null);
         
         /// <summary>
-        /// Returns whether or not current user can perform the specified action(s).
+        /// Returns which divisions the current user has the given permission in.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
@@ -261,10 +283,10 @@ namespace PureCloudPlatform.Client.V2.Api
         List<AuthzDivision> GetAuthorizationDivisionspermittedMe (string permission, string name = null);
 
         /// <summary>
-        /// Returns whether or not current user can perform the specified action(s).
+        /// Returns which divisions the current user has the given permission in.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
@@ -273,10 +295,64 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<AuthzDivision>> GetAuthorizationDivisionspermittedMeWithHttpInfo (string permission, string name = null);
         
         /// <summary>
-        /// Returns whether or not specified user can perform the specified action(s).
+        /// Returns which divisions the current user has the given permission in.
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>DivsPermittedEntityListing</returns>
+        DivsPermittedEntityListing GetAuthorizationDivisionspermittedPagedMe (string permission, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Returns which divisions the current user has the given permission in.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of DivsPermittedEntityListing</returns>
+        ApiResponse<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedMeWithHttpInfo (string permission, int? pageNumber = null, int? pageSize = null);
+        
+        /// <summary>
+        /// Returns which divisions the specified user has the given permission in.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>DivsPermittedEntityListing</returns>
+        DivsPermittedEntityListing GetAuthorizationDivisionspermittedPagedSubjectId (string subjectId, string permission, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Returns which divisions the specified user has the given permission in.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of DivsPermittedEntityListing</returns>
+        ApiResponse<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedSubjectIdWithHttpInfo (string subjectId, string permission, int? pageNumber = null, int? pageSize = null);
+        
+        /// <summary>
+        /// Returns which divisions the specified user has the given permission in.
+        /// </summary>
+        /// <remarks>
+        /// This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -286,10 +362,10 @@ namespace PureCloudPlatform.Client.V2.Api
         List<AuthzDivision> GetAuthorizationDivisionspermittedSubjectId (string subjectId, string permission, string name = null);
 
         /// <summary>
-        /// Returns whether or not specified user can perform the specified action(s).
+        /// Returns which divisions the specified user has the given permission in.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -393,6 +469,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UserProfileEntityListing</returns>
         ApiResponse<UserProfileEntityListing> GetProfilesUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null);
+        
+        /// <summary>
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Utilization</returns>
+        Utilization GetRoutingUserUtilization (string userId);
+
+        /// <summary>
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>ApiResponse of Utilization</returns>
+        ApiResponse<Utilization> GetRoutingUserUtilizationWithHttpInfo (string userId);
         
         /// <summary>
         /// Get user.
@@ -1445,6 +1543,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UsersSearchResponse> PostUsersSearchWithHttpInfo (UserSearchRequest body);
         
         /// <summary>
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">utilization</param>
+        /// <returns>Utilization</returns>
+        Utilization PutRoutingUserUtilization (string userId, Utilization body);
+
+        /// <summary>
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">utilization</param>
+        /// <returns>ApiResponse of Utilization</returns>
+        ApiResponse<Utilization> PutRoutingUserUtilizationWithHttpInfo (string userId, Utilization body);
+        
+        /// <summary>
         /// Update a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
@@ -1715,6 +1837,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId);
         
         /// <summary>
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRoutingUserUtilizationAsync (string userId);
+
+        /// <summary>
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUserUtilizationAsyncWithHttpInfo (string userId);
+        
+        /// <summary>
         /// Delete user
         /// </summary>
         /// <remarks>
@@ -1899,10 +2043,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AnalyticsUserDetailsAsyncQueryResponse>> GetAnalyticsUsersDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null, int? pageSize = null);
         
         /// <summary>
-        /// Returns whether or not current user can perform the specified action(s).
+        /// Returns which divisions the current user has the given permission in.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
@@ -1911,10 +2055,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<List<AuthzDivision>> GetAuthorizationDivisionspermittedMeAsync (string permission, string name = null);
 
         /// <summary>
-        /// Returns whether or not current user can perform the specified action(s).
+        /// Returns which divisions the current user has the given permission in.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
@@ -1923,10 +2067,64 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<AuthzDivision>>> GetAuthorizationDivisionspermittedMeAsyncWithHttpInfo (string permission, string name = null);
         
         /// <summary>
-        /// Returns whether or not specified user can perform the specified action(s).
+        /// Returns which divisions the current user has the given permission in.
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of DivsPermittedEntityListing</returns>
+        System.Threading.Tasks.Task<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedMeAsync (string permission, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Returns which divisions the current user has the given permission in.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (DivsPermittedEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DivsPermittedEntityListing>> GetAuthorizationDivisionspermittedPagedMeAsyncWithHttpInfo (string permission, int? pageNumber = null, int? pageSize = null);
+        
+        /// <summary>
+        /// Returns which divisions the specified user has the given permission in.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of DivsPermittedEntityListing</returns>
+        System.Threading.Tasks.Task<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedSubjectIdAsync (string subjectId, string permission, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Returns which divisions the specified user has the given permission in.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (DivsPermittedEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DivsPermittedEntityListing>> GetAuthorizationDivisionspermittedPagedSubjectIdAsyncWithHttpInfo (string subjectId, string permission, int? pageNumber = null, int? pageSize = null);
+        
+        /// <summary>
+        /// Returns which divisions the specified user has the given permission in.
+        /// </summary>
+        /// <remarks>
+        /// This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -1936,10 +2134,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<List<AuthzDivision>> GetAuthorizationDivisionspermittedSubjectIdAsync (string subjectId, string permission, string name = null);
 
         /// <summary>
-        /// Returns whether or not specified user can perform the specified action(s).
+        /// Returns which divisions the specified user has the given permission in.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -2043,6 +2241,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UserProfileEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserProfileEntityListing>> GetProfilesUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null);
+        
+        /// <summary>
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of Utilization</returns>
+        System.Threading.Tasks.Task<Utilization> GetRoutingUserUtilizationAsync (string userId);
+
+        /// <summary>
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of ApiResponse (Utilization)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Utilization>> GetRoutingUserUtilizationAsyncWithHttpInfo (string userId);
         
         /// <summary>
         /// Get user.
@@ -3095,6 +3315,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchAsyncWithHttpInfo (UserSearchRequest body);
         
         /// <summary>
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">utilization</param>
+        /// <returns>Task of Utilization</returns>
+        System.Threading.Tasks.Task<Utilization> PutRoutingUserUtilizationAsync (string userId, Utilization body);
+
+        /// <summary>
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">utilization</param>
+        /// <returns>Task of ApiResponse (Utilization)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Utilization>> PutRoutingUserUtilizationAsyncWithHttpInfo (string userId, Utilization body);
+        
+        /// <summary>
         /// Update a user&#39;s CallForwarding
         /// </summary>
         /// <remarks>
@@ -3802,6 +4046,197 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationSubjectDivisionRole: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAuthorizationSubjectDivisionRole: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns></returns>
+        public void DeleteRoutingUserUtilization (string userId)
+        {
+             DeleteRoutingUserUtilizationWithHttpInfo(userId);
+        }
+
+        /// <summary>
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRoutingUserUtilizationWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteRoutingUserUtilization");
+
+            var localVarPath = "/api/v2/routing/users/{userId}/utilization";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUserUtilization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUserUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRoutingUserUtilizationAsync (string userId)
+        {
+             await DeleteRoutingUserUtilizationAsyncWithHttpInfo(userId);
+
+        }
+
+        /// <summary>
+        /// Delete the user&#39;s max utilization settings and revert to the organization-wide default. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUserUtilizationAsyncWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteRoutingUserUtilization");
+            
+
+            var localVarPath = "/api/v2/routing/users/{userId}/utilization";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUserUtilization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUserUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -5385,7 +5820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Returns whether or not current user can perform the specified action(s). 
+        /// Returns which divisions the current user has the given permission in. This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
@@ -5398,7 +5833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Returns whether or not current user can perform the specified action(s). 
+        /// Returns which divisions the current user has the given permission in. This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
@@ -5483,7 +5918,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Returns whether or not current user can perform the specified action(s). 
+        /// Returns which divisions the current user has the given permission in. This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
@@ -5497,7 +5932,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Returns whether or not current user can perform the specified action(s). 
+        /// Returns which divisions the current user has the given permission in. This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
@@ -5584,7 +6019,430 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Returns whether or not specified user can perform the specified action(s). 
+        /// Returns which divisions the current user has the given permission in. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>DivsPermittedEntityListing</returns>
+        public DivsPermittedEntityListing GetAuthorizationDivisionspermittedPagedMe (string permission, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<DivsPermittedEntityListing> localVarResponse = GetAuthorizationDivisionspermittedPagedMeWithHttpInfo(permission, pageNumber, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns which divisions the current user has the given permission in. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of DivsPermittedEntityListing</returns>
+        public ApiResponse< DivsPermittedEntityListing > GetAuthorizationDivisionspermittedPagedMeWithHttpInfo (string permission, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'permission' is set
+            if (permission == null)
+                throw new ApiException(400, "Missing required parameter 'permission' when calling UsersApi->GetAuthorizationDivisionspermittedPagedMe");
+
+            var localVarPath = "/api/v2/authorization/divisionspermitted/paged/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (permission != null) localVarQueryParams.Add(new Tuple<string, string>("permission", this.Configuration.ApiClient.ParameterToString(permission)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedPagedMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedPagedMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DivsPermittedEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DivsPermittedEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DivsPermittedEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Returns which divisions the current user has the given permission in. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of DivsPermittedEntityListing</returns>
+        public async System.Threading.Tasks.Task<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedMeAsync (string permission, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<DivsPermittedEntityListing> localVarResponse = await GetAuthorizationDivisionspermittedPagedMeAsyncWithHttpInfo(permission, pageNumber, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns which divisions the current user has the given permission in. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (DivsPermittedEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DivsPermittedEntityListing>> GetAuthorizationDivisionspermittedPagedMeAsyncWithHttpInfo (string permission, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'permission' is set
+            if (permission == null)
+                throw new ApiException(400, "Missing required parameter 'permission' when calling UsersApi->GetAuthorizationDivisionspermittedPagedMe");
+            
+
+            var localVarPath = "/api/v2/authorization/divisionspermitted/paged/me";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (permission != null) localVarQueryParams.Add(new Tuple<string, string>("permission", this.Configuration.ApiClient.ParameterToString(permission)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedPagedMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedPagedMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DivsPermittedEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DivsPermittedEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DivsPermittedEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Returns which divisions the specified user has the given permission in. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>DivsPermittedEntityListing</returns>
+        public DivsPermittedEntityListing GetAuthorizationDivisionspermittedPagedSubjectId (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<DivsPermittedEntityListing> localVarResponse = GetAuthorizationDivisionspermittedPagedSubjectIdWithHttpInfo(subjectId, permission, pageNumber, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns which divisions the specified user has the given permission in. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>ApiResponse of DivsPermittedEntityListing</returns>
+        public ApiResponse< DivsPermittedEntityListing > GetAuthorizationDivisionspermittedPagedSubjectIdWithHttpInfo (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling UsersApi->GetAuthorizationDivisionspermittedPagedSubjectId");
+            // verify the required parameter 'permission' is set
+            if (permission == null)
+                throw new ApiException(400, "Missing required parameter 'permission' when calling UsersApi->GetAuthorizationDivisionspermittedPagedSubjectId");
+
+            var localVarPath = "/api/v2/authorization/divisionspermitted/paged/{subjectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+
+            // Query params
+            if (permission != null) localVarQueryParams.Add(new Tuple<string, string>("permission", this.Configuration.ApiClient.ParameterToString(permission)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedPagedSubjectId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedPagedSubjectId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DivsPermittedEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DivsPermittedEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DivsPermittedEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Returns which divisions the specified user has the given permission in. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of DivsPermittedEntityListing</returns>
+        public async System.Threading.Tasks.Task<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedSubjectIdAsync (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<DivsPermittedEntityListing> localVarResponse = await GetAuthorizationDivisionspermittedPagedSubjectIdAsyncWithHttpInfo(subjectId, permission, pageNumber, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns which divisions the specified user has the given permission in. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="permission">The permission string, including the object to access, e.g. routing:queue:view</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (DivsPermittedEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DivsPermittedEntityListing>> GetAuthorizationDivisionspermittedPagedSubjectIdAsyncWithHttpInfo (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'subjectId' is set
+            if (subjectId == null)
+                throw new ApiException(400, "Missing required parameter 'subjectId' when calling UsersApi->GetAuthorizationDivisionspermittedPagedSubjectId");
+            
+            // verify the required parameter 'permission' is set
+            if (permission == null)
+                throw new ApiException(400, "Missing required parameter 'permission' when calling UsersApi->GetAuthorizationDivisionspermittedPagedSubjectId");
+            
+
+            var localVarPath = "/api/v2/authorization/divisionspermitted/paged/{subjectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
+
+            // Query params
+            if (permission != null) localVarQueryParams.Add(new Tuple<string, string>("permission", this.Configuration.ApiClient.ParameterToString(permission)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedPagedSubjectId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationDivisionspermittedPagedSubjectId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DivsPermittedEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DivsPermittedEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DivsPermittedEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Returns which divisions the specified user has the given permission in. This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -5598,7 +6456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Returns whether or not specified user can perform the specified action(s). 
+        /// Returns which divisions the specified user has the given permission in. This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -5688,7 +6546,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Returns whether or not specified user can perform the specified action(s). 
+        /// Returns which divisions the specified user has the given permission in. This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -5703,7 +6561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Returns whether or not specified user can perform the specified action(s). 
+        /// Returns which divisions the specified user has the given permission in. This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -6571,6 +7429,199 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UserProfileEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (UserProfileEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserProfileEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Utilization</returns>
+        public Utilization GetRoutingUserUtilization (string userId)
+        {
+             ApiResponse<Utilization> localVarResponse = GetRoutingUserUtilizationWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>ApiResponse of Utilization</returns>
+        public ApiResponse< Utilization > GetRoutingUserUtilizationWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetRoutingUserUtilization");
+
+            var localVarPath = "/api/v2/routing/users/{userId}/utilization";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUserUtilization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUserUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Utilization>(localVarStatusCode,
+                localVarHeaders,
+                (Utilization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Utilization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of Utilization</returns>
+        public async System.Threading.Tasks.Task<Utilization> GetRoutingUserUtilizationAsync (string userId)
+        {
+             ApiResponse<Utilization> localVarResponse = await GetRoutingUserUtilizationAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of ApiResponse (Utilization)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Utilization>> GetRoutingUserUtilizationAsyncWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetRoutingUserUtilization");
+            
+
+            var localVarPath = "/api/v2/routing/users/{userId}/utilization";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUserUtilization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUserUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Utilization>(localVarStatusCode,
+                localVarHeaders,
+                (Utilization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Utilization)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15457,6 +16508,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UsersSearchResponse>(localVarStatusCode,
                 localVarHeaders,
                 (UsersSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">utilization</param>
+        /// <returns>Utilization</returns>
+        public Utilization PutRoutingUserUtilization (string userId, Utilization body)
+        {
+             ApiResponse<Utilization> localVarResponse = PutRoutingUserUtilizationWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">utilization</param>
+        /// <returns>ApiResponse of Utilization</returns>
+        public ApiResponse< Utilization > PutRoutingUserUtilizationWithHttpInfo (string userId, Utilization body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PutRoutingUserUtilization");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutRoutingUserUtilization");
+
+            var localVarPath = "/api/v2/routing/users/{userId}/utilization";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingUserUtilization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingUserUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Utilization>(localVarStatusCode,
+                localVarHeaders,
+                (Utilization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Utilization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">utilization</param>
+        /// <returns>Task of Utilization</returns>
+        public async System.Threading.Tasks.Task<Utilization> PutRoutingUserUtilizationAsync (string userId, Utilization body)
+        {
+             ApiResponse<Utilization> localVarResponse = await PutRoutingUserUtilizationAsyncWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">utilization</param>
+        /// <returns>Task of ApiResponse (Utilization)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Utilization>> PutRoutingUserUtilizationAsyncWithHttpInfo (string userId, Utilization body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PutRoutingUserUtilization");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutRoutingUserUtilization");
+            
+
+            var localVarPath = "/api/v2/routing/users/{userId}/utilization";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingUserUtilization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingUserUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Utilization>(localVarStatusCode,
+                localVarHeaders,
+                (Utilization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Utilization)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

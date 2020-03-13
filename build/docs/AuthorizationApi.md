@@ -15,8 +15,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuthorizationDivisions**](AuthorizationApi.html#getauthorizationdivisions) | **GET** /api/v2/authorization/divisions | Retrieve a list of all divisions defined for the organization |
 | [**GetAuthorizationDivisionsHome**](AuthorizationApi.html#getauthorizationdivisionshome) | **GET** /api/v2/authorization/divisions/home | Retrieve the home division for the organization. |
 | [**GetAuthorizationDivisionsLimit**](AuthorizationApi.html#getauthorizationdivisionslimit) | **GET** /api/v2/authorization/divisions/limit | Returns the maximum allowed number of divisions. |
-| [**GetAuthorizationDivisionspermittedMe**](AuthorizationApi.html#getauthorizationdivisionspermittedme) | **GET** /api/v2/authorization/divisionspermitted/me | Returns whether or not current user can perform the specified action(s). |
-| [**GetAuthorizationDivisionspermittedSubjectId**](AuthorizationApi.html#getauthorizationdivisionspermittedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/{subjectId} | Returns whether or not specified user can perform the specified action(s). |
+| [**GetAuthorizationDivisionspermittedMe**](AuthorizationApi.html#getauthorizationdivisionspermittedme) | **GET** /api/v2/authorization/divisionspermitted/me | Returns which divisions the current user has the given permission in. |
+| [**GetAuthorizationDivisionspermittedPagedMe**](AuthorizationApi.html#getauthorizationdivisionspermittedpagedme) | **GET** /api/v2/authorization/divisionspermitted/paged/me | Returns which divisions the current user has the given permission in. |
+| [**GetAuthorizationDivisionspermittedPagedSubjectId**](AuthorizationApi.html#getauthorizationdivisionspermittedpagedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/paged/{subjectId} | Returns which divisions the specified user has the given permission in. |
+| [**GetAuthorizationDivisionspermittedSubjectId**](AuthorizationApi.html#getauthorizationdivisionspermittedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/{subjectId} | Returns which divisions the specified user has the given permission in. |
 | [**GetAuthorizationPermissions**](AuthorizationApi.html#getauthorizationpermissions) | **GET** /api/v2/authorization/permissions | Get all permissions. |
 | [**GetAuthorizationProducts**](AuthorizationApi.html#getauthorizationproducts) | **GET** /api/v2/authorization/products | Get the list of enabled products |
 | [**GetAuthorizationRole**](AuthorizationApi.html#getauthorizationrole) | **GET** /api/v2/authorization/roles/{roleId} | Get a single organization role. |
@@ -544,11 +546,11 @@ This endpoint does require any parameters.
 
 ## [**List&lt;AuthzDivision&gt;**](AuthzDivision.html) GetAuthorizationDivisionspermittedMe (string permission, string name = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
+Returns which divisions the current user has the given permission in.
 
-Returns whether or not current user can perform the specified action(s).
-
-
+This route is deprecated, use authorization/divisionspermitted/paged/me instead.
 
 Requires NO permissions: 
 
@@ -576,7 +578,7 @@ namespace Example
 
             try
             { 
-                // Returns whether or not current user can perform the specified action(s).
+                // Returns which divisions the current user has the given permission in.
                 List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedMe(permission, name);
                 Debug.WriteLine(result);
             }
@@ -602,15 +604,145 @@ namespace Example
 
 [**List<AuthzDivision>**](AuthzDivision.html)
 
+<a name="getauthorizationdivisionspermittedpagedme"></a>
+
+## [**DivsPermittedEntityListing**](DivsPermittedEntityListing.html) GetAuthorizationDivisionspermittedPagedMe (string permission, int? pageNumber = null, int? pageSize = null)
+
+
+
+Returns which divisions the current user has the given permission in.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionspermittedPagedMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AuthorizationApi();
+            var permission = permission_example;  // string | The permission string, including the object to access, e.g. routing:queue:view
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Returns which divisions the current user has the given permission in.
+                DivsPermittedEntityListing result = apiInstance.GetAuthorizationDivisionspermittedPagedMe(permission, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationDivisionspermittedPagedMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DivsPermittedEntityListing**](DivsPermittedEntityListing.html)
+
+<a name="getauthorizationdivisionspermittedpagedsubjectid"></a>
+
+## [**DivsPermittedEntityListing**](DivsPermittedEntityListing.html) GetAuthorizationDivisionspermittedPagedSubjectId (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
+
+
+
+Returns which divisions the specified user has the given permission in.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionspermittedPagedSubjectIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AuthorizationApi();
+            var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            var permission = permission_example;  // string | The permission string, including the object to access, e.g. routing:queue:view
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Returns which divisions the specified user has the given permission in.
+                DivsPermittedEntityListing result = apiInstance.GetAuthorizationDivisionspermittedPagedSubjectId(subjectId, permission, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationDivisionspermittedPagedSubjectId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **subjectId** | **string**| Subject ID (user or group) |  |
+| **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DivsPermittedEntityListing**](DivsPermittedEntityListing.html)
+
 <a name="getauthorizationdivisionspermittedsubjectid"></a>
 
 ## [**List&lt;AuthzDivision&gt;**](AuthzDivision.html) GetAuthorizationDivisionspermittedSubjectId (string subjectId, string permission, string name = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Returns whether or not specified user can perform the specified action(s).
+Returns which divisions the specified user has the given permission in.
 
-
+This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
 
 Requires NO permissions: 
 
@@ -639,7 +771,7 @@ namespace Example
 
             try
             { 
-                // Returns whether or not specified user can perform the specified action(s).
+                // Returns which divisions the specified user has the given permission in.
                 List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedSubjectId(subjectId, permission, name);
                 Debug.WriteLine(result);
             }

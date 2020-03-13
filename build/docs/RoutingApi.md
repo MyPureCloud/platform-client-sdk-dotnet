@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingSettings**](RoutingApi.html#deleteroutingsettings) | **DELETE** /api/v2/routing/settings | Delete an organization&#39;s routing settings |
 | [**DeleteRoutingSkill**](RoutingApi.html#deleteroutingskill) | **DELETE** /api/v2/routing/skills/{skillId} | Delete Routing Skill |
 | [**DeleteRoutingSmsPhonenumber**](RoutingApi.html#deleteroutingsmsphonenumber) | **DELETE** /api/v2/routing/sms/phonenumbers/{addressId} | Delete a phone number provisioned for SMS. |
+| [**DeleteRoutingUserUtilization**](RoutingApi.html#deleteroutinguserutilization) | **DELETE** /api/v2/routing/users/{userId}/utilization | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**DeleteRoutingUtilization**](RoutingApi.html#deleteroutingutilization) | **DELETE** /api/v2/routing/utilization | Delete the organization-wide max utilization settings and revert to the system default. |
 | [**DeleteRoutingWrapupcode**](RoutingApi.html#deleteroutingwrapupcode) | **DELETE** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
 | [**DeleteUserRoutinglanguage**](RoutingApi.html#deleteuserroutinglanguage) | **DELETE** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
@@ -46,6 +47,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingSmsAvailablephonenumbers**](RoutingApi.html#getroutingsmsavailablephonenumbers) | **GET** /api/v2/routing/sms/availablephonenumbers | Get a list of available phone numbers for SMS provisioning. |
 | [**GetRoutingSmsPhonenumber**](RoutingApi.html#getroutingsmsphonenumber) | **GET** /api/v2/routing/sms/phonenumbers/{addressId} | Get a phone number provisioned for SMS. |
 | [**GetRoutingSmsPhonenumbers**](RoutingApi.html#getroutingsmsphonenumbers) | **GET** /api/v2/routing/sms/phonenumbers | Get a list of provisioned phone numbers. |
+| [**GetRoutingUserUtilization**](RoutingApi.html#getroutinguserutilization) | **GET** /api/v2/routing/users/{userId}/utilization | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
 | [**GetRoutingUtilization**](RoutingApi.html#getroutingutilization) | **GET** /api/v2/routing/utilization | Get the organization-wide max utilization settings. |
 | [**GetRoutingWrapupcode**](RoutingApi.html#getroutingwrapupcode) | **GET** /api/v2/routing/wrapupcodes/{codeId} | Get details about this wrap-up code. |
 | [**GetRoutingWrapupcodes**](RoutingApi.html#getroutingwrapupcodes) | **GET** /api/v2/routing/wrapupcodes | Get list of wrapup codes. |
@@ -79,6 +81,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutRoutingSettings**](RoutingApi.html#putroutingsettings) | **PUT** /api/v2/routing/settings | Update an organization&#39;s routing settings |
 | [**PutRoutingSettingsTranscription**](RoutingApi.html#putroutingsettingstranscription) | **PUT** /api/v2/routing/settings/transcription | Update Transcription Settings |
 | [**PutRoutingSmsPhonenumber**](RoutingApi.html#putroutingsmsphonenumber) | **PUT** /api/v2/routing/sms/phonenumbers/{addressId} | Update a phone number provisioned for SMS. |
+| [**PutRoutingUserUtilization**](RoutingApi.html#putroutinguserutilization) | **PUT** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**PutRoutingUtilization**](RoutingApi.html#putroutingutilization) | **PUT** /api/v2/routing/utilization | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
 | [**PutRoutingWrapupcode**](RoutingApi.html#putroutingwrapupcode) | **PUT** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
 | [**PutUserRoutingskill**](RoutingApi.html#putuserroutingskill) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
@@ -562,6 +565,66 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **addressId** | **string**| Address ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteroutinguserutilization"></a>
+
+## void DeleteRoutingUserUtilization (string userId)
+
+
+
+Delete the user's max utilization settings and revert to the organization-wide default.
+
+
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingUserUtilizationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RoutingApi();
+            var userId = userId_example;  // string | User ID
+
+            try
+            { 
+                // Delete the user's max utilization settings and revert to the organization-wide default.
+                apiInstance.DeleteRoutingUserUtilization(userId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteRoutingUserUtilization: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2537,6 +2600,68 @@ namespace Example
 ### Return type
 
 [**SmsPhoneNumberEntityListing**](SmsPhoneNumberEntityListing.html)
+
+<a name="getroutinguserutilization"></a>
+
+## [**Utilization**](Utilization.html) GetRoutingUserUtilization (string userId)
+
+
+
+Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+
+
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+* routing:utilization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingUserUtilizationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RoutingApi();
+            var userId = userId_example;  // string | User ID
+
+            try
+            { 
+                // Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+                Utilization result = apiInstance.GetRoutingUserUtilization(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingUserUtilization: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Utilization**](Utilization.html)
 
 <a name="getroutingutilization"></a>
 
@@ -4617,6 +4742,69 @@ namespace Example
 ### Return type
 
 [**SmsPhoneNumber**](SmsPhoneNumber.html)
+
+<a name="putroutinguserutilization"></a>
+
+## [**Utilization**](Utilization.html) PutRoutingUserUtilization (string userId, Utilization body)
+
+
+
+Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+
+
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRoutingUserUtilizationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RoutingApi();
+            var userId = userId_example;  // string | User ID
+            var body = new Utilization(); // Utilization | utilization
+
+            try
+            { 
+                // Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+                Utilization result = apiInstance.PutRoutingUserUtilization(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PutRoutingUserUtilization: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**Utilization**](Utilization.html)| utilization |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Utilization**](Utilization.html)
 
 <a name="putroutingutilization"></a>
 

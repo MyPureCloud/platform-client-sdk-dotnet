@@ -55,6 +55,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowVersions**](ArchitectApi.html#getflowversions) | **GET** /api/v2/flows/{flowId}/versions | Get flow version list |
 | [**GetFlows**](ArchitectApi.html#getflows) | **GET** /api/v2/flows | Get a pageable list of flows, filtered by query parameters |
 | [**GetFlowsDatatable**](ArchitectApi.html#getflowsdatatable) | **GET** /api/v2/flows/datatables/{datatableId} | Returns a specific datatable by id |
+| [**GetFlowsDatatableExportJob**](ArchitectApi.html#getflowsdatatableexportjob) | **GET** /api/v2/flows/datatables/{datatableId}/export/jobs/{exportJobId} | Returns the state information about an export job |
+| [**GetFlowsDatatableImportJob**](ArchitectApi.html#getflowsdatatableimportjob) | **GET** /api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId} | Returns the state information about an import job |
+| [**GetFlowsDatatableImportJobs**](ArchitectApi.html#getflowsdatatableimportjobs) | **GET** /api/v2/flows/datatables/{datatableId}/import/jobs | Get all recent import jobs |
 | [**GetFlowsDatatableRow**](ArchitectApi.html#getflowsdatatablerow) | **GET** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Returns a specific row for the datatable |
 | [**GetFlowsDatatableRows**](ArchitectApi.html#getflowsdatatablerows) | **GET** /api/v2/flows/datatables/{datatableId}/rows | Returns the rows for the datatable with the given id |
 | [**GetFlowsDatatables**](ArchitectApi.html#getflowsdatatables) | **GET** /api/v2/flows/datatables | Retrieve a list of datatables for the org |
@@ -79,6 +82,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostFlowsActionsPublish**](ArchitectApi.html#postflowsactionspublish) | **POST** /api/v2/flows/actions/publish | Publish flow |
 | [**PostFlowsActionsRevert**](ArchitectApi.html#postflowsactionsrevert) | **POST** /api/v2/flows/actions/revert | Revert flow |
 | [**PostFlowsActionsUnlock**](ArchitectApi.html#postflowsactionsunlock) | **POST** /api/v2/flows/actions/unlock | Unlock flow |
+| [**PostFlowsDatatableExportJobs**](ArchitectApi.html#postflowsdatatableexportjobs) | **POST** /api/v2/flows/datatables/{datatableId}/export/jobs | Begin an export process for exporting all rows from a datatable |
+| [**PostFlowsDatatableImportJobs**](ArchitectApi.html#postflowsdatatableimportjobs) | **POST** /api/v2/flows/datatables/{datatableId}/import/jobs | Begin an import process for importing rows into a datatable |
 | [**PostFlowsDatatableRows**](ArchitectApi.html#postflowsdatatablerows) | **POST** /api/v2/flows/datatables/{datatableId}/rows | Create a new row entry for the datatable. |
 | [**PostFlowsDatatables**](ArchitectApi.html#postflowsdatatables) | **POST** /api/v2/flows/datatables | Create a new datatable with the specified json-schema definition |
 | [**PostFlowsOutcomes**](ArchitectApi.html#postflowsoutcomes) | **POST** /api/v2/flows/outcomes | Create a flow outcome |
@@ -3253,6 +3258,197 @@ namespace Example
 
 [**DataTable**](DataTable.html)
 
+<a name="getflowsdatatableexportjob"></a>
+
+## [**DataTableExportJob**](DataTableExportJob.html) GetFlowsDatatableExportJob (string datatableId, string exportJobId)
+
+
+
+Returns the state information about an export job
+
+Returns the state information about an export job.
+
+Requires ANY permissions: 
+
+* architect:datatable:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsDatatableExportJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ArchitectApi();
+            var datatableId = datatableId_example;  // string | id of datatable
+            var exportJobId = exportJobId_example;  // string | id of export job
+
+            try
+            { 
+                // Returns the state information about an export job
+                DataTableExportJob result = apiInstance.GetFlowsDatatableExportJob(datatableId, exportJobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsDatatableExportJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **exportJobId** | **string**| id of export job |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DataTableExportJob**](DataTableExportJob.html)
+
+<a name="getflowsdatatableimportjob"></a>
+
+## [**DataTableImportJob**](DataTableImportJob.html) GetFlowsDatatableImportJob (string datatableId, string importJobId)
+
+
+
+Returns the state information about an import job
+
+Returns the state information about an import job.
+
+Requires ANY permissions: 
+
+* architect:datatable:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsDatatableImportJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ArchitectApi();
+            var datatableId = datatableId_example;  // string | id of datatable
+            var importJobId = importJobId_example;  // string | id of import job
+
+            try
+            { 
+                // Returns the state information about an import job
+                DataTableImportJob result = apiInstance.GetFlowsDatatableImportJob(datatableId, importJobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsDatatableImportJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **importJobId** | **string**| id of import job |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DataTableImportJob**](DataTableImportJob.html)
+
+<a name="getflowsdatatableimportjobs"></a>
+
+## [**EntityListing**](EntityListing.html) GetFlowsDatatableImportJobs (string datatableId, int? pageNumber = null, int? pageSize = null)
+
+
+
+Get all recent import jobs
+
+Get all recent import jobs
+
+Requires ANY permissions: 
+
+* architect:datatable:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsDatatableImportJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ArchitectApi();
+            var datatableId = datatableId_example;  // string | id of datatable
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Get all recent import jobs
+                EntityListing result = apiInstance.GetFlowsDatatableImportJobs(datatableId, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsDatatableImportJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**EntityListing**](EntityListing.html)
+
 <a name="getflowsdatatablerow"></a>
 
 ## **Dictionary&lt;string, Object&gt;** GetFlowsDatatableRow (string datatableId, string rowId, bool? showbrief = null)
@@ -4774,6 +4970,130 @@ namespace Example
 ### Return type
 
 [**Flow**](Flow.html)
+
+<a name="postflowsdatatableexportjobs"></a>
+
+## [**DataTableExportJob**](DataTableExportJob.html) PostFlowsDatatableExportJobs (string datatableId)
+
+
+
+Begin an export process for exporting all rows from a datatable
+
+Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+
+Requires ANY permissions: 
+
+* architect:datatable:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsDatatableExportJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ArchitectApi();
+            var datatableId = datatableId_example;  // string | id of datatable
+
+            try
+            { 
+                // Begin an export process for exporting all rows from a datatable
+                DataTableExportJob result = apiInstance.PostFlowsDatatableExportJobs(datatableId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsDatatableExportJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DataTableExportJob**](DataTableExportJob.html)
+
+<a name="postflowsdatatableimportjobs"></a>
+
+## [**DataTableImportJob**](DataTableImportJob.html) PostFlowsDatatableImportJobs (string datatableId, DataTableImportJob body)
+
+
+
+Begin an import process for importing rows into a datatable
+
+Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+
+Requires ANY permissions: 
+
+* architect:datatable:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsDatatableImportJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ArchitectApi();
+            var datatableId = datatableId_example;  // string | id of datatable
+            var body = new DataTableImportJob(); // DataTableImportJob | import job information
+
+            try
+            { 
+                // Begin an import process for importing rows into a datatable
+                DataTableImportJob result = apiInstance.PostFlowsDatatableImportJobs(datatableId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsDatatableImportJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **body** | [**DataTableImportJob**](DataTableImportJob.html)| import job information |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DataTableImportJob**](DataTableImportJob.html)
 
 <a name="postflowsdatatablerows"></a>
 

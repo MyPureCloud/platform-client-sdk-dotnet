@@ -191,6 +191,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The participant's purpose
         /// </summary>
@@ -214,6 +217,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsParticipantWithoutAttributes" /> class.
@@ -225,8 +230,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalContactId">External Contact Identifier.</param>
         /// <param name="ExternalOrganizationId">External Organization Identifier.</param>
         /// <param name="FlaggedReason">Reason for which participant flagged conversation.</param>
+        /// <param name="TeamId">The team id the user is a member of.</param>
         /// <param name="Sessions">List of sessions associated to this participant.</param>
-        public AnalyticsParticipantWithoutAttributes(string ParticipantId = null, string ParticipantName = null, string UserId = null, PurposeEnum? Purpose = null, string ExternalContactId = null, string ExternalOrganizationId = null, FlaggedReasonEnum? FlaggedReason = null, List<AnalyticsSession> Sessions = null)
+        public AnalyticsParticipantWithoutAttributes(string ParticipantId = null, string ParticipantName = null, string UserId = null, PurposeEnum? Purpose = null, string ExternalContactId = null, string ExternalOrganizationId = null, FlaggedReasonEnum? FlaggedReason = null, string TeamId = null, List<AnalyticsSession> Sessions = null)
         {
             this.ParticipantId = ParticipantId;
             this.ParticipantName = ParticipantName;
@@ -235,6 +241,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalContactId = ExternalContactId;
             this.ExternalOrganizationId = ExternalOrganizationId;
             this.FlaggedReason = FlaggedReason;
+            this.TeamId = TeamId;
             this.Sessions = Sessions;
             
         }
@@ -291,6 +298,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// The team id the user is a member of
+        /// </summary>
+        /// <value>The team id the user is a member of</value>
+        [DataMember(Name="teamId", EmitDefaultValue=false)]
+        public string TeamId { get; set; }
+        
+        
+        
+        /// <summary>
         /// List of sessions associated to this participant
         /// </summary>
         /// <value>List of sessions associated to this participant</value>
@@ -314,6 +330,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
+            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -387,6 +404,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlaggedReason.Equals(other.FlaggedReason)
                 ) &&
                 (
+                    this.TeamId == other.TeamId ||
+                    this.TeamId != null &&
+                    this.TeamId.Equals(other.TeamId)
+                ) &&
+                (
                     this.Sessions == other.Sessions ||
                     this.Sessions != null &&
                     this.Sessions.SequenceEqual(other.Sessions)
@@ -425,6 +447,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.FlaggedReason != null)
                     hash = hash * 59 + this.FlaggedReason.GetHashCode();
+                
+                if (this.TeamId != null)
+                    hash = hash * 59 + this.TeamId.GetHashCode();
                 
                 if (this.Sessions != null)
                     hash = hash * 59 + this.Sessions.GetHashCode();

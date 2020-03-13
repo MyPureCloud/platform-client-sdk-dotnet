@@ -583,6 +583,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Subject,
             
             /// <summary>
+            /// Enum Teamid for "teamId"
+            /// </summary>
+            [EnumMember(Value = "teamId")]
+            Teamid,
+            
+            /// <summary>
             /// Enum Timeoutseconds for "timeoutSeconds"
             /// </summary>
             [EnumMember(Value = "timeoutSeconds")]
