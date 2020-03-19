@@ -87,6 +87,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.users.{id}.tokens", typeof(UserTokensTopicTokenNotification)},
               {"v2.users.{id}.userrecordings", typeof(AdhocRecordingTopicRecordingDataV2)},
               {"v2.users.{id}.voicemail.messages", typeof(VoicemailMessagesTopicVoicemailMessage)},
+              {"v2.users.{id}.wem.coaching.appointment", typeof(WemCoachingAppointmentTopicCoachingAppointmentNotification)},
               {"v2.users.{id}.workforcemanagement.adherence", typeof(WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate)},
               {"v2.users.{id}.workforcemanagement.historicaladherencequery", typeof(WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdherenceCalculationsCompleteNotice)},
               {"v2.users.{id}.workforcemanagement.notifications", typeof(WfmUserNotificationTopicWfmUserNotification)},

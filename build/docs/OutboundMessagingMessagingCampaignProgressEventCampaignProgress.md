@@ -9,6 +9,7 @@ title: OutboundMessagingMessagingCampaignProgressEventCampaignProgress
 |------------ | ------------- | ------------- | -------------|
 | **Campaign** | [**OutboundMessagingMessagingCampaignProgressEventUriReference**](OutboundMessagingMessagingCampaignProgressEventUriReference.html) |  | [optional] |
 | **NumberOfContactsCalled** | **double?** |  | [optional] |
+| **NumberOfContactsMessaged** | **double?** |  | [optional] |
 | **TotalNumberOfContacts** | **double?** |  | [optional] |
 | **Percentage** | **int?** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |

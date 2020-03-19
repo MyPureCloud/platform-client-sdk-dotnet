@@ -9,6 +9,7 @@ title: DialerCampaignProgressEventCampaignProgress
 |------------ | ------------- | ------------- | -------------|
 | **Campaign** | [**DialerCampaignProgressEventUriReference**](DialerCampaignProgressEventUriReference.html) |  | [optional] |
 | **NumberOfContactsCalled** | **double?** |  | [optional] |
+| **NumberOfContactsMessaged** | **double?** |  | [optional] |
 | **TotalNumberOfContacts** | **double?** |  | [optional] |
 | **Percentage** | **int?** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |

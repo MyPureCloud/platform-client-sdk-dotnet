@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="2" testcasecount="8" result="Passed" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="24" engine-version="3.8.0.0" clr-version="4.0.30319.42000" start-time="2020-03-13 03:21:06Z" end-time="2020-03-13 03:21:08Z" duration="2.693338">
+<test-run id="2" testcasecount="8" result="Passed" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="24" engine-version="3.8.0.0" clr-version="4.0.30319.42000" start-time="2020-03-19 06:36:25Z" end-time="2020-03-19 06:36:27Z" duration="2.489210">
   <command-line><![CDATA[/var/build/workspace/build-platform-sdks/platform-client-sdk-common/resources/sdk/pureclouddotnet/bin/nunit/nunit3-console.exe /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/pureclouddotnet/build/bin/PureCloudPlatform.Client.V2.Tests.dll]]></command-line>
-  <test-suite type="Assembly" id="0-1009" name="PureCloudPlatform.Client.V2.Tests.dll" fullname="/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/pureclouddotnet/build/bin/PureCloudPlatform.Client.V2.Tests.dll" runstate="Runnable" testcasecount="8" result="Passed" start-time="2020-03-13 03:21:07Z" end-time="2020-03-13 03:21:08Z" duration="1.625148" total="8" passed="8" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="24">
-    <environment framework-version="3.10.1.0" clr-version="4.0.30319.42000" os-version="Unix 4.14.165.103" platform="Unix" cwd="/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/pureclouddotnet/build" machine-name="jslave-traditional-10-25-221-143" user="jenkins" user-domain="jslave-traditional-10-25-221-143" culture="en-US" uiculture="en-US" os-architecture="x64" />
+  <test-suite type="Assembly" id="0-1009" name="PureCloudPlatform.Client.V2.Tests.dll" fullname="/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/pureclouddotnet/build/bin/PureCloudPlatform.Client.V2.Tests.dll" runstate="Runnable" testcasecount="8" result="Passed" start-time="2020-03-19 06:36:26Z" end-time="2020-03-19 06:36:27Z" duration="1.592252" total="8" passed="8" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="24">
+    <environment framework-version="3.10.1.0" clr-version="4.0.30319.42000" os-version="Unix 4.14.165.103" platform="Unix" cwd="/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/pureclouddotnet/build" machine-name="jslave-traditional-10-25-225-112" user="jenkins" user-domain="jslave-traditional-10-25-225-112" culture="en-US" uiculture="en-US" os-architecture="x64" />
     <settings>
       <setting name="DisposeRunners" value="True" />
       <setting name="WorkDirectory" value="/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/pureclouddotnet/build" />
@@ -12,59 +12,59 @@
       <setting name="NumberOfTestWorkers" value="4" />
     </settings>
     <properties>
-      <property name="_PID" value="14495" />
+      <property name="_PID" value="30571" />
       <property name="_APPDOMAIN" value="domain-" />
     </properties>
-    <test-suite type="TestSuite" id="0-1010" name="PureCloudPlatform" fullname="PureCloudPlatform" runstate="Runnable" testcasecount="8" result="Passed" start-time="2020-03-13 03:21:07Z" end-time="2020-03-13 03:21:08Z" duration="1.604539" total="8" passed="8" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="24">
-      <test-suite type="TestSuite" id="0-1011" name="Client" fullname="PureCloudPlatform.Client" runstate="Runnable" testcasecount="8" result="Passed" start-time="2020-03-13 03:21:07Z" end-time="2020-03-13 03:21:08Z" duration="1.604225" total="8" passed="8" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="24">
-        <test-suite type="TestSuite" id="0-1012" name="V2" fullname="PureCloudPlatform.Client.V2" runstate="Runnable" testcasecount="8" result="Passed" start-time="2020-03-13 03:21:07Z" end-time="2020-03-13 03:21:08Z" duration="1.604196" total="8" passed="8" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="24">
-          <test-suite type="TestSuite" id="0-1013" name="Tests" fullname="PureCloudPlatform.Client.V2.Tests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2020-03-13 03:21:07Z" end-time="2020-03-13 03:21:08Z" duration="1.604174" total="8" passed="8" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="24">
-            <test-suite type="TestFixture" id="0-1000" name="SdkTests" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2020-03-13 03:21:07Z" end-time="2020-03-13 03:21:08Z" duration="1.601875" total="8" passed="8" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="24">
+    <test-suite type="TestSuite" id="0-1010" name="PureCloudPlatform" fullname="PureCloudPlatform" runstate="Runnable" testcasecount="8" result="Passed" start-time="2020-03-19 06:36:26Z" end-time="2020-03-19 06:36:27Z" duration="1.579835" total="8" passed="8" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="24">
+      <test-suite type="TestSuite" id="0-1011" name="Client" fullname="PureCloudPlatform.Client" runstate="Runnable" testcasecount="8" result="Passed" start-time="2020-03-19 06:36:26Z" end-time="2020-03-19 06:36:27Z" duration="1.579622" total="8" passed="8" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="24">
+        <test-suite type="TestSuite" id="0-1012" name="V2" fullname="PureCloudPlatform.Client.V2" runstate="Runnable" testcasecount="8" result="Passed" start-time="2020-03-19 06:36:26Z" end-time="2020-03-19 06:36:27Z" duration="1.579600" total="8" passed="8" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="24">
+          <test-suite type="TestSuite" id="0-1013" name="Tests" fullname="PureCloudPlatform.Client.V2.Tests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2020-03-19 06:36:26Z" end-time="2020-03-19 06:36:27Z" duration="1.579582" total="8" passed="8" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="24">
+            <test-suite type="TestFixture" id="0-1000" name="SdkTests" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2020-03-19 06:36:26Z" end-time="2020-03-19 06:36:27Z" duration="1.577460" total="8" passed="8" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="24">
               <properties>
                 <property name="Timeout" value="60000" />
               </properties>
-              <test-case id="0-1001" name="TraceBasicInformation" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.TraceBasicInformation" methodname="TraceBasicInformation" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="740190329" result="Passed" start-time="2020-03-13 03:21:07Z" end-time="2020-03-13 03:21:07Z" duration="0.014281" asserts="6">
+              <test-case id="0-1001" name="TraceBasicInformation" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.TraceBasicInformation" methodname="TraceBasicInformation" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="1510465808" result="Passed" start-time="2020-03-19 06:36:26Z" end-time="2020-03-19 06:36:26Z" duration="0.014571" asserts="6">
                 <properties>
                   <property name="Order" value="0" />
                 </properties>
                 <output><![CDATA[PURECLOUD_ENVIRONMENT=mypurecloud.com
 PURECLOUD_CLIENT_ID=7de3af06-c0b3-4f9b-af45-72f4a14037cc
-userEmail=cff59277-6d5e-40d8-baf2-a26d09cb26f0@mypurecloud.com
+userEmail=98c642ca-bd8b-42ab-8df5-c3892858ca69@mypurecloud.com
 ]]></output>
               </test-case>
-              <test-case id="0-1002" name="Authenticate" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.Authenticate" methodname="Authenticate" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="1878565831" result="Passed" start-time="2020-03-13 03:21:07Z" end-time="2020-03-13 03:21:07Z" duration="0.313848" asserts="1">
+              <test-case id="0-1002" name="Authenticate" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.Authenticate" methodname="Authenticate" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="2063638279" result="Passed" start-time="2020-03-19 06:36:26Z" end-time="2020-03-19 06:36:26Z" duration="0.308362" asserts="1">
                 <properties>
                   <property name="Order" value="1" />
                 </properties>
               </test-case>
-              <test-case id="0-1003" name="CreateUser" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.CreateUser" methodname="CreateUser" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="994671183" result="Passed" start-time="2020-03-13 03:21:07Z" end-time="2020-03-13 03:21:08Z" duration="0.529058" asserts="2">
+              <test-case id="0-1003" name="CreateUser" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.CreateUser" methodname="CreateUser" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="270904962" result="Passed" start-time="2020-03-19 06:36:26Z" end-time="2020-03-19 06:36:27Z" duration="0.473232" asserts="2">
                 <properties>
                   <property name="Order" value="2" />
                 </properties>
-                <output><![CDATA[Created user with ID 0c2c7b81-ffc7-41ce-abba-e995b737031e
+                <output><![CDATA[Created user with ID de5926bd-a089-4bbf-87fe-f779871807ce
 ]]></output>
               </test-case>
-              <test-case id="0-1004" name="UpdateUser" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.UpdateUser" methodname="UpdateUser" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="1230411756" result="Passed" start-time="2020-03-13 03:21:08Z" end-time="2020-03-13 03:21:08Z" duration="0.104570" asserts="4">
+              <test-case id="0-1004" name="UpdateUser" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.UpdateUser" methodname="UpdateUser" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="1908320457" result="Passed" start-time="2020-03-19 06:36:27Z" end-time="2020-03-19 06:36:27Z" duration="0.099079" asserts="4">
                 <properties>
                   <property name="Order" value="3" />
                 </properties>
               </test-case>
-              <test-case id="0-1005" name="SetProfileSkills" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.SetProfileSkills" methodname="SetProfileSkills" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="922055318" result="Passed" start-time="2020-03-13 03:21:08Z" end-time="2020-03-13 03:21:08Z" duration="0.089108" asserts="2">
+              <test-case id="0-1005" name="SetProfileSkills" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.SetProfileSkills" methodname="SetProfileSkills" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="420693708" result="Passed" start-time="2020-03-19 06:36:27Z" end-time="2020-03-19 06:36:27Z" duration="0.113171" asserts="2">
                 <properties>
                   <property name="Order" value="4" />
                 </properties>
               </test-case>
-              <test-case id="0-1006" name="TestNotifications" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.TestNotifications" methodname="TestNotifications" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="1901451576" result="Passed" start-time="2020-03-13 03:21:08Z" end-time="2020-03-13 03:21:08Z" duration="0.206346" asserts="2">
+              <test-case id="0-1006" name="TestNotifications" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.TestNotifications" methodname="TestNotifications" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="1686340103" result="Passed" start-time="2020-03-19 06:36:27Z" end-time="2020-03-19 06:36:27Z" duration="0.313056" asserts="2">
                 <properties>
                   <property name="Order" value="5" />
                 </properties>
               </test-case>
-              <test-case id="0-1007" name="GetUser" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.GetUser" methodname="GetUser" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="828732090" result="Passed" start-time="2020-03-13 03:21:08Z" end-time="2020-03-13 03:21:08Z" duration="0.093042" asserts="7">
+              <test-case id="0-1007" name="GetUser" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.GetUser" methodname="GetUser" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="1779854083" result="Passed" start-time="2020-03-19 06:36:27Z" end-time="2020-03-19 06:36:27Z" duration="0.067511" asserts="7">
                 <properties>
                   <property name="Order" value="6" />
                 </properties>
               </test-case>
-              <test-case id="0-1008" name="DeleteUser" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.DeleteUser" methodname="DeleteUser" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="97150086" result="Passed" start-time="2020-03-13 03:21:08Z" end-time="2020-03-13 03:21:08Z" duration="0.168404" asserts="0">
+              <test-case id="0-1008" name="DeleteUser" fullname="PureCloudPlatform.Client.V2.Tests.SdkTests.DeleteUser" methodname="DeleteUser" classname="PureCloudPlatform.Client.V2.Tests.SdkTests" runstate="Runnable" seed="1420607117" result="Passed" start-time="2020-03-19 06:36:27Z" end-time="2020-03-19 06:36:27Z" duration="0.111455" asserts="0">
                 <properties>
                   <property name="Order" value="7" />
                 </properties>

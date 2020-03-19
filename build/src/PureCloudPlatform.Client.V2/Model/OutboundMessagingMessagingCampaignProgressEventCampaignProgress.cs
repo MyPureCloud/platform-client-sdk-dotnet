@@ -45,19 +45,26 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundMessagingMessagingCampaignProgressEventCampaignProgress" /> class.
         /// </summary>
         /// <param name="Campaign">Campaign.</param>
         /// <param name="NumberOfContactsCalled">NumberOfContactsCalled.</param>
+        /// <param name="NumberOfContactsMessaged">NumberOfContactsMessaged.</param>
         /// <param name="TotalNumberOfContacts">TotalNumberOfContacts.</param>
         /// <param name="Percentage">Percentage.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public OutboundMessagingMessagingCampaignProgressEventCampaignProgress(OutboundMessagingMessagingCampaignProgressEventUriReference Campaign = null, double? NumberOfContactsCalled = null, double? TotalNumberOfContacts = null, int? Percentage = null, Object AdditionalProperties = null)
+        public OutboundMessagingMessagingCampaignProgressEventCampaignProgress(OutboundMessagingMessagingCampaignProgressEventUriReference Campaign = null, double? NumberOfContactsCalled = null, double? NumberOfContactsMessaged = null, double? TotalNumberOfContacts = null, int? Percentage = null, Object AdditionalProperties = null)
         {
             this.Campaign = Campaign;
             this.NumberOfContactsCalled = NumberOfContactsCalled;
+            this.NumberOfContactsMessaged = NumberOfContactsMessaged;
             this.TotalNumberOfContacts = TotalNumberOfContacts;
             this.Percentage = Percentage;
             this.AdditionalProperties = AdditionalProperties;
@@ -79,6 +86,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="numberOfContactsCalled", EmitDefaultValue=false)]
         public double? NumberOfContactsCalled { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets NumberOfContactsMessaged
+        /// </summary>
+        [DataMember(Name="numberOfContactsMessaged", EmitDefaultValue=false)]
+        public double? NumberOfContactsMessaged { get; set; }
         
         
         
@@ -116,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Campaign: ").Append(Campaign).Append("\n");
             sb.Append("  NumberOfContactsCalled: ").Append(NumberOfContactsCalled).Append("\n");
+            sb.Append("  NumberOfContactsMessaged: ").Append(NumberOfContactsMessaged).Append("\n");
             sb.Append("  TotalNumberOfContacts: ").Append(TotalNumberOfContacts).Append("\n");
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
@@ -166,6 +182,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NumberOfContactsCalled.Equals(other.NumberOfContactsCalled)
                 ) &&
                 (
+                    this.NumberOfContactsMessaged == other.NumberOfContactsMessaged ||
+                    this.NumberOfContactsMessaged != null &&
+                    this.NumberOfContactsMessaged.Equals(other.NumberOfContactsMessaged)
+                ) &&
+                (
                     this.TotalNumberOfContacts == other.TotalNumberOfContacts ||
                     this.TotalNumberOfContacts != null &&
                     this.TotalNumberOfContacts.Equals(other.TotalNumberOfContacts)
@@ -199,6 +220,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.NumberOfContactsCalled != null)
                     hash = hash * 59 + this.NumberOfContactsCalled.GetHashCode();
+                
+                if (this.NumberOfContactsMessaged != null)
+                    hash = hash * 59 + this.NumberOfContactsMessaged.GetHashCode();
                 
                 if (this.TotalNumberOfContacts != null)
                     hash = hash * 59 + this.TotalNumberOfContacts.GetHashCode();

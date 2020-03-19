@@ -85,11 +85,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimV2CreateUser" /> class.
@@ -108,13 +103,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Title">The user&#39;s title..</param>
         /// <param name="PhoneNumbers">The list of the user&#39;s phone numbers..</param>
         /// <param name="Emails">The list of the user&#39;s email addresses..</param>
-        /// <param name="Photos">The list of the user&#39;s photos..</param>
         /// <param name="ExternalId">The external ID of the user. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;..</param>
         /// <param name="Groups">The list of groups that the user is a member of..</param>
         /// <param name="Roles">The list of roles assigned to the user..</param>
         /// <param name="Urnietfparamsscimschemasextensionenterprise20User">The URI of the schema for the enterprise user..</param>
         /// <param name="Urnietfparamsscimschemasextensiongenesyspurecloud20User">Urnietfparamsscimschemasextensiongenesyspurecloud20User.</param>
-        public ScimV2CreateUser(List<string> Schemas = null, bool? Active = null, string UserName = null, string DisplayName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, List<Photo> Photos = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, List<ScimUserRole> Roles = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null, ScimUserExtensions Urnietfparamsscimschemasextensiongenesyspurecloud20User = null)
+        public ScimV2CreateUser(List<string> Schemas = null, bool? Active = null, string UserName = null, string DisplayName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, List<ScimUserRole> Roles = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null, ScimUserExtensions Urnietfparamsscimschemasextensiongenesyspurecloud20User = null)
         {
             this.Schemas = Schemas;
             this.Active = Active;
@@ -124,7 +118,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Title = Title;
             this.PhoneNumbers = PhoneNumbers;
             this.Emails = Emails;
-            this.Photos = Photos;
             this.ExternalId = ExternalId;
             this.Groups = Groups;
             this.Roles = Roles;
@@ -208,15 +201,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The list of the user&#39;s photos.
-        /// </summary>
-        /// <value>The list of the user&#39;s photos.</value>
-        [DataMember(Name="photos", EmitDefaultValue=false)]
-        public List<Photo> Photos { get; set; }
-        
-        
-        
-        /// <summary>
         /// The external ID of the user. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;.
         /// </summary>
         /// <value>The external ID of the user. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;.</value>
@@ -276,7 +260,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  PhoneNumbers: ").Append(PhoneNumbers).Append("\n");
             sb.Append("  Emails: ").Append(Emails).Append("\n");
-            sb.Append("  Photos: ").Append(Photos).Append("\n");
             sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
             sb.Append("  Roles: ").Append(Roles).Append("\n");
@@ -359,11 +342,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Emails.SequenceEqual(other.Emails)
                 ) &&
                 (
-                    this.Photos == other.Photos ||
-                    this.Photos != null &&
-                    this.Photos.SequenceEqual(other.Photos)
-                ) &&
-                (
                     this.ExternalId == other.ExternalId ||
                     this.ExternalId != null &&
                     this.ExternalId.Equals(other.ExternalId)
@@ -425,9 +403,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Emails != null)
                     hash = hash * 59 + this.Emails.GetHashCode();
-                
-                if (this.Photos != null)
-                    hash = hash * 59 + this.Photos.GetHashCode();
                 
                 if (this.ExternalId != null)
                     hash = hash * 59 + this.ExternalId.GetHashCode();

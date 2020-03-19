@@ -22,6 +22,7 @@ title: ObservationValue
 | **AddressTo** | **string** | The address receiving an action | [optional] |
 | **Ani** | **string** | Automatic Number Identification (caller&#39;s number) | [optional] |
 | **Dnis** | **string** | Dialed number identification service (number dialed by the calling party) | [optional] |
+| **TeamId** | **string** | The team Id the user is a member of | [optional] |
 | **ScoredAgents** | [**List&lt;AnalyticsScoredAgent&gt;**](AnalyticsScoredAgent.html) |  | [optional] |
 {: class="table table-striped"}
 

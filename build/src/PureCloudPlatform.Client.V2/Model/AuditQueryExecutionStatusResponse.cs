@@ -124,10 +124,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Languageunderstanding,
             
             /// <summary>
-            /// Enum Topicsdefinitionsservice for "TopicsDefinitionsService"
+            /// Enum Topicsdefinitions for "TopicsDefinitions"
             /// </summary>
-            [EnumMember(Value = "TopicsDefinitionsService")]
-            Topicsdefinitionsservice
+            [EnumMember(Value = "TopicsDefinitions")]
+            Topicsdefinitions
         }
         
         

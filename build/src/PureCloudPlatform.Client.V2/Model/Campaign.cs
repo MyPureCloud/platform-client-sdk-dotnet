@@ -84,7 +84,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Progressive for "progressive"
             /// </summary>
             [EnumMember(Value = "progressive")]
-            Progressive
+            Progressive,
+            
+            /// <summary>
+            /// Enum External for "external"
+            /// </summary>
+            [EnumMember(Value = "external")]
+            External
         }
         
         
