@@ -48,12 +48,30 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
         }
 
         /// <summary>
+        /// Creates a new instance of NotificationHandler with a proxy
+        /// </summary>
+        public NotificationHandler(string proxyURI, string proxyUsername = null, string proxyPassword = null)
+        {
+            Channel = _notificationsApi.PostNotificationsChannels();
+            ConnectSocket(Channel.ConnectUri, proxyURI, proxyUsername, proxyPassword);
+        }
+
+        /// <summary>
         /// Creates a new instance of NotificationHandler from an existing <see cref="Channel"/>
         /// </summary>
         public NotificationHandler(Channel channel)
         {
             Channel = channel;
             ConnectSocket(Channel.ConnectUri);
+        }
+
+        /// <summary>
+        /// Creates a new instance of NotificationHandler with a proxy from an existing <see cref="Channel"/>
+        /// </summary>
+        public NotificationHandler(Channel channel, string proxyURI, string proxyUsername = null, string proxyPassword = null)
+        {
+            Channel = channel;
+            ConnectSocket(Channel.ConnectUri, proxyURI, proxyUsername, proxyPassword);
         }
 
         /// <summary>
@@ -109,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
             WebSocket.Send("{\"message\":\"ping\"}");
         }
 
-        private void ConnectSocket(string uri)
+        private void ConnectSocket(string uri, string proxyURI = null, string proxyUsername = null, string proxyPassword = null)
         {
             WebSocket = new WebSocket(uri);
             WebSocket.SslConfiguration.EnabledSslProtocols = System.Security.Authentication.SslProtocols.Tls12;
@@ -135,6 +153,12 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
                     Console.WriteLine(ex);
                 }
             };
+
+            if (proxyURI != null)
+            {
+                WebSocket.SetProxy(proxyURI, proxyUsername, proxyPassword);
+            }
+
             WebSocket.Connect();
         }
 
