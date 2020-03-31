@@ -259,6 +259,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Flowname,
             
             /// <summary>
+            /// Enum Flowouttype for "flowOutType"
+            /// </summary>
+            [EnumMember(Value = "flowOutType")]
+            Flowouttype,
+            
+            /// <summary>
             /// Enum Flowoutcome for "flowOutcome"
             /// </summary>
             [EnumMember(Value = "flowOutcome")]

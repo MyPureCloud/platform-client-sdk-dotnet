@@ -10,7 +10,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteAuthorizationDivision**](AuthorizationApi.html#deleteauthorizationdivision) | **DELETE** /api/v2/authorization/divisions/{divisionId} | Delete a division. |
 | [**DeleteAuthorizationRole**](AuthorizationApi.html#deleteauthorizationrole) | **DELETE** /api/v2/authorization/roles/{roleId} | Delete an organization role. |
 | [**DeleteAuthorizationSubjectDivisionRole**](AuthorizationApi.html#deleteauthorizationsubjectdivisionrole) | **DELETE** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
-| [**DeleteUserRoles**](AuthorizationApi.html#deleteuserroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
 | [**GetAuthorizationDivision**](AuthorizationApi.html#getauthorizationdivision) | **GET** /api/v2/authorization/divisions/{divisionId} | Returns an authorization division. |
 | [**GetAuthorizationDivisions**](AuthorizationApi.html#getauthorizationdivisions) | **GET** /api/v2/authorization/divisions | Retrieve a list of all divisions defined for the organization |
 | [**GetAuthorizationDivisionsHome**](AuthorizationApi.html#getauthorizationdivisionshome) | **GET** /api/v2/authorization/divisions/home | Retrieve the home division for the organization. |
@@ -228,66 +227,6 @@ namespace Example
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **divisionId** | **string**| the id of the division of the grant |  |
 | **roleId** | **string**| the id of the role of the grant |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="deleteuserroles"></a>
-
-## void DeleteUserRoles (string userId)
-
-
-
-Removes all the roles from the user.
-
-
-
-Requires ANY permissions: 
-
-* authorization:grant:delete
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class DeleteUserRolesExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AuthorizationApi();
-            var userId = userId_example;  // string | User ID
-
-            try
-            { 
-                // Removes all the roles from the user.
-                apiInstance.DeleteUserRoles(userId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AuthorizationApi.DeleteUserRoles: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| User ID |  |
 {: class="table table-striped"}
 
 ### Return type

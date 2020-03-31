@@ -268,7 +268,7 @@ Get interaction stats alert list.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * alerting:alert:view
 

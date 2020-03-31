@@ -311,6 +311,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The reason specifying why participant flagged the conversation.
         /// </summary>
@@ -494,6 +497,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The reason specifying why participant flagged the conversation.
         /// </summary>
@@ -561,6 +566,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapupPrompt">The wrap-up prompt indicating the type of wrap-up to be performed..</param>
         /// <param name="User">The PureCloud user for this participant..</param>
         /// <param name="Queue">The PureCloud queue for this participant..</param>
+        /// <param name="Team">The PureCloud team for this participant..</param>
         /// <param name="Attributes">A list of ad-hoc attributes for the participant..</param>
         /// <param name="ErrorInfo">If the conversation ends in error, contains additional error details..</param>
         /// <param name="Script">The Engage script that should be used by this participant..</param>
@@ -589,7 +595,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MonitoredParticipantId">The ID of the participant being monitored when performing a call monitor..</param>
         /// <param name="ConsultParticipantId">The ID of the consult transfer target participant when performing a consult transfer..</param>
         /// <param name="UuiData">User-to-User information which maps to a SIP header field defined in RFC7433. UUI data is used in the Public Switched Telephone Network (PSTN) for use cases described in RFC6567..</param>
-        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DomainEntityRef User = null, DomainEntityRef Queue = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, string UuiData = null)
+        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, string UuiData = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -607,6 +613,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WrapupPrompt = WrapupPrompt;
             this.User = User;
             this.Queue = Queue;
+            this.Team = Team;
             this.Attributes = Attributes;
             this.ErrorInfo = ErrorInfo;
             this.Script = Script;
@@ -760,6 +767,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The PureCloud queue for this participant.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public DomainEntityRef Queue { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The PureCloud team for this participant.
+        /// </summary>
+        /// <value>The PureCloud team for this participant.</value>
+        [DataMember(Name="team", EmitDefaultValue=false)]
+        public DomainEntityRef Team { get; set; }
         
         
         
@@ -1025,6 +1041,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
+            sb.Append("  Team: ").Append(Team).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  Script: ").Append(Script).Append("\n");
@@ -1168,6 +1185,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
+                ) &&
+                (
+                    this.Team == other.Team ||
+                    this.Team != null &&
+                    this.Team.Equals(other.Team)
                 ) &&
                 (
                     this.Attributes == other.Attributes ||
@@ -1370,6 +1392,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
+                
+                if (this.Team != null)
+                    hash = hash * 59 + this.Team.GetHashCode();
                 
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();

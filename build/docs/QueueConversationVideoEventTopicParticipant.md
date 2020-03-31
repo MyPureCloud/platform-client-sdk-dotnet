@@ -16,6 +16,7 @@ title: QueueConversationVideoEventTopicParticipant
 | **Name** | **string** |  | [optional] |
 | **QueueId** | **string** |  | [optional] |
 | **GroupId** | **string** |  | [optional] |
+| **TeamId** | **string** |  | [optional] |
 | **Purpose** | **string** |  | [optional] |
 | **ConsultParticipantId** | **string** |  | [optional] |
 | **Address** | **string** |  | [optional] |

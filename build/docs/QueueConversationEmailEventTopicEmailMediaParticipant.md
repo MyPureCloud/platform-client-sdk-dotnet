@@ -23,6 +23,7 @@ title: QueueConversationEmailEventTopicEmailMediaParticipant
 | **WrapupPrompt** | **string** |  | [optional] |
 | **User** | [**QueueConversationEmailEventTopicUriReference**](QueueConversationEmailEventTopicUriReference.html) |  | [optional] |
 | **Queue** | [**QueueConversationEmailEventTopicUriReference**](QueueConversationEmailEventTopicUriReference.html) |  | [optional] |
+| **Team** | [**QueueConversationEmailEventTopicUriReference**](QueueConversationEmailEventTopicUriReference.html) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ErrorInfo** | [**QueueConversationEmailEventTopicErrorBody**](QueueConversationEmailEventTopicErrorBody.html) |  | [optional] |
 | **Script** | [**QueueConversationEmailEventTopicUriReference**](QueueConversationEmailEventTopicUriReference.html) |  | [optional] |

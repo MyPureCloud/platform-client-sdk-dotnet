@@ -86,6 +86,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets ScreenRecordingState
         /// </summary>
@@ -221,6 +224,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets ScreenRecordingState
         /// </summary>
@@ -265,6 +270,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="QueueId">QueueId.</param>
         /// <param name="GroupId">GroupId.</param>
+        /// <param name="TeamId">TeamId.</param>
         /// <param name="Purpose">Purpose.</param>
         /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
         /// <param name="Address">Address.</param>
@@ -291,7 +297,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationSocialExpressionEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, QueueConversationSocialExpressionEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<QueueConversationSocialExpressionEventTopicCall> Calls = null, List<QueueConversationSocialExpressionEventTopicCallback> Callbacks = null, List<QueueConversationSocialExpressionEventTopicChat> Chats = null, List<QueueConversationSocialExpressionEventTopicCobrowse> Cobrowsesessions = null, List<QueueConversationSocialExpressionEventTopicEmail> Emails = null, List<QueueConversationSocialExpressionEventTopicMessage> Messages = null, List<QueueConversationSocialExpressionEventTopicScreenshare> Screenshares = null, List<QueueConversationSocialExpressionEventTopicSocialExpression> SocialExpressions = null, List<QueueConversationSocialExpressionEventTopicVideo> Videos = null, Object AdditionalProperties = null)
+        public QueueConversationSocialExpressionEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string TeamId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, QueueConversationSocialExpressionEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<QueueConversationSocialExpressionEventTopicCall> Calls = null, List<QueueConversationSocialExpressionEventTopicCallback> Callbacks = null, List<QueueConversationSocialExpressionEventTopicChat> Chats = null, List<QueueConversationSocialExpressionEventTopicCobrowse> Cobrowsesessions = null, List<QueueConversationSocialExpressionEventTopicEmail> Emails = null, List<QueueConversationSocialExpressionEventTopicMessage> Messages = null, List<QueueConversationSocialExpressionEventTopicScreenshare> Screenshares = null, List<QueueConversationSocialExpressionEventTopicSocialExpression> SocialExpressions = null, List<QueueConversationSocialExpressionEventTopicVideo> Videos = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.ConnectedTime = ConnectedTime;
@@ -302,6 +308,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Name = Name;
             this.QueueId = QueueId;
             this.GroupId = GroupId;
+            this.TeamId = TeamId;
             this.Purpose = Purpose;
             this.ConsultParticipantId = ConsultParticipantId;
             this.Address = Address;
@@ -402,6 +409,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="groupId", EmitDefaultValue=false)]
         public string GroupId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets TeamId
+        /// </summary>
+        [DataMember(Name="teamId", EmitDefaultValue=false)]
+        public string TeamId { get; set; }
         
         
         
@@ -624,6 +639,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
+            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
             sb.Append("  ConsultParticipantId: ").Append(ConsultParticipantId).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
@@ -730,6 +746,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.GroupId == other.GroupId ||
                     this.GroupId != null &&
                     this.GroupId.Equals(other.GroupId)
+                ) &&
+                (
+                    this.TeamId == other.TeamId ||
+                    this.TeamId != null &&
+                    this.TeamId.Equals(other.TeamId)
                 ) &&
                 (
                     this.Purpose == other.Purpose ||
@@ -901,6 +922,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.GroupId != null)
                     hash = hash * 59 + this.GroupId.GetHashCode();
+                
+                if (this.TeamId != null)
+                    hash = hash * 59 + this.TeamId.GetHashCode();
                 
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();

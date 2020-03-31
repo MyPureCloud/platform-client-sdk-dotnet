@@ -11,7 +11,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteAuthorizationSubjectDivisionRole**](UsersApi.html#deleteauthorizationsubjectdivisionrole) | **DELETE** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
 | [**DeleteRoutingUserUtilization**](UsersApi.html#deleteroutinguserutilization) | **DELETE** /api/v2/routing/users/{userId}/utilization | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**DeleteUser**](UsersApi.html#deleteuser) | **DELETE** /api/v2/users/{userId} | Delete user |
-| [**DeleteUserRoles**](UsersApi.html#deleteuserroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
 | [**DeleteUserRoutinglanguage**](UsersApi.html#deleteuserroutinglanguage) | **DELETE** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
 | [**DeleteUserRoutingskill**](UsersApi.html#deleteuserroutingskill) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
 | [**DeleteUserStationAssociatedstation**](UsersApi.html#deleteuserstationassociatedstation) | **DELETE** /api/v2/users/{userId}/station/associatedstation | Clear associated station |
@@ -326,66 +325,6 @@ namespace Example
 ### Return type
 
 [**Empty**](Empty.html)
-
-<a name="deleteuserroles"></a>
-
-## void DeleteUserRoles (string userId)
-
-
-
-Removes all the roles from the user.
-
-
-
-Requires ANY permissions: 
-
-* authorization:grant:delete
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class DeleteUserRolesExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new UsersApi();
-            var userId = userId_example;  // string | User ID
-
-            try
-            { 
-                // Removes all the roles from the user.
-                apiInstance.DeleteUserRoles(userId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UsersApi.DeleteUserRoles: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| User ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
 
 <a name="deleteuserroutinglanguage"></a>
 

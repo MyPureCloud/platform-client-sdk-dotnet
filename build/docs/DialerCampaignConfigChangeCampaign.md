@@ -39,6 +39,7 @@ title: DialerCampaignConfigChangeCampaign
 | **Priority** | **int?** |  | [optional] |
 | **ContactListFilters** | [**List&lt;DialerCampaignConfigChangeUriReference&gt;**](DialerCampaignConfigChangeUriReference.html) |  | [optional] |
 | **Division** | [**DialerCampaignConfigChangeUriReference**](DialerCampaignConfigChangeUriReference.html) |  | [optional] |
+| **AgentOwnedColumn** | **string** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

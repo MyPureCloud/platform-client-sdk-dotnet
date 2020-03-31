@@ -224,6 +224,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets DialingMode
         /// </summary>
@@ -243,6 +246,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="campaignStatus", EmitDefaultValue=false)]
         public CampaignStatusEnum? CampaignStatus { get; set; }
+        
+        
         
         
         
@@ -323,8 +328,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">Priority.</param>
         /// <param name="ContactListFilters">ContactListFilters.</param>
         /// <param name="Division">Division.</param>
+        /// <param name="AgentOwnedColumn">AgentOwnedColumn.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerCampaignConfigChangeCampaign(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DialerCampaignConfigChangeUriReference ContactList = null, DialerCampaignConfigChangeUriReference Queue = null, DialingModeEnum? DialingMode = null, DialerCampaignConfigChangeUriReference Script = null, DialerCampaignConfigChangeUriReference EdgeGroup = null, DialerCampaignConfigChangeUriReference Site = null, CampaignStatusEnum? CampaignStatus = null, List<DialerCampaignConfigChangePhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DialerCampaignConfigChangeUriReference> DncLists = null, DialerCampaignConfigChangeUriReference CallableTimeSet = null, DialerCampaignConfigChangeUriReference CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DialerCampaignConfigChangeRestErrorDetail> Errors = null, List<DialerCampaignConfigChangeUriReference> RuleSets = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, DialerCampaignConfigChangeContactSort ContactSort = null, List<DialerCampaignConfigChangeContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DialerCampaignConfigChangeUriReference> ContactListFilters = null, DialerCampaignConfigChangeUriReference Division = null, Object AdditionalProperties = null)
+        public DialerCampaignConfigChangeCampaign(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DialerCampaignConfigChangeUriReference ContactList = null, DialerCampaignConfigChangeUriReference Queue = null, DialingModeEnum? DialingMode = null, DialerCampaignConfigChangeUriReference Script = null, DialerCampaignConfigChangeUriReference EdgeGroup = null, DialerCampaignConfigChangeUriReference Site = null, CampaignStatusEnum? CampaignStatus = null, List<DialerCampaignConfigChangePhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DialerCampaignConfigChangeUriReference> DncLists = null, DialerCampaignConfigChangeUriReference CallableTimeSet = null, DialerCampaignConfigChangeUriReference CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DialerCampaignConfigChangeRestErrorDetail> Errors = null, List<DialerCampaignConfigChangeUriReference> RuleSets = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, DialerCampaignConfigChangeContactSort ContactSort = null, List<DialerCampaignConfigChangeContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DialerCampaignConfigChangeUriReference> ContactListFilters = null, DialerCampaignConfigChangeUriReference Division = null, string AgentOwnedColumn = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -358,6 +364,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Priority = Priority;
             this.ContactListFilters = ContactListFilters;
             this.Division = Division;
+            this.AgentOwnedColumn = AgentOwnedColumn;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -609,6 +616,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets AgentOwnedColumn
+        /// </summary>
+        [DataMember(Name="agentOwnedColumn", EmitDefaultValue=false)]
+        public string AgentOwnedColumn { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -656,6 +671,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
+            sb.Append("  AgentOwnedColumn: ").Append(AgentOwnedColumn).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -854,6 +870,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Division.Equals(other.Division)
                 ) &&
                 (
+                    this.AgentOwnedColumn == other.AgentOwnedColumn ||
+                    this.AgentOwnedColumn != null &&
+                    this.AgentOwnedColumn.Equals(other.AgentOwnedColumn)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -967,6 +988,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
+                
+                if (this.AgentOwnedColumn != null)
+                    hash = hash * 59 + this.AgentOwnedColumn.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

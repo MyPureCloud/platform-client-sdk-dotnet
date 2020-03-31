@@ -332,6 +332,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets FlaggedReason
         /// </summary>
@@ -448,6 +451,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets FlaggedReason
         /// </summary>
@@ -485,6 +490,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapupPrompt">WrapupPrompt.</param>
         /// <param name="User">User.</param>
         /// <param name="Queue">Queue.</param>
+        /// <param name="Team">Team.</param>
         /// <param name="Attributes">Attributes.</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
         /// <param name="Script">Script.</param>
@@ -504,7 +510,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndAcwTime">EndAcwTime.</param>
         /// <param name="RoomId">RoomId.</param>
         /// <param name="AvatarImageUrl">AvatarImageUrl.</param>
-        public ConversationChatEventTopicChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationChatEventTopicUriReference User = null, ConversationChatEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, ConversationChatEventTopicErrorBody ErrorInfo = null, ConversationChatEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationChatEventTopicUriReference ExternalContact = null, ConversationChatEventTopicUriReference ExternalOrganization = null, ConversationChatEventTopicWrapup Wrapup = null, ConversationChatEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationChatEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, string RoomId = null, string AvatarImageUrl = null)
+        public ConversationChatEventTopicChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationChatEventTopicUriReference User = null, ConversationChatEventTopicUriReference Queue = null, ConversationChatEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationChatEventTopicErrorBody ErrorInfo = null, ConversationChatEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationChatEventTopicUriReference ExternalContact = null, ConversationChatEventTopicUriReference ExternalOrganization = null, ConversationChatEventTopicWrapup Wrapup = null, ConversationChatEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationChatEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, string RoomId = null, string AvatarImageUrl = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -522,6 +528,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WrapupPrompt = WrapupPrompt;
             this.User = User;
             this.Queue = Queue;
+            this.Team = Team;
             this.Attributes = Attributes;
             this.ErrorInfo = ErrorInfo;
             this.Script = Script;
@@ -653,6 +660,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public ConversationChatEventTopicUriReference Queue { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Team
+        /// </summary>
+        [DataMember(Name="team", EmitDefaultValue=false)]
+        public ConversationChatEventTopicUriReference Team { get; set; }
         
         
         
@@ -826,6 +841,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
+            sb.Append("  Team: ").Append(Team).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  Script: ").Append(Script).Append("\n");
@@ -960,6 +976,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
+                ) &&
+                (
+                    this.Team == other.Team ||
+                    this.Team != null &&
+                    this.Team.Equals(other.Team)
                 ) &&
                 (
                     this.Attributes == other.Attributes ||
@@ -1117,6 +1138,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
+                
+                if (this.Team != null)
+                    hash = hash * 59 + this.Team.GetHashCode();
                 
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();

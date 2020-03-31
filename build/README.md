@@ -178,6 +178,18 @@ Create a new instance:
 var handler = new NotificationHandler();
 ```
 
+If you're using a proxy server, use the following constructor:
+
+```{"language":"csharp"}
+var handler = new NotificationHandler("YOUR_PROXY_URL");
+```
+
+If your proxy server requires authentication, use the following constructor:
+
+```{"language":"csharp"}
+var handler = new NotificationHandler("YOUR_PROXY_URL", "YOUR_PROXY_USERNAME", "YOUR_PROXY_PASSWORD");
+```
+
 Add a subscription:
 
 ```{"language":"csharp"}

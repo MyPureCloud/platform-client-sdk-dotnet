@@ -23,6 +23,7 @@ title: QueueConversationScreenShareEventTopicScreenShareMediaParticipant
 | **WrapupPrompt** | **string** |  | [optional] |
 | **User** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
 | **Queue** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
+| **Team** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ErrorInfo** | [**QueueConversationScreenShareEventTopicErrorBody**](QueueConversationScreenShareEventTopicErrorBody.html) |  | [optional] |
 | **Script** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |

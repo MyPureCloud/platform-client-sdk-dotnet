@@ -23,6 +23,7 @@ title: ConversationCobrowseEventTopicCobrowseMediaParticipant
 | **WrapupPrompt** | **string** |  | [optional] |
 | **User** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference.html) |  | [optional] |
 | **Queue** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference.html) |  | [optional] |
+| **Team** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference.html) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ErrorInfo** | [**ConversationCobrowseEventTopicErrorBody**](ConversationCobrowseEventTopicErrorBody.html) |  | [optional] |
 | **Script** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference.html) |  | [optional] |

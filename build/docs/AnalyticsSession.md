@@ -59,6 +59,7 @@ title: AnalyticsSession
 | **Provider** | **string** | The source provider for the communication | [optional] |
 | **Remote** | **string** | Name, phone number, or email address of the remote party. | [optional] |
 | **MediaCount** | **int?** | Count of any media (images, files, etc) included in this session | [optional] |
+| **FlowOutType** | **string** | Type of flow out that occurred, e.g. voicemail, callback, or acd | [optional] |
 {: class="table table-striped"}
 
 

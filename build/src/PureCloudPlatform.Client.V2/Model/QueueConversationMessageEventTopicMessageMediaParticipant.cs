@@ -332,6 +332,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets FlaggedReason
         /// </summary>
@@ -523,6 +526,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets FlaggedReason
         /// </summary>
@@ -570,6 +575,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapupPrompt">WrapupPrompt.</param>
         /// <param name="User">User.</param>
         /// <param name="Queue">Queue.</param>
+        /// <param name="Team">Team.</param>
         /// <param name="Attributes">Attributes.</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
         /// <param name="Script">Script.</param>
@@ -591,7 +597,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         /// <param name="RecipientCountry">RecipientCountry.</param>
         /// <param name="RecipientType">RecipientType.</param>
-        public QueueConversationMessageEventTopicMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationMessageEventTopicUriReference User = null, QueueConversationMessageEventTopicUriReference Queue = null, Dictionary<string, string> Attributes = null, QueueConversationMessageEventTopicErrorBody ErrorInfo = null, QueueConversationMessageEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationMessageEventTopicUriReference ExternalContact = null, QueueConversationMessageEventTopicUriReference ExternalOrganization = null, QueueConversationMessageEventTopicWrapup Wrapup = null, QueueConversationMessageEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationMessageEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, List<QueueConversationMessageEventTopicMessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
+        public QueueConversationMessageEventTopicMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationMessageEventTopicUriReference User = null, QueueConversationMessageEventTopicUriReference Queue = null, QueueConversationMessageEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationMessageEventTopicErrorBody ErrorInfo = null, QueueConversationMessageEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationMessageEventTopicUriReference ExternalContact = null, QueueConversationMessageEventTopicUriReference ExternalOrganization = null, QueueConversationMessageEventTopicWrapup Wrapup = null, QueueConversationMessageEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationMessageEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, List<QueueConversationMessageEventTopicMessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -609,6 +615,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WrapupPrompt = WrapupPrompt;
             this.User = User;
             this.Queue = Queue;
+            this.Team = Team;
             this.Attributes = Attributes;
             this.ErrorInfo = ErrorInfo;
             this.Script = Script;
@@ -742,6 +749,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public QueueConversationMessageEventTopicUriReference Queue { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Team
+        /// </summary>
+        [DataMember(Name="team", EmitDefaultValue=false)]
+        public QueueConversationMessageEventTopicUriReference Team { get; set; }
         
         
         
@@ -925,6 +940,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
+            sb.Append("  Team: ").Append(Team).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  Script: ").Append(Script).Append("\n");
@@ -1061,6 +1077,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
+                ) &&
+                (
+                    this.Team == other.Team ||
+                    this.Team != null &&
+                    this.Team.Equals(other.Team)
                 ) &&
                 (
                     this.Attributes == other.Attributes ||
@@ -1228,6 +1249,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
+                
+                if (this.Team != null)
+                    hash = hash * 59 + this.Team.GetHashCode();
                 
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();

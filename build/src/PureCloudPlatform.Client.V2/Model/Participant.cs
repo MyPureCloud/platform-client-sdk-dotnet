@@ -83,6 +83,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// This field controls how the UI prompts the agent for a wrapup.
         /// </summary>
@@ -306,6 +309,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// This field controls how the UI prompts the agent for a wrapup.
         /// </summary>
@@ -385,6 +390,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalOrganizationId">If this participant represents an external org, then this will be the globally unique identifier for the external org..</param>
         /// <param name="QueueId">If present, the queue id that the communication channel came in on..</param>
         /// <param name="GroupId">If present, group of users the participant represents..</param>
+        /// <param name="TeamId">The team id that this participant is a member of when added to the conversation..</param>
         /// <param name="QueueName">If present, the queue name that the communication channel came in on..</param>
         /// <param name="Purpose">A well known string that specifies the purpose of this participant..</param>
         /// <param name="ParticipantType">A well known string that specifies the type of this participant..</param>
@@ -417,7 +423,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
         /// <param name="StartAcwTime">The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="EndAcwTime">The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null)
+        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string TeamId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null)
         {
             this.Id = Id;
             this.StartTime = StartTime;
@@ -430,6 +436,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalOrganizationId = ExternalOrganizationId;
             this.QueueId = QueueId;
             this.GroupId = GroupId;
+            this.TeamId = TeamId;
             this.QueueName = QueueName;
             this.Purpose = Purpose;
             this.ParticipantType = ParticipantType;
@@ -563,6 +570,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>If present, group of users the participant represents.</value>
         [DataMember(Name="groupId", EmitDefaultValue=false)]
         public string GroupId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The team id that this participant is a member of when added to the conversation.
+        /// </summary>
+        /// <value>The team id that this participant is a member of when added to the conversation.</value>
+        [DataMember(Name="teamId", EmitDefaultValue=false)]
+        public string TeamId { get; set; }
         
         
         
@@ -842,6 +858,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
+            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
             sb.Append("  QueueName: ").Append(QueueName).Append("\n");
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
             sb.Append("  ParticipantType: ").Append(ParticipantType).Append("\n");
@@ -964,6 +981,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.GroupId == other.GroupId ||
                     this.GroupId != null &&
                     this.GroupId.Equals(other.GroupId)
+                ) &&
+                (
+                    this.TeamId == other.TeamId ||
+                    this.TeamId != null &&
+                    this.TeamId.Equals(other.TeamId)
                 ) &&
                 (
                     this.QueueName == other.QueueName ||
@@ -1171,6 +1193,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.GroupId != null)
                     hash = hash * 59 + this.GroupId.GetHashCode();
+                
+                if (this.TeamId != null)
+                    hash = hash * 59 + this.TeamId.GetHashCode();
                 
                 if (this.QueueName != null)
                     hash = hash * 59 + this.QueueName.GetHashCode();
