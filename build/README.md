@@ -1,7 +1,6 @@
 ---
 title: Platform API Client SDK - .NET
 ---
-
 [![NuGet Badge](https://buildstats.info/nuget/PureCloudPlatform.Client.V2)](https://www.nuget.org/packages/PureCloudPlatform.Client.V2/)
 
 Documentation can be found at [https://developer.mypurecloud.com/api/rest/client-libraries/dotnet/](https://developer.mypurecloud.com/api/rest/client-libraries/dotnet/)
@@ -143,6 +142,27 @@ Once an access token has been obtained from one of the OAuth methods, it must be
 ```{"language":"csharp"}
 PureCloudPlatform.Client.V2.Client.Configuration.Default.AccessToken = "BL4Cb3EQIQFlqIItaj-zf5eIhAiP96zk3333QImd24P99ojbFHtpgUTJdRIkuUYfXMy0afEnZcWnEQ";
 ```
+
+#### Setting the max retry time
+
+By default, the .NET SDK does not automatically retry any failed requests.
+To enable automatic retries, provide a RetryConfiguration object with the maximum number of seconds to retry requests when building the ApiClient instance.
+
+Building a `RetryConfiguration` instance:
+```{"language":"csharp"}
+var retryConfig = new ApiClient.RetryConfiguration
+{
+  MaxRetryTimeSec = 10
+};
+```
+
+Setting `RetryConfiguration` instance to `ApiClient`:
+ ```{"language":"csharp"}
+Configuration.Default.ApiClient.RetryConfig = retryConfig;
+```
+Set the `MaxRetryTimeSec` to the number of seconds to process retries before returning an error.
+When the retry time is a a positive integer, the SDK will follow the recommended backoff logic using the provided configuration.
+The best practices are documented in the [Rate Limiting](https://developer.mypurecloud.com/api/rest/rate_limits.html) Developer Center article.
 
 #### Invoking the API
 

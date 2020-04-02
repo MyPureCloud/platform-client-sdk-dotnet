@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
+using System.Threading;
 using System.IO;
 using System.Web;
 using System.Linq;
@@ -34,6 +36,7 @@ namespace PureCloudPlatform.Client.V2.Client
 
             Configuration = Configuration.Default;
             RestClient = new RestClient("https://api.mypurecloud.com");
+            RetryConfig = DEFAULT_RETRY_CONFIG;
             AddSerializerSettings();
         }
 
@@ -53,6 +56,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 Configuration = config;
 
             RestClient = new RestClient("https://api.mypurecloud.com");
+            RetryConfig = DEFAULT_RETRY_CONFIG;
             AddSerializerSettings();
         }
 
@@ -70,6 +74,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 throw new ArgumentException("basePath cannot be empty");
 
             RestClient = new RestClient(basePath);
+            RetryConfig = DEFAULT_RETRY_CONFIG;
             Configuration = Configuration.Default;
             AddSerializerSettings();
         }
@@ -97,7 +102,11 @@ namespace PureCloudPlatform.Client.V2.Client
         /// Gets or sets the RestClient.
         /// </summary>
         /// <value>An instance of the RestClient</value>
-        public RestClient RestClient { get; set; }
+        public IRestClient RestClient { get; set; }
+
+        private RetryConfiguration retryConfig;
+        public RetryConfiguration RetryConfig { get; set; }
+        private static readonly RetryConfiguration DEFAULT_RETRY_CONFIG = new RetryConfiguration();
 
         // Creates and sets up a RestRequest prior to a call.
         private RestRequest PrepareRequest(
@@ -175,12 +184,17 @@ namespace PureCloudPlatform.Client.V2.Client
             RestClient.UserAgent = Configuration.UserAgent;
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "84.0.0");
+            request.AddHeader("purecloud-sdk", "84.1.0");
 
+            Retry retry = new Retry(this.RetryConfig);
+            IRestResponse response;
+            do
+            {
             
-            var response = RestClient.Execute(request);
+                response = RestClient.Execute(request);
             
             
+            }while(retry.ShouldRetry(response));
             return (Object) response;
         }
         
@@ -206,7 +220,14 @@ namespace PureCloudPlatform.Client.V2.Client
             var request = PrepareRequest(
                 path, method, queryParams, postBody, headerParams, formParams, fileParams,
                 pathParams, contentType);
-            var response = await RestClient.ExecuteTaskAsync(request);
+
+             Retry retry = new Retry(this.RetryConfig);
+             IRestResponse response;
+            do
+            {
+                response = await RestClient.ExecuteTaskAsync(request);
+            }while(retry.ShouldRetry(response));
+
             return (Object)response;
         }
 
@@ -273,7 +294,7 @@ namespace PureCloudPlatform.Client.V2.Client
          /// <summary>
         /// Creates a restclient with a base path string input
         /// <returns>Returns a rest client</returns>
-        public RestClient setBasePath(String basePath){
+        public IRestClient setBasePath(String basePath){
             if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");
 
@@ -284,7 +305,7 @@ namespace PureCloudPlatform.Client.V2.Client
         /// <summary>
         /// Creates a restclient with a PureCloudRegionHost string input
         /// <returns>Returns a rest client</returns>
-        public RestClient setBasePath(PureCloudRegionHosts region){
+        public IRestClient setBasePath(PureCloudRegionHosts region){
          return setBasePath(region.GetDescription());
         }
 
@@ -495,5 +516,134 @@ namespace PureCloudPlatform.Client.V2.Client
             }
         }
         
+
+    public class RetryConfiguration
+    {
+        private long backoffIntervalMs = 300000L;
+        private long retryAfterDefaultMs = 3000L;
+        private int maxRetryTimeSec = 0;
+
+        public long BackOffIntervalMs
+        {
+            get
+            {
+                return backoffIntervalMs;
+            }
+
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("BackOffIntervalMs should be a positive integer");
+                }
+                this.backoffIntervalMs = value;
+            }
+        }
+
+        public long RetryAfterDefaultMs
+        {
+            get
+            {
+                return retryAfterDefaultMs;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("RetryAfterDefaultMs should be a positive integer");
+                }
+                this.retryAfterDefaultMs = value;
+            }
+        }
+
+        public int MaxRetryTimeSec
+        {
+            get
+            {
+                return maxRetryTimeSec;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("MaxRetryTimeSec should be a positive integer");
+                }
+                this.maxRetryTimeSec = value;
+            }
+        }
+    }
+
+    private class Retry
+    {
+        private long backoffIntervalMs;
+        private long retryAfterDefaultMs;
+        private int maxRetryTimeSec;
+        private int maxRetriesBeforeBackoff = 5;
+        private int retryCountBeforeBackOff = 0;
+        private long retryAfterMs;
+        private Stopwatch stopwatch;
+
+        private readonly List<int> statusCodes = new List<int>() { 429, 502, 503, 504 };
+
+        public Retry(RetryConfiguration retryConfiguration)
+        {
+            this.backoffIntervalMs = retryConfiguration.BackOffIntervalMs;
+            this.retryAfterDefaultMs = retryConfiguration.RetryAfterDefaultMs;
+            this.maxRetryTimeSec = retryConfiguration.MaxRetryTimeSec;
+            stopwatch = Stopwatch.StartNew();
+        }
+
+        /// <summary>
+        /// Check if retryable
+        /// </summary>
+        /// <param name="response">IRestResponse</param>
+        /// <returns>bool</returns>
+        public bool ShouldRetry(IRestResponse response)
+        {
+            if (stopwatch.ElapsedMilliseconds < maxRetryTimeSec * 1000L && statusCodes.Contains((int)response.StatusCode))
+            {
+                var retryAfterHeader = response.Headers.FirstOrDefault(y => y.Name.Equals("Retry-After"));
+
+                if (retryAfterHeader != null && Int32.TryParse(retryAfterHeader.Value.ToString(), out int retryAfterSec))
+                {
+                    retryAfterMs =  retryAfterSec * 1000;
+                }
+                else
+                {
+                    retryAfterMs = retryAfterDefaultMs;
+                }
+                //If status code is 429 then wait until retry-after time and retry. OR If status code is retryable then for the first 5 times: wait until retry-after time and retry.
+                if ((int)response.StatusCode == 429 || retryCountBeforeBackOff++ < maxRetriesBeforeBackoff)
+                {
+                    return waitBeforeRetry(retryAfterMs);
+                }
+
+                //If status code is 50x then wait for every 3 Sec and retry until 5 minutes then after wait for every 9 Sec and retry until next 5 minutes afterwards wait for every 27 Sec and retry.
+                return waitBeforeRetry(getWaitTimeExp(Math.Min(3, Math.Floor(stopwatch.ElapsedMilliseconds / backoffIntervalMs * 1.0) + 1)));
+
+            }
+            stopwatch.Stop();
+            return false;
+        }
+
+        private bool waitBeforeRetry(long retryAfterMs)
+        {
+            try
+            {
+                Thread.Sleep((int) retryAfterMs);
+            }
+            catch (ThreadInterruptedException)
+            {
+                Thread.CurrentThread.Interrupt();
+            }
+            return true;
+        }
+
+        private long getWaitTimeExp(double bucketCount)
+        {
+            return (long)Math.Pow(3, bucketCount) * 1000L;
+        }
+    }
+
     }
 }
