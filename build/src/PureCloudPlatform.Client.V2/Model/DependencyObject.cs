@@ -62,6 +62,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Acdwrapupcode,
             
             /// <summary>
+            /// Enum Botflow for "BOTFLOW"
+            /// </summary>
+            [EnumMember(Value = "BOTFLOW")]
+            Botflow,
+            
+            /// <summary>
             /// Enum Bridgeaction for "BRIDGEACTION"
             /// </summary>
             [EnumMember(Value = "BRIDGEACTION")]
@@ -126,6 +132,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "EMERGENCYGROUP")]
             Emergencygroup,
+            
+            /// <summary>
+            /// Enum Flowaction for "FLOWACTION"
+            /// </summary>
+            [EnumMember(Value = "FLOWACTION")]
+            Flowaction,
+            
+            /// <summary>
+            /// Enum Flowdatatype for "FLOWDATATYPE"
+            /// </summary>
+            [EnumMember(Value = "FLOWDATATYPE")]
+            Flowdatatype,
             
             /// <summary>
             /// Enum Flowoutcome for "FLOWOUTCOME"

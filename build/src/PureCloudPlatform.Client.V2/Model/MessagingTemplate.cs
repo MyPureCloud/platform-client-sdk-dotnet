@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// The messaging template identifies a structured message templates supported by a messaging channel. For example, WhatsApp
+    /// The messaging template identifies a structured message templates supported by a messaging channel.
     /// </summary>
     [DataContract]
     public partial class MessagingTemplate :  IEquatable<MessagingTemplate>
@@ -25,63 +25,25 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagingTemplate" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected MessagingTemplate() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MessagingTemplate" /> class.
-        /// </summary>
-        /// <param name="Name">The messaging template name. (required).</param>
-        /// <param name="_Namespace">The messaging template namespace. (required).</param>
-        /// <param name="Language">The messaging template language. For example, &#39;en-US&#39; (required).</param>
-        public MessagingTemplate(string Name = null, string _Namespace = null, string Language = null)
+        /// <param name="WhatsApp">Defines a messaging template for a WhatsApp messaging channel.</param>
+        public MessagingTemplate(WhatsAppDefinition WhatsApp = null)
         {
-            this.Name = Name;
-            this._Namespace = _Namespace;
-            this.Language = Language;
+            this.WhatsApp = WhatsApp;
             
         }
         
         
         
         /// <summary>
-        /// The messaging template name.
+        /// Defines a messaging template for a WhatsApp messaging channel
         /// </summary>
-        /// <value>The messaging template name.</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The messaging template namespace.
-        /// </summary>
-        /// <value>The messaging template namespace.</value>
-        [DataMember(Name="namespace", EmitDefaultValue=false)]
-        public string _Namespace { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The messaging template language. For example, &#39;en-US&#39;
-        /// </summary>
-        /// <value>The messaging template language. For example, &#39;en-US&#39;</value>
-        [DataMember(Name="language", EmitDefaultValue=false)]
-        public string Language { get; set; }
+        /// <value>Defines a messaging template for a WhatsApp messaging channel</value>
+        [DataMember(Name="whatsApp", EmitDefaultValue=false)]
+        public WhatsAppDefinition WhatsApp { get; set; }
         
         
         /// <summary>
@@ -93,9 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class MessagingTemplate {\n");
             
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  _Namespace: ").Append(_Namespace).Append("\n");
-            sb.Append("  Language: ").Append(Language).Append("\n");
+            sb.Append("  WhatsApp: ").Append(WhatsApp).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -133,19 +93,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this._Namespace == other._Namespace ||
-                    this._Namespace != null &&
-                    this._Namespace.Equals(other._Namespace)
-                ) &&
-                (
-                    this.Language == other.Language ||
-                    this.Language != null &&
-                    this.Language.Equals(other.Language)
+                    this.WhatsApp == other.WhatsApp ||
+                    this.WhatsApp != null &&
+                    this.WhatsApp.Equals(other.WhatsApp)
                 );
         }
 
@@ -161,14 +111,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                
-                if (this._Namespace != null)
-                    hash = hash * 59 + this._Namespace.GetHashCode();
-                
-                if (this.Language != null)
-                    hash = hash * 59 + this.Language.GetHashCode();
+                if (this.WhatsApp != null)
+                    hash = hash * 59 + this.WhatsApp.GetHashCode();
                 
                 return hash;
             }

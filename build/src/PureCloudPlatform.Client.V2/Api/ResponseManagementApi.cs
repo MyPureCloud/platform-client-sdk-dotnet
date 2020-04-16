@@ -69,8 +69,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
         /// <returns>LibraryEntityListing</returns>
-        LibraryEntityListing GetResponsemanagementLibraries (int? pageNumber = null, int? pageSize = null);
+        LibraryEntityListing GetResponsemanagementLibraries (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null);
 
         /// <summary>
         /// Gets a list of existing response libraries.
@@ -81,8 +82,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
         /// <returns>ApiResponse of LibraryEntityListing</returns>
-        ApiResponse<LibraryEntityListing> GetResponsemanagementLibrariesWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        ApiResponse<LibraryEntityListing> GetResponsemanagementLibrariesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null);
         
         /// <summary>
         /// Get details about an existing response library.
@@ -333,8 +335,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
         /// <returns>Task of LibraryEntityListing</returns>
-        System.Threading.Tasks.Task<LibraryEntityListing> GetResponsemanagementLibrariesAsync (int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<LibraryEntityListing> GetResponsemanagementLibrariesAsync (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null);
 
         /// <summary>
         /// Gets a list of existing response libraries.
@@ -345,8 +348,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
         /// <returns>Task of ApiResponse (LibraryEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LibraryEntityListing>> GetResponsemanagementLibrariesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<LibraryEntityListing>> GetResponsemanagementLibrariesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null);
         
         /// <summary>
         /// Get details about an existing response library.
@@ -1020,10 +1024,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
         /// <returns>LibraryEntityListing</returns>
-        public LibraryEntityListing GetResponsemanagementLibraries (int? pageNumber = null, int? pageSize = null)
+        public LibraryEntityListing GetResponsemanagementLibraries (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null)
         {
-             ApiResponse<LibraryEntityListing> localVarResponse = GetResponsemanagementLibrariesWithHttpInfo(pageNumber, pageSize);
+             ApiResponse<LibraryEntityListing> localVarResponse = GetResponsemanagementLibrariesWithHttpInfo(pageNumber, pageSize, messagingTemplateFilter);
              return localVarResponse.Data;
         }
 
@@ -1033,8 +1038,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
         /// <returns>ApiResponse of LibraryEntityListing</returns>
-        public ApiResponse< LibraryEntityListing > GetResponsemanagementLibrariesWithHttpInfo (int? pageNumber = null, int? pageSize = null)
+        public ApiResponse< LibraryEntityListing > GetResponsemanagementLibrariesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null)
         { 
 
             var localVarPath = "/api/v2/responsemanagement/libraries";
@@ -1072,6 +1078,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (messagingTemplateFilter != null) localVarQueryParams.Add(new Tuple<string, string>("messagingTemplateFilter", this.Configuration.ApiClient.ParameterToString(messagingTemplateFilter)));
 
             // Header params
 
@@ -1115,10 +1122,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
         /// <returns>Task of LibraryEntityListing</returns>
-        public async System.Threading.Tasks.Task<LibraryEntityListing> GetResponsemanagementLibrariesAsync (int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<LibraryEntityListing> GetResponsemanagementLibrariesAsync (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null)
         {
-             ApiResponse<LibraryEntityListing> localVarResponse = await GetResponsemanagementLibrariesAsyncWithHttpInfo(pageNumber, pageSize);
+             ApiResponse<LibraryEntityListing> localVarResponse = await GetResponsemanagementLibrariesAsyncWithHttpInfo(pageNumber, pageSize, messagingTemplateFilter);
              return localVarResponse.Data;
 
         }
@@ -1129,8 +1137,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
         /// <returns>Task of ApiResponse (LibraryEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LibraryEntityListing>> GetResponsemanagementLibrariesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LibraryEntityListing>> GetResponsemanagementLibrariesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null)
         { 
 
             var localVarPath = "/api/v2/responsemanagement/libraries";
@@ -1168,6 +1177,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (messagingTemplateFilter != null) localVarQueryParams.Add(new Tuple<string, string>("messagingTemplateFilter", this.Configuration.ApiClient.ParameterToString(messagingTemplateFilter)));
 
             // Header params
 

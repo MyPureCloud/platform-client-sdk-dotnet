@@ -81,7 +81,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Topicsdefinitions for "TopicsDefinitions"
             /// </summary>
             [EnumMember(Value = "TopicsDefinitions")]
-            Topicsdefinitions
+            Topicsdefinitions,
+            
+            /// <summary>
+            /// Enum Predictiveengagement for "PredictiveEngagement"
+            /// </summary>
+            [EnumMember(Value = "PredictiveEngagement")]
+            Predictiveengagement
         }
         
         
@@ -161,6 +167,24 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Read")]
             Read,
+            
+            /// <summary>
+            /// Enum Applyprotection for "ApplyProtection"
+            /// </summary>
+            [EnumMember(Value = "ApplyProtection")]
+            Applyprotection,
+            
+            /// <summary>
+            /// Enum Revokeprotection for "RevokeProtection"
+            /// </summary>
+            [EnumMember(Value = "RevokeProtection")]
+            Revokeprotection,
+            
+            /// <summary>
+            /// Enum Updateretention for "UpdateRetention"
+            /// </summary>
+            [EnumMember(Value = "UpdateRetention")]
+            Updateretention,
             
             /// <summary>
             /// Enum Readall for "ReadAll"
@@ -314,7 +338,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Program for "Program"
             /// </summary>
             [EnumMember(Value = "Program")]
-            Program
+            Program,
+            
+            /// <summary>
+            /// Enum Segment for "Segment"
+            /// </summary>
+            [EnumMember(Value = "Segment")]
+            Segment,
+            
+            /// <summary>
+            /// Enum Outcome for "Outcome"
+            /// </summary>
+            [EnumMember(Value = "Outcome")]
+            Outcome,
+            
+            /// <summary>
+            /// Enum Clickstreamsettings for "ClickstreamSettings"
+            /// </summary>
+            [EnumMember(Value = "ClickstreamSettings")]
+            Clickstreamsettings
         }
         
         

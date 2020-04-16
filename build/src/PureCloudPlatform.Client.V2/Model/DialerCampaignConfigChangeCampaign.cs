@@ -62,6 +62,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Agentless,
             
             /// <summary>
+            /// Enum External for "EXTERNAL"
+            /// </summary>
+            [EnumMember(Value = "EXTERNAL")]
+            External,
+            
+            /// <summary>
             /// Enum Preview for "PREVIEW"
             /// </summary>
             [EnumMember(Value = "PREVIEW")]

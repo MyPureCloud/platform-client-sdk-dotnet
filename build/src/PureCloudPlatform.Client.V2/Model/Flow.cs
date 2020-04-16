@@ -47,6 +47,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Bot for "BOT"
+            /// </summary>
+            [EnumMember(Value = "BOT")]
+            Bot,
+            
+            /// <summary>
             /// Enum Commonmodule for "COMMONMODULE"
             /// </summary>
             [EnumMember(Value = "COMMONMODULE")]

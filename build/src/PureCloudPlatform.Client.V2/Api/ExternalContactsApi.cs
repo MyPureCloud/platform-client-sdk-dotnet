@@ -24,8 +24,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns></returns>
-        void DeleteExternalcontactsContact (string contactId);
+        /// <returns>Empty</returns>
+        Empty DeleteExternalcontactsContact (string contactId);
 
         /// <summary>
         /// Delete an external contact
@@ -35,8 +35,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteExternalcontactsContactWithHttpInfo (string contactId);
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> DeleteExternalcontactsContactWithHttpInfo (string contactId);
         
         /// <summary>
         /// Delete a note for an external contact
@@ -47,8 +47,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns></returns>
-        void DeleteExternalcontactsContactNote (string contactId, string noteId);
+        /// <returns>Empty</returns>
+        Empty DeleteExternalcontactsContactNote (string contactId, string noteId);
 
         /// <summary>
         /// Delete a note for an external contact
@@ -59,8 +59,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId);
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> DeleteExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId);
         
         /// <summary>
         /// Delete an external organization
@@ -70,8 +70,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns></returns>
-        void DeleteExternalcontactsOrganization (string externalOrganizationId);
+        /// <returns>Empty</returns>
+        Empty DeleteExternalcontactsOrganization (string externalOrganizationId);
 
         /// <summary>
         /// Delete an external organization
@@ -81,8 +81,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId);
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> DeleteExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId);
         
         /// <summary>
         /// Delete a note for an external organization
@@ -93,8 +93,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns></returns>
-        void DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId);
+        /// <returns>Empty</returns>
+        Empty DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId);
 
         /// <summary>
         /// Delete a note for an external organization
@@ -105,8 +105,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId);
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> DeleteExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId);
         
         /// <summary>
         /// Unlink the Trustor for this External Organization
@@ -138,8 +138,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns></returns>
-        void DeleteExternalcontactsRelationship (string relationshipId);
+        /// <returns>Empty</returns>
+        Empty DeleteExternalcontactsRelationship (string relationshipId);
 
         /// <summary>
         /// Delete a relationship
@@ -149,8 +149,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteExternalcontactsRelationshipWithHttpInfo (string relationshipId);
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> DeleteExternalcontactsRelationshipWithHttpInfo (string relationshipId);
         
         /// <summary>
         /// Fetch an external contact
@@ -786,8 +786,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteExternalcontactsContactAsync (string contactId);
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> DeleteExternalcontactsContactAsync (string contactId);
 
         /// <summary>
         /// Delete an external contact
@@ -797,8 +797,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactAsyncWithHttpInfo (string contactId);
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsContactAsyncWithHttpInfo (string contactId);
         
         /// <summary>
         /// Delete a note for an external contact
@@ -809,8 +809,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteExternalcontactsContactNoteAsync (string contactId, string noteId);
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> DeleteExternalcontactsContactNoteAsync (string contactId, string noteId);
 
         /// <summary>
         /// Delete a note for an external contact
@@ -821,8 +821,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId);
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId);
         
         /// <summary>
         /// Delete an external organization
@@ -832,8 +832,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteExternalcontactsOrganizationAsync (string externalOrganizationId);
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> DeleteExternalcontactsOrganizationAsync (string externalOrganizationId);
 
         /// <summary>
         /// Delete an external organization
@@ -843,8 +843,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId);
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId);
         
         /// <summary>
         /// Delete a note for an external organization
@@ -855,8 +855,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId);
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> DeleteExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId);
 
         /// <summary>
         /// Delete a note for an external organization
@@ -867,8 +867,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId);
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId);
         
         /// <summary>
         /// Unlink the Trustor for this External Organization
@@ -900,8 +900,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteExternalcontactsRelationshipAsync (string relationshipId);
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> DeleteExternalcontactsRelationshipAsync (string relationshipId);
 
         /// <summary>
         /// Delete a relationship
@@ -911,8 +911,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId);
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId);
         
         /// <summary>
         /// Fetch an external contact
@@ -1633,10 +1633,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns></returns>
-        public void DeleteExternalcontactsContact (string contactId)
+        /// <returns>Empty</returns>
+        public Empty DeleteExternalcontactsContact (string contactId)
         {
-             DeleteExternalcontactsContactWithHttpInfo(contactId);
+             ApiResponse<Empty> localVarResponse = DeleteExternalcontactsContactWithHttpInfo(contactId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1644,8 +1645,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteExternalcontactsContactWithHttpInfo (string contactId)
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > DeleteExternalcontactsContactWithHttpInfo (string contactId)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -1714,9 +1715,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContact: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -1727,10 +1728,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteExternalcontactsContactAsync (string contactId)
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> DeleteExternalcontactsContactAsync (string contactId)
         {
-             await DeleteExternalcontactsContactAsyncWithHttpInfo(contactId);
+             ApiResponse<Empty> localVarResponse = await DeleteExternalcontactsContactAsyncWithHttpInfo(contactId);
+             return localVarResponse.Data;
 
         }
 
@@ -1739,8 +1741,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactAsyncWithHttpInfo (string contactId)
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsContactAsyncWithHttpInfo (string contactId)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -1810,9 +1812,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContact: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -1825,10 +1827,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns></returns>
-        public void DeleteExternalcontactsContactNote (string contactId, string noteId)
+        /// <returns>Empty</returns>
+        public Empty DeleteExternalcontactsContactNote (string contactId, string noteId)
         {
-             DeleteExternalcontactsContactNoteWithHttpInfo(contactId, noteId);
+             ApiResponse<Empty> localVarResponse = DeleteExternalcontactsContactNoteWithHttpInfo(contactId, noteId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1837,8 +1840,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId)
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > DeleteExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -1911,9 +1914,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactNote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -1925,10 +1928,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteExternalcontactsContactNoteAsync (string contactId, string noteId)
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> DeleteExternalcontactsContactNoteAsync (string contactId, string noteId)
         {
-             await DeleteExternalcontactsContactNoteAsyncWithHttpInfo(contactId, noteId);
+             ApiResponse<Empty> localVarResponse = await DeleteExternalcontactsContactNoteAsyncWithHttpInfo(contactId, noteId);
+             return localVarResponse.Data;
 
         }
 
@@ -1938,8 +1942,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId)
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -2014,9 +2018,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactNote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2028,10 +2032,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns></returns>
-        public void DeleteExternalcontactsOrganization (string externalOrganizationId)
+        /// <returns>Empty</returns>
+        public Empty DeleteExternalcontactsOrganization (string externalOrganizationId)
         {
-             DeleteExternalcontactsOrganizationWithHttpInfo(externalOrganizationId);
+             ApiResponse<Empty> localVarResponse = DeleteExternalcontactsOrganizationWithHttpInfo(externalOrganizationId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -2039,8 +2044,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId)
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > DeleteExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -2109,9 +2114,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2122,10 +2127,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteExternalcontactsOrganizationAsync (string externalOrganizationId)
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> DeleteExternalcontactsOrganizationAsync (string externalOrganizationId)
         {
-             await DeleteExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId);
+             ApiResponse<Empty> localVarResponse = await DeleteExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId);
+             return localVarResponse.Data;
 
         }
 
@@ -2134,8 +2140,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId)
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -2205,9 +2211,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2220,10 +2226,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns></returns>
-        public void DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId)
+        /// <returns>Empty</returns>
+        public Empty DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId)
         {
-             DeleteExternalcontactsOrganizationNoteWithHttpInfo(externalOrganizationId, noteId);
+             ApiResponse<Empty> localVarResponse = DeleteExternalcontactsOrganizationNoteWithHttpInfo(externalOrganizationId, noteId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -2232,8 +2239,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId)
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > DeleteExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -2306,9 +2313,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2320,10 +2327,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId)
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> DeleteExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId)
         {
-             await DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo(externalOrganizationId, noteId);
+             ApiResponse<Empty> localVarResponse = await DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo(externalOrganizationId, noteId);
+             return localVarResponse.Data;
 
         }
 
@@ -2333,8 +2341,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId)
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -2409,9 +2417,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2614,10 +2622,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns></returns>
-        public void DeleteExternalcontactsRelationship (string relationshipId)
+        /// <returns>Empty</returns>
+        public Empty DeleteExternalcontactsRelationship (string relationshipId)
         {
-             DeleteExternalcontactsRelationshipWithHttpInfo(relationshipId);
+             ApiResponse<Empty> localVarResponse = DeleteExternalcontactsRelationshipWithHttpInfo(relationshipId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -2625,8 +2634,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteExternalcontactsRelationshipWithHttpInfo (string relationshipId)
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > DeleteExternalcontactsRelationshipWithHttpInfo (string relationshipId)
         { 
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
@@ -2695,9 +2704,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsRelationship: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2708,10 +2717,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteExternalcontactsRelationshipAsync (string relationshipId)
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> DeleteExternalcontactsRelationshipAsync (string relationshipId)
         {
-             await DeleteExternalcontactsRelationshipAsyncWithHttpInfo(relationshipId);
+             ApiResponse<Empty> localVarResponse = await DeleteExternalcontactsRelationshipAsyncWithHttpInfo(relationshipId);
+             return localVarResponse.Data;
 
         }
 
@@ -2720,8 +2730,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId)
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId)
         { 
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
@@ -2791,9 +2801,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsRelationship: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (Empty) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

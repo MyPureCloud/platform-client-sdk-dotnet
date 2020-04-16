@@ -140,7 +140,7 @@ void (empty response body)
 
 <a name="getresponsemanagementlibraries"></a>
 
-## [**LibraryEntityListing**](LibraryEntityListing.html) GetResponsemanagementLibraries (int? pageNumber = null, int? pageSize = null)
+## [**LibraryEntityListing**](LibraryEntityListing.html) GetResponsemanagementLibraries (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null)
 
 
 
@@ -171,11 +171,12 @@ namespace Example
             var apiInstance = new ResponseManagementApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var messagingTemplateFilter = messagingTemplateFilter_example;  // string | Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional) 
 
             try
             { 
                 // Gets a list of existing response libraries.
-                LibraryEntityListing result = apiInstance.GetResponsemanagementLibraries(pageNumber, pageSize);
+                LibraryEntityListing result = apiInstance.GetResponsemanagementLibraries(pageNumber, pageSize, messagingTemplateFilter);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -194,6 +195,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **messagingTemplateFilter** | **string**| Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel | [optional] <br />**Values**: whatsapp |
 {: class="table table-striped"}
 
 ### Return type

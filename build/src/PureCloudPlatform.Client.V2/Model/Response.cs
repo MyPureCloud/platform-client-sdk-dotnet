@@ -85,9 +85,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The response type represented by the response
+        /// The response type represented by the response.
         /// </summary>
-        /// <value>The response type represented by the response</value>
+        /// <value>The response type represented by the response.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ResponseTypeEnum
         {
@@ -144,9 +144,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The response type represented by the response
+        /// The response type represented by the response.
         /// </summary>
-        /// <value>The response type represented by the response</value>
+        /// <value>The response type represented by the response.</value>
         [DataMember(Name="responseType", EmitDefaultValue=false)]
         public ResponseTypeEnum? ResponseType { get; set; }
         
@@ -173,8 +173,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InteractionType">The interaction type for this response..</param>
         /// <param name="Substitutions">Details about any text substitutions used in the texts for this response..</param>
         /// <param name="SubstitutionsSchema">Metadata about the text substitutions in json schema format..</param>
-        /// <param name="MessagingTemplate">The messaging template definition. This is required when adding to a library with responseType set to MessagingTemplate..</param>
-        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, MessagingTemplate MessagingTemplate = null)
+        /// <param name="ResponseType">The response type represented by the response..</param>
+        /// <param name="MessagingTemplate">An optional messaging template definition for responseType.MessagingTemplate..</param>
+        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, ResponseTypeEnum? ResponseType = null, MessagingTemplate MessagingTemplate = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -184,6 +185,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.InteractionType = InteractionType;
             this.Substitutions = Substitutions;
             this.SubstitutionsSchema = SubstitutionsSchema;
+            this.ResponseType = ResponseType;
             this.MessagingTemplate = MessagingTemplate;
             
         }
@@ -275,9 +277,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The messaging template definition. This is required when adding to a library with responseType set to MessagingTemplate.
+        /// An optional messaging template definition for responseType.MessagingTemplate.
         /// </summary>
-        /// <value>The messaging template definition. This is required when adding to a library with responseType set to MessagingTemplate.</value>
+        /// <value>An optional messaging template definition for responseType.MessagingTemplate.</value>
         [DataMember(Name="messagingTemplate", EmitDefaultValue=false)]
         public MessagingTemplate MessagingTemplate { get; set; }
         

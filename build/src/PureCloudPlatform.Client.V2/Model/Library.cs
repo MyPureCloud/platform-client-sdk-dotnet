@@ -36,9 +36,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The response type for the library. If set, only response's of this type may be added to this library.
+        /// This value is deprecated. Responses representing message templates may be added to any library.
         /// </summary>
-        /// <value>The response type for the library. If set, only response's of this type may be added to this library.</value>
+        /// <value>This value is deprecated. Responses representing message templates may be added to any library.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ResponseTypeEnum
         {
@@ -75,9 +75,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The response type for the library. If set, only response's of this type may be added to this library.
+        /// This value is deprecated. Responses representing message templates may be added to any library.
         /// </summary>
-        /// <value>The response type for the library. If set, only response's of this type may be added to this library.</value>
+        /// <value>This value is deprecated. Responses representing message templates may be added to any library.</value>
         [DataMember(Name="responseType", EmitDefaultValue=false)]
         public ResponseTypeEnum? ResponseType { get; set; }
         
@@ -96,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The library name. (required).</param>
         /// <param name="CreatedBy">User that created the library..</param>
-        /// <param name="ResponseType">The response type for the library. If set, only response&#39;s of this type may be added to this library..</param>
+        /// <param name="ResponseType">This value is deprecated. Responses representing message templates may be added to any library..</param>
         public Library(string Name = null, User CreatedBy = null, ResponseTypeEnum? ResponseType = null)
         {
             this.Name = Name;

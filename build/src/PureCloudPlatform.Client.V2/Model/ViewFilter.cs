@@ -253,6 +253,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets MessageTypes
         /// </summary>
@@ -535,6 +538,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OUTDATED_SDK_VERSION")]
             OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Bot for "bot"
+            /// </summary>
+            [EnumMember(Value = "bot")]
+            Bot,
             
             /// <summary>
             /// Enum Commonmodule for "commonmodule"
@@ -830,6 +839,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewFilter" /> class.
@@ -870,6 +891,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EvaluatorIds">The evaluator ids are used to filter the view.</param>
         /// <param name="Transferred">Indicates filtering for transfers.</param>
         /// <param name="Abandoned">Indicates filtering for abandons.</param>
+        /// <param name="Answered">Indicates filtering for answered interactions.</param>
         /// <param name="MessageTypes">The message media types used to filter the view.</param>
         /// <param name="DivisionIds">The divison Ids used to filter the view.</param>
         /// <param name="SurveyFormIds">The survey form ids used to filter the view.</param>
@@ -909,7 +931,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoleIds">The role Ids used to filter the view.</param>
         /// <param name="ReportsTos">The report to user IDs used to filter the view.</param>
         /// <param name="LocationIds">The location Ids used to filter the view.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null)
+        /// <param name="FlowOutTypes">A list of flow out types.</param>
+        /// <param name="ProviderList">A list of providers.</param>
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -947,6 +971,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EvaluatorIds = EvaluatorIds;
             this.Transferred = Transferred;
             this.Abandoned = Abandoned;
+            this.Answered = Answered;
             this.MessageTypes = MessageTypes;
             this.DivisionIds = DivisionIds;
             this.SurveyFormIds = SurveyFormIds;
@@ -986,6 +1011,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RoleIds = RoleIds;
             this.ReportsTos = ReportsTos;
             this.LocationIds = LocationIds;
+            this.FlowOutTypes = FlowOutTypes;
+            this.ProviderList = ProviderList;
             
         }
         
@@ -1312,6 +1339,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Indicates filtering for abandons</value>
         [DataMember(Name="abandoned", EmitDefaultValue=false)]
         public bool? Abandoned { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for answered interactions
+        /// </summary>
+        /// <value>Indicates filtering for answered interactions</value>
+        [DataMember(Name="answered", EmitDefaultValue=false)]
+        public bool? Answered { get; set; }
         
         
         
@@ -1665,6 +1701,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> LocationIds { get; set; }
         
         
+        
+        /// <summary>
+        /// A list of flow out types
+        /// </summary>
+        /// <value>A list of flow out types</value>
+        [DataMember(Name="flowOutTypes", EmitDefaultValue=false)]
+        public List<string> FlowOutTypes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A list of providers
+        /// </summary>
+        /// <value>A list of providers</value>
+        [DataMember(Name="providerList", EmitDefaultValue=false)]
+        public List<string> ProviderList { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1710,6 +1764,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EvaluatorIds: ").Append(EvaluatorIds).Append("\n");
             sb.Append("  Transferred: ").Append(Transferred).Append("\n");
             sb.Append("  Abandoned: ").Append(Abandoned).Append("\n");
+            sb.Append("  Answered: ").Append(Answered).Append("\n");
             sb.Append("  MessageTypes: ").Append(MessageTypes).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("  SurveyFormIds: ").Append(SurveyFormIds).Append("\n");
@@ -1749,6 +1804,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RoleIds: ").Append(RoleIds).Append("\n");
             sb.Append("  ReportsTos: ").Append(ReportsTos).Append("\n");
             sb.Append("  LocationIds: ").Append(LocationIds).Append("\n");
+            sb.Append("  FlowOutTypes: ").Append(FlowOutTypes).Append("\n");
+            sb.Append("  ProviderList: ").Append(ProviderList).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1966,6 +2023,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Abandoned.Equals(other.Abandoned)
                 ) &&
                 (
+                    this.Answered == other.Answered ||
+                    this.Answered != null &&
+                    this.Answered.Equals(other.Answered)
+                ) &&
+                (
                     this.MessageTypes == other.MessageTypes ||
                     this.MessageTypes != null &&
                     this.MessageTypes.SequenceEqual(other.MessageTypes)
@@ -2159,6 +2221,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LocationIds == other.LocationIds ||
                     this.LocationIds != null &&
                     this.LocationIds.SequenceEqual(other.LocationIds)
+                ) &&
+                (
+                    this.FlowOutTypes == other.FlowOutTypes ||
+                    this.FlowOutTypes != null &&
+                    this.FlowOutTypes.SequenceEqual(other.FlowOutTypes)
+                ) &&
+                (
+                    this.ProviderList == other.ProviderList ||
+                    this.ProviderList != null &&
+                    this.ProviderList.SequenceEqual(other.ProviderList)
                 );
         }
 
@@ -2282,6 +2354,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Abandoned != null)
                     hash = hash * 59 + this.Abandoned.GetHashCode();
                 
+                if (this.Answered != null)
+                    hash = hash * 59 + this.Answered.GetHashCode();
+                
                 if (this.MessageTypes != null)
                     hash = hash * 59 + this.MessageTypes.GetHashCode();
                 
@@ -2398,6 +2473,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.LocationIds != null)
                     hash = hash * 59 + this.LocationIds.GetHashCode();
+                
+                if (this.FlowOutTypes != null)
+                    hash = hash * 59 + this.FlowOutTypes.GetHashCode();
+                
+                if (this.ProviderList != null)
+                    hash = hash * 59 + this.ProviderList.GetHashCode();
                 
                 return hash;
             }

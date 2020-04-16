@@ -72,7 +72,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Topicsdefinitions for "TopicsDefinitions"
             /// </summary>
             [EnumMember(Value = "TopicsDefinitions")]
-            Topicsdefinitions
+            Topicsdefinitions,
+            
+            /// <summary>
+            /// Enum Predictiveengagement for "PredictiveEngagement"
+            /// </summary>
+            [EnumMember(Value = "PredictiveEngagement")]
+            Predictiveengagement
         }
         
         

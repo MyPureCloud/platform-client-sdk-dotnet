@@ -41,7 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deleteexternalcontactscontact"></a>
 
-## void DeleteExternalcontactsContact (string contactId)
+## [**Empty**](Empty.html) DeleteExternalcontactsContact (string contactId)
 
 
 
@@ -76,7 +76,8 @@ namespace Example
             try
             { 
                 // Delete an external contact
-                apiInstance.DeleteExternalcontactsContact(contactId);
+                Empty result = apiInstance.DeleteExternalcontactsContact(contactId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -97,11 +98,11 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Empty**](Empty.html)
 
 <a name="deleteexternalcontactscontactnote"></a>
 
-## void DeleteExternalcontactsContactNote (string contactId, string noteId)
+## [**Empty**](Empty.html) DeleteExternalcontactsContactNote (string contactId, string noteId)
 
 
 
@@ -137,7 +138,8 @@ namespace Example
             try
             { 
                 // Delete a note for an external contact
-                apiInstance.DeleteExternalcontactsContactNote(contactId, noteId);
+                Empty result = apiInstance.DeleteExternalcontactsContactNote(contactId, noteId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -159,11 +161,11 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Empty**](Empty.html)
 
 <a name="deleteexternalcontactsorganization"></a>
 
-## void DeleteExternalcontactsOrganization (string externalOrganizationId)
+## [**Empty**](Empty.html) DeleteExternalcontactsOrganization (string externalOrganizationId)
 
 
 
@@ -198,7 +200,8 @@ namespace Example
             try
             { 
                 // Delete an external organization
-                apiInstance.DeleteExternalcontactsOrganization(externalOrganizationId);
+                Empty result = apiInstance.DeleteExternalcontactsOrganization(externalOrganizationId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -219,11 +222,11 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Empty**](Empty.html)
 
 <a name="deleteexternalcontactsorganizationnote"></a>
 
-## void DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId)
+## [**Empty**](Empty.html) DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId)
 
 
 
@@ -259,7 +262,8 @@ namespace Example
             try
             { 
                 // Delete a note for an external organization
-                apiInstance.DeleteExternalcontactsOrganizationNote(externalOrganizationId, noteId);
+                Empty result = apiInstance.DeleteExternalcontactsOrganizationNote(externalOrganizationId, noteId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -281,7 +285,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Empty**](Empty.html)
 
 <a name="deleteexternalcontactsorganizationtrustor"></a>
 
@@ -345,7 +349,7 @@ void (empty response body)
 
 <a name="deleteexternalcontactsrelationship"></a>
 
-## void DeleteExternalcontactsRelationship (string relationshipId)
+## [**Empty**](Empty.html) DeleteExternalcontactsRelationship (string relationshipId)
 
 
 
@@ -380,7 +384,8 @@ namespace Example
             try
             { 
                 // Delete a relationship
-                apiInstance.DeleteExternalcontactsRelationship(relationshipId);
+                Empty result = apiInstance.DeleteExternalcontactsRelationship(relationshipId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -401,7 +406,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Empty**](Empty.html)
 
 <a name="getexternalcontactscontact"></a>
 

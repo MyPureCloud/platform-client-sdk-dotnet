@@ -244,7 +244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns which divisions the specified user has the given permission in.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -258,7 +258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns which divisions the specified user has the given permission in.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -1194,7 +1194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns which divisions the specified user has the given permission in.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -1208,7 +1208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns which divisions the specified user has the given permission in.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -3807,7 +3807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Returns which divisions the specified user has the given permission in. 
+        /// Returns which divisions the specified user has the given permission in. This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -3822,7 +3822,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Returns which divisions the specified user has the given permission in. 
+        /// Returns which divisions the specified user has the given permission in. This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -3914,7 +3914,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Returns which divisions the specified user has the given permission in. 
+        /// Returns which divisions the specified user has the given permission in. This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
@@ -3930,7 +3930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Returns which divisions the specified user has the given permission in. 
+        /// Returns which divisions the specified user has the given permission in. This route is deprecated, use authorization/divisionspermitted/paged/me instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>

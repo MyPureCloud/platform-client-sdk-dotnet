@@ -7,9 +7,7 @@ title: MessagingTemplate
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Name** | **string** | The messaging template name. | |
-| **_Namespace** | **string** | The messaging template namespace. | |
-| **Language** | **string** | The messaging template language. For example, &#39;en-US&#39; | |
+| **WhatsApp** | [**WhatsAppDefinition**](WhatsAppDefinition.html) | Defines a messaging template for a WhatsApp messaging channel | [optional] |
 {: class="table table-striped"}
 
 

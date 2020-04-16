@@ -59,15 +59,14 @@ namespace PureCloudPlatform.Client.V2.Tests
         [Test, Order(1)]
         public void Authenticate()
         {
-          
-        PureCloudRegionHosts? region = getRegion(environment);
-            if(region == null){ //Returned in the case of default value
-            PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.setBasePath("https://api." + environment);
-        }
-        else {
-            PureCloudRegionHosts regionval = region.GetValueOrDefault();
-            PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.setBasePath(regionval);
-        }
+            PureCloudRegionHosts? region = getRegion(environment);
+                if(region == null){ //Returned in the case of default value
+                PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.setBasePath("https://api." + environment);
+            }
+            else {
+                PureCloudRegionHosts regionval = region.GetValueOrDefault();
+                PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.setBasePath(regionval);
+            }
            
             var accessTokenInfo = PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.PostToken(clientId, clientSecret);
             PureCloudPlatform.Client.V2.Client.Configuration.Default.AccessToken = accessTokenInfo.AccessToken;
