@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace Extensions.Notifications
+namespace PureCloudPlatform.Client.V2.Extensions.Notifications
 {
     public class ChannelMetadataNotification
     {
