@@ -157,7 +157,7 @@ var retryConfig = new ApiClient.RetryConfiguration
 ```
 
 Setting `RetryConfiguration` instance to `ApiClient`:
- ```{"language":"csharp"}
+```{"language":"csharp"}
 Configuration.Default.ApiClient.RetryConfig = retryConfig;
 ```
 Set the `MaxRetryTimeSec` to the number of seconds to process retries before returning an error.
