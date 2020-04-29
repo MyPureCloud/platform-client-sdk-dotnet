@@ -60,6 +60,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthAuthorization" /> class.
@@ -71,7 +76,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreatedBy">CreatedBy.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        public OAuthAuthorization(OAuthClient Client = null, List<string> Scope = null, DomainEntityRef ResourceOwner = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null)
+        /// <param name="Pending">Pending.</param>
+        public OAuthAuthorization(OAuthClient Client = null, List<string> Scope = null, DomainEntityRef ResourceOwner = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, bool? Pending = null)
         {
             this.Client = Client;
             this.Scope = Scope;
@@ -80,6 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateModified = DateModified;
             this.CreatedBy = CreatedBy;
             this.ModifiedBy = ModifiedBy;
+            this.Pending = Pending;
             
         }
         
@@ -144,6 +151,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
+        /// Gets or Sets Pending
+        /// </summary>
+        [DataMember(Name="pending", EmitDefaultValue=false)]
+        public bool? Pending { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -167,6 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            sb.Append("  Pending: ").Append(Pending).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -240,6 +256,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedBy.Equals(other.ModifiedBy)
                 ) &&
                 (
+                    this.Pending == other.Pending ||
+                    this.Pending != null &&
+                    this.Pending.Equals(other.Pending)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -278,6 +299,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
+                
+                if (this.Pending != null)
+                    hash = hash * 59 + this.Pending.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

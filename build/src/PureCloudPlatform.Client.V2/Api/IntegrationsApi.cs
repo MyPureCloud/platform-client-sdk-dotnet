@@ -955,6 +955,40 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<IntegrationTypeEntityListing> GetIntegrationsTypesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
+        /// List permitted user app integrations for the logged in user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="appHost">The type of UserApp to filter by (optional)</param>
+        /// <returns>UserAppEntityListing</returns>
+        UserAppEntityListing GetIntegrationsUserapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null);
+
+        /// <summary>
+        /// List permitted user app integrations for the logged in user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="appHost">The type of UserApp to filter by (optional)</param>
+        /// <returns>ApiResponse of UserAppEntityListing</returns>
+        ApiResponse<UserAppEntityListing> GetIntegrationsUserappsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null);
+        
+        /// <summary>
         /// Update an integration.
         /// </summary>
         /// <remarks>
@@ -2277,6 +2311,40 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationTypeEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<IntegrationTypeEntityListing>> GetIntegrationsTypesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        
+        /// <summary>
+        /// List permitted user app integrations for the logged in user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="appHost">The type of UserApp to filter by (optional)</param>
+        /// <returns>Task of UserAppEntityListing</returns>
+        System.Threading.Tasks.Task<UserAppEntityListing> GetIntegrationsUserappsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null);
+
+        /// <summary>
+        /// List permitted user app integrations for the logged in user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="appHost">The type of UserApp to filter by (optional)</param>
+        /// <returns>Task of ApiResponse (UserAppEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserAppEntityListing>> GetIntegrationsUserappsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null);
         
         /// <summary>
         /// Update an integration.
@@ -10077,6 +10145,228 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<IntegrationTypeEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (IntegrationTypeEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegrationTypeEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        
+        /// <summary>
+        /// List permitted user app integrations for the logged in user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="appHost">The type of UserApp to filter by (optional)</param>
+        /// <returns>UserAppEntityListing</returns>
+        public UserAppEntityListing GetIntegrationsUserapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
+        {
+             ApiResponse<UserAppEntityListing> localVarResponse = GetIntegrationsUserappsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, appHost);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List permitted user app integrations for the logged in user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="appHost">The type of UserApp to filter by (optional)</param>
+        /// <returns>ApiResponse of UserAppEntityListing</returns>
+        public ApiResponse< UserAppEntityListing > GetIntegrationsUserappsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
+        { 
+
+            var localVarPath = "/api/v2/integrations/userapps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
+            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (appHost != null) localVarQueryParams.Add(new Tuple<string, string>("appHost", this.Configuration.ApiClient.ParameterToString(appHost)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsUserapps: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsUserapps: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserAppEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserAppEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAppEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+        
+        /// <summary>
+        /// List permitted user app integrations for the logged in user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="appHost">The type of UserApp to filter by (optional)</param>
+        /// <returns>Task of UserAppEntityListing</returns>
+        public async System.Threading.Tasks.Task<UserAppEntityListing> GetIntegrationsUserappsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
+        {
+             ApiResponse<UserAppEntityListing> localVarResponse = await GetIntegrationsUserappsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, appHost);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List permitted user app integrations for the logged in user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="appHost">The type of UserApp to filter by (optional)</param>
+        /// <returns>Task of ApiResponse (UserAppEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserAppEntityListing>> GetIntegrationsUserappsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
+        { 
+
+            var localVarPath = "/api/v2/integrations/userapps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
+            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (appHost != null) localVarQueryParams.Add(new Tuple<string, string>("appHost", this.Configuration.ApiClient.ParameterToString(appHost)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsUserapps: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsUserapps: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserAppEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserAppEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAppEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

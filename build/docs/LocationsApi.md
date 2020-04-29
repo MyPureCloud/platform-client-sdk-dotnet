@@ -27,7 +27,7 @@ Delete a location
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * directory:location:delete
 
@@ -337,7 +337,7 @@ Update a location
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * directory:location:edit
 
@@ -400,7 +400,7 @@ Create a location
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * directory:location:add
 

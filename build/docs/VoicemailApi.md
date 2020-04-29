@@ -755,7 +755,7 @@ Get a policy
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * telephony:plugin:all
 
@@ -1428,7 +1428,7 @@ Update a policy
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * telephony:plugin:all
 

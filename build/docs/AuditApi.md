@@ -22,7 +22,7 @@ Get status of audit query execution
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * audits:audit:view
 
@@ -83,7 +83,7 @@ Get results of audit query
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * audits:audit:view
 
@@ -150,7 +150,7 @@ Create audit query execution
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * audits:audit:view
 

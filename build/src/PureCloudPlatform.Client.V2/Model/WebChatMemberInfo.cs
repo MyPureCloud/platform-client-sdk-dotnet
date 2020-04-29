@@ -29,6 +29,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The role of the member, one of [agent, customer, acd, workflow]
         /// </summary>
@@ -128,6 +140,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The role of the member, one of [agent, customer, acd, workflow]
         /// </summary>
@@ -165,6 +185,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The communicationId of this member..</param>
         /// <param name="DisplayName">The display name of the member..</param>
+        /// <param name="FirstName">The first name of the member..</param>
+        /// <param name="LastName">The last name of the member..</param>
+        /// <param name="Email">The email address of the member..</param>
+        /// <param name="PhoneNumber">The phone number of the member..</param>
         /// <param name="AvatarImageUrl">The url to the avatar image of the member..</param>
         /// <param name="Role">The role of the member, one of [agent, customer, acd, workflow] (required).</param>
         /// <param name="JoinDate">The time the member joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -172,10 +196,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AuthenticatedGuest">If true, the guest member is an authenticated guest..</param>
         /// <param name="CustomFields">Any custom fields of information pertaining to this member..</param>
         /// <param name="State">The connection state of this member..</param>
-        public WebChatMemberInfo(string Id = null, string DisplayName = null, string AvatarImageUrl = null, RoleEnum? Role = null, DateTime? JoinDate = null, DateTime? LeaveDate = null, bool? AuthenticatedGuest = null, Dictionary<string, string> CustomFields = null, StateEnum? State = null)
+        public WebChatMemberInfo(string Id = null, string DisplayName = null, string FirstName = null, string LastName = null, string Email = null, string PhoneNumber = null, string AvatarImageUrl = null, RoleEnum? Role = null, DateTime? JoinDate = null, DateTime? LeaveDate = null, bool? AuthenticatedGuest = null, Dictionary<string, string> CustomFields = null, StateEnum? State = null)
         {
             this.Id = Id;
             this.DisplayName = DisplayName;
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.Email = Email;
+            this.PhoneNumber = PhoneNumber;
             this.AvatarImageUrl = AvatarImageUrl;
             this.Role = Role;
             this.JoinDate = JoinDate;
@@ -203,6 +231,42 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The display name of the member.</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The first name of the member.
+        /// </summary>
+        /// <value>The first name of the member.</value>
+        [DataMember(Name="firstName", EmitDefaultValue=false)]
+        public string FirstName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The last name of the member.
+        /// </summary>
+        /// <value>The last name of the member.</value>
+        [DataMember(Name="lastName", EmitDefaultValue=false)]
+        public string LastName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The email address of the member.
+        /// </summary>
+        /// <value>The email address of the member.</value>
+        [DataMember(Name="email", EmitDefaultValue=false)]
+        public string Email { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The phone number of the member.
+        /// </summary>
+        /// <value>The phone number of the member.</value>
+        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
+        public string PhoneNumber { get; set; }
         
         
         
@@ -265,6 +329,10 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  FirstName: ").Append(FirstName).Append("\n");
+            sb.Append("  LastName: ").Append(LastName).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  AvatarImageUrl: ").Append(AvatarImageUrl).Append("\n");
             sb.Append("  Role: ").Append(Role).Append("\n");
             sb.Append("  JoinDate: ").Append(JoinDate).Append("\n");
@@ -317,6 +385,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
                     this.DisplayName.Equals(other.DisplayName)
+                ) &&
+                (
+                    this.FirstName == other.FirstName ||
+                    this.FirstName != null &&
+                    this.FirstName.Equals(other.FirstName)
+                ) &&
+                (
+                    this.LastName == other.LastName ||
+                    this.LastName != null &&
+                    this.LastName.Equals(other.LastName)
+                ) &&
+                (
+                    this.Email == other.Email ||
+                    this.Email != null &&
+                    this.Email.Equals(other.Email)
+                ) &&
+                (
+                    this.PhoneNumber == other.PhoneNumber ||
+                    this.PhoneNumber != null &&
+                    this.PhoneNumber.Equals(other.PhoneNumber)
                 ) &&
                 (
                     this.AvatarImageUrl == other.AvatarImageUrl ||
@@ -372,6 +460,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
+                
+                if (this.FirstName != null)
+                    hash = hash * 59 + this.FirstName.GetHashCode();
+                
+                if (this.LastName != null)
+                    hash = hash * 59 + this.LastName.GetHashCode();
+                
+                if (this.Email != null)
+                    hash = hash * 59 + this.Email.GetHashCode();
+                
+                if (this.PhoneNumber != null)
+                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
                 
                 if (this.AvatarImageUrl != null)
                     hash = hash * 59 + this.AvatarImageUrl.GetHashCode();

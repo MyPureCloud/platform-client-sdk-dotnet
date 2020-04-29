@@ -43,6 +43,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIntegrationsType**](IntegrationsApi.html#getintegrationstype) | **GET** /api/v2/integrations/types/{typeId} | Get integration type. |
 | [**GetIntegrationsTypeConfigschema**](IntegrationsApi.html#getintegrationstypeconfigschema) | **GET** /api/v2/integrations/types/{typeId}/configschemas/{configType} | Get properties config schema for an integration type. |
 | [**GetIntegrationsTypes**](IntegrationsApi.html#getintegrationstypes) | **GET** /api/v2/integrations/types | List integration types |
+| [**GetIntegrationsUserapps**](IntegrationsApi.html#getintegrationsuserapps) | **GET** /api/v2/integrations/userapps | List permitted user app integrations for the logged in user |
 | [**PatchIntegration**](IntegrationsApi.html#patchintegration) | **PATCH** /api/v2/integrations/{integrationId} | Update an integration. |
 | [**PatchIntegrationsAction**](IntegrationsApi.html#patchintegrationsaction) | **PATCH** /api/v2/integrations/actions/{actionId} | Patch an Action |
 | [**PatchIntegrationsActionDraft**](IntegrationsApi.html#patchintegrationsactiondraft) | **PATCH** /api/v2/integrations/actions/{actionId}/draft | Update an existing Draft |
@@ -2392,6 +2393,78 @@ namespace Example
 ### Return type
 
 [**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html)
+
+<a name="getintegrationsuserapps"></a>
+
+## [**UserAppEntityListing**](UserAppEntityListing.html) GetIntegrationsUserapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
+
+
+
+List permitted user app integrations for the logged in user
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsUserappsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new IntegrationsApi();
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            var appHost = appHost_example;  // string | The type of UserApp to filter by (optional) 
+
+            try
+            { 
+                // List permitted user app integrations for the logged in user
+                UserAppEntityListing result = apiInstance.GetIntegrationsUserapps(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, appHost);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsUserapps: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **string**| variable name requested to sort by | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **nextPage** | **string**| next page token | [optional]  |
+| **previousPage** | **string**| Previous page token | [optional]  |
+| **appHost** | **string**| The type of UserApp to filter by | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserAppEntityListing**](UserAppEntityListing.html)
 
 <a name="patchintegration"></a>
 

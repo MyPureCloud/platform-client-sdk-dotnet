@@ -28,7 +28,7 @@ Delete a Presence Definition
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * presence:presenceDefinition:delete
 
@@ -397,7 +397,7 @@ Create a Presence Definition
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * presence:presenceDefinition:add
 
@@ -458,7 +458,7 @@ Update a Presence Definition
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * presence:presenceDefinition:edit
 

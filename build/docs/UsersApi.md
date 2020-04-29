@@ -399,7 +399,7 @@ Remove routing skill from user
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -2277,7 +2277,7 @@ List the organizations that have authorized/trusted the user.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * authorization:orgTrustor:view
 
@@ -3734,7 +3734,7 @@ Add routing skill to user
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -4290,7 +4290,7 @@ Update routing skill proficiency or state.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 

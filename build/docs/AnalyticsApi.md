@@ -475,7 +475,7 @@ namespace Example
 
 <a name="getanalyticsreportingexports"></a>
 
-## [**ReportingExportJobListing**](ReportingExportJobListing.html) GetAnalyticsReportingExports ()
+## [**ReportingExportJobListing**](ReportingExportJobListing.html) GetAnalyticsReportingExports (int? pageNumber = null, int? pageSize = null)
 
 
 
@@ -483,7 +483,7 @@ Get all view export requests for a user
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * analytics:dataExport:view
 
@@ -505,11 +505,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AnalyticsApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
 
             try
             { 
                 // Get all view export requests for a user
-                ReportingExportJobListing result = apiInstance.GetAnalyticsReportingExports();
+                ReportingExportJobListing result = apiInstance.GetAnalyticsReportingExports(pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -522,7 +524,12 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does require any parameters.
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
 {: class="table table-striped"}
 
 ### Return type
@@ -539,7 +546,7 @@ Get all export metadata
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * analytics:dataExport:view
 
@@ -1757,7 +1764,7 @@ Generate a view export request
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * analytics:dataExport:add
 

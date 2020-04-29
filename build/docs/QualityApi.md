@@ -325,7 +325,7 @@ Delete a survey form.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * quality:surveyForm:delete
 
@@ -1518,7 +1518,7 @@ Get a survey form
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * quality:surveyForm:view
 
@@ -1579,7 +1579,7 @@ Gets all the revisions for a specific survey.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * quality:surveyForm:view
 
@@ -1644,7 +1644,7 @@ Get the list of survey forms
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * quality:surveyForm:view
 
@@ -1719,7 +1719,7 @@ Retrieve a list of survey forms by their ids
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * quality:surveyForm:view
 
@@ -1780,7 +1780,7 @@ Retrieve a list of the latest form versions by context ids
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * quality:surveyForm:view
 
@@ -2239,7 +2239,7 @@ Get the most recent published version of a survey form.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * quality:surveyForm:view
 
@@ -2300,7 +2300,7 @@ Get the published survey forms.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * quality:surveyForm:view
 
@@ -2486,7 +2486,7 @@ Disable a particular version of a survey form and invalidates any invitations th
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * quality:surveyForm:disable
 
@@ -2981,7 +2981,7 @@ Create a survey form.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * quality:surveyForm:add
 
@@ -3227,7 +3227,7 @@ Publish a survey form.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * quality:surveyForm:add
 
@@ -3666,7 +3666,7 @@ Update a survey form.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * quality:surveyForm:edit
 

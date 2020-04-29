@@ -181,8 +181,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ReportingExportJobListing</returns>
-        ReportingExportJobListing GetAnalyticsReportingExports ();
+        ReportingExportJobListing GetAnalyticsReportingExports (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get all view export requests for a user
@@ -191,8 +193,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of ReportingExportJobListing</returns>
-        ApiResponse<ReportingExportJobListing> GetAnalyticsReportingExportsWithHttpInfo ();
+        ApiResponse<ReportingExportJobListing> GetAnalyticsReportingExportsWithHttpInfo (int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
         /// Get all export metadata
@@ -1017,8 +1021,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ReportingExportJobListing</returns>
-        System.Threading.Tasks.Task<ReportingExportJobListing> GetAnalyticsReportingExportsAsync ();
+        System.Threading.Tasks.Task<ReportingExportJobListing> GetAnalyticsReportingExportsAsync (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get all view export requests for a user
@@ -1027,8 +1033,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ReportingExportJobListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportingExportJobListing>> GetAnalyticsReportingExportsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<ReportingExportJobListing>> GetAnalyticsReportingExportsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
         /// Get all export metadata
@@ -3130,10 +3138,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get all view export requests for a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ReportingExportJobListing</returns>
-        public ReportingExportJobListing GetAnalyticsReportingExports ()
+        public ReportingExportJobListing GetAnalyticsReportingExports (int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<ReportingExportJobListing> localVarResponse = GetAnalyticsReportingExportsWithHttpInfo();
+             ApiResponse<ReportingExportJobListing> localVarResponse = GetAnalyticsReportingExportsWithHttpInfo(pageNumber, pageSize);
              return localVarResponse.Data;
         }
 
@@ -3141,8 +3151,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get all view export requests for a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of ReportingExportJobListing</returns>
-        public ApiResponse< ReportingExportJobListing > GetAnalyticsReportingExportsWithHttpInfo ()
+        public ApiResponse< ReportingExportJobListing > GetAnalyticsReportingExportsWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
 
             var localVarPath = "/api/v2/analytics/reporting/exports";
@@ -3178,6 +3190,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -3219,10 +3233,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get all view export requests for a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ReportingExportJobListing</returns>
-        public async System.Threading.Tasks.Task<ReportingExportJobListing> GetAnalyticsReportingExportsAsync ()
+        public async System.Threading.Tasks.Task<ReportingExportJobListing> GetAnalyticsReportingExportsAsync (int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<ReportingExportJobListing> localVarResponse = await GetAnalyticsReportingExportsAsyncWithHttpInfo();
+             ApiResponse<ReportingExportJobListing> localVarResponse = await GetAnalyticsReportingExportsAsyncWithHttpInfo(pageNumber, pageSize);
              return localVarResponse.Data;
 
         }
@@ -3231,8 +3247,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get all view export requests for a user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ReportingExportJobListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportingExportJobListing>> GetAnalyticsReportingExportsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<ReportingExportJobListing>> GetAnalyticsReportingExportsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
 
             var localVarPath = "/api/v2/analytics/reporting/exports";
@@ -3268,6 +3286,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 

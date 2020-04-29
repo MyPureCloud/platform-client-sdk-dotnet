@@ -1999,7 +1999,7 @@ Get a basic Campaign information object
 
 This returns a simplified version of a Campaign, consisting of name and division.
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:campaign:search
 
@@ -2060,7 +2060,7 @@ Query a list of basic Campaign information objects
 
 This returns a simplified version of a Campaign, consisting of name and division.
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:campaign:search
 
@@ -2660,7 +2660,7 @@ Get a basic ContactList information object
 
 This returns a simplified version of a ContactList, consisting of the name, division, column names, phone columns, import status, and size.
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:contactList:search
 
@@ -2725,7 +2725,7 @@ Query a list of simplified contact list objects.
 
 This return a simplified version of contact lists, consisting of the name, division, column names, phone columns, import status, and size.
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:contactList:search
 
@@ -3071,7 +3071,7 @@ Get a basic DncList information object
 
 This returns a simplified version of a DncList, consisting of the name, division, import status, and size.
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:dncList:search
 
@@ -3136,7 +3136,7 @@ Query a list of simplified dnc list objects.
 
 This return a simplified version of dnc lists, consisting of the name, division, import status, and size.
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:dncList:search
 
@@ -4602,7 +4602,7 @@ namespace Example
             var body = new List<WritableDialerContact>(); // List<WritableDialerContact> | Contact
             var priority = true;  // bool? | Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional) 
             var clearSystemData = true;  // bool? | Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won't. (optional) 
-            var doNotQueue = true;  // bool? | Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts they will not be called until a campaign recycle; False means that updated contacts will be re-queued, according to the 'priority' parameter. (optional) 
+            var doNotQueue = true;  // bool? | Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the 'priority' parameter. (optional) 
 
             try
             { 
@@ -4628,7 +4628,7 @@ namespace Example
 | **body** | [**List<WritableDialerContact>**](WritableDialerContact.html)| Contact |  |
 | **priority** | **bool?**| Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. | [optional]  |
 | **clearSystemData** | **bool?**| Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. | [optional]  |
-| **doNotQueue** | **bool?**| Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts they will not be called until a campaign recycle; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. | [optional]  |
+| **doNotQueue** | **bool?**| Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

@@ -35,6 +35,26 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="GuestMemberInfo" /> class.
@@ -46,11 +66,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="GuestMemberInfo" /> class.
         /// </summary>
         /// <param name="DisplayName">The display name to use for the guest member in the conversation. (required).</param>
+        /// <param name="FirstName">The first name to use for the guest member in the conversation..</param>
+        /// <param name="LastName">The last name to use for the guest member in the conversation..</param>
+        /// <param name="Email">The email address to use for the guest member in the conversation..</param>
+        /// <param name="PhoneNumber">The phone number to use for the guest member in the conversation..</param>
         /// <param name="AvatarImageUrl">The URL to the avatar image to use for the guest member in the conversation, if any..</param>
         /// <param name="CustomFields">Any custom fields of information, in key-value format, to attach to the guest member in the conversation..</param>
-        public GuestMemberInfo(string DisplayName = null, string AvatarImageUrl = null, Dictionary<string, string> CustomFields = null)
+        public GuestMemberInfo(string DisplayName = null, string FirstName = null, string LastName = null, string Email = null, string PhoneNumber = null, string AvatarImageUrl = null, Dictionary<string, string> CustomFields = null)
         {
             this.DisplayName = DisplayName;
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.Email = Email;
+            this.PhoneNumber = PhoneNumber;
             this.AvatarImageUrl = AvatarImageUrl;
             this.CustomFields = CustomFields;
             
@@ -64,6 +92,42 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The display name to use for the guest member in the conversation.</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The first name to use for the guest member in the conversation.
+        /// </summary>
+        /// <value>The first name to use for the guest member in the conversation.</value>
+        [DataMember(Name="firstName", EmitDefaultValue=false)]
+        public string FirstName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The last name to use for the guest member in the conversation.
+        /// </summary>
+        /// <value>The last name to use for the guest member in the conversation.</value>
+        [DataMember(Name="lastName", EmitDefaultValue=false)]
+        public string LastName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The email address to use for the guest member in the conversation.
+        /// </summary>
+        /// <value>The email address to use for the guest member in the conversation.</value>
+        [DataMember(Name="email", EmitDefaultValue=false)]
+        public string Email { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The phone number to use for the guest member in the conversation.
+        /// </summary>
+        /// <value>The phone number to use for the guest member in the conversation.</value>
+        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
+        public string PhoneNumber { get; set; }
         
         
         
@@ -94,6 +158,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class GuestMemberInfo {\n");
             
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  FirstName: ").Append(FirstName).Append("\n");
+            sb.Append("  LastName: ").Append(LastName).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  AvatarImageUrl: ").Append(AvatarImageUrl).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("}\n");
@@ -138,6 +206,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisplayName.Equals(other.DisplayName)
                 ) &&
                 (
+                    this.FirstName == other.FirstName ||
+                    this.FirstName != null &&
+                    this.FirstName.Equals(other.FirstName)
+                ) &&
+                (
+                    this.LastName == other.LastName ||
+                    this.LastName != null &&
+                    this.LastName.Equals(other.LastName)
+                ) &&
+                (
+                    this.Email == other.Email ||
+                    this.Email != null &&
+                    this.Email.Equals(other.Email)
+                ) &&
+                (
+                    this.PhoneNumber == other.PhoneNumber ||
+                    this.PhoneNumber != null &&
+                    this.PhoneNumber.Equals(other.PhoneNumber)
+                ) &&
+                (
                     this.AvatarImageUrl == other.AvatarImageUrl ||
                     this.AvatarImageUrl != null &&
                     this.AvatarImageUrl.Equals(other.AvatarImageUrl)
@@ -163,6 +251,18 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
+                
+                if (this.FirstName != null)
+                    hash = hash * 59 + this.FirstName.GetHashCode();
+                
+                if (this.LastName != null)
+                    hash = hash * 59 + this.LastName.GetHashCode();
+                
+                if (this.Email != null)
+                    hash = hash * 59 + this.Email.GetHashCode();
+                
+                if (this.PhoneNumber != null)
+                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
                 
                 if (this.AvatarImageUrl != null)
                     hash = hash * 59 + this.AvatarImageUrl.GetHashCode();

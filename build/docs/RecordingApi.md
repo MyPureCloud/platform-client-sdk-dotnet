@@ -41,6 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRecordingLocalkeysSettings**](RecordingApi.html#postrecordinglocalkeyssettings) | **POST** /api/v2/recording/localkeys/settings | create settings for local key creation |
 | [**PostRecordingMediaretentionpolicies**](RecordingApi.html#postrecordingmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
 | [**PostRecordingRecordingkeys**](RecordingApi.html#postrecordingrecordingkeys) | **POST** /api/v2/recording/recordingkeys | Create encryption key |
+| [**PostRecordingsDeletionprotection**](RecordingApi.html#postrecordingsdeletionprotection) | **POST** /api/v2/recordings/deletionprotection | Get a list of conversations with protected recordings |
 | [**PutConversationRecording**](RecordingApi.html#putconversationrecording) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
 | [**PutConversationRecordingAnnotation**](RecordingApi.html#putconversationrecordingannotation) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
 | [**PutOrphanrecording**](RecordingApi.html#putorphanrecording) | **PUT** /api/v2/orphanrecordings/{orphanId} | Updates an orphan recording to a regular recording with retention values |
@@ -49,6 +50,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutRecordingMediaretentionpolicy**](RecordingApi.html#putrecordingmediaretentionpolicy) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
 | [**PutRecordingRecordingkeysRotationschedule**](RecordingApi.html#putrecordingrecordingkeysrotationschedule) | **PUT** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
 | [**PutRecordingSettings**](RecordingApi.html#putrecordingsettings) | **PUT** /api/v2/recording/settings | Update the Recording Settings for the Organization |
+| [**PutRecordingsDeletionprotection**](RecordingApi.html#putrecordingsdeletionprotection) | **PUT** /api/v2/recordings/deletionprotection | Apply or revoke recording protection for conversations |
 {: class="table table-striped"}
 
 <a name="deleteconversationrecordingannotation"></a>
@@ -186,7 +188,7 @@ Delete the recording bulk job
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * recording:job:delete
 
@@ -1014,7 +1016,7 @@ Get the status of the job associated with the job id.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * recording:job:view
 
@@ -1075,7 +1077,7 @@ Get the status of all jobs within the user's organization
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * recording:job:view
 
@@ -1897,7 +1899,7 @@ Create a recording bulk job
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * recording:job:add
 
@@ -2187,6 +2189,66 @@ This endpoint does require any parameters.
 
 [**EncryptionKey**](EncryptionKey.html)
 
+<a name="postrecordingsdeletionprotection"></a>
+
+## [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef.html) PostRecordingsDeletionprotection (ConversationDeletionProtectionQuery body)
+
+
+
+Get a list of conversations with protected recordings
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRecordingsDeletionprotectionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RecordingApi();
+            var body = new ConversationDeletionProtectionQuery(); // ConversationDeletionProtectionQuery | conversationIds
+
+            try
+            { 
+                // Get a list of conversations with protected recordings
+                List&lt;AddressableEntityRef&gt; result = apiInstance.PostRecordingsDeletionprotection(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PostRecordingsDeletionprotection: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ConversationDeletionProtectionQuery**](ConversationDeletionProtectionQuery.html)| conversationIds |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<AddressableEntityRef>**](AddressableEntityRef.html)
+
 <a name="putconversationrecording"></a>
 
 ## [**Recording**](Recording.html) PutConversationRecording (string conversationId, string recordingId, Recording body)
@@ -2394,7 +2456,7 @@ Execute the recording bulk job
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * recording:job:edit
 
@@ -2694,4 +2756,67 @@ namespace Example
 ### Return type
 
 [**RecordingSettings**](RecordingSettings.html)
+
+<a name="putrecordingsdeletionprotection"></a>
+
+## void PutRecordingsDeletionprotection (bool? protect = null, ConversationDeletionProtectionQuery body = null)
+
+
+
+Apply or revoke recording protection for conversations
+
+
+
+Requires ANY permissions: 
+
+* recording:deletionProtection:apply
+* recording:deletionProtection:revoke
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRecordingsDeletionprotectionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new RecordingApi();
+            var protect = true;  // bool? | Check for apply, uncheck for revoke (each action requires the respective permission) (optional)  (default to true)
+            var body = new ConversationDeletionProtectionQuery(); // ConversationDeletionProtectionQuery |  (optional) 
+
+            try
+            { 
+                // Apply or revoke recording protection for conversations
+                apiInstance.PutRecordingsDeletionprotection(protect, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PutRecordingsDeletionprotection: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **protect** | **bool?**| Check for apply, uncheck for revoke (each action requires the respective permission) | [optional] [default to true] |
+| **body** | [**ConversationDeletionProtectionQuery**](ConversationDeletionProtectionQuery.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 

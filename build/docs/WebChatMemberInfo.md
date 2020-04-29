@@ -9,6 +9,10 @@ title: WebChatMemberInfo
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The communicationId of this member. | [optional] |
 | **DisplayName** | **string** | The display name of the member. | [optional] |
+| **FirstName** | **string** | The first name of the member. | [optional] |
+| **LastName** | **string** | The last name of the member. | [optional] |
+| **Email** | **string** | The email address of the member. | [optional] |
+| **PhoneNumber** | **string** | The phone number of the member. | [optional] |
 | **AvatarImageUrl** | **string** | The url to the avatar image of the member. | [optional] |
 | **Role** | **string** | The role of the member, one of [agent, customer, acd, workflow] | |
 | **JoinDate** | **DateTime?** | The time the member joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |

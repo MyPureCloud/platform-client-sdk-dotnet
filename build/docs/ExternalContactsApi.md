@@ -175,6 +175,7 @@ Delete an external organization
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:delete
 * externalContacts:externalOrganization:delete
 
 ### Example
@@ -686,6 +687,7 @@ Fetch an external organization
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:view
 * externalContacts:externalOrganization:view
 
 ### Example
@@ -887,6 +889,7 @@ List notes for an external organization
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:view
 * externalContacts:externalOrganization:view
 
 ### Example
@@ -956,6 +959,7 @@ Fetch a relationship for an external organization
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:view
 * externalContacts:externalOrganization:view
 
 ### Example
@@ -1025,6 +1029,7 @@ Search for external organizations
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:view
 * externalContacts:externalOrganization:view
 
 ### Example
@@ -1348,6 +1353,7 @@ Create a note for an external organization
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:edit
 * externalContacts:externalOrganization:edit
 
 ### Example
@@ -1411,6 +1417,7 @@ Create an external organization
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:add
 * externalContacts:externalOrganization:add
 
 ### Example
@@ -1723,6 +1730,7 @@ Update an external organization
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:edit
 * externalContacts:externalOrganization:edit
 
 ### Example

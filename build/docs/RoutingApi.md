@@ -98,7 +98,7 @@ Delete a domain
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -158,7 +158,7 @@ Delete a route
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -461,7 +461,7 @@ Delete Routing Skill
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:manage
 
@@ -521,7 +521,7 @@ Delete a phone number provisioned for SMS.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:delete
 
@@ -641,7 +641,7 @@ Delete the organization-wide max utilization settings and revert to the system d
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:utilization:manage
 
@@ -696,7 +696,7 @@ Delete wrap-up code
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:wrapupCode:delete
 
@@ -819,7 +819,7 @@ Remove routing skill from user
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -881,7 +881,7 @@ Get domain
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -942,7 +942,7 @@ Get a route
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -1005,7 +1005,7 @@ Get routes
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -1072,7 +1072,7 @@ Get domains
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -1128,7 +1128,7 @@ Get email setup
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -1252,7 +1252,7 @@ Get a recipient
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:message:manage
 
@@ -1313,7 +1313,7 @@ Get recipients
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:message:manage
 
@@ -1784,7 +1784,7 @@ Get a paged listing of simplified queue objects, filterable by name, queue ID(s)
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:queue:search
 
@@ -1857,7 +1857,7 @@ Get a paged listing of simplified queue objects.  Can be used to get a digest of
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:queue:search
 
@@ -2284,7 +2284,7 @@ Get an Address by Id for SMS
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:view
 
@@ -2345,7 +2345,7 @@ Get a list of Addresses for SMS
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:view
 
@@ -2408,7 +2408,7 @@ Get a list of available phone numbers for SMS provisioning.
 
 This request will return up to 30 random phone numbers matching the criteria specified.  To get additional phone numbers repeat the request.
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:add
 
@@ -2481,7 +2481,7 @@ Get a phone number provisioned for SMS.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:view
 
@@ -2542,7 +2542,7 @@ Get a list of provisioned phone numbers.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:view
 
@@ -2730,7 +2730,7 @@ Get details about this wrap-up code.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:wrapupCode:view
 
@@ -2791,7 +2791,7 @@ Get list of wrapup codes.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:wrapupCode:view
 
@@ -3632,7 +3632,7 @@ Create a route
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -3695,7 +3695,7 @@ Create a domain
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -4067,7 +4067,7 @@ Provision an Address for SMS
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:add
 
@@ -4128,7 +4128,7 @@ Provision a phone number for SMS
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:add
 
@@ -4189,7 +4189,7 @@ Create a wrap-up code
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:wrapupCode:add
 
@@ -4314,7 +4314,7 @@ Add routing skill to user
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -4377,7 +4377,7 @@ Update a route
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -4442,7 +4442,7 @@ Update a recipient
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:message:manage
 
@@ -4632,6 +4632,7 @@ Update Transcription Settings
 Requires ANY permissions: 
 
 * routing:transcriptionSettings:add
+* routing:transcriptionSettings:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -4690,7 +4691,7 @@ Update a phone number provisioned for SMS.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:edit
 
@@ -4816,7 +4817,7 @@ Update the organization-wide max utilization settings.  Include only those media
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:utilization:manage
 
@@ -4877,7 +4878,7 @@ Update wrap-up code
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:wrapupCode:edit
 
@@ -4940,7 +4941,7 @@ Update routing skill proficiency or state.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 

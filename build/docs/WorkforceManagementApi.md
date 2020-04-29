@@ -4656,7 +4656,7 @@ namespace Example
 
 Add a management unit
 
-
+It may take a minute or two for a new management unit to be available for api operations
 
 Requires ANY permissions: 
 

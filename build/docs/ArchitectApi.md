@@ -3743,7 +3743,7 @@ Get a flow outcome
 
 Returns a specified flow outcome
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * architect:flowOutcome:view
 
@@ -3804,7 +3804,7 @@ Get a pageable list of flow outcomes, filtered by query parameters
 
 Multiple IDs can be specified, in which case all matching flow outcomes will be returned, and no other parameters will be evaluated.
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * architect:flowOutcome:view
 
@@ -5229,7 +5229,7 @@ Create a flow outcome
 
 Asynchronous.  Notification topic: v2.flows.outcomes.{flowOutcomeId}
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * architect:flowOutcome:add
 
@@ -5928,7 +5928,7 @@ Updates a flow outcome
 
 Updates a flow outcome.  Asynchronous.  Notification topic: v2.flowoutcomes.{flowoutcomeId}
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * architect:flowOutcome:edit
 

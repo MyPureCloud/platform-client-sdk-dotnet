@@ -1758,7 +1758,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Add a management unit
         /// </summary>
         /// <remarks>
-        /// 
+        /// It may take a minute or two for a new management unit to be available for api operations
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
@@ -1769,7 +1769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Add a management unit
         /// </summary>
         /// <remarks>
-        /// 
+        /// It may take a minute or two for a new management unit to be available for api operations
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
@@ -3588,7 +3588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Add a management unit
         /// </summary>
         /// <remarks>
-        /// 
+        /// It may take a minute or two for a new management unit to be available for api operations
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
@@ -3599,7 +3599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Add a management unit
         /// </summary>
         /// <remarks>
-        /// 
+        /// It may take a minute or two for a new management unit to be available for api operations
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
@@ -18418,7 +18418,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Add a management unit 
+        /// Add a management unit It may take a minute or two for a new management unit to be available for api operations
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
@@ -18430,7 +18430,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add a management unit 
+        /// Add a management unit It may take a minute or two for a new management unit to be available for api operations
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
@@ -18514,7 +18514,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Add a management unit 
+        /// Add a management unit It may take a minute or two for a new management unit to be available for api operations
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
@@ -18527,7 +18527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add a management unit 
+        /// Add a management unit It may take a minute or two for a new management unit to be available for api operations
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>

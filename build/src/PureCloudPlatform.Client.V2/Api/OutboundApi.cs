@@ -1785,7 +1785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
         /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
-        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts they will not be called until a campaign recycle; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>List&lt;DialerContact&gt;</returns>
         List<DialerContact> PostOutboundContactlistContacts (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null);
 
@@ -1800,7 +1800,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
         /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
-        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts they will not be called until a campaign recycle; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>ApiResponse of List&lt;DialerContact&gt;</returns>
         ApiResponse<List<DialerContact>> PostOutboundContactlistContactsWithHttpInfo (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null);
         
@@ -4185,7 +4185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
         /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
-        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts they will not be called until a campaign recycle; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>Task of List&lt;DialerContact&gt;</returns>
         System.Threading.Tasks.Task<List<DialerContact>> PostOutboundContactlistContactsAsync (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null);
 
@@ -4200,7 +4200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
         /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
-        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts they will not be called until a campaign recycle; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;DialerContact&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostOutboundContactlistContactsAsyncWithHttpInfo (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null);
         
@@ -19016,7 +19016,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
         /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
-        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts they will not be called until a campaign recycle; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>List&lt;DialerContact&gt;</returns>
         public List<DialerContact> PostOutboundContactlistContacts (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
         {
@@ -19032,7 +19032,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
         /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
-        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts they will not be called until a campaign recycle; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>ApiResponse of List&lt;DialerContact&gt;</returns>
         public ApiResponse< List<DialerContact> > PostOutboundContactlistContactsWithHttpInfo (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
         { 
@@ -19130,7 +19130,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
         /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
-        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts they will not be called until a campaign recycle; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>Task of List&lt;DialerContact&gt;</returns>
         public async System.Threading.Tasks.Task<List<DialerContact>> PostOutboundContactlistContactsAsync (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
         {
@@ -19147,7 +19147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
         /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
-        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts they will not be called until a campaign recycle; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;DialerContact&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostOutboundContactlistContactsAsyncWithHttpInfo (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
         { 
