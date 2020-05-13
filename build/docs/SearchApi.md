@@ -18,6 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostDocumentationGknSearch**](SearchApi.html#postdocumentationgknsearch) | **POST** /api/v2/documentation/gkn/search | Search gkn documentation |
 | [**PostDocumentationSearch**](SearchApi.html#postdocumentationsearch) | **POST** /api/v2/documentation/search | Search documentation |
 | [**PostGroupsSearch**](SearchApi.html#postgroupssearch) | **POST** /api/v2/groups/search | Search groups |
+| [**PostKnowledgeKnowledgebaseSearch**](SearchApi.html#postknowledgeknowledgebasesearch) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search | Search Documents |
 | [**PostLocationsSearch**](SearchApi.html#postlocationssearch) | **POST** /api/v2/locations/search | Search locations |
 | [**PostSearch**](SearchApi.html#postsearch) | **POST** /api/v2/search | Search resources. |
 | [**PostSearchSuggest**](SearchApi.html#postsearchsuggest) | **POST** /api/v2/search/suggest | Suggest resources. |
@@ -692,6 +693,69 @@ namespace Example
 ### Return type
 
 [**GroupsSearchResponse**](GroupsSearchResponse.html)
+
+<a name="postknowledgeknowledgebasesearch"></a>
+
+## [**KnowledgeSearchResponse**](KnowledgeSearchResponse.html) PostKnowledgeKnowledgebaseSearch (string knowledgeBaseId, KnowledgeSearchRequest body = null)
+
+
+
+Search Documents
+
+
+
+Requires ALL permissions: 
+
+* knowledge:knowledgebase:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new SearchApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new KnowledgeSearchRequest(); // KnowledgeSearchRequest |  (optional) 
+
+            try
+            { 
+                // Search Documents
+                KnowledgeSearchResponse result = apiInstance.PostKnowledgeKnowledgebaseSearch(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PostKnowledgeKnowledgebaseSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**KnowledgeSearchRequest**](KnowledgeSearchRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeSearchResponse**](KnowledgeSearchResponse.html)
 
 <a name="postlocationssearch"></a>
 

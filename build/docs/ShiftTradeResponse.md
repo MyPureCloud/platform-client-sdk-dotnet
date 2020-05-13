@@ -9,7 +9,7 @@ title: ShiftTradeResponse
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The ID of this shift trade | [optional] |
 | **WeekDate** | **DateTime?** | The start week date of the associated schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
-| **Schedule** | [**WeekScheduleReference**](WeekScheduleReference.html) | The ID of the associated schedule | [optional] |
+| **Schedule** | [**BuScheduleReferenceForMuRoute**](BuScheduleReferenceForMuRoute.html) | A reference to the associated schedule | [optional] |
 | **State** | **string** | The state of this shift trade | [optional] |
 | **InitiatingUser** | [**UserReference**](UserReference.html) | The user who initiated this trade | [optional] |
 | **InitiatingShiftId** | **string** | The ID of the shift offered for trade by the initiating user | [optional] |

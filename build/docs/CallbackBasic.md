@@ -19,6 +19,7 @@ title: CallbackBasic
 | **CallbackNumbers** | **List&lt;string&gt;** | The phone number(s) to use to place the callback. | [optional] |
 | **CallbackUserName** | **string** | The name of the user requesting a callback. | [optional] |
 | **ScriptId** | **string** | The UUID of the script to use. | [optional] |
+| **ExternalCampaign** | **bool?** | True if the call for the callback uses external dialing. | [optional] |
 | **SkipEnabled** | **bool?** | True if the ability to skip a callback should be enabled. | [optional] |
 | **TimeoutSeconds** | **int?** | The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled. | [optional] |
 | **StartAlertingTime** | **DateTime?** | The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |

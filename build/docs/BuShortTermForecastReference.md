@@ -1,0 +1,16 @@
+---
+title: BuShortTermForecastReference
+---
+## ININ.PureCloudApi.Model.BuShortTermForecastReference
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **WeekDate** | **DateTime?** | The weekDate of the short term forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **Description** | **string** | The description of the short term forecast | [optional] |
+| **SelfUri** | **string** | The URI for this object | [optional] |
+{: class="table table-striped"}
+
+

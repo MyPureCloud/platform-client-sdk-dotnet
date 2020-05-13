@@ -1,0 +1,14 @@
+---
+title: GenerateBuForecastRequest
+---
+## ININ.PureCloudApi.Model.GenerateBuForecastRequest
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Description** | **string** | The description for the forecast | |
+| **WeekCount** | **int?** | The number of weeks this forecast covers | [optional] |
+{: class="table table-striped"}
+
+

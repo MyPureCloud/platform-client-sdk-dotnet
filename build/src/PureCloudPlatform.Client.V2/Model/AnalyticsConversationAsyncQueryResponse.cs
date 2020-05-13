@@ -30,15 +30,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversationAsyncQueryResponse" /> class.
         /// </summary>
         /// <param name="Cursor">Optional cursor to indicate where to resume the results.</param>
+        /// <param name="DataAvailabilityDate">Data available up to at least this datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Conversations">Conversations.</param>
-        public AnalyticsConversationAsyncQueryResponse(string Cursor = null, List<AnalyticsConversation> Conversations = null)
+        public AnalyticsConversationAsyncQueryResponse(string Cursor = null, DateTime? DataAvailabilityDate = null, List<AnalyticsConversation> Conversations = null)
         {
             this.Cursor = Cursor;
+            this.DataAvailabilityDate = DataAvailabilityDate;
             this.Conversations = Conversations;
             
         }
@@ -51,6 +58,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Optional cursor to indicate where to resume the results</value>
         [DataMember(Name="cursor", EmitDefaultValue=false)]
         public string Cursor { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Data available up to at least this datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Data available up to at least this datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="dataAvailabilityDate", EmitDefaultValue=false)]
+        public DateTime? DataAvailabilityDate { get; set; }
         
         
         
@@ -71,6 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AnalyticsConversationAsyncQueryResponse {\n");
             
             sb.Append("  Cursor: ").Append(Cursor).Append("\n");
+            sb.Append("  DataAvailabilityDate: ").Append(DataAvailabilityDate).Append("\n");
             sb.Append("  Conversations: ").Append(Conversations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,6 +131,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Cursor.Equals(other.Cursor)
                 ) &&
                 (
+                    this.DataAvailabilityDate == other.DataAvailabilityDate ||
+                    this.DataAvailabilityDate != null &&
+                    this.DataAvailabilityDate.Equals(other.DataAvailabilityDate)
+                ) &&
+                (
                     this.Conversations == other.Conversations ||
                     this.Conversations != null &&
                     this.Conversations.SequenceEqual(other.Conversations)
@@ -134,6 +156,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Cursor != null)
                     hash = hash * 59 + this.Cursor.GetHashCode();
+                
+                if (this.DataAvailabilityDate != null)
+                    hash = hash * 59 + this.DataAvailabilityDate.GetHashCode();
                 
                 if (this.Conversations != null)
                     hash = hash * 59 + this.Conversations.GetHashCode();
