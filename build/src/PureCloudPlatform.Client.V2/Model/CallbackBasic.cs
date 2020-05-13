@@ -294,6 +294,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -356,6 +359,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CallbackBasic" /> class.
@@ -372,6 +377,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackNumbers">The phone number(s) to use to place the callback..</param>
         /// <param name="CallbackUserName">The name of the user requesting a callback..</param>
         /// <param name="ScriptId">The UUID of the script to use..</param>
+        /// <param name="ExternalCampaign">True if the call for the callback uses external dialing..</param>
         /// <param name="SkipEnabled">True if the ability to skip a callback should be enabled..</param>
         /// <param name="TimeoutSeconds">The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled..</param>
         /// <param name="StartAlertingTime">The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -381,7 +387,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutomatedCallbackConfigId">The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal..</param>
         /// <param name="Provider">The source provider for the callback..</param>
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
-        public CallbackBasic(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, string Provider = null, string PeerId = null)
+        public CallbackBasic(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, string Provider = null, string PeerId = null)
         {
             this.State = State;
             this.Id = Id;
@@ -395,6 +401,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackUserName = CallbackUserName;
             this.ScriptId = ScriptId;
+            this.ExternalCampaign = ExternalCampaign;
             this.SkipEnabled = SkipEnabled;
             this.TimeoutSeconds = TimeoutSeconds;
             this.StartAlertingTime = StartAlertingTime;
@@ -493,6 +500,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The UUID of the script to use.</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// True if the call for the callback uses external dialing.
+        /// </summary>
+        /// <value>True if the call for the callback uses external dialing.</value>
+        [DataMember(Name="externalCampaign", EmitDefaultValue=false)]
+        public bool? ExternalCampaign { get; set; }
         
         
         
@@ -597,6 +613,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            sb.Append("  ExternalCampaign: ").Append(ExternalCampaign).Append("\n");
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
             sb.Append("  StartAlertingTime: ").Append(StartAlertingTime).Append("\n");
@@ -703,6 +720,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScriptId.Equals(other.ScriptId)
                 ) &&
                 (
+                    this.ExternalCampaign == other.ExternalCampaign ||
+                    this.ExternalCampaign != null &&
+                    this.ExternalCampaign.Equals(other.ExternalCampaign)
+                ) &&
+                (
                     this.SkipEnabled == other.SkipEnabled ||
                     this.SkipEnabled != null &&
                     this.SkipEnabled.Equals(other.SkipEnabled)
@@ -796,6 +818,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
+                
+                if (this.ExternalCampaign != null)
+                    hash = hash * 59 + this.ExternalCampaign.GetHashCode();
                 
                 if (this.SkipEnabled != null)
                     hash = hash * 59 + this.SkipEnabled.GetHashCode();

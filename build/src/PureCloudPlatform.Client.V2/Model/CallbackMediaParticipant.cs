@@ -392,6 +392,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting
         /// </summary>
@@ -485,6 +488,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CallbackMediaParticipant" /> class.
@@ -526,11 +531,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Voicemail">The voicemail associated with this callback..</param>
         /// <param name="CallbackNumbers">The list of phone number to use for this callback..</param>
         /// <param name="CallbackUserName">The name of the callback target..</param>
-        /// <param name="SkipEnabled">If true, the callback can be skipped.</param>
+        /// <param name="ExternalCampaign">True if the call for the callback uses external dialing..</param>
+        /// <param name="SkipEnabled">If true, the callback can be skipped..</param>
         /// <param name="TimeoutSeconds">Duration in seconds before the callback will be auto-dialed..</param>
         /// <param name="AutomatedCallbackConfigId">The id of the config for automatically placing the callback (and handling the disposition). If absent, the callback will not be placed automatically but routed to an agent as per normal..</param>
         /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DialerPreview OutboundPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string AutomatedCallbackConfigId = null, DateTime? CallbackScheduledTime = null)
+        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DialerPreview OutboundPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string AutomatedCallbackConfigId = null, DateTime? CallbackScheduledTime = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -569,6 +575,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Voicemail = Voicemail;
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackUserName = CallbackUserName;
+            this.ExternalCampaign = ExternalCampaign;
             this.SkipEnabled = SkipEnabled;
             this.TimeoutSeconds = TimeoutSeconds;
             this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
@@ -884,9 +891,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// If true, the callback can be skipped
+        /// True if the call for the callback uses external dialing.
         /// </summary>
-        /// <value>If true, the callback can be skipped</value>
+        /// <value>True if the call for the callback uses external dialing.</value>
+        [DataMember(Name="externalCampaign", EmitDefaultValue=false)]
+        public bool? ExternalCampaign { get; set; }
+        
+        
+        
+        /// <summary>
+        /// If true, the callback can be skipped.
+        /// </summary>
+        /// <value>If true, the callback can be skipped.</value>
         [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
         public bool? SkipEnabled { get; set; }
         
@@ -964,6 +980,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
+            sb.Append("  ExternalCampaign: ").Append(ExternalCampaign).Append("\n");
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
             sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
@@ -1190,6 +1207,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallbackUserName.Equals(other.CallbackUserName)
                 ) &&
                 (
+                    this.ExternalCampaign == other.ExternalCampaign ||
+                    this.ExternalCampaign != null &&
+                    this.ExternalCampaign.Equals(other.ExternalCampaign)
+                ) &&
+                (
                     this.SkipEnabled == other.SkipEnabled ||
                     this.SkipEnabled != null &&
                     this.SkipEnabled.Equals(other.SkipEnabled)
@@ -1333,6 +1355,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CallbackUserName != null)
                     hash = hash * 59 + this.CallbackUserName.GetHashCode();
+                
+                if (this.ExternalCampaign != null)
+                    hash = hash * 59 + this.ExternalCampaign.GetHashCode();
                 
                 if (this.SkipEnabled != null)
                     hash = hash * 59 + this.SkipEnabled.GetHashCode();

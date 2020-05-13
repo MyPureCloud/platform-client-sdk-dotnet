@@ -735,8 +735,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
-        /// <returns>ExternalOrganization</returns>
-        ExternalOrganization PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId);
+        /// <returns>ExternalOrganizationTrustorLink</returns>
+        ExternalOrganizationTrustorLink PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId);
 
         /// <summary>
         /// Links a Trustor with an External Organization
@@ -747,8 +747,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
-        /// <returns>ApiResponse of ExternalOrganization</returns>
-        ApiResponse<ExternalOrganization> PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo (string externalOrganizationId, string trustorId);
+        /// <returns>ApiResponse of ExternalOrganizationTrustorLink</returns>
+        ApiResponse<ExternalOrganizationTrustorLink> PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo (string externalOrganizationId, string trustorId);
         
         /// <summary>
         /// Update a relationship
@@ -1497,8 +1497,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
-        /// <returns>Task of ExternalOrganization</returns>
-        System.Threading.Tasks.Task<ExternalOrganization> PutExternalcontactsOrganizationTrustorTrustorIdAsync (string externalOrganizationId, string trustorId);
+        /// <returns>Task of ExternalOrganizationTrustorLink</returns>
+        System.Threading.Tasks.Task<ExternalOrganizationTrustorLink> PutExternalcontactsOrganizationTrustorTrustorIdAsync (string externalOrganizationId, string trustorId);
 
         /// <summary>
         /// Links a Trustor with an External Organization
@@ -1509,8 +1509,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
-        /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo (string externalOrganizationId, string trustorId);
+        /// <returns>Task of ApiResponse (ExternalOrganizationTrustorLink)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationTrustorLink>> PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo (string externalOrganizationId, string trustorId);
         
         /// <summary>
         /// Update a relationship
@@ -7473,10 +7473,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
-        /// <returns>ExternalOrganization</returns>
-        public ExternalOrganization PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId)
+        /// <returns>ExternalOrganizationTrustorLink</returns>
+        public ExternalOrganizationTrustorLink PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId)
         {
-             ApiResponse<ExternalOrganization> localVarResponse = PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo(externalOrganizationId, trustorId);
+             ApiResponse<ExternalOrganizationTrustorLink> localVarResponse = PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo(externalOrganizationId, trustorId);
              return localVarResponse.Data;
         }
 
@@ -7486,8 +7486,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
-        /// <returns>ApiResponse of ExternalOrganization</returns>
-        public ApiResponse< ExternalOrganization > PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo (string externalOrganizationId, string trustorId)
+        /// <returns>ApiResponse of ExternalOrganizationTrustorLink</returns>
+        public ApiResponse< ExternalOrganizationTrustorLink > PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo (string externalOrganizationId, string trustorId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -7560,9 +7560,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationTrustorTrustorId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ExternalOrganization>(localVarStatusCode,
+            return new ApiResponse<ExternalOrganizationTrustorLink>(localVarStatusCode,
                 localVarHeaders,
-                (ExternalOrganization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganization)),
+                (ExternalOrganizationTrustorLink) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganizationTrustorLink)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7574,10 +7574,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
-        /// <returns>Task of ExternalOrganization</returns>
-        public async System.Threading.Tasks.Task<ExternalOrganization> PutExternalcontactsOrganizationTrustorTrustorIdAsync (string externalOrganizationId, string trustorId)
+        /// <returns>Task of ExternalOrganizationTrustorLink</returns>
+        public async System.Threading.Tasks.Task<ExternalOrganizationTrustorLink> PutExternalcontactsOrganizationTrustorTrustorIdAsync (string externalOrganizationId, string trustorId)
         {
-             ApiResponse<ExternalOrganization> localVarResponse = await PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo(externalOrganizationId, trustorId);
+             ApiResponse<ExternalOrganizationTrustorLink> localVarResponse = await PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo(externalOrganizationId, trustorId);
              return localVarResponse.Data;
 
         }
@@ -7588,8 +7588,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
-        /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo (string externalOrganizationId, string trustorId)
+        /// <returns>Task of ApiResponse (ExternalOrganizationTrustorLink)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationTrustorLink>> PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo (string externalOrganizationId, string trustorId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -7664,9 +7664,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationTrustorTrustorId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ExternalOrganization>(localVarStatusCode,
+            return new ApiResponse<ExternalOrganizationTrustorLink>(localVarStatusCode,
                 localVarHeaders,
-                (ExternalOrganization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganization)),
+                (ExternalOrganizationTrustorLink) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganizationTrustorLink)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

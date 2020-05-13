@@ -1,0 +1,14 @@
+---
+title: BuCopyScheduleRequest
+---
+## ININ.PureCloudApi.Model.BuCopyScheduleRequest
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Description** | **string** | The description for the new schedule | |
+| **WeekDate** | **DateTime?** | The start weekDate for the new copy of the schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+{: class="table table-striped"}
+
+

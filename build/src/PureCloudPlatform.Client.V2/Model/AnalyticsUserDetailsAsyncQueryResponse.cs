@@ -30,16 +30,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsUserDetailsAsyncQueryResponse" /> class.
         /// </summary>
         /// <param name="UserDetails">UserDetails.</param>
         /// <param name="Cursor">Optional cursor to indicate where to resume the results.</param>
-        public AnalyticsUserDetailsAsyncQueryResponse(List<AnalyticsUserDetail> UserDetails = null, string Cursor = null)
+        /// <param name="DataAvailabilityDate">Data available up to at least this datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        public AnalyticsUserDetailsAsyncQueryResponse(List<AnalyticsUserDetail> UserDetails = null, string Cursor = null, DateTime? DataAvailabilityDate = null)
         {
             this.UserDetails = UserDetails;
             this.Cursor = Cursor;
+            this.DataAvailabilityDate = DataAvailabilityDate;
             
         }
         
@@ -61,6 +68,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Cursor { get; set; }
         
         
+        
+        /// <summary>
+        /// Data available up to at least this datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Data available up to at least this datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="dataAvailabilityDate", EmitDefaultValue=false)]
+        public DateTime? DataAvailabilityDate { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  UserDetails: ").Append(UserDetails).Append("\n");
             sb.Append("  Cursor: ").Append(Cursor).Append("\n");
+            sb.Append("  DataAvailabilityDate: ").Append(DataAvailabilityDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -117,6 +134,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Cursor == other.Cursor ||
                     this.Cursor != null &&
                     this.Cursor.Equals(other.Cursor)
+                ) &&
+                (
+                    this.DataAvailabilityDate == other.DataAvailabilityDate ||
+                    this.DataAvailabilityDate != null &&
+                    this.DataAvailabilityDate.Equals(other.DataAvailabilityDate)
                 );
         }
 
@@ -137,6 +159,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Cursor != null)
                     hash = hash * 59 + this.Cursor.GetHashCode();
+                
+                if (this.DataAvailabilityDate != null)
+                    hash = hash * 59 + this.DataAvailabilityDate.GetHashCode();
                 
                 return hash;
             }

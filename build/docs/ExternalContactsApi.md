@@ -1849,7 +1849,7 @@ namespace Example
 
 <a name="putexternalcontactsorganizationtrustortrustorid"></a>
 
-## [**ExternalOrganization**](ExternalOrganization.html) PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId)
+## [**ExternalOrganizationTrustorLink**](ExternalOrganizationTrustorLink.html) PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId)
 
 
 
@@ -1885,7 +1885,7 @@ namespace Example
             try
             { 
                 // Links a Trustor with an External Organization
-                ExternalOrganization result = apiInstance.PutExternalcontactsOrganizationTrustorTrustorId(externalOrganizationId, trustorId);
+                ExternalOrganizationTrustorLink result = apiInstance.PutExternalcontactsOrganizationTrustorTrustorId(externalOrganizationId, trustorId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1908,7 +1908,7 @@ namespace Example
 
 ### Return type
 
-[**ExternalOrganization**](ExternalOrganization.html)
+[**ExternalOrganizationTrustorLink**](ExternalOrganizationTrustorLink.html)
 
 <a name="putexternalcontactsrelationship"></a>
 

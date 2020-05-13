@@ -20,7 +20,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuthorizationDivisionspermittedMe**](UsersApi.html#getauthorizationdivisionspermittedme) | **GET** /api/v2/authorization/divisionspermitted/me | Returns which divisions the current user has the given permission in. |
 | [**GetAuthorizationDivisionspermittedPagedMe**](UsersApi.html#getauthorizationdivisionspermittedpagedme) | **GET** /api/v2/authorization/divisionspermitted/paged/me | Returns which divisions the current user has the given permission in. |
 | [**GetAuthorizationDivisionspermittedPagedSubjectId**](UsersApi.html#getauthorizationdivisionspermittedpagedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/paged/{subjectId} | Returns which divisions the specified user has the given permission in. |
-| [**GetAuthorizationDivisionspermittedSubjectId**](UsersApi.html#getauthorizationdivisionspermittedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/{subjectId} | Returns which divisions the specified user has the given permission in. |
 | [**GetAuthorizationSubject**](UsersApi.html#getauthorizationsubject) | **GET** /api/v2/authorization/subjects/{subjectId} | Returns a listing of roles and permissions for a user. |
 | [**GetAuthorizationSubjectsMe**](UsersApi.html#getauthorizationsubjectsme) | **GET** /api/v2/authorization/subjects/me | Returns a listing of roles and permissions for the currently authenticated user. |
 | [**GetFieldconfig**](UsersApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
@@ -888,70 +887,6 @@ namespace Example
 ### Return type
 
 [**DivsPermittedEntityListing**](DivsPermittedEntityListing.html)
-
-<a name="getauthorizationdivisionspermittedsubjectid"></a>
-
-## [**List&lt;AuthzDivision&gt;**](AuthzDivision.html) GetAuthorizationDivisionspermittedSubjectId (string subjectId, string permission, string name = null)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Returns which divisions the specified user has the given permission in.
-
-This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetAuthorizationDivisionspermittedSubjectIdExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new UsersApi();
-            var subjectId = subjectId_example;  // string | Subject ID (user or group)
-            var permission = permission_example;  // string | The permission string, including the object to access, e.g. routing:queue:view
-            var name = name_example;  // string | Search term to filter by division name (optional) 
-
-            try
-            { 
-                // Returns which divisions the specified user has the given permission in.
-                List&lt;AuthzDivision&gt; result = apiInstance.GetAuthorizationDivisionspermittedSubjectId(subjectId, permission, name);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UsersApi.GetAuthorizationDivisionspermittedSubjectId: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **subjectId** | **string**| Subject ID (user or group) |  |
-| **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
-| **name** | **string**| Search term to filter by division name | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**List<AuthzDivision>**](AuthzDivision.html)
 
 <a name="getauthorizationsubject"></a>
 

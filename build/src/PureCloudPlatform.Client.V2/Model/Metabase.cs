@@ -132,6 +132,18 @@ namespace PureCloudPlatform.Client.V2.Model
             ExternalByocPbx,
             
             /// <summary>
+            /// Enum StationCdm for "STATION_CDM"
+            /// </summary>
+            [EnumMember(Value = "STATION_CDM")]
+            StationCdm,
+            
+            /// <summary>
+            /// Enum StationCdmWebrtc for "STATION_CDM_WEBRTC"
+            /// </summary>
+            [EnumMember(Value = "STATION_CDM_WEBRTC")]
+            StationCdmWebrtc,
+            
+            /// <summary>
             /// Enum Station for "STATION"
             /// </summary>
             [EnumMember(Value = "STATION")]
