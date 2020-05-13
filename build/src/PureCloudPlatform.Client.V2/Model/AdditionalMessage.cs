@@ -35,11 +35,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AdditionalMessage" /> class.
@@ -53,13 +48,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TextBody">The body of the text message. (required).</param>
         /// <param name="MediaIds">The media ids associated with the text message..</param>
         /// <param name="StickerIds">The sticker ids associated with the text message..</param>
-        /// <param name="MessagingTemplate">The messaging template use to send a predefined canned response with the message.</param>
-        public AdditionalMessage(string TextBody = null, List<string> MediaIds = null, List<string> StickerIds = null, MessagingTemplateRequest MessagingTemplate = null)
+        public AdditionalMessage(string TextBody = null, List<string> MediaIds = null, List<string> StickerIds = null)
         {
             this.TextBody = TextBody;
             this.MediaIds = MediaIds;
             this.StickerIds = StickerIds;
-            this.MessagingTemplate = MessagingTemplate;
             
         }
         
@@ -91,15 +84,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> StickerIds { get; set; }
         
         
-        
-        /// <summary>
-        /// The messaging template use to send a predefined canned response with the message
-        /// </summary>
-        /// <value>The messaging template use to send a predefined canned response with the message</value>
-        [DataMember(Name="messagingTemplate", EmitDefaultValue=false)]
-        public MessagingTemplateRequest MessagingTemplate { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -112,7 +96,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
             sb.Append("  MediaIds: ").Append(MediaIds).Append("\n");
             sb.Append("  StickerIds: ").Append(StickerIds).Append("\n");
-            sb.Append("  MessagingTemplate: ").Append(MessagingTemplate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -163,11 +146,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StickerIds == other.StickerIds ||
                     this.StickerIds != null &&
                     this.StickerIds.SequenceEqual(other.StickerIds)
-                ) &&
-                (
-                    this.MessagingTemplate == other.MessagingTemplate ||
-                    this.MessagingTemplate != null &&
-                    this.MessagingTemplate.Equals(other.MessagingTemplate)
                 );
         }
 
@@ -191,9 +169,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.StickerIds != null)
                     hash = hash * 59 + this.StickerIds.GetHashCode();
-                
-                if (this.MessagingTemplate != null)
-                    hash = hash * 59 + this.MessagingTemplate.GetHashCode();
                 
                 return hash;
             }

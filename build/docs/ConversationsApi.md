@@ -3327,7 +3327,7 @@ Get Genesys Facebook App Id
 
 
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * messaging:integration:add
 

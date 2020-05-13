@@ -61,17 +61,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// Setting to enable/disable transcription capability
         /// </summary>
         /// <value>Setting to enable/disable transcription capability</value>
         [DataMember(Name="transcription", EmitDefaultValue=false)]
         public TranscriptionEnum? Transcription { get; set; }
-        
-        
         
         
         
@@ -88,12 +83,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Transcription">Setting to enable/disable transcription capability (required).</param>
         /// <param name="TranscriptionConfidenceThreshold">Configure confidence threshold. The possible values are from 1 to 100. (required).</param>
-        /// <param name="ContentSearchEnabled">Setting to enable/disable content search.</param>
-        public TranscriptionSettings(TranscriptionEnum? Transcription = null, int? TranscriptionConfidenceThreshold = null, bool? ContentSearchEnabled = null)
+        public TranscriptionSettings(TranscriptionEnum? Transcription = null, int? TranscriptionConfidenceThreshold = null)
         {
             this.Transcription = Transcription;
             this.TranscriptionConfidenceThreshold = TranscriptionConfidenceThreshold;
-            this.ContentSearchEnabled = ContentSearchEnabled;
             
         }
         
@@ -109,15 +102,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? TranscriptionConfidenceThreshold { get; set; }
         
         
-        
-        /// <summary>
-        /// Setting to enable/disable content search
-        /// </summary>
-        /// <value>Setting to enable/disable content search</value>
-        [DataMember(Name="contentSearchEnabled", EmitDefaultValue=false)]
-        public bool? ContentSearchEnabled { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -129,7 +113,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Transcription: ").Append(Transcription).Append("\n");
             sb.Append("  TranscriptionConfidenceThreshold: ").Append(TranscriptionConfidenceThreshold).Append("\n");
-            sb.Append("  ContentSearchEnabled: ").Append(ContentSearchEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -175,11 +158,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TranscriptionConfidenceThreshold == other.TranscriptionConfidenceThreshold ||
                     this.TranscriptionConfidenceThreshold != null &&
                     this.TranscriptionConfidenceThreshold.Equals(other.TranscriptionConfidenceThreshold)
-                ) &&
-                (
-                    this.ContentSearchEnabled == other.ContentSearchEnabled ||
-                    this.ContentSearchEnabled != null &&
-                    this.ContentSearchEnabled.Equals(other.ContentSearchEnabled)
                 );
         }
 
@@ -200,9 +178,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TranscriptionConfidenceThreshold != null)
                     hash = hash * 59 + this.TranscriptionConfidenceThreshold.GetHashCode();
-                
-                if (this.ContentSearchEnabled != null)
-                    hash = hash * 59 + this.ContentSearchEnabled.GetHashCode();
                 
                 return hash;
             }

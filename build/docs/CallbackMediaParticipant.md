@@ -44,8 +44,7 @@ title: CallbackMediaParticipant
 | **Voicemail** | [**Voicemail**](Voicemail.html) | The voicemail associated with this callback. | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** | The list of phone number to use for this callback. | [optional] |
 | **CallbackUserName** | **string** | The name of the callback target. | [optional] |
-| **ExternalCampaign** | **bool?** | True if the call for the callback uses external dialing. | [optional] |
-| **SkipEnabled** | **bool?** | If true, the callback can be skipped. | [optional] |
+| **SkipEnabled** | **bool?** | If true, the callback can be skipped | [optional] |
 | **TimeoutSeconds** | **int?** | Duration in seconds before the callback will be auto-dialed. | [optional] |
 | **AutomatedCallbackConfigId** | **string** | The id of the config for automatically placing the callback (and handling the disposition). If absent, the callback will not be placed automatically but routed to an agent as per normal. | [optional] |
 | **CallbackScheduledTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |

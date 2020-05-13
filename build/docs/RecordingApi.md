@@ -45,7 +45,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutConversationRecording**](RecordingApi.html#putconversationrecording) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
 | [**PutConversationRecordingAnnotation**](RecordingApi.html#putconversationrecordingannotation) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
 | [**PutOrphanrecording**](RecordingApi.html#putorphanrecording) | **PUT** /api/v2/orphanrecordings/{orphanId} | Updates an orphan recording to a regular recording with retention values |
-| [**PutRecordingJob**](RecordingApi.html#putrecordingjob) | **PUT** /api/v2/recording/jobs/{jobId} | Execute the recording bulk job. |
+| [**PutRecordingJob**](RecordingApi.html#putrecordingjob) | **PUT** /api/v2/recording/jobs/{jobId} | Execute the recording bulk job |
 | [**PutRecordingLocalkeysSetting**](RecordingApi.html#putrecordinglocalkeyssetting) | **PUT** /api/v2/recording/localkeys/settings/{settingsId} | Update the local encryption settings |
 | [**PutRecordingMediaretentionpolicy**](RecordingApi.html#putrecordingmediaretentionpolicy) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
 | [**PutRecordingRecordingkeysRotationschedule**](RecordingApi.html#putrecordingrecordingkeysrotationschedule) | **PUT** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
@@ -360,7 +360,7 @@ void (empty response body)
 
 <a name="getconversationrecording"></a>
 
-## [**Recording**](Recording.html) GetConversationRecording (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null, string locale = null)
+## [**Recording**](Recording.html) GetConversationRecording (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
 
 
 
@@ -395,12 +395,11 @@ namespace Example
             var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
             var download = true;  // bool? | requesting a download format of the recording (optional)  (default to false)
             var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
-            var locale = locale_example;  // string | The locale for the requested file when downloading, as an ISO 639-1 code (optional) 
 
             try
             { 
                 // Gets a specific recording.
-                Recording result = apiInstance.GetConversationRecording(conversationId, recordingId, formatId, download, fileName, locale);
+                Recording result = apiInstance.GetConversationRecording(conversationId, recordingId, formatId, download, fileName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -422,7 +421,6 @@ namespace Example
 | **formatId** | **string**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
 | **download** | **bool?**| requesting a download format of the recording | [optional] [default to false] |
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
-| **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -808,7 +806,7 @@ namespace Example
 
 <a name="getorphanrecordingmedia"></a>
 
-## [**Recording**](Recording.html) GetOrphanrecordingMedia (string orphanId, string formatId = null, bool? download = null, string fileName = null, string locale = null)
+## [**Recording**](Recording.html) GetOrphanrecordingMedia (string orphanId, string formatId = null, bool? download = null, string fileName = null)
 
 
 
@@ -842,12 +840,11 @@ namespace Example
             var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
             var download = true;  // bool? | requesting a download format of the recording (optional)  (default to false)
             var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
-            var locale = locale_example;  // string | The locale for the requested file when downloading, as an ISO 639-1 code (optional) 
 
             try
             { 
                 // Gets the media of a single orphan recording
-                Recording result = apiInstance.GetOrphanrecordingMedia(orphanId, formatId, download, fileName, locale);
+                Recording result = apiInstance.GetOrphanrecordingMedia(orphanId, formatId, download, fileName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -868,7 +865,6 @@ namespace Example
 | **formatId** | **string**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
 | **download** | **bool?**| requesting a download format of the recording | [optional] [default to false] |
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
-| **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2456,15 +2452,13 @@ namespace Example
 
 
 
-Execute the recording bulk job.
+Execute the recording bulk job
 
-A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
+
 
 Requires ALL permissions: 
 
 * recording:job:edit
-* recording:recording:editRetention
-* recording:screenRecording:editRetention
 
 ### Example
 ```{"language":"csharp"}
@@ -2489,7 +2483,7 @@ namespace Example
 
             try
             { 
-                // Execute the recording bulk job.
+                // Execute the recording bulk job
                 RecordingJob result = apiInstance.PutRecordingJob(jobId, body);
                 Debug.WriteLine(result);
             }
